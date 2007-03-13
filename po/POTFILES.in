@@ -1,0 +1,4 @@
+thunar-svn-plugin/thunar-svn-plugin.c
+thunar-svn-plugin/tsp-provider.c
+thunar-svn-plugin/tsp-svn-action.c
+thunar-svn-plugin/tsp-svn-backend.c
