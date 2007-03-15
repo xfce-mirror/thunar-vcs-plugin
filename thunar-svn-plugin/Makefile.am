@@ -31,9 +31,6 @@ thunar_svn_plugin_la_LDFLAGS =						\
 	-avoid-version							\
 	-export-dynamic							\
 	-module								\
-	-lsvn_subr-1							\
-	-lsvn_fs-1							\
-	-lsvn_wc-1							\
 	$(PLATFORM_LDFLAGS)						\
 	$(THUNARX_LDFLAGS)						\
 	$(THUNAR_VFS_LDFLAGS)						\

@@ -73,6 +73,24 @@ XDT_CHECK_PACKAGE([APR], [apr-1], [1.2.7])
 XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.6.0])
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.6.0])
 XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.6.0])
+AC_CHECK_LIB([svn_subr-1], [main], ,
+[
+	echo "*** The required library 'svn_subr-1' was not found on your system."
+	echo "*** Please install libsvn (atleast version 1.4)."
+	exit 1
+])
+AC_CHECK_LIB([svn_fs-1], [main], ,
+[
+	echo "*** The required library 'svn_fs-1' was not found on your system."
+	echo "*** Please install libsvn (atleast version 1.4)."
+	exit 1
+])
+AC_CHECK_LIB([svn_wc-1], [main], ,
+[
+	echo "*** The required library 'svn_wc-1' was not found on your system."
+	echo "*** Please install libsvn (atleast version 1.4)."
+	exit 1
+])
 
 dnl ***********************************
 dnl *** Check for debugging support ***
