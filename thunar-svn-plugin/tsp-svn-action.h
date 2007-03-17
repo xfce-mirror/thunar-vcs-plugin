@@ -36,8 +36,14 @@ typedef struct _TspSvnAction      TspSvnAction;
 
 GType      tsp_svn_action_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 
-GtkAction *tsp_svn_action_new      (const gchar *name,
-                                    const gchar *label) G_GNUC_MALLOC G_GNUC_INTERNAL;
+GtkAction *tsp_svn_action_new      (const gchar*,
+                                    const gchar*,
+																		gboolean,
+																		gboolean,
+																		gboolean,
+																		gboolean,
+																		gboolean,
+																		gboolean) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
 G_END_DECLS;
 

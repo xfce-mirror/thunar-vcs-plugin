@@ -227,6 +227,8 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   gboolean            parent_wc = FALSE;
 	gboolean            one_is_wc = FALSE;
 	gboolean            one_is_not_wc = FALSE;
+	gboolean            one_is_directory = FALSE;
+	gboolean            one_is_file = FALSE;
   GtkAction          *action;
   GList              *actions = NULL;
   GList              *lp;
@@ -248,15 +250,23 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 		if (!parent_wc && tsp_is_parent_working_copy (lp->data))
 			parent_wc = TRUE;
 
-		if (tsp_is_working_copy (lp->data))
+		if (thunarx_file_info_is_directory (lp->data))
 		{
-			one_is_wc = TRUE;
-			g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(TRUE));
+			one_is_directory = TRUE;
+			if (tsp_is_working_copy (lp->data))
+			{
+				one_is_wc = TRUE;
+				//g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(TRUE));
+			}
+			else
+			{
+				one_is_not_wc = TRUE;
+				//g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(FALSE));
+			}
 		}
 		else
 		{
-			one_is_not_wc = TRUE;
-			g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(FALSE));
+			one_is_file = TRUE;
 		}
 	}
 
@@ -274,7 +284,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 	if (parent_wc || one_is_wc)
 	{
 		/* append the svn submenu action */
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"));
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), FALSE, one_is_directory, one_is_file, parent_wc, one_is_wc, one_is_not_wc);
 		actions = g_list_append (actions, action);
 	}
 
@@ -307,7 +317,7 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 	if (tsp_is_working_copy (folder))
 	{
 		/* append the svn submenu action */
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"));
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), TRUE, FALSE, FALSE, TRUE, FALSE, FALSE);
 		actions = g_list_append (actions, action);
 	}
 	else
