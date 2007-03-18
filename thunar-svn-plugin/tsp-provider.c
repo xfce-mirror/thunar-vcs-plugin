@@ -25,6 +25,10 @@
 #include <unistd.h>
 #endif
 
+#ifdef HAVE_STRING_H
+#include <string.h>
+#endif
+
 #include <thunar-vfs/thunar-vfs.h>
 
 #include <thunar-svn-plugin/tsp-svn-backend.h>
@@ -217,6 +221,108 @@ tsp_is_parent_working_copy (ThunarxFileInfo *file_info)
 
 
 
+static GSList *
+tsp_get_parent_status (ThunarxFileInfo *file_info)
+{
+  GSList *result = NULL;
+  gchar  *filename;
+  gchar  *uri;
+
+  /* determine the parent URI for the file info */
+  uri = thunarx_file_info_get_parent_uri (file_info);
+  if (G_LIKELY (uri != NULL))
+    {
+      /* determine the local filename for the URI */
+      filename = g_filename_from_uri (uri, NULL, NULL);
+      if (G_LIKELY (filename != NULL))
+        {
+          /* check if the folder is a working copy */
+          result = tsp_svn_backend_get_status (filename);
+
+          /* release the filename */
+          g_free (filename);
+        }
+
+      /* release the URI */
+      g_free (uri);
+    }
+
+  return result;
+}
+
+
+
+gint
+tsp_compare_filename (const gchar *uri1, const gchar *uri2)
+{
+	/* strip the "file://" part of the uri */
+	if (strncmp (uri1, "file://", 7) == 0)
+	{
+		uri1 += 7;
+	}
+
+	/* strip the "file://" part of the uri */
+	if (strncmp (uri2, "file://", 7) == 0)
+	{
+		uri2 += 7;
+	}
+
+	gchar *path1 = g_strdup (uri1);
+	gchar *path2 = g_strdup (uri2);
+
+	/* remove trailing '/' */
+	if (path1[strlen (path1) - 1] == '/')
+	{
+		path1[strlen (path1) - 1] = '\0';
+	}
+
+	/* remove trailing '/'*/
+	if (path2[strlen (path2) - 1] == '/')
+	{
+		path2[strlen (path2) - 1] = '\0';
+	}
+	
+	gint result = strcmp (path1, path2);
+
+	g_free (path1);
+	g_free (path2);
+
+	return result;
+}
+
+
+
+static gint
+tsp_compare_path (TspSvnFileStatus *file_status, ThunarxFileInfo *file_info)
+{
+  gint   result = 1;
+  gchar *filename;
+  gchar *uri;
+
+  /* determine the parent URI for the file info */
+  uri = thunarx_file_info_get_uri (file_info);
+  if (G_LIKELY (uri != NULL))
+    {
+      /* determine the local filename for the URI */
+      filename = g_filename_from_uri (uri, NULL, NULL);
+      if (G_LIKELY (filename != NULL))
+        {
+          /* check if the folder is a working copy */
+          result = tsp_compare_filename (file_status->path, filename);
+
+          /* release the filename */
+          g_free (filename);
+        }
+
+      /* release the URI */
+      g_free (uri);
+    }
+
+	return result;
+}
+
+
+
 static GList*
 tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                GtkWidget           *window,
@@ -225,14 +331,18 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   ThunarVfsPathScheme scheme;
   ThunarVfsInfo      *info;
   gboolean            parent_wc = FALSE;
-	gboolean            one_is_wc = FALSE;
-	gboolean            one_is_not_wc = FALSE;
-	gboolean            one_is_directory = FALSE;
-	gboolean            one_is_file = FALSE;
+	gboolean            directory_is_wc = FALSE;
+	gboolean            directory_is_not_wc = FALSE;
+	gboolean            file_is_vc = FALSE;
+	gboolean            file_is_not_vc = FALSE;
   GtkAction          *action;
   GList              *actions = NULL;
   GList              *lp;
   gint                n_files = 0;
+	GSList             *file_status;
+	GSList             *iter;
+
+	file_status = tsp_get_parent_status (files->data);
 
   /* check all supplied files */
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
@@ -252,26 +362,38 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 
 		if (thunarx_file_info_is_directory (lp->data))
 		{
-			one_is_directory = TRUE;
 			if (tsp_is_working_copy (lp->data))
 			{
-				one_is_wc = TRUE;
+				directory_is_wc = TRUE;
 				//g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(TRUE));
 			}
 			else
 			{
-				one_is_not_wc = TRUE;
+				directory_is_not_wc = TRUE;
 				//g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(FALSE));
 			}
 		}
 		else
 		{
-			one_is_file = TRUE;
+			for (iter = file_status; iter; iter = iter->next)
+			{
+				if (!tsp_compare_path (iter->data, lp->data))
+				{
+					if (((TspSvnFileStatus*)iter->data)->flag.version_control)
+					{
+						file_is_vc = TRUE;
+					}
+					else
+					{
+						file_is_not_vc = TRUE;
+					}
+				}
+			}
 		}
 	}
 
 	/* is the parent folder a working copy */
-	if (!parent_wc && one_is_not_wc)
+	if (!parent_wc && (directory_is_not_wc || file_is_not_vc))
 	{
 		/* It's not a working copy
 		 * append the "Import" action */
@@ -281,10 +403,10 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 													 NULL);
 		actions = g_list_append (actions, action);
 	}
-	if (parent_wc || one_is_wc)
+	if (parent_wc || directory_is_wc)
 	{
 		/* append the svn submenu action */
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), FALSE, one_is_directory, one_is_file, parent_wc, one_is_wc, one_is_not_wc);
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
 		actions = g_list_append (actions, action);
 	}
 
@@ -317,7 +439,7 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 	if (tsp_is_working_copy (folder))
 	{
 		/* append the svn submenu action */
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), TRUE, FALSE, FALSE, TRUE, FALSE, FALSE);
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
 		actions = g_list_append (actions, action);
 	}
 	else
@@ -329,6 +451,9 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 													 "label", _("SVN _Checkout"),
 													 NULL);
 		actions = g_list_append (actions, action);
+		/* append the svn submenu action
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), TRUE, FASLE, FALSE, FALSE, FALSE, FALSE);
+		actions = g_list_append (actions, action); */
 	}
 
   return actions;

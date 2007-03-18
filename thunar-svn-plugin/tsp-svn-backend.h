@@ -24,9 +24,19 @@
 
 G_BEGIN_DECLS;
 
+typedef struct
+{
+	gchar *path;
+	struct {
+		unsigned version_control : 1;
+	} flag;
+} TspSvnFileStatus;
+
 gboolean tsp_svn_backend_init();
 
 gboolean tsp_svn_backend_is_working_copy (const gchar *uri);
+
+GSList  *tsp_svn_backend_get_status (const gchar *uri);
 
 G_END_DECLS;
 

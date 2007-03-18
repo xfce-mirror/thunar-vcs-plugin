@@ -91,6 +91,12 @@ AC_CHECK_LIB([svn_wc-1], [main], ,
 	echo "*** Please install libsvn (atleast version 1.4)."
 	exit 1
 ])
+AC_CHECK_LIB([svn_client-1], [main], ,
+[
+	echo "*** The required library 'svn_wc-1' was not found on your system."
+	echo "*** Please install libsvn (atleast version 1.4)."
+	exit 1
+])
 
 dnl ***********************************
 dnl *** Check for debugging support ***

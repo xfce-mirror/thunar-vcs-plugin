@@ -40,11 +40,11 @@ struct _TspSvnAction
 
 	struct {
 		unsigned is_parent : 1;
-		unsigned is_directory : 1;
-		unsigned is_file : 1;
 		unsigned parent_version_control : 1;
-		unsigned version_control : 1;
-		unsigned no_version_control : 1;
+		unsigned directory_version_control : 1;
+		unsigned directory_no_version_control : 1;
+		unsigned file_version_control : 1;
+		unsigned file_no_version_control : 1;
 	} property;
 };
 
@@ -52,11 +52,11 @@ struct _TspSvnAction
 
 enum {
 	PROPERTY_IS_PARENT = 1,
-	PROPERTY_IS_DIRECTORY,
-	PROPERTY_IS_FILE,
 	PROPERTY_PARENT_VERSION_CONTROL,
-	PROPERTY_VERSION_CONTROL,
-	PROPERTY_NO_VERSION_CONTROL
+	PROPERTY_DIRECTORY_VERSION_CONTROL,
+	PROPERTY_DIRECTORY_NO_VERSION_CONTROL,
+	PROPERTY_FILE_VERSION_CONTROL,
+	PROPERTY_FILE_NO_VERSION_CONTROL
 };
 
 
@@ -86,20 +86,20 @@ tsp_svn_action_class_init (TspSvnActionClass *klass)
 	g_object_class_install_property (gobject_class, PROPERTY_IS_PARENT,
 		g_param_spec_boolean ("is-parent", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
 
-	g_object_class_install_property (gobject_class, PROPERTY_IS_DIRECTORY,
-		g_param_spec_boolean ("is-directory", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
-
-	g_object_class_install_property (gobject_class, PROPERTY_IS_FILE,
-		g_param_spec_boolean ("is-file", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
-
 	g_object_class_install_property (gobject_class, PROPERTY_PARENT_VERSION_CONTROL,
 		g_param_spec_boolean ("parent-version-control", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
 
-	g_object_class_install_property (gobject_class, PROPERTY_VERSION_CONTROL,
-		g_param_spec_boolean ("version-control", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
+	g_object_class_install_property (gobject_class, PROPERTY_DIRECTORY_VERSION_CONTROL,
+		g_param_spec_boolean ("directory-version-control", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
 
-	g_object_class_install_property (gobject_class, PROPERTY_NO_VERSION_CONTROL,
-		g_param_spec_boolean ("no-version-control", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
+	g_object_class_install_property (gobject_class, PROPERTY_DIRECTORY_NO_VERSION_CONTROL,
+		g_param_spec_boolean ("directory-no-version-control", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
+
+	g_object_class_install_property (gobject_class, PROPERTY_FILE_VERSION_CONTROL,
+		g_param_spec_boolean ("file-version-control", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
+
+	g_object_class_install_property (gobject_class, PROPERTY_FILE_NO_VERSION_CONTROL,
+		g_param_spec_boolean ("file-no-version-control", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
 }
 
 
@@ -108,11 +108,11 @@ static void
 tsp_svn_action_init (TspSvnAction *self)
 {
 	self->property.is_parent = 0;
-	self->property.is_directory = 0;
-	self->property.is_file = 0;
 	self->property.parent_version_control = 0;
-	self->property.version_control = 0;
-	self->property.no_version_control = 0;
+	self->property.directory_version_control = 0;
+	self->property.directory_no_version_control = 0;
+	self->property.file_version_control = 0;
+	self->property.file_no_version_control = 0;
 }
 
 
@@ -121,11 +121,11 @@ GtkAction *
 tsp_svn_action_new (const gchar *name,
                     const gchar *label,
 										gboolean is_parent,
-										gboolean is_directory,
-										gboolean is_file,
 										gboolean parent_version_control,
-										gboolean version_control,
-										gboolean no_version_control)
+										gboolean directory_version_control,
+										gboolean directory_no_version_control,
+										gboolean file_version_control,
+										gboolean file_no_version_control)
 {
 	g_return_val_if_fail(name, NULL);
 	g_return_val_if_fail(label, NULL);
@@ -135,11 +135,11 @@ tsp_svn_action_new (const gchar *name,
 											 "name", name,
 											 "label", label,
 											 "is-parent", is_parent,
-											 "is-directory", is_directory,
-											 "is-file", is_file,
 											 "parent-version-control", parent_version_control,
-											 "version-control", version_control,
-											 "no-version-control", no_version_control,
+											 "directory-version-control", directory_version_control,
+											 "directory-no-version-control", directory_no_version_control,
+											 "file-version-control", file_version_control,
+											 "file-no-version-control", file_no_version_control,
 											 NULL);
 }
 
@@ -153,20 +153,20 @@ tsp_svn_action_set_property (GObject *object, guint property_id, const GValue *v
 		case PROPERTY_IS_PARENT:
 			TSP_SVN_ACTION (object)->property.is_parent = g_value_get_boolean (value)?1:0;
 		break;
-		case PROPERTY_IS_DIRECTORY:
-			TSP_SVN_ACTION (object)->property.is_directory = g_value_get_boolean (value)?1:0;
-		break;
-		case PROPERTY_IS_FILE:
-			TSP_SVN_ACTION (object)->property.is_file = g_value_get_boolean (value)?1:0;
-		break;
 		case PROPERTY_PARENT_VERSION_CONTROL:
 			TSP_SVN_ACTION (object)->property.parent_version_control = g_value_get_boolean (value)?1:0;
 		break;
-		case PROPERTY_VERSION_CONTROL:
-			TSP_SVN_ACTION (object)->property.version_control = g_value_get_boolean (value)?1:0;
+		case PROPERTY_DIRECTORY_VERSION_CONTROL:
+			TSP_SVN_ACTION (object)->property.directory_version_control = g_value_get_boolean (value)?1:0;
 		break;
-		case PROPERTY_NO_VERSION_CONTROL:
-			TSP_SVN_ACTION (object)->property.no_version_control = g_value_get_boolean (value)?1:0;
+		case PROPERTY_DIRECTORY_NO_VERSION_CONTROL:
+			TSP_SVN_ACTION (object)->property.directory_no_version_control = g_value_get_boolean (value)?1:0;
+		break;
+		case PROPERTY_FILE_VERSION_CONTROL:
+			TSP_SVN_ACTION (object)->property.file_version_control = g_value_get_boolean (value)?1:0;
+		break;
+		case PROPERTY_FILE_NO_VERSION_CONTROL:
+			TSP_SVN_ACTION (object)->property.file_no_version_control = g_value_get_boolean (value)?1:0;
 		break;
 	}
 }
@@ -185,14 +185,14 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	menu = gtk_menu_new ();
 	gtk_menu_item_set_submenu (GTK_MENU_ITEM (item), menu);
 	/* No version control */
-	if (tsp_action->property.parent_version_control && tsp_action->property.no_version_control && !tsp_action->property.is_parent) 
+	if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_no_version_control || tsp_action->property.file_no_version_control)) 
 	{
 		subitem = gtk_menu_item_new_with_label (_("Add"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (file) */
-	if (tsp_action->property.parent_version_control && tsp_action->property.version_control && tsp_action->property.is_file) 
+	if (tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Blame"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
@@ -207,14 +207,14 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 	gtk_widget_show(subitem);
 *//* Version control (parent) */
-	if (tsp_action->property.parent_version_control && tsp_action->property.is_parent) 
+	if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Cleanup"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && !tsp_action->property.is_parent) )
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Commit"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
@@ -225,21 +225,21 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 	gtk_widget_show(subitem);
 *//* Version control (no parent) */
-	if (tsp_action->property.parent_version_control && tsp_action->property.version_control && !tsp_action->property.is_parent) 
+	if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_version_control || tsp_action->property.file_version_control))
 	{
 		subitem = gtk_menu_item_new_with_label (_("Delete"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (file) */
-	if (tsp_action->property.parent_version_control && tsp_action->property.version_control && tsp_action->property.is_file) 
+	if (tsp_action->property.file_version_control) 
 	{
 		subitem = gtk_menu_item_new_with_label (_("Diff"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && !tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Export"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
@@ -250,7 +250,7 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 	gtk_widget_show(subitem);
 *//* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Info"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
@@ -261,14 +261,14 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 	gtk_widget_show(subitem);
 *//* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Lock"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Log"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
@@ -293,7 +293,7 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	subitem = gtk_menu_item_new_with_label (_("List Properties"));
 	subitem = gtk_menu_item_new_with_label (_("Set Properties"));
 *//* Version control */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Edit Properties"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
@@ -302,42 +302,42 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 /* Changed
 	subitem = gtk_menu_item_new_with_label (_("Mark Resolved"));
 *//* Version control (file) */
-	if (tsp_action->property.parent_version_control && tsp_action->property.version_control && tsp_action->property.is_file)
+	if (tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Resolve"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Revert"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Status"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (parent) */
-	if (tsp_action->property.version_control && tsp_action->property.is_parent)
+	if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Switch"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Unlock"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 	/* Version control (all) */
-	if (tsp_action->property.parent_version_control || (tsp_action->property.version_control && tsp_action->property.is_parent))
+	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Update"));
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
