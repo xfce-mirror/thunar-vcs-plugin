@@ -166,7 +166,7 @@ tsp_is_working_copy (ThunarxFileInfo *file_info)
   gchar   *filename;
   gchar   *uri;
 
-  /* determine the parent URI for the file info */
+  /* determine the URI for the file info */
   uri = thunarx_file_info_get_uri (file_info);
   if (G_LIKELY (uri != NULL))
     {
@@ -406,7 +406,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 	if (parent_wc || directory_is_wc)
 	{
 		/* append the svn submenu action */
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
 		actions = g_list_append (actions, action);
 	}
 
@@ -424,7 +424,7 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
   GList              *actions = NULL;
   ThunarVfsPathScheme scheme;
   ThunarVfsInfo      *info;
-
+	GList              *files;
 
 	/* check if the file is a local file */
 	info = thunarx_file_info_get_vfs_info (folder);
@@ -438,9 +438,13 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 	/* Lets see if we are dealing with a working copy */
 	if (tsp_is_working_copy (folder))
 	{
+		files = g_list_append (NULL, folder);
+
 		/* append the svn submenu action */
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
 		actions = g_list_append (actions, action);
+
+		g_list_free (files);
 	}
 	else
 	{
@@ -452,7 +456,7 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 													 NULL);
 		actions = g_list_append (actions, action);
 		/* append the svn submenu action
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), TRUE, FASLE, FALSE, FALSE, FALSE, FALSE);
+		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), window, TRUE, FASLE, FALSE, FALSE, FALSE, FALSE);
 		actions = g_list_append (actions, action); */
 	}
 

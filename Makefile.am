@@ -2,7 +2,8 @@
 SUBDIRS =								\
 	icons								\
 	po								\
-	thunar-svn-plugin
+	thunar-svn-plugin						\
+	tsp-svn-helper
 
 distclean-local:
 	rm -rf *.spec *.cache *~

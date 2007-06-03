@@ -38,6 +38,8 @@ GType      tsp_svn_action_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 
 GtkAction *tsp_svn_action_new      (const gchar*,
                                     const gchar*,
+																		GList *,
+																		GtkWidget *,
 																		gboolean,
 																		gboolean,
 																		gboolean,

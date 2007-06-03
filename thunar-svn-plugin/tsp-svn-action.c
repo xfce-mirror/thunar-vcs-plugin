@@ -21,9 +21,13 @@
 #include <config.h>
 #endif
 
+#include <thunarx/thunarx.h>
+
 #include <thunar-vfs/thunar-vfs.h>
 
 #include <thunar-svn-plugin/tsp-svn-action.h>
+
+#include <string.h>
 
 
 
@@ -46,6 +50,9 @@ struct _TspSvnAction
 		unsigned file_version_control : 1;
 		unsigned file_no_version_control : 1;
 	} property;
+
+	GList *files;
+	GtkWidget *window;
 };
 
 
@@ -65,7 +72,13 @@ static GtkWidget *tsp_svn_action_create_menu_item (GtkAction *action);
 
 
 
+static void tsp_svn_action_finalize (GObject*);
+
 static void tsp_svn_action_set_property (GObject*, guint, const GValue*, GParamSpec*);
+
+
+
+static void tsp_action_update (GtkMenuItem *item, TspSvnAction *action);
 
 
 
@@ -79,6 +92,7 @@ tsp_svn_action_class_init (TspSvnActionClass *klass)
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 	GtkActionClass *gtkaction_class = GTK_ACTION_CLASS (klass);
 
+	gobject_class->finalize = tsp_svn_action_finalize;
 	gobject_class->set_property = tsp_svn_action_set_property;
 
 	gtkaction_class->create_menu_item = tsp_svn_action_create_menu_item;
@@ -113,6 +127,8 @@ tsp_svn_action_init (TspSvnAction *self)
 	self->property.directory_no_version_control = 0;
 	self->property.file_version_control = 0;
 	self->property.file_no_version_control = 0;
+	self->files = NULL;
+	self->window = NULL;
 }
 
 
@@ -120,6 +136,8 @@ tsp_svn_action_init (TspSvnAction *self)
 GtkAction *
 tsp_svn_action_new (const gchar *name,
                     const gchar *label,
+										GList *files,
+										GtkWidget *window,
 										gboolean is_parent,
 										gboolean parent_version_control,
 										gboolean directory_version_control,
@@ -130,17 +148,34 @@ tsp_svn_action_new (const gchar *name,
 	g_return_val_if_fail(name, NULL);
 	g_return_val_if_fail(label, NULL);
 
-	return g_object_new (TSP_TYPE_SVN_ACTION,
-	                     "hide-if-empty", FALSE,
-											 "name", name,
-											 "label", label,
-											 "is-parent", is_parent,
-											 "parent-version-control", parent_version_control,
-											 "directory-version-control", directory_version_control,
-											 "directory-no-version-control", directory_no_version_control,
-											 "file-version-control", file_version_control,
-											 "file-no-version-control", file_no_version_control,
-											 NULL);
+	GtkAction *action = g_object_new (TSP_TYPE_SVN_ACTION,
+	                  						  	"hide-if-empty", FALSE,
+																		"name", name,
+																		"label", label,
+																		"is-parent", is_parent,
+																		"parent-version-control", parent_version_control,
+																		"directory-version-control", directory_version_control,
+																		"directory-no-version-control", directory_no_version_control,
+																		"file-version-control", file_version_control,
+																		"file-no-version-control", file_no_version_control,
+																		NULL);
+	TSP_SVN_ACTION (action)->files = thunarx_file_info_list_copy (files);
+//	TSP_SVN_ACTION (action)->window = gtk_widget_ref (window);
+	TSP_SVN_ACTION (action)->window = window;
+	return action;
+}
+
+
+
+static void
+tsp_svn_action_finalize (GObject *object)
+{
+	thunarx_file_info_list_free (TSP_SVN_ACTION (object)->files);
+	TSP_SVN_ACTION (object)->files = NULL;
+//	gtk_widget_unref (TSP_SVN_ACTION (object)->window);
+	TSP_SVN_ACTION (object)->window = NULL;
+
+	G_OBJECT_CLASS (tsp_svn_action_parent_class)->finalize (object);
 }
 
 
@@ -340,10 +375,85 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Update"));
+		g_signal_connect_object (subitem, "activate", G_CALLBACK (tsp_action_update), action, G_CONNECT_AFTER);
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
 
 	return item;
+}
+
+
+
+static void tsp_action_update (GtkMenuItem *item, TspSvnAction *action)
+{
+	guint size, i;
+	gchar **argv;
+	GList *iter;
+	gchar *uri;
+	gchar *filename;
+	gchar *file;
+	gint pid;
+	GError *error = NULL;
+	GdkScreen *screen = gtk_window_get_screen (GTK_WINDOW (action->window));
+
+	iter = action->files;
+
+	size = g_list_length (iter);
+
+	argv = g_new (gchar *, size + 3);
+
+	argv[0] = g_strdup (TSP_SVN_HELPER);
+	argv[1] = g_strdup ("--update");
+	argv[size + 2] = NULL;
+
+	for (i = 0; i < size; i++)
+	{
+		/* determine the URI for the file info */
+		uri = thunarx_file_info_get_uri (iter->data);
+		if (G_LIKELY (uri != NULL))
+    {
+      /* determine the local filename for the URI */
+      filename = g_filename_from_uri (uri, NULL, NULL);
+      if (G_LIKELY (filename != NULL))
+			{
+				file = filename;
+				/* strip the "file://" part of the uri */
+				if (strncmp (file, "file://", 7) == 0)
+				{
+					file += 7;
+				}
+
+				file = g_strdup (file);
+
+				/* remove trailing '/' cause svn can't handle that */
+				if (file[strlen (file) - 1] == '/')
+				{
+					file[strlen (file) - 1] = '\0';
+				}
+
+				argv[i+2] = file;
+
+				/* release the filename */
+				g_free (filename);
+			}
+
+      /* release the URI */
+      g_free (uri);
+    }
+
+		iter = g_list_next (iter);
+	}
+
+	if (!gdk_spawn_on_screen (screen, NULL, argv, NULL, 0, NULL, NULL, &pid, &error))
+	{
+		GtkWidget *dialog = gtk_message_dialog_new (GTK_WINDOW (action->window), GTK_DIALOG_DESTROY_WITH_PARENT|GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, "Could not spawn \'" TSP_SVN_HELPER "\'");
+		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
+		gtk_dialog_run (GTK_DIALOG (dialog));
+		gtk_widget_destroy (dialog);
+		g_error_free (error);
+	}
+
+	g_strfreev (argv);
 }
 

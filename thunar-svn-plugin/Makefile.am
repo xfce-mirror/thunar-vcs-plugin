@@ -25,7 +25,8 @@ thunar_svn_plugin_la_CFLAGS =						\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
 	$(THUNAR_VFS_CFLAGS)						\
-	$(APR_CFLAGS)
+	$(APR_CFLAGS)							\
+	-DTSP_SVN_HELPER=\"$(libexecdir)/tsp-svn-helper\"
 
 thunar_svn_plugin_la_LDFLAGS =						\
 	-avoid-version							\

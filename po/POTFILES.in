@@ -2,3 +2,9 @@ thunar-svn-plugin/thunar-svn-plugin.c
 thunar-svn-plugin/tsp-provider.c
 thunar-svn-plugin/tsp-svn-action.c
 thunar-svn-plugin/tsp-svn-backend.c
+tsp-svn-helper/main.c
+tsp-svn-helper/tsh-common.c
+tsp-svn-helper/tsh-dialog-common.c
+tsp-svn-helper/tsh-login-dialog.c
+tsp-svn-helper/tsh-update.c
+tsp-svn-helper/tsh-update-dialog.c
