@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-06-03 23:13+0200\n"
+"POT-Creation-Date: 2007-06-28 00:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,10 +22,11 @@ msgstr ""
 
 #. append the svn submenu action
 #: thunar-svn-plugin/tsp-provider.c:409 thunar-svn-plugin/tsp-provider.c:444
+#: thunar-svn-plugin/tsp-provider.c:452
 msgid "SVN"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-provider.c:455
+#: thunar-svn-plugin/tsp-provider.c:457
 msgid "SVN _Checkout"
 msgstr ""
 
@@ -93,21 +94,49 @@ msgstr ""
 msgid "Unlock"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:377
-#: tsp-svn-helper/tsh-update-dialog.c:102
+#: thunar-svn-plugin/tsp-svn-action.c:377 tsp-svn-helper/tsh-update.c:105
 msgid "Update"
 msgstr ""
 
-#: tsp-svn-helper/main.c:55
+#: tsp-svn-helper/main.c:56
 msgid "Print version information"
 msgstr ""
 
-#: tsp-svn-helper/main.c:62
+#: tsp-svn-helper/main.c:63
 msgid "Execute checkout action"
 msgstr ""
 
-#: tsp-svn-helper/main.c:68
+#: tsp-svn-helper/main.c:69
 msgid "Execute update action"
+msgstr ""
+
+#: tsp-svn-helper/tsh-checkout.c:87
+msgid "Checkout"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:448
+msgid "Deleted"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:453
+msgid "Added"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:458
+msgid "Updated"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:462
+#, c-format
+msgid "At revision: %li"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:464
+msgid "Completed"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:469
+msgid "External"
 msgstr ""
 
 #: tsp-svn-helper/tsh-login-dialog.c:65
@@ -126,39 +155,18 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: tsp-svn-helper/tsh-update.c:52
-msgid "Deleted"
-msgstr ""
-
-#: tsp-svn-helper/tsh-update.c:55
-msgid "Added"
-msgstr ""
-
-#: tsp-svn-helper/tsh-update.c:58
-msgid "Updated"
-msgstr ""
-
-#: tsp-svn-helper/tsh-update.c:61
-#, c-format
-msgid "At revision: %li"
-msgstr ""
-
-#: tsp-svn-helper/tsh-update.c:62
-msgid "Completed"
-msgstr ""
-
-#: tsp-svn-helper/tsh-update.c:65
-msgid "External"
-msgstr ""
-
-#: tsp-svn-helper/tsh-update-dialog.c:75
+#: tsp-svn-helper/tsh-notify-dialog.c:75
 msgid "Action"
 msgstr ""
 
-#: tsp-svn-helper/tsh-update-dialog.c:81
+#: tsp-svn-helper/tsh-notify-dialog.c:81
 msgid "Path"
 msgstr ""
 
-#: tsp-svn-helper/tsh-update-dialog.c:87
+#: tsp-svn-helper/tsh-notify-dialog.c:87
 msgid "Mime type"
+msgstr ""
+
+#: tsp-svn-helper/tsh-notify-dialog.c:102
+msgid "Notification"
 msgstr ""

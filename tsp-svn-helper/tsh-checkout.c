@@ -37,49 +37,31 @@
 #include "tsh-dialog-common.h"
 #include "tsh-notify-dialog.h"
 
-#include "tsh-update.h"
+#include "tsh-checkout.h"
 
 struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
 	TshNotifyDialog *dialog;
-	gchar **files;
+	gchar *path;
+	gchar *url;
 };
 
-gpointer update_thread (gpointer user_data)
+gpointer checkout_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
   svn_opt_revision_t revision;
 	svn_error_t *err;
-	apr_array_header_t *paths;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *pool = args->pool;
 	TshNotifyDialog *dialog = args->dialog;
-	gchar **files = args->files;
-	gint size, i;
+	gchar *path = args->path;
+	gchar *url = args->url;
 
 	g_free (args);
 
-	size = files?g_strv_length(files):0;
-
-	if(size)
-	{
-		paths = apr_array_make (pool, size, sizeof (const char *));
-		
-		for (i = 0; i < size; i++)
-		{
-			APR_ARRAY_PUSH (paths, const char *) = files[i];
-		}
-	}
-	else
-	{
-		paths = apr_array_make (pool, 1, sizeof (const char *));
-		
-		APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
-	}
-
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_update2(NULL, paths, &revision, TRUE, FALSE, ctx, pool)))
+	if ((err = svn_client_checkout2(NULL, url, path, &revision, &revision, TRUE, FALSE, ctx, pool)))
 	{
 		gdk_threads_enter();
 		tsh_notify_dialog_done (dialog);
@@ -97,12 +79,12 @@ gpointer update_thread (gpointer user_data)
 	return GINT_TO_POINTER (TRUE);
 }
 
-GThread *tsh_update (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
+GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
 
-	dialog = tsh_notify_dialog_new (_("Update"), NULL, 0);
+	dialog = tsh_notify_dialog_new (_("Checkout"), NULL, 0);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
 	ctx->notify_func2 = tsh_notify_func2;
@@ -112,8 +94,9 @@ GThread *tsh_update (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->ctx = ctx;
 	args->pool = pool;
 	args->dialog = TSH_NOTIFY_DIALOG (dialog);
-	args->files = files;
+	args->path = files[0];
+	args->url =	"http://svn.xfce.org/svn/goodies/thunar-svn-plugin/trunk/tsp-svn-helper";
 
-	return g_thread_create (update_thread, args, TRUE, NULL);
+	return g_thread_create (checkout_thread, args, TRUE, NULL);
 }
 
