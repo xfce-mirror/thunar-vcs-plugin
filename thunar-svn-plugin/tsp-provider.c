@@ -421,6 +421,7 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
                                  ThunarxFileInfo     *folder)
 {
   GtkAction          *action;
+  GtkAction          *svnaction;
   GList              *actions = NULL;
   ThunarVfsPathScheme scheme;
   ThunarVfsInfo      *info;
@@ -435,29 +436,30 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 	if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
 		return NULL;
 
+	files = g_list_append (NULL, folder);
+
 	/* Lets see if we are dealing with a working copy */
 	if (tsp_is_working_copy (folder))
 	{
-		files = g_list_append (NULL, folder);
-
+		svnaction = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
 		/* append the svn submenu action */
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE);
-		actions = g_list_append (actions, action);
+		actions = g_list_append (actions, svnaction);
 
 		g_list_free (files);
 	}
 	else
 	{
+		svnaction = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE);
 		/* It's not a working copy
 		 * append the "Checkout" action */
 		action = g_object_new (GTK_TYPE_ACTION,
 													 "name", "Tsp::checkout",
 													 "label", _("SVN _Checkout"),
 													 NULL);
+		g_signal_connect_object (action, "activate", G_CALLBACK (tsp_action_checkout), svnaction, G_CONNECT_AFTER);
 		actions = g_list_append (actions, action);
 		/* append the svn submenu action
-		action = tsp_svn_action_new ("Tsp::svn", _("SVN"), window, TRUE, FASLE, FALSE, FALSE, FALSE, FALSE);
-		actions = g_list_append (actions, action); */
+		actions = g_list_append (actions, svnaction); */
 	}
 
   return actions;

@@ -35,46 +35,14 @@
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
-#include "tsh-update-dialog.h"
+#include "tsh-notify-dialog.h"
 
 #include "tsh-update.h"
-
-static void tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
-{
-	TshUpdateDialog *dialog = TSH_UPDATE_DIALOG (baton);
-	char buffer[256];
-
-	gdk_threads_enter ();
-
-	switch(notify->action)
-	{
-		case svn_wc_notify_update_delete:
-			tsh_update_dialog_add(dialog, _("Deleted"), notify->path, notify->mime_type);
-			break;
-		case svn_wc_notify_update_add:
-			tsh_update_dialog_add(dialog, _("Added"), notify->path, notify->mime_type);
-			break;
-		case svn_wc_notify_update_update:
-			tsh_update_dialog_add(dialog, _("Updated"), notify->path, notify->mime_type);
-			break;
-		case svn_wc_notify_update_completed:
-			g_snprintf(buffer, 256, _("At revision: %li"), notify->revision);
-			tsh_update_dialog_add(dialog, _("Completed"), buffer, NULL);
-			break;
-		case svn_wc_notify_update_external:
-			tsh_update_dialog_add(dialog, _("External"), notify->path, notify->mime_type);
-			break;
-		default:
-			break;
-	}
-
-	gdk_threads_leave ();
-}
 
 struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
-	TshUpdateDialog *dialog;
+	TshNotifyDialog *dialog;
 	gchar **files;
 };
 
@@ -86,7 +54,7 @@ gpointer update_thread (gpointer user_data)
 	apr_array_header_t *paths;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *pool = args->pool;
-	TshUpdateDialog *dialog = args->dialog;
+	TshNotifyDialog *dialog = args->dialog;
 	gchar **files = args->files;
 	gint size, i;
 
@@ -110,19 +78,21 @@ gpointer update_thread (gpointer user_data)
 		APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
 	}
 
-	//APR_ARRAY_PUSH (paths, const char *) = "/home/cavalier/xfce/svn/squeeze";
-
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_update2(NULL, paths, &revision, TRUE, TRUE, ctx, pool)))
+	if ((err = svn_client_update2(NULL, paths, &revision, TRUE, FALSE, ctx, pool)))
 	{
-		tsh_update_dialog_done (dialog);
+		gdk_threads_enter();
+		tsh_notify_dialog_done (dialog);
+		gdk_threads_leave();
 
 		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}
 
-	tsh_update_dialog_done (dialog);
+	gdk_threads_enter();
+	tsh_notify_dialog_done (dialog);
+	gdk_threads_leave();
 	
 	return GINT_TO_POINTER (TRUE);
 }
@@ -132,7 +102,7 @@ GThread *tsh_update (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	GtkWidget *dialog;
 	struct thread_args *args;
 
-	dialog = tsh_update_dialog_new (NULL, NULL, 0);
+	dialog = tsh_notify_dialog_new (NULL, NULL, 0);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
 	ctx->notify_func2 = tsh_notify_func2;
@@ -141,7 +111,7 @@ GThread *tsh_update (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args = g_malloc (sizeof (struct thread_args));
 	args->ctx = ctx;
 	args->pool = pool;
-	args->dialog = TSH_UPDATE_DIALOG (dialog);
+	args->dialog = TSH_NOTIFY_DIALOG (dialog);
 	args->files = files;
 
 	return g_thread_create (update_thread, args, TRUE, NULL);

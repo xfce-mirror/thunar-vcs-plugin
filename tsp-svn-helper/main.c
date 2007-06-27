@@ -34,6 +34,7 @@
 
 #include "tsh-common.h"
 #include "tsh-update.h"
+#include "tsh-checkout.h"
 
 int main (int argc, char *argv[])
 {
@@ -120,6 +121,11 @@ int main (int argc, char *argv[])
 	if(update)
 	{
 		thread = tsh_update(files, svn_ctx, pool);
+	}
+
+	if(checkout)
+	{
+		thread = tsh_checkout(files, svn_ctx, pool);
 	}
 
 	if(thread)

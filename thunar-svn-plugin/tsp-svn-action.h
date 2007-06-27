@@ -49,4 +49,7 @@ GtkAction *tsp_svn_action_new      (const gchar*,
 
 G_END_DECLS;
 
+
+void tsp_action_checkout (GtkMenuItem *, TspSvnAction *);
+
 #endif /* !__TSP_SVN_ACTION_H__ */

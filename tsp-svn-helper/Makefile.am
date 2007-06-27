@@ -9,7 +9,7 @@ AM_CPPFLAGS =								\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
 
-libexec_PROGRAMS =								\
+libexec_PROGRAMS =							\
 	tsp-svn-helper
 
 tsp_svn_helper_SOURCES =						\
@@ -18,12 +18,18 @@ tsp_svn_helper_SOURCES =						\
 	tsh-common.c							\
 	tsh-update.h							\
 	tsh-update.c							\
+	tsh-checkout.h							\
+	tsh-checkout.c							\
 	tsh-dialog-common.h						\
 	tsh-dialog-common.c						\
 	tsh-login-dialog.h						\
 	tsh-login-dialog.c						\
-	tsh-update-dialog.h						\
-	tsh-update-dialog.c
+	tsh-file-dialog.h						\
+	tsh-file-dialog.c						\
+	tsh-trust-dialog.h						\
+	tsh-trust-dialog.c						\
+	tsh-notify-dialog.h						\
+	tsh-notify-dialog.c
 
 tsp_svn_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tsp-svn-helper\"

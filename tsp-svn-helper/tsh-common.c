@@ -35,7 +35,11 @@
 #include <subversion-1/svn_config.h>
 #include <subversion-1/svn_fs.h>
 
+#include "tsh-dialog-common.h"
 #include "tsh-login-dialog.h"
+#include "tsh-file-dialog.h"
+#include "tsh-trust-dialog.h"
+#include "tsh-notify-dialog.h"
 
 #include "tsh-common.h"
 
@@ -244,14 +248,17 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
                        svn_boolean_t may_save,
                        apr_pool_t *pool)
 {
-	g_debug("prompt");
-
 	if(!username)
 		username = "";
+
+	gdk_threads_enter();
+
 	GtkWidget *dialog = tsh_login_dialog_new(NULL, NULL, 0, username, TRUE, may_save);
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
+		gdk_threads_leave();
+
 		*cred = NULL;
 
 		gtk_widget_destroy(dialog);
@@ -259,6 +266,8 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 		cancelled = TRUE;
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
+
+	gdk_threads_leave();
 
   svn_auth_cred_simple_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_simple_t));
 	TshLoginDialog *login_dialog = TSH_LOGIN_DIALOG(dialog);
@@ -279,12 +288,14 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
                                              svn_boolean_t may_save,
                                              apr_pool_t *pool)
 {
-	g_debug("prompt");
+	gdk_threads_enter();
 
 	GtkWidget *dialog = tsh_login_dialog_new(NULL, NULL, 0, "", FALSE, may_save);
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
+		gdk_threads_leave();
+
 		*cred = NULL;
 
 		gtk_widget_destroy(dialog);
@@ -292,6 +303,8 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
 		cancelled = TRUE;
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
+
+	gdk_threads_leave();
 
   svn_auth_cred_username_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_username_t));
 	TshLoginDialog *login_dialog = TSH_LOGIN_DIALOG(dialog);
@@ -313,8 +326,32 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
                                  svn_boolean_t may_save,
                                  apr_pool_t *pool)
 {
-	g_debug("prompt");
-	cancelled = TRUE;
+	gdk_threads_enter();
+
+	GtkWidget *dialog = tsh_trust_dialog_new(NULL, NULL, 0, failures, may_save);
+
+	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
+	{
+		gdk_threads_leave();
+
+		*cred = NULL;
+
+		gtk_widget_destroy(dialog);
+
+		cancelled = TRUE;
+		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
+	}
+
+	gdk_threads_leave();
+
+  svn_auth_cred_ssl_server_trust_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_server_trust_t));
+	TshTrustDialog *trust_dialog = TSH_TRUST_DIALOG(dialog);
+	ret->may_save = tsh_trust_dialog_get_may_save(trust_dialog);
+	ret->accepted_failures = tsh_trust_dialog_get_accepted(trust_dialog);
+	*cred = ret;
+
+	gtk_widget_destroy(dialog);
+
 	return SVN_NO_ERROR;
 }
 
@@ -325,8 +362,32 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
                                 svn_boolean_t may_save,
                                 apr_pool_t *pool)
 {
-	g_debug("prompt");
-	cancelled = TRUE;
+	gdk_threads_enter();
+
+	GtkWidget *dialog = tsh_file_dialog_new(NULL, NULL, 0, may_save);
+
+	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
+	{
+		gdk_threads_leave();
+
+		*cred = NULL;
+
+		gtk_widget_destroy(dialog);
+
+		cancelled = TRUE;
+		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
+	}
+
+	gdk_threads_leave();
+
+  svn_auth_cred_ssl_client_cert_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_t));
+	TshFileDialog *file_dialog = TSH_FILE_DIALOG(dialog);
+	ret->cert_file = apr_pstrdup(pool, tsh_file_dialog_get_filename(file_dialog));
+	ret->may_save = tsh_file_dialog_get_may_save(file_dialog);
+	*cred = ret;
+
+	gtk_widget_destroy(dialog);
+
 	return SVN_NO_ERROR;
 }
 
@@ -337,8 +398,32 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
                                    svn_boolean_t may_save,
                                    apr_pool_t *pool)
 {
-	g_debug("prompt");
-	cancelled = TRUE;
+	gdk_threads_enter();
+
+	GtkWidget *dialog = tsh_login_dialog_new(NULL, NULL, 0, NULL, TRUE, may_save);
+
+	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
+	{
+		gdk_threads_leave();
+
+		*cred = NULL;
+
+		gtk_widget_destroy(dialog);
+
+		cancelled = TRUE;
+		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
+	}
+
+	gdk_threads_leave();
+
+  svn_auth_cred_ssl_client_cert_pw_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_pw_t));
+	TshLoginDialog *login_dialog = TSH_LOGIN_DIALOG(dialog);
+	ret->password = apr_pstrdup(pool, tsh_login_dialog_get_password(login_dialog));
+	ret->may_save = tsh_login_dialog_get_may_save(login_dialog);
+	*cred = ret;
+
+	gtk_widget_destroy(dialog);
+
 	return SVN_NO_ERROR;
 }
 
@@ -348,5 +433,44 @@ tsh_check_cancel(void *baton)
 	if(cancelled)
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	return SVN_NO_ERROR;
+}
+
+void
+tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
+{
+	TshNotifyDialog *dialog = TSH_NOTIFY_DIALOG (baton);
+	char buffer[256];
+
+	switch(notify->action)
+	{
+		case svn_wc_notify_update_delete:
+			gdk_threads_enter();
+			tsh_notify_dialog_add(dialog, _("Deleted"), notify->path, notify->mime_type);
+			gdk_threads_leave();
+			break;
+		case svn_wc_notify_update_add:
+			gdk_threads_enter();
+			tsh_notify_dialog_add(dialog, _("Added"), notify->path, notify->mime_type);
+			gdk_threads_leave();
+			break;
+		case svn_wc_notify_update_update:
+			gdk_threads_enter();
+			tsh_notify_dialog_add(dialog, _("Updated"), notify->path, notify->mime_type);
+			gdk_threads_leave();
+			break;
+		case svn_wc_notify_update_completed:
+			g_snprintf(buffer, 256, _("At revision: %li"), notify->revision);
+			gdk_threads_enter();
+			tsh_notify_dialog_add(dialog, _("Completed"), buffer, NULL);
+			gdk_threads_leave();
+			break;
+		case svn_wc_notify_update_external:
+			gdk_threads_enter();
+			tsh_notify_dialog_add(dialog, _("External"), notify->path, notify->mime_type);
+			gdk_threads_leave();
+			break;
+		default:
+			break;
+	}
 }
 
