@@ -24,11 +24,11 @@
 #include <thunar-vfs/thunar-vfs.h>
 #include <gtk/gtk.h>
 
-#include "tsh-update-dialog.h"
+#include "tsh-notify-dialog.h"
 
 static void cancel_clicked (GtkButton*, gpointer);
 
-struct _TshUpdateDialog
+struct _TshNotifyDialog
 {
 	GtkDialog dialog;
 
@@ -37,15 +37,15 @@ struct _TshUpdateDialog
 	GtkWidget *cancel;
 };
 
-struct _TshUpdateDialogClass
+struct _TshNotifyDialogClass
 {
 	GtkDialogClass dialog_class;
 };
 
-G_DEFINE_TYPE (TshUpdateDialog, tsh_update_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (TshNotifyDialog, tsh_notify_dialog, GTK_TYPE_DIALOG)
 
 static void
-tsh_update_dialog_class_init (TshUpdateDialogClass *klass)
+tsh_notify_dialog_class_init (TshNotifyDialogClass *klass)
 {
 }
 
@@ -57,7 +57,7 @@ enum {
 };
 
 static void
-tsh_update_dialog_init (TshUpdateDialog *dialog)
+tsh_notify_dialog_init (TshNotifyDialog *dialog)
 {
 	GtkWidget *button;
 	GtkWidget *tree_view;
@@ -99,7 +99,7 @@ tsh_update_dialog_init (TshUpdateDialog *dialog)
 	gtk_widget_show (tree_view);
 	gtk_widget_show (scroll_window);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), _("Update"));
+	gtk_window_set_title (GTK_WINDOW (dialog), _("Notification"));
 
 	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
 	gtk_widget_hide (button);
@@ -113,9 +113,9 @@ tsh_update_dialog_init (TshUpdateDialog *dialog)
 }
 
 GtkWidget*
-tsh_update_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
+tsh_notify_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
 {
-	TshUpdateDialog *dialog = g_object_new (TSH_TYPE_UPDATE_DIALOG, NULL);
+	TshNotifyDialog *dialog = g_object_new (TSH_TYPE_UPDATE_DIALOG, NULL);
 
 	if(title)
 		gtk_window_set_title (GTK_WINDOW(dialog), title);
@@ -136,7 +136,7 @@ tsh_update_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
 }
 
 void       
-tsh_update_dialog_add (TshUpdateDialog *dialog, const char *action, const char *file, const char *mime_type)
+tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *file, const char *mime_type)
 {
 	GtkTreeModel *model;
 	GtkTreeIter iter;
@@ -153,11 +153,12 @@ tsh_update_dialog_add (TshUpdateDialog *dialog, const char *action, const char *
 
 	path = gtk_tree_model_get_path (model, &iter);
 	gtk_tree_view_scroll_to_cell (GTK_TREE_VIEW (dialog->tree_view), path, NULL, FALSE, 0, 0);
+
 	gtk_tree_path_free (path);
 }
 
 void
-tsh_update_dialog_done (TshUpdateDialog *dialog)
+tsh_notify_dialog_done (TshNotifyDialog *dialog)
 {
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->close);
@@ -166,7 +167,7 @@ tsh_update_dialog_done (TshUpdateDialog *dialog)
 static void
 cancel_clicked (GtkButton *button, gpointer user_data)
 {
-	TshUpdateDialog *dialog = TSH_UPDATE_DIALOG (user_data);
+	TshNotifyDialog *dialog = TSH_NOTIFY_DIALOG (user_data);
 	
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->close);
