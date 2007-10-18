@@ -36,6 +36,7 @@
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
 #include "tsh-notify-dialog.h"
+#include "tsh-checkout-dialog.h"
 
 #include "tsh-checkout.h"
 
@@ -83,6 +84,12 @@ GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
+
+	dialog = tsh_checkout_dialog_new (NULL, NULL, 0, files?files[0]:NULL);
+	gtk_dialog_run (GTK_DIALOG (dialog));
+	gtk_widget_destroy (dialog);
+
+	return NULL;
 
 	dialog = tsh_notify_dialog_new (_("Checkout"), NULL, 0);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);

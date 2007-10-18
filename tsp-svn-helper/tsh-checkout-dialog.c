@@ -24,30 +24,33 @@
 #include <thunar-vfs/thunar-vfs.h>
 #include <gtk/gtk.h>
 
-#include "tsh-file-dialog.h"
+//#include "tsh-file-chooser-entry.h"
+#include "gtkfilechooserentry.h"
 
-struct _TshFileDialog
+#include "tsh-checkout-dialog.h"
+
+struct _TshCheckoutDialog
 {
 	GtkDialog dialog;
 
-	GtkWidget *filename;
-	GtkWidget *may_save;
+	GtkWidget *repository;
+	GtkWidget *path;
 };
 
-struct _TshFileDialogClass
+struct _TshCheckoutDialogClass
 {
 	GtkDialogClass dialog_class;
 };
 
-G_DEFINE_TYPE (TshFileDialog, tsh_file_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (TshCheckoutDialog, tsh_checkout_dialog, GTK_TYPE_DIALOG)
 
 static void
-tsh_file_dialog_class_init (TshFileDialogClass *klass)
+tsh_checkout_dialog_class_init (TshCheckoutDialogClass *klass)
 {
 }
 
 static void
-tsh_file_dialog_init (TshFileDialog *dialog)
+tsh_checkout_dialog_init (TshCheckoutDialog *dialog)
 {
 	GtkWidget *table;
 	GtkWidget *label;
@@ -57,33 +60,44 @@ tsh_file_dialog_init (TshFileDialog *dialog)
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), table, FALSE, TRUE, 0);
 	gtk_widget_show (table);
 
-	label = gtk_label_new_with_mnemonic (_("_Certificate:"));
+	label = gtk_label_new_with_mnemonic (_("_Repository:"));
 	gtk_table_attach (GTK_TABLE (table), label,
 	                  0, 1, 0, 1,
 	                  GTK_SHRINK | GTK_FILL,
 	                  GTK_SHRINK | GTK_FILL,
 	                  0, 0);
 
-	dialog->filename = gtk_file_chooser_button_new (_("Select a file"), GTK_FILE_CHOOSER_ACTION_OPEN);
-	gtk_table_attach (GTK_TABLE (table), dialog->filename,
+	dialog->repository = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
+	gtk_table_attach (GTK_TABLE (table), dialog->repository,
 	                  1, 2, 0, 1,
 	                  GTK_EXPAND | GTK_FILL,
 	                  GTK_SHRINK | GTK_FILL,
 	                  0, 0);
 
-	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->filename);
+	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->repository);
 	gtk_widget_show(label);
-	gtk_widget_show(dialog->filename);
+	gtk_widget_show(dialog->repository);
+	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog->repository), FALSE);
 
-	dialog->may_save = gtk_check_button_new_with_label(_("Remember"));
-	gtk_table_attach (GTK_TABLE (table), dialog->may_save,
-	                  0, 2, 1, 2,
+	label = gtk_label_new_with_mnemonic (_("_Checkout directory:"));
+	gtk_table_attach (GTK_TABLE (table), label,
+	                  0, 1, 1, 2,
+	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_SHRINK | GTK_FILL,
+	                  0, 0);
+
+	dialog->path = gtk_file_chooser_button_new (_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);
+	gtk_table_attach (GTK_TABLE (table), dialog->path,
+	                  1, 2, 1, 2,
 	                  GTK_EXPAND | GTK_FILL,
 	                  GTK_SHRINK | GTK_FILL,
 	                  0, 0);
-	gtk_widget_show(dialog->may_save);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), _("Certificate"));
+	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->path);
+	gtk_widget_show(label);
+	gtk_widget_show(dialog->path);
+
+	gtk_window_set_title (GTK_WINDOW (dialog), _("Checkout"));
 
 	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
 	                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
@@ -96,9 +110,9 @@ tsh_file_dialog_init (TshFileDialog *dialog)
 }
 
 GtkWidget*
-tsh_file_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, gboolean may_save)
+tsh_checkout_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, const gchar *checkout_dir)
 {
-	TshFileDialog *dialog = g_object_new (TSH_TYPE_FILE_DIALOG, NULL);
+	TshCheckoutDialog *dialog = g_object_new (TSH_TYPE_CHECKOUT_DIALOG, NULL);
 
 	if(title)
 		gtk_window_set_title (GTK_WINDOW(dialog), title);
@@ -115,21 +129,20 @@ tsh_file_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags
 	if(flags & GTK_DIALOG_NO_SEPARATOR)
 		gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
 
-	if(!may_save)
-		gtk_widget_set_sensitive(dialog->may_save, FALSE);
+	if(checkout_dir)
+  {
+    gchar *absolute = NULL;
+    if(!g_path_is_absolute (checkout_dir))
+    {
+      //TODO: ".."
+      gchar *currdir = g_get_current_dir();
+      absolute = g_build_filename(currdir, (checkout_dir[0] == '.' && (!checkout_dir[1] || checkout_dir[1] == G_DIR_SEPARATOR || checkout_dir[1] == '/'))?&checkout_dir[1]:checkout_dir, NULL);
+      g_free (currdir);
+    }
+		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog->path), absolute?absolute:checkout_dir);
+    g_free (absolute);
+  }
 
 	return GTK_WIDGET(dialog);
-}
-
-const gchar*
-tsh_file_dialog_get_filename (TshFileDialog *dialog)
-{
-	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->filename));
-}
-
-gboolean
-tsh_file_dialog_get_may_save (TshFileDialog *dialog)
-{
-	return gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dialog->may_save));
 }
 

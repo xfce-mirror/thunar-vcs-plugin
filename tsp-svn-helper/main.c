@@ -23,6 +23,7 @@
 #endif
 
 #include <glib.h>
+#include <glib/gprintf.h>
 #include <gtk/gtk.h>
 
 #include <thunar-vfs/thunar-vfs.h>
@@ -50,6 +51,7 @@ int main (int argc, char *argv[])
 	gboolean checkout = FALSE;
 	gboolean update = FALSE;
 	gchar **files = NULL;
+	GError *error = NULL;
 
 	GOptionEntry general_options_table[] =
 	{
@@ -87,7 +89,11 @@ int main (int argc, char *argv[])
 	g_thread_init (NULL);
 	gdk_threads_init ();
 
-	g_option_context_parse(option_context, &argc, &argv, NULL);
+	if(!g_option_context_parse(option_context, &argc, &argv, &error))
+	{
+		g_fprintf(stderr, "%s: %s\n\tTry --help-all\n", g_get_prgname(), error->message);
+		g_error_free(error);
+	}
 
 	if(print_version)
 	{

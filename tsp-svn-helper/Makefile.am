@@ -20,6 +20,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-update.c							\
 	tsh-checkout.h							\
 	tsh-checkout.c							\
+	gtkfilechooserentry.h						\
+	gtkfilechooserentry.c						\
 	tsh-dialog-common.h						\
 	tsh-dialog-common.c						\
 	tsh-login-dialog.h						\
@@ -29,7 +31,9 @@ tsp_svn_helper_SOURCES =						\
 	tsh-trust-dialog.h						\
 	tsh-trust-dialog.c						\
 	tsh-notify-dialog.h						\
-	tsh-notify-dialog.c
+	tsh-notify-dialog.c						\
+	tsh-checkout-dialog.h						\
+	tsh-checkout-dialog.c
 
 tsp_svn_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tsp-svn-helper\"
