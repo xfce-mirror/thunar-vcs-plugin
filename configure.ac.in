@@ -26,7 +26,7 @@ dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2006-2007 Peter de Ridder <peter@xfce.org>.])
-AC_INIT([thunar-svn-plugin], [tsp_version()], [thunar-dev@xfce.org])
+AC_INIT([thunar-svn-plugin], [tsp_version], [thunar-dev@xfce.org])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
 AC_REVISION([$Id: configure.in.in 2439 2007-01-20 10:41:39Z benny $])
