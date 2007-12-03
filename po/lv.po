@@ -1,0 +1,174 @@
+# rench translations for hunar-svn-plugin package
+# Copyright (C) 2007 THE thunar-svn-plugin'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the thunar-svn-plugin package.
+# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-svn-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-06-28 00:37+0200\n"
+"PO-Revision-Date: 2007-11-15 21:18+0300\n"
+"Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
+"Language-Team: Latvian <rprieditis@inbox.lv>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: thunar-svn-plugin/tsp-provider.c:402
+msgid "SVN _Import"
+msgstr "SVN _Imports"
+
+#. append the svn submenu action
+#: thunar-svn-plugin/tsp-provider.c:409
+#: thunar-svn-plugin/tsp-provider.c:444
+#: thunar-svn-plugin/tsp-provider.c:452
+msgid "SVN"
+msgstr "SVN"
+
+#: thunar-svn-plugin/tsp-provider.c:457
+msgid "SVN _Checkout"
+msgstr "SVN _Izrakstīšana"
+
+#: thunar-svn-plugin/tsp-svn-action.c:225
+msgid "Add"
+msgstr "Pievienot"
+
+#: thunar-svn-plugin/tsp-svn-action.c:232
+msgid "Blame"
+msgstr "Vainot"
+
+#: thunar-svn-plugin/tsp-svn-action.c:247
+msgid "Cleanup"
+msgstr "Uzkopt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:254
+msgid "Commit"
+msgstr "Apstiprināt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:265
+msgid "Delete"
+msgstr "Dzēst"
+
+#: thunar-svn-plugin/tsp-svn-action.c:272
+msgid "Diff"
+msgstr "Atšķirība"
+
+#: thunar-svn-plugin/tsp-svn-action.c:279
+msgid "Export"
+msgstr "Eksportēt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:290
+msgid "Info"
+msgstr "Informācija"
+
+#: thunar-svn-plugin/tsp-svn-action.c:301
+msgid "Lock"
+msgstr "Slēgt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:308
+msgid "Log"
+msgstr "Reģistrēt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:333
+msgid "Edit Properties"
+msgstr "Rediģēt Rekvizītus"
+
+#: thunar-svn-plugin/tsp-svn-action.c:342
+msgid "Resolve"
+msgstr "Atpazīt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:349
+msgid "Revert"
+msgstr "Atgriezt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:356
+msgid "Status"
+msgstr "Status"
+
+#: thunar-svn-plugin/tsp-svn-action.c:363
+msgid "Switch"
+msgstr "Pārslēgt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:370
+msgid "Unlock"
+msgstr "Atslēgt"
+
+#: thunar-svn-plugin/tsp-svn-action.c:377
+#: tsp-svn-helper/tsh-update.c:105
+msgid "Update"
+msgstr "Atjaunot"
+
+#: tsp-svn-helper/main.c:56
+msgid "Print version information"
+msgstr "Izdrukāt versijas informāciju"
+
+#: tsp-svn-helper/main.c:63
+msgid "Execute checkout action"
+msgstr "Izpildīt izrakstīšanas darbību"
+
+#: tsp-svn-helper/main.c:69
+msgid "Execute update action"
+msgstr "Izpildīt atjaunošanas darbību"
+
+#: tsp-svn-helper/tsh-checkout.c:87
+msgid "Checkout"
+msgstr "Izrakstīt"
+
+#: tsp-svn-helper/tsh-common.c:448
+msgid "Deleted"
+msgstr "Dzēsts"
+
+#: tsp-svn-helper/tsh-common.c:453
+msgid "Added"
+msgstr "Pievienots"
+
+#: tsp-svn-helper/tsh-common.c:458
+msgid "Updated"
+msgstr "Atjaunināts"
+
+#: tsp-svn-helper/tsh-common.c:462
+#, c-format
+msgid "At revision: %li"
+msgstr "Revizija: %li"
+
+#: tsp-svn-helper/tsh-common.c:464
+msgid "Completed"
+msgstr "Pabeigts"
+
+#: tsp-svn-helper/tsh-common.c:469
+msgid "External"
+msgstr "Ārējs"
+
+#: tsp-svn-helper/tsh-login-dialog.c:65
+msgid "_Username:"
+msgstr "_Lietotāja vārds:"
+
+#: tsp-svn-helper/tsh-login-dialog.c:81
+msgid "_Password:"
+msgstr "_Parole:"
+
+#: tsp-svn-helper/tsh-login-dialog.c:98
+msgid "Remember"
+msgstr "Atceries"
+
+#: tsp-svn-helper/tsh-login-dialog.c:106
+msgid "Login"
+msgstr "Pieteikties"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:75
+msgid "Action"
+msgstr "Darbība"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:81
+msgid "Path"
+msgstr "Ceļš"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:87
+msgid "Mime type"
+msgstr "Mime tips"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:102
+msgid "Notification"
+msgstr "Paziņošana"
+
