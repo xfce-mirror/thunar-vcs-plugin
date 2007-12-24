@@ -26,6 +26,7 @@
 
 //#include "tsh-file-chooser-entry.h"
 #include "gtkfilechooserentry.h"
+//#include <gtk/gtkfilechooserentry.h>
 
 #include "tsh-checkout-dialog.h"
 
@@ -68,6 +69,7 @@ tsh_checkout_dialog_init (TshCheckoutDialog *dialog)
 	                  0, 0);
 
 	dialog->repository = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
+	//dialog->repository = _gtk_file_chooser_entry_new(FALSE);
 	gtk_table_attach (GTK_TABLE (table), dialog->repository,
 	                  1, 2, 0, 1,
 	                  GTK_EXPAND | GTK_FILL,
@@ -87,6 +89,7 @@ tsh_checkout_dialog_init (TshCheckoutDialog *dialog)
 	                  0, 0);
 
 	dialog->path = gtk_file_chooser_button_new (_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);
+	//dialog->path = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_OPEN);//GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
 	gtk_table_attach (GTK_TABLE (table), dialog->path,
 	                  1, 2, 1, 2,
 	                  GTK_EXPAND | GTK_FILL,

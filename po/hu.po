@@ -1,7 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar SVN plugin\n"
-"POT-Creation-Date: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-12-24 23:15+0100\n"
 "PO-Revision-Date: 2007-06-04 08:37+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -17,12 +18,12 @@ msgid "SVN _Import"
 msgstr "SVN _Import"
 
 #. append the svn submenu action
-#: thunar-svn-plugin/tsp-provider.c:409
-#: thunar-svn-plugin/tsp-provider.c:444
+#: thunar-svn-plugin/tsp-provider.c:409 thunar-svn-plugin/tsp-provider.c:444
+#: thunar-svn-plugin/tsp-provider.c:452
 msgid "SVN"
 msgstr "SVN"
 
-#: thunar-svn-plugin/tsp-provider.c:455
+#: thunar-svn-plugin/tsp-provider.c:457
 msgid "SVN _Checkout"
 msgstr "SVN _Checkout"
 
@@ -90,22 +91,138 @@ msgstr "Vált"
 msgid "Unlock"
 msgstr "Felold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:377
-#: tsp-svn-helper/tsh-update-dialog.c:102
+#: thunar-svn-plugin/tsp-svn-action.c:377 tsp-svn-helper/tsh-update.c:105
 msgid "Update"
 msgstr "Frissít"
 
-#: tsp-svn-helper/main.c:55
+#. Translators: the first string is a path and the second string
+#. * is a hostname. Nautilus and the panel contain the same string
+#. * to translate.
+#.
+#: tsp-svn-helper/gtkfilechooserdefault.c:71
+#, c-format
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:50
+msgid "Select A File"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:51
+msgid "Desktop"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:52
+msgid "(None)"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:339
+msgid "Dialog"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:340
+msgid "The file chooser dialog to use."
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:356
+msgid "Focus on click"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:357
+msgid "Whether the entry grabs focus when it is clicked with the mouse"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:370
+msgid "Title"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:371
+msgid "The title of the file chooser dialog."
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:384
+msgid "Width In Characters"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:385
+msgid "The desired width of the entry widget, in characters."
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:2035
+msgid "Other..."
+msgstr ""
+
+#: tsp-svn-helper/main.c:58
 msgid "Print version information"
 msgstr "Verzió kiírása"
 
-#: tsp-svn-helper/main.c:62
+#: tsp-svn-helper/main.c:65
 msgid "Execute checkout action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:68
+#: tsp-svn-helper/main.c:71
 msgid "Execute update action"
 msgstr "Frissítési művelet futtatása"
+
+#: tsp-svn-helper/tsh-checkout.c:94 tsp-svn-helper/tsh-checkout-dialog.c:103
+#, fuzzy
+msgid "Checkout"
+msgstr "SVN _Checkout"
+
+#: tsp-svn-helper/tsh-checkout-dialog.c:64
+msgid "_Repository:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-checkout-dialog.c:71
+#: tsp-svn-helper/tsh-checkout-dialog.c:91
+msgid "Select a folder"
+msgstr ""
+
+#: tsp-svn-helper/tsh-checkout-dialog.c:84
+msgid "_Checkout directory:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:448
+msgid "Deleted"
+msgstr "Törölve"
+
+#: tsp-svn-helper/tsh-common.c:453
+msgid "Added"
+msgstr "Hozzáadva"
+
+#: tsp-svn-helper/tsh-common.c:458
+msgid "Updated"
+msgstr "Frissítve"
+
+#: tsp-svn-helper/tsh-common.c:462
+#, c-format
+msgid "At revision: %li"
+msgstr "E verziónál: %li"
+
+#: tsp-svn-helper/tsh-common.c:464
+msgid "Completed"
+msgstr "Kész"
+
+#: tsp-svn-helper/tsh-common.c:469
+msgid "External"
+msgstr "Külső"
+
+#: tsp-svn-helper/tsh-file-dialog.c:60
+msgid "_Certificate:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-file-dialog.c:67
+msgid "Select a file"
+msgstr ""
+
+#: tsp-svn-helper/tsh-file-dialog.c:78 tsp-svn-helper/tsh-login-dialog.c:98
+#: tsp-svn-helper/tsh-trust-dialog.c:73
+msgid "Remember"
+msgstr "Emlékezz"
+
+#: tsp-svn-helper/tsh-file-dialog.c:86
+msgid "Certificate"
+msgstr ""
 
 #: tsp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
@@ -115,48 +232,46 @@ msgstr "Felhasználónév:"
 msgid "_Password:"
 msgstr "Jelszó:"
 
-#: tsp-svn-helper/tsh-login-dialog.c:98
-msgid "Remember"
-msgstr "Emlékezz"
-
 #: tsp-svn-helper/tsh-login-dialog.c:106
 msgid "Login"
 msgstr "Bejelentkezés"
 
-#: tsp-svn-helper/tsh-update.c:52
-msgid "Deleted"
-msgstr "Törölve"
-
-#: tsp-svn-helper/tsh-update.c:55
-msgid "Added"
-msgstr "Hozzáadva"
-
-#: tsp-svn-helper/tsh-update.c:58
-msgid "Updated"
-msgstr "Frissítve"
-
-#: tsp-svn-helper/tsh-update.c:61
-#, c-format
-msgid "At revision: %li"
-msgstr "E verziónál: %li"
-
-#: tsp-svn-helper/tsh-update.c:62
-msgid "Completed"
-msgstr "Kész"
-
-#: tsp-svn-helper/tsh-update.c:65
-msgid "External"
-msgstr "Külső"
-
-#: tsp-svn-helper/tsh-update-dialog.c:75
+#: tsp-svn-helper/tsh-notify-dialog.c:75
 msgid "Action"
 msgstr "Művelet"
 
-#: tsp-svn-helper/tsh-update-dialog.c:81
+#: tsp-svn-helper/tsh-notify-dialog.c:81
 msgid "Path"
 msgstr "Útvonal"
 
-#: tsp-svn-helper/tsh-update-dialog.c:87
+#: tsp-svn-helper/tsh-notify-dialog.c:87
 msgid "Mime type"
 msgstr "Mime típus"
 
+#: tsp-svn-helper/tsh-notify-dialog.c:102
+msgid "Notification"
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:58
+msgid "Certificate is not yet valid."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:61
+msgid "Certificate has expired."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:64
+msgid "Certificate does not match the remote hostname."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:67
+msgid "Certificate authority is unknown."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:70
+msgid "Other failure."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:77
+msgid "Trust"
+msgstr ""

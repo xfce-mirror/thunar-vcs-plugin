@@ -11,7 +11,7 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.         See the GNU
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the GNU
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
@@ -30,36 +30,16 @@
 
 #include <string.h>
 
-#define GTK_FILE_CHOOSER_ENABLE_UNSUPPORTED
+#include <gtk/gtk.h>
 #define GTK_FILE_SYSTEM_ENABLE_UNSUPPORTED
+#define GTK_FILE_CHOOSER_ENABLE_UNSUPPORTED
+#include "gtkfilechooserutils.h"
+#undef GTK_FILE_CHOOSER_ENABLE_UNSUPPORTED
+#undef GTK_FILE_SYSTEM_ENABLE_UNSUPPORTED
+#include "gtkprivate.h"
 #include "gtkintl.h"
-#include <gtk/gtkbutton.h>
-#include <gtk/gtkcelllayout.h>
-#include <gtk/gtkcellrenderertext.h>
-#include <gtk/gtkcellrendererpixbuf.h>
-#include <gtk/gtkcomboboxentry.h>
-#include <gtk/gtkdnd.h>
-#include <gtk/gtkicontheme.h>
-#include <gtk/gtkiconfactory.h>
-#include <gtk/gtkimage.h>
-#include <gtk/gtklabel.h>
-#include <gtk/gtkliststore.h>
-#include <gtk/gtkstock.h>
-#include <gtk/gtktreemodelfilter.h>
-#include <gtk/gtkvseparator.h>
-#include <gtk/gtkfilechooserdialog.h>
-#include <gtk/gtkfilechooserprivate.h>
-#include <gtk/gtkfilechooserutils.h>
-#include "gtkmarshalers.h"
 
 #include "gtkfilechooserentry.h"
-
-#ifdef G_OS_WIN32
-#include <gtk/gtkfilesystemwin32.h>
-#endif
-
-#include <gtk/gtkprivate.h>
-//#include <gtk/gtkalias.h>
 
 /* **************** *
  *  Private Macros  *
@@ -67,11 +47,11 @@
 
 #define GTK_FILE_CHOOSER_ENTRY_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), GTK_TYPE_FILE_CHOOSER_ENTRY, GtkFileChooserEntryPrivate))
 
-#define DEFAULT_TITLE                N_("Select A File")
-#define DESKTOP_DISPLAY_NAME        N_("Desktop")
-#define FALLBACK_DISPLAY_NAME        N_("(None)")
-#define FALLBACK_ICON_NAME        "stock_unknown"
-#define FALLBACK_ICON_SIZE        16
+#define DEFAULT_TITLE         N_("Select A File")
+#define DESKTOP_DISPLAY_NAME  N_("Desktop")
+#define FALLBACK_DISPLAY_NAME N_("(None)")
+#define FALLBACK_ICON_NAME    "stock_unknown"
+#define FALLBACK_ICON_SIZE    16
 
 
 /* ********************** *
@@ -89,19 +69,12 @@ enum
   PROP_WIDTH_CHARS
 };
 
-/* Signals */
-enum
-{
-  FILE_SET,
-  LAST_SIGNAL
-};
-
 /* TreeModel Columns */
 enum
 {
   ICON_COLUMN,
   DISPLAY_NAME_COLUMN,
-  PATH_COLUMN,
+  FULL_PATH_COLUMN,
   TYPE_COLUMN,
   DATA_COLUMN,
   IS_FOLDER_COLUMN,
@@ -135,8 +108,8 @@ struct _GtkFileChooserEntryPrivate
 {
   GtkWidget *dialog;
   GtkWidget *button;
-  GtkWidget *image;
-  GtkWidget *label;
+//  GtkWidget *image;
+  GtkWidget *entry;
   GtkWidget *combo_box;
   GtkCellRenderer *icon_cell;
   GtkCellRenderer *name_cell;
@@ -156,7 +129,7 @@ struct _GtkFileChooserEntryPrivate
   gulong fs_bookmarks_changed_id;
 
   GtkFileSystemHandle *dnd_select_folder_handle;
-  GtkFileSystemHandle *update_entry_handle;
+  GtkFileSystemHandle *update_button_handle;
   GSList *change_icon_theme_handles;
 
   gint icon_size;
@@ -170,8 +143,11 @@ struct _GtkFileChooserEntryPrivate
   guint8 has_current_folder           : 1;
   guint8 has_other_separator          : 1;
 
-  /* Used for hiding/showing the dialog when the entry is hidden */
+  /* Used for hiding/showing the dialog when the button is hidden */
   guint8 active                       : 1;
+
+  /* Used to remember whether a title has been set yet, so we can use the default if it has not been set. */
+  guint8 has_title                    : 1;
 
   /* Used to track whether we need to set a default current folder on ::map() */
   guint8 folder_has_been_set          : 1;
@@ -227,7 +203,7 @@ static void     gtk_file_chooser_entry_drag_data_received  (GtkWidget        *wi
                                                             gint              x,
                                                             gint              y,
                                                             GtkSelectionData *data,
-                                                            guint             type,
+                                                            guint             info,
                                                             guint             drag_time);
 static void     gtk_file_chooser_entry_show_all            (GtkWidget        *widget);
 static void     gtk_file_chooser_entry_hide_all            (GtkWidget        *widget);
@@ -309,7 +285,6 @@ static void     dialog_response_cb               (GtkDialog      *dialog,
                                                   gint            response,
                                                   gpointer        user_data);
 
-static guint file_chooser_entry_signals[LAST_SIGNAL] = { 0 };
 
 /* ******************* *
  *  GType Declaration  *
@@ -351,38 +326,18 @@ gtk_file_chooser_entry_class_init (GtkFileChooserEntryClass * class)
   widget_class->style_set = gtk_file_chooser_entry_style_set;
   widget_class->screen_changed = gtk_file_chooser_entry_screen_changed;
   widget_class->mnemonic_activate = gtk_file_chooser_entry_mnemonic_activate;
-  
-  /**
-   * GtkFileChooserEntrys::file-set:
-   * @widget: the object which received the signal.
-   *
-   * The ::file-set signal is emitted when the user selects a file.
-   * 
-   * Note that this signal is only emitted when the <emphasis>user</emphasis>
-   * changes the file. 
-   *
-   * Since: 2.12
-   */
-  file_chooser_entry_signals[FILE_SET] =
-    g_signal_new (I_("file-set"),
-                  G_TYPE_FROM_CLASS (gobject_class),
-                  G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
-                  G_STRUCT_OFFSET (GtkFileChooserEntryClass, file_set),
-                  NULL, NULL,
-                  _gtk_marshal_VOID__VOID,
-                  G_TYPE_NONE, 0);
 
   /**
    * GtkFileChooserEntry:dialog:
    * 
-   * Instance of the #GtkFileChooserDialog associated with the entry.
+   * Instance of the #GtkFileChooserDialog associated with the button.
    *
    * Since: 2.6
    */
   g_object_class_install_property (gobject_class, PROP_DIALOG,
                                    g_param_spec_object ("dialog",
-                                                        P_("Dialog"),
-                                                        P_("The file chooser dialog to use."),
+                                                        _("Dialog"),
+                                                        _("The file chooser dialog to use."),
                                                         GTK_TYPE_FILE_CHOOSER,
                                                         (GTK_PARAM_WRITABLE |
                                                          G_PARAM_CONSTRUCT_ONLY)));
@@ -390,7 +345,7 @@ gtk_file_chooser_entry_class_init (GtkFileChooserEntryClass * class)
   /**
    * GtkFileChooserEntry:focus-on-click:
    * 
-   * Whether the #GtkFileChooserEntry entry grabs focus when it is clicked
+   * Whether the #GtkFileChooserEntry button grabs focus when it is clicked
    * with the mouse.
    *
    * Since: 2.10
@@ -398,36 +353,36 @@ gtk_file_chooser_entry_class_init (GtkFileChooserEntryClass * class)
   g_object_class_install_property (gobject_class,
                                    PROP_FOCUS_ON_CLICK,
                                    g_param_spec_boolean ("focus-on-click",
-                                                         P_("Focus on click"),
-                                                         P_("Whether the entry grabs focus when it is clicked with the mouse"),
+                                                         _("Focus on click"),
+                                                         _("Whether the entry grabs focus when it is clicked with the mouse"),
                                                          TRUE,
                                                          GTK_PARAM_READWRITE));
   
   /**
    * GtkFileChooserEntry:title:
    * 
-   * Title to put on the #GtkFileChooserDialog associated with the entry.
+   * Title to put on the #GtkFileChooserDialog associated with the button.
    *
    * Since: 2.6
    */
   g_object_class_install_property (gobject_class, PROP_TITLE,
                                    g_param_spec_string ("title",
-                                                        P_("Title"),
-                                                        P_("The title of the file chooser dialog."),
+                                                        _("Title"),
+                                                        _("The title of the file chooser dialog."),
                                                         _(DEFAULT_TITLE),
                                                         GTK_PARAM_READWRITE));
 
   /**
    * GtkFileChooserEntry:width-chars:
    * 
-   * The width of the entry and label inside the entry, in characters.
+   * The width of the entry and label inside the button, in characters.
    *
    * Since: 2.6
    */
   g_object_class_install_property (gobject_class, PROP_WIDTH_CHARS,
                                    g_param_spec_int ("width-chars",
-                                                     P_("Width In Characters"),
-                                                     P_("The desired width of the entry widget, in characters."),
+                                                     _("Width In Characters"),
+                                                     _("The desired width of the entry widget, in characters."),
                                                      -1, G_MAXINT, -1,
                                                      GTK_PARAM_READWRITE));
 
@@ -455,22 +410,23 @@ gtk_file_chooser_entry_init (GtkFileChooserEntry *entry)
   priv->button = gtk_button_new ();
   g_signal_connect (priv->button, "clicked", G_CALLBACK (button_clicked_cb),
                     entry);
-  //gtk_container_add (GTK_CONTAINER (entry), priv->button);
+  gtk_container_add (GTK_CONTAINER (entry), priv->button);
   gtk_widget_show (priv->button);
 
   box = gtk_hbox_new (FALSE, 4);
   gtk_container_add (GTK_CONTAINER (priv->button), box);
   gtk_widget_show (box);
 
-  priv->image = gtk_image_new ();
-  gtk_box_pack_start (GTK_BOX (box), priv->image, FALSE, FALSE, 0);
-  gtk_widget_show (priv->image);
+//  priv->image = gtk_image_new ();
+//  gtk_box_pack_start (GTK_BOX (box), priv->image, FALSE, FALSE, 0);
+//  gtk_widget_show (priv->image);
 
-  priv->label = gtk_label_new (_(FALLBACK_DISPLAY_NAME));
-  gtk_label_set_ellipsize (GTK_LABEL (priv->label), PANGO_ELLIPSIZE_END);
-  gtk_misc_set_alignment (GTK_MISC (priv->label), 0.0, 0.5);
-  gtk_container_add (GTK_CONTAINER (box), priv->label);
-  gtk_widget_show (priv->label);
+  priv->entry = gtk_entry_new ();
+  gtk_entry_set_text (GTK_ENTRY (priv->entry), _(FALLBACK_DISPLAY_NAME));
+//  gtk_label_set_ellipsize (GTK_LABEL (priv->label), PANGO_ELLIPSIZE_END);
+//  gtk_misc_set_alignment (GTK_MISC (priv->label), 0.0, 0.5);
+  gtk_container_add (GTK_CONTAINER (box), priv->entry);
+  gtk_widget_show (priv->entry);
 
   sep = gtk_vseparator_new ();
   gtk_box_pack_start (GTK_BOX (box), sep, FALSE, FALSE, 0);
@@ -487,7 +443,7 @@ gtk_file_chooser_entry_init (GtkFileChooserEntry *entry)
     GTK_TREE_MODEL (gtk_list_store_new (NUM_COLUMNS,
                                         GDK_TYPE_PIXBUF, /* Icon */
                                         G_TYPE_STRING,         /* Display Name */
-                                        G_TYPE_STRING,
+                                        G_TYPE_STRING,         /* Full Path */
                                         G_TYPE_CHAR,         /* Row Type */
                                         G_TYPE_POINTER         /* Volume || Path */,
                                         G_TYPE_BOOLEAN   /* Is Folder? */,
@@ -571,18 +527,18 @@ gtk_file_chooser_entry_add_shortcut_folder (GtkFileChooser     *chooser,
 
     pos = model_get_type_position (entry, ROW_TYPE_SHORTCUT);
     pos += priv->n_shortcuts;
-
+g_debug(gtk_file_system_path_to_filename (entry->priv->fs, path));
     gtk_list_store_insert (GTK_LIST_STORE (priv->model), &iter, pos);
     gtk_list_store_set (GTK_LIST_STORE (priv->model), &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, _(FALLBACK_DISPLAY_NAME),
-                        PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_SHORTCUT,
                         DATA_COLUMN, gtk_file_path_copy (path),
                         IS_FOLDER_COLUMN, FALSE,
                         -1);
-    set_info_for_path_at_iter (entry, path, &iter);
-    priv->n_shortcuts++;
+      set_info_for_path_at_iter (entry, path, &iter);
+      priv->n_shortcuts++;
 
     gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (priv->filter_model));
   }
@@ -690,13 +646,11 @@ gtk_file_chooser_entry_constructor (GType                  type,
                                              GTK_RESPONSE_ACCEPT,
                                              GTK_RESPONSE_CANCEL,
                                              -1);
+  }
 
+  /* Set the default title if necessary. We must wait until the dialog has been created to do this. */
+  if (!priv->has_title)
     gtk_file_chooser_entry_set_title (entry, _(DEFAULT_TITLE));
-  }
-  else if (!GTK_WINDOW (priv->dialog)->title)
-  {
-    gtk_file_chooser_entry_set_title (entry, _(DEFAULT_TITLE));
-  }
 
   current_folder = gtk_file_chooser_get_current_folder_uri (GTK_FILE_CHOOSER (priv->dialog));
   if (current_folder != NULL)
@@ -730,7 +684,7 @@ gtk_file_chooser_entry_constructor (GType                  type,
   g_signal_connect (priv->dialog, "notify",
                     G_CALLBACK (dialog_notify_cb), object);
   g_object_add_weak_pointer (G_OBJECT (priv->dialog),
-                             (gpointer) (&priv->dialog));
+                             (gpointer *) (&priv->dialog));
 
   priv->fs =
     g_object_ref (_gtk_file_chooser_get_file_system (GTK_FILE_CHOOSER (priv->dialog)));
@@ -753,7 +707,7 @@ gtk_file_chooser_entry_constructor (GType                  type,
                                           object, NULL);
 
   gtk_combo_box_set_model (GTK_COMBO_BOX (priv->combo_box), priv->filter_model);
-  gtk_combo_box_entry_set_text_column (GTK_COMBO_BOX_ENTRY (priv->combo_box), PATH_COLUMN);
+  gtk_combo_box_entry_set_text_column (GTK_COMBO_BOX_ENTRY (priv->combo_box), FULL_PATH_COLUMN);
   gtk_combo_box_set_row_separator_func (GTK_COMBO_BOX (priv->combo_box),
                                         combo_box_row_separator_func,
                                         NULL, NULL);
@@ -837,6 +791,9 @@ gtk_file_chooser_entry_set_property (GObject      *object,
       break;
 
     case PROP_TITLE:
+      /* Remember that a title has been set, so we do no try to set it to the default in _init(). */
+      priv->has_title = TRUE;
+      /* Intentionally fall through instead of breaking here, to actually set the property. */
     case GTK_FILE_CHOOSER_PROP_FILTER:
     case GTK_FILE_CHOOSER_PROP_PREVIEW_WIDGET:
     case GTK_FILE_CHOOSER_PROP_PREVIEW_WIDGET_ACTIVE:
@@ -881,7 +838,7 @@ gtk_file_chooser_entry_get_property (GObject    *object,
   {
     case PROP_WIDTH_CHARS:
       g_value_set_int (value,
-                       gtk_label_get_width_chars (GTK_LABEL (priv->label)));
+                       gtk_entry_get_width_chars (GTK_ENTRY (priv->entry)));
       break;
     case PROP_FOCUS_ON_CLICK:
       g_value_set_boolean (value,
@@ -952,22 +909,22 @@ gtk_file_chooser_entry_destroy (GtkObject *object)
     priv->dnd_select_folder_handle = NULL;
   }
 
-  if (priv->update_entry_handle)
-  {
-    gtk_file_system_cancel_operation (priv->update_entry_handle);
-    priv->update_entry_handle = NULL;
-  }
+  if (priv->update_button_handle)
+    {
+      gtk_file_system_cancel_operation (priv->update_button_handle);
+      priv->update_button_handle = NULL;
+    }
 
   if (priv->change_icon_theme_handles)
-  {
-    for (l = priv->change_icon_theme_handles; l; l = l->next)
     {
-      GtkFileSystemHandle *handle = GTK_FILE_SYSTEM_HANDLE (l->data);
-      gtk_file_system_cancel_operation (handle);
+      for (l = priv->change_icon_theme_handles; l; l = l->next)
+        {
+          GtkFileSystemHandle *handle = GTK_FILE_SYSTEM_HANDLE (l->data);
+          gtk_file_system_cancel_operation (handle);
+        }
+      g_slist_free (priv->change_icon_theme_handles);
+      priv->change_icon_theme_handles = NULL;
     }
-    g_slist_free (priv->change_icon_theme_handles);
-    priv->change_icon_theme_handles = NULL;
-  }
 
   if (priv->model)
   {
@@ -1074,7 +1031,7 @@ gtk_file_chooser_entry_drag_data_received (GtkWidget             *widget,
                                             gint              x,
                                             gint              y,
                                             GtkSelectionData *data,
-                                            guint              type,
+                                            guint              info,
                                             guint              drag_time)
 {
   GtkFileChooserEntry *entry = GTK_FILE_CHOOSER_ENTRY (widget);
@@ -1086,13 +1043,13 @@ gtk_file_chooser_entry_drag_data_received (GtkWidget             *widget,
     (*GTK_WIDGET_CLASS (gtk_file_chooser_entry_parent_class)->drag_data_received) (widget,
                                                                                     context,
                                                                                     x, y,
-                                                                                    data, type,
+                                                                                    data, info,
                                                                                     drag_time);
 
   if (widget == NULL || context == NULL || data == NULL || data->length < 0)
     return;
 
-  switch (type)
+  switch (info)
   {
     case TEXT_URI_LIST:
     {
@@ -1360,7 +1317,7 @@ change_icon_theme (GtkFileChooserEntry *entry)
              * If we switch to a better bookmarks file format (XBEL), we
              * should use mime info to get a better icon.
              */
-            pixbuf = gtk_icon_theme_load_icon (theme, "gnome-fs-share",
+                pixbuf = gtk_icon_theme_load_icon (theme, "gnome-fs-regular",
                                                priv->icon_size, 0, NULL);
         }
         else
@@ -1459,7 +1416,7 @@ set_info_get_info_cb (GtkFileSystemHandle *handle,
   struct SetDisplayNameData *data = callback_data;
 
   if (!data->entry->priv->model)
-    /* entry got destroyed */
+    /* button got destroyed */
     goto out;
 
   path = gtk_tree_row_reference_get_path (data->row_ref);
@@ -1599,7 +1556,7 @@ model_free_row_data (GtkFileChooserEntry *entry,
   GtkFileSystemHandle *handle;
 
   gtk_tree_model_get (entry->priv->model, iter,
-                      PATH_COLUMN, &path,
+                      FULL_PATH_COLUMN, &path,
                       TYPE_COLUMN, &type,
                       DATA_COLUMN, &data,
                       HANDLE_COLUMN, &handle,
@@ -1638,10 +1595,9 @@ model_add_special_get_info_cb (GtkFileSystemHandle *handle,
   GdkPixbuf *pixbuf;
   GtkFileSystemHandle *model_handle;
   struct ChangeIconThemeData *data = user_data;
-  gchar *name;
 
   if (!data->entry->priv->model)
-    /* entry got destroyed */
+    /* button got destroyed */
     goto out;
 
   path = gtk_tree_row_reference_get_path (data->row_ref);
@@ -1669,22 +1625,17 @@ model_add_special_get_info_cb (GtkFileSystemHandle *handle,
                                       data->entry->priv->icon_size, NULL);
 
   if (pixbuf)
-    {
-      gtk_list_store_set (GTK_LIST_STORE (data->entry->priv->model), &iter,
-                          ICON_COLUMN, pixbuf,
-                          -1);
-      g_object_unref (pixbuf);
-    }
-
-  gtk_tree_model_get (data->entry->priv->model, &iter,
-                      DISPLAY_NAME_COLUMN, &name,
-                      -1);
-  if (!name)
+  {
     gtk_list_store_set (GTK_LIST_STORE (data->entry->priv->model), &iter,
-                        DISPLAY_NAME_COLUMN, gtk_file_info_get_display_name (info),
+                        ICON_COLUMN, pixbuf,
                         -1);
-  g_free (name);
-   
+    g_object_unref (pixbuf);
+  }
+
+  gtk_list_store_set (GTK_LIST_STORE (data->entry->priv->model), &iter,
+                      DISPLAY_NAME_COLUMN, gtk_file_info_get_display_name (info),
+                      -1);
+
 out:
   g_object_unref (data->entry);
   gtk_tree_row_reference_free (data->row_ref);
@@ -1697,7 +1648,7 @@ static inline void
 model_add_special (GtkFileChooserEntry *entry)
 {
   const gchar *homedir;
-  const gchar *desktopdir;
+  gchar *desktopdir = NULL;
   GtkListStore *store;
   GtkTreeIter iter;
   GtkFilePath *path;
@@ -1732,7 +1683,7 @@ model_add_special (GtkFileChooserEntry *entry)
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, NULL,
-                        PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_SPECIAL,
                         DATA_COLUMN, path,
                         IS_FOLDER_COLUMN, TRUE,
@@ -1740,9 +1691,15 @@ model_add_special (GtkFileChooserEntry *entry)
                         -1);
 
     entry->priv->n_special++;
+
+#ifndef G_OS_WIN32
+    desktopdir = g_build_filename (homedir, DESKTOP_DISPLAY_NAME, NULL);
+#endif
   }
 
-  desktopdir = g_get_user_special_dir (G_USER_DIRECTORY_DESKTOP);
+#ifdef G_OS_WIN32
+  desktopdir = _gtk_file_system_win32_get_desktop ();
+#endif
 
   if (desktopdir)
   {
@@ -1751,6 +1708,7 @@ model_add_special (GtkFileChooserEntry *entry)
     struct ChangeIconThemeData *info;
 
     path = gtk_file_system_filename_to_path (entry->priv->fs, desktopdir);
+    g_free (desktopdir);
     gtk_list_store_insert (store, &iter, pos);
     pos++;
 
@@ -1769,7 +1727,7 @@ model_add_special (GtkFileChooserEntry *entry)
                         TYPE_COLUMN, ROW_TYPE_SPECIAL,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, _(DESKTOP_DISPLAY_NAME),
-                        PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
                         DATA_COLUMN, path,
                         IS_FOLDER_COLUMN, TRUE,
                         HANDLE_COLUMN, handle,
@@ -1841,13 +1799,11 @@ model_add_volumes (GtkFileChooserEntry *entry,
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, pixbuf,
                         DISPLAY_NAME_COLUMN, display_name,
-                        PATH_COLUMN, gtk_file_system_path_to_filename (file_system, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (file_system, path),
                         TYPE_COLUMN, ROW_TYPE_VOLUME,
                         DATA_COLUMN, volume,
                         IS_FOLDER_COLUMN, TRUE,
                         -1);
-
-    gtk_file_path_free (path);
 
     if (pixbuf)
       g_object_unref (pixbuf);
@@ -1889,7 +1845,7 @@ model_add_bookmarks (GtkFileChooserEntry *entry,
       gtk_list_store_set (store, &iter,
                           ICON_COLUMN, NULL,
                           DISPLAY_NAME_COLUMN, _(FALLBACK_DISPLAY_NAME),
-                          PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                          FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
                           TYPE_COLUMN, ROW_TYPE_BOOKMARK,
                           DATA_COLUMN, gtk_file_path_copy (path),
                           IS_FOLDER_COLUMN, FALSE,
@@ -1921,14 +1877,14 @@ model_add_bookmarks (GtkFileChooserEntry *entry,
       }
 
       icon_theme = gtk_icon_theme_get_for_screen (gtk_widget_get_screen (GTK_WIDGET (entry)));
-      pixbuf = gtk_icon_theme_load_icon (icon_theme, "gnome-fs-share", 
+      pixbuf = gtk_icon_theme_load_icon (icon_theme, "gnome-fs-directory", 
                                          entry->priv->icon_size, 0, NULL);
 
       gtk_list_store_insert (store, &iter, pos);
       gtk_list_store_set (store, &iter,
                           ICON_COLUMN, pixbuf,
                           DISPLAY_NAME_COLUMN, label,
-                          PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                          FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
                           TYPE_COLUMN, ROW_TYPE_BOOKMARK,
                           DATA_COLUMN, gtk_file_path_copy (path),
                           IS_FOLDER_COLUMN, TRUE,
@@ -1951,7 +1907,7 @@ model_add_bookmarks (GtkFileChooserEntry *entry,
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, NULL,
-                        PATH_COLUMN, NULL,
+                        FULL_PATH_COLUMN, NULL,
                         TYPE_COLUMN, ROW_TYPE_BOOKMARK_SEPARATOR,
                         DATA_COLUMN, NULL,
                         IS_FOLDER_COLUMN, FALSE,
@@ -1980,7 +1936,7 @@ model_update_current_folder (GtkFileChooserEntry *entry,
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, NULL,
-                        PATH_COLUMN, NULL,
+                        FULL_PATH_COLUMN, NULL,
                         TYPE_COLUMN, ROW_TYPE_CURRENT_FOLDER_SEPARATOR,
                         DATA_COLUMN, NULL,
                         IS_FOLDER_COLUMN, FALSE,
@@ -2005,7 +1961,7 @@ model_update_current_folder (GtkFileChooserEntry *entry,
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, _(FALLBACK_DISPLAY_NAME),
-                        PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_CURRENT_FOLDER,
                         DATA_COLUMN, gtk_file_path_copy (path),
                         IS_FOLDER_COLUMN, FALSE,
@@ -2034,17 +1990,13 @@ model_update_current_folder (GtkFileChooserEntry *entry,
     }
     
     icon_theme = gtk_icon_theme_get_for_screen (gtk_widget_get_screen (GTK_WIDGET (entry)));
-    if (gtk_file_system_path_is_local (entry->priv->fs, path)) 
-      pixbuf = gtk_icon_theme_load_icon (icon_theme, "gnome-fs-directory", 
-                                         entry->priv->icon_size, 0, NULL);
-    else
-      pixbuf = gtk_icon_theme_load_icon (icon_theme, "gnome-fs-share", 
-                                         entry->priv->icon_size, 0, NULL);
-
+    pixbuf = gtk_icon_theme_load_icon (icon_theme, "gnome-fs-directory", 
+                                       entry->priv->icon_size, 0, NULL);
+    
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, pixbuf,
                         DISPLAY_NAME_COLUMN, label,
-                        PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_CURRENT_FOLDER,
                         DATA_COLUMN, gtk_file_path_copy (path),
                         IS_FOLDER_COLUMN, TRUE,
@@ -2069,7 +2021,7 @@ model_add_other (GtkFileChooserEntry *entry)
   gtk_list_store_set (store, &iter,
                       ICON_COLUMN, NULL,
                       DISPLAY_NAME_COLUMN, NULL,
-                      PATH_COLUMN, NULL,
+                      FULL_PATH_COLUMN, NULL,
                       TYPE_COLUMN, ROW_TYPE_OTHER_SEPARATOR,
                       DATA_COLUMN, NULL,
                       IS_FOLDER_COLUMN, FALSE,
@@ -2081,7 +2033,7 @@ model_add_other (GtkFileChooserEntry *entry)
   gtk_list_store_set (store, &iter,
                       ICON_COLUMN, NULL,
                       DISPLAY_NAME_COLUMN, _("Other..."),
-                      PATH_COLUMN, NULL,
+                      FULL_PATH_COLUMN, "",
                       TYPE_COLUMN, ROW_TYPE_OTHER,
                       DATA_COLUMN, NULL,
                       IS_FOLDER_COLUMN, FALSE,
@@ -2277,7 +2229,7 @@ update_combo_box (GtkFileChooserEntry *entry)
         if (base_path)
         {
           row_found = (paths &&
-                       paths->data &&
+                         paths->data &&
                        gtk_file_path_compare (base_path, paths->data) == 0);
           gtk_file_path_free (base_path);
         }
@@ -2330,30 +2282,30 @@ update_label_get_info_cb (GtkFileSystemHandle *handle,
                           gpointer             data)
 {
   gboolean cancelled = handle->cancelled;
-  GdkPixbuf *pixbuf;
+//  GdkPixbuf *pixbuf;
   GtkFileChooserEntry *entry = data;
   GtkFileChooserEntryPrivate *priv = entry->priv;
 
-  if (handle != priv->update_entry_handle)
+  if (handle != priv->update_button_handle)
     goto out;
 
-  priv->update_entry_handle = NULL;
+  priv->update_button_handle = NULL;
 
   if (cancelled || error)
     goto out;
 
-  gtk_label_set_text (GTK_LABEL (priv->label), gtk_file_info_get_display_name (info));
+  gtk_entry_set_text (GTK_ENTRY (priv->entry), gtk_file_info_get_display_name (info));
 
-  pixbuf = gtk_file_info_render_icon (info, GTK_WIDGET (priv->image),
-                                      priv->icon_size, NULL);
-  if (!pixbuf)
-    pixbuf = gtk_icon_theme_load_icon (get_icon_theme (GTK_WIDGET (priv->image)),
-                                       FALLBACK_ICON_NAME,
-                                       priv->icon_size, 0, NULL);
+//  pixbuf = gtk_file_info_render_icon (info, GTK_WIDGET (priv->image),
+//                                      priv->icon_size, NULL);
+//  if (!pixbuf)
+//    pixbuf = gtk_icon_theme_load_icon (get_icon_theme (GTK_WIDGET (priv->image)),
+//                                       FALLBACK_ICON_NAME,
+//                                       priv->icon_size, 0, NULL);
 
-  gtk_image_set_from_pixbuf (GTK_IMAGE (priv->image), pixbuf);
-  if (pixbuf)
-    g_object_unref (pixbuf);
+//  gtk_image_set_from_pixbuf (GTK_IMAGE (priv->image), pixbuf);
+//  if (pixbuf)
+//    g_object_unref (pixbuf);
 
 out:
   g_object_unref (entry);
@@ -2404,15 +2356,15 @@ update_label_and_image (GtkFileChooserEntry *entry)
         goto out;
     }
 
-    if (priv->update_entry_handle)
+    if (priv->update_button_handle)
     {
-      gtk_file_system_cancel_operation (priv->update_entry_handle);
-      priv->update_entry_handle = NULL;
+      gtk_file_system_cancel_operation (priv->update_button_handle);
+      priv->update_button_handle = NULL;
     }
-        
+      
     if (gtk_file_system_path_is_local (priv->fs, path))
     {
-      priv->update_entry_handle =
+      priv->update_button_handle =
         gtk_file_system_get_info (priv->fs, path,
                                   GTK_FILE_INFO_DISPLAY_NAME | GTK_FILE_INFO_ICON,
                                   update_label_get_info_cb,
@@ -2420,18 +2372,18 @@ update_label_and_image (GtkFileChooserEntry *entry)
     }
     else
     {
-      GdkPixbuf *pixbuf;
+//          GdkPixbuf *pixbuf;
 
       label_text = gtk_file_system_get_bookmark_label (entry->priv->fs, path);
       
-      pixbuf = gtk_icon_theme_load_icon (get_icon_theme (GTK_WIDGET (priv->image)), 
-                                         "gnome-fs-regular",
-                                         priv->icon_size, 0, NULL);
+//          pixbuf = gtk_icon_theme_load_icon (get_icon_theme (GTK_WIDGET (priv->image)), 
+//                                             "gnome-fs-regular",
+//                                             priv->icon_size, 0, NULL);
       
-      gtk_image_set_from_pixbuf (GTK_IMAGE (priv->image), pixbuf);
+//          gtk_image_set_from_pixbuf (GTK_IMAGE (priv->image), pixbuf);
 
-      if (pixbuf)
-        g_object_unref (pixbuf);
+//          if (pixbuf)
+//            g_object_unref (pixbuf);
     }
   }
 out:
@@ -2439,11 +2391,11 @@ out:
 
   if (label_text)
   {
-    gtk_label_set_text (GTK_LABEL (priv->label), label_text);
+    gtk_entry_set_text (GTK_ENTRY (priv->entry), label_text);
     g_free (label_text);
   }
   else
-    gtk_label_set_text (GTK_LABEL (priv->label), _(FALLBACK_DISPLAY_NAME));
+    gtk_entry_set_text (GTK_ENTRY (priv->entry), _(FALLBACK_DISPLAY_NAME));
 }
 
 
@@ -2506,7 +2458,7 @@ open_dialog (GtkFileChooserEntry *entry)
 {
   GtkFileChooserEntryPrivate *priv = entry->priv;
 
-  /* Setup the dialog parent to be chooser entry's toplevel, and be modal
+  /* Setup the dialog parent to be chooser button's toplevel, and be modal
      as needed. */
   if (!GTK_WIDGET_VISIBLE (priv->dialog))
   {
@@ -2565,46 +2517,46 @@ combo_box_changed_cb (GtkComboBox *combo_box,
     gchar type;
     gpointer data;
 
-    type = ROW_TYPE_INVALID;
-    data = NULL;
+      type = ROW_TYPE_INVALID;
+      data = NULL;
 
-    gtk_tree_model_get (priv->filter_model, &iter,
-                        TYPE_COLUMN, &type,
-                        DATA_COLUMN, &data,
-                        -1);
+      gtk_tree_model_get (priv->filter_model, &iter,
+                          TYPE_COLUMN, &type,
+                          DATA_COLUMN, &data,
+                          -1);
 
-    switch (type)
-    {
-      case ROW_TYPE_SPECIAL:
-      case ROW_TYPE_SHORTCUT:
-      case ROW_TYPE_BOOKMARK:
-      case ROW_TYPE_CURRENT_FOLDER:
-        gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
-        if (data)
-          _gtk_file_chooser_set_current_folder_path (GTK_FILE_CHOOSER (priv->dialog),
-                                                     data, NULL);
-        break;
-      case ROW_TYPE_VOLUME:
+      switch (type)
       {
-        GtkFilePath *base_path;
+        case ROW_TYPE_SPECIAL:
+        case ROW_TYPE_SHORTCUT:
+        case ROW_TYPE_BOOKMARK:
+        case ROW_TYPE_CURRENT_FOLDER:
+          gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
+          if (data)
+            _gtk_file_chooser_set_current_folder_path (GTK_FILE_CHOOSER (priv->dialog),
+                                                       data, NULL);
+          break;
+        case ROW_TYPE_VOLUME:
+        {
+          GtkFilePath *base_path;
 
-        gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
-        base_path = gtk_file_system_volume_get_base_path (priv->fs, data);
-        if (base_path)
+          gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
+          base_path = gtk_file_system_volume_get_base_path (priv->fs, data);
+          if (base_path)
           {
             _gtk_file_chooser_set_current_folder_path (GTK_FILE_CHOOSER (priv->dialog),
                                                        base_path, NULL);
             gtk_file_path_free (base_path);
           }
+        }
+        break;
+        case ROW_TYPE_OTHER:
+          open_dialog (user_data);
+          break;
+        default:
+          break;
       }
-      break;
-      case ROW_TYPE_OTHER:
-        open_dialog (user_data);
-        break;
-      default:
-        break;
     }
-  }
 }
 
 /* Button */
@@ -2715,8 +2667,7 @@ dialog_response_cb (GtkDialog *dialog,
   GtkFileChooserEntry *entry = GTK_FILE_CHOOSER_ENTRY (user_data);
   GtkFileChooserEntryPrivate *priv = entry->priv;
 
-  if (response == GTK_RESPONSE_ACCEPT ||
-      response == GTK_RESPONSE_OK)
+  if (response == GTK_RESPONSE_ACCEPT)
   {
     g_signal_emit_by_name (user_data, "current-folder-changed");
     g_signal_emit_by_name (user_data, "selection-changed");
@@ -2763,8 +2714,6 @@ dialog_response_cb (GtkDialog *dialog,
 
   gtk_widget_set_sensitive (priv->combo_box, TRUE);
   gtk_widget_hide (priv->dialog);
-
-  g_signal_emit_by_name (user_data, "file-set");
 }
 
 
@@ -2777,9 +2726,9 @@ dialog_response_cb (GtkDialog *dialog,
  * @title: the title of the browse dialog.
  * @action: the open mode for the widget.
  * 
- * Creates a new file-selecting entry widget.
+ * Creates a new file-selecting button widget.
  * 
- * Returns: a new entry widget.
+ * Returns: a new button widget.
  * 
  * Since: 2.6
  **/
@@ -2802,9 +2751,9 @@ gtk_file_chooser_entry_new (const gchar          *title,
  * @action: the open mode for the widget.
  * @backend: the name of the #GtkFileSystem backend to use.
  * 
- * Creates a new file-selecting entry widget using @backend.
+ * Creates a new file-selecting button widget using @backend.
  * 
- * Returns: a new entry widget.
+ * Returns: a new button widget.
  * 
  * Since: 2.6
  **/
@@ -2826,20 +2775,14 @@ gtk_file_chooser_entry_new_with_backend (const gchar          *title,
 /**
  * gtk_file_chooser_entry_new_with_dialog:
  * @dialog: the widget to use as dialog
- *
- * Creates a #GtkFileChooserEntry widget which uses @dialog as its
- * file-picking window.
- *
- * Note that @dialog must be a #GtkDialog (or subclass) which
- * implements the #GtkFileChooser interface and must not have
- * %GTK_DIALOG_DESTROY_WITH_PARENT set.
- *
- * Also note that the dialog needs to have its confirmative entry
- * added with response %GTK_RESPONSE_ACCEPT or %GTK_RESPONSE_OK in
- * order for the entry to take over the file selected in the dialog.
- *
- * Returns: a new entry widget.
- *
+ * 
+ * Creates a #GtkFileChooserEntry widget which uses @dialog as it's
+ * file-picking window. Note that @dialog must be a #GtkDialog (or
+ * subclass) which implements the #GtkFileChooser interface and must 
+ * not have %GTK_DIALOG_DESTROY_WITH_PARENT set.
+ * 
+ * Returns: a new button widget.
+ * 
  * Since: 2.6
  **/
 GtkWidget *
@@ -2854,10 +2797,10 @@ gtk_file_chooser_entry_new_with_dialog (GtkWidget *dialog)
 
 /**
  * gtk_file_chooser_entry_set_title:
- * @entry: the entry widget to modify.
+ * @button: the button widget to modify.
  * @title: the new browse dialog title.
  * 
- * Modifies the @title of the browse dialog used by @entry.
+ * Modifies the @title of the browse dialog used by @button.
  * 
  * Since: 2.6
  **/
@@ -2873,9 +2816,9 @@ gtk_file_chooser_entry_set_title (GtkFileChooserEntry *entry,
 
 /**
  * gtk_file_chooser_entry_get_title:
- * @entry: the entry widget to examine.
+ * @button: the button widget to examine.
  * 
- * Retrieves the title of the browse dialog used by @entry. The returned value
+ * Retrieves the title of the browse dialog used by @button. The returned value
  * should not be modified or freed.
  * 
  * Returns: a pointer to the browse dialog's title.
@@ -2892,11 +2835,11 @@ gtk_file_chooser_entry_get_title (GtkFileChooserEntry *entry)
 
 /**
  * gtk_file_chooser_entry_get_width_chars:
- * @entry: the entry widget to examine.
+ * @button: the button widget to examine.
  * 
- * Retrieves the width in characters of the @entry widget's entry and/or label.
+ * Retrieves the width in characters of the @button widget's entry and/or label.
  * 
- * Returns: an integer width (in characters) that the entry will use to size itself.
+ * Returns: an integer width (in characters) that the button will use to size itself.
  * 
  * Since: 2.6
  **/
@@ -2905,15 +2848,15 @@ gtk_file_chooser_entry_get_width_chars (GtkFileChooserEntry *entry)
 {
   g_return_val_if_fail (GTK_IS_FILE_CHOOSER_ENTRY (entry), -1);
 
-  return gtk_label_get_width_chars (GTK_LABEL (entry->priv->label));
+  return gtk_entry_get_width_chars (GTK_ENTRY (entry->priv->entry));
 }
 
 /**
  * gtk_file_chooser_entry_set_width_chars:
- * @entry: the entry widget to examine.
+ * @button: the button widget to examine.
  * @n_chars: the new width, in characters.
  * 
- * Sets the width (in characters) that @entry will use to @n_chars.
+ * Sets the width (in characters) that @button will use to @n_chars.
  * 
  * Since: 2.6
  **/
@@ -2923,16 +2866,16 @@ gtk_file_chooser_entry_set_width_chars (GtkFileChooserEntry *entry,
 {
   g_return_if_fail (GTK_IS_FILE_CHOOSER_ENTRY (entry));
 
-  gtk_label_set_width_chars (GTK_LABEL (entry->priv->label), n_chars);
+  gtk_entry_set_width_chars (GTK_ENTRY (entry->priv->entry), n_chars);
   g_object_notify (G_OBJECT (entry), "width-chars");
 }
 
 /**
  * gtk_file_chooser_entry_set_focus_on_click:
- * @entry: a #GtkFileChooserEntry
- * @focus_on_click: whether the entry grabs focus when clicked with the mouse
+ * @button: a #GtkFileChooserEntry
+ * @focus_on_click: whether the button grabs focus when clicked with the mouse
  * 
- * Sets whether the entry will grab focus when it is clicked with the mouse.
+ * Sets whether the button will grab focus when it is clicked with the mouse.
  * Making mouse clicks not grab focus is useful in places like toolbars where
  * you don't want the keyboard focus removed from the main area of the
  * application.
@@ -2963,12 +2906,12 @@ gtk_file_chooser_entry_set_focus_on_click (GtkFileChooserEntry *entry,
 
 /**
  * gtk_file_chooser_entry_get_focus_on_click:
- * @entry: a #GtkFileChooserEntry
+ * @button: a #GtkFileChooserEntry
  * 
- * Returns whether the entry grabs focus when it is clicked with the mouse.
+ * Returns whether the button grabs focus when it is clicked with the mouse.
  * See gtk_file_chooser_entry_set_focus_on_click().
  *
- * Return value: %TRUE if the entry grabs focus when it is clicked with
+ * Return value: %TRUE if the button grabs focus when it is clicked with
  *               the mouse.
  *
  * Since: 2.10
@@ -2982,4 +2925,4 @@ gtk_file_chooser_entry_get_focus_on_click (GtkFileChooserEntry *entry)
 }
 
 #define __GTK_FILE_CHOOSER_ENTRY_C__
-//#include <gtk/gtkaliasdef.c>
+//#include "gtkaliasdef.c"

@@ -22,6 +22,13 @@ tsp_svn_helper_SOURCES =						\
 	tsh-checkout.c							\
 	gtkfilechooserentry.h						\
 	gtkfilechooserentry.c						\
+	gtkfilechooserutils.h						\
+	gtkfilechooserutils.c						\
+	gtkfilechooser.h						\
+	gtkfilechooser.c						\
+	gtkfilechooserdefault.c						\
+	gtkprivate.h							\
+	gtkintl.h							\
 	tsh-dialog-common.h						\
 	tsh-dialog-common.c						\
 	tsh-login-dialog.h						\

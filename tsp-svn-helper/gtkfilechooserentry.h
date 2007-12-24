@@ -9,7 +9,7 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.         See the GNU
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the GNU
  * Library General Public License for more details.
  *
  * You should have received a copy of the GNU Library General Public
@@ -58,8 +58,6 @@ struct _GtkFileChooserEntryClass
   /*< private >*/
   GtkHBoxClass parent_class;
 
-  void (* file_set) (GtkFileChooserEntry *fc);
-
   void (*__gtk_reserved1);
   void (*__gtk_reserved2);
   void (*__gtk_reserved3);
@@ -67,6 +65,7 @@ struct _GtkFileChooserEntryClass
   void (*__gtk_reserved5);
   void (*__gtk_reserved6);
   void (*__gtk_reserved7);
+  void (*__gtk_reserved8);
 };
 
 

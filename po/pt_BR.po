@@ -2,12 +2,12 @@
 # Copyright (C) 2007 THE thunar-svn-plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the thunar-svn-plugin package.
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-06-28 00:37+0200\n"
+"POT-Creation-Date: 2007-12-24 23:15+0100\n"
 "PO-Revision-Date: 2007-11-09 15:08-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
@@ -98,21 +98,91 @@ msgstr "Destravar"
 msgid "Update"
 msgstr "Atualizar"
 
-#: tsp-svn-helper/main.c:56
+#. Translators: the first string is a path and the second string
+#. * is a hostname. Nautilus and the panel contain the same string
+#. * to translate.
+#.
+#: tsp-svn-helper/gtkfilechooserdefault.c:71
+#, c-format
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:50
+msgid "Select A File"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:51
+msgid "Desktop"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:52
+msgid "(None)"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:339
+msgid "Dialog"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:340
+msgid "The file chooser dialog to use."
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:356
+msgid "Focus on click"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:357
+msgid "Whether the entry grabs focus when it is clicked with the mouse"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:370
+msgid "Title"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:371
+msgid "The title of the file chooser dialog."
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:384
+msgid "Width In Characters"
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:385
+msgid "The desired width of the entry widget, in characters."
+msgstr ""
+
+#: tsp-svn-helper/gtkfilechooserentry.c:2035
+msgid "Other..."
+msgstr ""
+
+#: tsp-svn-helper/main.c:58
 msgid "Print version information"
 msgstr "Imprimir informação da versão"
 
-#: tsp-svn-helper/main.c:63
+#: tsp-svn-helper/main.c:65
 msgid "Execute checkout action"
 msgstr "Executar ação de checkout"
 
-#: tsp-svn-helper/main.c:69
+#: tsp-svn-helper/main.c:71
 msgid "Execute update action"
 msgstr "Executar ação de atualização"
 
-#: tsp-svn-helper/tsh-checkout.c:87
+#: tsp-svn-helper/tsh-checkout.c:94 tsp-svn-helper/tsh-checkout-dialog.c:103
 msgid "Checkout"
 msgstr "Checkout"
+
+#: tsp-svn-helper/tsh-checkout-dialog.c:64
+msgid "_Repository:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-checkout-dialog.c:71
+#: tsp-svn-helper/tsh-checkout-dialog.c:91
+msgid "Select a folder"
+msgstr ""
+
+#: tsp-svn-helper/tsh-checkout-dialog.c:84
+msgid "_Checkout directory:"
+msgstr ""
 
 #: tsp-svn-helper/tsh-common.c:448
 msgid "Deleted"
@@ -139,6 +209,24 @@ msgstr "Completado"
 msgid "External"
 msgstr "Externo"
 
+#: tsp-svn-helper/tsh-file-dialog.c:60
+msgid "_Certificate:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-file-dialog.c:67
+msgid "Select a file"
+msgstr ""
+
+#: tsp-svn-helper/tsh-file-dialog.c:78 tsp-svn-helper/tsh-login-dialog.c:98
+#: tsp-svn-helper/tsh-trust-dialog.c:73
+msgid "Remember"
+msgstr "Lembrar"
+
+#: tsp-svn-helper/tsh-file-dialog.c:86
+#, fuzzy
+msgid "Certificate"
+msgstr "Notificação"
+
 #: tsp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
 msgstr "Nome do _Usuário:"
@@ -146,10 +234,6 @@ msgstr "Nome do _Usuário:"
 #: tsp-svn-helper/tsh-login-dialog.c:81
 msgid "_Password:"
 msgstr "_Senha:"
-
-#: tsp-svn-helper/tsh-login-dialog.c:98
-msgid "Remember"
-msgstr "Lembrar"
 
 #: tsp-svn-helper/tsh-login-dialog.c:106
 msgid "Login"
@@ -170,3 +254,27 @@ msgstr "Tipo mime"
 #: tsp-svn-helper/tsh-notify-dialog.c:102
 msgid "Notification"
 msgstr "Notificação"
+
+#: tsp-svn-helper/tsh-trust-dialog.c:58
+msgid "Certificate is not yet valid."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:61
+msgid "Certificate has expired."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:64
+msgid "Certificate does not match the remote hostname."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:67
+msgid "Certificate authority is unknown."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:70
+msgid "Other failure."
+msgstr ""
+
+#: tsp-svn-helper/tsh-trust-dialog.c:77
+msgid "Trust"
+msgstr ""
