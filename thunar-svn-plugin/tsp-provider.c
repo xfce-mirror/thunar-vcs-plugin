@@ -401,6 +401,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 													 "name", "Tsp::import",
 													 "label", _("SVN _Import"),
 													 NULL);
+		g_signal_connect_object (action, "activate", G_CALLBACK (tsp_action_unimplemented), N_("Import"), G_CONNECT_AFTER);
 		actions = g_list_append (actions, action);
 	}
 	if (parent_wc || directory_is_wc)

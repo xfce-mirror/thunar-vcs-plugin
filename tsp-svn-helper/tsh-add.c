@@ -36,70 +36,66 @@
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
 #include "tsh-notify-dialog.h"
-#include "tsh-checkout-dialog.h"
 
-#include "tsh-checkout.h"
+#include "tsh-add.h"
 
 struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
 	TshNotifyDialog *dialog;
-	gchar *path;
-	gchar *url;
+	gchar **files;
 };
 
-static gpointer checkout_thread (gpointer user_data)
+static gpointer add_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
-  svn_opt_revision_t revision;
+  gboolean result = TRUE;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *pool = args->pool;
 	TshNotifyDialog *dialog = args->dialog;
-	gchar *path = args->path;
-	gchar *url = args->url;
+	gchar **files = args->files;
+	gint size, i;
 
 	g_free (args);
 
-  revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_checkout2(NULL, url, path, &revision, &revision, TRUE, FALSE, ctx, pool)))
-	{
-		gdk_threads_enter();
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+	size = files?g_strv_length(files):0;
 
-		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
-		svn_error_clear(err);
-		return GINT_TO_POINTER (FALSE);
+	if(size)
+	{
+		for (i = 0; i < size; i++)
+		{
+      if ((err = svn_client_add3(files[i], TRUE, FALSE, FALSE, ctx, pool)))
+      {
+        svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+        svn_error_clear(err);
+        result = FALSE;
+      }
+		}
+	}
+	else
+	{
+    if ((err = svn_client_add3("", TRUE, FALSE, FALSE, ctx, pool)))
+    {
+      svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+      svn_error_clear(err);
+      result = FALSE;
+    }
 	}
 
 	gdk_threads_enter();
 	tsh_notify_dialog_done (dialog);
 	gdk_threads_leave();
 	
-	return GINT_TO_POINTER (TRUE);
+	return GINT_TO_POINTER (result);
 }
 
-GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
+GThread *tsh_add (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
-  gchar *repository;
-  gchar *path;
 
-	dialog = tsh_checkout_dialog_new (NULL, NULL, 0, files?files[0]:NULL);
-	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
-  {
-    gtk_widget_destroy (dialog);
-    return NULL;
-  }
-
-  repository = tsh_checkout_dialog_get_reposetory(TSH_CHECKOUT_DIALOG(dialog));
-  path = tsh_checkout_dialog_get_directory(TSH_CHECKOUT_DIALOG(dialog));
-
-	gtk_widget_destroy (dialog);
-
-	dialog = tsh_notify_dialog_new (_("Checkout"), NULL, 0);
+	dialog = tsh_notify_dialog_new (_("Add"), NULL, 0);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
 	ctx->notify_func2 = tsh_notify_func2;
@@ -109,9 +105,8 @@ GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->ctx = ctx;
 	args->pool = pool;
 	args->dialog = TSH_NOTIFY_DIALOG (dialog);
-	args->path = path;
-	args->url =	repository;
+	args->files = files;
 
-	return g_thread_create (checkout_thread, args, TRUE, NULL);
+	return g_thread_create (add_thread, args, TRUE, NULL);
 }
 

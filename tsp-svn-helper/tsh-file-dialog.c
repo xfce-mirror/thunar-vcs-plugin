@@ -121,7 +121,7 @@ tsh_file_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags
 	return GTK_WIDGET(dialog);
 }
 
-const gchar*
+gchar*
 tsh_file_dialog_get_filename (TshFileDialog *dialog)
 {
 	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->filename));

@@ -159,16 +159,16 @@ tsh_login_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flag
 	return GTK_WIDGET(dialog);
 }
 
-const gchar*
+gchar*
 tsh_login_dialog_get_username (TshLoginDialog *dialog)
 {
-	return gtk_entry_get_text(GTK_ENTRY(dialog->username));
+	return g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog->username)));
 }
 
-const gchar*
+gchar*
 tsh_login_dialog_get_password (TshLoginDialog *dialog)
 {
-	return gtk_entry_get_text(GTK_ENTRY(dialog->password));
+	return g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog->password)));
 }
 
 gboolean

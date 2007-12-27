@@ -14,20 +14,14 @@
  * Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __TSH_COMMON_H__
-#define __TSH_COMMON_H__
+#ifndef __TSH_COMMIT_H__
+#define __TSH_COMMIT_H__
 
 G_BEGIN_DECLS
 
-gboolean tsh_init (apr_pool_t**, svn_error_t**);
-
-void tsh_cancel();
-
-gboolean tsh_create_context (svn_client_ctx_t**, apr_pool_t*, svn_error_t**);
-
-void tsh_notify_func2(void *, const svn_wc_notify_t *, apr_pool_t *);
+GThread *tsh_commit (gchar**, svn_client_ctx_t*, apr_pool_t*);
 
 G_END_DECLS
 
-#endif /*__TSH_COMMON_H__*/
+#endif /*__TSH_COMMIT_H__*/
 

@@ -35,83 +35,64 @@
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
-#include "tsh-notify-dialog.h"
-#include "tsh-checkout-dialog.h"
 
-#include "tsh-checkout.h"
+#include "tsh-cleanup.h"
 
 struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
-	TshNotifyDialog *dialog;
+  GtkWidget *dialog;
 	gchar *path;
-	gchar *url;
 };
 
-static gpointer checkout_thread (gpointer user_data)
+static gpointer cleanup_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
-  svn_opt_revision_t revision;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *pool = args->pool;
-	TshNotifyDialog *dialog = args->dialog;
+  GtkWidget *dialog = args->dialog;
 	gchar *path = args->path;
-	gchar *url = args->url;
 
 	g_free (args);
 
-  revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_checkout2(NULL, url, path, &revision, &revision, TRUE, FALSE, ctx, pool)))
-	{
-		gdk_threads_enter();
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+  if(!path)
+    path = "";
 
+	if ((err = svn_client_cleanup(path, ctx, pool)))
+	{
 		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}
 
 	gdk_threads_enter();
-	tsh_notify_dialog_done (dialog);
+  gtk_widget_destroy(dialog);
+  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CLOSE, _("Cleanup finnished"));
+  tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
 	gdk_threads_leave();
-	
+
 	return GINT_TO_POINTER (TRUE);
 }
 
-GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
+GThread *tsh_cleanup (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
-	GtkWidget *dialog;
 	struct thread_args *args;
-  gchar *repository;
+  GtkWidget *dialog;
   gchar *path;
 
-	dialog = tsh_checkout_dialog_new (NULL, NULL, 0, files?files[0]:NULL);
-	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
-  {
-    gtk_widget_destroy (dialog);
-    return NULL;
-  }
+  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cleaning up ..."));
+	g_signal_connect (G_OBJECT (dialog), "response", G_CALLBACK (tsh_cancel), NULL);
+  tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
 
-  repository = tsh_checkout_dialog_get_reposetory(TSH_CHECKOUT_DIALOG(dialog));
-  path = tsh_checkout_dialog_get_directory(TSH_CHECKOUT_DIALOG(dialog));
-
-	gtk_widget_destroy (dialog);
-
-	dialog = tsh_notify_dialog_new (_("Checkout"), NULL, 0);
-	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
-
-	ctx->notify_func2 = tsh_notify_func2;
-	ctx->notify_baton2 = dialog;
+	path = files?files[0]:NULL;
 
 	args = g_malloc (sizeof (struct thread_args));
 	args->ctx = ctx;
 	args->pool = pool;
-	args->dialog = TSH_NOTIFY_DIALOG (dialog);
+  args->dialog = dialog;
 	args->path = path;
-	args->url =	repository;
 
-	return g_thread_create (checkout_thread, args, TRUE, NULL);
+	return g_thread_create (cleanup_thread, args, TRUE, NULL);
 }
 

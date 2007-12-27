@@ -86,6 +86,8 @@ gboolean              gtk_file_chooser_entry_get_focus_on_click (GtkFileChooserE
 void                  gtk_file_chooser_entry_set_focus_on_click (GtkFileChooserEntry  *entry,
                                                                  gboolean              focus_on_click);
 
+gchar                *gtk_file_chooser_entry_get_uri            (GtkFileChooserEntry  *entry);
+
 G_END_DECLS
 
 #endif /* !__GTK_FILE_CHOOSER_ENTRY_H__ */

@@ -34,8 +34,11 @@
 #include <subversion-1/svn_config.h>
 
 #include "tsh-common.h"
-#include "tsh-update.h"
+#include "tsh-add.h"
 #include "tsh-checkout.h"
+#include "tsh-cleanup.h"
+#include "tsh-commit.h"
+#include "tsh-update.h"
 
 int main (int argc, char *argv[])
 {
@@ -48,7 +51,10 @@ int main (int argc, char *argv[])
 
 	/* CMD-line options */
 	gboolean print_version = FALSE;
+	gboolean add = FALSE;
 	gboolean checkout = FALSE;
+	gboolean cleanup = FALSE;
+	gboolean commit = FALSE;
 	gboolean update = FALSE;
 	gchar **files = NULL;
 	GError *error = NULL;
@@ -60,9 +66,27 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry add_options_table[] =
+	{
+		{ "add", '\0', 0, G_OPTION_ARG_NONE, &add, N_("Execute add action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry checkout_options_table[] =
 	{
 		{ "checkout", '\0', 0, G_OPTION_ARG_NONE, &checkout, N_("Execute checkout action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry cleanup_options_table[] =
+	{
+		{ "cleanup", '\0', 0, G_OPTION_ARG_NONE, &cleanup, N_("Execute cleanup action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry commit_options_table[] =
+	{
+		{ "commit", '\0', 0, G_OPTION_ARG_NONE, &commit, N_("Execute commit action"), NULL },
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
@@ -78,11 +102,23 @@ int main (int argc, char *argv[])
 	g_option_context_add_main_entries(option_context, general_options_table, GETTEXT_PACKAGE);
 	g_option_context_add_group(option_context, gtk_get_option_group(TRUE));
 
-	option_group = g_option_group_new("checkout", "Checkout Related Opions:", "Checkout", NULL, NULL);
+	option_group = g_option_group_new("add", N_("Add Related Opions:"), N_("Add"), NULL, NULL);
+	g_option_group_add_entries(option_group, add_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("checkout", N_("Checkout Related Opions:"), N_("Checkout"), NULL, NULL);
 	g_option_group_add_entries(option_group, checkout_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("update", "Update Related Opions:", "Update", NULL, NULL);
+	option_group = g_option_group_new("cleanup", N_("Cleanup Related Opions:"), N_("Cleanup"), NULL, NULL);
+	g_option_group_add_entries(option_group, cleanup_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("commit", N_("Commit Related Opions:"), N_("Commit"), NULL, NULL);
+	g_option_group_add_entries(option_group, commit_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("update", N_("Update Related Opions:"), N_("Update"), NULL, NULL);
 	g_option_group_add_entries(option_group, update_options_table);
 	g_option_context_add_group(option_context, option_group);
 
@@ -124,14 +160,29 @@ int main (int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
-	if(update)
+	if(add)
 	{
-		thread = tsh_update(files, svn_ctx, pool);
+		thread = tsh_add(files, svn_ctx, pool);
 	}
 
 	if(checkout)
 	{
 		thread = tsh_checkout(files, svn_ctx, pool);
+	}
+
+	if(cleanup)
+	{
+		thread = tsh_cleanup(files, svn_ctx, pool);
+	}
+
+	if(commit)
+	{
+		thread = tsh_commit(files, svn_ctx, pool);
+	}
+
+	if(update)
+	{
+		thread = tsh_update(files, svn_ctx, pool);
 	}
 
 	if(thread)

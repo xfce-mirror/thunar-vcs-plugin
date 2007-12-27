@@ -46,7 +46,7 @@ struct thread_args {
 	gchar **files;
 };
 
-gpointer update_thread (gpointer user_data)
+static gpointer update_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
   svn_opt_revision_t revision;

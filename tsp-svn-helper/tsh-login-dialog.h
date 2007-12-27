@@ -43,8 +43,8 @@ GtkWidget* tsh_login_dialog_new      (const gchar *title,
                                       gboolean password,
                                       gboolean may_save) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
-const gchar* tsh_login_dialog_get_username (TshLoginDialog*);
-const gchar* tsh_login_dialog_get_password (TshLoginDialog*);
+gchar*       tsh_login_dialog_get_username (TshLoginDialog*);
+gchar*       tsh_login_dialog_get_password (TshLoginDialog*);
 gboolean     tsh_login_dialog_get_may_save (TshLoginDialog*);
 
 G_END_DECLS;

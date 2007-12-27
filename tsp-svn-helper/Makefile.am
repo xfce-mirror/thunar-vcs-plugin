@@ -16,10 +16,16 @@ tsp_svn_helper_SOURCES =						\
 	main.c								\
 	tsh-common.h							\
 	tsh-common.c							\
-	tsh-update.h							\
-	tsh-update.c							\
+	tsh-add.h							\
+	tsh-add.c							\
 	tsh-checkout.h							\
 	tsh-checkout.c							\
+	tsh-cleanup.h							\
+	tsh-cleanup.c							\
+	tsh-commit.h							\
+	tsh-commit.c							\
+	tsh-update.h							\
+	tsh-update.c							\
 	gtkfilechooserentry.h						\
 	gtkfilechooserentry.c						\
 	gtkfilechooserutils.h						\
@@ -39,6 +45,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-trust-dialog.c						\
 	tsh-notify-dialog.h						\
 	tsh-notify-dialog.c						\
+	tsh-log-message-dialog.h					\
+	tsh-log-message-dialog.c					\
 	tsh-checkout-dialog.h						\
 	tsh-checkout-dialog.c
 

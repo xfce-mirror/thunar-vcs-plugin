@@ -173,6 +173,8 @@ enum
 
 /* GtkFileChooserIface Functions */
 static void     gtk_file_chooser_entry_file_chooser_iface_init  (GtkFileChooserIface *iface);
+//static GtkFileSystem *gtk_file_chooser_entry_get_file_system    (GtkFileChooser      *chooser);
+//static GSList  *gtk_file_chooser_entry_get_paths                (GtkFileChooser      *chooser);
 static gboolean gtk_file_chooser_entry_add_shortcut_folder      (GtkFileChooser      *chooser,
                                                                  const GtkFilePath   *path,
                                                                  GError             **error);
@@ -502,10 +504,28 @@ gtk_file_chooser_entry_file_chooser_iface_init (GtkFileChooserIface *iface)
 {
   _gtk_file_chooser_delegate_iface_init (iface);
 
+  //iface->get_file_system = gtk_file_chooser_entry_get_file_system;
+  //iface->get_paths = gtk_file_chooser_entry_get_paths;
   iface->add_shortcut_folder = gtk_file_chooser_entry_add_shortcut_folder;
   iface->remove_shortcut_folder = gtk_file_chooser_entry_remove_shortcut_folder;
 }
+/*
+static GtkFileSystem *
+gtk_file_chooser_entry_get_file_system (GtkFileChooser *chooser)
+{
+  GtkFileChooserEntry *entry = GTK_FILE_CHOOSER_ENTRY (chooser);
+  GtkFileChooserEntryPrivate *priv = entry->priv;
+  return priv->fake_fs;
+}
 
+static GSList *
+gtk_file_chooser_entry_get_paths (GtkFileChooser *chooser)
+{
+  GtkFileChooserEntry *entry = GTK_FILE_CHOOSER_ENTRY (chooser);
+  GtkFileChooserEntryPrivate *priv = entry->priv;
+  return priv->
+}
+*/
 static gboolean
 gtk_file_chooser_entry_add_shortcut_folder (GtkFileChooser     *chooser,
                                              const GtkFilePath  *path,
@@ -527,12 +547,12 @@ gtk_file_chooser_entry_add_shortcut_folder (GtkFileChooser     *chooser,
 
     pos = model_get_type_position (entry, ROW_TYPE_SHORTCUT);
     pos += priv->n_shortcuts;
-g_debug(gtk_file_system_path_to_filename (entry->priv->fs, path));
+
     gtk_list_store_insert (GTK_LIST_STORE (priv->model), &iter, pos);
     gtk_list_store_set (GTK_LIST_STORE (priv->model), &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, _(FALLBACK_DISPLAY_NAME),
-                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_uri (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_SHORTCUT,
                         DATA_COLUMN, gtk_file_path_copy (path),
                         IS_FOLDER_COLUMN, FALSE,
@@ -1683,7 +1703,7 @@ model_add_special (GtkFileChooserEntry *entry)
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, NULL,
-                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_uri (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_SPECIAL,
                         DATA_COLUMN, path,
                         IS_FOLDER_COLUMN, TRUE,
@@ -1727,7 +1747,7 @@ model_add_special (GtkFileChooserEntry *entry)
                         TYPE_COLUMN, ROW_TYPE_SPECIAL,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, _(DESKTOP_DISPLAY_NAME),
-                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_uri (entry->priv->fs, path),
                         DATA_COLUMN, path,
                         IS_FOLDER_COLUMN, TRUE,
                         HANDLE_COLUMN, handle,
@@ -1799,7 +1819,7 @@ model_add_volumes (GtkFileChooserEntry *entry,
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, pixbuf,
                         DISPLAY_NAME_COLUMN, display_name,
-                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (file_system, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_uri (file_system, path),
                         TYPE_COLUMN, ROW_TYPE_VOLUME,
                         DATA_COLUMN, volume,
                         IS_FOLDER_COLUMN, TRUE,
@@ -1845,7 +1865,7 @@ model_add_bookmarks (GtkFileChooserEntry *entry,
       gtk_list_store_set (store, &iter,
                           ICON_COLUMN, NULL,
                           DISPLAY_NAME_COLUMN, _(FALLBACK_DISPLAY_NAME),
-                          FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                          FULL_PATH_COLUMN, gtk_file_system_path_to_uri (entry->priv->fs, path),
                           TYPE_COLUMN, ROW_TYPE_BOOKMARK,
                           DATA_COLUMN, gtk_file_path_copy (path),
                           IS_FOLDER_COLUMN, FALSE,
@@ -1884,7 +1904,7 @@ model_add_bookmarks (GtkFileChooserEntry *entry,
       gtk_list_store_set (store, &iter,
                           ICON_COLUMN, pixbuf,
                           DISPLAY_NAME_COLUMN, label,
-                          FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                          FULL_PATH_COLUMN, gtk_file_system_path_to_uri (entry->priv->fs, path),
                           TYPE_COLUMN, ROW_TYPE_BOOKMARK,
                           DATA_COLUMN, gtk_file_path_copy (path),
                           IS_FOLDER_COLUMN, TRUE,
@@ -1961,7 +1981,7 @@ model_update_current_folder (GtkFileChooserEntry *entry,
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, NULL,
                         DISPLAY_NAME_COLUMN, _(FALLBACK_DISPLAY_NAME),
-                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_uri (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_CURRENT_FOLDER,
                         DATA_COLUMN, gtk_file_path_copy (path),
                         IS_FOLDER_COLUMN, FALSE,
@@ -1996,7 +2016,7 @@ model_update_current_folder (GtkFileChooserEntry *entry,
     gtk_list_store_set (store, &iter,
                         ICON_COLUMN, pixbuf,
                         DISPLAY_NAME_COLUMN, label,
-                        FULL_PATH_COLUMN, gtk_file_system_path_to_filename (entry->priv->fs, path),
+                        FULL_PATH_COLUMN, gtk_file_system_path_to_uri (entry->priv->fs, path),
                         TYPE_COLUMN, ROW_TYPE_CURRENT_FOLDER,
                         DATA_COLUMN, gtk_file_path_copy (path),
                         IS_FOLDER_COLUMN, TRUE,
@@ -2517,46 +2537,46 @@ combo_box_changed_cb (GtkComboBox *combo_box,
     gchar type;
     gpointer data;
 
-      type = ROW_TYPE_INVALID;
-      data = NULL;
+    type = ROW_TYPE_INVALID;
+    data = NULL;
 
-      gtk_tree_model_get (priv->filter_model, &iter,
-                          TYPE_COLUMN, &type,
-                          DATA_COLUMN, &data,
-                          -1);
+    gtk_tree_model_get (priv->filter_model, &iter,
+                        TYPE_COLUMN, &type,
+                        DATA_COLUMN, &data,
+                        -1);
 
-      switch (type)
-      {
-        case ROW_TYPE_SPECIAL:
-        case ROW_TYPE_SHORTCUT:
-        case ROW_TYPE_BOOKMARK:
-        case ROW_TYPE_CURRENT_FOLDER:
-          gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
-          if (data)
-            _gtk_file_chooser_set_current_folder_path (GTK_FILE_CHOOSER (priv->dialog),
-                                                       data, NULL);
-          break;
-        case ROW_TYPE_VOLUME:
-        {
-          GtkFilePath *base_path;
-
-          gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
-          base_path = gtk_file_system_volume_get_base_path (priv->fs, data);
-          if (base_path)
-          {
-            _gtk_file_chooser_set_current_folder_path (GTK_FILE_CHOOSER (priv->dialog),
-                                                       base_path, NULL);
-            gtk_file_path_free (base_path);
-          }
-        }
+    switch (type)
+    {
+      case ROW_TYPE_SPECIAL:
+      case ROW_TYPE_SHORTCUT:
+      case ROW_TYPE_BOOKMARK:
+      case ROW_TYPE_CURRENT_FOLDER:
+        gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
+        if (data)
+          _gtk_file_chooser_set_current_folder_path (GTK_FILE_CHOOSER (priv->dialog),
+                                                     data, NULL);
         break;
-        case ROW_TYPE_OTHER:
-          open_dialog (user_data);
-          break;
-        default:
-          break;
+      case ROW_TYPE_VOLUME:
+      {
+        GtkFilePath *base_path;
+
+        gtk_file_chooser_unselect_all (GTK_FILE_CHOOSER (priv->dialog));
+        base_path = gtk_file_system_volume_get_base_path (priv->fs, data);
+        if (base_path)
+        {
+          _gtk_file_chooser_set_current_folder_path (GTK_FILE_CHOOSER (priv->dialog),
+                                                     base_path, NULL);
+          gtk_file_path_free (base_path);
+        }
       }
+      break;
+      case ROW_TYPE_OTHER:
+        open_dialog (user_data);
+        break;
+      default:
+        break;
     }
+  }
 }
 
 /* Button */
@@ -2922,6 +2942,22 @@ gtk_file_chooser_entry_get_focus_on_click (GtkFileChooserEntry *entry)
   g_return_val_if_fail (GTK_IS_FILE_CHOOSER_ENTRY (entry), FALSE);
   
   return entry->priv->focus_on_click;
+}
+
+gchar *
+gtk_file_chooser_entry_get_uri (GtkFileChooserEntry *entry)
+{
+  gchar *path = gtk_combo_box_get_active_text (GTK_COMBO_BOX (entry->priv->combo_box));
+  gchar *uri = path;
+  gchar *ptr;
+  for(ptr = path; g_ascii_isalnum(*ptr); ptr++);
+  /* No uri, guessing localfilename */
+  if(*ptr != ':')
+  {
+    uri = g_filename_to_uri(path, NULL, NULL);
+    g_free(path);
+  }
+  return uri;
 }
 
 #define __GTK_FILE_CHOOSER_ENTRY_C__

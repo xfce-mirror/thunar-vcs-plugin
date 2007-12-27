@@ -24,46 +24,56 @@
 #include <thunar-vfs/thunar-vfs.h>
 #include <gtk/gtk.h>
 
-#include "tsh-notify-dialog.h"
+#include "tsh-log-message-dialog.h"
 
-static void cancel_clicked (GtkButton*, gpointer);
-
-struct _TshNotifyDialog
+struct _TshLogMessageDialog
 {
 	GtkDialog dialog;
 
+  GtkWidget *vpane;
+	GtkWidget *text_view;
 	GtkWidget *tree_view;
-	GtkWidget *close;
-	GtkWidget *cancel;
 };
 
-struct _TshNotifyDialogClass
+struct _TshLogMessageDialogClass
 {
 	GtkDialogClass dialog_class;
 };
 
-G_DEFINE_TYPE (TshNotifyDialog, tsh_notify_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (TshLogMessageDialog, tsh_log_message_dialog, GTK_TYPE_DIALOG)
 
 static void
-tsh_notify_dialog_class_init (TshNotifyDialogClass *klass)
+tsh_log_message_dialog_class_init (TshLogMessageDialogClass *klass)
 {
 }
 
 enum {
-	COLUMN_ACTION = 0,
+	COLUMN_STATE = 0,
 	COLUMN_PATH,
-	COLUMN_MIME,
 	COLUMN_COUNT
 };
 
 static void
-tsh_notify_dialog_init (TshNotifyDialog *dialog)
+tsh_log_message_dialog_init (TshLogMessageDialog *dialog)
 {
-	GtkWidget *button;
+	GtkWidget *text_view;
 	GtkWidget *tree_view;
 	GtkWidget *scroll_window;
+  GtkWidget *vpane;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
+
+  dialog->vpane = vpane = gtk_vpaned_new ();
+
+	scroll_window = gtk_scrolled_window_new (NULL, NULL);
+	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
+
+  dialog->text_view = text_view = gtk_text_view_new ();
+
+	gtk_container_add (GTK_CONTAINER (scroll_window), text_view);
+  gtk_paned_pack1 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
+	gtk_widget_show (text_view);
+	gtk_widget_show (scroll_window);
 
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -72,9 +82,9 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, _("Action"),
+	                                             -1, _("State"),
 	                                             renderer, "text",
-	                                             COLUMN_ACTION, NULL);
+	                                             COLUMN_STATE, NULL);
 
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
@@ -82,40 +92,36 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 	                                             renderer, "text",
 	                                             COLUMN_PATH, NULL);
 
-	renderer = gtk_cell_renderer_text_new ();
-	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, _("Mime type"),
-	                                             renderer, "text",
-	                                             COLUMN_MIME, NULL);
-
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
+	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
 	g_object_unref (model);
 
 	gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+  gtk_paned_pack2 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
 	gtk_widget_show (tree_view);
 	gtk_widget_show (scroll_window);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), _("Notification"));
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), vpane, TRUE, TRUE, 0);
+	gtk_widget_show (vpane);
 
-	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
-	gtk_widget_hide (button);
+	gtk_window_set_title (GTK_WINDOW (dialog), _("Log Message"));
 
-	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
-	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
-	gtk_widget_show (button);
+  gtk_dialog_add_buttons (GTK_DIALOG (dialog),
+                          GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                          GTK_STOCK_OK, GTK_RESPONSE_OK,
+                          NULL);
+  gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1);
+  gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
-	gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
+	gtk_window_set_default_size (GTK_WINDOW (dialog), 300, 200);
 }
 
 GtkWidget*
-tsh_notify_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
+tsh_log_message_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
 {
-	TshNotifyDialog *dialog = g_object_new (TSH_TYPE_NOTIFY_DIALOG, NULL);
+	TshLogMessageDialog *dialog = g_object_new (TSH_TYPE_LOG_MESSAGE_DIALOG, NULL);
 
 	if(title)
 		gtk_window_set_title (GTK_WINDOW(dialog), title);
@@ -136,7 +142,7 @@ tsh_notify_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
 }
 
 void       
-tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *file, const char *mime_type)
+tsh_log_message_dialog_add (TshLogMessageDialog *dialog, const char *state, const char *file)
 {
 	GtkTreeModel *model;
 	GtkTreeIter iter;
@@ -146,9 +152,8 @@ tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-	                    COLUMN_ACTION, action,
+	                    COLUMN_STATE, state,
 	                    COLUMN_PATH, file,
-	                    COLUMN_MIME, mime_type, 
 	                    -1);
 
 	path = gtk_tree_model_get_path (model, &iter);
@@ -157,19 +162,13 @@ tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *
 	gtk_tree_path_free (path);
 }
 
-void
-tsh_notify_dialog_done (TshNotifyDialog *dialog)
+gchar *
+tsh_log_message_dialog_get_message (TshLogMessageDialog *dialog)
 {
-	gtk_widget_hide (dialog->cancel);
-	gtk_widget_show (dialog->close);
-}
-
-static void
-cancel_clicked (GtkButton *button, gpointer user_data)
-{
-	TshNotifyDialog *dialog = TSH_NOTIFY_DIALOG (user_data);
-	
-	gtk_widget_hide (dialog->cancel);
-	gtk_widget_show (dialog->close);
+  GtkTextIter start, end;
+  GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view));
+  gtk_text_buffer_get_start_iter (buffer, &start);
+  gtk_text_buffer_get_end_iter (buffer, &end);
+  return gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
 }
 

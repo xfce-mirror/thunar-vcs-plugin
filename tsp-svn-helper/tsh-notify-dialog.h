@@ -27,12 +27,12 @@ G_BEGIN_DECLS;
 typedef struct _TshNotifyDialogClass TshNotifyDialogClass;
 typedef struct _TshNotifyDialog      TshNotifyDialog;
 
-#define TSH_TYPE_UPDATE_DIALOG             (tsh_notify_dialog_get_type ())
-#define TSH_NOTIFY_DIALOG(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), TSH_TYPE_UPDATE_DIALOG, TshNotifyDialog))
-#define TSH_NOTIFY_DIALOG_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), TSH_TYPE_UPDATE_DIALOG, TshNotifyDialogClass))
-#define TSH_IS_UPDATE_DIALOG(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TSH_TYPE_UPDATE_DIALOG))
-#define TSH_IS_UPDATE_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_UPDATE_DIALOG))
-#define TSH_NOTIFY_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_UPDATE_DIALOG, TshNotifyDialogClass))
+#define TSH_TYPE_NOTIFY_DIALOG             (tsh_notify_dialog_get_type ())
+#define TSH_NOTIFY_DIALOG(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), TSH_TYPE_NOTIFY_DIALOG, TshNotifyDialog))
+#define TSH_NOTIFY_DIALOG_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), TSH_TYPE_NOTIFY_DIALOG, TshNotifyDialogClass))
+#define TSH_IS_NOTIFY_DIALOG(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TSH_TYPE_NOTIFY_DIALOG))
+#define TSH_IS_NOTIFY_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_NOTIFY_DIALOG))
+#define TSH_NOTIFY_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_NOTIFY_DIALOG, TshNotifyDialogClass))
 
 GType      tsh_notify_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 

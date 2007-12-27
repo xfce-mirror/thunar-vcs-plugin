@@ -149,3 +149,13 @@ tsh_checkout_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
 	return GTK_WIDGET(dialog);
 }
 
+gchar* tsh_checkout_dialog_get_reposetory (TshCheckoutDialog *dialog)
+{
+	return gtk_file_chooser_entry_get_uri(GTK_FILE_CHOOSER_ENTRY(dialog->repository));
+}
+
+gchar* tsh_checkout_dialog_get_directory (TshCheckoutDialog *dialog)
+{
+	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->path));
+}
+

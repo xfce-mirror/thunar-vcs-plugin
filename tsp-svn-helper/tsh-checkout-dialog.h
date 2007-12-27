@@ -41,6 +41,9 @@ GtkWidget* tsh_checkout_dialog_new      (const gchar *title,
                                          GtkDialogFlags flags,
 																				 const gchar *checkout_dir) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
+gchar* tsh_checkout_dialog_get_reposetory (TshCheckoutDialog*);
+gchar* tsh_checkout_dialog_get_directory (TshCheckoutDialog*);
+
 G_END_DECLS;
 
 #endif /* !__TSH_CHECKOUT_DIALOG_H__ */

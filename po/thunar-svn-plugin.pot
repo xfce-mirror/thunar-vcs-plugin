@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-24 23:15+0100\n"
+"POT-Creation-Date: 2007-12-27 17:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,82 +20,92 @@ msgstr ""
 msgid "SVN _Import"
 msgstr ""
 
+#: thunar-svn-plugin/tsp-provider.c:404
+msgid "Import"
+msgstr ""
+
 #. append the svn submenu action
-#: thunar-svn-plugin/tsp-provider.c:409 thunar-svn-plugin/tsp-provider.c:444
-#: thunar-svn-plugin/tsp-provider.c:452
+#: thunar-svn-plugin/tsp-provider.c:410 thunar-svn-plugin/tsp-provider.c:445
+#: thunar-svn-plugin/tsp-provider.c:453
 msgid "SVN"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-provider.c:457
+#: thunar-svn-plugin/tsp-provider.c:458
 msgid "SVN _Checkout"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:225
+#: thunar-svn-plugin/tsp-svn-action.c:231 tsp-svn-helper/main.c:105
 msgid "Add"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:232
+#: thunar-svn-plugin/tsp-svn-action.c:239
 msgid "Blame"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:247
+#: thunar-svn-plugin/tsp-svn-action.c:257 tsp-svn-helper/main.c:113
 msgid "Cleanup"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:254
+#: thunar-svn-plugin/tsp-svn-action.c:265 tsp-svn-helper/main.c:117
 msgid "Commit"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:265
+#: thunar-svn-plugin/tsp-svn-action.c:278
 msgid "Delete"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:272
+#: thunar-svn-plugin/tsp-svn-action.c:286
 msgid "Diff"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:279
+#: thunar-svn-plugin/tsp-svn-action.c:294
 msgid "Export"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:290
+#: thunar-svn-plugin/tsp-svn-action.c:307
 msgid "Info"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:301
+#: thunar-svn-plugin/tsp-svn-action.c:320
 msgid "Lock"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:308
+#: thunar-svn-plugin/tsp-svn-action.c:328
 msgid "Log"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:333
+#: thunar-svn-plugin/tsp-svn-action.c:357
 msgid "Edit Properties"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:342
+#: thunar-svn-plugin/tsp-svn-action.c:367
 msgid "Resolve"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:349
+#: thunar-svn-plugin/tsp-svn-action.c:375
 msgid "Revert"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:356
+#: thunar-svn-plugin/tsp-svn-action.c:383
 msgid "Status"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:363
+#: thunar-svn-plugin/tsp-svn-action.c:391
 msgid "Switch"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:370
+#: thunar-svn-plugin/tsp-svn-action.c:399
 msgid "Unlock"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:377 tsp-svn-helper/tsh-update.c:105
+#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:121
+#: tsp-svn-helper/tsh-update.c:105
 msgid "Update"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-action.c:420
+#, c-format
+msgid "Action %s is unimplemented"
 msgstr ""
 
 #. Translators: the first string is a path and the second string
@@ -119,56 +129,89 @@ msgstr ""
 msgid "(None)"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:339
+#: tsp-svn-helper/gtkfilechooserentry.c:341
 msgid "Dialog"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:340
+#: tsp-svn-helper/gtkfilechooserentry.c:342
 msgid "The file chooser dialog to use."
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:356
+#: tsp-svn-helper/gtkfilechooserentry.c:358
 msgid "Focus on click"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:357
+#: tsp-svn-helper/gtkfilechooserentry.c:359
 msgid "Whether the entry grabs focus when it is clicked with the mouse"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:370
+#: tsp-svn-helper/gtkfilechooserentry.c:372
 msgid "Title"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:371
+#: tsp-svn-helper/gtkfilechooserentry.c:373
 msgid "The title of the file chooser dialog."
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:384
+#: tsp-svn-helper/gtkfilechooserentry.c:386
 msgid "Width In Characters"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:385
+#: tsp-svn-helper/gtkfilechooserentry.c:387
 msgid "The desired width of the entry widget, in characters."
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:2035
+#: tsp-svn-helper/gtkfilechooserentry.c:2055
 msgid "Other..."
 msgstr ""
 
-#: tsp-svn-helper/main.c:58
+#: tsp-svn-helper/main.c:64
 msgid "Print version information"
 msgstr ""
 
-#: tsp-svn-helper/main.c:65
+#: tsp-svn-helper/main.c:71
+msgid "Execute add action"
+msgstr ""
+
+#: tsp-svn-helper/main.c:77
 msgid "Execute checkout action"
 msgstr ""
 
-#: tsp-svn-helper/main.c:71
+#: tsp-svn-helper/main.c:83
+msgid "Execute cleanup action"
+msgstr ""
+
+#: tsp-svn-helper/main.c:89
+msgid "Execute commit action"
+msgstr ""
+
+#: tsp-svn-helper/main.c:95
 msgid "Execute update action"
 msgstr ""
 
-#: tsp-svn-helper/tsh-checkout.c:94 tsp-svn-helper/tsh-checkout-dialog.c:103
+#: tsp-svn-helper/main.c:105
+msgid "Add Related Opions:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:109
+msgid "Checkout Related Opions:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:109 tsp-svn-helper/tsh-checkout.c:102
+#: tsp-svn-helper/tsh-checkout-dialog.c:103
 msgid "Checkout"
+msgstr ""
+
+#: tsp-svn-helper/main.c:113
+msgid "Cleanup Related Opions:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:117
+msgid "Commit Related Opions:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:121
+msgid "Update Related Opions:"
 msgstr ""
 
 #: tsp-svn-helper/tsh-checkout-dialog.c:64
@@ -184,29 +227,81 @@ msgstr ""
 msgid "_Checkout directory:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:448
-msgid "Deleted"
-msgstr ""
-
-#: tsp-svn-helper/tsh-common.c:453
+#: tsp-svn-helper/tsh-common.c:456
 msgid "Added"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:458
+#: tsp-svn-helper/tsh-common.c:459
+msgid "Copied"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:464
+msgid "Deleted"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:467
+msgid "Restored"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:470
+msgid "Reverted"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:473
+msgid "Revert failed"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:476
+msgid "Resolved"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:479
+msgid "Skipped"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:490
 msgid "Updated"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:462
+#: tsp-svn-helper/tsh-common.c:494
 #, c-format
 msgid "At revision: %li"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:464
+#: tsp-svn-helper/tsh-common.c:495 tsp-svn-helper/tsh-common.c:502
 msgid "Completed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:469
+#: tsp-svn-helper/tsh-common.c:499
 msgid "External"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:508
+msgid "Modified"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:517
+msgid "Replaced"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:526
+msgid "Locked"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:529
+msgid "Unlocked"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:532
+msgid "Lock failed"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:535
+msgid "Unlock failed"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:538
+msgid "Unknown"
 msgstr ""
 
 #: tsp-svn-helper/tsh-file-dialog.c:60

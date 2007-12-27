@@ -263,7 +263,7 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 
 		gtk_widget_destroy(dialog);
 
-		cancelled = TRUE;
+		tsh_cancel();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -300,7 +300,7 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
 
 		gtk_widget_destroy(dialog);
 
-		cancelled = TRUE;
+		tsh_cancel();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -338,7 +338,7 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
 
 		gtk_widget_destroy(dialog);
 
-		cancelled = TRUE;
+		tsh_cancel();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -374,7 +374,7 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
 
 		gtk_widget_destroy(dialog);
 
-		cancelled = TRUE;
+		tsh_cancel();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -410,7 +410,7 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 
 		gtk_widget_destroy(dialog);
 
-		cancelled = TRUE;
+		tsh_cancel();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -427,6 +427,12 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 	return SVN_NO_ERROR;
 }
 
+void
+tsh_cancel()
+{
+  cancelled = TRUE;
+}
+
 static svn_error_t*
 tsh_check_cancel(void *baton)
 {
@@ -441,18 +447,44 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
 	TshNotifyDialog *dialog = TSH_NOTIFY_DIALOG (baton);
 	char buffer[256];
 
+  gdk_threads_enter();
 	switch(notify->action)
 	{
-		case svn_wc_notify_update_delete:
-			gdk_threads_enter();
-			tsh_notify_dialog_add(dialog, _("Deleted"), notify->path, notify->mime_type);
-			gdk_threads_leave();
-			break;
-		case svn_wc_notify_update_add:
-			gdk_threads_enter();
+		case svn_wc_notify_add:
+    case svn_wc_notify_update_add:
+    case svn_wc_notify_commit_added:
 			tsh_notify_dialog_add(dialog, _("Added"), notify->path, notify->mime_type);
-			gdk_threads_leave();
 			break;
+    case svn_wc_notify_copy:
+			tsh_notify_dialog_add(dialog, _("Copied"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_delete:
+		case svn_wc_notify_update_delete:
+		case svn_wc_notify_commit_deleted:
+			tsh_notify_dialog_add(dialog, _("Deleted"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_restore:
+			tsh_notify_dialog_add(dialog, _("Restored"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_revert:
+			tsh_notify_dialog_add(dialog, _("Reverted"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_failed_revert:
+			tsh_notify_dialog_add(dialog, _("Revert failed"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_resolved:
+			tsh_notify_dialog_add(dialog, _("Resolved"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_skip:
+			tsh_notify_dialog_add(dialog, _("Skipped"), notify->path, notify->mime_type);
+      break;
+		//case svn_wc_notify_update_delete:
+		//	tsh_notify_dialog_add(dialog, _("Deleted"), notify->path, notify->mime_type);
+		//	gdk_threads_leave();
+		//	break;
+		//case svn_wc_notify_update_add:
+		//	tsh_notify_dialog_add(dialog, _("Added"), notify->path, notify->mime_type);
+		//	break;
 		case svn_wc_notify_update_update:
 			gdk_threads_enter();
 			tsh_notify_dialog_add(dialog, _("Updated"), notify->path, notify->mime_type);
@@ -460,17 +492,52 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
 			break;
 		case svn_wc_notify_update_completed:
 			g_snprintf(buffer, 256, _("At revision: %li"), notify->revision);
-			gdk_threads_enter();
 			tsh_notify_dialog_add(dialog, _("Completed"), buffer, NULL);
-			gdk_threads_leave();
 			break;
 		case svn_wc_notify_update_external:
-			gdk_threads_enter();
+    case svn_wc_notify_status_external:
 			tsh_notify_dialog_add(dialog, _("External"), notify->path, notify->mime_type);
-			gdk_threads_leave();
+			break;
+    case svn_wc_notify_status_completed:
+			tsh_notify_dialog_add(dialog, _("Completed"), notify->path, notify->mime_type);
+      break;
+    //case svn_wc_notify_status_external:
+		//	tsh_notify_dialog_add(dialog, _("External"), notify->path, notify->mime_type);
+		//	break;
+    case svn_wc_notify_commit_modified:
+			tsh_notify_dialog_add(dialog, _("Modified"), notify->path, notify->mime_type);
+      break;
+    //case svn_wc_notify_commit_added:
+		//	tsh_notify_dialog_add(dialog, _("Added"), notify->path, notify->mime_type);
+		//	break;
+		//case svn_wc_notify_commit_deleted:
+		//	tsh_notify_dialog_add(dialog, _("Deleted"), notify->path, notify->mime_type);
+    //  break;
+    case svn_wc_notify_commit_replaced:
+			tsh_notify_dialog_add(dialog, _("Replaced"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_commit_postfix_txdelta:
+			tsh_notify_dialog_add(dialog, ("Transmitting"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_blame_revision:
+			tsh_notify_dialog_add(dialog, ("Revision"), notify->path, notify->mime_type);
+      break;
+    case svn_wc_notify_locked:
+			tsh_notify_dialog_add(dialog, _("Locked"), notify->path, notify->mime_type);
+			break;
+    case svn_wc_notify_unlocked:
+			tsh_notify_dialog_add(dialog, _("Unlocked"), notify->path, notify->mime_type);
+			break;
+    case svn_wc_notify_failed_lock:
+			tsh_notify_dialog_add(dialog, _("Lock failed"), notify->path, notify->mime_type);
+			break;
+    case svn_wc_notify_failed_unlock:
+			tsh_notify_dialog_add(dialog, _("Unlock failed"), notify->path, notify->mime_type);
 			break;
 		default:
+			tsh_notify_dialog_add(dialog, _("Unknown"), notify->path, notify->mime_type);
 			break;
 	}
+  gdk_threads_leave();
 }
 

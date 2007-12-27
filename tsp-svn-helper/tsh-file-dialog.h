@@ -41,7 +41,7 @@ GtkWidget* tsh_file_dialog_new      (const gchar *title,
                                       GtkDialogFlags flags,
                                       gboolean may_save) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
-const gchar* tsh_file_dialog_get_filename (TshFileDialog*);
+gchar*       tsh_file_dialog_get_filename (TshFileDialog*);
 gboolean     tsh_file_dialog_get_may_save (TshFileDialog*);
 
 G_END_DECLS;
