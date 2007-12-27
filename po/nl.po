@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-27 17:05+0100\n"
-"PO-Revision-Date: 2007-12-27 17:21+0100\n"
+"POT-Creation-Date: 2007-12-27 18:55+0100\n"
+"PO-Revision-Date: 2007-12-27 18:58+0100\n"
 "Last-Translator: Peter de Ridder <peter@xfce.org>\n"
 "Language-Team: Dutch <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -34,6 +34,7 @@ msgid "SVN _Checkout"
 msgstr "SVN _Ophalen"
 
 #: thunar-svn-plugin/tsp-svn-action.c:231 tsp-svn-helper/main.c:105
+#: tsp-svn-helper/tsh-add.c:98
 msgid "Add"
 msgstr "Toevoegen"
 
@@ -46,6 +47,7 @@ msgid "Cleanup"
 msgstr "Opschonen"
 
 #: thunar-svn-plugin/tsp-svn-action.c:265 tsp-svn-helper/main.c:117
+#: tsp-svn-helper/tsh-commit.c:166
 msgid "Commit"
 msgstr "Versturen"
 
@@ -226,82 +228,100 @@ msgstr "Selecteer een map"
 msgid "_Checkout directory:"
 msgstr "_Ophaal map:"
 
-#: tsp-svn-helper/tsh-common.c:456
-msgid "Added"
-msgstr "Toegevoegd"
+#: tsp-svn-helper/tsh-cleanup.c:71
+msgid "Cleanup finnished"
+msgstr "Klaar met opschonen"
 
-#: tsp-svn-helper/tsh-common.c:459
-msgid "Copied"
-msgstr "Gekopieerd"
+#: tsp-svn-helper/tsh-cleanup.c:84
+msgid "Cleaning up ..."
+msgstr "Bezig met opschonen ..."
 
-#: tsp-svn-helper/tsh-common.c:464
-msgid "Deleted"
-msgstr "Verwijderd"
+#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:475
+msgid "Unknown"
+msgstr "Onbekend"
 
-#: tsp-svn-helper/tsh-common.c:467
-msgid "Restored"
-msgstr "Hersteld"
-
-#: tsp-svn-helper/tsh-common.c:470
-msgid "Reverted"
-msgstr "Terug gehaald"
-
-#: tsp-svn-helper/tsh-common.c:473
-msgid "Revert failed"
-msgstr "Terug halen gefaald"
-
-#: tsp-svn-helper/tsh-common.c:476
-msgid "Resolved"
-msgstr "Opgelost"
-
-#: tsp-svn-helper/tsh-common.c:479
-msgid "Skipped"
-msgstr "Overgeslagen"
-
-#: tsp-svn-helper/tsh-common.c:490
-msgid "Updated"
-msgstr "Bijgewerkt"
-
-#: tsp-svn-helper/tsh-common.c:494
-#, c-format
-msgid "At revision: %li"
-msgstr "Op versie: %li"
-
-#: tsp-svn-helper/tsh-common.c:495 tsp-svn-helper/tsh-common.c:502
-msgid "Completed"
-msgstr "Voltooid"
-
-#: tsp-svn-helper/tsh-common.c:499
-msgid "External"
-msgstr "Extern"
-
-#: tsp-svn-helper/tsh-common.c:508
-msgid "Modified"
-msgstr "Aangepast"
-
-#: tsp-svn-helper/tsh-common.c:517
+#: tsp-svn-helper/tsh-commit.c:118 tsp-svn-helper/tsh-common.c:466
 msgid "Replaced"
 msgstr "Vervangen"
 
-#: tsp-svn-helper/tsh-common.c:526
-msgid "Locked"
-msgstr "Vast gezet"
+#: tsp-svn-helper/tsh-commit.c:120 tsp-svn-helper/tsh-common.c:448
+#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-common.c:464
+msgid "Added"
+msgstr "Toegevoegd"
 
-#: tsp-svn-helper/tsh-common.c:529
+#: tsp-svn-helper/tsh-commit.c:122 tsp-svn-helper/tsh-common.c:450
+#: tsp-svn-helper/tsh-common.c:456 tsp-svn-helper/tsh-common.c:465
+msgid "Deleted"
+msgstr "Verwijderd"
+
+#: tsp-svn-helper/tsh-commit.c:125 tsp-svn-helper/tsh-common.c:463
+msgid "Modified"
+msgstr "Aangepast"
+
+#: tsp-svn-helper/tsh-commit.c:129 tsp-svn-helper/tsh-common.c:449
+msgid "Copied"
+msgstr "Gekopieerd"
+
+#: tsp-svn-helper/tsh-commit.c:131 tsp-svn-helper/tsh-common.c:470
 msgid "Unlocked"
 msgstr "Vrijgegeven"
 
-#: tsp-svn-helper/tsh-common.c:532
+#: tsp-svn-helper/tsh-commit.c:170
+msgid "Commit Message"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:451
+msgid "Restored"
+msgstr "Hersteld"
+
+#: tsp-svn-helper/tsh-common.c:452
+msgid "Reverted"
+msgstr "Terug gehaald"
+
+#: tsp-svn-helper/tsh-common.c:453
+msgid "Revert failed"
+msgstr "Terug halen gefaald"
+
+#: tsp-svn-helper/tsh-common.c:454
+msgid "Resolved"
+msgstr "Opgelost"
+
+#: tsp-svn-helper/tsh-common.c:455
+msgid "Skipped"
+msgstr "Overgeslagen"
+
+#: tsp-svn-helper/tsh-common.c:458
+msgid "Updated"
+msgstr "Bijgewerkt"
+
+#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:461
+msgid "Completed"
+msgstr "Voltooid"
+
+#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:462
+msgid "External"
+msgstr "Extern"
+
+#: tsp-svn-helper/tsh-common.c:467
+msgid "Transmitting"
+msgstr "Versturen"
+
+#: tsp-svn-helper/tsh-common.c:469
+msgid "Locked"
+msgstr "Vast gezet"
+
+#: tsp-svn-helper/tsh-common.c:471
 msgid "Lock failed"
 msgstr "Vast zetten gefaald"
 
-#: tsp-svn-helper/tsh-common.c:535
+#: tsp-svn-helper/tsh-common.c:472
 msgid "Unlock failed"
 msgstr "Vrijgeven gefaald"
 
-#: tsp-svn-helper/tsh-common.c:538
-msgid "Unknown"
-msgstr "Onbekend"
+#: tsp-svn-helper/tsh-common.c:526
+#, c-format
+msgid "At revision: %li"
+msgstr "Op versie: %li"
 
 #: tsp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
@@ -320,6 +340,19 @@ msgstr "Onthouden"
 msgid "Certificate"
 msgstr "Certificaat"
 
+#: tsp-svn-helper/tsh-log-message-dialog.c:85
+msgid "State"
+msgstr "Status"
+
+#: tsp-svn-helper/tsh-log-message-dialog.c:91
+#: tsp-svn-helper/tsh-notify-dialog.c:81
+msgid "Path"
+msgstr "Pad"
+
+#: tsp-svn-helper/tsh-log-message-dialog.c:109
+msgid "Log Message"
+msgstr ""
+
 #: tsp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
 msgstr "_Gebruikersnaam:"
@@ -335,10 +368,6 @@ msgstr "Aanmelden"
 #: tsp-svn-helper/tsh-notify-dialog.c:75
 msgid "Action"
 msgstr "Actie"
-
-#: tsp-svn-helper/tsh-notify-dialog.c:81
-msgid "Path"
-msgstr "Pad"
 
 #: tsp-svn-helper/tsh-notify-dialog.c:87
 msgid "Mime type"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-27 17:05+0100\n"
+"POT-Creation-Date: 2007-12-27 18:55+0100\n"
 "PO-Revision-Date: 2007-11-09 15:08-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
@@ -36,6 +36,7 @@ msgid "SVN _Checkout"
 msgstr "SVN _Checkout"
 
 #: thunar-svn-plugin/tsp-svn-action.c:231 tsp-svn-helper/main.c:105
+#: tsp-svn-helper/tsh-add.c:98
 msgid "Add"
 msgstr "Adicionar"
 
@@ -48,6 +49,7 @@ msgid "Cleanup"
 msgstr "Limpar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:265 tsp-svn-helper/main.c:117
+#: tsp-svn-helper/tsh-commit.c:166
 msgid "Commit"
 msgstr "Enviar"
 
@@ -231,90 +233,110 @@ msgstr ""
 msgid "_Checkout directory:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:456
+#: tsp-svn-helper/tsh-cleanup.c:71
+msgid "Cleanup finnished"
+msgstr ""
+
+#: tsp-svn-helper/tsh-cleanup.c:84
+#, fuzzy
+msgid "Cleaning up ..."
+msgstr "Limpar"
+
+#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:475
+msgid "Unknown"
+msgstr ""
+
+#: tsp-svn-helper/tsh-commit.c:118 tsp-svn-helper/tsh-common.c:466
+msgid "Replaced"
+msgstr ""
+
+#: tsp-svn-helper/tsh-commit.c:120 tsp-svn-helper/tsh-common.c:448
+#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-common.c:464
 msgid "Added"
 msgstr "Adicionado"
 
-#: tsp-svn-helper/tsh-common.c:459
+#: tsp-svn-helper/tsh-commit.c:122 tsp-svn-helper/tsh-common.c:450
+#: tsp-svn-helper/tsh-common.c:456 tsp-svn-helper/tsh-common.c:465
+msgid "Deleted"
+msgstr "Apagado"
+
+#: tsp-svn-helper/tsh-commit.c:125 tsp-svn-helper/tsh-common.c:463
+msgid "Modified"
+msgstr ""
+
+#: tsp-svn-helper/tsh-commit.c:129 tsp-svn-helper/tsh-common.c:449
 #, fuzzy
 msgid "Copied"
 msgstr "Completado"
 
-#: tsp-svn-helper/tsh-common.c:464
-msgid "Deleted"
-msgstr "Apagado"
-
-#: tsp-svn-helper/tsh-common.c:467
-#, fuzzy
-msgid "Restored"
-msgstr "Resolver"
-
-#: tsp-svn-helper/tsh-common.c:470
-#, fuzzy
-msgid "Reverted"
-msgstr "Reverter"
-
-#: tsp-svn-helper/tsh-common.c:473
-#, fuzzy
-msgid "Revert failed"
-msgstr "Reverter"
-
-#: tsp-svn-helper/tsh-common.c:476
-#, fuzzy
-msgid "Resolved"
-msgstr "Resolver"
-
-#: tsp-svn-helper/tsh-common.c:479
-msgid "Skipped"
-msgstr ""
-
-#: tsp-svn-helper/tsh-common.c:490
-msgid "Updated"
-msgstr "Atualizado"
-
-#: tsp-svn-helper/tsh-common.c:494
-#, c-format
-msgid "At revision: %li"
-msgstr "Na revisão: %li"
-
-#: tsp-svn-helper/tsh-common.c:495 tsp-svn-helper/tsh-common.c:502
-msgid "Completed"
-msgstr "Completado"
-
-#: tsp-svn-helper/tsh-common.c:499
-msgid "External"
-msgstr "Externo"
-
-#: tsp-svn-helper/tsh-common.c:508
-msgid "Modified"
-msgstr ""
-
-#: tsp-svn-helper/tsh-common.c:517
-msgid "Replaced"
-msgstr ""
-
-#: tsp-svn-helper/tsh-common.c:526
-#, fuzzy
-msgid "Locked"
-msgstr "Travar"
-
-#: tsp-svn-helper/tsh-common.c:529
+#: tsp-svn-helper/tsh-commit.c:131 tsp-svn-helper/tsh-common.c:470
 #, fuzzy
 msgid "Unlocked"
 msgstr "Destravar"
 
-#: tsp-svn-helper/tsh-common.c:532
+#: tsp-svn-helper/tsh-commit.c:170
+#, fuzzy
+msgid "Commit Message"
+msgstr "Enviar"
+
+#: tsp-svn-helper/tsh-common.c:451
+#, fuzzy
+msgid "Restored"
+msgstr "Resolver"
+
+#: tsp-svn-helper/tsh-common.c:452
+#, fuzzy
+msgid "Reverted"
+msgstr "Reverter"
+
+#: tsp-svn-helper/tsh-common.c:453
+#, fuzzy
+msgid "Revert failed"
+msgstr "Reverter"
+
+#: tsp-svn-helper/tsh-common.c:454
+#, fuzzy
+msgid "Resolved"
+msgstr "Resolver"
+
+#: tsp-svn-helper/tsh-common.c:455
+msgid "Skipped"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:458
+msgid "Updated"
+msgstr "Atualizado"
+
+#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:461
+msgid "Completed"
+msgstr "Completado"
+
+#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:462
+msgid "External"
+msgstr "Externo"
+
+#: tsp-svn-helper/tsh-common.c:467
+msgid "Transmitting"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:469
+#, fuzzy
+msgid "Locked"
+msgstr "Travar"
+
+#: tsp-svn-helper/tsh-common.c:471
 msgid "Lock failed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:535
+#: tsp-svn-helper/tsh-common.c:472
 #, fuzzy
 msgid "Unlock failed"
 msgstr "Destravar"
 
-#: tsp-svn-helper/tsh-common.c:538
-msgid "Unknown"
-msgstr ""
+#: tsp-svn-helper/tsh-common.c:526
+#, c-format
+msgid "At revision: %li"
+msgstr "Na revisão: %li"
 
 #: tsp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
@@ -334,6 +356,20 @@ msgstr "Lembrar"
 msgid "Certificate"
 msgstr "Notificação"
 
+#: tsp-svn-helper/tsh-log-message-dialog.c:85
+#, fuzzy
+msgid "State"
+msgstr "Status"
+
+#: tsp-svn-helper/tsh-log-message-dialog.c:91
+#: tsp-svn-helper/tsh-notify-dialog.c:81
+msgid "Path"
+msgstr "Caminho"
+
+#: tsp-svn-helper/tsh-log-message-dialog.c:109
+msgid "Log Message"
+msgstr ""
+
 #: tsp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
 msgstr "Nome do _Usuário:"
@@ -349,10 +385,6 @@ msgstr "Login"
 #: tsp-svn-helper/tsh-notify-dialog.c:75
 msgid "Action"
 msgstr "Ação"
-
-#: tsp-svn-helper/tsh-notify-dialog.c:81
-msgid "Path"
-msgstr "Caminho"
 
 #: tsp-svn-helper/tsh-notify-dialog.c:87
 msgid "Mime type"
