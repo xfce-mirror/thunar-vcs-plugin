@@ -38,6 +38,9 @@
 #include "tsh-checkout.h"
 #include "tsh-cleanup.h"
 #include "tsh-commit.h"
+#include "tsh-delete.h"
+#include "tsh-export.h"
+#include "tsh-revert.h"
 #include "tsh-update.h"
 
 int main (int argc, char *argv[])
@@ -55,6 +58,9 @@ int main (int argc, char *argv[])
 	gboolean checkout = FALSE;
 	gboolean cleanup = FALSE;
 	gboolean commit = FALSE;
+	gboolean delete = FALSE;
+	gboolean export = FALSE;
+  gboolean revert = FALSE;
 	gboolean update = FALSE;
 	gchar **files = NULL;
 	GError *error = NULL;
@@ -90,6 +96,24 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry delete_options_table[] =
+	{
+		{ "delete", '\0', 0, G_OPTION_ARG_NONE, &delete, N_("Execute delete action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry export_options_table[] =
+	{
+		{ "export", '\0', 0, G_OPTION_ARG_NONE, &export, N_("Execute export action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry revert_options_table[] =
+	{
+		{ "revert", '\0', 0, G_OPTION_ARG_NONE, &revert, N_("Execute revert action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry update_options_table[] =
 	{
 		{ "update", '\0', 0, G_OPTION_ARG_NONE, &update, N_("Execute update action"), NULL },
@@ -116,6 +140,18 @@ int main (int argc, char *argv[])
 
 	option_group = g_option_group_new("commit", N_("Commit Related Opions:"), N_("Commit"), NULL, NULL);
 	g_option_group_add_entries(option_group, commit_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("delete", N_("Delete Related Opions:"), N_("Delete"), NULL, NULL);
+	g_option_group_add_entries(option_group, delete_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("export", N_("Export Related Opions:"), N_("Export"), NULL, NULL);
+	g_option_group_add_entries(option_group, export_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("revert", N_("Revert Related Opions:"), N_("Revert"), NULL, NULL);
+	g_option_group_add_entries(option_group, revert_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("update", N_("Update Related Opions:"), N_("Update"), NULL, NULL);
@@ -160,6 +196,15 @@ int main (int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
+  if(add || delete || revert)
+  {
+    if(!g_strv_length(files))
+    {
+      g_fprintf(stderr, "%s: %s\n\tTry --help-all\n", g_get_prgname(), _("Not enough arguments provided"));
+      return EXIT_FAILURE;
+    }
+  }
+
 	if(add)
 	{
 		thread = tsh_add(files, svn_ctx, pool);
@@ -178,6 +223,21 @@ int main (int argc, char *argv[])
 	if(commit)
 	{
 		thread = tsh_commit(files, svn_ctx, pool);
+	}
+
+	if(delete)
+	{
+		thread = tsh_delete(files, svn_ctx, pool);
+	}
+
+	if(export)
+	{
+		thread = tsh_export(files, svn_ctx, pool);
+	}
+
+	if(revert)
+	{
+		thread = tsh_revert(files, svn_ctx, pool);
 	}
 
 	if(update)

@@ -28,9 +28,9 @@
 #include "gtkfilechooserentry.h"
 //#include <gtk/gtkfilechooserentry.h>
 
-#include "tsh-checkout-dialog.h"
+#include "tsh-transfer-dialog.h"
 
-struct _TshCheckoutDialog
+struct _TshTransferDialog
 {
 	GtkDialog dialog;
 
@@ -38,20 +38,20 @@ struct _TshCheckoutDialog
 	GtkWidget *path;
 };
 
-struct _TshCheckoutDialogClass
+struct _TshTransferDialogClass
 {
 	GtkDialogClass dialog_class;
 };
 
-G_DEFINE_TYPE (TshCheckoutDialog, tsh_checkout_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (TshTransferDialog, tsh_transfer_dialog, GTK_TYPE_DIALOG)
 
 static void
-tsh_checkout_dialog_class_init (TshCheckoutDialogClass *klass)
+tsh_transfer_dialog_class_init (TshTransferDialogClass *klass)
 {
 }
 
 static void
-tsh_checkout_dialog_init (TshCheckoutDialog *dialog)
+tsh_transfer_dialog_init (TshTransferDialog *dialog)
 {
 	GtkWidget *table;
 	GtkWidget *label;
@@ -81,7 +81,7 @@ tsh_checkout_dialog_init (TshCheckoutDialog *dialog)
 	gtk_widget_show(dialog->repository);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog->repository), FALSE);
 
-	label = gtk_label_new_with_mnemonic (_("_Checkout directory:"));
+	label = gtk_label_new_with_mnemonic (_("_Directory:"));
 	gtk_table_attach (GTK_TABLE (table), label,
 	                  0, 1, 1, 2,
 	                  GTK_SHRINK | GTK_FILL,
@@ -100,7 +100,7 @@ tsh_checkout_dialog_init (TshCheckoutDialog *dialog)
 	gtk_widget_show(label);
 	gtk_widget_show(dialog->path);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), _("Checkout"));
+	gtk_window_set_title (GTK_WINDOW (dialog), _("Transfer"));
 
 	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
 	                        GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
@@ -113,9 +113,9 @@ tsh_checkout_dialog_init (TshCheckoutDialog *dialog)
 }
 
 GtkWidget*
-tsh_checkout_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, const gchar *checkout_dir)
+tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, const gchar *checkout_dir)
 {
-	TshCheckoutDialog *dialog = g_object_new (TSH_TYPE_CHECKOUT_DIALOG, NULL);
+	TshTransferDialog *dialog = g_object_new (TSH_TYPE_TRANSFER_DIALOG, NULL);
 
 	if(title)
 		gtk_window_set_title (GTK_WINDOW(dialog), title);
@@ -149,12 +149,12 @@ tsh_checkout_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
 	return GTK_WIDGET(dialog);
 }
 
-gchar* tsh_checkout_dialog_get_reposetory (TshCheckoutDialog *dialog)
+gchar* tsh_transfer_dialog_get_reposetory (TshTransferDialog *dialog)
 {
 	return gtk_file_chooser_entry_get_uri(GTK_FILE_CHOOSER_ENTRY(dialog->repository));
 }
 
-gchar* tsh_checkout_dialog_get_directory (TshCheckoutDialog *dialog)
+gchar* tsh_transfer_dialog_get_directory (TshTransferDialog *dialog)
 {
 	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->path));
 }

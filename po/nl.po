@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-27 18:55+0100\n"
-"PO-Revision-Date: 2007-12-27 18:58+0100\n"
+"POT-Creation-Date: 2007-12-28 01:06+0100\n"
+"PO-Revision-Date: 2007-12-28 01:10+0100\n"
 "Last-Translator: Peter de Ridder <peter@xfce.org>\n"
 "Language-Team: Dutch <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,78 +33,81 @@ msgstr "SVN"
 msgid "SVN _Checkout"
 msgstr "SVN _Ophalen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:231 tsp-svn-helper/main.c:105
+#: thunar-svn-plugin/tsp-svn-action.c:237 tsp-svn-helper/main.c:129
 #: tsp-svn-helper/tsh-add.c:98
 msgid "Add"
 msgstr "Toevoegen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:245
 msgid "Blame"
 msgstr "Beschuldigen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:257 tsp-svn-helper/main.c:113
+#: thunar-svn-plugin/tsp-svn-action.c:263 tsp-svn-helper/main.c:137
 msgid "Cleanup"
 msgstr "Opschonen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:265 tsp-svn-helper/main.c:117
-#: tsp-svn-helper/tsh-commit.c:166
+#: thunar-svn-plugin/tsp-svn-action.c:271 tsp-svn-helper/main.c:141
+#: tsp-svn-helper/tsh-commit.c:105
 msgid "Commit"
 msgstr "Versturen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:278
+#: thunar-svn-plugin/tsp-svn-action.c:284 tsp-svn-helper/main.c:145
+#: tsp-svn-helper/tsh-delete.c:105
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:286
+#: thunar-svn-plugin/tsp-svn-action.c:292
 msgid "Diff"
 msgstr "Verschillen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:294
+#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:149
+#: tsp-svn-helper/tsh-export.c:91 tsp-svn-helper/tsh-export.c:109
 msgid "Export"
 msgstr "Exporteren"
 
-#: thunar-svn-plugin/tsp-svn-action.c:307
+#: thunar-svn-plugin/tsp-svn-action.c:313
 msgid "Info"
 msgstr "Informatie"
 
-#: thunar-svn-plugin/tsp-svn-action.c:320
+#: thunar-svn-plugin/tsp-svn-action.c:326
 msgid "Lock"
 msgstr "Vast Zetten"
 
-#: thunar-svn-plugin/tsp-svn-action.c:328
+#: thunar-svn-plugin/tsp-svn-action.c:334
 msgid "Log"
 msgstr "Geschiedenis"
 
-#: thunar-svn-plugin/tsp-svn-action.c:357
+#: thunar-svn-plugin/tsp-svn-action.c:363
 msgid "Edit Properties"
 msgstr "Attributen Wijzigen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:367
+#: thunar-svn-plugin/tsp-svn-action.c:373
 msgid "Resolve"
 msgstr "Verhelpen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:375
+#: thunar-svn-plugin/tsp-svn-action.c:381 tsp-svn-helper/main.c:153
+#: tsp-svn-helper/tsh-revert.c:103
 msgid "Revert"
 msgstr "Terug Halen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:383
+#: thunar-svn-plugin/tsp-svn-action.c:389
 msgid "Status"
 msgstr "Status"
 
-#: thunar-svn-plugin/tsp-svn-action.c:391
+#: thunar-svn-plugin/tsp-svn-action.c:397
 msgid "Switch"
 msgstr "Omschakelen"
 
-#: thunar-svn-plugin/tsp-svn-action.c:399
+#: thunar-svn-plugin/tsp-svn-action.c:405
 msgid "Unlock"
 msgstr "Vrijgeven"
 
-#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:121
+#: thunar-svn-plugin/tsp-svn-action.c:413 tsp-svn-helper/main.c:157
 #: tsp-svn-helper/tsh-update.c:105
 msgid "Update"
 msgstr "Bijwerken"
 
-#: thunar-svn-plugin/tsp-svn-action.c:420
+#: thunar-svn-plugin/tsp-svn-action.c:426
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "Actie %s is niet geimplementeerd"
@@ -166,67 +169,82 @@ msgstr "De gewenste breedte van het text-widget, in lettertekens."
 msgid "Other..."
 msgstr "Andere..."
 
-#: tsp-svn-helper/main.c:64
+#: tsp-svn-helper/main.c:70
 msgid "Print version information"
 msgstr "Versie informatie tonen"
 
-#: tsp-svn-helper/main.c:71
+#: tsp-svn-helper/main.c:77
 msgid "Execute add action"
 msgstr "Toevoeg actie uitvoeren"
 
-#: tsp-svn-helper/main.c:77
+#: tsp-svn-helper/main.c:83
 msgid "Execute checkout action"
 msgstr "Ophaal actie uitvoeren"
 
-#: tsp-svn-helper/main.c:83
+#: tsp-svn-helper/main.c:89
 msgid "Execute cleanup action"
 msgstr "Opschoon actie uitvoeren"
 
-#: tsp-svn-helper/main.c:89
+#: tsp-svn-helper/main.c:95
 msgid "Execute commit action"
 msgstr "Verstuur actie uitvoeren"
 
-#: tsp-svn-helper/main.c:95
+#: tsp-svn-helper/main.c:101
+msgid "Execute delete action"
+msgstr "Verwijder actie uitvoeren"
+
+#: tsp-svn-helper/main.c:107
+msgid "Execute export action"
+msgstr "Exporteer actie uitvoeren"
+
+#: tsp-svn-helper/main.c:113
+msgid "Execute revert action"
+msgstr "Terug haal actie uitvoeren"
+
+#: tsp-svn-helper/main.c:119
 msgid "Execute update action"
 msgstr "Bijwerk actie uitvoeren"
 
-#: tsp-svn-helper/main.c:105
+#: tsp-svn-helper/main.c:129
 msgid "Add Related Opions:"
 msgstr "Toevoegen gerelateerde opties:"
 
-#: tsp-svn-helper/main.c:109
+#: tsp-svn-helper/main.c:133
 msgid "Checkout Related Opions:"
 msgstr "Ophalen gerelateerde opties:"
 
-#: tsp-svn-helper/main.c:109 tsp-svn-helper/tsh-checkout.c:102
-#: tsp-svn-helper/tsh-checkout-dialog.c:103
+#: tsp-svn-helper/main.c:133 tsp-svn-helper/tsh-checkout.c:90
+#: tsp-svn-helper/tsh-checkout.c:102
 msgid "Checkout"
 msgstr "Ophalen"
 
-#: tsp-svn-helper/main.c:113
+#: tsp-svn-helper/main.c:137
 msgid "Cleanup Related Opions:"
 msgstr "Opschonen gerelateerde opties:"
 
-#: tsp-svn-helper/main.c:117
+#: tsp-svn-helper/main.c:141
 msgid "Commit Related Opions:"
 msgstr "Versturen gerelateerde opties:"
 
-#: tsp-svn-helper/main.c:121
+#: tsp-svn-helper/main.c:145
+msgid "Delete Related Opions:"
+msgstr "Verwijder gerelateerde opties:"
+
+#: tsp-svn-helper/main.c:149
+msgid "Export Related Opions:"
+msgstr "Exporteer gerelateerde opties:"
+
+#: tsp-svn-helper/main.c:153
+msgid "Revert Related Opions:"
+msgstr "Terug haal gerelateerde opties:"
+
+#: tsp-svn-helper/main.c:157
 msgid "Update Related Opions:"
 msgstr "Bijwerken gerelateerde opties:"
 
-#: tsp-svn-helper/tsh-checkout-dialog.c:64
-msgid "_Repository:"
-msgstr ""
-
-#: tsp-svn-helper/tsh-checkout-dialog.c:71
-#: tsp-svn-helper/tsh-checkout-dialog.c:91
-msgid "Select a folder"
-msgstr "Selecteer een map"
-
-#: tsp-svn-helper/tsh-checkout-dialog.c:84
-msgid "_Checkout directory:"
-msgstr "_Ophaal map:"
+#: tsp-svn-helper/main.c:203
+msgid "Not enough arguments provided"
+msgstr "Onvoldoende argumenten meegegeven"
 
 #: tsp-svn-helper/tsh-cleanup.c:71
 msgid "Cleanup finnished"
@@ -236,92 +254,96 @@ msgstr "Klaar met opschonen"
 msgid "Cleaning up ..."
 msgstr "Bezig met opschonen ..."
 
-#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:475
-msgid "Unknown"
-msgstr "Onbekend"
-
-#: tsp-svn-helper/tsh-commit.c:118 tsp-svn-helper/tsh-common.c:466
-msgid "Replaced"
-msgstr "Vervangen"
-
-#: tsp-svn-helper/tsh-commit.c:120 tsp-svn-helper/tsh-common.c:448
-#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-common.c:464
-msgid "Added"
-msgstr "Toegevoegd"
-
-#: tsp-svn-helper/tsh-commit.c:122 tsp-svn-helper/tsh-common.c:450
-#: tsp-svn-helper/tsh-common.c:456 tsp-svn-helper/tsh-common.c:465
-msgid "Deleted"
-msgstr "Verwijderd"
-
-#: tsp-svn-helper/tsh-commit.c:125 tsp-svn-helper/tsh-common.c:463
-msgid "Modified"
-msgstr "Aangepast"
-
-#: tsp-svn-helper/tsh-commit.c:129 tsp-svn-helper/tsh-common.c:449
-msgid "Copied"
-msgstr "Gekopieerd"
-
-#: tsp-svn-helper/tsh-commit.c:131 tsp-svn-helper/tsh-common.c:470
-msgid "Unlocked"
-msgstr "Vrijgegeven"
-
-#: tsp-svn-helper/tsh-commit.c:170
+#: tsp-svn-helper/tsh-commit.c:109
 msgid "Commit Message"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:451
+#: tsp-svn-helper/tsh-common.c:449 tsp-svn-helper/tsh-common.c:458
+#: tsp-svn-helper/tsh-common.c:465 tsp-svn-helper/tsh-common.c:558
+msgid "Added"
+msgstr "Toegevoegd"
+
+#: tsp-svn-helper/tsh-common.c:450 tsp-svn-helper/tsh-common.c:567
+msgid "Copied"
+msgstr "Gekopieerd"
+
+#: tsp-svn-helper/tsh-common.c:451 tsp-svn-helper/tsh-common.c:457
+#: tsp-svn-helper/tsh-common.c:466 tsp-svn-helper/tsh-common.c:560
+msgid "Deleted"
+msgstr "Verwijderd"
+
+#: tsp-svn-helper/tsh-common.c:452
 msgid "Restored"
 msgstr "Hersteld"
 
-#: tsp-svn-helper/tsh-common.c:452
+#: tsp-svn-helper/tsh-common.c:453
 msgid "Reverted"
 msgstr "Terug gehaald"
 
-#: tsp-svn-helper/tsh-common.c:453
+#: tsp-svn-helper/tsh-common.c:454
 msgid "Revert failed"
 msgstr "Terug halen gefaald"
 
-#: tsp-svn-helper/tsh-common.c:454
+#: tsp-svn-helper/tsh-common.c:455
 msgid "Resolved"
 msgstr "Opgelost"
 
-#: tsp-svn-helper/tsh-common.c:455
+#: tsp-svn-helper/tsh-common.c:456
 msgid "Skipped"
 msgstr "Overgeslagen"
 
-#: tsp-svn-helper/tsh-common.c:458
+#: tsp-svn-helper/tsh-common.c:459
 msgid "Updated"
 msgstr "Bijgewerkt"
 
-#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:461
+#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:462
 msgid "Completed"
 msgstr "Voltooid"
 
-#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:462
+#: tsp-svn-helper/tsh-common.c:461 tsp-svn-helper/tsh-common.c:463
 msgid "External"
 msgstr "Extern"
 
-#: tsp-svn-helper/tsh-common.c:467
+#: tsp-svn-helper/tsh-common.c:464 tsp-svn-helper/tsh-common.c:563
+msgid "Modified"
+msgstr "Aangepast"
+
+#: tsp-svn-helper/tsh-common.c:467 tsp-svn-helper/tsh-common.c:556
+msgid "Replaced"
+msgstr "Vervangen"
+
+#: tsp-svn-helper/tsh-common.c:468
 msgid "Transmitting"
 msgstr "Versturen"
 
-#: tsp-svn-helper/tsh-common.c:469
+#: tsp-svn-helper/tsh-common.c:470
 msgid "Locked"
 msgstr "Vast gezet"
 
-#: tsp-svn-helper/tsh-common.c:471
+#: tsp-svn-helper/tsh-common.c:471 tsp-svn-helper/tsh-common.c:569
+msgid "Unlocked"
+msgstr "Vrijgegeven"
+
+#: tsp-svn-helper/tsh-common.c:472
 msgid "Lock failed"
 msgstr "Vast zetten gefaald"
 
-#: tsp-svn-helper/tsh-common.c:472
+#: tsp-svn-helper/tsh-common.c:473
 msgid "Unlock failed"
 msgstr "Vrijgeven gefaald"
 
-#: tsp-svn-helper/tsh-common.c:526
+#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:552
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: tsp-svn-helper/tsh-common.c:527
 #, c-format
 msgid "At revision: %li"
 msgstr "Op versie: %li"
+
+#: tsp-svn-helper/tsh-delete.c:109
+msgid "Delete Message"
+msgstr ""
 
 #: tsp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
@@ -351,7 +373,7 @@ msgstr "Pad"
 
 #: tsp-svn-helper/tsh-log-message-dialog.c:109
 msgid "Log Message"
-msgstr ""
+msgstr "Geschiedenis bericht"
 
 #: tsp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
@@ -376,6 +398,23 @@ msgstr ""
 #: tsp-svn-helper/tsh-notify-dialog.c:102
 msgid "Notification"
 msgstr "Notificatie"
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:64
+msgid "_Repository:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:71
+#: tsp-svn-helper/tsh-transfer-dialog.c:91
+msgid "Select a folder"
+msgstr "Selecteer een map"
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:84
+msgid "_Directory:"
+msgstr "_Map:"
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:103
+msgid "Transfer"
+msgstr ""
 
 #: tsp-svn-helper/tsh-trust-dialog.c:58
 msgid "Certificate is not yet valid."

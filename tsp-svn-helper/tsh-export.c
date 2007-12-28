@@ -38,7 +38,7 @@
 #include "tsh-notify-dialog.h"
 #include "tsh-transfer-dialog.h"
 
-#include "tsh-checkout.h"
+#include "tsh-export.h"
 
 struct thread_args {
 	svn_client_ctx_t *ctx;
@@ -48,10 +48,10 @@ struct thread_args {
 	gchar *url;
 };
 
-static gpointer checkout_thread (gpointer user_data)
+static gpointer export_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
-  svn_opt_revision_t revision;
+  svn_opt_revision_t peg_revision, revision;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *pool = args->pool;
@@ -61,8 +61,9 @@ static gpointer checkout_thread (gpointer user_data)
 
 	g_free (args);
 
+  peg_revision.kind = svn_opt_revision_unspecified;
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_checkout2(NULL, url, path, &revision, &revision, TRUE, FALSE, ctx, pool)))
+	if ((err = svn_client_export3(NULL, url, path, &peg_revision, &revision, TRUE, FALSE, TRUE, NULL, ctx, pool)))
 	{
 		gdk_threads_enter();
 		tsh_notify_dialog_done (dialog);
@@ -80,14 +81,14 @@ static gpointer checkout_thread (gpointer user_data)
 	return GINT_TO_POINTER (TRUE);
 }
 
-GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
+GThread *tsh_export (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
   gchar *repository;
   gchar *path;
 
-	dialog = tsh_transfer_dialog_new (_("Checkout"), NULL, 0, files?files[0]:NULL);
+	dialog = tsh_transfer_dialog_new (_("Export"), NULL, 0, files?files[0]:NULL);
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);
@@ -95,11 +96,17 @@ GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   }
 
   repository = tsh_transfer_dialog_get_reposetory(TSH_TRANSFER_DIALOG(dialog));
+  path = tsh_is_working_copy(repository, pool);
+  if(path)
+  {
+    g_free(repository);
+    repository = path;
+  }
   path = tsh_transfer_dialog_get_directory(TSH_TRANSFER_DIALOG(dialog));
 
 	gtk_widget_destroy (dialog);
 
-	dialog = tsh_notify_dialog_new (_("Checkout"), NULL, 0);
+	dialog = tsh_notify_dialog_new (_("Export"), NULL, 0);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
 	ctx->notify_func2 = tsh_notify_func2;
@@ -112,6 +119,6 @@ GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->path = path;
 	args->url =	repository;
 
-	return g_thread_create (checkout_thread, args, TRUE, NULL);
+	return g_thread_create (export_thread, args, TRUE, NULL);
 }
 

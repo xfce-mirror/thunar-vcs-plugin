@@ -40,6 +40,7 @@
 #include "tsh-file-dialog.h"
 #include "tsh-trust-dialog.h"
 #include "tsh-notify-dialog.h"
+#include "tsh-log-message-dialog.h"
 
 #include "tsh-common.h"
 
@@ -532,5 +533,97 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
   gdk_threads_enter();
   tsh_notify_dialog_add(dialog, action, path, mime);
   gdk_threads_leave();
+}
+
+svn_error_t*
+tsh_log_msg_func2(const char **log_msg, const char **tmp_file, const apr_array_header_t *commit_items, void *baton, apr_pool_t *pool)
+{
+  int i;
+  GtkWidget *dialog = baton;
+
+  gdk_threads_enter();
+	gtk_widget_show (dialog);
+  gdk_threads_leave();
+
+  if(commit_items)
+  {
+    for(i = 0; i < commit_items->nelts; i++)
+    {
+      const gchar *state = _("Unknown");
+      svn_client_commit_item2_t *item = APR_ARRAY_IDX(commit_items, i, svn_client_commit_item2_t*);
+      if((item->state_flags & SVN_CLIENT_COMMIT_ITEM_ADD) &&
+        (item->state_flags & SVN_CLIENT_COMMIT_ITEM_DELETE))
+        state = _("Replaced");
+      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_ADD)
+        state = _("Added");
+      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_DELETE)
+        state = _("Deleted");
+      else if((item->state_flags & SVN_CLIENT_COMMIT_ITEM_TEXT_MODS) ||
+        (item->state_flags & SVN_CLIENT_COMMIT_ITEM_PROP_MODS))
+        state = _("Modified");
+      //else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_PROP_MODS)
+      //  state = _("Modified");
+      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_IS_COPY)
+        state = _("Copied");
+      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_LOCK_TOKEN)
+        state = _("Unlocked");
+      gdk_threads_enter();
+      tsh_log_message_dialog_add(TSH_LOG_MESSAGE_DIALOG(dialog), state, item->path);
+      gdk_threads_leave();
+    }
+    gdk_threads_enter();
+    if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
+    {
+      gdk_threads_leave();
+      tsh_cancel();
+      gdk_threads_enter();
+      gtk_widget_hide (dialog);
+      gdk_threads_leave();
+      return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
+    }
+    gdk_threads_leave();
+    gdk_threads_enter();
+    *log_msg = tsh_log_message_dialog_get_message(TSH_LOG_MESSAGE_DIALOG(dialog));
+    gdk_threads_leave();
+  }
+
+  gdk_threads_enter();
+	gtk_widget_hide (dialog);
+  gdk_threads_leave();
+
+	return SVN_NO_ERROR;
+}
+
+gchar *
+tsh_is_working_copy (const gchar *uri, apr_pool_t *pool)
+{
+	svn_error_t *err;
+	int wc_format;
+
+	/* strip the "file://" part of the uri */
+	if (strncmp (uri, "file://", 7) == 0)
+	{
+		uri += 7;
+	}
+
+	gchar *path = g_strdup (uri);
+
+	/* remove trailing '/' cause svn_wc_check_wc can't handle that */
+	if (path[strlen (path) - 1] == '/')
+	{
+		path[strlen (path) - 1] = '\0';
+	}
+
+	/* check for the path is a working copy */
+	err = svn_wc_check_wc (path, &wc_format, pool);
+
+	/* if an error occured or wc_format in not set it is no working copy */
+	if(err || !wc_format)
+	{
+    g_free (path);
+		return NULL;
+	}
+	
+	return path;
 }
 

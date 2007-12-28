@@ -24,6 +24,12 @@ tsp_svn_helper_SOURCES =						\
 	tsh-cleanup.c							\
 	tsh-commit.h							\
 	tsh-commit.c							\
+	tsh-delete.h							\
+	tsh-delete.c							\
+	tsh-export.h							\
+	tsh-export.c							\
+	tsh-revert.h							\
+	tsh-revert.c							\
 	tsh-update.h							\
 	tsh-update.c							\
 	gtkfilechooserentry.h						\
@@ -47,8 +53,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-notify-dialog.c						\
 	tsh-log-message-dialog.h					\
 	tsh-log-message-dialog.c					\
-	tsh-checkout-dialog.h						\
-	tsh-checkout-dialog.c
+	tsh-transfer-dialog.h						\
+	tsh-transfer-dialog.c
 
 tsp_svn_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tsp-svn-helper\"

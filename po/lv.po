@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-27 18:55+0100\n"
+"POT-Creation-Date: 2007-12-28 01:06+0100\n"
 "PO-Revision-Date: 2007-11-15 21:18+0300\n"
 "Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
 "Language-Team: Latvian <rprieditis@inbox.lv>\n"
@@ -34,78 +34,81 @@ msgstr "SVN"
 msgid "SVN _Checkout"
 msgstr "SVN _Izrakstīšana"
 
-#: thunar-svn-plugin/tsp-svn-action.c:231 tsp-svn-helper/main.c:105
+#: thunar-svn-plugin/tsp-svn-action.c:237 tsp-svn-helper/main.c:129
 #: tsp-svn-helper/tsh-add.c:98
 msgid "Add"
 msgstr "Pievienot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:245
 msgid "Blame"
 msgstr "Vainot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:257 tsp-svn-helper/main.c:113
+#: thunar-svn-plugin/tsp-svn-action.c:263 tsp-svn-helper/main.c:137
 msgid "Cleanup"
 msgstr "Uzkopt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:265 tsp-svn-helper/main.c:117
-#: tsp-svn-helper/tsh-commit.c:166
+#: thunar-svn-plugin/tsp-svn-action.c:271 tsp-svn-helper/main.c:141
+#: tsp-svn-helper/tsh-commit.c:105
 msgid "Commit"
 msgstr "Apstiprināt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:278
+#: thunar-svn-plugin/tsp-svn-action.c:284 tsp-svn-helper/main.c:145
+#: tsp-svn-helper/tsh-delete.c:105
 msgid "Delete"
 msgstr "Dzēst"
 
-#: thunar-svn-plugin/tsp-svn-action.c:286
+#: thunar-svn-plugin/tsp-svn-action.c:292
 msgid "Diff"
 msgstr "Atšķirība"
 
-#: thunar-svn-plugin/tsp-svn-action.c:294
+#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:149
+#: tsp-svn-helper/tsh-export.c:91 tsp-svn-helper/tsh-export.c:109
 msgid "Export"
 msgstr "Eksportēt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:307
+#: thunar-svn-plugin/tsp-svn-action.c:313
 msgid "Info"
 msgstr "Informācija"
 
-#: thunar-svn-plugin/tsp-svn-action.c:320
+#: thunar-svn-plugin/tsp-svn-action.c:326
 msgid "Lock"
 msgstr "Slēgt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:328
+#: thunar-svn-plugin/tsp-svn-action.c:334
 msgid "Log"
 msgstr "Reģistrēt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:357
+#: thunar-svn-plugin/tsp-svn-action.c:363
 msgid "Edit Properties"
 msgstr "Rediģēt Rekvizītus"
 
-#: thunar-svn-plugin/tsp-svn-action.c:367
+#: thunar-svn-plugin/tsp-svn-action.c:373
 msgid "Resolve"
 msgstr "Atpazīt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:375
+#: thunar-svn-plugin/tsp-svn-action.c:381 tsp-svn-helper/main.c:153
+#: tsp-svn-helper/tsh-revert.c:103
 msgid "Revert"
 msgstr "Atgriezt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:383
+#: thunar-svn-plugin/tsp-svn-action.c:389
 msgid "Status"
 msgstr "Status"
 
-#: thunar-svn-plugin/tsp-svn-action.c:391
+#: thunar-svn-plugin/tsp-svn-action.c:397
 msgid "Switch"
 msgstr "Pārslēgt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:399
+#: thunar-svn-plugin/tsp-svn-action.c:405
 msgid "Unlock"
 msgstr "Atslēgt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:121
+#: thunar-svn-plugin/tsp-svn-action.c:413 tsp-svn-helper/main.c:157
 #: tsp-svn-helper/tsh-update.c:105
 msgid "Update"
 msgstr "Atjaunot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:420
+#: thunar-svn-plugin/tsp-svn-action.c:426
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr ""
@@ -167,69 +170,87 @@ msgstr ""
 msgid "Other..."
 msgstr ""
 
-#: tsp-svn-helper/main.c:64
+#: tsp-svn-helper/main.c:70
 msgid "Print version information"
 msgstr "Izdrukāt versijas informāciju"
 
-#: tsp-svn-helper/main.c:71
+#: tsp-svn-helper/main.c:77
 #, fuzzy
 msgid "Execute add action"
 msgstr "Izpildīt atjaunošanas darbību"
 
-#: tsp-svn-helper/main.c:77
-msgid "Execute checkout action"
-msgstr "Izpildīt izrakstīšanas darbību"
-
 #: tsp-svn-helper/main.c:83
-#, fuzzy
-msgid "Execute cleanup action"
+msgid "Execute checkout action"
 msgstr "Izpildīt izrakstīšanas darbību"
 
 #: tsp-svn-helper/main.c:89
 #, fuzzy
-msgid "Execute commit action"
+msgid "Execute cleanup action"
 msgstr "Izpildīt izrakstīšanas darbību"
 
 #: tsp-svn-helper/main.c:95
+#, fuzzy
+msgid "Execute commit action"
+msgstr "Izpildīt izrakstīšanas darbību"
+
+#: tsp-svn-helper/main.c:101
+#, fuzzy
+msgid "Execute delete action"
+msgstr "Izpildīt atjaunošanas darbību"
+
+#: tsp-svn-helper/main.c:107
+#, fuzzy
+msgid "Execute export action"
+msgstr "Izpildīt izrakstīšanas darbību"
+
+#: tsp-svn-helper/main.c:113
+#, fuzzy
+msgid "Execute revert action"
+msgstr "Izpildīt izrakstīšanas darbību"
+
+#: tsp-svn-helper/main.c:119
 msgid "Execute update action"
 msgstr "Izpildīt atjaunošanas darbību"
 
-#: tsp-svn-helper/main.c:105
+#: tsp-svn-helper/main.c:129
 msgid "Add Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:109
+#: tsp-svn-helper/main.c:133
 msgid "Checkout Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:109 tsp-svn-helper/tsh-checkout.c:102
-#: tsp-svn-helper/tsh-checkout-dialog.c:103
+#: tsp-svn-helper/main.c:133 tsp-svn-helper/tsh-checkout.c:90
+#: tsp-svn-helper/tsh-checkout.c:102
 msgid "Checkout"
 msgstr "Izrakstīt"
 
-#: tsp-svn-helper/main.c:113
+#: tsp-svn-helper/main.c:137
 msgid "Cleanup Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:117
+#: tsp-svn-helper/main.c:141
 msgid "Commit Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:121
+#: tsp-svn-helper/main.c:145
+msgid "Delete Related Opions:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:149
+msgid "Export Related Opions:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:153
+msgid "Revert Related Opions:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:157
 msgid "Update Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-checkout-dialog.c:64
-msgid "_Repository:"
-msgstr ""
-
-#: tsp-svn-helper/tsh-checkout-dialog.c:71
-#: tsp-svn-helper/tsh-checkout-dialog.c:91
-msgid "Select a folder"
-msgstr ""
-
-#: tsp-svn-helper/tsh-checkout-dialog.c:84
-msgid "_Checkout directory:"
+#: tsp-svn-helper/main.c:203
+msgid "Not enough arguments provided"
 msgstr ""
 
 #: tsp-svn-helper/tsh-cleanup.c:71
@@ -241,101 +262,106 @@ msgstr ""
 msgid "Cleaning up ..."
 msgstr "Uzkopt"
 
-#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:475
-msgid "Unknown"
-msgstr ""
-
-#: tsp-svn-helper/tsh-commit.c:118 tsp-svn-helper/tsh-common.c:466
-msgid "Replaced"
-msgstr ""
-
-#: tsp-svn-helper/tsh-commit.c:120 tsp-svn-helper/tsh-common.c:448
-#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-common.c:464
-msgid "Added"
-msgstr "Pievienots"
-
-#: tsp-svn-helper/tsh-commit.c:122 tsp-svn-helper/tsh-common.c:450
-#: tsp-svn-helper/tsh-common.c:456 tsp-svn-helper/tsh-common.c:465
-msgid "Deleted"
-msgstr "Dzēsts"
-
-#: tsp-svn-helper/tsh-commit.c:125 tsp-svn-helper/tsh-common.c:463
-msgid "Modified"
-msgstr ""
-
-#: tsp-svn-helper/tsh-commit.c:129 tsp-svn-helper/tsh-common.c:449
-#, fuzzy
-msgid "Copied"
-msgstr "Pabeigts"
-
-#: tsp-svn-helper/tsh-commit.c:131 tsp-svn-helper/tsh-common.c:470
-#, fuzzy
-msgid "Unlocked"
-msgstr "Atslēgt"
-
-#: tsp-svn-helper/tsh-commit.c:170
+#: tsp-svn-helper/tsh-commit.c:109
 #, fuzzy
 msgid "Commit Message"
 msgstr "Apstiprināt"
 
-#: tsp-svn-helper/tsh-common.c:451
+#: tsp-svn-helper/tsh-common.c:449 tsp-svn-helper/tsh-common.c:458
+#: tsp-svn-helper/tsh-common.c:465 tsp-svn-helper/tsh-common.c:558
+msgid "Added"
+msgstr "Pievienots"
+
+#: tsp-svn-helper/tsh-common.c:450 tsp-svn-helper/tsh-common.c:567
+#, fuzzy
+msgid "Copied"
+msgstr "Pabeigts"
+
+#: tsp-svn-helper/tsh-common.c:451 tsp-svn-helper/tsh-common.c:457
+#: tsp-svn-helper/tsh-common.c:466 tsp-svn-helper/tsh-common.c:560
+msgid "Deleted"
+msgstr "Dzēsts"
+
+#: tsp-svn-helper/tsh-common.c:452
 #, fuzzy
 msgid "Restored"
 msgstr "Atpazīt"
 
-#: tsp-svn-helper/tsh-common.c:452
+#: tsp-svn-helper/tsh-common.c:453
 #, fuzzy
 msgid "Reverted"
 msgstr "Atgriezt"
 
-#: tsp-svn-helper/tsh-common.c:453
+#: tsp-svn-helper/tsh-common.c:454
 #, fuzzy
 msgid "Revert failed"
 msgstr "Atgriezt"
 
-#: tsp-svn-helper/tsh-common.c:454
+#: tsp-svn-helper/tsh-common.c:455
 #, fuzzy
 msgid "Resolved"
 msgstr "Atpazīt"
 
-#: tsp-svn-helper/tsh-common.c:455
+#: tsp-svn-helper/tsh-common.c:456
 msgid "Skipped"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:458
+#: tsp-svn-helper/tsh-common.c:459
 msgid "Updated"
 msgstr "Atjaunināts"
 
-#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:461
+#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:462
 msgid "Completed"
 msgstr "Pabeigts"
 
-#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:462
+#: tsp-svn-helper/tsh-common.c:461 tsp-svn-helper/tsh-common.c:463
 msgid "External"
 msgstr "Ārējs"
 
-#: tsp-svn-helper/tsh-common.c:467
+#: tsp-svn-helper/tsh-common.c:464 tsp-svn-helper/tsh-common.c:563
+msgid "Modified"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:467 tsp-svn-helper/tsh-common.c:556
+msgid "Replaced"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:468
 msgid "Transmitting"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:469
+#: tsp-svn-helper/tsh-common.c:470
 #, fuzzy
 msgid "Locked"
 msgstr "Slēgt"
 
-#: tsp-svn-helper/tsh-common.c:471
+#: tsp-svn-helper/tsh-common.c:471 tsp-svn-helper/tsh-common.c:569
+#, fuzzy
+msgid "Unlocked"
+msgstr "Atslēgt"
+
+#: tsp-svn-helper/tsh-common.c:472
 msgid "Lock failed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:472
+#: tsp-svn-helper/tsh-common.c:473
 #, fuzzy
 msgid "Unlock failed"
 msgstr "Atslēgt"
 
-#: tsp-svn-helper/tsh-common.c:526
+#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:552
+msgid "Unknown"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:527
 #, c-format
 msgid "At revision: %li"
 msgstr "Revizija: %li"
+
+#: tsp-svn-helper/tsh-delete.c:109
+#, fuzzy
+msgid "Delete Message"
+msgstr "Apstiprināt"
 
 #: tsp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
@@ -392,6 +418,23 @@ msgstr "Mime tips"
 #: tsp-svn-helper/tsh-notify-dialog.c:102
 msgid "Notification"
 msgstr "Paziņošana"
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:64
+msgid "_Repository:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:71
+#: tsp-svn-helper/tsh-transfer-dialog.c:91
+msgid "Select a folder"
+msgstr ""
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:84
+msgid "_Directory:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:103
+msgid "Transfer"
+msgstr ""
 
 #: tsp-svn-helper/tsh-trust-dialog.c:58
 msgid "Certificate is not yet valid."

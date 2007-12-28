@@ -97,67 +97,6 @@ static gpointer commit_thread (gpointer user_data)
 	return GINT_TO_POINTER (TRUE);
 }
 
-static svn_error_t*
-tsh_log_msg_func(const char **log_msg, const char **tmp_file, const apr_array_header_t *commit_items, void *baton, apr_pool_t *pool)
-{
-  int i;
-  GtkWidget *dialog = baton;
-
-  gdk_threads_enter();
-	gtk_widget_show (dialog);
-  gdk_threads_leave();
-
-  if(commit_items)
-  {
-    for(i = 0; i < commit_items->nelts; i++)
-    {
-      const gchar *state = _("Unknown");
-      svn_client_commit_item2_t *item = APR_ARRAY_IDX(commit_items, i, svn_client_commit_item2_t*);
-      if((item->state_flags & SVN_CLIENT_COMMIT_ITEM_ADD) &&
-        (item->state_flags & SVN_CLIENT_COMMIT_ITEM_DELETE))
-        state = _("Replaced");
-      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_ADD)
-        state = _("Added");
-      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_DELETE)
-        state = _("Deleted");
-      else if((item->state_flags & SVN_CLIENT_COMMIT_ITEM_TEXT_MODS) ||
-        (item->state_flags & SVN_CLIENT_COMMIT_ITEM_PROP_MODS))
-        state = _("Modified");
-      //else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_PROP_MODS)
-      //  state = _("Modified");
-      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_IS_COPY)
-        state = _("Copied");
-      else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_LOCK_TOKEN)
-        state = _("Unlocked");
-      gdk_threads_enter();
-      tsh_log_message_dialog_add(TSH_LOG_MESSAGE_DIALOG(dialog), state, item->path);
-      gdk_threads_leave();
-    }
-    gdk_threads_enter();
-    if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
-    {
-      gdk_threads_leave();
-      tsh_cancel();
-      //gtk_widget_destroy(dialog);
-      gdk_threads_enter();
-      gtk_widget_hide (dialog);
-      gdk_threads_leave();
-      return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
-    }
-    gdk_threads_leave();
-    gdk_threads_enter();
-    *log_msg = tsh_log_message_dialog_get_message(TSH_LOG_MESSAGE_DIALOG(dialog));
-    gdk_threads_leave();
-    //gtk_widget_destroy(dialog);
-  }
-
-  gdk_threads_enter();
-	gtk_widget_hide (dialog);
-  gdk_threads_leave();
-
-	return SVN_NO_ERROR;
-}
-
 GThread *tsh_commit (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
@@ -166,7 +105,7 @@ GThread *tsh_commit (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	dialog = tsh_notify_dialog_new (_("Commit"), NULL, 0);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
-  ctx->log_msg_func2 = tsh_log_msg_func;
+  ctx->log_msg_func2 = tsh_log_msg_func2;
   ctx->log_msg_baton2 = tsh_log_message_dialog_new (_("Commit Message"), GTK_WINDOW (dialog), GTK_DIALOG_MODAL|GTK_DIALOG_DESTROY_WITH_PARENT);
 
 	ctx->notify_func2 = tsh_notify_func2;
