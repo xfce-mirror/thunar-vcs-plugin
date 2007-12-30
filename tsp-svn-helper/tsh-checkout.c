@@ -87,7 +87,7 @@ GThread *tsh_checkout (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   gchar *repository;
   gchar *path;
 
-	dialog = tsh_transfer_dialog_new (_("Checkout"), NULL, 0, files?files[0]:NULL);
+	dialog = tsh_transfer_dialog_new (_("Checkout"), NULL, 0, NULL, files?files[0]:NULL);
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);

@@ -28,6 +28,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-delete.c							\
 	tsh-export.h							\
 	tsh-export.c							\
+	tsh-import.h							\
+	tsh-import.c							\
 	tsh-revert.h							\
 	tsh-revert.c							\
 	tsh-update.h							\

@@ -584,6 +584,7 @@ tsh_log_msg_func2(const char **log_msg, const char **tmp_file, const apr_array_h
     gdk_threads_leave();
     gdk_threads_enter();
     *log_msg = tsh_log_message_dialog_get_message(TSH_LOG_MESSAGE_DIALOG(dialog));
+    *tmp_file = NULL;
     gdk_threads_leave();
   }
 

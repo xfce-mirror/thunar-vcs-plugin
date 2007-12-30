@@ -336,6 +336,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 	gboolean            file_is_vc = FALSE;
 	gboolean            file_is_not_vc = FALSE;
   GtkAction          *action;
+  GtkAction          *svnaction;
   GList              *actions = NULL;
   GList              *lp;
   gint                n_files = 0;
@@ -389,20 +390,25 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 					}
 				}
 			}
+      if(!iter)
+        file_is_not_vc = TRUE;
 		}
 	}
 
 	/* is the parent folder a working copy */
 	if (!parent_wc && (directory_is_not_wc || file_is_not_vc))
 	{
+		svnaction = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE);
 		/* It's not a working copy
 		 * append the "Import" action */
 		action = g_object_new (GTK_TYPE_ACTION,
 													 "name", "Tsp::import",
 													 "label", _("SVN _Import"),
 													 NULL);
-		g_signal_connect_after (action, "activate", G_CALLBACK (tsp_action_unimplemented), N_("Import"));
+		g_signal_connect_object (action, "activate", G_CALLBACK (tsp_action_import), svnaction, G_CONNECT_AFTER);
 		actions = g_list_append (actions, action);
+		/* append the svn submenu action
+		actions = g_list_append (actions, svnaction); */
 	}
 	if (parent_wc || directory_is_wc)
 	{
@@ -458,6 +464,13 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 													 "label", _("SVN _Checkout"),
 													 NULL);
 		g_signal_connect_object (action, "activate", G_CALLBACK (tsp_action_checkout), svnaction, G_CONNECT_AFTER);
+		actions = g_list_append (actions, action);
+		/* append the "Export" action */
+		action = g_object_new (GTK_TYPE_ACTION,
+													 "name", "Tsp::export",
+													 "label", _("SVN _Export"),
+													 NULL);
+		g_signal_connect_object (action, "activate", G_CALLBACK (tsp_action_export), svnaction, G_CONNECT_AFTER);
 		actions = g_list_append (actions, action);
 		/* append the svn submenu action
 		actions = g_list_append (actions, svnaction); */

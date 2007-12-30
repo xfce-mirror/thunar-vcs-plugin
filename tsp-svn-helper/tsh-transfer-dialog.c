@@ -23,6 +23,7 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 #include <gtk/gtk.h>
+#include <dirent.h>
 
 //#include "tsh-file-chooser-entry.h"
 #include "gtkfilechooserentry.h"
@@ -113,7 +114,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 }
 
 GtkWidget*
-tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, const gchar *checkout_dir)
+tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, const gchar *repo_dir, const gchar *local_dir)
 {
 	TshTransferDialog *dialog = g_object_new (TSH_TYPE_TRANSFER_DIALOG, NULL);
 
@@ -132,17 +133,47 @@ tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
 	if(flags & GTK_DIALOG_NO_SEPARATOR)
 		gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
 
-	if(checkout_dir)
+	if(repo_dir)
   {
     gchar *absolute = NULL;
-    if(!g_path_is_absolute (checkout_dir))
+    if(!g_path_is_absolute (repo_dir))
     {
       //TODO: ".."
       gchar *currdir = g_get_current_dir();
-      absolute = g_build_filename(currdir, (checkout_dir[0] == '.' && (!checkout_dir[1] || checkout_dir[1] == G_DIR_SEPARATOR || checkout_dir[1] == '/'))?&checkout_dir[1]:checkout_dir, NULL);
+      absolute = g_build_filename(currdir, (repo_dir[0] == '.' && (!repo_dir[1] || repo_dir[1] == G_DIR_SEPARATOR || repo_dir[1] == '/'))?&repo_dir[1]:repo_dir, NULL);
       g_free (currdir);
     }
-		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog->path), absolute?absolute:checkout_dir);
+		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog->repository), absolute?absolute:repo_dir);
+    g_free (absolute);
+  }
+
+	if(local_dir)
+  {
+    gboolean isdir = TRUE;
+    gchar *absolute = NULL;
+    if(!g_path_is_absolute (local_dir))
+    {
+      //TODO: ".."
+      gchar *currdir = g_get_current_dir();
+      absolute = g_build_filename(currdir, (local_dir[0] == '.' && (!local_dir[1] || local_dir[1] == G_DIR_SEPARATOR || local_dir[1] == '/'))?&local_dir[1]:local_dir, NULL);
+      g_free (currdir);
+    }
+    DIR *dir = opendir(absolute?absolute:local_dir);
+    FILE *fp;
+    if(dir)
+      closedir(dir);
+    else if((fp = fopen(absolute?absolute:local_dir, "r")))
+    {
+      fclose(fp);
+      isdir = FALSE;
+    }
+    if(isdir)
+      gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog->path), absolute?absolute:local_dir);
+    else
+    {
+      gtk_file_chooser_set_action (GTK_FILE_CHOOSER(dialog->path), GTK_FILE_CHOOSER_ACTION_OPEN);
+      gtk_file_chooser_set_filename (GTK_FILE_CHOOSER(dialog->path), absolute?absolute:local_dir);
+    }
     g_free (absolute);
   }
 

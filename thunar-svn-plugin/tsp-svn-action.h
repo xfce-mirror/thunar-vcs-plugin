@@ -51,6 +51,8 @@ G_END_DECLS;
 
 
 void tsp_action_checkout (GtkMenuItem *, TspSvnAction *);
+void tsp_action_export (GtkMenuItem *, TspSvnAction *);
+void tsp_action_import (GtkMenuItem *, TspSvnAction *);
 void tsp_action_unimplemented (GtkMenuItem *, const gchar *);
 
 #endif /* !__TSP_SVN_ACTION_H__ */

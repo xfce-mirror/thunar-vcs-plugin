@@ -39,7 +39,8 @@ GType      tsh_transfer_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 GtkWidget* tsh_transfer_dialog_new      (const gchar *title,
                                          GtkWindow *parent,
                                          GtkDialogFlags flags,
-																				 const gchar *checkout_dir) G_GNUC_MALLOC G_GNUC_INTERNAL;
+																				 const gchar *repo_dir,
+																				 const gchar *local_dir) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
 gchar* tsh_transfer_dialog_get_reposetory (TshTransferDialog*);
 gchar* tsh_transfer_dialog_get_directory (TshTransferDialog*);
