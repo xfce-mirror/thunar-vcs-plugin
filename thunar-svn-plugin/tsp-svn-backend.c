@@ -26,7 +26,6 @@
 #include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
-#include <subversion-1/svn_config.h>
 #include <subversion-1/svn_fs.h>
 
 #include <thunar-svn-plugin/tsp-svn-backend.h>

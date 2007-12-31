@@ -27,11 +27,7 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
-#include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
-#include <subversion-1/svn_pools.h>
-#include <subversion-1/svn_config.h>
-#include <subversion-1/svn_fs.h>
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
@@ -106,6 +102,7 @@ GThread *tsh_import (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	gtk_widget_destroy (dialog);
 
 	dialog = tsh_notify_dialog_new (_("Import"), NULL, 0);
+  g_signal_connect(dialog, "cancel-clicked", tsh_cancel, NULL);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
   ctx->log_msg_func2 = tsh_log_msg_func2;

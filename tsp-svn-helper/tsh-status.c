@@ -31,54 +31,39 @@
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
-#include "tsh-notify-dialog.h"
-#include "tsh-log-message-dialog.h"
+#include "tsh-status-dialog.h"
 
-#include "tsh-commit.h"
+#include "tsh-status.h"
 
 struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
-	TshNotifyDialog *dialog;
-  gchar **files;
+	TshStatusDialog *dialog;
+	gchar **files;
 };
 
-static gpointer commit_thread (gpointer user_data)
+static gpointer status_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
+  svn_opt_revision_t revision;
 	svn_error_t *err;
-  svn_commit_info_t *commit_info;
-  apr_array_header_t *paths;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *pool = args->pool;
-	TshNotifyDialog *dialog = args->dialog;
-  gchar **files = args->files;
-  gint size, i;
+	TshStatusDialog *dialog = args->dialog;
+	gchar **files = args->files;
+  gboolean get_all;
+  gboolean update;
 
-	g_free (args);
+  gdk_threads_enter();
+  get_all = tsh_status_dialog_get_show_unmodified(dialog);
+  update = tsh_status_dialog_get_check_reposetory(dialog);
+  gdk_threads_leave();
 
-  size = files?g_strv_length(files):0;
-
-  if(size)
-  {
-    paths = apr_array_make (pool, size, sizeof (const char *));
-
-    for (i = 0; i < size; i++)
-    {
-      APR_ARRAY_PUSH (paths, const char *) = files[i];
-    }
-  }
-  else
-  {
-    paths = apr_array_make (pool, 1, sizeof (const char *));
-
-    APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
-  }
-
-	if ((err = svn_client_commit3(&commit_info, paths, TRUE, FALSE, ctx, pool)))
+  revision.kind = svn_opt_revision_head;
+	if ((err = svn_client_status2(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, TRUE, get_all, update, FALSE, FALSE, ctx, pool)))
 	{
 		gdk_threads_enter();
-		tsh_notify_dialog_done (dialog);
+		tsh_status_dialog_done (dialog);
 		gdk_threads_leave();
 
 		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
@@ -87,33 +72,41 @@ static gpointer commit_thread (gpointer user_data)
 	}
 
 	gdk_threads_enter();
-	tsh_notify_dialog_done (dialog);
+	tsh_status_dialog_done (dialog);
 	gdk_threads_leave();
 	
 	return GINT_TO_POINTER (TRUE);
 }
 
-GThread *tsh_commit (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
+static void create_status_thread(TshStatusDialog *dialog, struct thread_args *args)
+{
+	GThread *thread = g_thread_create (status_thread, args, TRUE, NULL);
+  if (thread)
+    tsh_replace_thread (thread);
+  else
+    tsh_status_dialog_done (dialog);
+}
+
+GThread *tsh_status (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
 
-	dialog = tsh_notify_dialog_new (_("Commit"), NULL, 0);
+	dialog = tsh_status_dialog_new (_("Update"), NULL, 0);
   g_signal_connect(dialog, "cancel-clicked", tsh_cancel, NULL);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
-
-  ctx->log_msg_func2 = tsh_log_msg_func2;
-  ctx->log_msg_baton2 = tsh_log_message_dialog_new (_("Commit Message"), GTK_WINDOW (dialog), GTK_DIALOG_MODAL|GTK_DIALOG_DESTROY_WITH_PARENT);
 
 	ctx->notify_func2 = tsh_notify_func2;
 	ctx->notify_baton2 = dialog;
 
-	args = g_malloc (sizeof (struct thread_args));
+  args = g_malloc (sizeof (struct thread_args));
 	args->ctx = ctx;
 	args->pool = pool;
-	args->dialog = TSH_NOTIFY_DIALOG (dialog);
+	args->dialog = TSH_STATUS_DIALOG (dialog);
 	args->files = files;
 
-	return g_thread_create (commit_thread, args, TRUE, NULL);
+  g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_status_thread), args);
+
+	return g_thread_create (status_thread, args, TRUE, NULL);
 }
 

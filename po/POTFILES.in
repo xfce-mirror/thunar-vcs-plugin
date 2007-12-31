@@ -16,10 +16,13 @@ tsp-svn-helper/tsh-delete.c
 tsp-svn-helper/tsh-dialog-common.c
 tsp-svn-helper/tsh-export.c
 tsp-svn-helper/tsh-file-dialog.c
+tsp-svn-helper/tsh-import.c
 tsp-svn-helper/tsh-log-message-dialog.c
 tsp-svn-helper/tsh-login-dialog.c
 tsp-svn-helper/tsh-notify-dialog.c
 tsp-svn-helper/tsh-revert.c
+tsp-svn-helper/tsh-status.c
+tsp-svn-helper/tsh-status-dialog.c
 tsp-svn-helper/tsh-transfer-dialog.c
 tsp-svn-helper/tsh-trust-dialog.c
 tsp-svn-helper/tsh-update.c 

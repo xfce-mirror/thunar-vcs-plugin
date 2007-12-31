@@ -162,18 +162,24 @@ tsh_login_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flag
 gchar*
 tsh_login_dialog_get_username (TshLoginDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_LOGIN_DIALOG (dialog), NULL);
+
 	return g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog->username)));
 }
 
 gchar*
 tsh_login_dialog_get_password (TshLoginDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_LOGIN_DIALOG (dialog), NULL);
+
 	return g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog->password)));
 }
 
 gboolean
 tsh_login_dialog_get_may_save (TshLoginDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_LOGIN_DIALOG (dialog), FALSE);
+
 	return gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dialog->may_save));
 }
 

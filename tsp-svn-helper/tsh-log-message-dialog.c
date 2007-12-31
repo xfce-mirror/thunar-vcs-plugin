@@ -148,6 +148,8 @@ tsh_log_message_dialog_add (TshLogMessageDialog *dialog, const char *state, cons
 	GtkTreeIter iter;
 	GtkTreePath *path;
 
+  g_return_if_fail (TSH_IS_LOG_MESSAGE_DIALOG (dialog));
+
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
@@ -166,6 +168,9 @@ gchar *
 tsh_log_message_dialog_get_message (TshLogMessageDialog *dialog)
 {
   GtkTextIter start, end;
+
+  g_return_val_if_fail (TSH_IS_LOG_MESSAGE_DIALOG (dialog), NULL);
+
   GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view));
   gtk_text_buffer_get_start_iter (buffer, &start);
   gtk_text_buffer_get_end_iter (buffer, &end);

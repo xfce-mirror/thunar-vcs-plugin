@@ -44,9 +44,22 @@ struct _TshNotifyDialogClass
 
 G_DEFINE_TYPE (TshNotifyDialog, tsh_notify_dialog, GTK_TYPE_DIALOG)
 
+enum {
+  SIGNAL_CANCEL = 0,
+  SIGNAL_COUNT
+};
+
+static guint signals[SIGNAL_COUNT];
+
 static void
 tsh_notify_dialog_class_init (TshNotifyDialogClass *klass)
 {
+  signals[SIGNAL_CANCEL] = g_signal_new("cancel-clicked",
+    G_OBJECT_CLASS_TYPE (klass),
+    G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
+    0, NULL, NULL,
+    g_cclosure_marshal_VOID__VOID,
+    G_TYPE_NONE, 0);
 }
 
 enum {
@@ -142,6 +155,8 @@ tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *
 	GtkTreeIter iter;
 	GtkTreePath *path;
 
+  g_return_if_fail (TSH_IS_NOTIFY_DIALOG (dialog));
+
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
@@ -160,6 +175,8 @@ tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *
 void
 tsh_notify_dialog_done (TshNotifyDialog *dialog)
 {
+  g_return_if_fail (TSH_IS_NOTIFY_DIALOG (dialog));
+
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->close);
 }
@@ -171,5 +188,7 @@ cancel_clicked (GtkButton *button, gpointer user_data)
 	
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->close);
+	
+  g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
 

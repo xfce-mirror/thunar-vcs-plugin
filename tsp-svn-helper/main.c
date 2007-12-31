@@ -28,10 +28,8 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
-#include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
-#include <subversion-1/svn_config.h>
 
 #include "tsh-common.h"
 #include "tsh-add.h"
@@ -42,12 +40,21 @@
 #include "tsh-export.h"
 #include "tsh-import.h"
 #include "tsh-revert.h"
+#include "tsh-status.h"
 #include "tsh-update.h"
+
+static GThread *thread = NULL;
+
+void tsh_replace_thread (GThread *new_thread)
+{
+  if(thread)
+    g_thread_join (thread);
+
+  thread = new_thread;
+}
 
 int main (int argc, char *argv[])
 {
-	GThread *thread = NULL;
-
 	/* SVN variables */
 	apr_pool_t *pool;
 	svn_error_t *err;
@@ -63,6 +70,7 @@ int main (int argc, char *argv[])
 	gboolean export = FALSE;
 	gboolean import = FALSE;
   gboolean revert = FALSE;
+  gboolean status = FALSE;
 	gboolean update = FALSE;
 	gchar **files = NULL;
 	GError *error = NULL;
@@ -122,6 +130,12 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry status_options_table[] =
+	{
+		{ "status", '\0', 0, G_OPTION_ARG_NONE, &status, N_("Execute status action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry update_options_table[] =
 	{
 		{ "update", '\0', 0, G_OPTION_ARG_NONE, &update, N_("Execute update action"), NULL },
@@ -164,6 +178,10 @@ int main (int argc, char *argv[])
 
 	option_group = g_option_group_new("revert", N_("Revert Related Opions:"), N_("Revert"), NULL, NULL);
 	g_option_group_add_entries(option_group, revert_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("status", N_("Status Related Opions:"), N_("Status"), NULL, NULL);
+	g_option_group_add_entries(option_group, status_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("update", N_("Update Related Opions:"), N_("Update"), NULL, NULL);
@@ -256,6 +274,11 @@ int main (int argc, char *argv[])
 	{
 		thread = tsh_revert(files, svn_ctx, pool);
 	}
+
+  if(status)
+  {
+    thread = tsh_status(files, svn_ctx, pool);
+  }
 
 	if(update)
 	{

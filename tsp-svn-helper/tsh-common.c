@@ -32,7 +32,6 @@
 #include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
-#include <subversion-1/svn_config.h>
 #include <subversion-1/svn_fs.h>
 
 #include "tsh-dialog-common.h"
@@ -40,6 +39,7 @@
 #include "tsh-file-dialog.h"
 #include "tsh-trust-dialog.h"
 #include "tsh-notify-dialog.h"
+#include "tsh-status-dialog.h"
 #include "tsh-log-message-dialog.h"
 
 #include "tsh-common.h"
@@ -446,38 +446,38 @@ static const gchar *
 tsh_action_to_string(svn_wc_notify_action_t action)
 {
   static const gchar const * const action_table[] = {
-			N_("Added"),
-			N_("Copied"),
-			N_("Deleted"),
-			N_("Restored"),
-			N_("Reverted"),
-			N_("Revert failed"),
-			N_("Resolved"),
-			N_("Skipped"),
-			N_("Deleted"),
-			N_("Added"),
-			N_("Updated"),
-			N_("Completed"),
-			N_("External"),
-			N_("Completed"),
-			N_("External"),
-			N_("Modified"),
-			N_("Added"),
-			N_("Deleted"),
-			N_("Replaced"),
-			N_("Transmitting"),
-			("Revision"),
-			N_("Locked"),
-			N_("Unlocked"),
-			N_("Lock failed"),
-			N_("Unlock failed"),
+    N_("Added"),
+    N_("Copied"),
+    N_("Deleted"),
+    N_("Restored"),
+    N_("Reverted"),
+    N_("Revert failed"),
+    N_("Resolved"),
+    N_("Skipped"),
+    N_("Deleted"),
+    N_("Added"),
+    N_("Updated"),
+    N_("Completed"),
+    N_("External"),
+    N_("Completed"),
+    N_("External"),
+    N_("Modified"),
+    N_("Added"),
+    N_("Deleted"),
+    N_("Replaced"),
+    N_("Transmitting"),
+    ("Revision"),
+    N_("Locked"),
+    N_("Unlocked"),
+    N_("Lock failed"),
+    N_("Unlock failed")
   };
 
   const gchar *action_string = N_("Unknown");
 
 	switch(action)
 	{
-		case svn_wc_notify_add:
+    case svn_wc_notify_add:
     case svn_wc_notify_copy:
     case svn_wc_notify_delete:
     case svn_wc_notify_restore:
@@ -485,16 +485,16 @@ tsh_action_to_string(svn_wc_notify_action_t action)
     case svn_wc_notify_failed_revert:
     case svn_wc_notify_resolved:
     case svn_wc_notify_skip:
-		case svn_wc_notify_update_delete:
-		case svn_wc_notify_update_add:
-		case svn_wc_notify_update_update:
-		case svn_wc_notify_update_completed:
-		case svn_wc_notify_update_external:
+    case svn_wc_notify_update_delete:
+    case svn_wc_notify_update_add:
+    case svn_wc_notify_update_update:
+    case svn_wc_notify_update_completed:
+    case svn_wc_notify_update_external:
     case svn_wc_notify_status_completed:
     case svn_wc_notify_status_external:
     case svn_wc_notify_commit_modified:
     case svn_wc_notify_commit_added:
-		case svn_wc_notify_commit_deleted:
+    case svn_wc_notify_commit_deleted:
     case svn_wc_notify_commit_replaced:
     case svn_wc_notify_commit_postfix_txdelta:
     case svn_wc_notify_blame_revision:
@@ -505,7 +505,52 @@ tsh_action_to_string(svn_wc_notify_action_t action)
       action_string = action_table[action];
       break;
 	}
-  return gettext(action_string);
+  return _(action_string);
+}
+
+static const gchar *
+tsh_status_to_string(enum svn_wc_status_kind status)
+{
+  static const gchar const * const status_table[] = {
+    N_("Unknown"),
+    (""),//N_("None"),
+    (""),//N_("Unversioned"),
+    N_("Normal"),
+    N_("Added"),
+    N_("Missing"),
+    N_("Deleted"),
+    N_("Replaced"),
+    N_("Modified"),
+    N_("Merged"),
+    N_("Conflicted"),
+    N_("Ignored"),
+    N_("Obstructed"),
+    N_("External"),
+    N_("Incomplete")
+  };
+
+  const gchar *status_string = N_("Unknown");
+
+	switch(status)
+	{
+    case svn_wc_status_none:
+    case svn_wc_status_unversioned:
+    case svn_wc_status_normal:
+    case svn_wc_status_added:
+    case svn_wc_status_missing:
+    case svn_wc_status_deleted:
+    case svn_wc_status_replaced:
+    case svn_wc_status_modified:
+    case svn_wc_status_merged:
+    case svn_wc_status_conflicted:
+    case svn_wc_status_ignored:
+    case svn_wc_status_obstructed:
+    case svn_wc_status_external:
+    case svn_wc_status_incomplete:
+      status_string = status_table[status];
+      break;
+	}
+  return _(status_string);
 }
 
 void
@@ -532,6 +577,17 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
 	}
   gdk_threads_enter();
   tsh_notify_dialog_add(dialog, action, path, mime);
+  gdk_threads_leave();
+}
+
+void
+tsh_status_func2(void *baton, const char *path, svn_wc_status2_t *status)
+{
+	TshStatusDialog *dialog = TSH_STATUS_DIALOG (baton);
+
+  gdk_threads_enter();
+  if (tsh_status_dialog_get_show_unversioned (dialog) || status->entry)
+    tsh_status_dialog_add(dialog, path, tsh_status_to_string(status->text_status), tsh_status_to_string(status->prop_status), tsh_status_to_string(status->repos_text_status), tsh_status_to_string(status->repos_prop_status));
   gdk_threads_leave();
 }
 

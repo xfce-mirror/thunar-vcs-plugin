@@ -32,6 +32,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-import.c							\
 	tsh-revert.h							\
 	tsh-revert.c							\
+	tsh-status.h							\
+	tsh-status.c							\
 	tsh-update.h							\
 	tsh-update.c							\
 	gtkfilechooserentry.h						\
@@ -53,6 +55,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-trust-dialog.c						\
 	tsh-notify-dialog.h						\
 	tsh-notify-dialog.c						\
+	tsh-status-dialog.h						\
+	tsh-status-dialog.c						\
 	tsh-log-message-dialog.h					\
 	tsh-log-message-dialog.c					\
 	tsh-transfer-dialog.h						\

@@ -182,11 +182,15 @@ tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
 
 gchar* tsh_transfer_dialog_get_reposetory (TshTransferDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_TRANSFER_DIALOG (dialog), NULL);
+
 	return gtk_file_chooser_entry_get_uri(GTK_FILE_CHOOSER_ENTRY(dialog->repository));
 }
 
 gchar* tsh_transfer_dialog_get_directory (TshTransferDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_TRANSFER_DIALOG (dialog), NULL);
+
 	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->path));
 }
 

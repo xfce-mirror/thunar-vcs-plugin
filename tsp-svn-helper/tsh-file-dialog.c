@@ -124,12 +124,16 @@ tsh_file_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags
 gchar*
 tsh_file_dialog_get_filename (TshFileDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_FILE_DIALOG (dialog), NULL);
+
 	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->filename));
 }
 
 gboolean
 tsh_file_dialog_get_may_save (TshFileDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_FILE_DIALOG (dialog), FALSE);
+
 	return gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dialog->may_save));
 }
 

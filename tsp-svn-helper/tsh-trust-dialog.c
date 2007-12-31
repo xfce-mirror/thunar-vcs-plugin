@@ -131,6 +131,9 @@ guint32
 tsh_trust_dialog_get_accepted (TshTrustDialog *dialog)
 {
 	guint32 failures = 0;
+
+  g_return_val_if_fail (TSH_IS_TRUST_DIALOG (dialog), failures);
+
 	if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dialog->notyetvalid)))
 		failures |= SVN_AUTH_SSL_NOTYETVALID;
 	if(gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dialog->expired)))
@@ -147,6 +150,8 @@ tsh_trust_dialog_get_accepted (TshTrustDialog *dialog)
 gboolean
 tsh_trust_dialog_get_may_save (TshTrustDialog *dialog)
 {
+  g_return_val_if_fail (TSH_IS_TRUST_DIALOG (dialog), FALSE);
+
 	return gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(dialog->may_save));
 }
 
