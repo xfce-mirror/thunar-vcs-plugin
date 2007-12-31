@@ -570,7 +570,7 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
 	{
 		case svn_wc_notify_update_completed:
 			g_snprintf(buffer, 256, _("At revision: %li"), notify->revision);
-      action = buffer;
+      path = buffer;
 			break;
     default:
       break;

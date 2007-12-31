@@ -24,16 +24,26 @@ tsp_svn_helper_SOURCES =						\
 	tsh-cleanup.c							\
 	tsh-commit.h							\
 	tsh-commit.c							\
+	tsh-copy.h							\
+	tsh-copy.c							\
 	tsh-delete.h							\
 	tsh-delete.c							\
 	tsh-export.h							\
 	tsh-export.c							\
 	tsh-import.h							\
 	tsh-import.c							\
+	tsh-lock.h							\
+	tsh-lock.c							\
+	tsh-move.h							\
+	tsh-move.c							\
+	tsh-resolved.h							\
+	tsh-resolved.c							\
 	tsh-revert.h							\
 	tsh-revert.c							\
 	tsh-status.h							\
 	tsh-status.c							\
+	tsh-unlock.h							\
+	tsh-unlock.c							\
 	tsh-update.h							\
 	tsh-update.c							\
 	gtkfilechooserentry.h						\
@@ -57,6 +67,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-notify-dialog.c						\
 	tsh-status-dialog.h						\
 	tsh-status-dialog.c						\
+	tsh-lock-dialog.h						\
+	tsh-lock-dialog.c						\
 	tsh-log-message-dialog.h					\
 	tsh-log-message-dialog.c					\
 	tsh-transfer-dialog.h						\

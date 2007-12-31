@@ -36,11 +36,16 @@
 #include "tsh-checkout.h"
 #include "tsh-cleanup.h"
 #include "tsh-commit.h"
+#include "tsh-copy.h"
 #include "tsh-delete.h"
 #include "tsh-export.h"
 #include "tsh-import.h"
+#include "tsh-lock.h"
+#include "tsh-move.h"
+#include "tsh-resolved.h"
 #include "tsh-revert.h"
 #include "tsh-status.h"
+#include "tsh-unlock.h"
 #include "tsh-update.h"
 
 static GThread *thread = NULL;
@@ -66,11 +71,16 @@ int main (int argc, char *argv[])
 	gboolean checkout = FALSE;
 	gboolean cleanup = FALSE;
 	gboolean commit = FALSE;
+	gboolean copy = FALSE;
 	gboolean delete = FALSE;
 	gboolean export = FALSE;
 	gboolean import = FALSE;
+	gboolean lock = FALSE;
+	gboolean move = FALSE;
+  gboolean resolved = FALSE;
   gboolean revert = FALSE;
   gboolean status = FALSE;
+	gboolean unlock = FALSE;
 	gboolean update = FALSE;
 	gchar **files = NULL;
 	GError *error = NULL;
@@ -106,6 +116,12 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry copy_options_table[] =
+	{
+		{ "copy", '\0', 0, G_OPTION_ARG_NONE, &copy, N_("Execute copy action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry delete_options_table[] =
 	{
 		{ "delete", '\0', 0, G_OPTION_ARG_NONE, &delete, N_("Execute delete action"), NULL },
@@ -124,6 +140,24 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry lock_options_table[] =
+	{
+		{ "lock", '\0', 0, G_OPTION_ARG_NONE, &lock, N_("Execute lock action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry move_options_table[] =
+	{
+		{ "move", '\0', 0, G_OPTION_ARG_NONE, &move, N_("Execute move action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry resolved_options_table[] =
+	{
+		{ "resolved", '\0', 0, G_OPTION_ARG_NONE, &resolved, N_("Execute resolved action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry revert_options_table[] =
 	{
 		{ "revert", '\0', 0, G_OPTION_ARG_NONE, &revert, N_("Execute revert action"), NULL },
@@ -133,6 +167,12 @@ int main (int argc, char *argv[])
 	GOptionEntry status_options_table[] =
 	{
 		{ "status", '\0', 0, G_OPTION_ARG_NONE, &status, N_("Execute status action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry unlock_options_table[] =
+	{
+		{ "unlock", '\0', 0, G_OPTION_ARG_NONE, &unlock, N_("Execute unlock action"), NULL },
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
@@ -164,6 +204,10 @@ int main (int argc, char *argv[])
 	g_option_group_add_entries(option_group, commit_options_table);
 	g_option_context_add_group(option_context, option_group);
 
+	option_group = g_option_group_new("copy", N_("Copy Related Opions:"), N_("Copy"), NULL, NULL);
+	g_option_group_add_entries(option_group, copy_options_table);
+	g_option_context_add_group(option_context, option_group);
+
 	option_group = g_option_group_new("delete", N_("Delete Related Opions:"), N_("Delete"), NULL, NULL);
 	g_option_group_add_entries(option_group, delete_options_table);
 	g_option_context_add_group(option_context, option_group);
@@ -176,12 +220,28 @@ int main (int argc, char *argv[])
 	g_option_group_add_entries(option_group, import_options_table);
 	g_option_context_add_group(option_context, option_group);
 
+	option_group = g_option_group_new("lock", N_("Lock Related Opions:"), N_("Lock"), NULL, NULL);
+	g_option_group_add_entries(option_group, lock_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("move", N_("Move Related Opions:"), N_("Move"), NULL, NULL);
+	g_option_group_add_entries(option_group, move_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("resolved", N_("Resolved Related Opions:"), N_("Resolved"), NULL, NULL);
+	g_option_group_add_entries(option_group, resolved_options_table);
+	g_option_context_add_group(option_context, option_group);
+
 	option_group = g_option_group_new("revert", N_("Revert Related Opions:"), N_("Revert"), NULL, NULL);
 	g_option_group_add_entries(option_group, revert_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("status", N_("Status Related Opions:"), N_("Status"), NULL, NULL);
 	g_option_group_add_entries(option_group, status_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("unlock", N_("Unlock Related Opions:"), N_("Unlock"), NULL, NULL);
+	g_option_group_add_entries(option_group, unlock_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("update", N_("Update Related Opions:"), N_("Update"), NULL, NULL);
@@ -226,7 +286,7 @@ int main (int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
-  if(add || delete || revert)
+  if(add || delete || revert || resolved)
   {
     if(!g_strv_length(files))
     {
@@ -255,6 +315,11 @@ int main (int argc, char *argv[])
 		thread = tsh_commit(files, svn_ctx, pool);
 	}
 
+	if(copy)
+	{
+		thread = tsh_copy(files, svn_ctx, pool);
+	}
+
 	if(delete)
 	{
 		thread = tsh_delete(files, svn_ctx, pool);
@@ -270,6 +335,21 @@ int main (int argc, char *argv[])
 		thread = tsh_import(files, svn_ctx, pool);
 	}
 
+	if(lock)
+	{
+		thread = tsh_lock(files, svn_ctx, pool);
+	}
+
+	if(move)
+	{
+		thread = tsh_move(files, svn_ctx, pool);
+	}
+
+	if(resolved)
+	{
+		thread = tsh_resolved(files, svn_ctx, pool);
+	}
+
 	if(revert)
 	{
 		thread = tsh_revert(files, svn_ctx, pool);
@@ -279,6 +359,11 @@ int main (int argc, char *argv[])
   {
     thread = tsh_status(files, svn_ctx, pool);
   }
+
+	if(unlock)
+	{
+		thread = tsh_unlock(files, svn_ctx, pool);
+	}
 
 	if(update)
 	{
