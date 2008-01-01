@@ -225,6 +225,9 @@ tsp_svn_action_set_property (GObject *object, guint property_id, const GValue *v
 		case PROPERTY_FILE_NO_VERSION_CONTROL:
 			TSP_SVN_ACTION (object)->property.file_no_version_control = g_value_get_boolean (value)?1:0;
 		break;
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+    break;
 	}
 }
 

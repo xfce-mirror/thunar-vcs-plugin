@@ -32,11 +32,26 @@ typedef struct
 	} flag;
 } TspSvnFileStatus;
 
+typedef struct
+{
+	gchar *path;
+  gchar *url;
+  glong revision;
+  gchar *repository;
+  glong modrev;
+  gchar *moddate;
+  gchar *modauthor;
+} TspSvnInfo;
+
 gboolean tsp_svn_backend_init();
 
 gboolean tsp_svn_backend_is_working_copy (const gchar *uri);
 
 GSList  *tsp_svn_backend_get_status (const gchar *uri);
+
+TspSvnInfo *tsp_svn_backend_get_info (const gchar *uri);
+
+void     tsp_svn_info_free (TspSvnInfo *info);
 
 G_END_DECLS;
 

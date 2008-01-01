@@ -65,15 +65,15 @@ tsh_login_dialog_init (TshLoginDialog *dialog)
 	dialog->user_lbl = gtk_label_new_with_mnemonic (_("_Username:"));
 	gtk_table_attach (GTK_TABLE (table), dialog->user_lbl,
 	                  0, 1, 0, 1,
-	                  GTK_SHRINK | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	dialog->username = gtk_entry_new();
 	gtk_table_attach (GTK_TABLE (table), dialog->username,
 	                  1, 2, 0, 1,
 	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (dialog->user_lbl), dialog->username);
@@ -81,15 +81,15 @@ tsh_login_dialog_init (TshLoginDialog *dialog)
 	dialog->pass_lbl = gtk_label_new_with_mnemonic (_("_Password:"));
 	gtk_table_attach (GTK_TABLE (table), dialog->pass_lbl,
 	                  0, 1, 1, 2,
-	                  GTK_SHRINK | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	dialog->password = gtk_entry_new();
 	gtk_table_attach (GTK_TABLE (table), dialog->password,
 	                  1, 2, 1, 2,
 	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	gtk_entry_set_visibility(GTK_ENTRY(dialog->password), FALSE);
@@ -99,7 +99,7 @@ tsh_login_dialog_init (TshLoginDialog *dialog)
 	gtk_table_attach (GTK_TABLE (table), dialog->may_save,
 	                  0, 2, 2, 3,
 	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 	gtk_widget_show(dialog->may_save);
 

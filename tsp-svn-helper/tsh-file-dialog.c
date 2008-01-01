@@ -60,15 +60,15 @@ tsh_file_dialog_init (TshFileDialog *dialog)
 	label = gtk_label_new_with_mnemonic (_("_Certificate:"));
 	gtk_table_attach (GTK_TABLE (table), label,
 	                  0, 1, 0, 1,
-	                  GTK_SHRINK | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	dialog->filename = gtk_file_chooser_button_new (_("Select a file"), GTK_FILE_CHOOSER_ACTION_OPEN);
 	gtk_table_attach (GTK_TABLE (table), dialog->filename,
 	                  1, 2, 0, 1,
 	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->filename);
@@ -79,7 +79,7 @@ tsh_file_dialog_init (TshFileDialog *dialog)
 	gtk_table_attach (GTK_TABLE (table), dialog->may_save,
 	                  0, 2, 1, 2,
 	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 	gtk_widget_show(dialog->may_save);
 

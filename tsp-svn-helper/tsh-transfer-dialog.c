@@ -65,8 +65,8 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	label = gtk_label_new_with_mnemonic (_("_Repository:"));
 	gtk_table_attach (GTK_TABLE (table), label,
 	                  0, 1, 0, 1,
-	                  GTK_SHRINK | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	dialog->repository = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
@@ -74,7 +74,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	gtk_table_attach (GTK_TABLE (table), dialog->repository,
 	                  1, 2, 0, 1,
 	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->repository);
@@ -85,8 +85,8 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	label = gtk_label_new_with_mnemonic (_("_Directory:"));
 	gtk_table_attach (GTK_TABLE (table), label,
 	                  0, 1, 1, 2,
-	                  GTK_SHRINK | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	dialog->path = gtk_file_chooser_button_new (_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);
@@ -94,7 +94,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	gtk_table_attach (GTK_TABLE (table), dialog->path,
 	                  1, 2, 1, 2,
 	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_SHRINK | GTK_FILL,
+	                  GTK_FILL,
 	                  0, 0);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->path);

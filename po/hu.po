@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar SVN plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-31 16:43+0100\n"
+"POT-Creation-Date: 2008-01-01 22:42+0100\n"
 "PO-Revision-Date: 2007-06-04 08:37+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -14,121 +14,158 @@ msgstr ""
 "X-Poedit-Country: HUNGARY\n"
 
 #. append the svn submenu action
-#: thunar-svn-plugin/tsp-provider.c:401 thunar-svn-plugin/tsp-provider.c:416
-#: thunar-svn-plugin/tsp-provider.c:451 thunar-svn-plugin/tsp-provider.c:459
+#: thunar-svn-plugin/tsp-provider.c:416 thunar-svn-plugin/tsp-provider.c:431
+#: thunar-svn-plugin/tsp-provider.c:466 thunar-svn-plugin/tsp-provider.c:474
 msgid "SVN"
 msgstr "SVN"
 
-#: thunar-svn-plugin/tsp-provider.c:406
+#: thunar-svn-plugin/tsp-provider.c:421
 msgid "SVN _Import"
 msgstr "SVN _Import"
 
-#: thunar-svn-plugin/tsp-provider.c:464
+#: thunar-svn-plugin/tsp-provider.c:479
 msgid "SVN _Checkout"
 msgstr "SVN _Checkout"
 
-#: thunar-svn-plugin/tsp-provider.c:471
+#: thunar-svn-plugin/tsp-provider.c:486
 #, fuzzy
 msgid "SVN _Export"
 msgstr "SVN _Import"
 
-#: thunar-svn-plugin/tsp-svn-action.c:247 tsp-svn-helper/main.c:191
+#: thunar-svn-plugin/tsp-svn-action.c:250 tsp-svn-helper/main.c:191
 #: tsp-svn-helper/tsh-add.c:94
 msgid "Add"
 msgstr "Hozzáad"
 
-#: thunar-svn-plugin/tsp-svn-action.c:255
+#: thunar-svn-plugin/tsp-svn-action.c:258
 msgid "Blame"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:273 tsp-svn-helper/main.c:199
+#: thunar-svn-plugin/tsp-svn-action.c:276 tsp-svn-helper/main.c:199
 msgid "Cleanup"
 msgstr "Tisztít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:281 tsp-svn-helper/main.c:203
+#: thunar-svn-plugin/tsp-svn-action.c:284 tsp-svn-helper/main.c:203
 #: tsp-svn-helper/tsh-commit.c:101
 msgid "Commit"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:289 tsp-svn-helper/main.c:207
+#: thunar-svn-plugin/tsp-svn-action.c:292 tsp-svn-helper/main.c:207
 #: tsp-svn-helper/tsh-copy.c:127
 #, fuzzy
 msgid "Copy"
 msgstr "Kész"
 
-#: thunar-svn-plugin/tsp-svn-action.c:297 tsp-svn-helper/main.c:211
+#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:211
 #: tsp-svn-helper/tsh-delete.c:101
 msgid "Delete"
 msgstr "Töröl"
 
-#: thunar-svn-plugin/tsp-svn-action.c:305
+#: thunar-svn-plugin/tsp-svn-action.c:308
 msgid "Diff"
 msgstr "Különbség"
 
-#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:215
+#: thunar-svn-plugin/tsp-svn-action.c:316 tsp-svn-helper/main.c:215
 #: tsp-svn-helper/tsh-export.c:95 tsp-svn-helper/tsh-export.c:113
 msgid "Export"
 msgstr "Export"
 
-#: thunar-svn-plugin/tsp-svn-action.c:326
+#: thunar-svn-plugin/tsp-svn-action.c:329
 msgid "Info"
 msgstr "Adatok"
 
-#: thunar-svn-plugin/tsp-svn-action.c:339 tsp-svn-helper/main.c:223
+#: thunar-svn-plugin/tsp-svn-action.c:342 tsp-svn-helper/main.c:223
 #: tsp-svn-helper/tsh-lock.c:118 tsp-svn-helper/tsh-lock-dialog.c:71
 msgid "Lock"
 msgstr "Zár"
 
-#: thunar-svn-plugin/tsp-svn-action.c:347
+#: thunar-svn-plugin/tsp-svn-action.c:350
 msgid "Log"
 msgstr "Napló"
 
-#: thunar-svn-plugin/tsp-svn-action.c:365 tsp-svn-helper/main.c:227
+#: thunar-svn-plugin/tsp-svn-action.c:368 tsp-svn-helper/main.c:227
 #: tsp-svn-helper/tsh-move.c:126
 msgid "Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:379
+#: thunar-svn-plugin/tsp-svn-action.c:382
 msgid "Edit Properties"
 msgstr "Tulajdonságok szerkesztése"
 
-#: thunar-svn-plugin/tsp-svn-action.c:388 tsp-svn-helper/main.c:231
+#: thunar-svn-plugin/tsp-svn-action.c:391 tsp-svn-helper/main.c:231
 #: tsp-svn-helper/tsh-common.c:455 tsp-svn-helper/tsh-resolved.c:94
 #, fuzzy
 msgid "Resolved"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:396
+#: thunar-svn-plugin/tsp-svn-action.c:399
 msgid "Resolve"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:404 tsp-svn-helper/main.c:235
+#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:235
 #: tsp-svn-helper/tsh-revert.c:99
 msgid "Revert"
 msgstr "Visszaállít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:412 tsp-svn-helper/main.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:415 tsp-svn-helper/main.c:239
 #: tsp-svn-helper/tsh-status-dialog.c:159
 msgid "Status"
 msgstr "Állapot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:420
+#: thunar-svn-plugin/tsp-svn-action.c:423
 msgid "Switch"
 msgstr "Vált"
 
-#: thunar-svn-plugin/tsp-svn-action.c:428 tsp-svn-helper/main.c:243
+#: thunar-svn-plugin/tsp-svn-action.c:431 tsp-svn-helper/main.c:243
 #: tsp-svn-helper/tsh-unlock.c:99
 msgid "Unlock"
 msgstr "Felold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:436 tsp-svn-helper/main.c:247
+#: thunar-svn-plugin/tsp-svn-action.c:439 tsp-svn-helper/main.c:247
 #: tsp-svn-helper/tsh-status.c:95 tsp-svn-helper/tsh-update.c:101
 msgid "Update"
 msgstr "Frissít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:449
+#: thunar-svn-plugin/tsp-svn-action.c:452
 #, c-format
 msgid "Action %s is unimplemented"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:114
+msgid "URL:"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:120
+#: thunar-svn-plugin/tsp-svn-property-page.c:133
+#: thunar-svn-plugin/tsp-svn-property-page.c:145
+#: thunar-svn-plugin/tsp-svn-property-page.c:162
+#: thunar-svn-plugin/tsp-svn-property-page.c:174
+#: thunar-svn-plugin/tsp-svn-property-page.c:187
+#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:515
+#: tsp-svn-helper/tsh-common.c:532 tsp-svn-helper/tsh-common.c:608
+msgid "Unknown"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:127
+#, fuzzy
+msgid "Revision:"
+msgstr "E verziónál: %li"
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:139
+#, fuzzy
+msgid "Repository:"
+msgstr "Megold"
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:156
+msgid "Modified revision:"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:168
+msgid "Modified date:"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:181
+msgid "Author:"
 msgstr ""
 
 #. Translators: the first string is a path and the second string
@@ -435,11 +472,6 @@ msgstr ""
 #, fuzzy
 msgid "Unlock failed"
 msgstr "Felold"
-
-#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:515
-#: tsp-svn-helper/tsh-common.c:532 tsp-svn-helper/tsh-common.c:608
-msgid "Unknown"
-msgstr ""
 
 #. N_("None"),
 #. N_("Unversioned"),

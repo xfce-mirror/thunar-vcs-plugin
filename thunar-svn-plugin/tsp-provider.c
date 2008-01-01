@@ -33,6 +33,7 @@
 
 #include <thunar-svn-plugin/tsp-svn-backend.h>
 #include <thunar-svn-plugin/tsp-svn-action.h>
+#include <thunar-svn-plugin/tsp-svn-property-page.h>
 #include <thunar-svn-plugin/tsp-provider.h>
 
 /* use g_access() on win32 */
@@ -49,6 +50,7 @@
 
 static void   tsp_provider_class_init           (TspProviderClass         *klass);
 static void   tsp_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
+static void   tsp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
 static void   tsp_provider_init                 (TspProvider              *tsp_provider);
 static void   tsp_provider_finalize             (GObject                  *object);
 static GList *tsp_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
@@ -57,6 +59,8 @@ static GList *tsp_provider_get_file_actions     (ThunarxMenuProvider      *menu_
 static GList *tsp_provider_get_folder_actions   (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
                                                  ThunarxFileInfo          *folder);
+static GList *tsp_provider_get_pages            (ThunarxPropertyPageProvider *menu_provider,
+                                                 GList                    *files);
 
 
 
@@ -87,8 +91,8 @@ struct _TspProvider
 
 
 
-static GQuark tsp_action_files_quark;
-static GQuark tsp_action_provider_quark;
+//static GQuark tsp_action_files_quark;
+//static GQuark tsp_action_provider_quark;
 
 
 
@@ -96,7 +100,9 @@ THUNARX_DEFINE_TYPE_WITH_CODE (TspProvider,
                                tsp_provider,
                                G_TYPE_OBJECT,
                                THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_MENU_PROVIDER,
-                                                            tsp_provider_menu_provider_init));
+                                                            tsp_provider_menu_provider_init)
+                               THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_PROPERTY_PAGE_PROVIDER,
+                                                            tsp_provider_property_page_provider_init));
 
 
 static void
@@ -105,8 +111,8 @@ tsp_provider_class_init (TspProviderClass *klass)
   GObjectClass *gobject_class;
 
   /* determine the "tsp-action-files", "tsp-action-folder" and "tsp-action-provider" quarks */
-  tsp_action_files_quark = g_quark_from_string ("tsp-action-files");
-  tsp_action_provider_quark = g_quark_from_string ("tsp-action-provider");
+  //tsp_action_files_quark = g_quark_from_string ("tsp-action-files");
+  //tsp_action_provider_quark = g_quark_from_string ("tsp-action-provider");
 
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = tsp_provider_finalize;
@@ -119,6 +125,14 @@ tsp_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
 {
   iface->get_file_actions = tsp_provider_get_file_actions;
   iface->get_folder_actions = tsp_provider_get_folder_actions;
+}
+
+
+
+static void
+tsp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface)
+{
+  iface->get_pages = tsp_provider_get_pages;
 }
 
 
@@ -388,6 +402,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 					{
 						file_is_not_vc = TRUE;
 					}
+          break;
 				}
 			}
       if(!iter)
@@ -477,5 +492,61 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 	}
 
   return actions;
+}
+
+
+
+static GList*
+tsp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
+{
+  GList *pages = NULL;
+  if (g_list_length (files) == 1)
+  {
+    gboolean            is_vc = FALSE;
+    ThunarVfsPathScheme scheme;
+    ThunarVfsInfo      *info;
+
+    /* check if the file is a local file */
+    info = thunarx_file_info_get_vfs_info (files->data);
+    scheme = thunar_vfs_path_get_scheme (info->path);
+    thunar_vfs_info_unref (info);
+
+    /* unable to handle non-local files */
+    if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+      return NULL;
+
+		if (thunarx_file_info_is_directory (files->data))
+    {
+      /* Lets see if we are dealing with a working copy */
+      if (tsp_is_working_copy (files->data))
+      {
+        is_vc = TRUE;
+      }
+    }
+    else
+    {
+      GSList             *file_status;
+      GSList             *iter;
+
+      file_status = tsp_get_parent_status (files->data);
+
+			for (iter = file_status; iter; iter = iter->next)
+			{
+				if (!tsp_compare_path (iter->data, files->data))
+				{
+					if (((TspSvnFileStatus*)iter->data)->flag.version_control)
+					{
+						is_vc = TRUE;
+					}
+          break;
+				}
+			}
+    }
+    if(is_vc)
+    {
+      pages = g_list_prepend (pages, tsp_svn_property_page_new (files->data));
+    }
+  }
+  return pages;
 }
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-12-31 16:43+0100\n"
+"POT-Creation-Date: 2008-01-01 22:42+0100\n"
 "PO-Revision-Date: 2007-10-26 15:12+0500\n"
 "Last-Translator: Muhammad Ali Makki <makk.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -19,121 +19,158 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #. append the svn submenu action
-#: thunar-svn-plugin/tsp-provider.c:401 thunar-svn-plugin/tsp-provider.c:416
-#: thunar-svn-plugin/tsp-provider.c:451 thunar-svn-plugin/tsp-provider.c:459
+#: thunar-svn-plugin/tsp-provider.c:416 thunar-svn-plugin/tsp-provider.c:431
+#: thunar-svn-plugin/tsp-provider.c:466 thunar-svn-plugin/tsp-provider.c:474
 msgid "SVN"
 msgstr "SVN"
 
-#: thunar-svn-plugin/tsp-provider.c:406
+#: thunar-svn-plugin/tsp-provider.c:421
 msgid "SVN _Import"
 msgstr "SVN _درآمد"
 
-#: thunar-svn-plugin/tsp-provider.c:464
+#: thunar-svn-plugin/tsp-provider.c:479
 msgid "SVN _Checkout"
 msgstr "SVN _چیک آؤٹ"
 
-#: thunar-svn-plugin/tsp-provider.c:471
+#: thunar-svn-plugin/tsp-provider.c:486
 #, fuzzy
 msgid "SVN _Export"
 msgstr "SVN _درآمد"
 
-#: thunar-svn-plugin/tsp-svn-action.c:247 tsp-svn-helper/main.c:191
+#: thunar-svn-plugin/tsp-svn-action.c:250 tsp-svn-helper/main.c:191
 #: tsp-svn-helper/tsh-add.c:94
 msgid "Add"
 msgstr "شامل کریں"
 
-#: thunar-svn-plugin/tsp-svn-action.c:255
+#: thunar-svn-plugin/tsp-svn-action.c:258
 msgid "Blame"
 msgstr "Blame"
 
-#: thunar-svn-plugin/tsp-svn-action.c:273 tsp-svn-helper/main.c:199
+#: thunar-svn-plugin/tsp-svn-action.c:276 tsp-svn-helper/main.c:199
 msgid "Cleanup"
 msgstr "صاف کریں"
 
-#: thunar-svn-plugin/tsp-svn-action.c:281 tsp-svn-helper/main.c:203
+#: thunar-svn-plugin/tsp-svn-action.c:284 tsp-svn-helper/main.c:203
 #: tsp-svn-helper/tsh-commit.c:101
 msgid "Commit"
 msgstr "تبصرہ"
 
-#: thunar-svn-plugin/tsp-svn-action.c:289 tsp-svn-helper/main.c:207
+#: thunar-svn-plugin/tsp-svn-action.c:292 tsp-svn-helper/main.c:207
 #: tsp-svn-helper/tsh-copy.c:127
 #, fuzzy
 msgid "Copy"
 msgstr "مکمل"
 
-#: thunar-svn-plugin/tsp-svn-action.c:297 tsp-svn-helper/main.c:211
+#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:211
 #: tsp-svn-helper/tsh-delete.c:101
 msgid "Delete"
 msgstr "حذف"
 
-#: thunar-svn-plugin/tsp-svn-action.c:305
+#: thunar-svn-plugin/tsp-svn-action.c:308
 msgid "Diff"
 msgstr "فرق"
 
-#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:215
+#: thunar-svn-plugin/tsp-svn-action.c:316 tsp-svn-helper/main.c:215
 #: tsp-svn-helper/tsh-export.c:95 tsp-svn-helper/tsh-export.c:113
 msgid "Export"
 msgstr "برآمد"
 
-#: thunar-svn-plugin/tsp-svn-action.c:326
+#: thunar-svn-plugin/tsp-svn-action.c:329
 msgid "Info"
 msgstr "معلومات"
 
-#: thunar-svn-plugin/tsp-svn-action.c:339 tsp-svn-helper/main.c:223
+#: thunar-svn-plugin/tsp-svn-action.c:342 tsp-svn-helper/main.c:223
 #: tsp-svn-helper/tsh-lock.c:118 tsp-svn-helper/tsh-lock-dialog.c:71
 msgid "Lock"
 msgstr "قفل"
 
-#: thunar-svn-plugin/tsp-svn-action.c:347
+#: thunar-svn-plugin/tsp-svn-action.c:350
 msgid "Log"
 msgstr "Log"
 
-#: thunar-svn-plugin/tsp-svn-action.c:365 tsp-svn-helper/main.c:227
+#: thunar-svn-plugin/tsp-svn-action.c:368 tsp-svn-helper/main.c:227
 #: tsp-svn-helper/tsh-move.c:126
 msgid "Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:379
+#: thunar-svn-plugin/tsp-svn-action.c:382
 msgid "Edit Properties"
 msgstr "خصوصیات مدون کریں"
 
-#: thunar-svn-plugin/tsp-svn-action.c:388 tsp-svn-helper/main.c:231
+#: thunar-svn-plugin/tsp-svn-action.c:391 tsp-svn-helper/main.c:231
 #: tsp-svn-helper/tsh-common.c:455 tsp-svn-helper/tsh-resolved.c:94
 #, fuzzy
 msgid "Resolved"
 msgstr "Resolve"
 
-#: thunar-svn-plugin/tsp-svn-action.c:396
+#: thunar-svn-plugin/tsp-svn-action.c:399
 msgid "Resolve"
 msgstr "Resolve"
 
-#: thunar-svn-plugin/tsp-svn-action.c:404 tsp-svn-helper/main.c:235
+#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:235
 #: tsp-svn-helper/tsh-revert.c:99
 msgid "Revert"
 msgstr "واپس"
 
-#: thunar-svn-plugin/tsp-svn-action.c:412 tsp-svn-helper/main.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:415 tsp-svn-helper/main.c:239
 #: tsp-svn-helper/tsh-status-dialog.c:159
 msgid "Status"
 msgstr "حالت"
 
-#: thunar-svn-plugin/tsp-svn-action.c:420
+#: thunar-svn-plugin/tsp-svn-action.c:423
 msgid "Switch"
 msgstr "تبدیل"
 
-#: thunar-svn-plugin/tsp-svn-action.c:428 tsp-svn-helper/main.c:243
+#: thunar-svn-plugin/tsp-svn-action.c:431 tsp-svn-helper/main.c:243
 #: tsp-svn-helper/tsh-unlock.c:99
 msgid "Unlock"
 msgstr "غیر مقفل"
 
-#: thunar-svn-plugin/tsp-svn-action.c:436 tsp-svn-helper/main.c:247
+#: thunar-svn-plugin/tsp-svn-action.c:439 tsp-svn-helper/main.c:247
 #: tsp-svn-helper/tsh-status.c:95 tsp-svn-helper/tsh-update.c:101
 msgid "Update"
 msgstr "تجدید"
 
-#: thunar-svn-plugin/tsp-svn-action.c:449
+#: thunar-svn-plugin/tsp-svn-action.c:452
 #, c-format
 msgid "Action %s is unimplemented"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:114
+msgid "URL:"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:120
+#: thunar-svn-plugin/tsp-svn-property-page.c:133
+#: thunar-svn-plugin/tsp-svn-property-page.c:145
+#: thunar-svn-plugin/tsp-svn-property-page.c:162
+#: thunar-svn-plugin/tsp-svn-property-page.c:174
+#: thunar-svn-plugin/tsp-svn-property-page.c:187
+#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:515
+#: tsp-svn-helper/tsh-common.c:532 tsp-svn-helper/tsh-common.c:608
+msgid "Unknown"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:127
+#, fuzzy
+msgid "Revision:"
+msgstr "ورژن: %li"
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:139
+#, fuzzy
+msgid "Repository:"
+msgstr "Resolve"
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:156
+msgid "Modified revision:"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:168
+msgid "Modified date:"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-property-page.c:181
+msgid "Author:"
 msgstr ""
 
 #. Translators: the first string is a path and the second string
@@ -440,11 +477,6 @@ msgstr ""
 #, fuzzy
 msgid "Unlock failed"
 msgstr "غیر مقفل"
-
-#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:515
-#: tsp-svn-helper/tsh-common.c:532 tsp-svn-helper/tsh-common.c:608
-msgid "Unknown"
-msgstr ""
 
 #. N_("None"),
 #. N_("Unversioned"),

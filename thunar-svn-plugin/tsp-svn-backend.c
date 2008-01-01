@@ -191,3 +191,77 @@ tsp_svn_backend_get_status (const gchar *uri)
 	return list;
 }
 
+
+
+static svn_error_t *
+info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t *pool)
+{
+  TspSvnInfo **pinfo = baton;
+  g_return_val_if_fail (*pinfo == NULL, SVN_NO_ERROR);
+
+  *pinfo = g_new (TspSvnInfo, 1);
+  (*pinfo)->path = g_strdup (path);
+  (*pinfo)->url = g_strdup (info->URL);
+  (*pinfo)->revision = info->rev;
+  (*pinfo)->repository = g_strdup (info->repos_root_URL);
+  (*pinfo)->modrev = info->last_changed_rev;
+  apr_ctime (((*pinfo)->moddate = g_new0(gchar, APR_CTIME_LEN)), info->last_changed_date);
+  (*pinfo)->modauthor = g_strdup (info->last_changed_author);
+
+  return SVN_NO_ERROR;
+}
+
+
+
+TspSvnInfo *
+tsp_svn_backend_get_info (const gchar *uri)
+{
+	svn_error_t *err;
+	svn_opt_revision_t revision = {svn_opt_revision_unspecified};
+  TspSvnInfo *info = NULL;
+
+	/* strip the "file://" part of the uri */
+	if (strncmp (uri, "file://", 7) == 0)
+	{
+		uri += 7;
+	}
+
+	gchar *path = g_strdup (uri);
+
+	/* remove trailing '/' cause svn_client_status2 can't handle that */
+	if (path[strlen (path) - 1] == '/')
+	{
+		path[strlen (path) - 1] = '\0';
+	}
+
+	/* check for the path is a working copy */
+	err = svn_client_info (path, &revision, &revision, info_callback, &info, FALSE, ctx, pool);
+
+	g_free (path);
+
+	if (err)
+	{
+    tsp_svn_info_free (info);
+		return NULL;
+	}
+
+	return info;
+}
+
+
+
+void
+tsp_svn_info_free (TspSvnInfo *info)
+{
+  if (!info)
+    return;
+
+  g_free (info->path);
+  g_free (info->url);
+  g_free (info->repository);
+  g_free (info->moddate);
+  g_free (info->modauthor);
+
+  g_free (info);
+}
+
