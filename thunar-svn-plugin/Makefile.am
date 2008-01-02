@@ -14,11 +14,11 @@ extensions_LTLIBRARIES =						\
 
 thunar_svn_plugin_la_SOURCES =						\
 	tsp-svn-backend.c						\
-	tso-svn-backend.h						\
+	tsp-svn-backend.h						\
 	tsp-svn-action.c						\
-	tso-svn-action.h						\
+	tsp-svn-action.h						\
 	tsp-svn-property-page.c						\
-	tso-svn-property-page.h						\
+	tsp-svn-property-page.h						\
 	tsp-provider.c							\
 	tsp-provider.h							\
 	thunar-svn-plugin.c
