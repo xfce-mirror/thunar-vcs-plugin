@@ -26,10 +26,12 @@
 #include <dirent.h>
 
 //#include "tsh-file-chooser-entry.h"
-#include "gtkfilechooserentry.h"
+//#include "gtkfilechooserentry.h"
 //#include <gtk/gtkfilechooserentry.h>
 
 #include "tsh-transfer-dialog.h"
+
+static void browse_callback(GtkButton *, TshTransferDialog *);
 
 struct _TshTransferDialog
 {
@@ -37,6 +39,7 @@ struct _TshTransferDialog
 
 	GtkWidget *repository;
 	GtkWidget *path;
+  GtkWidget *filechooser;
 };
 
 struct _TshTransferDialogClass
@@ -56,6 +59,9 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 {
 	GtkWidget *table;
 	GtkWidget *label;
+  GtkWidget *box;
+  GtkWidget *button;
+  GtkWidget *image;
 
 	table = gtk_table_new (2, 2, FALSE);
 
@@ -69,9 +75,29 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	                  GTK_FILL,
 	                  0, 0);
 
-	dialog->repository = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
+  box = gtk_hbox_new(FALSE, 0);
+	dialog->repository = gtk_entry_new();
+  dialog->filechooser = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
+                                                    GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
+                                                    GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
+                                                    GTK_STOCK_OK, GTK_RESPONSE_OK,
+                                                    NULL);
+  //tsh_file_chooser_entry_new ();
 	//dialog->repository = _gtk_file_chooser_entry_new(FALSE);
-	gtk_table_attach (GTK_TABLE (table), dialog->repository,
+
+  image = gtk_image_new_from_stock (GTK_STOCK_OPEN,
+                                    GTK_ICON_SIZE_MENU);
+  button = gtk_button_new();
+  gtk_button_set_image(GTK_BUTTON(button), image);
+  g_signal_connect(button, "clicked", G_CALLBACK(browse_callback), dialog);
+
+  gtk_box_pack_start(GTK_BOX(box), dialog->repository, TRUE, TRUE, 0);
+  gtk_box_pack_start(GTK_BOX(box), button, FALSE, TRUE, 0);
+
+	gtk_widget_show(dialog->repository);
+	gtk_widget_show(button);
+  
+  gtk_table_attach (GTK_TABLE (table), box,
 	                  1, 2, 0, 1,
 	                  GTK_EXPAND | GTK_FILL,
 	                  GTK_FILL,
@@ -79,7 +105,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->repository);
 	gtk_widget_show(label);
-	gtk_widget_show(dialog->repository);
+	gtk_widget_show(box);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog->repository), FALSE);
 
 	label = gtk_label_new_with_mnemonic (_("_Directory:"));
@@ -184,7 +210,7 @@ gchar* tsh_transfer_dialog_get_reposetory (TshTransferDialog *dialog)
 {
   g_return_val_if_fail (TSH_IS_TRANSFER_DIALOG (dialog), NULL);
 
-	return gtk_file_chooser_entry_get_uri(GTK_FILE_CHOOSER_ENTRY(dialog->repository));
+	return g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog->repository)));
 }
 
 gchar* tsh_transfer_dialog_get_directory (TshTransferDialog *dialog)
@@ -192,5 +218,18 @@ gchar* tsh_transfer_dialog_get_directory (TshTransferDialog *dialog)
   g_return_val_if_fail (TSH_IS_TRANSFER_DIALOG (dialog), NULL);
 
 	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->path));
+}
+
+static void
+browse_callback(GtkButton *button, TshTransferDialog *dialog)
+{
+  gtk_widget_show(dialog->filechooser);
+  if(gtk_dialog_run(GTK_DIALOG(dialog->filechooser)) == GTK_RESPONSE_OK)
+  {
+    gchar *url = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->filechooser));
+    gtk_entry_set_text(GTK_ENTRY(dialog->repository), url);
+    g_free(url);
+  }
+  gtk_widget_hide(dialog->filechooser);
 }
 

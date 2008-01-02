@@ -46,15 +46,6 @@ tsp_svn_helper_SOURCES =						\
 	tsh-unlock.c							\
 	tsh-update.h							\
 	tsh-update.c							\
-	gtkfilechooserentry.h						\
-	gtkfilechooserentry.c						\
-	gtkfilechooserutils.h						\
-	gtkfilechooserutils.c						\
-	gtkfilechooser.h						\
-	gtkfilechooser.c						\
-	gtkfilechooserdefault.c						\
-	gtkprivate.h							\
-	gtkintl.h							\
 	tsh-dialog-common.h						\
 	tsh-dialog-common.c						\
 	tsh-login-dialog.h						\
@@ -73,6 +64,16 @@ tsp_svn_helper_SOURCES =						\
 	tsh-log-message-dialog.c					\
 	tsh-transfer-dialog.h						\
 	tsh-transfer-dialog.c
+#	gtkfilechooserentry.h						\
+#	gtkfilechooserentry.c						\
+#	gtkfilechooserutils.h						\
+#	gtkfilechooserutils.c						\
+#	gtkfilechooser.h						\
+#	gtkfilechooser.c						\
+#	gtkfilechooserdefault.c						\
+#	gtkprivate.h							\
+#	gtkintl.h							\
+#
 
 tsp_svn_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tsp-svn-helper\"

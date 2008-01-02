@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-01 22:42+0100\n"
+"POT-Creation-Date: 2008-01-02 21:52+0100\n"
 "PO-Revision-Date: 2007-11-09 15:08-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
@@ -600,20 +600,20 @@ msgstr ""
 msgid "Check Repository"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:65
+#: tsp-svn-helper/tsh-transfer-dialog.c:71
 msgid "_Repository:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:72
-#: tsp-svn-helper/tsh-transfer-dialog.c:92
+#: tsp-svn-helper/tsh-transfer-dialog.c:80
+#: tsp-svn-helper/tsh-transfer-dialog.c:118
 msgid "Select a folder"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:85
+#: tsp-svn-helper/tsh-transfer-dialog.c:111
 msgid "_Directory:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:104
+#: tsp-svn-helper/tsh-transfer-dialog.c:130
 msgid "Transfer"
 msgstr ""
 
