@@ -1,0 +1,175 @@
+# Czech translations for xfce package.
+# Copyright (C) 2007 THE xfce'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the xfce package.
+# Michal Várady <miko.vaji@gmail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: xfce 4-i18-goodies\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-06-28 00:37+0200\n"
+"PO-Revision-Date: 2007-12-15 22:05+0100\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
+"Language-Team: Czech\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: thunar-svn-plugin/tsp-provider.c:402
+msgid "SVN _Import"
+msgstr "_Import SVN"
+
+#. append the svn submenu action
+#: thunar-svn-plugin/tsp-provider.c:409
+#: thunar-svn-plugin/tsp-provider.c:444
+#: thunar-svn-plugin/tsp-provider.c:452
+msgid "SVN"
+msgstr "SVN"
+
+#: thunar-svn-plugin/tsp-provider.c:457
+msgid "SVN _Checkout"
+msgstr "_Načtení z SVN (checkout)"
+
+#: thunar-svn-plugin/tsp-svn-action.c:225
+msgid "Add"
+msgstr "Přidat"
+
+#: thunar-svn-plugin/tsp-svn-action.c:232
+msgid "Blame"
+msgstr "Nahlásit"
+
+#: thunar-svn-plugin/tsp-svn-action.c:247
+msgid "Cleanup"
+msgstr "Vyčistit"
+
+#: thunar-svn-plugin/tsp-svn-action.c:254
+msgid "Commit"
+msgstr "Zapsat"
+
+#: thunar-svn-plugin/tsp-svn-action.c:265
+msgid "Delete"
+msgstr "Smazat"
+
+#: thunar-svn-plugin/tsp-svn-action.c:272
+msgid "Diff"
+msgstr "Rozdíl"
+
+#: thunar-svn-plugin/tsp-svn-action.c:279
+msgid "Export"
+msgstr "Export"
+
+#: thunar-svn-plugin/tsp-svn-action.c:290
+msgid "Info"
+msgstr "Informace"
+
+#: thunar-svn-plugin/tsp-svn-action.c:301
+msgid "Lock"
+msgstr "Zámek"
+
+#: thunar-svn-plugin/tsp-svn-action.c:308
+msgid "Log"
+msgstr "Protokol"
+
+#: thunar-svn-plugin/tsp-svn-action.c:333
+msgid "Edit Properties"
+msgstr "Upravit vlastnosti"
+
+#: thunar-svn-plugin/tsp-svn-action.c:342
+msgid "Resolve"
+msgstr "Vyřešit"
+
+#: thunar-svn-plugin/tsp-svn-action.c:349
+msgid "Revert"
+msgstr "Obnovit předchozí"
+
+#: thunar-svn-plugin/tsp-svn-action.c:356
+msgid "Status"
+msgstr "Stav"
+
+#: thunar-svn-plugin/tsp-svn-action.c:363
+msgid "Switch"
+msgstr "Přepnout"
+
+#: thunar-svn-plugin/tsp-svn-action.c:370
+msgid "Unlock"
+msgstr "Odemknout"
+
+#: thunar-svn-plugin/tsp-svn-action.c:377
+#: tsp-svn-helper/tsh-update.c:105
+msgid "Update"
+msgstr "Aktualizovat"
+
+#: tsp-svn-helper/main.c:56
+msgid "Print version information"
+msgstr "Vytisknout informaci o verzi"
+
+#: tsp-svn-helper/main.c:63
+msgid "Execute checkout action"
+msgstr "Spustit akci checkout (stáhnout)"
+
+#: tsp-svn-helper/main.c:69
+msgid "Execute update action"
+msgstr "Spustit akci update (aktualizovat)"
+
+#: tsp-svn-helper/tsh-checkout.c:87
+msgid "Checkout"
+msgstr "Checkout (stáhnout)"
+
+#: tsp-svn-helper/tsh-common.c:448
+msgid "Deleted"
+msgstr "Smazáno"
+
+#: tsp-svn-helper/tsh-common.c:453
+msgid "Added"
+msgstr "Přidáno"
+
+#: tsp-svn-helper/tsh-common.c:458
+msgid "Updated"
+msgstr "Aktualizováno"
+
+#: tsp-svn-helper/tsh-common.c:462
+#, c-format
+msgid "At revision: %li"
+msgstr "Na revizi: %li"
+
+#: tsp-svn-helper/tsh-common.c:464
+msgid "Completed"
+msgstr "Dokončeno"
+
+#: tsp-svn-helper/tsh-common.c:469
+msgid "External"
+msgstr "Externí"
+
+#: tsp-svn-helper/tsh-login-dialog.c:65
+msgid "_Username:"
+msgstr "_Uživatelské jméno:"
+
+#: tsp-svn-helper/tsh-login-dialog.c:81
+msgid "_Password:"
+msgstr "_Heslo"
+
+#: tsp-svn-helper/tsh-login-dialog.c:98
+msgid "Remember"
+msgstr "Zapamatovat si"
+
+#: tsp-svn-helper/tsh-login-dialog.c:106
+msgid "Login"
+msgstr "Přihlásit se"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:75
+msgid "Action"
+msgstr "Akce"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:81
+msgid "Path"
+msgstr "Cesta"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:87
+msgid "Mime type"
+msgstr "Typ MIME"
+
+#: tsp-svn-helper/tsh-notify-dialog.c:102
+msgid "Notification"
+msgstr "Oznámení"
+
