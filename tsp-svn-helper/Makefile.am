@@ -63,17 +63,17 @@ tsp_svn_helper_SOURCES =						\
 	tsh-log-message-dialog.h					\
 	tsh-log-message-dialog.c					\
 	tsh-transfer-dialog.h						\
-	tsh-transfer-dialog.c
-#	gtkfilechooserentry.h						\
-#	gtkfilechooserentry.c						\
-#	gtkfilechooserutils.h						\
-#	gtkfilechooserutils.c						\
-#	gtkfilechooser.h						\
-#	gtkfilechooser.c						\
-#	gtkfilechooserdefault.c						\
-#	gtkprivate.h							\
-#	gtkintl.h							\
-#
+	tsh-transfer-dialog.c						\
+	gtkfilechooserentry.h						\
+	gtkfilechooserentry.c						\
+	gtkfilechooserutils.h						\
+	gtkfilechooserutils.c						\
+	gtkfilechooser.h						\
+	gtkfilechooser.c						\
+	gtkfilechooserdefault.c						\
+	gtkfilechooserprivate.h						\
+	gtkprivate.h							\
+	gtkintl.h
 
 tsp_svn_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tsp-svn-helper\"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-02 21:52+0100\n"
+"POT-Creation-Date: 2008-01-02 23:32+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -566,20 +566,21 @@ msgstr ""
 msgid "Check Repository"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:71
+#: tsp-svn-helper/tsh-transfer-dialog.c:79
 msgid "_Repository:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:80
-#: tsp-svn-helper/tsh-transfer-dialog.c:118
+#: tsp-svn-helper/tsh-transfer-dialog.c:89
+#: tsp-svn-helper/tsh-transfer-dialog.c:95
+#: tsp-svn-helper/tsh-transfer-dialog.c:141
 msgid "Select a folder"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:111
+#: tsp-svn-helper/tsh-transfer-dialog.c:134
 msgid "_Directory:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:130
+#: tsp-svn-helper/tsh-transfer-dialog.c:153
 msgid "Transfer"
 msgstr ""
 

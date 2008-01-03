@@ -25,13 +25,17 @@
 #include <gtk/gtk.h>
 #include <dirent.h>
 
+#ifndef USE_FILE_ENTRY_REPLACEMENT
 //#include "tsh-file-chooser-entry.h"
-//#include "gtkfilechooserentry.h"
+#include "gtkfilechooserentry.h"
 //#include <gtk/gtkfilechooserentry.h>
+#endif
 
 #include "tsh-transfer-dialog.h"
 
+#ifdef USE_FILE_ENTRY_REPLACEMENT
 static void browse_callback(GtkButton *, TshTransferDialog *);
+#endif
 
 struct _TshTransferDialog
 {
@@ -39,7 +43,9 @@ struct _TshTransferDialog
 
 	GtkWidget *repository;
 	GtkWidget *path;
+#ifdef USE_FILE_ENTRY_REPLACEMENT
   GtkWidget *filechooser;
+#endif
 };
 
 struct _TshTransferDialogClass
@@ -59,9 +65,11 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 {
 	GtkWidget *table;
 	GtkWidget *label;
+#ifdef USE_FILE_ENTRY_REPLACEMENT
   GtkWidget *box;
   GtkWidget *button;
   GtkWidget *image;
+#endif
 
 	table = gtk_table_new (2, 2, FALSE);
 
@@ -75,6 +83,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	                  GTK_FILL,
 	                  0, 0);
 
+#ifdef USE_FILE_ENTRY_REPLACEMENT
   box = gtk_hbox_new(FALSE, 0);
 	dialog->repository = gtk_entry_new();
   dialog->filechooser = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
@@ -82,9 +91,12 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
                                                     GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
                                                     GTK_STOCK_OK, GTK_RESPONSE_OK,
                                                     NULL);
-  //tsh_file_chooser_entry_new ();
+#else
+	dialog->repository = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
 	//dialog->repository = _gtk_file_chooser_entry_new(FALSE);
+#endif
 
+#ifdef USE_FILE_ENTRY_REPLACEMENT
   image = gtk_image_new_from_stock (GTK_STOCK_OPEN,
                                     GTK_ICON_SIZE_MENU);
   button = gtk_button_new();
@@ -102,11 +114,22 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	                  GTK_EXPAND | GTK_FILL,
 	                  GTK_FILL,
 	                  0, 0);
+#else
+  gtk_table_attach (GTK_TABLE (table), dialog->repository,
+	                  1, 2, 0, 1,
+	                  GTK_EXPAND | GTK_FILL,
+	                  GTK_FILL,
+	                  0, 0);
+#endif
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->repository);
 	gtk_widget_show(label);
+#ifdef USE_FILE_ENTRY_REPLACEMENT
 	gtk_widget_show(box);
+#else
+	gtk_widget_show(dialog->repository);
 	gtk_file_chooser_set_local_only (GTK_FILE_CHOOSER (dialog->repository), FALSE);
+#endif
 
 	label = gtk_label_new_with_mnemonic (_("_Directory:"));
 	gtk_table_attach (GTK_TABLE (table), label,
@@ -169,7 +192,9 @@ tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
       absolute = g_build_filename(currdir, (repo_dir[0] == '.' && (!repo_dir[1] || repo_dir[1] == G_DIR_SEPARATOR || repo_dir[1] == '/'))?&repo_dir[1]:repo_dir, NULL);
       g_free (currdir);
     }
+#ifndef USE_FILE_ENTRY_REPLACEMENT
 		gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog->repository), absolute?absolute:repo_dir);
+#endif
     g_free (absolute);
   }
 
@@ -210,7 +235,11 @@ gchar* tsh_transfer_dialog_get_reposetory (TshTransferDialog *dialog)
 {
   g_return_val_if_fail (TSH_IS_TRANSFER_DIALOG (dialog), NULL);
 
+#ifdef USE_FILE_ENTRY_REPLACEMENT
 	return g_strdup(gtk_entry_get_text(GTK_ENTRY(dialog->repository)));
+#else
+	return gtk_file_chooser_entry_get_uri(GTK_FILE_CHOOSER_ENTRY(dialog->repository));
+#endif
 }
 
 gchar* tsh_transfer_dialog_get_directory (TshTransferDialog *dialog)
@@ -220,6 +249,7 @@ gchar* tsh_transfer_dialog_get_directory (TshTransferDialog *dialog)
 	return gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->path));
 }
 
+#ifdef USE_FILE_ENTRY_REPLACEMENT
 static void
 browse_callback(GtkButton *button, TshTransferDialog *dialog)
 {
@@ -232,4 +262,5 @@ browse_callback(GtkButton *button, TshTransferDialog *dialog)
   }
   gtk_widget_hide(dialog->filechooser);
 }
+#endif
 
