@@ -51,6 +51,8 @@ void       tsh_status_dialog_done     (TshStatusDialog *dialog);
 gboolean   tsh_status_dialog_get_show_unmodified  (TshStatusDialog *dialog);
 gboolean   tsh_status_dialog_get_show_unversioned (TshStatusDialog *dialog);
 gboolean   tsh_status_dialog_get_check_reposetory (TshStatusDialog *dialog);
+gboolean   tsh_status_dialog_get_show_ignore      (TshStatusDialog *dialog);
+gboolean   tsh_status_dialog_get_hide_externals   (TshStatusDialog *dialog);
 
 G_END_DECLS;
 

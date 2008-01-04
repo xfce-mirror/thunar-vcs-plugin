@@ -22,6 +22,8 @@ tsp-svn-helper/tsh-file-dialog.c
 tsp-svn-helper/tsh-import.c
 tsp-svn-helper/tsh-lock.c
 tsp-svn-helper/tsh-lock-dialog.c
+tsp-svn-helper/tsh-log.c
+tsp-svn-helper/tsh-log-dialog.c
 tsp-svn-helper/tsh-log-message-dialog.c
 tsp-svn-helper/tsh-login-dialog.c
 tsp-svn-helper/tsh-move.c

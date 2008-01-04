@@ -33,6 +33,7 @@
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 #include <subversion-1/svn_fs.h>
+#include <subversion-1/svn_time.h>
 
 #include "tsh-dialog-common.h"
 #include "tsh-login-dialog.h"
@@ -41,6 +42,7 @@
 #include "tsh-notify-dialog.h"
 #include "tsh-status-dialog.h"
 #include "tsh-log-message-dialog.h"
+#include "tsh-log-dialog.h"
 
 #include "tsh-common.h"
 
@@ -647,6 +649,25 @@ tsh_log_msg_func2(const char **log_msg, const char **tmp_file, const apr_array_h
   gdk_threads_enter();
 	gtk_widget_hide (dialog);
   gdk_threads_leave();
+
+	return SVN_NO_ERROR;
+}
+
+svn_error_t *
+tsh_log_func (void *baton, apr_hash_t *changed_paths, svn_revnum_t revision, const char *author, const char *date, const char *message, apr_pool_t *pool)
+{
+  apr_time_t date_val;
+  gchar *date_str;
+	TshLogDialog *dialog = TSH_LOG_DIALOG (baton);
+
+  svn_time_from_cstring(&date_val, date, pool);
+  apr_ctime((date_str = g_new0(gchar, APR_CTIME_LEN)), date_val);
+
+  gdk_threads_enter();
+  tsh_log_dialog_add(dialog, NULL, revision, author, date_str, message);
+  gdk_threads_leave();
+
+  g_free(date_str);
 
 	return SVN_NO_ERROR;
 }

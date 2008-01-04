@@ -90,6 +90,8 @@ void tsp_action_delete (GtkMenuItem *item, TspSvnAction *action);
 
 void tsp_action_lock (GtkMenuItem *item, TspSvnAction *action);
 
+void tsp_action_log (GtkMenuItem *item, TspSvnAction *action);
+
 void tsp_action_move (GtkMenuItem *item, TspSvnAction *action);
 
 void tsp_action_resolved (GtkMenuItem *item, TspSvnAction *action);
@@ -348,7 +350,7 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
 	{
 		subitem = gtk_menu_item_new_with_label (_("Log"));
-		g_signal_connect_after (subitem, "activate", G_CALLBACK (tsp_action_unimplemented), "Log");
+		g_signal_connect_object (subitem, "activate", G_CALLBACK (tsp_action_log), action, G_CONNECT_AFTER);
 		gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 		gtk_widget_show(subitem);
 	}
@@ -1068,6 +1070,80 @@ void tsp_action_lock (GtkMenuItem *item, TspSvnAction *action)
 
 	argv[0] = g_strdup (TSP_SVN_HELPER);
 	argv[1] = g_strdup ("--lock");
+	argv[size + 2] = NULL;
+
+	for (i = 0; i < size; i++)
+	{
+		/* determine the URI for the file info */
+		uri = thunarx_file_info_get_uri (iter->data);
+		if (G_LIKELY (uri != NULL))
+    {
+      /* determine the local filename for the URI */
+      filename = g_filename_from_uri (uri, NULL, NULL);
+      if (G_LIKELY (filename != NULL))
+			{
+				file = filename;
+				/* strip the "file://" part of the uri */
+				if (strncmp (file, "file://", 7) == 0)
+				{
+					file += 7;
+				}
+
+				file = g_strdup (file);
+
+				/* remove trailing '/' cause svn can't handle that */
+				if (file[strlen (file) - 1] == '/')
+				{
+					file[strlen (file) - 1] = '\0';
+				}
+
+				argv[i+2] = file;
+
+				/* release the filename */
+				g_free (filename);
+			}
+
+      /* release the URI */
+      g_free (uri);
+    }
+
+		iter = g_list_next (iter);
+	}
+
+	if (!gdk_spawn_on_screen (screen, NULL, argv, NULL, 0, NULL, NULL, &pid, &error))
+	{
+		GtkWidget *dialog = gtk_message_dialog_new (GTK_WINDOW (action->window), GTK_DIALOG_DESTROY_WITH_PARENT|GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, "Could not spawn \'" TSP_SVN_HELPER "\'");
+		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
+		gtk_dialog_run (GTK_DIALOG (dialog));
+		gtk_widget_destroy (dialog);
+		g_error_free (error);
+	}
+
+	g_strfreev (argv);
+}
+
+
+
+void tsp_action_log (GtkMenuItem *item, TspSvnAction *action)
+{
+	guint size, i;
+	gchar **argv;
+	GList *iter;
+	gchar *uri;
+	gchar *filename;
+	gchar *file;
+	gint pid;
+	GError *error = NULL;
+	GdkScreen *screen = gtk_window_get_screen (GTK_WINDOW (action->window));
+
+	iter = action->files;
+
+	size = g_list_length (iter);
+
+	argv = g_new (gchar *, size + 3);
+
+	argv[0] = g_strdup (TSP_SVN_HELPER);
+	argv[1] = g_strdup ("--log");
 	argv[size + 2] = NULL;
 
 	for (i = 0; i < size; i++)

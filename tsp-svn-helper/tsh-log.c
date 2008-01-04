@@ -31,43 +31,61 @@
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
-#include "tsh-status-dialog.h"
+#include "tsh-log-dialog.h"
 
-#include "tsh-status.h"
+#include "tsh-log.h"
 
 struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
-	TshStatusDialog *dialog;
+	TshLogDialog *dialog;
 	gchar **files;
+	apr_array_header_t *paths;
 };
 
-static gpointer status_thread (gpointer user_data)
+static gpointer log_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
-  svn_opt_revision_t revision;
+  svn_opt_revision_t revision, start, end;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *pool = args->pool;
-	TshStatusDialog *dialog = args->dialog;
+	TshLogDialog *dialog = args->dialog;
 	gchar **files = args->files;
-  gboolean get_all;
-  gboolean update;
-  gboolean no_ignore;
-  gboolean ignore_externals;
+	apr_array_header_t *paths = args->paths;
+	gint size, i;
 
-  gdk_threads_enter();
-  get_all = tsh_status_dialog_get_show_unmodified(dialog);
-  update = tsh_status_dialog_get_check_reposetory(dialog);
-  no_ignore = tsh_status_dialog_get_show_ignore(dialog);
-  ignore_externals = tsh_status_dialog_get_hide_externals(dialog);
-  gdk_threads_leave();
+  if(!args->paths)
+  {
+    size = files?g_strv_length(files):0;
 
-  revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_status2(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, TRUE, get_all, update, no_ignore, ignore_externals, ctx, pool)))
+    if(size)
+    {
+      paths = apr_array_make (pool, size, sizeof (const char *));
+      
+      for (i = 0; i < size; i++)
+      {
+        APR_ARRAY_PUSH (paths, const char *) = files[i];
+      }
+    }
+    else
+    {
+      paths = apr_array_make (pool, 1, sizeof (const char *));
+      
+      APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
+    }
+
+    args->paths = paths;
+  }
+
+  revision.kind = svn_opt_revision_unspecified;
+  start.kind = svn_opt_revision_head;
+  end.kind = svn_opt_revision_number;
+  end.value.number = 0;
+	if ((err = svn_client_log3(paths, &revision, &start, &end, 0, FALSE, FALSE, tsh_log_func, dialog, ctx, pool)))
 	{
 		gdk_threads_enter();
-		tsh_status_dialog_done (dialog);
+		tsh_log_dialog_done (dialog);
 		gdk_threads_leave();
 
 		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
@@ -76,27 +94,27 @@ static gpointer status_thread (gpointer user_data)
 	}
 
 	gdk_threads_enter();
-	tsh_status_dialog_done (dialog);
+	tsh_log_dialog_done (dialog);
 	gdk_threads_leave();
 	
 	return GINT_TO_POINTER (TRUE);
 }
 
-static void create_status_thread(TshStatusDialog *dialog, struct thread_args *args)
+static void create_log_thread(TshLogDialog *dialog, struct thread_args *args)
 {
-	GThread *thread = g_thread_create (status_thread, args, TRUE, NULL);
+	GThread *thread = g_thread_create (log_thread, args, TRUE, NULL);
   if (thread)
     tsh_replace_thread (thread);
   else
-    tsh_status_dialog_done (dialog);
+    tsh_log_dialog_done (dialog);
 }
 
-GThread *tsh_status (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
+GThread *tsh_log (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
 
-	dialog = tsh_status_dialog_new (NULL, NULL, 0);
+	dialog = tsh_log_dialog_new (NULL, NULL, 0);
   g_signal_connect(dialog, "cancel-clicked", tsh_cancel, NULL);
 	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
@@ -106,11 +124,12 @@ GThread *tsh_status (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   args = g_malloc (sizeof (struct thread_args));
 	args->ctx = ctx;
 	args->pool = pool;
-	args->dialog = TSH_STATUS_DIALOG (dialog);
+	args->dialog = TSH_LOG_DIALOG (dialog);
 	args->files = files;
+  args->paths = NULL;
 
-  g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_status_thread), args);
+  g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_log_thread), args);
 
-	return g_thread_create (status_thread, args, TRUE, NULL);
+	return g_thread_create (log_thread, args, TRUE, NULL);
 }
 

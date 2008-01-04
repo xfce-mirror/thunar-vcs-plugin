@@ -41,6 +41,7 @@
 #include "tsh-export.h"
 #include "tsh-import.h"
 #include "tsh-lock.h"
+#include "tsh-log.h"
 #include "tsh-move.h"
 #include "tsh-resolved.h"
 #include "tsh-revert.h"
@@ -76,6 +77,7 @@ int main (int argc, char *argv[])
 	gboolean export = FALSE;
 	gboolean import = FALSE;
 	gboolean lock = FALSE;
+	gboolean log = FALSE;
 	gboolean move = FALSE;
   gboolean resolved = FALSE;
   gboolean revert = FALSE;
@@ -143,6 +145,12 @@ int main (int argc, char *argv[])
 	GOptionEntry lock_options_table[] =
 	{
 		{ "lock", '\0', 0, G_OPTION_ARG_NONE, &lock, N_("Execute lock action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry log_options_table[] =
+	{
+		{ "log", '\0', 0, G_OPTION_ARG_NONE, &log, N_("Execute log action"), NULL },
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
@@ -222,6 +230,10 @@ int main (int argc, char *argv[])
 
 	option_group = g_option_group_new("lock", N_("Lock Related Opions:"), N_("Lock"), NULL, NULL);
 	g_option_group_add_entries(option_group, lock_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("log", N_("Log Related Opions:"), N_("Log"), NULL, NULL);
+	g_option_group_add_entries(option_group, log_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("move", N_("Move Related Opions:"), N_("Move"), NULL, NULL);
@@ -338,6 +350,11 @@ int main (int argc, char *argv[])
 	if(lock)
 	{
 		thread = tsh_lock(files, svn_ctx, pool);
+	}
+
+	if(log)
+	{
+		thread = tsh_log(files, svn_ctx, pool);
 	}
 
 	if(move)

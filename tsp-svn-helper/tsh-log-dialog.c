@@ -27,32 +27,30 @@
 #include <subversion-1/svn_client.h>
 
 #include "tsh-common.h"
-#include "tsh-status-dialog.h"
+#include "tsh-log-dialog.h"
 
+static void selection_changed (GtkTreeView*, gpointer);
 static void cancel_clicked (GtkButton*, gpointer);
 static void refresh_clicked (GtkButton*, gpointer);
 
-struct _TshStatusDialog
+struct _TshLogDialog
 {
 	GtkDialog dialog;
 
 	GtkWidget *tree_view;
-  GtkWidget *get_all;
-  GtkWidget *unversioned;
-  GtkWidget *update;
-	GtkWidget *no_ignore;
-	GtkWidget *ignore_externals;
+  GtkWidget *text_view;
+  GtkWidget *file_view;
 	GtkWidget *close;
 	GtkWidget *cancel;
 	GtkWidget *refresh;
 };
 
-struct _TshStatusDialogClass
+struct _TshLogDialogClass
 {
 	GtkDialogClass dialog_class;
 };
 
-G_DEFINE_TYPE (TshStatusDialog, tsh_status_dialog, GTK_TYPE_DIALOG)
+G_DEFINE_TYPE (TshLogDialog, tsh_log_dialog, GTK_TYPE_DIALOG)
 
 enum {
   SIGNAL_CANCEL = 0,
@@ -63,7 +61,7 @@ enum {
 static guint signals[SIGNAL_COUNT];
 
 static void
-tsh_status_dialog_class_init (TshStatusDialogClass *klass)
+tsh_log_dialog_class_init (TshLogDialogClass *klass)
 {
   signals[SIGNAL_CANCEL] = g_signal_new("cancel-clicked",
     G_OBJECT_CLASS_TYPE (klass),
@@ -80,28 +78,28 @@ tsh_status_dialog_class_init (TshStatusDialogClass *klass)
 }
 
 enum {
-	COLUMN_PATH = 0,
-  COLUMN_TEXT_STAT,
-  COLUMN_PROP_STAT,
-  COLUMN_REPO_TEXT_STAT,
-  COLUMN_REPO_PROP_STAT,
+	COLUMN_REVISION = 0,
+  COLUMN_AUTHOR,
+  COLUMN_DATE,
+  COLUMN_MESSAGE,
+  COLUMN_FULL_MESSAGE,
 	COLUMN_COUNT
 };
 
 static void
-tsh_status_dialog_init (TshStatusDialog *dialog)
+tsh_log_dialog_init (TshLogDialog *dialog)
 {
 	GtkWidget *button;
 	GtkWidget *tree_view;
+	GtkWidget *text_view;
+	GtkWidget *file_view;
 	GtkWidget *scroll_window;
-	GtkWidget *get_all;
-	GtkWidget *unversioned;
-	GtkWidget *update;
-	GtkWidget *no_ignore;
-	GtkWidget *ignore_externals;
-  GtkWidget *table;
+  GtkWidget *pane;
+  GtkWidget *vpane;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
+
+  pane = gtk_vpaned_new ();
 
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -110,71 +108,77 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, _("Path"),
+	                                             -1, _("Revision"),
 	                                             renderer, "text",
-	                                             COLUMN_PATH, NULL);
+	                                             COLUMN_REVISION, NULL);
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("State"),
+	                                             -1, ("Author"),
 	                                             renderer, "text",
-	                                             COLUMN_TEXT_STAT, NULL);
+	                                             COLUMN_AUTHOR, NULL);
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("Prop state"),
+	                                             -1, _("Date"),
 	                                             renderer, "text",
-	                                             COLUMN_PROP_STAT, NULL);
+	                                             COLUMN_DATE, NULL);
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("Repo state"),
+	                                             -1, _("Message"),
 	                                             renderer, "text",
-	                                             COLUMN_REPO_TEXT_STAT, NULL);
-	
-	renderer = gtk_cell_renderer_text_new ();
-	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("Repo prop state"),
-	                                             renderer, "text",
-	                                             COLUMN_REPO_PROP_STAT, NULL);
+	                                             COLUMN_MESSAGE, NULL);
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
+	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_LONG, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
 	g_object_unref (model);
 
+  g_signal_connect (G_OBJECT (tree_view), "cursor-changed", G_CALLBACK (selection_changed), dialog); 
+
 	gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+  gtk_paned_pack1 (GTK_PANED(pane), scroll_window, TRUE, FALSE);
 	gtk_widget_show (tree_view);
 	gtk_widget_show (scroll_window);
 
-  table = gtk_table_new (3, 2, FALSE);
+  scroll_window = gtk_scrolled_window_new (NULL, NULL);
+  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
 
-	dialog->get_all = get_all = gtk_check_button_new_with_label (_("Show Unmodified Files"));
-  gtk_table_attach (GTK_TABLE (table), get_all, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
-	gtk_widget_show (get_all);
+  vpane = gtk_vpaned_new ();
 
-	dialog->unversioned = unversioned = gtk_check_button_new_with_label (_("Show Unversioned Files"));
-  gtk_table_attach (GTK_TABLE (table), unversioned, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
-	gtk_widget_show (unversioned);
+  dialog->text_view = text_view = gtk_text_view_new ();
+  gtk_text_view_set_editable (GTK_TEXT_VIEW (text_view), FALSE);
 
-	dialog->update = update = gtk_check_button_new_with_label (_("Check Repository"));
-  gtk_table_attach (GTK_TABLE (table), update, 0, 1, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
-	gtk_widget_show (update);
+	gtk_container_add (GTK_CONTAINER (scroll_window), text_view);
+  gtk_paned_pack1 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
+	gtk_widget_show (text_view);
+	gtk_widget_show (scroll_window);
 
-	dialog->no_ignore = no_ignore = gtk_check_button_new_with_label (_("Show Ignored Files"));
-  gtk_table_attach (GTK_TABLE (table), no_ignore, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
-	gtk_widget_show (no_ignore);
+	scroll_window = gtk_scrolled_window_new (NULL, NULL);
+	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
-	dialog->ignore_externals = ignore_externals = gtk_check_button_new_with_label (_("Hide Externals"));
-  gtk_table_attach (GTK_TABLE (table), ignore_externals, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
-	gtk_widget_show (ignore_externals);
+	dialog->file_view = file_view = gtk_tree_view_new ();
 
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), table, FALSE, FALSE, 0);
-  gtk_widget_show (table);
+	//model = GTK_TREE_MODEL (gtk_list_store_new (0));
 
-	gtk_window_set_title (GTK_WINDOW (dialog), _("Status"));
+	//gtk_tree_view_set_model (GTK_TREE_VIEW (file_view), model);
+
+	//g_object_unref (model);
+
+	gtk_container_add (GTK_CONTAINER (scroll_window), file_view);
+  gtk_paned_pack2 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
+	//gtk_widget_show (file_view);
+	//gtk_widget_show (scroll_window);
+
+  gtk_paned_pack2 (GTK_PANED(pane), vpane, TRUE, FALSE);
+  gtk_widget_show (vpane);
+
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), pane, TRUE, TRUE, 0);
+  gtk_widget_show (pane);
+
+	gtk_window_set_title (GTK_WINDOW (dialog), _("Log"));
 
 	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
 	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
@@ -193,9 +197,9 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 }
 
 GtkWidget*
-tsh_status_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
+tsh_log_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
 {
-	TshStatusDialog *dialog = g_object_new (TSH_TYPE_STATUS_DIALOG, NULL);
+	TshLogDialog *dialog = g_object_new (TSH_TYPE_LOG_DIALOG, NULL);
 
 	if(title)
 		gtk_window_set_title (GTK_WINDOW(dialog), title);
@@ -216,78 +220,73 @@ tsh_status_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
 }
 
 void       
-tsh_status_dialog_add (TshStatusDialog *dialog, const char *file, const char *text, const char *prop, const char *repo_text, const char *repo_prop)
+tsh_log_dialog_add (TshLogDialog *dialog, GSList *files, glong revision, const char *author, const char *date, const char *message)
 {
 	GtkTreeModel *model;
 	GtkTreeIter iter;
+  gchar **lines;
+  gchar **first_line;
 
-  g_return_if_fail (TSH_IS_STATUS_DIALOG (dialog));
+  g_return_if_fail (TSH_IS_LOG_DIALOG (dialog));
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
+  lines = g_strsplit_set (message, "\r\n", -1);
+  first_line = lines;
+  while (*first_line)
+  {
+    if (g_strstrip (*first_line)[0])
+      break;
+    first_line++;
+  }
+  if (!first_line)
+    first_line = lines;
+
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-	                    COLUMN_PATH, file,
-	                    COLUMN_TEXT_STAT, text,
-	                    COLUMN_PROP_STAT, prop,
-	                    COLUMN_REPO_TEXT_STAT, repo_text,
-	                    COLUMN_REPO_PROP_STAT, repo_prop,
+	                    COLUMN_REVISION, revision,
+	                    COLUMN_AUTHOR, author,
+	                    COLUMN_DATE, date,
+	                    COLUMN_MESSAGE, *first_line,
+	                    COLUMN_FULL_MESSAGE, message,
 	                    -1);
+
+  g_strfreev (lines);
 }
 
 void
-tsh_status_dialog_done (TshStatusDialog *dialog)
+tsh_log_dialog_done (TshLogDialog *dialog)
 {
-  g_return_if_fail (TSH_IS_STATUS_DIALOG (dialog));
+  g_return_if_fail (TSH_IS_LOG_DIALOG (dialog));
 
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->refresh);
 }
 
-gboolean
-tsh_status_dialog_get_show_unmodified (TshStatusDialog *dialog)
+static void
+selection_changed (GtkTreeView *tree_view, gpointer user_data)
 {
-  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), FALSE);
+	GtkTreeIter iter;
+  GtkTreeSelection *selection;
+  GtkTreeModel *model;
+  gchar *message = NULL;
 
-  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->get_all));
-}
+	TshLogDialog *dialog = TSH_LOG_DIALOG (user_data);
 
-gboolean
-tsh_status_dialog_get_show_unversioned (TshStatusDialog *dialog)
-{
-  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), FALSE);
-
-  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->unversioned));
-}
-
-gboolean
-tsh_status_dialog_get_check_reposetory (TshStatusDialog *dialog)
-{
-  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), FALSE);
-
-  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->update));
-}
-
-gboolean
-tsh_status_dialog_get_show_ignore (TshStatusDialog *dialog)
-{
-  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), FALSE);
-
-  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->no_ignore));
-}
-
-gboolean
-tsh_status_dialog_get_hide_externals (TshStatusDialog *dialog)
-{
-  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), FALSE);
-
-  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->ignore_externals));
+  selection = gtk_tree_view_get_selection (tree_view);
+  
+  if (gtk_tree_selection_get_selected (selection, &model, &iter))
+  {
+    gtk_tree_model_get (model, &iter, COLUMN_FULL_MESSAGE, &message, -1);
+    gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), message, -1);
+    g_free (message);
+  }
 }
 
 static void
 cancel_clicked (GtkButton *button, gpointer user_data)
 {
-	TshStatusDialog *dialog = TSH_STATUS_DIALOG (user_data);
+	TshLogDialog *dialog = TSH_LOG_DIALOG (user_data);
 
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->refresh);
@@ -299,7 +298,7 @@ static void
 refresh_clicked (GtkButton *button, gpointer user_data)
 {
 	GtkTreeModel *model;
-	TshStatusDialog *dialog = TSH_STATUS_DIALOG (user_data);
+	TshLogDialog *dialog = TSH_LOG_DIALOG (user_data);
 
 	gtk_widget_hide (dialog->refresh);
 	gtk_widget_show (dialog->cancel);
