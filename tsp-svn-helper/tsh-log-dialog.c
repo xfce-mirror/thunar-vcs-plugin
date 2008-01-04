@@ -83,7 +83,14 @@ enum {
   COLUMN_DATE,
   COLUMN_MESSAGE,
   COLUMN_FULL_MESSAGE,
+  COLUMN_FILE_LIST,
 	COLUMN_COUNT
+};
+
+enum {
+	FILE_COLUMN_ACTION = 0,
+  FILE_COLUMN_FILE,
+	FILE_COLUMN_COUNT
 };
 
 static void
@@ -114,7 +121,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("Author"),
+	                                             -1, _("Author"),
 	                                             renderer, "text",
 	                                             COLUMN_AUTHOR, NULL);
 	
@@ -130,7 +137,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	                                             renderer, "text",
 	                                             COLUMN_MESSAGE, NULL);
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_LONG, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
+	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_LONG, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
@@ -149,6 +156,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
   vpane = gtk_vpaned_new ();
 
   dialog->text_view = text_view = gtk_text_view_new ();
+  gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (text_view), GTK_WRAP_WORD_CHAR);
   gtk_text_view_set_editable (GTK_TEXT_VIEW (text_view), FALSE);
 
 	gtk_container_add (GTK_CONTAINER (scroll_window), text_view);
@@ -161,16 +169,28 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 
 	dialog->file_view = file_view = gtk_tree_view_new ();
 
-	//model = GTK_TREE_MODEL (gtk_list_store_new (0));
+	renderer = gtk_cell_renderer_text_new ();
+	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (file_view),
+	                                             -1, _("Action"),
+	                                             renderer, "text",
+	                                             FILE_COLUMN_ACTION, NULL);
+	
+	renderer = gtk_cell_renderer_text_new ();
+	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (file_view),
+	                                             -1, _("File"),
+	                                             renderer, "text",
+	                                             FILE_COLUMN_FILE, NULL);
 
-	//gtk_tree_view_set_model (GTK_TREE_VIEW (file_view), model);
+	model = GTK_TREE_MODEL (gtk_list_store_new (FILE_COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING));
 
-	//g_object_unref (model);
+	gtk_tree_view_set_model (GTK_TREE_VIEW (file_view), model);
+
+	g_object_unref (model);
 
 	gtk_container_add (GTK_CONTAINER (scroll_window), file_view);
   gtk_paned_pack2 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
-	//gtk_widget_show (file_view);
-	//gtk_widget_show (scroll_window);
+	gtk_widget_show (file_view);
+	gtk_widget_show (scroll_window);
 
   gtk_paned_pack2 (GTK_PANED(pane), vpane, TRUE, FALSE);
   gtk_widget_show (vpane);
@@ -249,6 +269,7 @@ tsh_log_dialog_add (TshLogDialog *dialog, GSList *files, glong revision, const c
 	                    COLUMN_DATE, date,
 	                    COLUMN_MESSAGE, *first_line,
 	                    COLUMN_FULL_MESSAGE, message,
+                      COLUMN_FILE_LIST, files,
 	                    -1);
 
   g_strfreev (lines);
@@ -269,7 +290,8 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
 	GtkTreeIter iter;
   GtkTreeSelection *selection;
   GtkTreeModel *model;
-  gchar *message = NULL;
+  gchar *message;
+  GSList *files;
 
 	TshLogDialog *dialog = TSH_LOG_DIALOG (user_data);
 
@@ -277,9 +299,22 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
   
   if (gtk_tree_selection_get_selected (selection, &model, &iter))
   {
-    gtk_tree_model_get (model, &iter, COLUMN_FULL_MESSAGE, &message, -1);
+    gtk_tree_model_get (model, &iter, COLUMN_FULL_MESSAGE, &message, COLUMN_FILE_LIST, &files, -1);
     gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), message, -1);
     g_free (message);
+
+    model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->file_view));
+    gtk_list_store_clear (GTK_LIST_STORE (model));
+
+    while(files)
+    {
+      gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+      gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                          FILE_COLUMN_ACTION, TSH_LOG_FILE (files->data)->action,
+                          FILE_COLUMN_FILE, TSH_LOG_FILE (files->data)->file,
+                          -1);
+      files = files->next;
+    }
   }
 }
 
@@ -304,7 +339,11 @@ refresh_clicked (GtkButton *button, gpointer user_data)
 	gtk_widget_show (dialog->cancel);
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
-	
+  gtk_list_store_clear (GTK_LIST_STORE (model));
+
+  gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), "", -1);
+
+	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->file_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
 
   g_signal_emit (dialog, signals[SIGNAL_REFRESH], 0);

@@ -555,6 +555,29 @@ tsh_status_to_string(enum svn_wc_status_kind status)
   return _(status_string);
 }
 
+static const gchar *
+tsh_char_to_string(gchar status)
+{
+  const gchar *status_string = _("Unknown");
+
+	switch(status)
+	{
+    case 'A':
+      status_string = _("Added");
+      break;
+    case 'D':
+      status_string = _("Deleted");
+      break;
+    case 'M':
+      status_string = _("Modified");
+      break;
+    case 'R':
+      status_string = _("Replaced");
+      break;
+	}
+  return status_string;
+}
+
 void
 tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
 {
@@ -657,14 +680,33 @@ svn_error_t *
 tsh_log_func (void *baton, apr_hash_t *changed_paths, svn_revnum_t revision, const char *author, const char *date, const char *message, apr_pool_t *pool)
 {
   apr_time_t date_val;
-  gchar *date_str;
+  gchar *date_str = NULL;
+  GSList *files = NULL;
 	TshLogDialog *dialog = TSH_LOG_DIALOG (baton);
 
-  svn_time_from_cstring(&date_val, date, pool);
-  apr_ctime((date_str = g_new0(gchar, APR_CTIME_LEN)), date_val);
+  if(date)
+  {
+    svn_time_from_cstring(&date_val, date, pool);
+    apr_ctime((date_str = g_new0(gchar, APR_CTIME_LEN)), date_val);
+  }
+
+  if(changed_paths)
+  {
+    apr_hash_index_t *hi;
+    for (hi = apr_hash_first(pool, changed_paths); hi; hi = apr_hash_next(hi)) {
+      const svn_log_changed_path_t *changed;
+      const char *path;
+      TshLogFile *file;
+      apr_hash_this(hi, (const void**)&path, NULL, (void**)&changed);
+      file = g_new(TshLogFile, 1);
+      file->action = tsh_char_to_string (changed->action);
+      file->file = g_strdup (path);
+      files = g_slist_prepend (files, file);
+    }
+  }
 
   gdk_threads_enter();
-  tsh_log_dialog_add(dialog, NULL, revision, author, date_str, message);
+  tsh_log_dialog_add(dialog, files, revision, author, date_str, message);
   gdk_threads_leave();
 
   g_free(date_str);

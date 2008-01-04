@@ -34,6 +34,14 @@ typedef struct _TshLogDialog      TshLogDialog;
 #define TSH_IS_LOG_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_LOG_DIALOG))
 #define TSH_LOG_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_LOG_DIALOG, TshLogDialogClass))
 
+typedef struct
+{
+  const gchar *action;
+  gchar *file;
+} TshLogFile;
+
+#define TSH_LOG_FILE(p) ((TshLogFile*)p)
+
 GType      tsh_log_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 
 GtkWidget* tsh_log_dialog_new      (const gchar *title,

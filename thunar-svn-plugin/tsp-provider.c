@@ -394,7 +394,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 			{
 				if (!tsp_compare_path (iter->data, lp->data))
 				{
-					if (((TspSvnFileStatus*)iter->data)->flag.version_control)
+					if (TSP_SVN_FILE_STATUS (iter->data)->flag.version_control)
 					{
 						file_is_vc = TRUE;
 					}
@@ -534,7 +534,7 @@ tsp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
 			{
 				if (!tsp_compare_path (iter->data, files->data))
 				{
-					if (((TspSvnFileStatus*)iter->data)->flag.version_control)
+					if (TSP_SVN_FILE_STATUS (iter->data)->flag.version_control)
 					{
 						is_vc = TRUE;
 					}

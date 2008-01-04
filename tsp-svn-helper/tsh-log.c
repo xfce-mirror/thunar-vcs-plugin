@@ -82,7 +82,7 @@ static gpointer log_thread (gpointer user_data)
   start.kind = svn_opt_revision_head;
   end.kind = svn_opt_revision_number;
   end.value.number = 0;
-	if ((err = svn_client_log3(paths, &revision, &start, &end, 0, FALSE, FALSE, tsh_log_func, dialog, ctx, pool)))
+	if ((err = svn_client_log3(paths, &revision, &start, &end, 0, TRUE, FALSE, tsh_log_func, dialog, ctx, pool)))
 	{
 		gdk_threads_enter();
 		tsh_log_dialog_done (dialog);

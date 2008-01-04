@@ -32,6 +32,8 @@ typedef struct
 	} flag;
 } TspSvnFileStatus;
 
+#define TSP_SVN_FILE_STATUS(p) ((TspSvnFileStatus*)p)
+
 typedef struct
 {
 	gchar *path;
@@ -42,6 +44,8 @@ typedef struct
   gchar *moddate;
   gchar *modauthor;
 } TspSvnInfo;
+
+#define TSP_SVN_INFO(p) ((TspSvnInfo*)p)
 
 gboolean tsp_svn_backend_init();
 

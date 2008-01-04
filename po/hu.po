@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar SVN plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-04 01:00+0100\n"
+"POT-Creation-Date: 2008-01-04 22:46+0100\n"
 "PO-Revision-Date: 2007-06-04 08:37+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -75,12 +75,12 @@ msgid "Info"
 msgstr "Adatok"
 
 #: thunar-svn-plugin/tsp-svn-action.c:344 tsp-svn-helper/main.c:231
-#: tsp-svn-helper/tsh-lock.c:118 tsp-svn-helper/tsh-lock-dialog.c:71
+#: tsp-svn-helper/tsh-lock.c:118 tsp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
 msgstr "Zár"
 
 #: thunar-svn-plugin/tsp-svn-action.c:352 tsp-svn-helper/main.c:235
-#: tsp-svn-helper/tsh-log-dialog.c:181
+#: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Napló"
 
@@ -143,7 +143,8 @@ msgstr ""
 #: thunar-svn-plugin/tsp-svn-property-page.c:174
 #: thunar-svn-plugin/tsp-svn-property-page.c:187
 #: tsp-svn-helper/tsh-common.c:478 tsp-svn-helper/tsh-common.c:517
-#: tsp-svn-helper/tsh-common.c:534 tsp-svn-helper/tsh-common.c:610
+#: tsp-svn-helper/tsh-common.c:534 tsp-svn-helper/tsh-common.c:561
+#: tsp-svn-helper/tsh-common.c:633
 msgid "Unknown"
 msgstr ""
 
@@ -403,18 +404,18 @@ msgstr ""
 
 #: tsp-svn-helper/tsh-common.c:451 tsp-svn-helper/tsh-common.c:460
 #: tsp-svn-helper/tsh-common.c:467 tsp-svn-helper/tsh-common.c:521
-#: tsp-svn-helper/tsh-common.c:616
+#: tsp-svn-helper/tsh-common.c:566 tsp-svn-helper/tsh-common.c:639
 msgid "Added"
 msgstr "Hozzáadva"
 
-#: tsp-svn-helper/tsh-common.c:452 tsp-svn-helper/tsh-common.c:625
+#: tsp-svn-helper/tsh-common.c:452 tsp-svn-helper/tsh-common.c:648
 #, fuzzy
 msgid "Copied"
 msgstr "Kész"
 
 #: tsp-svn-helper/tsh-common.c:453 tsp-svn-helper/tsh-common.c:459
 #: tsp-svn-helper/tsh-common.c:468 tsp-svn-helper/tsh-common.c:523
-#: tsp-svn-helper/tsh-common.c:618
+#: tsp-svn-helper/tsh-common.c:569 tsp-svn-helper/tsh-common.c:641
 msgid "Deleted"
 msgstr "Törölve"
 
@@ -451,12 +452,12 @@ msgid "External"
 msgstr "Külső"
 
 #: tsp-svn-helper/tsh-common.c:466 tsp-svn-helper/tsh-common.c:525
-#: tsp-svn-helper/tsh-common.c:621
+#: tsp-svn-helper/tsh-common.c:572 tsp-svn-helper/tsh-common.c:644
 msgid "Modified"
 msgstr ""
 
 #: tsp-svn-helper/tsh-common.c:469 tsp-svn-helper/tsh-common.c:524
-#: tsp-svn-helper/tsh-common.c:614
+#: tsp-svn-helper/tsh-common.c:575 tsp-svn-helper/tsh-common.c:637
 msgid "Replaced"
 msgstr ""
 
@@ -469,7 +470,7 @@ msgstr ""
 msgid "Locked"
 msgstr "Zár"
 
-#: tsp-svn-helper/tsh-common.c:473 tsp-svn-helper/tsh-common.c:627
+#: tsp-svn-helper/tsh-common.c:473 tsp-svn-helper/tsh-common.c:650
 #, fuzzy
 msgid "Unlocked"
 msgstr "Felold"
@@ -515,7 +516,7 @@ msgstr ""
 msgid "Incomplete"
 msgstr "Kész"
 
-#: tsp-svn-helper/tsh-common.c:574
+#: tsp-svn-helper/tsh-common.c:597
 #, c-format
 msgid "At revision: %li"
 msgstr "E verziónál: %li"
@@ -551,33 +552,45 @@ msgstr ""
 msgid "Import Message"
 msgstr "Töröl"
 
-#: tsp-svn-helper/tsh-log-dialog.c:111
+#: tsp-svn-helper/tsh-log-dialog.c:118
 #, fuzzy
 msgid "Revision"
 msgstr "E verziónál: %li"
 
-#: tsp-svn-helper/tsh-log-dialog.c:123
+#: tsp-svn-helper/tsh-log-dialog.c:124
+msgid "Author"
+msgstr ""
+
+#: tsp-svn-helper/tsh-log-dialog.c:130
 #, fuzzy
 msgid "Date"
 msgstr "Állapot"
 
-#: tsp-svn-helper/tsh-log-dialog.c:129
+#: tsp-svn-helper/tsh-log-dialog.c:136
 #, fuzzy
 msgid "Message"
 msgstr "Töröl"
 
-#: tsp-svn-helper/tsh-log-message-dialog.c:85
+#: tsp-svn-helper/tsh-log-dialog.c:174 tsp-svn-helper/tsh-notify-dialog.c:88
+msgid "Action"
+msgstr "Művelet"
+
+#: tsp-svn-helper/tsh-log-dialog.c:180
+msgid "File"
+msgstr ""
+
+#: tsp-svn-helper/tsh-log-message-dialog.c:86
 #, fuzzy
 msgid "State"
 msgstr "Állapot"
 
-#: tsp-svn-helper/tsh-log-message-dialog.c:91
+#: tsp-svn-helper/tsh-log-message-dialog.c:92
 #: tsp-svn-helper/tsh-notify-dialog.c:94
 #: tsp-svn-helper/tsh-status-dialog.c:113
 msgid "Path"
 msgstr "Útvonal"
 
-#: tsp-svn-helper/tsh-log-message-dialog.c:109
+#: tsp-svn-helper/tsh-log-message-dialog.c:110
 msgid "Log Message"
 msgstr ""
 
@@ -596,10 +609,6 @@ msgstr "Bejelentkezés"
 #: tsp-svn-helper/tsh-move.c:106
 msgid "Move To"
 msgstr ""
-
-#: tsp-svn-helper/tsh-notify-dialog.c:88
-msgid "Action"
-msgstr "Művelet"
 
 #: tsp-svn-helper/tsh-notify-dialog.c:100
 msgid "Mime type"
