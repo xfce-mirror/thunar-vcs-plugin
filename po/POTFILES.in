@@ -28,6 +28,8 @@ tsp-svn-helper/tsh-log-message-dialog.c
 tsp-svn-helper/tsh-login-dialog.c
 tsp-svn-helper/tsh-move.c
 tsp-svn-helper/tsh-notify-dialog.c
+tsp-svn-helper/tsh-properties.c
+tsp-svn-helper/tsh-properties-dialog.c
 tsp-svn-helper/tsh-resolved.c
 tsp-svn-helper/tsh-revert.c
 tsp-svn-helper/tsh-status.c

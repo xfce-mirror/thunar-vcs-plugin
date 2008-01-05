@@ -43,6 +43,7 @@
 #include "tsh-lock.h"
 #include "tsh-log.h"
 #include "tsh-move.h"
+#include "tsh-properties.h"
 #include "tsh-resolved.h"
 #include "tsh-revert.h"
 #include "tsh-status.h"
@@ -79,6 +80,7 @@ int main (int argc, char *argv[])
 	gboolean lock = FALSE;
 	gboolean log = FALSE;
 	gboolean move = FALSE;
+  gboolean properties = FALSE;
   gboolean resolved = FALSE;
   gboolean revert = FALSE;
   gboolean status = FALSE;
@@ -160,6 +162,12 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry properties_options_table[] =
+	{
+		{ "properties", '\0', 0, G_OPTION_ARG_NONE, &properties, N_("Execute properties action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry resolved_options_table[] =
 	{
 		{ "resolved", '\0', 0, G_OPTION_ARG_NONE, &resolved, N_("Execute resolved action"), NULL },
@@ -238,6 +246,10 @@ int main (int argc, char *argv[])
 
 	option_group = g_option_group_new("move", N_("Move Related Opions:"), N_("Move"), NULL, NULL);
 	g_option_group_add_entries(option_group, move_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("properties", N_("Properties Related Opions:"), N_("Properties"), NULL, NULL);
+	g_option_group_add_entries(option_group, properties_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("resolved", N_("Resolved Related Opions:"), N_("Resolved"), NULL, NULL);
@@ -360,6 +372,11 @@ int main (int argc, char *argv[])
 	if(move)
 	{
 		thread = tsh_move(files, svn_ctx, pool);
+	}
+
+	if(properties)
+	{
+		thread = tsh_properties(files, svn_ctx, pool);
 	}
 
 	if(resolved)

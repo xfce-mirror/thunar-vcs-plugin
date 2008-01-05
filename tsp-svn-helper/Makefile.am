@@ -34,8 +34,12 @@ tsp_svn_helper_SOURCES =						\
 	tsh-import.c							\
 	tsh-lock.h							\
 	tsh-lock.c							\
+	tsh-log.h							\
+	tsh-log.c							\
 	tsh-move.h							\
 	tsh-move.c							\
+	tsh-properties.h						\
+	tsh-properties.c						\
 	tsh-resolved.h							\
 	tsh-resolved.c							\
 	tsh-revert.h							\
@@ -60,12 +64,12 @@ tsp_svn_helper_SOURCES =						\
 	tsh-status-dialog.c						\
 	tsh-lock-dialog.h						\
 	tsh-lock-dialog.c						\
-	tsh-log.h							\
-	tsh-log.c							\
 	tsh-log-dialog.h						\
 	tsh-log-dialog.c						\
 	tsh-log-message-dialog.h					\
 	tsh-log-message-dialog.c					\
+	tsh-properties-dialog.h						\
+	tsh-properties-dialog.c						\
 	tsh-transfer-dialog.h						\
 	tsh-transfer-dialog.c						\
 	gtkfilechooserentry.h						\

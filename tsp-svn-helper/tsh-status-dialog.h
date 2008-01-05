@@ -48,6 +48,7 @@ void       tsh_status_dialog_add      (TshStatusDialog *dialog,
                                        const char *repo_prop);
 void       tsh_status_dialog_done     (TshStatusDialog *dialog);
 
+gboolean   tsh_status_dialog_get_show_recursive   (TshStatusDialog *dialog);
 gboolean   tsh_status_dialog_get_show_unmodified  (TshStatusDialog *dialog);
 gboolean   tsh_status_dialog_get_show_unversioned (TshStatusDialog *dialog);
 gboolean   tsh_status_dialog_get_check_reposetory (TshStatusDialog *dialog);

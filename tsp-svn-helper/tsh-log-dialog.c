@@ -200,13 +200,15 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Log"));
 
+  gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
+
 	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
 
 	dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
-	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
 	gtk_widget_hide (button);
 

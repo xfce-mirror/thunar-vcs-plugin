@@ -37,6 +37,7 @@ struct _TshStatusDialog
 	GtkDialog dialog;
 
 	GtkWidget *tree_view;
+  GtkWidget *recursive;
   GtkWidget *get_all;
   GtkWidget *unversioned;
   GtkWidget *update;
@@ -94,6 +95,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	GtkWidget *button;
 	GtkWidget *tree_view;
 	GtkWidget *scroll_window;
+	GtkWidget *recursive;
 	GtkWidget *get_all;
 	GtkWidget *unversioned;
 	GtkWidget *update;
@@ -151,17 +153,18 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 
   table = gtk_table_new (3, 2, FALSE);
 
+	dialog->recursive = recursive = gtk_check_button_new_with_label (_("Show Recusive"));
+  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (recursive), TRUE);
+  gtk_table_attach (GTK_TABLE (table), recursive, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_show (recursive);
+
 	dialog->get_all = get_all = gtk_check_button_new_with_label (_("Show Unmodified Files"));
-  gtk_table_attach (GTK_TABLE (table), get_all, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_table_attach (GTK_TABLE (table), get_all, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
 	gtk_widget_show (get_all);
 
 	dialog->unversioned = unversioned = gtk_check_button_new_with_label (_("Show Unversioned Files"));
-  gtk_table_attach (GTK_TABLE (table), unversioned, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_table_attach (GTK_TABLE (table), unversioned, 0, 1, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
 	gtk_widget_show (unversioned);
-
-	dialog->update = update = gtk_check_button_new_with_label (_("Check Repository"));
-  gtk_table_attach (GTK_TABLE (table), update, 0, 1, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
-	gtk_widget_show (update);
 
 	dialog->no_ignore = no_ignore = gtk_check_button_new_with_label (_("Show Ignored Files"));
   gtk_table_attach (GTK_TABLE (table), no_ignore, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
@@ -171,18 +174,24 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
   gtk_table_attach (GTK_TABLE (table), ignore_externals, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
 	gtk_widget_show (ignore_externals);
 
+	dialog->update = update = gtk_check_button_new_with_label (_("Check Repository"));
+  gtk_table_attach (GTK_TABLE (table), update, 1, 2, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_show (update);
+
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), table, FALSE, FALSE, 0);
   gtk_widget_show (table);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Status"));
 
+  gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
+
 	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
 
 	dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
-	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
 	gtk_widget_hide (button);
 
@@ -242,6 +251,14 @@ tsh_status_dialog_done (TshStatusDialog *dialog)
 
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->refresh);
+}
+
+gboolean
+tsh_status_dialog_get_show_recursive (TshStatusDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), FALSE);
+
+  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->recursive));
 }
 
 gboolean
