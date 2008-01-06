@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar SVN plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-06 01:40+0100\n"
+"POT-Creation-Date: 2008-01-06 18:03+0100\n"
 "PO-Revision-Date: 2007-06-04 08:37+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -366,7 +366,9 @@ msgstr ""
 msgid "Properties Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:251 tsp-svn-helper/tsh-properties-dialog.c:174
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: tsp-svn-helper/main.c:251 tsp-svn-helper/tsh-properties-dialog.c:217
 #, fuzzy
 msgid "Properties"
 msgstr "Tulajdonságok szerkesztése"
@@ -624,17 +626,18 @@ msgstr "Mime típus"
 msgid "Notification"
 msgstr ""
 
-#: tsp-svn-helper/tsh-properties-dialog.c:107
+#: tsp-svn-helper/tsh-properties-dialog.c:124
 msgid "Name"
 msgstr ""
 
-#: tsp-svn-helper/tsh-properties-dialog.c:113
+#: tsp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
 msgstr ""
 
-#: tsp-svn-helper/tsh-properties-dialog.c:164
-msgid "Set Property Recursive"
-msgstr ""
+#: tsp-svn-helper/tsh-properties-dialog.c:181
+#, fuzzy
+msgid "Modify Property Recursive"
+msgstr "Tulajdonságok szerkesztése"
 
 #: tsp-svn-helper/tsh-status-dialog.c:156
 msgid "Show Recusive"

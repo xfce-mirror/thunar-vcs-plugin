@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-06 01:40+0100\n"
+"POT-Creation-Date: 2008-01-06 18:03+0100\n"
 "PO-Revision-Date: 2007-10-26 15:12+0500\n"
 "Last-Translator: Muhammad Ali Makki <makk.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -370,7 +370,9 @@ msgstr ""
 msgid "Properties Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:251 tsp-svn-helper/tsh-properties-dialog.c:174
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: tsp-svn-helper/main.c:251 tsp-svn-helper/tsh-properties-dialog.c:217
 #, fuzzy
 msgid "Properties"
 msgstr "خصوصیات مدون کریں"
@@ -630,18 +632,19 @@ msgstr "Mime قسم"
 msgid "Notification"
 msgstr "اطلاعیہ"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:107
+#: tsp-svn-helper/tsh-properties-dialog.c:124
 #, fuzzy
 msgid "Name"
 msgstr "Blame"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:113
+#: tsp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
 msgstr ""
 
-#: tsp-svn-helper/tsh-properties-dialog.c:164
-msgid "Set Property Recursive"
-msgstr ""
+#: tsp-svn-helper/tsh-properties-dialog.c:181
+#, fuzzy
+msgid "Modify Property Recursive"
+msgstr "خصوصیات مدون کریں"
 
 #: tsp-svn-helper/tsh-status-dialog.c:156
 msgid "Show Recusive"

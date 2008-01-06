@@ -321,10 +321,9 @@ refresh_clicked (GtkButton *button, gpointer user_data)
 	gtk_widget_hide (dialog->refresh);
 	gtk_widget_show (dialog->cancel);
 
-	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
-	
-  gtk_list_store_clear (GTK_LIST_STORE (model));
-
   g_signal_emit (dialog, signals[SIGNAL_REFRESH], 0);
+
+	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+  gtk_list_store_clear (GTK_LIST_STORE (model));
 }
 

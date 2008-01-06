@@ -53,6 +53,12 @@ void       tsh_properties_dialog_add      (TshPropertiesDialog *dialog,
                                            const char *value);
 void       tsh_properties_dialog_done     (TshPropertiesDialog *dialog);
 
+
+gchar     *tsh_properties_dialog_get_key          (TshPropertiesDialog *dialog);
+gchar     *tsh_properties_dialog_get_selected_key (TshPropertiesDialog *dialog);
+gchar     *tsh_properties_dialog_get_value        (TshPropertiesDialog *dialog);
+gboolean   tsh_properties_dialog_get_recursive    (TshPropertiesDialog *dialog);
+
 G_END_DECLS;
 
 #endif /* !__TSH_PROPERTIES_DIALOG_H__ */

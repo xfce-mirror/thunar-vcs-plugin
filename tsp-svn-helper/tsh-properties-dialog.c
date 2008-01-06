@@ -33,6 +33,7 @@ static void selection_changed (GtkTreeView*, gpointer);
 static void cancel_clicked (GtkButton*, gpointer);
 static void set_clicked (GtkButton*, gpointer);
 static void delete_clicked (GtkButton*, gpointer);
+static void tsh_make_homogeneous (GtkWidget *, ...) G_GNUC_NULL_TERMINATED;
 
 struct _TshPropertiesDialog
 {
@@ -57,6 +58,8 @@ G_DEFINE_TYPE (TshPropertiesDialog, tsh_properties_dialog, GTK_TYPE_DIALOG)
 
 enum {
   SIGNAL_CANCEL = 0,
+  SIGNAL_SET,
+  SIGNAL_DELETE,
   SIGNAL_COUNT
 };
 
@@ -66,6 +69,20 @@ static void
 tsh_properties_dialog_class_init (TshPropertiesDialogClass *klass)
 {
   signals[SIGNAL_CANCEL] = g_signal_new("cancel-clicked",
+    G_OBJECT_CLASS_TYPE (klass),
+    G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
+    0, NULL, NULL,
+    g_cclosure_marshal_VOID__VOID,
+    G_TYPE_NONE, 0);
+
+  signals[SIGNAL_SET] = g_signal_new("set-clicked",
+    G_OBJECT_CLASS_TYPE (klass),
+    G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
+    0, NULL, NULL,
+    g_cclosure_marshal_VOID__VOID,
+    G_TYPE_NONE, 0);
+
+  signals[SIGNAL_DELETE] = g_signal_new("delete-clicked",
     G_OBJECT_CLASS_TYPE (klass),
     G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
     0, NULL, NULL,
@@ -161,7 +178,7 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_widget_show (text_view);
 	gtk_widget_show (scroll_window);
 
-  dialog->recursive = recursive = gtk_check_button_new_with_label (_("Set Property Recursive"));
+  dialog->recursive = recursive = gtk_check_button_new_with_label (_("Modify Property Recursive"));
   gtk_box_pack_start (GTK_BOX(box), recursive, FALSE, TRUE, 0);
 	gtk_widget_show (recursive);
 
@@ -171,19 +188,33 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), vpane, TRUE, TRUE, 0);
   gtk_widget_show (vpane);
 
-	gtk_window_set_title (GTK_WINDOW (dialog), _("Properties"));
-
   //gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
+  gtk_container_remove (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_DIALOG (dialog)->action_area);
+
+  GTK_DIALOG (dialog)->action_area = box = gtk_hbox_new (FALSE, 0);
+
+  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->vbox), box,
+                    FALSE, TRUE, 0);
+  gtk_widget_show (box);
+
+  gtk_box_reorder_child (GTK_BOX (GTK_DIALOG (dialog)->vbox), box, 0);
+
+  //box = gtk_hbox_new (FALSE, 12);
 
 	dialog->set = button = gtk_button_new_from_stock(GTK_STOCK_ADD);
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (set_clicked), dialog);
-	gtk_widget_hide (button);
+	gtk_widget_show (button);
 
 	dialog->delete = button = gtk_button_new_from_stock(GTK_STOCK_REMOVE);
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (delete_clicked), dialog);
-	gtk_widget_hide (button);
+	gtk_widget_show (button);
+
+  //gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+	//gtk_widget_show (box);
+
+	gtk_window_set_title (GTK_WINDOW (dialog), _("Properties"));
 
 	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
 	gtk_widget_hide (button);
@@ -192,6 +223,8 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
+
+  tsh_make_homogeneous (dialog->set, dialog->delete, dialog->close, dialog->cancel, NULL);
 
 	gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
 }
@@ -217,6 +250,38 @@ tsh_properties_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags
 		gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
 
 	return GTK_WIDGET(dialog);
+}
+
+static void
+tsh_make_homogeneous (GtkWidget *first, ...)
+{
+  GtkWidget *iter;
+  GtkRequisition request;
+  gint max_width = 0;
+  gint max_height = 0;
+  va_list ap;
+
+  va_start (ap, first);
+  iter = first;
+  while (iter)
+  {
+    gtk_widget_size_request(iter, &request);
+    if (request.width > max_width)
+      max_width = request.width;
+    if (request.height > max_height)
+      max_height = request.height;
+    iter = va_arg (ap, GtkWidget *);
+  }
+  va_end (ap);
+
+  va_start (ap, first);
+  iter = first;
+  while (iter)
+  {
+    gtk_widget_set_size_request (iter, max_width, max_height);
+    iter = va_arg (ap, GtkWidget *);
+  }
+  va_end (ap);
 }
 
 void       
@@ -278,6 +343,55 @@ tsh_properties_dialog_done (TshPropertiesDialog *dialog)
 
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->close);
+}
+
+gchar *
+tsh_properties_dialog_get_key (TshPropertiesDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), NULL);
+
+  return gtk_combo_box_get_active_text (GTK_COMBO_BOX (dialog->combo_box));
+}
+
+gchar *
+tsh_properties_dialog_get_selected_key (TshPropertiesDialog *dialog)
+{
+	GtkTreeIter iter;
+  GtkTreeSelection *selection;
+  GtkTreeModel *model;
+  gchar *name = NULL;
+
+  g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), NULL);
+
+  selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (dialog->tree_view));
+  
+  if (gtk_tree_selection_get_selected (selection, &model, &iter))
+  {
+    gtk_tree_model_get (model, &iter, COLUMN_NAME, &name, -1);
+  }
+
+  return name;
+}
+
+gchar *
+tsh_properties_dialog_get_value (TshPropertiesDialog *dialog)
+{
+  GtkTextIter start, end;
+
+  g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), NULL);
+
+  GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view));
+  gtk_text_buffer_get_start_iter (buffer, &start);
+  gtk_text_buffer_get_end_iter (buffer, &end);
+  return gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
+}
+
+gboolean
+tsh_properties_dialog_get_recursive (TshPropertiesDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), FALSE);
+
+  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->recursive));
 }
 
 static void
@@ -349,10 +463,30 @@ cancel_clicked (GtkButton *button, gpointer user_data)
 static void
 set_clicked (GtkButton *button, gpointer user_data)
 {
+	GtkTreeModel *model;
+	TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (user_data);
+	
+	gtk_widget_hide (dialog->close);
+	gtk_widget_show (dialog->cancel);
+
+  g_signal_emit (dialog, signals[SIGNAL_SET], 0);
+  
+	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+  gtk_list_store_clear (GTK_LIST_STORE (model));
 }
 
 static void
 delete_clicked (GtkButton *button, gpointer user_data)
 {
+	GtkTreeModel *model;
+	TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (user_data);
+	
+	gtk_widget_hide (dialog->close);
+	gtk_widget_show (dialog->cancel);
+
+  g_signal_emit (dialog, signals[SIGNAL_DELETE], 0);
+  
+	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+  gtk_list_store_clear (GTK_LIST_STORE (model));
 }
 

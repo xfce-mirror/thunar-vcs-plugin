@@ -40,6 +40,9 @@ struct thread_args {
 	apr_pool_t *pool;
   TshPropertiesDialog *dialog;
 	gchar *path;
+  gchar *set_key;
+  gchar *set_value;
+  gboolean recursive;
 };
 
 static gpointer properties_thread (gpointer user_data)
@@ -51,9 +54,33 @@ static gpointer properties_thread (gpointer user_data)
 	apr_pool_t *pool = args->pool;
   TshPropertiesDialog *dialog = args->dialog;
 	gchar *path = args->path;
+  gchar *set_key = args->set_key;
+  gchar *set_value = args->set_value;
+  gboolean recursive = args->recursive;
+  svn_string_t *value;
   apr_array_header_t *prop_items;
 
-	g_free (args);
+  args->set_key = NULL;
+  args->set_value = NULL;
+
+  if (set_key)
+  {
+    value = set_value?svn_string_create(set_value, pool):NULL;
+
+    if ((err = svn_client_propset2(set_key, value, path, recursive, FALSE, ctx, pool)))
+    {
+      //gdk_threads_enter();
+      //tsh_properties_dialog_done (dialog);
+      //gdk_threads_leave();
+
+      svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+      svn_error_clear(err);
+      //return GINT_TO_POINTER (FALSE);
+    }
+  }
+
+  g_free (set_key);
+  g_free (set_value);
 
   revision.kind = svn_opt_revision_unspecified;
 	if ((err = svn_client_proplist2(&prop_items, path, &revision, &revision, FALSE, ctx, pool)))
@@ -95,6 +122,32 @@ static gpointer properties_thread (gpointer user_data)
 	return GINT_TO_POINTER (TRUE);
 }
 
+static void create_properties_thread (TshPropertiesDialog *dialog, struct thread_args *args)
+{
+	GThread *thread = g_thread_create (properties_thread, args, TRUE, NULL);
+  if (thread)
+    tsh_replace_thread (thread);
+  else
+    tsh_properties_dialog_done (dialog);
+}
+
+static void set_property (TshPropertiesDialog *dialog, struct thread_args *args)
+{
+  args->set_key = tsh_properties_dialog_get_key (dialog);
+  args->set_value = tsh_properties_dialog_get_value (dialog);
+  args->recursive = tsh_properties_dialog_get_recursive (dialog);
+
+  create_properties_thread (dialog, args);
+}
+
+static void delete_property (TshPropertiesDialog *dialog, struct thread_args *args)
+{
+  args->set_key = tsh_properties_dialog_get_selected_key (dialog);
+  args->set_value = NULL;
+
+  create_properties_thread (dialog, args);
+}
+
 GThread *tsh_properties (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	struct thread_args *args;
@@ -115,6 +168,12 @@ GThread *tsh_properties (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->pool = pool;
   args->dialog = TSH_PROPERTIES_DIALOG (dialog);
 	args->path = path;
+  args->set_key = NULL;
+  args->set_value = NULL;
+  args->recursive = FALSE;
+
+  g_signal_connect(dialog, "set-clicked", G_CALLBACK(set_property), args);
+  g_signal_connect(dialog, "delete-clicked", G_CALLBACK(delete_property), args);
 
 	return g_thread_create (properties_thread, args, TRUE, NULL);
 }

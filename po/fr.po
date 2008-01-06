@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-i 18n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-06 01:40+0100\n"
+"POT-Creation-Date: 2008-01-06 18:03+0100\n"
 "PO-Revision-Date: 2007-10-24 13:04+0100\n"
 "Last-Translator: Mike Massonnet <mmassonnet@gmail.com>\n"
 "Language-Team: French\n"
@@ -369,7 +369,9 @@ msgstr ""
 msgid "Properties Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:251 tsp-svn-helper/tsh-properties-dialog.c:174
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: tsp-svn-helper/main.c:251 tsp-svn-helper/tsh-properties-dialog.c:217
 #, fuzzy
 msgid "Properties"
 msgstr "Éditer les propriétés"
@@ -629,18 +631,19 @@ msgstr "Type mime"
 msgid "Notification"
 msgstr "Notification"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:107
+#: tsp-svn-helper/tsh-properties-dialog.c:124
 #, fuzzy
 msgid "Name"
 msgstr "Différences détaillées"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:113
+#: tsp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
 msgstr ""
 
-#: tsp-svn-helper/tsh-properties-dialog.c:164
-msgid "Set Property Recursive"
-msgstr ""
+#: tsp-svn-helper/tsh-properties-dialog.c:181
+#, fuzzy
+msgid "Modify Property Recursive"
+msgstr "Éditer les propriétés"
 
 #: tsp-svn-helper/tsh-status-dialog.c:156
 msgid "Show Recusive"
