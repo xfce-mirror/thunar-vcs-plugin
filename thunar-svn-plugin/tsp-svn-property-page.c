@@ -68,7 +68,7 @@ static void tsp_svn_property_page_get_property (GObject*, guint, GValue*, GParam
 
 
 
-G_DEFINE_TYPE (TspSvnPropertyPage, tsp_svn_property_page, THUNARX_TYPE_PROPERTY_PAGE)
+THUNARX_DEFINE_TYPE (TspSvnPropertyPage, tsp_svn_property_page, THUNARX_TYPE_PROPERTY_PAGE)
 
 
 

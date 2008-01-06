@@ -24,6 +24,8 @@
 #include <exo/exo.h>
 
 #include <thunar-svn-plugin/tsp-provider.h>
+#include <thunar-svn-plugin/tsp-svn-action.h>
+#include <thunar-svn-plugin/tsp-svn-property-page.h>
 
 
 
@@ -56,6 +58,8 @@ thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 
   /* register the types provided by this plugin */
   tsp_provider_register_type (plugin);
+  tsp_svn_action_register_type (plugin);
+  tsp_svn_property_page_register_type (plugin);
 
   /* setup the plugin provider type list */
   type_list[0] = TSP_TYPE_PROVIDER;

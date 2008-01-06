@@ -28,6 +28,7 @@
 #include <thunar-vfs/thunar-vfs.h>
 
 #include <subversion-1/svn_client.h>
+#include <subversion-1/svn_pools.h>
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
@@ -48,7 +49,7 @@ static gpointer resolved_thread (gpointer user_data)
 	svn_error_t *err;
   gboolean result;
 	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *pool = args->pool;
+	apr_pool_t *subpool, *pool = args->pool;
 	TshNotifyDialog *dialog = args->dialog;
 	gchar **files = args->files;
 	gint size, i;
@@ -57,11 +58,13 @@ static gpointer resolved_thread (gpointer user_data)
 
 	size = files?g_strv_length(files):0;
 
+  subpool = svn_pool_create (pool);
+
 	if(size)
 	{
 		for (i = 0; i < size; i++)
 		{
-      if ((err = svn_client_resolved(files[i], TRUE, ctx, pool)))
+      if ((err = svn_client_resolved(files[i], TRUE, ctx, subpool)))
       {
         svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
         svn_error_clear(err);
@@ -71,13 +74,15 @@ static gpointer resolved_thread (gpointer user_data)
 	}
 	else
 	{
-    if ((err = svn_client_resolved("", TRUE, ctx, pool)))
+    if ((err = svn_client_resolved("", TRUE, ctx, subpool)))
     {
       svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
       svn_error_clear(err);
       result = FALSE;
     }
 	}
+
+  svn_pool_destroy (subpool);
 
 	gdk_threads_enter();
 	tsh_notify_dialog_done (dialog);

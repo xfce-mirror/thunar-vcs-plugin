@@ -28,6 +28,7 @@
 #include <thunar-vfs/thunar-vfs.h>
 
 #include <subversion-1/svn_client.h>
+#include <subversion-1/svn_pools.h>
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
@@ -51,7 +52,7 @@ static gpointer properties_thread (gpointer user_data)
   svn_opt_revision_t revision;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *pool = args->pool;
+	apr_pool_t *subpool, *pool = args->pool;
   TshPropertiesDialog *dialog = args->dialog;
 	gchar *path = args->path;
   gchar *set_key = args->set_key;
@@ -63,12 +64,15 @@ static gpointer properties_thread (gpointer user_data)
   args->set_key = NULL;
   args->set_value = NULL;
 
+  subpool = svn_pool_create (pool);
+
   if (set_key)
   {
-    value = set_value?svn_string_create(set_value, pool):NULL;
+    value = set_value?svn_string_create(set_value, subpool):NULL;
 
-    if ((err = svn_client_propset2(set_key, value, path, recursive, FALSE, ctx, pool)))
+    if ((err = svn_client_propset2(set_key, value, path, recursive, FALSE, ctx, subpool)))
     {
+      //svn_pool_destroy (subpool);
       //gdk_threads_enter();
       //tsh_properties_dialog_done (dialog);
       //gdk_threads_leave();
@@ -83,8 +87,10 @@ static gpointer properties_thread (gpointer user_data)
   g_free (set_value);
 
   revision.kind = svn_opt_revision_unspecified;
-	if ((err = svn_client_proplist2(&prop_items, path, &revision, &revision, FALSE, ctx, pool)))
+	if ((err = svn_client_proplist2(&prop_items, path, &revision, &revision, FALSE, ctx, subpool)))
 	{
+    svn_pool_destroy (subpool);
+
 		gdk_threads_enter();
     tsh_properties_dialog_done (dialog);
 		gdk_threads_leave();
@@ -101,7 +107,7 @@ static gpointer properties_thread (gpointer user_data)
       apr_hash_index_t *hi;
       svn_client_proplist_item_t *item = APR_ARRAY_IDX(prop_items, 0, svn_client_proplist_item_t*);
 
-      for (hi = apr_hash_first(pool, item->prop_hash); hi; hi = apr_hash_next(hi)) {
+      for (hi = apr_hash_first(subpool, item->prop_hash); hi; hi = apr_hash_next(hi)) {
         const char *name;
         svn_string_t *value;
         gchar *str_value;
@@ -114,6 +120,8 @@ static gpointer properties_thread (gpointer user_data)
       }
     }
   }
+
+  svn_pool_destroy (subpool);
 
   gdk_threads_enter();
   tsh_properties_dialog_done (dialog);

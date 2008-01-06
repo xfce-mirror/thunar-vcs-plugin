@@ -37,7 +37,7 @@ static svn_client_ctx_t *ctx = NULL;
 
 
 gboolean
-tsp_svn_backend_init()
+tsp_svn_backend_init ()
 {
 	if (pool)
 		return TRUE;
@@ -53,30 +53,45 @@ tsp_svn_backend_init()
 	/* Initialize the FS library */
 	err = svn_fs_initialize (pool);
 	if(err)
+  {
+    svn_error_clear (err);
 		return FALSE;
+  }
 
 	/* Make sure the ~/.subversion run-time config files exist */
 	err = svn_config_ensure (NULL, pool);
 	if(err)
+  {
+    svn_error_clear (err);
 		return FALSE;
+  }
 
 #ifdef G_OS_WIN32
 	/* Set the working copy administrative directory name */
 	if (getenv ("SVN_ASP_DOT_NET_HACK"))
 	{
 		err = svn_wc_set_adm_dir ("_svn", pool);
-		if(err)
-			return FALSE;
+    if(err)
+    {
+      svn_error_clear (err);
+      return FALSE;
+    }
 	}
 #endif
 
 	err = svn_client_create_context (&ctx, pool);
-	if(err)
-		return FALSE;
+  if(err)
+  {
+    svn_error_clear (err);
+    return FALSE;
+  }
 
 	err = svn_config_get_config (&(ctx->config), NULL, pool);
-	if(err)
-		return FALSE;
+  if(err)
+  {
+    svn_error_clear (err);
+    return FALSE;
+  }
 
 	/* We are ready now */
 
@@ -85,9 +100,19 @@ tsp_svn_backend_init()
 
 
 
+void
+tsp_svn_backend_free ()
+{
+	if (pool)
+    svn_pool_destroy (pool);
+}
+
+
+
 gboolean
 tsp_svn_backend_is_working_copy (const gchar *uri)
 {
+  apr_pool_t *subpool;
 	svn_error_t *err;
 	int wc_format;
 
@@ -105,14 +130,19 @@ tsp_svn_backend_is_working_copy (const gchar *uri)
 		path[strlen (path) - 1] = '\0';
 	}
 
+  subpool = svn_pool_create (pool);
+
 	/* check for the path is a working copy */
-	err = svn_wc_check_wc (path, &wc_format, pool);
+	err = svn_wc_check_wc (path, &wc_format, subpool);
+
+  svn_pool_destroy (subpool);
 
 	g_free (path);
 
 	/* if an error occured or wc_format in not set it is no working copy */
 	if(err || !wc_format)
 	{
+    svn_error_clear (err);
 		return FALSE;
 	}
 	
@@ -154,6 +184,7 @@ status_callback (void *baton, const char *path, svn_wc_status2_t *status)
 GSList *
 tsp_svn_backend_get_status (const gchar *uri)
 {
+  apr_pool_t *subpool;
 	svn_error_t *err;
 	svn_opt_revision_t revision = {svn_opt_revision_working};
 	GSList *list = NULL;
@@ -172,8 +203,12 @@ tsp_svn_backend_get_status (const gchar *uri)
 		path[strlen (path) - 1] = '\0';
 	}
 
+  subpool = svn_pool_create (pool);
+
 	/* check for the path is a working copy */
-	err = svn_client_status2 (NULL, path, &revision, status_callback, &list, FALSE, TRUE, FALSE, TRUE, TRUE, ctx, pool);
+	err = svn_client_status2 (NULL, path, &revision, status_callback, &list, FALSE, TRUE, FALSE, TRUE, TRUE, ctx, subpool);
+
+  svn_pool_destroy (subpool);
 
 	g_free (path);
 
@@ -185,6 +220,7 @@ tsp_svn_backend_get_status (const gchar *uri)
 			g_free (iter->data);
 		}
 		g_slist_free (list);
+    svn_error_clear (err);
 		return NULL;
 	}
 
@@ -216,6 +252,7 @@ info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t
 TspSvnInfo *
 tsp_svn_backend_get_info (const gchar *uri)
 {
+  apr_pool_t *subpool;
 	svn_error_t *err;
 	svn_opt_revision_t revision = {svn_opt_revision_unspecified};
   TspSvnInfo *info = NULL;
@@ -234,14 +271,19 @@ tsp_svn_backend_get_info (const gchar *uri)
 		path[strlen (path) - 1] = '\0';
 	}
 
+  subpool = svn_pool_create (pool);
+
 	/* check for the path is a working copy */
-	err = svn_client_info (path, &revision, &revision, info_callback, &info, FALSE, ctx, pool);
+	err = svn_client_info (path, &revision, &revision, info_callback, &info, FALSE, ctx, subpool);
+
+  svn_pool_destroy (subpool);
 
 	g_free (path);
 
 	if (err)
 	{
     tsp_svn_info_free (info);
+    svn_error_clear (err);
 		return NULL;
 	}
 

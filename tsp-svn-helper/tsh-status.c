@@ -28,6 +28,7 @@
 #include <thunar-vfs/thunar-vfs.h>
 
 #include <subversion-1/svn_client.h>
+#include <subversion-1/svn_pools.h>
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
@@ -48,7 +49,7 @@ static gpointer status_thread (gpointer user_data)
   svn_opt_revision_t revision;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *pool = args->pool;
+	apr_pool_t *subpool, *pool = args->pool;
 	TshStatusDialog *dialog = args->dialog;
 	gchar **files = args->files;
   gboolean recursive;
@@ -65,9 +66,13 @@ static gpointer status_thread (gpointer user_data)
   ignore_externals = tsh_status_dialog_get_hide_externals(dialog);
   gdk_threads_leave();
 
+  subpool = svn_pool_create (pool);
+
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_status2(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, recursive, get_all, update, no_ignore, ignore_externals, ctx, pool)))
+	if ((err = svn_client_status2(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, recursive, get_all, update, no_ignore, ignore_externals, ctx, subpool)))
 	{
+    svn_pool_destroy (subpool);
+
 		gdk_threads_enter();
 		tsh_status_dialog_done (dialog);
 		gdk_threads_leave();
@@ -76,6 +81,8 @@ static gpointer status_thread (gpointer user_data)
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}
+
+  svn_pool_destroy (subpool);
 
 	gdk_threads_enter();
 	tsh_status_dialog_done (dialog);

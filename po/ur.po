@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-06 18:03+0100\n"
+"POT-Creation-Date: 2008-01-07 00:37+0100\n"
 "PO-Revision-Date: 2007-10-26 15:12+0500\n"
 "Last-Translator: Muhammad Ali Makki <makk.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -20,12 +20,12 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-svn-plugin/tsp-provider.c:431 thunar-svn-plugin/tsp-provider.c:462
+#: thunar-svn-plugin/tsp-provider.c:433 thunar-svn-plugin/tsp-provider.c:464
 msgid "SVN"
 msgstr "SVN"
 
 #: thunar-svn-plugin/tsp-svn-action.c:268 tsp-svn-helper/main.c:207
-#: tsp-svn-helper/tsh-add.c:94
+#: tsp-svn-helper/tsh-add.c:99
 msgid "Add"
 msgstr "شامل کریں"
 
@@ -35,7 +35,7 @@ msgid "Blame"
 msgstr "Blame"
 
 #: thunar-svn-plugin/tsp-svn-action.c:295 tsp-svn-helper/main.c:211
-#: tsp-svn-helper/tsh-checkout.c:86 tsp-svn-helper/tsh-checkout.c:98
+#: tsp-svn-helper/tsh-checkout.c:93 tsp-svn-helper/tsh-checkout.c:105
 msgid "Checkout"
 msgstr "چیک کریں"
 
@@ -44,18 +44,18 @@ msgid "Cleanup"
 msgstr "صاف کریں"
 
 #: thunar-svn-plugin/tsp-svn-action.c:319 tsp-svn-helper/main.c:219
-#: tsp-svn-helper/tsh-commit.c:101
+#: tsp-svn-helper/tsh-commit.c:108
 msgid "Commit"
 msgstr "تبصرہ"
 
 #: thunar-svn-plugin/tsp-svn-action.c:331 tsp-svn-helper/main.c:223
-#: tsp-svn-helper/tsh-copy.c:127
+#: tsp-svn-helper/tsh-copy.c:134
 #, fuzzy
 msgid "Copy"
 msgstr "مکمل"
 
 #: thunar-svn-plugin/tsp-svn-action.c:343 tsp-svn-helper/main.c:227
-#: tsp-svn-helper/tsh-delete.c:101
+#: tsp-svn-helper/tsh-delete.c:108
 msgid "Delete"
 msgstr "حذف"
 
@@ -65,12 +65,12 @@ msgid "Diff"
 msgstr "فرق"
 
 #: thunar-svn-plugin/tsp-svn-action.c:367 tsp-svn-helper/main.c:231
-#: tsp-svn-helper/tsh-export.c:95 tsp-svn-helper/tsh-export.c:113
+#: tsp-svn-helper/tsh-export.c:102 tsp-svn-helper/tsh-export.c:120
 msgid "Export"
 msgstr "برآمد"
 
 #: thunar-svn-plugin/tsp-svn-action.c:379 tsp-svn-helper/main.c:235
-#: tsp-svn-helper/tsh-import.c:86 tsp-svn-helper/tsh-import.c:104
+#: tsp-svn-helper/tsh-import.c:93 tsp-svn-helper/tsh-import.c:111
 #, fuzzy
 msgid "Import"
 msgstr "SVN _درآمد"
@@ -81,7 +81,7 @@ msgid "Info"
 msgstr "معلومات"
 
 #: thunar-svn-plugin/tsp-svn-action.c:408 tsp-svn-helper/main.c:239
-#: tsp-svn-helper/tsh-lock.c:118 tsp-svn-helper/tsh-lock-dialog.c:72
+#: tsp-svn-helper/tsh-lock.c:125 tsp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
 msgstr "قفل"
 
@@ -91,7 +91,7 @@ msgid "Log"
 msgstr "Log"
 
 #: thunar-svn-plugin/tsp-svn-action.c:441 tsp-svn-helper/main.c:247
-#: tsp-svn-helper/tsh-move.c:126
+#: tsp-svn-helper/tsh-move.c:133
 msgid "Move"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgid "Edit Properties"
 msgstr "خصوصیات مدون کریں"
 
 #: thunar-svn-plugin/tsp-svn-action.c:472 tsp-svn-helper/main.c:255
-#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-resolved.c:94
+#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-resolved.c:99
 #, fuzzy
 msgid "Resolved"
 msgstr "Resolve"
@@ -111,7 +111,7 @@ msgid "Resolve"
 msgstr "Resolve"
 
 #: thunar-svn-plugin/tsp-svn-action.c:496 tsp-svn-helper/main.c:259
-#: tsp-svn-helper/tsh-revert.c:99
+#: tsp-svn-helper/tsh-revert.c:106
 msgid "Revert"
 msgstr "واپس"
 
@@ -126,12 +126,12 @@ msgid "Switch"
 msgstr "تبدیل"
 
 #: thunar-svn-plugin/tsp-svn-action.c:532 tsp-svn-helper/main.c:267
-#: tsp-svn-helper/tsh-unlock.c:99
+#: tsp-svn-helper/tsh-unlock.c:106
 msgid "Unlock"
 msgstr "غیر مقفل"
 
 #: thunar-svn-plugin/tsp-svn-action.c:542 tsp-svn-helper/main.c:271
-#: tsp-svn-helper/tsh-update.c:101
+#: tsp-svn-helper/tsh-update.c:108
 msgid "Update"
 msgstr "تجدید"
 
@@ -401,16 +401,16 @@ msgstr ""
 msgid "Not enough arguments provided"
 msgstr ""
 
-#: tsp-svn-helper/tsh-cleanup.c:67
+#: tsp-svn-helper/tsh-cleanup.c:74
 msgid "Cleanup finnished"
 msgstr ""
 
-#: tsp-svn-helper/tsh-cleanup.c:80
+#: tsp-svn-helper/tsh-cleanup.c:87
 #, fuzzy
 msgid "Cleaning up ..."
 msgstr "صاف کریں"
 
-#: tsp-svn-helper/tsh-commit.c:106
+#: tsp-svn-helper/tsh-commit.c:113
 #, fuzzy
 msgid "Commit Message"
 msgstr "تبصرہ"
@@ -534,11 +534,11 @@ msgstr "مکمل"
 msgid "At revision: %li"
 msgstr "ورژن: %li"
 
-#: tsp-svn-helper/tsh-copy.c:109
+#: tsp-svn-helper/tsh-copy.c:116
 msgid "Copy To"
 msgstr ""
 
-#: tsp-svn-helper/tsh-delete.c:106
+#: tsp-svn-helper/tsh-delete.c:113
 #, fuzzy
 msgid "Delete Message"
 msgstr "تبصرہ"
@@ -561,7 +561,7 @@ msgstr "یاد رکھیں"
 msgid "Certificate"
 msgstr "اطلاعیہ"
 
-#: tsp-svn-helper/tsh-import.c:109
+#: tsp-svn-helper/tsh-import.c:116
 #, fuzzy
 msgid "Import Message"
 msgstr "تبصرہ"
@@ -620,7 +620,7 @@ msgstr "_پاس ورڈ:"
 msgid "Login"
 msgstr "لاگ ان"
 
-#: tsp-svn-helper/tsh-move.c:106
+#: tsp-svn-helper/tsh-move.c:113
 msgid "Move To"
 msgstr ""
 

@@ -315,6 +315,7 @@ int main (int argc, char *argv[])
     if(!g_strv_length(files))
     {
       g_fprintf(stderr, "%s: %s\n\tTry --help-all\n", g_get_prgname(), _("Not enough arguments provided"));
+      svn_pool_destroy(pool);
       return EXIT_FAILURE;
     }
   }

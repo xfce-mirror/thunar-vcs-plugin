@@ -147,7 +147,6 @@ tsh_log_message_dialog_add (TshLogMessageDialog *dialog, const char *state, cons
 {
 	GtkTreeModel *model;
 	GtkTreeIter iter;
-	GtkTreePath *path;
 
   g_return_if_fail (TSH_IS_LOG_MESSAGE_DIALOG (dialog));
 
@@ -158,11 +157,6 @@ tsh_log_message_dialog_add (TshLogMessageDialog *dialog, const char *state, cons
 	                    COLUMN_STATE, state,
 	                    COLUMN_PATH, file,
 	                    -1);
-
-	path = gtk_tree_model_get_path (model, &iter);
-	gtk_tree_view_scroll_to_cell (GTK_TREE_VIEW (dialog->tree_view), path, NULL, FALSE, 0, 0);
-
-	gtk_tree_path_free (path);
 }
 
 gchar *

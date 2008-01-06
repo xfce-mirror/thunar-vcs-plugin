@@ -28,6 +28,7 @@
 #include <thunar-vfs/thunar-vfs.h>
 
 #include <subversion-1/svn_client.h>
+#include <subversion-1/svn_pools.h>
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
@@ -46,7 +47,7 @@ static gpointer cleanup_thread (gpointer user_data)
 	struct thread_args *args = user_data;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *pool = args->pool;
+	apr_pool_t *subpool, *pool = args->pool;
   GtkWidget *dialog = args->dialog;
 	gchar *path = args->path;
 
@@ -55,12 +56,18 @@ static gpointer cleanup_thread (gpointer user_data)
   if(!path)
     path = "";
 
-	if ((err = svn_client_cleanup(path, ctx, pool)))
+  subpool = svn_pool_create (pool);
+
+	if ((err = svn_client_cleanup(path, ctx, subpool)))
 	{
+    svn_pool_destroy (subpool);
+
 		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}
+
+  svn_pool_destroy (subpool);
 
 	gdk_threads_enter();
   gtk_widget_destroy(dialog);

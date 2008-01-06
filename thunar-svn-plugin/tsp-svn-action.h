@@ -34,18 +34,19 @@ typedef struct _TspSvnAction      TspSvnAction;
 #define TSP_IS_SVN_ACTION_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSP_TYPE_SVN_ACTION))
 #define TSP_SVN_ACTION_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSP_TYPE_SVN_ACTION, TspSvnActionClass))
 
-GType      tsp_svn_action_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsp_svn_action_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void       tsp_svn_action_register_type (ThunarxProviderPlugin *) G_GNUC_INTERNAL;
 
-GtkAction *tsp_svn_action_new      (const gchar*,
-                                    const gchar*,
-				    GList *,
-				    GtkWidget *,
-				    gboolean,
-				    gboolean,
-				    gboolean,
-				    gboolean,
-				    gboolean,
-				    gboolean) G_GNUC_MALLOC G_GNUC_INTERNAL;
+GtkAction *tsp_svn_action_new           (const gchar*,
+                                         const gchar*,
+                                         GList *,
+                                         GtkWidget *,
+                                         gboolean,
+                                         gboolean,
+                                         gboolean,
+                                         gboolean,
+                                         gboolean,
+                                         gboolean) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
 G_END_DECLS;
 

@@ -186,6 +186,8 @@ tsp_provider_finalize (GObject *object)
   g_object_unref (G_OBJECT (tsp_provider->icon_factory));
 #endif
 
+  tsp_svn_backend_free();
+
   (*G_OBJECT_CLASS (tsp_provider_parent_class)->finalize) (object);
 }
 

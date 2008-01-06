@@ -741,6 +741,7 @@ tsh_is_working_copy (const gchar *uri, apr_pool_t *pool)
 	if(err || !wc_format)
 	{
     g_free (path);
+    svn_error_clear (err);
 		return NULL;
 	}
 	

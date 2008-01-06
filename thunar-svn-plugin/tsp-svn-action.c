@@ -116,7 +116,7 @@ void tsp_action_unimplemented (GtkAction *, const gchar *);
 
 
 
-G_DEFINE_TYPE (TspSvnAction, tsp_svn_action, GTK_TYPE_ACTION)
+THUNARX_DEFINE_TYPE (TspSvnAction, tsp_svn_action, GTK_TYPE_ACTION)
 
 
 
@@ -290,7 +290,7 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 	gtk_widget_show(subitem);
 *//* No version control (parent) */
-	if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
+	if (tsp_action->property.is_parent && !tsp_action->property.parent_version_control)
   {
 	  subaction = g_object_new (GTK_TYPE_ACTION, "name", "tsp::checkout", "label", _("Checkout"),
 				    "stock-id", GTK_STOCK_CONNECT,
@@ -373,7 +373,7 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	  gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 	  gtk_widget_show(subitem);
 	}
-/* No version control (all) */
+  /* No version control (all) */
 	if (!tsp_action->property.parent_version_control && (tsp_action->property.is_parent || tsp_action->property.directory_no_version_control || tsp_action->property.file_no_version_control))
 	{
 	  subaction = g_object_new (GTK_TYPE_ACTION, "name", "tsp::import", "label", _("Import"),

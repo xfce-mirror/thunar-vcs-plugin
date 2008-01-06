@@ -48,6 +48,7 @@ typedef struct
 #define TSP_SVN_INFO(p) ((TspSvnInfo*)p)
 
 gboolean tsp_svn_backend_init();
+void     tsp_svn_backend_free();
 
 gboolean tsp_svn_backend_is_working_copy (const gchar *uri);
 

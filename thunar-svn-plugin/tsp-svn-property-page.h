@@ -34,9 +34,10 @@ typedef struct _TspSvnPropertyPage      TspSvnPropertyPage;
 #define TSP_IS_SVN_PROPERTY_PAGE_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSP_TYPE_SVN_PROPERTY_PAGE))
 #define TSP_SVN_PROPERTY_PAGE_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSP_TYPE_SVN_PROPERTY_PAGE, TspSvnPropertyPageClass))
 
-GType      tsp_svn_property_page_get_type  (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsp_svn_property_page_get_type       (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void       tsp_svn_property_page_register_type  (ThunarxProviderPlugin *) G_GNUC_INTERNAL;
 
-GtkAction *tsp_svn_property_page_new       (ThunarxFileInfo *) G_GNUC_MALLOC G_GNUC_INTERNAL;
+GtkAction *tsp_svn_property_page_new            (ThunarxFileInfo *) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
 ThunarxFileInfo *tsp_svn_property_page_get_file (TspSvnPropertyPage *) G_GNUC_INTERNAL;
 void             tsp_svn_property_page_set_file (TspSvnPropertyPage *, ThunarxFileInfo *) G_GNUC_INTERNAL;

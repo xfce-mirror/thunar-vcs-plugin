@@ -29,6 +29,7 @@
 #include <thunar-vfs/thunar-vfs.h>
 
 #include <subversion-1/svn_client.h>
+#include <subversion-1/svn_pools.h>
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
@@ -50,15 +51,19 @@ static gpointer move_thread (gpointer user_data)
 	svn_error_t *err;
   svn_commit_info_t *commit_info;
 	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *pool = args->pool;
+	apr_pool_t *subpool, *pool = args->pool;
   TshNotifyDialog *dialog = args->dialog;
 	gchar *from = args->from;
 	gchar *to = args->to;
 
 	g_free (args);
 
-	if ((err = svn_client_move4(&commit_info, from, to, FALSE, ctx, pool)))
+  subpool = svn_pool_create (pool);
+
+	if ((err = svn_client_move4(&commit_info, from, to, FALSE, ctx, subpool)))
 	{
+    svn_pool_destroy (subpool);
+
 		gdk_threads_enter();
 		tsh_notify_dialog_done (dialog);
 		gdk_threads_leave();
@@ -67,6 +72,8 @@ static gpointer move_thread (gpointer user_data)
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}
+
+  svn_pool_destroy (subpool);
 
   gdk_threads_enter();
   tsh_notify_dialog_done (dialog);
