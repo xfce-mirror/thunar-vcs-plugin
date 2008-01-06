@@ -170,6 +170,8 @@ AC_OUTPUT([
 Makefile
 icons/Makefile
 icons/16x16/Makefile
+icons/24x24/Makefile
+icons/48x48/Makefile
 po/Makefile.in
 thunar-svn-plugin/Makefile
 tsp-svn-helper/Makefile

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-05 02:28+0100\n"
+"POT-Creation-Date: 2008-01-06 01:40+0100\n"
 "PO-Revision-Date: 2007-11-09 15:08-0300\n"
 "Last-Translator: Fábio Nogueira <deb-user-ba@ubuntu.com>\n"
 "Language-Team: Brazilian Portuguese <ldp-br@bazar2.conectiva.com.br>\n"
@@ -17,120 +17,123 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. append the svn submenu action
-#: thunar-svn-plugin/tsp-provider.c:416 thunar-svn-plugin/tsp-provider.c:431
-#: thunar-svn-plugin/tsp-provider.c:466 thunar-svn-plugin/tsp-provider.c:474
+#. Lets see if we are dealing with a working copy
+#: thunar-svn-plugin/tsp-provider.c:431 thunar-svn-plugin/tsp-provider.c:462
 msgid "SVN"
 msgstr "SVN"
 
-#: thunar-svn-plugin/tsp-provider.c:421
-msgid "SVN _Import"
-msgstr "_Importar SVN"
-
-#: thunar-svn-plugin/tsp-provider.c:479
-msgid "SVN _Checkout"
-msgstr "SVN _Checkout"
-
-#: thunar-svn-plugin/tsp-provider.c:486
-#, fuzzy
-msgid "SVN _Export"
-msgstr "_Importar SVN"
-
-#: thunar-svn-plugin/tsp-svn-action.c:254 tsp-svn-helper/main.c:207
+#: thunar-svn-plugin/tsp-svn-action.c:268 tsp-svn-helper/main.c:207
 #: tsp-svn-helper/tsh-add.c:94
 msgid "Add"
 msgstr "Adicionar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:262
+#: thunar-svn-plugin/tsp-svn-action.c:280
+#: thunar-svn-plugin/tsp-svn-action.c:281
 msgid "Blame"
 msgstr "Falha"
 
-#: thunar-svn-plugin/tsp-svn-action.c:280 tsp-svn-helper/main.c:215
+#: thunar-svn-plugin/tsp-svn-action.c:295 tsp-svn-helper/main.c:211
+#: tsp-svn-helper/tsh-checkout.c:86 tsp-svn-helper/tsh-checkout.c:98
+msgid "Checkout"
+msgstr "Checkout"
+
+#: thunar-svn-plugin/tsp-svn-action.c:307 tsp-svn-helper/main.c:215
 msgid "Cleanup"
 msgstr "Limpar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:288 tsp-svn-helper/main.c:219
+#: thunar-svn-plugin/tsp-svn-action.c:319 tsp-svn-helper/main.c:219
 #: tsp-svn-helper/tsh-commit.c:101
 msgid "Commit"
 msgstr "Enviar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:296 tsp-svn-helper/main.c:223
+#: thunar-svn-plugin/tsp-svn-action.c:331 tsp-svn-helper/main.c:223
 #: tsp-svn-helper/tsh-copy.c:127
 #, fuzzy
 msgid "Copy"
 msgstr "Completado"
 
-#: thunar-svn-plugin/tsp-svn-action.c:304 tsp-svn-helper/main.c:227
+#: thunar-svn-plugin/tsp-svn-action.c:343 tsp-svn-helper/main.c:227
 #: tsp-svn-helper/tsh-delete.c:101
 msgid "Delete"
 msgstr "Apagar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:312
+#: thunar-svn-plugin/tsp-svn-action.c:355
+#: thunar-svn-plugin/tsp-svn-action.c:358
 msgid "Diff"
 msgstr "Diferença"
 
-#: thunar-svn-plugin/tsp-svn-action.c:320 tsp-svn-helper/main.c:231
+#: thunar-svn-plugin/tsp-svn-action.c:367 tsp-svn-helper/main.c:231
 #: tsp-svn-helper/tsh-export.c:95 tsp-svn-helper/tsh-export.c:113
 msgid "Export"
 msgstr "Exportar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:333
+#: thunar-svn-plugin/tsp-svn-action.c:379 tsp-svn-helper/main.c:235
+#: tsp-svn-helper/tsh-import.c:86 tsp-svn-helper/tsh-import.c:104
+#, fuzzy
+msgid "Import"
+msgstr "_Importar SVN"
+
+#: thunar-svn-plugin/tsp-svn-action.c:391
+#: thunar-svn-plugin/tsp-svn-action.c:394
 msgid "Info"
 msgstr "Informações"
 
-#: thunar-svn-plugin/tsp-svn-action.c:346 tsp-svn-helper/main.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:408 tsp-svn-helper/main.c:239
 #: tsp-svn-helper/tsh-lock.c:118 tsp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
 msgstr "Travar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:354 tsp-svn-helper/main.c:243
+#: thunar-svn-plugin/tsp-svn-action.c:420 tsp-svn-helper/main.c:243
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Log"
 
-#: thunar-svn-plugin/tsp-svn-action.c:372 tsp-svn-helper/main.c:247
+#: thunar-svn-plugin/tsp-svn-action.c:441 tsp-svn-helper/main.c:247
 #: tsp-svn-helper/tsh-move.c:126
 msgid "Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:386
+#: thunar-svn-plugin/tsp-svn-action.c:459
 msgid "Edit Properties"
 msgstr "Editar Propriedades"
 
-#: thunar-svn-plugin/tsp-svn-action.c:395 tsp-svn-helper/main.c:255
+#: thunar-svn-plugin/tsp-svn-action.c:472 tsp-svn-helper/main.c:255
 #: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-resolved.c:94
 #, fuzzy
 msgid "Resolved"
 msgstr "Resolver"
 
-#: thunar-svn-plugin/tsp-svn-action.c:403
+#: thunar-svn-plugin/tsp-svn-action.c:484
+#: thunar-svn-plugin/tsp-svn-action.c:487
 msgid "Resolve"
 msgstr "Resolver"
 
-#: thunar-svn-plugin/tsp-svn-action.c:411 tsp-svn-helper/main.c:259
+#: thunar-svn-plugin/tsp-svn-action.c:496 tsp-svn-helper/main.c:259
 #: tsp-svn-helper/tsh-revert.c:99
 msgid "Revert"
 msgstr "Reverter"
 
-#: thunar-svn-plugin/tsp-svn-action.c:419 tsp-svn-helper/main.c:263
+#: thunar-svn-plugin/tsp-svn-action.c:508 tsp-svn-helper/main.c:263
 #: tsp-svn-helper/tsh-status-dialog.c:184
 msgid "Status"
 msgstr "Status"
 
-#: thunar-svn-plugin/tsp-svn-action.c:427
+#: thunar-svn-plugin/tsp-svn-action.c:520
+#: thunar-svn-plugin/tsp-svn-action.c:523
 msgid "Switch"
 msgstr "Alternar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:435 tsp-svn-helper/main.c:267
+#: thunar-svn-plugin/tsp-svn-action.c:532 tsp-svn-helper/main.c:267
 #: tsp-svn-helper/tsh-unlock.c:99
 msgid "Unlock"
 msgstr "Destravar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:443 tsp-svn-helper/main.c:271
+#: thunar-svn-plugin/tsp-svn-action.c:542 tsp-svn-helper/main.c:271
 #: tsp-svn-helper/tsh-update.c:101
 msgid "Update"
 msgstr "Atualizar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:456
+#: thunar-svn-plugin/tsp-svn-action.c:559
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr ""
@@ -325,11 +328,6 @@ msgstr ""
 msgid "Checkout Related Opions:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:211 tsp-svn-helper/tsh-checkout.c:86
-#: tsp-svn-helper/tsh-checkout.c:98
-msgid "Checkout"
-msgstr "Checkout"
-
 #: tsp-svn-helper/main.c:215
 msgid "Cleanup Related Opions:"
 msgstr ""
@@ -353,12 +351,6 @@ msgstr ""
 #: tsp-svn-helper/main.c:235
 msgid "Import Related Opions:"
 msgstr ""
-
-#: tsp-svn-helper/main.c:235 tsp-svn-helper/tsh-import.c:86
-#: tsp-svn-helper/tsh-import.c:104
-#, fuzzy
-msgid "Import"
-msgstr "_Importar SVN"
 
 #: tsp-svn-helper/main.c:239
 msgid "Lock Related Opions:"
@@ -715,3 +707,13 @@ msgstr ""
 #: tsp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
 msgstr ""
+
+#~ msgid "SVN _Import"
+#~ msgstr "_Importar SVN"
+
+#~ msgid "SVN _Checkout"
+#~ msgstr "SVN _Checkout"
+
+#, fuzzy
+#~ msgid "SVN _Export"
+#~ msgstr "_Importar SVN"

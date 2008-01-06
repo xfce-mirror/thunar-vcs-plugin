@@ -38,21 +38,15 @@ GType      tsp_svn_action_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 
 GtkAction *tsp_svn_action_new      (const gchar*,
                                     const gchar*,
-																		GList *,
-																		GtkWidget *,
-																		gboolean,
-																		gboolean,
-																		gboolean,
-																		gboolean,
-																		gboolean,
-																		gboolean) G_GNUC_MALLOC G_GNUC_INTERNAL;
+				    GList *,
+				    GtkWidget *,
+				    gboolean,
+				    gboolean,
+				    gboolean,
+				    gboolean,
+				    gboolean,
+				    gboolean) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
 G_END_DECLS;
-
-
-void tsp_action_checkout (GtkMenuItem *, TspSvnAction *);
-void tsp_action_export (GtkMenuItem *, TspSvnAction *);
-void tsp_action_import (GtkMenuItem *, TspSvnAction *);
-void tsp_action_unimplemented (GtkMenuItem *, const gchar *);
 
 #endif /* !__TSP_SVN_ACTION_H__ */
