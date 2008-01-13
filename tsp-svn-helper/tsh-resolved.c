@@ -53,6 +53,7 @@ static gpointer resolved_thread (gpointer user_data)
 	TshNotifyDialog *dialog = args->dialog;
 	gchar **files = args->files;
 	gint size, i;
+  gchar *error_str;
 
 	g_free (args);
 
@@ -66,9 +67,15 @@ static gpointer resolved_thread (gpointer user_data)
 		{
       if ((err = svn_client_resolved(files[i], TRUE, ctx, subpool)))
       {
-        svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+        error_str = tsh_strerror(err);
+        gdk_threads_enter();
+        tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
+        gdk_threads_leave();
+        g_free(error_str);
+
         svn_error_clear(err);
         result = FALSE;
+        break; //FIXME: needed ??
       }
 		}
 	}
@@ -76,7 +83,12 @@ static gpointer resolved_thread (gpointer user_data)
 	{
     if ((err = svn_client_resolved("", TRUE, ctx, subpool)))
     {
-      svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+      error_str = tsh_strerror(err);
+      gdk_threads_enter();
+      tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
+      gdk_threads_leave();
+      g_free(error_str);
+
       svn_error_clear(err);
       result = FALSE;
     }

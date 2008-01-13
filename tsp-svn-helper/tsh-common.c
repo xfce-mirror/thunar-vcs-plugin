@@ -511,6 +511,38 @@ tsh_action_to_string(svn_wc_notify_action_t action)
 }
 
 static const gchar *
+tsh_notify_state_to_string(enum svn_wc_notify_state_t state)
+{
+  static const gchar const * const state_table[] = {
+    N_("Inapplicable"),
+    N_("Unknown"),
+    N_("Unchanged"),
+    N_("Missing"),
+    N_("Obstructed"),
+    N_("Changed"),
+    N_("Merged"),
+    N_("Conflicted")
+  };
+
+  const gchar *state_string = N_("Unknown");
+
+	switch(state)
+	{
+    case svn_wc_notify_state_inapplicable:
+    case svn_wc_notify_state_unknown:
+    case svn_wc_notify_state_unchanged:
+    case svn_wc_notify_state_missing:
+    case svn_wc_notify_state_obstructed:
+    case svn_wc_notify_state_changed:
+    case svn_wc_notify_state_merged:
+    case svn_wc_notify_state_conflicted:
+      state_string = state_table[state];
+      break;
+	}
+  return _(state_string);
+}
+
+static const gchar *
 tsh_status_to_string(enum svn_wc_status_kind status)
 {
   static const gchar const * const status_table[] = {
@@ -590,6 +622,17 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
   action = tsh_action_to_string(notify->action);
   path = notify->path;
   mime = notify->mime_type;
+
+  switch(notify->content_state)
+  {
+    case svn_wc_notify_state_obstructed:
+    case svn_wc_notify_state_merged:
+    case svn_wc_notify_state_conflicted:
+      action = tsh_notify_state_to_string(notify->content_state);
+      break;
+    default:
+      break;
+  }
 
 	switch(notify->action)
 	{
@@ -712,6 +755,58 @@ tsh_log_func (void *baton, apr_hash_t *changed_paths, svn_revnum_t revision, con
   g_free(date_str);
 
 	return SVN_NO_ERROR;
+}
+
+gchar *
+tsh_strerror(svn_error_t *err)
+{
+  GSList *iter, *done = NULL;
+  gboolean skip;
+  gchar *error = NULL;
+  gchar *freeme;
+  char message[256];
+  while(err)
+  {
+    if(err->message)
+    {
+      if(error)
+      {
+        freeme = error;
+        error = g_strconcat(error, "\r\n", err->message, NULL);
+        g_free(freeme);
+      }
+      else
+        error = g_strdup(err->message);
+    }
+    else
+    {
+      skip = FALSE;
+      for(iter = done; iter; iter = g_slist_next(iter))
+      {
+        if(GPOINTER_TO_INT(iter->data) == err->apr_err)
+        {
+          skip = TRUE;
+          break;
+        }
+      }
+      if(!skip)
+      {
+        done = g_slist_prepend(done, GINT_TO_POINTER(err->apr_err));
+        svn_strerror(err->apr_err, message, sizeof(message));
+        if(error)
+        {
+          freeme = error;
+          error = g_strconcat(error, "\r\n", message, NULL);
+          g_free(freeme);
+        }
+        else
+          error = g_strdup(message);
+        }
+    }
+    err = err->child;
+  }
+  g_slist_free(done);
+  return error;
 }
 
 gchar *

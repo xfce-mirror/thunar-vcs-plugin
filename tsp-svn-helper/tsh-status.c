@@ -57,6 +57,8 @@ static gpointer status_thread (gpointer user_data)
   gboolean update;
   gboolean no_ignore;
   gboolean ignore_externals;
+  GtkWidget *error;
+  gchar *error_str;
 
   gdk_threads_enter();
   recursive = tsh_status_dialog_get_show_recursive(dialog);
@@ -73,11 +75,16 @@ static gpointer status_thread (gpointer user_data)
 	{
     svn_pool_destroy (subpool);
 
+    error_str = tsh_strerror(err);
 		gdk_threads_enter();
 		tsh_status_dialog_done (dialog);
-		gdk_threads_leave();
 
-		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+    error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Status failed"));
+    gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), error_str);
+    tsh_dialog_start(GTK_DIALOG(error), FALSE);
+		gdk_threads_leave();
+    g_free(error_str);
+
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}

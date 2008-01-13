@@ -60,6 +60,8 @@ static gpointer properties_thread (gpointer user_data)
   gboolean recursive = args->recursive;
   svn_string_t *value;
   apr_array_header_t *prop_items;
+  GtkWidget *error;
+  gchar *error_str;
 
   args->set_key = NULL;
   args->set_value = NULL;
@@ -73,11 +75,16 @@ static gpointer properties_thread (gpointer user_data)
     if ((err = svn_client_propset2(set_key, value, path, recursive, FALSE, ctx, subpool)))
     {
       //svn_pool_destroy (subpool);
-      //gdk_threads_enter();
+      error_str = tsh_strerror(err);
+      gdk_threads_enter();
       //tsh_properties_dialog_done (dialog);
-      //gdk_threads_leave();
 
-      svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+      error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Set property failed"));
+      gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), error_str);
+      tsh_dialog_start(GTK_DIALOG(error), FALSE);
+      gdk_threads_leave();
+      g_free(error_str);
+
       svn_error_clear(err);
       //return GINT_TO_POINTER (FALSE);
     }
@@ -91,11 +98,16 @@ static gpointer properties_thread (gpointer user_data)
 	{
     svn_pool_destroy (subpool);
 
+    error_str = tsh_strerror(err);
 		gdk_threads_enter();
     tsh_properties_dialog_done (dialog);
-		gdk_threads_leave();
 
-		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
+    error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Properties failed"));
+    gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), error_str);
+    tsh_dialog_start(GTK_DIALOG(error), FALSE);
+		gdk_threads_leave();
+    g_free(error_str);
+
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}

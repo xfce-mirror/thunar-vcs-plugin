@@ -55,6 +55,7 @@ static gpointer move_thread (gpointer user_data)
   TshNotifyDialog *dialog = args->dialog;
 	gchar *from = args->from;
 	gchar *to = args->to;
+  gchar *error_str;
 
 	g_free (args);
 
@@ -64,11 +65,13 @@ static gpointer move_thread (gpointer user_data)
 	{
     svn_pool_destroy (subpool);
 
+    error_str = tsh_strerror(err);
 		gdk_threads_enter();
+    tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
 		tsh_notify_dialog_done (dialog);
 		gdk_threads_leave();
+    g_free(error_str);
 
-		svn_handle_error2(err, stderr, FALSE, G_LOG_DOMAIN ": ");
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
 	}

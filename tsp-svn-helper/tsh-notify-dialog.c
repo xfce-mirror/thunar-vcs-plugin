@@ -88,7 +88,7 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 	                                             -1, _("Action"),
 	                                             renderer, "text",
 	                                             COLUMN_ACTION, NULL);
-
+	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Path"),
@@ -101,7 +101,7 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 	                                             renderer, "text",
 	                                             COLUMN_MIME, NULL);
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
+	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
