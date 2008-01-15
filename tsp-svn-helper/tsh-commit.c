@@ -56,6 +56,8 @@ static gpointer commit_thread (gpointer user_data)
   gchar **files = args->files;
   gint size, i;
   gchar *error_str;
+  gchar *message;
+  gchar buffer[256];
 
 	g_free (args);
 
@@ -94,9 +96,19 @@ static gpointer commit_thread (gpointer user_data)
 		return GINT_TO_POINTER (FALSE);
 	}
 
+  if(SVN_IS_VALID_REVNUM(commit_info->revision))
+  {
+    g_snprintf(buffer, 256, _("At revision: %"SVN_REVNUM_T_FMT), commit_info->revision);
+    message = buffer;
+  }
+  else
+  {
+    message = _("Nothing to do");
+  }
   svn_pool_destroy (subpool);
 
 	gdk_threads_enter();
+  tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
 	tsh_notify_dialog_done (dialog);
 	gdk_threads_leave();
 	

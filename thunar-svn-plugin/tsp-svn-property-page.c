@@ -30,6 +30,8 @@
 
 #include <string.h>
 
+#include <subversion-1/svn_types.h>
+
 
 
 struct _TspSvnPropertyPageClass
@@ -149,6 +151,7 @@ tsp_svn_property_page_init (TspSvnPropertyPage *self)
   gtk_table_attach (GTK_TABLE (table), label, 1, 2, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (label);
 
+  /* Alignment in the most simple widget to find, for just doing a size request */
   spacer = g_object_new (GTK_TYPE_ALIGNMENT, "height-request", 12, NULL);
   gtk_table_attach (GTK_TABLE (table), spacer, 0, 2, 3, 4, GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (spacer);
@@ -284,11 +287,11 @@ tsp_svn_property_page_file_changed (ThunarxFileInfo *file, TspSvnPropertyPage *p
   {
     gchar *tmpstr;
     gtk_label_set_text (GTK_LABEL (page->url), info->url);
-    tmpstr = g_strdup_printf ("%li", info->revision);
+    tmpstr = g_strdup_printf ("%"SVN_REVNUM_T_FMT, info->revision);
     gtk_label_set_text (GTK_LABEL (page->revision), tmpstr);
     g_free (tmpstr);
     gtk_label_set_text (GTK_LABEL (page->repository), info->repository);
-    tmpstr = g_strdup_printf ("%li", info->modrev);
+    tmpstr = g_strdup_printf ("%"SVN_REVNUM_T_FMT, info->modrev);
     gtk_label_set_text (GTK_LABEL (page->modrev), tmpstr);
     g_free (tmpstr);
     gtk_label_set_text (GTK_LABEL (page->moddate), info->moddate);

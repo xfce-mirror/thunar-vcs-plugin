@@ -57,6 +57,8 @@ static gpointer copy_thread (gpointer user_data)
 	gchar *from = args->from;
 	gchar *to = args->to;
   gchar *error_str;
+  gchar *message;
+  gchar buffer[256];
 
 	g_free (args);
 
@@ -78,11 +80,21 @@ static gpointer copy_thread (gpointer user_data)
 		return GINT_TO_POINTER (FALSE);
 	}
 
+  if(SVN_IS_VALID_REVNUM(commit_info->revision))
+  {
+    g_snprintf(buffer, 256, _("At revision: %"SVN_REVNUM_T_FMT), commit_info->revision);
+    message = buffer;
+  }
+  else
+  {
+    message = _("Local copy");
+  }
   svn_pool_destroy (subpool);
 
-  gdk_threads_enter();
-  tsh_notify_dialog_done (dialog);
-  gdk_threads_leave();
+	gdk_threads_enter();
+  tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
+	tsh_notify_dialog_done (dialog);
+	gdk_threads_leave();
 
 	return GINT_TO_POINTER (TRUE);
 }

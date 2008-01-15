@@ -57,6 +57,7 @@ static gpointer import_thread (gpointer user_data)
 	gchar *path = args->path;
 	gchar *url = args->url;
   gchar *error_str;
+  gchar buffer[256];
 
 	g_free (args);
 
@@ -77,9 +78,11 @@ static gpointer import_thread (gpointer user_data)
 		return GINT_TO_POINTER (FALSE);
 	}
 
+  g_snprintf(buffer, 256, _("At revision: %"SVN_REVNUM_T_FMT), commit_info->revision);
   svn_pool_destroy (subpool);
 
 	gdk_threads_enter();
+  tsh_notify_dialog_add(dialog, _("Completed"), buffer, NULL);
 	tsh_notify_dialog_done (dialog);
 	gdk_threads_leave();
 	
