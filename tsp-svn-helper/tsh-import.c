@@ -78,7 +78,7 @@ static gpointer import_thread (gpointer user_data)
 		return GINT_TO_POINTER (FALSE);
 	}
 
-  g_snprintf(buffer, 256, _("At revision: %"SVN_REVNUM_T_FMT), commit_info->revision);
+  g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
   svn_pool_destroy (subpool);
 
 	gdk_threads_enter();

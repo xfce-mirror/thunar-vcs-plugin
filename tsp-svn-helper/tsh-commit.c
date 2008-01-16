@@ -98,7 +98,7 @@ static gpointer commit_thread (gpointer user_data)
 
   if(SVN_IS_VALID_REVNUM(commit_info->revision))
   {
-    g_snprintf(buffer, 256, _("At revision: %"SVN_REVNUM_T_FMT), commit_info->revision);
+    g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
     message = buffer;
   }
   else

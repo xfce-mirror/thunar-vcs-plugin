@@ -637,7 +637,7 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
 	switch(notify->action)
 	{
 		case svn_wc_notify_update_completed:
-			g_snprintf(buffer, 256, _("At revision: %"SVN_REVNUM_T_FMT), notify->revision);
+			g_snprintf(buffer, 256, _("At revision: %ld"), notify->revision);
       path = buffer;
 			break;
     default:
