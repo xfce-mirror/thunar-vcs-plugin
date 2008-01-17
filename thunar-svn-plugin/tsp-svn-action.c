@@ -29,6 +29,7 @@
 
 #include <string.h>
 
+#include <sys/wait.h>
 
 
 struct _TspSvnActionClass
@@ -559,6 +560,35 @@ void tsp_action_unimplemented (GtkAction *item, const gchar *tsp_action)
 
 
 
+void tsp_child_watch (GPid pid, gint status, gpointer data)
+{
+  gchar *watch_path = data;
+
+  if (G_LIKELY (data))
+  {
+    GDK_THREADS_ENTER ();
+
+    ThunarVfsPath *path = thunar_vfs_path_new (watch_path, NULL);
+
+    if (G_LIKELY (path))
+    {
+      ThunarVfsMonitor *monitor = thunar_vfs_monitor_get_default ();
+      thunar_vfs_monitor_feed (monitor, THUNAR_VFS_MONITOR_EVENT_CHANGED, path);
+      g_object_unref (G_OBJECT (monitor));
+      thunar_vfs_path_unref (path);
+    }
+
+    GDK_THREADS_LEAVE ();
+
+    //this is done by destroy callback
+    //g_free (watch_path);
+  }
+
+  g_spawn_close_pid (pid);
+}
+
+
+
 void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
 {
 	guint size, i;
@@ -567,6 +597,7 @@ void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
 	gchar *uri;
 	gchar *filename;
 	gchar *file;
+  gchar *watch_path = NULL;
 	gint pid;
 	GError *error = NULL;
 	GdkScreen *screen = gtk_window_get_screen (GTK_WINDOW (tsp_action->window));
@@ -580,6 +611,22 @@ void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
 	argv[0] = g_strdup (TSP_SVN_HELPER);
 	argv[1] = g_strdup (g_object_get_qdata (G_OBJECT (item), tsp_action_arg_quark));
 	argv[size + 2] = NULL;
+
+  if(iter)
+  {
+    if(tsp_action->property.is_parent)
+    {
+      uri = thunarx_file_info_get_uri (iter->data);
+      watch_path = g_filename_from_uri (uri, NULL, NULL);
+      g_free (uri);
+    }
+    else
+    {
+      uri = thunarx_file_info_get_parent_uri (iter->data);
+      watch_path = g_filename_from_uri (uri, NULL, NULL);
+      g_free (uri);
+    }
+  }
 
 	for (i = 0; i < size; i++)
 	{
@@ -618,15 +665,20 @@ void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
 
 		iter = g_list_next (iter);
 	}
-
-	if (!gdk_spawn_on_screen (screen, NULL, argv, NULL, 0, NULL, NULL, &pid, &error))
+pid = 0;
+	if (!gdk_spawn_on_screen (screen, NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, &error))
 	{
+    g_free (watch_path);
 		GtkWidget *dialog = gtk_message_dialog_new (GTK_WINDOW (tsp_action->window), GTK_DIALOG_DESTROY_WITH_PARENT|GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, "Could not spawn \'" TSP_SVN_HELPER "\'");
 		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
 		gtk_dialog_run (GTK_DIALOG (dialog));
 		gtk_widget_destroy (dialog);
 		g_error_free (error);
 	}
+  else
+  {
+    g_child_watch_add_full (G_PRIORITY_LOW, pid, tsp_child_watch, watch_path, g_free);
+  }
 
 	g_strfreev (argv);
 }

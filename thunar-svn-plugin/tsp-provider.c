@@ -79,14 +79,6 @@ struct _TspProvider
    */
   GtkIconFactory *icon_factory;
 #endif
-
-  /* child watch support for the last spawn command,
-   * which allows us to refresh the folder contents
-   * after the command terminates (i.e. files are
-   * added).
-   */
-  gchar          *child_watch_path;
-  gint            child_watch_id;
 };
 
 
@@ -166,21 +158,9 @@ tsp_provider_init (TspProvider *tsp_provider)
 static void
 tsp_provider_finalize (GObject *object)
 {
-  TspProvider *tsp_provider = TSP_PROVIDER (object);
-  GSource     *source;
-
-  /* give up maintaince of any pending child watch */
-  if (G_UNLIKELY (tsp_provider->child_watch_id != 0))
-    {
-      /* reset the callback function to g_spawn_close_pid() so the plugin can be
-       * safely unloaded and the child will still not become a zombie afterwards.
-       * This also resets the child_watch_id and child_watch_path properties.
-       */
-      source = g_main_context_find_source_by_id (NULL, tsp_provider->child_watch_id);
-      g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
-    }
-  
 #if !GTK_CHECK_VERSION(2,9,0)
+  TspProvider *tsp_provider = TSP_PROVIDER (object);
+
   /* release our icon factory */
   gtk_icon_factory_remove_default (tsp_provider->icon_factory);
   g_object_unref (G_OBJECT (tsp_provider->icon_factory));

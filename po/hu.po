@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar SVN plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-16 01:10+0100\n"
+"POT-Creation-Date: 2008-01-17 22:09+0100\n"
 "PO-Revision-Date: 2007-06-04 08:37+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -15,228 +15,228 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-svn-plugin/tsp-provider.c:433 thunar-svn-plugin/tsp-provider.c:464
+#: thunar-svn-plugin/tsp-provider.c:413 thunar-svn-plugin/tsp-provider.c:444
 msgid "SVN"
 msgstr "SVN"
 
-#: thunar-svn-plugin/tsp-svn-action.c:241
+#: thunar-svn-plugin/tsp-svn-action.c:242
 msgid "Menu|Add"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:241 tsp-svn-helper/main.c:207
+#: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:207
 #: tsp-svn-helper/tsh-add.c:111
 msgid "Add"
 msgstr "Hozzáad"
 
-#: thunar-svn-plugin/tsp-svn-action.c:254
+#: thunar-svn-plugin/tsp-svn-action.c:255
 msgid "Menu|Blame"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:254
 #: thunar-svn-plugin/tsp-svn-action.c:255
+#: thunar-svn-plugin/tsp-svn-action.c:256
 msgid "Blame"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:273
+#: thunar-svn-plugin/tsp-svn-action.c:274
 #, fuzzy
 msgid "Menu|Checkout"
 msgstr "SVN _Checkout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:273 tsp-svn-helper/main.c:211
+#: thunar-svn-plugin/tsp-svn-action.c:274 tsp-svn-helper/main.c:211
 #: tsp-svn-helper/tsh-checkout.c:96 tsp-svn-helper/tsh-checkout.c:108
 #, fuzzy
 msgid "Checkout"
 msgstr "SVN _Checkout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:286
+#: thunar-svn-plugin/tsp-svn-action.c:287
 #, fuzzy
 msgid "Menu|Cleanup"
 msgstr "Tisztít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:286 tsp-svn-helper/main.c:215
+#: thunar-svn-plugin/tsp-svn-action.c:287 tsp-svn-helper/main.c:215
 msgid "Cleanup"
 msgstr "Tisztít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:299
+#: thunar-svn-plugin/tsp-svn-action.c:300
 msgid "Menu|Commit"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:299 tsp-svn-helper/main.c:219
+#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:219
 #: tsp-svn-helper/tsh-commit.c:123
 msgid "Commit"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:312
+#: thunar-svn-plugin/tsp-svn-action.c:313
 #, fuzzy
 msgid "Menu|Copy"
 msgstr "Kész"
 
-#: thunar-svn-plugin/tsp-svn-action.c:312 tsp-svn-helper/main.c:223
+#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:223
 #: tsp-svn-helper/tsh-copy.c:149
 #, fuzzy
 msgid "Copy"
 msgstr "Kész"
 
-#: thunar-svn-plugin/tsp-svn-action.c:325
+#: thunar-svn-plugin/tsp-svn-action.c:326
 #, fuzzy
 msgid "Menu|Delete"
 msgstr "Töröl"
 
-#: thunar-svn-plugin/tsp-svn-action.c:325 tsp-svn-helper/main.c:227
+#: thunar-svn-plugin/tsp-svn-action.c:326 tsp-svn-helper/main.c:227
 #: tsp-svn-helper/tsh-delete.c:123
 msgid "Delete"
 msgstr "Töröl"
 
-#: thunar-svn-plugin/tsp-svn-action.c:338
+#: thunar-svn-plugin/tsp-svn-action.c:339
 #, fuzzy
 msgid "Menu|Diff"
 msgstr "Különbség"
 
-#: thunar-svn-plugin/tsp-svn-action.c:338
 #: thunar-svn-plugin/tsp-svn-action.c:339
+#: thunar-svn-plugin/tsp-svn-action.c:340
 msgid "Diff"
 msgstr "Különbség"
 
-#: thunar-svn-plugin/tsp-svn-action.c:350
+#: thunar-svn-plugin/tsp-svn-action.c:351
 #, fuzzy
 msgid "Menu|Export"
 msgstr "Export"
 
-#: thunar-svn-plugin/tsp-svn-action.c:350 tsp-svn-helper/main.c:231
+#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:231
 #: tsp-svn-helper/tsh-export.c:105 tsp-svn-helper/tsh-export.c:123
 msgid "Export"
 msgstr "Export"
 
-#: thunar-svn-plugin/tsp-svn-action.c:363
+#: thunar-svn-plugin/tsp-svn-action.c:364
 #, fuzzy
 msgid "Menu|Import"
 msgstr "SVN _Import"
 
-#: thunar-svn-plugin/tsp-svn-action.c:363 tsp-svn-helper/main.c:235
+#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:235
 #: tsp-svn-helper/tsh-import.c:99 tsp-svn-helper/tsh-import.c:117
 #, fuzzy
 msgid "Import"
 msgstr "SVN _Import"
 
-#: thunar-svn-plugin/tsp-svn-action.c:376
+#: thunar-svn-plugin/tsp-svn-action.c:377
 #, fuzzy
 msgid "Menu|Info"
 msgstr "Adatok"
 
-#: thunar-svn-plugin/tsp-svn-action.c:376
 #: thunar-svn-plugin/tsp-svn-action.c:377
+#: thunar-svn-plugin/tsp-svn-action.c:378
 msgid "Info"
 msgstr "Adatok"
 
-#: thunar-svn-plugin/tsp-svn-action.c:393
+#: thunar-svn-plugin/tsp-svn-action.c:394
 #, fuzzy
 msgid "Menu|Lock"
 msgstr "Zár"
 
-#: thunar-svn-plugin/tsp-svn-action.c:393 tsp-svn-helper/main.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:394 tsp-svn-helper/main.c:239
 #: tsp-svn-helper/tsh-lock.c:128 tsp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
 msgstr "Zár"
 
-#: thunar-svn-plugin/tsp-svn-action.c:406
+#: thunar-svn-plugin/tsp-svn-action.c:407
 msgid "Menu|Log"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:406 tsp-svn-helper/main.c:243
+#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:243
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Napló"
 
-#: thunar-svn-plugin/tsp-svn-action.c:428
+#: thunar-svn-plugin/tsp-svn-action.c:429
 msgid "Menu|Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:428 tsp-svn-helper/main.c:247
+#: thunar-svn-plugin/tsp-svn-action.c:429 tsp-svn-helper/main.c:247
 #: tsp-svn-helper/tsh-move.c:148
 msgid "Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:447
+#: thunar-svn-plugin/tsp-svn-action.c:448
 #, fuzzy
 msgid "Menu|Edit Properties"
 msgstr "Tulajdonságok szerkesztése"
 
-#: thunar-svn-plugin/tsp-svn-action.c:447
+#: thunar-svn-plugin/tsp-svn-action.c:448
 msgid "Edit Properties"
 msgstr "Tulajdonságok szerkesztése"
 
-#: thunar-svn-plugin/tsp-svn-action.c:461
+#: thunar-svn-plugin/tsp-svn-action.c:462
 #, fuzzy
 msgid "Menu|Resolved"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:461 tsp-svn-helper/main.c:255
+#: thunar-svn-plugin/tsp-svn-action.c:462 tsp-svn-helper/main.c:255
 #: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-resolved.c:111
 #, fuzzy
 msgid "Resolved"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:474
+#: thunar-svn-plugin/tsp-svn-action.c:475
 #, fuzzy
 msgid "Menu|Resolve"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:474
 #: thunar-svn-plugin/tsp-svn-action.c:475
+#: thunar-svn-plugin/tsp-svn-action.c:476
 msgid "Resolve"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:486
+#: thunar-svn-plugin/tsp-svn-action.c:487
 #, fuzzy
 msgid "Menu|Revert"
 msgstr "Visszaállít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:486 tsp-svn-helper/main.c:259
+#: thunar-svn-plugin/tsp-svn-action.c:487 tsp-svn-helper/main.c:259
 #: tsp-svn-helper/tsh-revert.c:109
 msgid "Revert"
 msgstr "Visszaállít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:499
+#: thunar-svn-plugin/tsp-svn-action.c:500
 #, fuzzy
 msgid "Menu|Status"
 msgstr "Állapot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:499 tsp-svn-helper/main.c:263
+#: thunar-svn-plugin/tsp-svn-action.c:500 tsp-svn-helper/main.c:263
 #: tsp-svn-helper/tsh-status-dialog.c:184
 msgid "Status"
 msgstr "Állapot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:512
+#: thunar-svn-plugin/tsp-svn-action.c:513
 #, fuzzy
 msgid "Menu|Switch"
 msgstr "Vált"
 
-#: thunar-svn-plugin/tsp-svn-action.c:512
 #: thunar-svn-plugin/tsp-svn-action.c:513
+#: thunar-svn-plugin/tsp-svn-action.c:514
 msgid "Switch"
 msgstr "Vált"
 
-#: thunar-svn-plugin/tsp-svn-action.c:524
+#: thunar-svn-plugin/tsp-svn-action.c:525
 #, fuzzy
 msgid "Menu|Unlock"
 msgstr "Felold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:524 tsp-svn-helper/main.c:267
+#: thunar-svn-plugin/tsp-svn-action.c:525 tsp-svn-helper/main.c:267
 #: tsp-svn-helper/tsh-unlock.c:109
 msgid "Unlock"
 msgstr "Felold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:537
+#: thunar-svn-plugin/tsp-svn-action.c:538
 #, fuzzy
 msgid "Menu|Update"
 msgstr "Frissít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:537 tsp-svn-helper/main.c:271
+#: thunar-svn-plugin/tsp-svn-action.c:538 tsp-svn-helper/main.c:271
 #: tsp-svn-helper/tsh-update.c:111
 msgid "Update"
 msgstr "Frissít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:555
+#: thunar-svn-plugin/tsp-svn-action.c:556
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr ""
