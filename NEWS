@@ -1,0 +1,8 @@
+0.0.1
+=====
+- Initial release of the Thunar SVN Plugin. This version of the Subversion
+  Plugin has suport for various Subversion action: add, checkout, cleanup,
+  commit, copy, delete, export, import, lock, log, move, properties, resolved,
+  revert, status, unlock, update.
+
+# vi:set ts=2 sw=2 et ai nocindent textwidth=80:

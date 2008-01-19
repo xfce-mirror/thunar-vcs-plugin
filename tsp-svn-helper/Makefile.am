@@ -102,4 +102,4 @@ tsp_svn_helper_LDFLAGS =						\
 	$(GOBJECT_LIBS)							\
 	$(APR_LIBS)
 
-# vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
+# vi:set ts=8 sw=8 noet ai nocindent:

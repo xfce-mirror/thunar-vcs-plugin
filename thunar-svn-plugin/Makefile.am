@@ -39,4 +39,4 @@ thunar_svn_plugin_la_LDFLAGS =						\
 	$(THUNAR_VFS_LDFLAGS)						\
 	$(APR_LDFLAGS)
 
-# vi:set ts=8 sw=8 noet ai nocindent syntax=automake:
+# vi:set ts=8 sw=8 noet ai nocindent:
