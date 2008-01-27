@@ -246,30 +246,35 @@ tsh_log_dialog_add (TshLogDialog *dialog, GSList *files, glong revision, const c
 {
 	GtkTreeModel *model;
 	GtkTreeIter iter;
-  gchar **lines;
-  gchar **first_line;
+  gchar **lines = NULL;
+  gchar **line_iter;
+  gchar *first_line = NULL;
 
   g_return_if_fail (TSH_IS_LOG_DIALOG (dialog));
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
-  lines = g_strsplit_set (message, "\r\n", -1);
-  first_line = lines;
-  while (*first_line)
+  if(message)
   {
-    if (g_strstrip (*first_line)[0])
-      break;
-    first_line++;
+    lines = g_strsplit_set (message, "\r\n", -1);
+    line_iter = lines;
+    while (*line_iter)
+    {
+      if (g_strstrip (*line_iter)[0])
+        break;
+      line_iter++;
+    }
+    if (!line_iter)
+      line_iter = lines;
+    first_line = *line_iter;
   }
-  if (!first_line)
-    first_line = lines;
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
 	                    COLUMN_REVISION, revision,
 	                    COLUMN_AUTHOR, author,
 	                    COLUMN_DATE, date,
-	                    COLUMN_MESSAGE, *first_line,
+	                    COLUMN_MESSAGE, first_line,
 	                    COLUMN_FULL_MESSAGE, message,
                       COLUMN_FILE_LIST, files,
 	                    -1);
@@ -302,7 +307,7 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
   if (gtk_tree_selection_get_selected (selection, &model, &iter))
   {
     gtk_tree_model_get (model, &iter, COLUMN_FULL_MESSAGE, &message, COLUMN_FILE_LIST, &files, -1);
-    gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), message, -1);
+    gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), message?message:"", -1);
     g_free (message);
 
     model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->file_view));
