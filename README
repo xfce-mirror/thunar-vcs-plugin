@@ -34,8 +34,9 @@ The Thunar SVN Plugin depends on the following packages:
 Installation
 ============
 
-The file 'INSTALL' contains generic installation instructions. For more detailed
-information, visit the thunar-svn-plugin website at
+The file 'INSTALL' contains generic installation instructions. Make sure to run
+./configure --prefix=$(pkg-config --variable prefix thunarx-1) so Thunar can
+find the plugin. For more information, visit the thunar-svn-plugin website at
 http://goodies.xfce.org/projects/thunar-plugins/thunar-svn-plugin
 
 
