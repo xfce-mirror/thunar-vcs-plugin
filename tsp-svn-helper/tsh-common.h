@@ -33,6 +33,8 @@ svn_error_t *tsh_log_func      (void *, apr_hash_t *, svn_revnum_t, const char *
 
 gchar       *tsh_strerror  (svn_error_t *);
 
+const gchar *tsh_status_to_string(enum svn_wc_status_kind status);
+
 gchar *tsh_is_working_copy (const gchar *, apr_pool_t *);
 
 G_END_DECLS

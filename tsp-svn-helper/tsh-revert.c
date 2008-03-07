@@ -32,6 +32,7 @@
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
+#include "tsh-file-selection-dialog.h"
 #include "tsh-notify-dialog.h"
 
 #include "tsh-revert.h"
@@ -105,6 +106,19 @@ GThread *tsh_revert (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
+
+  dialog = tsh_file_selection_dialog_new (_("Revert"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_MODIFIED, ctx, pool);
+	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
+  {
+    gtk_widget_destroy (dialog);
+    return NULL;
+  }
+  g_strfreev (files);
+  files = tsh_file_selection_dialog_get_files (TSH_FILE_SELECTION_DIALOG (dialog));
+  gtk_widget_destroy (dialog);
+
+  if(!files)
+    return NULL;
 
 	dialog = tsh_notify_dialog_new (_("Revert"), NULL, 0);
   g_signal_connect(dialog, "cancel-clicked", tsh_cancel, NULL);

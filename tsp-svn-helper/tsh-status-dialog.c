@@ -109,7 +109,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
 	dialog->tree_view = tree_view = gtk_tree_view_new ();
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Path"),

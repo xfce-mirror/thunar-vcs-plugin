@@ -542,7 +542,7 @@ tsh_notify_state_to_string(enum svn_wc_notify_state_t state)
   return _(state_string);
 }
 
-static const gchar *
+const gchar *
 tsh_status_to_string(enum svn_wc_status_kind status)
 {
   static const gchar const * const status_table[] = {

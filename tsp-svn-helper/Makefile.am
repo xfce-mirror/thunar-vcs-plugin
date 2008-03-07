@@ -62,6 +62,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-notify-dialog.c						\
 	tsh-status-dialog.h						\
 	tsh-status-dialog.c						\
+	tsh-file-selection-dialog.h					\
+	tsh-file-selection-dialog.c					\
 	tsh-lock-dialog.h						\
 	tsh-lock-dialog.c						\
 	tsh-log-dialog.h						\
