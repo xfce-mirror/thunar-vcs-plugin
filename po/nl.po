@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-17 22:09+0100\n"
-"PO-Revision-Date: 2008-01-16 01:10+0100\n"
+"POT-Creation-Date: 2008-03-18 21:25+0100\n"
+"PO-Revision-Date: 2008-03-18 21:25+0100\n"
 "Last-Translator: Peter de Ridder <peter@xfce.org>\n"
 "Language-Team: Dutch <xfce-i18n@xfce.org>\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Menu|Add"
 msgstr ""
 
 #: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:207
-#: tsp-svn-helper/tsh-add.c:111
+#: tsp-svn-helper/tsh-add.c:112 tsp-svn-helper/tsh-add.c:125
 msgid "Add"
 msgstr "Toevoegen"
 
@@ -61,7 +61,7 @@ msgid "Menu|Commit"
 msgstr ""
 
 #: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:219
-#: tsp-svn-helper/tsh-commit.c:123
+#: tsp-svn-helper/tsh-commit.c:124 tsp-svn-helper/tsh-commit.c:137
 msgid "Commit"
 msgstr "Versturen"
 
@@ -79,7 +79,7 @@ msgid "Menu|Delete"
 msgstr ""
 
 #: thunar-svn-plugin/tsp-svn-action.c:326 tsp-svn-helper/main.c:227
-#: tsp-svn-helper/tsh-delete.c:123
+#: tsp-svn-helper/tsh-delete.c:124 tsp-svn-helper/tsh-delete.c:137
 msgid "Delete"
 msgstr "Verwijderen"
 
@@ -177,7 +177,7 @@ msgid "Menu|Revert"
 msgstr ""
 
 #: thunar-svn-plugin/tsp-svn-action.c:487 tsp-svn-helper/main.c:259
-#: tsp-svn-helper/tsh-revert.c:109
+#: tsp-svn-helper/tsh-revert.c:110 tsp-svn-helper/tsh-revert.c:123
 msgid "Revert"
 msgstr "Terug Halen"
 
@@ -389,51 +389,51 @@ msgid "Execute update action"
 msgstr "Bijwerk actie uitvoeren"
 
 #: tsp-svn-helper/main.c:207
-msgid "Add Related Opions:"
+msgid "Add Related Options:"
 msgstr "Toevoegen gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:211
-msgid "Checkout Related Opions:"
+msgid "Checkout Related Options:"
 msgstr "Ophalen gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:215
-msgid "Cleanup Related Opions:"
+msgid "Cleanup Related Options:"
 msgstr "Opschonen gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:219
-msgid "Commit Related Opions:"
+msgid "Commit Related Options:"
 msgstr "Versturen gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:223
-msgid "Copy Related Opions:"
+msgid "Copy Related Options:"
 msgstr "Kopieer gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:227
-msgid "Delete Related Opions:"
+msgid "Delete Related Options:"
 msgstr "Verwijder gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:231
-msgid "Export Related Opions:"
+msgid "Export Related Options:"
 msgstr "Exporteer gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:235
-msgid "Import Related Opions:"
+msgid "Import Related Options:"
 msgstr "Importeer gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:239
-msgid "Lock Related Opions:"
+msgid "Lock Related Options:"
 msgstr "Vast zetten gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:243
-msgid "Log Related Opions:"
+msgid "Log Related Options:"
 msgstr "Geschiedenis gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:247
-msgid "Move Related Opions:"
+msgid "Move Related Options:"
 msgstr "Verplaats gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:251
-msgid "Properties Related Opions:"
+msgid "Properties Related Options:"
 msgstr "Attributen gerelateerde opties:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
@@ -443,36 +443,36 @@ msgid "Properties"
 msgstr "Attributen"
 
 #: tsp-svn-helper/main.c:255
-msgid "Resolved Related Opions:"
+msgid "Resolved Related Options:"
 msgstr "Verholpen gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:259
-msgid "Revert Related Opions:"
+msgid "Revert Related Options:"
 msgstr "Terug haal gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:263
-msgid "Status Related Opions:"
+msgid "Status Related Options:"
 msgstr "Status gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:267
-msgid "Unlock Related Opions:"
+msgid "Unlock Related Options:"
 msgstr "Vrijgeven gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:271
-msgid "Update Related Opions:"
+msgid "Update Related Options:"
 msgstr "Bijwerken gerelateerde opties:"
 
 #: tsp-svn-helper/main.c:317
 msgid "Not enough arguments provided"
 msgstr "Onvoldoende argumenten meegegeven"
 
-#: tsp-svn-helper/tsh-add.c:72 tsp-svn-helper/tsh-add.c:88
-#: tsp-svn-helper/tsh-checkout.c:71 tsp-svn-helper/tsh-commit.c:90
-#: tsp-svn-helper/tsh-copy.c:74 tsp-svn-helper/tsh-delete.c:90
+#: tsp-svn-helper/tsh-add.c:73 tsp-svn-helper/tsh-add.c:89
+#: tsp-svn-helper/tsh-checkout.c:71 tsp-svn-helper/tsh-commit.c:91
+#: tsp-svn-helper/tsh-copy.c:74 tsp-svn-helper/tsh-delete.c:91
 #: tsp-svn-helper/tsh-export.c:72 tsp-svn-helper/tsh-import.c:72
 #: tsp-svn-helper/tsh-lock.c:91 tsp-svn-helper/tsh-move.c:72
 #: tsp-svn-helper/tsh-resolved.c:72 tsp-svn-helper/tsh-resolved.c:88
-#: tsp-svn-helper/tsh-revert.c:86 tsp-svn-helper/tsh-unlock.c:86
+#: tsp-svn-helper/tsh-revert.c:87 tsp-svn-helper/tsh-unlock.c:86
 #: tsp-svn-helper/tsh-update.c:88
 msgid "Failed"
 msgstr "Gefaald"
@@ -489,25 +489,25 @@ msgstr "Klaar met opschonen"
 msgid "Cleaning up ..."
 msgstr "Bezig met opschonen ..."
 
-#: tsp-svn-helper/tsh-commit.c:101 tsp-svn-helper/tsh-common.c:640
-#: tsp-svn-helper/tsh-copy.c:85 tsp-svn-helper/tsh-delete.c:101
+#: tsp-svn-helper/tsh-commit.c:102 tsp-svn-helper/tsh-common.c:640
+#: tsp-svn-helper/tsh-copy.c:85 tsp-svn-helper/tsh-delete.c:102
 #: tsp-svn-helper/tsh-import.c:81 tsp-svn-helper/tsh-move.c:83
 #, c-format
 msgid "At revision: %ld"
 msgstr "Op versie: %ld"
 
-#: tsp-svn-helper/tsh-commit.c:106
+#: tsp-svn-helper/tsh-commit.c:107
 msgid "Nothing to do"
 msgstr "Niets te doen"
 
-#: tsp-svn-helper/tsh-commit.c:111 tsp-svn-helper/tsh-common.c:462
+#: tsp-svn-helper/tsh-commit.c:112 tsp-svn-helper/tsh-common.c:462
 #: tsp-svn-helper/tsh-common.c:464 tsp-svn-helper/tsh-copy.c:95
-#: tsp-svn-helper/tsh-delete.c:111 tsp-svn-helper/tsh-import.c:85
+#: tsp-svn-helper/tsh-delete.c:112 tsp-svn-helper/tsh-import.c:85
 #: tsp-svn-helper/tsh-move.c:93
 msgid "Completed"
 msgstr "Voltooid"
 
-#: tsp-svn-helper/tsh-commit.c:128
+#: tsp-svn-helper/tsh-commit.c:142
 msgid "Commit Message"
 msgstr ""
 
@@ -632,11 +632,11 @@ msgstr "Lokaal gekopieerd"
 msgid "Copy To"
 msgstr "Kopieeren naar"
 
-#: tsp-svn-helper/tsh-delete.c:106
+#: tsp-svn-helper/tsh-delete.c:107
 msgid "Local delete"
 msgstr "Lokaal verwijderd"
 
-#: tsp-svn-helper/tsh-delete.c:128
+#: tsp-svn-helper/tsh-delete.c:142
 msgid "Delete Message"
 msgstr ""
 

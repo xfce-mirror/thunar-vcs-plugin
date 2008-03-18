@@ -204,71 +204,71 @@ int main (int argc, char *argv[])
 	g_option_context_add_main_entries(option_context, general_options_table, GETTEXT_PACKAGE);
 	g_option_context_add_group(option_context, gtk_get_option_group(TRUE));
 
-	option_group = g_option_group_new("add", N_("Add Related Opions:"), N_("Add"), NULL, NULL);
+	option_group = g_option_group_new("add", N_("Add Related Options:"), N_("Add"), NULL, NULL);
 	g_option_group_add_entries(option_group, add_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("checkout", N_("Checkout Related Opions:"), N_("Checkout"), NULL, NULL);
+	option_group = g_option_group_new("checkout", N_("Checkout Related Options:"), N_("Checkout"), NULL, NULL);
 	g_option_group_add_entries(option_group, checkout_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("cleanup", N_("Cleanup Related Opions:"), N_("Cleanup"), NULL, NULL);
+	option_group = g_option_group_new("cleanup", N_("Cleanup Related Options:"), N_("Cleanup"), NULL, NULL);
 	g_option_group_add_entries(option_group, cleanup_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("commit", N_("Commit Related Opions:"), N_("Commit"), NULL, NULL);
+	option_group = g_option_group_new("commit", N_("Commit Related Options:"), N_("Commit"), NULL, NULL);
 	g_option_group_add_entries(option_group, commit_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("copy", N_("Copy Related Opions:"), N_("Copy"), NULL, NULL);
+	option_group = g_option_group_new("copy", N_("Copy Related Options:"), N_("Copy"), NULL, NULL);
 	g_option_group_add_entries(option_group, copy_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("delete", N_("Delete Related Opions:"), N_("Delete"), NULL, NULL);
+	option_group = g_option_group_new("delete", N_("Delete Related Options:"), N_("Delete"), NULL, NULL);
 	g_option_group_add_entries(option_group, delete_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("export", N_("Export Related Opions:"), N_("Export"), NULL, NULL);
+	option_group = g_option_group_new("export", N_("Export Related Options:"), N_("Export"), NULL, NULL);
 	g_option_group_add_entries(option_group, export_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("import", N_("Import Related Opions:"), N_("Import"), NULL, NULL);
+	option_group = g_option_group_new("import", N_("Import Related Options:"), N_("Import"), NULL, NULL);
 	g_option_group_add_entries(option_group, import_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("lock", N_("Lock Related Opions:"), N_("Lock"), NULL, NULL);
+	option_group = g_option_group_new("lock", N_("Lock Related Options:"), N_("Lock"), NULL, NULL);
 	g_option_group_add_entries(option_group, lock_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("log", N_("Log Related Opions:"), N_("Log"), NULL, NULL);
+	option_group = g_option_group_new("log", N_("Log Related Options:"), N_("Log"), NULL, NULL);
 	g_option_group_add_entries(option_group, log_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("move", N_("Move Related Opions:"), N_("Move"), NULL, NULL);
+	option_group = g_option_group_new("move", N_("Move Related Options:"), N_("Move"), NULL, NULL);
 	g_option_group_add_entries(option_group, move_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("properties", N_("Properties Related Opions:"), N_("Properties"), NULL, NULL);
+	option_group = g_option_group_new("properties", N_("Properties Related Options:"), N_("Properties"), NULL, NULL);
 	g_option_group_add_entries(option_group, properties_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("resolved", N_("Resolved Related Opions:"), N_("Resolved"), NULL, NULL);
+	option_group = g_option_group_new("resolved", N_("Resolved Related Options:"), N_("Resolved"), NULL, NULL);
 	g_option_group_add_entries(option_group, resolved_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("revert", N_("Revert Related Opions:"), N_("Revert"), NULL, NULL);
+	option_group = g_option_group_new("revert", N_("Revert Related Options:"), N_("Revert"), NULL, NULL);
 	g_option_group_add_entries(option_group, revert_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("status", N_("Status Related Opions:"), N_("Status"), NULL, NULL);
+	option_group = g_option_group_new("status", N_("Status Related Options:"), N_("Status"), NULL, NULL);
 	g_option_group_add_entries(option_group, status_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("unlock", N_("Unlock Related Opions:"), N_("Unlock"), NULL, NULL);
+	option_group = g_option_group_new("unlock", N_("Unlock Related Options:"), N_("Unlock"), NULL, NULL);
 	g_option_group_add_entries(option_group, unlock_options_table);
 	g_option_context_add_group(option_context, option_group);
 
-	option_group = g_option_group_new("update", N_("Update Related Opions:"), N_("Update"), NULL, NULL);
+	option_group = g_option_group_new("update", N_("Update Related Options:"), N_("Update"), NULL, NULL);
 	g_option_group_add_entries(option_group, update_options_table);
 	g_option_context_add_group(option_context, option_group);
 
