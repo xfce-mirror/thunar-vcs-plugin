@@ -23,6 +23,7 @@ gboolean tsh_init (apr_pool_t**, svn_error_t**);
 
 void tsh_replace_thread (GThread *);
 void tsh_cancel ();
+void tsh_reset_cancel();
 
 gboolean tsh_create_context (svn_client_ctx_t**, apr_pool_t*, svn_error_t**);
 

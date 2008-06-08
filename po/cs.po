@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce 4-i18-goodies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-08 16:27+0200\n"
+"POT-Creation-Date: 2008-06-09 00:31+0200\n"
 "PO-Revision-Date: 2007-12-15 22:05+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech\n"
@@ -26,8 +26,8 @@ msgstr "SVN"
 msgid "Menu|Add"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:207
-#: tsp-svn-helper/tsh-add.c:112 tsp-svn-helper/tsh-add.c:125
+#: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:215
+#: tsp-svn-helper/tsh-add.c:113 tsp-svn-helper/tsh-add.c:126
 msgid "Add"
 msgstr "Přidat"
 
@@ -46,8 +46,8 @@ msgstr "Nahlásit"
 msgid "Menu|Checkout"
 msgstr "Checkout (stáhnout)"
 
-#: thunar-svn-plugin/tsp-svn-action.c:274 tsp-svn-helper/main.c:211
-#: tsp-svn-helper/tsh-checkout.c:96 tsp-svn-helper/tsh-checkout.c:108
+#: thunar-svn-plugin/tsp-svn-action.c:274 tsp-svn-helper/main.c:219
+#: tsp-svn-helper/tsh-checkout.c:98 tsp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr "Checkout (stáhnout)"
 
@@ -56,7 +56,7 @@ msgstr "Checkout (stáhnout)"
 msgid "Menu|Cleanup"
 msgstr "Vyčistit"
 
-#: thunar-svn-plugin/tsp-svn-action.c:287 tsp-svn-helper/main.c:215
+#: thunar-svn-plugin/tsp-svn-action.c:287 tsp-svn-helper/main.c:223
 msgid "Cleanup"
 msgstr "Vyčistit"
 
@@ -65,8 +65,8 @@ msgstr "Vyčistit"
 msgid "Menu|Commit"
 msgstr "Zapsat"
 
-#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:219
-#: tsp-svn-helper/tsh-commit.c:124 tsp-svn-helper/tsh-commit.c:137
+#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:227
+#: tsp-svn-helper/tsh-commit.c:127 tsp-svn-helper/tsh-commit.c:140
 msgid "Commit"
 msgstr "Zapsat"
 
@@ -74,8 +74,8 @@ msgstr "Zapsat"
 msgid "Menu|Copy"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:223
-#: tsp-svn-helper/tsh-copy.c:149
+#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:231
+#: tsp-svn-helper/tsh-copy.c:152
 msgid "Copy"
 msgstr ""
 
@@ -84,8 +84,8 @@ msgstr ""
 msgid "Menu|Delete"
 msgstr "Smazat"
 
-#: thunar-svn-plugin/tsp-svn-action.c:326 tsp-svn-helper/main.c:227
-#: tsp-svn-helper/tsh-delete.c:124 tsp-svn-helper/tsh-delete.c:137
+#: thunar-svn-plugin/tsp-svn-action.c:326 tsp-svn-helper/main.c:235
+#: tsp-svn-helper/tsh-delete.c:127 tsp-svn-helper/tsh-delete.c:140
 msgid "Delete"
 msgstr "Smazat"
 
@@ -104,8 +104,8 @@ msgstr "Rozdíl"
 msgid "Menu|Export"
 msgstr "Export"
 
-#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:231
-#: tsp-svn-helper/tsh-export.c:105 tsp-svn-helper/tsh-export.c:123
+#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:239
+#: tsp-svn-helper/tsh-export.c:107 tsp-svn-helper/tsh-export.c:125
 msgid "Export"
 msgstr "Export"
 
@@ -114,8 +114,8 @@ msgstr "Export"
 msgid "Menu|Import"
 msgstr "_Import SVN"
 
-#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:235
-#: tsp-svn-helper/tsh-import.c:99 tsp-svn-helper/tsh-import.c:117
+#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:243
+#: tsp-svn-helper/tsh-import.c:102 tsp-svn-helper/tsh-import.c:120
 #, fuzzy
 msgid "Import"
 msgstr "_Import SVN"
@@ -135,8 +135,8 @@ msgstr "Informace"
 msgid "Menu|Lock"
 msgstr "Zámek"
 
-#: thunar-svn-plugin/tsp-svn-action.c:394 tsp-svn-helper/main.c:239
-#: tsp-svn-helper/tsh-lock.c:128 tsp-svn-helper/tsh-lock-dialog.c:72
+#: thunar-svn-plugin/tsp-svn-action.c:394 tsp-svn-helper/main.c:247
+#: tsp-svn-helper/tsh-lock.c:130 tsp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
 msgstr "Zámek"
 
@@ -144,7 +144,7 @@ msgstr "Zámek"
 msgid "Menu|Log"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:243
+#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:251
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Protokol"
@@ -153,8 +153,8 @@ msgstr "Protokol"
 msgid "Menu|Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:429 tsp-svn-helper/main.c:247
-#: tsp-svn-helper/tsh-move.c:148
+#: thunar-svn-plugin/tsp-svn-action.c:429 tsp-svn-helper/main.c:255
+#: tsp-svn-helper/tsh-move.c:151
 msgid "Move"
 msgstr ""
 
@@ -172,8 +172,8 @@ msgstr "Upravit vlastnosti"
 msgid "Menu|Resolved"
 msgstr "Vyřešit"
 
-#: thunar-svn-plugin/tsp-svn-action.c:462 tsp-svn-helper/main.c:255
-#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-resolved.c:111
+#: thunar-svn-plugin/tsp-svn-action.c:462 tsp-svn-helper/main.c:263
+#: tsp-svn-helper/tsh-common.c:463 tsp-svn-helper/tsh-resolved.c:112
 #, fuzzy
 msgid "Resolved"
 msgstr "Vyřešit"
@@ -193,8 +193,8 @@ msgstr "Vyřešit"
 msgid "Menu|Revert"
 msgstr "Obnovit předchozí"
 
-#: thunar-svn-plugin/tsp-svn-action.c:487 tsp-svn-helper/main.c:259
-#: tsp-svn-helper/tsh-revert.c:110 tsp-svn-helper/tsh-revert.c:123
+#: thunar-svn-plugin/tsp-svn-action.c:487 tsp-svn-helper/main.c:267
+#: tsp-svn-helper/tsh-revert.c:112 tsp-svn-helper/tsh-revert.c:125
 msgid "Revert"
 msgstr "Obnovit předchozí"
 
@@ -203,7 +203,7 @@ msgstr "Obnovit předchozí"
 msgid "Menu|Status"
 msgstr "Stav"
 
-#: thunar-svn-plugin/tsp-svn-action.c:500 tsp-svn-helper/main.c:263
+#: thunar-svn-plugin/tsp-svn-action.c:500 tsp-svn-helper/main.c:271
 #: tsp-svn-helper/tsh-status-dialog.c:184
 msgid "Status"
 msgstr "Stav"
@@ -213,32 +213,31 @@ msgstr "Stav"
 msgid "Menu|Switch"
 msgstr "Přepnout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:513
-#: thunar-svn-plugin/tsp-svn-action.c:514
+#: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:275
 msgid "Switch"
 msgstr "Přepnout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:525
+#: thunar-svn-plugin/tsp-svn-action.c:526
 #, fuzzy
 msgid "Menu|Unlock"
 msgstr "Odemknout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:525 tsp-svn-helper/main.c:267
-#: tsp-svn-helper/tsh-unlock.c:109
+#: thunar-svn-plugin/tsp-svn-action.c:526 tsp-svn-helper/main.c:279
+#: tsp-svn-helper/tsh-unlock.c:111
 msgid "Unlock"
 msgstr "Odemknout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:538
+#: thunar-svn-plugin/tsp-svn-action.c:539
 #, fuzzy
 msgid "Menu|Update"
 msgstr "Aktualizovat"
 
-#: thunar-svn-plugin/tsp-svn-action.c:538 tsp-svn-helper/main.c:271
-#: tsp-svn-helper/tsh-update.c:111
+#: thunar-svn-plugin/tsp-svn-action.c:539 tsp-svn-helper/main.c:283
+#: tsp-svn-helper/tsh-update.c:113
 msgid "Update"
 msgstr "Aktualizovat"
 
-#: thunar-svn-plugin/tsp-svn-action.c:556
+#: thunar-svn-plugin/tsp-svn-action.c:557
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr ""
@@ -253,10 +252,10 @@ msgstr ""
 #: thunar-svn-plugin/tsp-svn-property-page.c:165
 #: thunar-svn-plugin/tsp-svn-property-page.c:177
 #: thunar-svn-plugin/tsp-svn-property-page.c:190
-#: tsp-svn-helper/tsh-common.c:478 tsp-svn-helper/tsh-common.c:518
-#: tsp-svn-helper/tsh-common.c:527 tsp-svn-helper/tsh-common.c:549
-#: tsp-svn-helper/tsh-common.c:566 tsp-svn-helper/tsh-common.c:593
-#: tsp-svn-helper/tsh-common.c:676
+#: tsp-svn-helper/tsh-common.c:484 tsp-svn-helper/tsh-common.c:524
+#: tsp-svn-helper/tsh-common.c:533 tsp-svn-helper/tsh-common.c:555
+#: tsp-svn-helper/tsh-common.c:572 tsp-svn-helper/tsh-common.c:599
+#: tsp-svn-helper/tsh-common.c:682
 msgid "Unknown"
 msgstr ""
 
@@ -338,171 +337,181 @@ msgstr ""
 msgid "Other..."
 msgstr ""
 
-#: tsp-svn-helper/main.c:94
+#: tsp-svn-helper/main.c:96
 msgid "Print version information"
 msgstr "Vytisknout informaci o verzi"
 
-#: tsp-svn-helper/main.c:101
+#: tsp-svn-helper/main.c:103
 #, fuzzy
 msgid "Execute add action"
 msgstr "Spustit akci update (aktualizovat)"
 
-#: tsp-svn-helper/main.c:107
+#: tsp-svn-helper/main.c:109
 msgid "Execute checkout action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:113
+#: tsp-svn-helper/main.c:115
 #, fuzzy
 msgid "Execute cleanup action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:119
+#: tsp-svn-helper/main.c:121
 #, fuzzy
 msgid "Execute commit action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:125
+#: tsp-svn-helper/main.c:127
 #, fuzzy
 msgid "Execute copy action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:131
+#: tsp-svn-helper/main.c:133
 #, fuzzy
 msgid "Execute delete action"
 msgstr "Spustit akci update (aktualizovat)"
 
-#: tsp-svn-helper/main.c:137
+#: tsp-svn-helper/main.c:139
 #, fuzzy
 msgid "Execute export action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:143
+#: tsp-svn-helper/main.c:145
 #, fuzzy
 msgid "Execute import action"
 msgstr "Spustit akci update (aktualizovat)"
 
-#: tsp-svn-helper/main.c:149
+#: tsp-svn-helper/main.c:151
 #, fuzzy
 msgid "Execute lock action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:155
+#: tsp-svn-helper/main.c:157
 #, fuzzy
 msgid "Execute log action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:161
+#: tsp-svn-helper/main.c:163
 #, fuzzy
 msgid "Execute move action"
 msgstr "Spustit akci update (aktualizovat)"
 
-#: tsp-svn-helper/main.c:167
+#: tsp-svn-helper/main.c:169
 #, fuzzy
 msgid "Execute properties action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:173
+#: tsp-svn-helper/main.c:175
 #, fuzzy
 msgid "Execute resolved action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:179
+#: tsp-svn-helper/main.c:181
 #, fuzzy
 msgid "Execute revert action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:185
+#: tsp-svn-helper/main.c:187
 #, fuzzy
 msgid "Execute status action"
 msgstr "Spustit akci update (aktualizovat)"
 
-#: tsp-svn-helper/main.c:191
+#: tsp-svn-helper/main.c:193
+#, fuzzy
+msgid "Execute switch action"
+msgstr "Spustit akci checkout (stáhnout)"
+
+#: tsp-svn-helper/main.c:199
 #, fuzzy
 msgid "Execute unlock action"
 msgstr "Spustit akci checkout (stáhnout)"
 
-#: tsp-svn-helper/main.c:197
+#: tsp-svn-helper/main.c:205
 msgid "Execute update action"
 msgstr "Spustit akci update (aktualizovat)"
 
-#: tsp-svn-helper/main.c:207
+#: tsp-svn-helper/main.c:215
 msgid "Add Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:211
+#: tsp-svn-helper/main.c:219
 #, fuzzy
 msgid "Checkout Related Options:"
 msgstr "Spustit akci update (aktualizovat)"
 
-#: tsp-svn-helper/main.c:215
+#: tsp-svn-helper/main.c:223
 msgid "Cleanup Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:219
+#: tsp-svn-helper/main.c:227
 msgid "Commit Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:223
+#: tsp-svn-helper/main.c:231
 msgid "Copy Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:227
+#: tsp-svn-helper/main.c:235
 msgid "Delete Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:231
+#: tsp-svn-helper/main.c:239
 msgid "Export Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:235
+#: tsp-svn-helper/main.c:243
 msgid "Import Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:239
+#: tsp-svn-helper/main.c:247
 msgid "Lock Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:243
+#: tsp-svn-helper/main.c:251
 msgid "Log Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:247
+#: tsp-svn-helper/main.c:255
 msgid "Move Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:251
+#: tsp-svn-helper/main.c:259
 #, fuzzy
 msgid "Properties Related Options:"
 msgstr "Upravit vlastnosti"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:251 tsp-svn-helper/tsh-properties-dialog.c:217
+#: tsp-svn-helper/main.c:259 tsp-svn-helper/tsh-properties-dialog.c:217
 #, fuzzy
 msgid "Properties"
 msgstr "Upravit vlastnosti"
 
-#: tsp-svn-helper/main.c:255
+#: tsp-svn-helper/main.c:263
 msgid "Resolved Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:259
+#: tsp-svn-helper/main.c:267
 msgid "Revert Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:263
+#: tsp-svn-helper/main.c:271
 msgid "Status Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:267
+#: tsp-svn-helper/main.c:275
+#, fuzzy
+msgid "Switch Related Options:"
+msgstr "Spustit akci update (aktualizovat)"
+
+#: tsp-svn-helper/main.c:279
 msgid "Unlock Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:271
+#: tsp-svn-helper/main.c:283
 msgid "Update Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:317
+#: tsp-svn-helper/main.c:329
 msgid "Not enough arguments provided"
 msgstr ""
 
@@ -522,174 +531,174 @@ msgstr ""
 msgid "Cleanup failed"
 msgstr "Vyčistit"
 
-#: tsp-svn-helper/tsh-cleanup.c:83
+#: tsp-svn-helper/tsh-cleanup.c:84
 #, fuzzy
 msgid "Cleanup finished"
 msgstr "Vyčistit"
 
-#: tsp-svn-helper/tsh-cleanup.c:96
+#: tsp-svn-helper/tsh-cleanup.c:98
 #, fuzzy
 msgid "Cleaning up ..."
 msgstr "Vyčistit"
 
-#: tsp-svn-helper/tsh-commit.c:102 tsp-svn-helper/tsh-common.c:640
-#: tsp-svn-helper/tsh-copy.c:85 tsp-svn-helper/tsh-delete.c:102
-#: tsp-svn-helper/tsh-import.c:81 tsp-svn-helper/tsh-move.c:83
+#: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:646
+#: tsp-svn-helper/tsh-copy.c:86 tsp-svn-helper/tsh-delete.c:103
+#: tsp-svn-helper/tsh-import.c:82 tsp-svn-helper/tsh-move.c:84
 #, fuzzy, c-format
 msgid "At revision: %ld"
 msgstr "Na revizi: %li"
 
-#: tsp-svn-helper/tsh-commit.c:107
+#: tsp-svn-helper/tsh-commit.c:108
 msgid "Nothing to do"
 msgstr ""
 
-#: tsp-svn-helper/tsh-commit.c:112 tsp-svn-helper/tsh-common.c:462
-#: tsp-svn-helper/tsh-common.c:464 tsp-svn-helper/tsh-copy.c:95
-#: tsp-svn-helper/tsh-delete.c:112 tsp-svn-helper/tsh-import.c:85
-#: tsp-svn-helper/tsh-move.c:93
+#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:468
+#: tsp-svn-helper/tsh-common.c:470 tsp-svn-helper/tsh-copy.c:97
+#: tsp-svn-helper/tsh-delete.c:114 tsp-svn-helper/tsh-import.c:87
+#: tsp-svn-helper/tsh-move.c:95
 msgid "Completed"
 msgstr "Dokončeno"
 
-#: tsp-svn-helper/tsh-commit.c:142
+#: tsp-svn-helper/tsh-commit.c:145
 #, fuzzy
 msgid "Commit Message"
 msgstr "Zapsat"
 
-#: tsp-svn-helper/tsh-common.c:451 tsp-svn-helper/tsh-common.c:460
-#: tsp-svn-helper/tsh-common.c:467 tsp-svn-helper/tsh-common.c:553
-#: tsp-svn-helper/tsh-common.c:598 tsp-svn-helper/tsh-common.c:682
+#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-common.c:466
+#: tsp-svn-helper/tsh-common.c:473 tsp-svn-helper/tsh-common.c:559
+#: tsp-svn-helper/tsh-common.c:604 tsp-svn-helper/tsh-common.c:688
 msgid "Added"
 msgstr "Přidáno"
 
-#: tsp-svn-helper/tsh-common.c:452 tsp-svn-helper/tsh-common.c:691
+#: tsp-svn-helper/tsh-common.c:458 tsp-svn-helper/tsh-common.c:697
 #, fuzzy
 msgid "Copied"
 msgstr "Dokončeno"
 
-#: tsp-svn-helper/tsh-common.c:453 tsp-svn-helper/tsh-common.c:459
-#: tsp-svn-helper/tsh-common.c:468 tsp-svn-helper/tsh-common.c:555
-#: tsp-svn-helper/tsh-common.c:601 tsp-svn-helper/tsh-common.c:684
+#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:465
+#: tsp-svn-helper/tsh-common.c:474 tsp-svn-helper/tsh-common.c:561
+#: tsp-svn-helper/tsh-common.c:607 tsp-svn-helper/tsh-common.c:690
 msgid "Deleted"
 msgstr "Smazáno"
 
-#: tsp-svn-helper/tsh-common.c:454
+#: tsp-svn-helper/tsh-common.c:460
 #, fuzzy
 msgid "Restored"
 msgstr "Vyřešit"
 
-#: tsp-svn-helper/tsh-common.c:455
+#: tsp-svn-helper/tsh-common.c:461
 #, fuzzy
 msgid "Reverted"
 msgstr "Obnovit předchozí"
 
-#: tsp-svn-helper/tsh-common.c:456
+#: tsp-svn-helper/tsh-common.c:462
 #, fuzzy
 msgid "Revert failed"
 msgstr "Obnovit předchozí"
 
-#: tsp-svn-helper/tsh-common.c:458
+#: tsp-svn-helper/tsh-common.c:464
 msgid "Skipped"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:461
+#: tsp-svn-helper/tsh-common.c:467
 msgid "Updated"
 msgstr "Aktualizováno"
 
-#: tsp-svn-helper/tsh-common.c:463 tsp-svn-helper/tsh-common.c:465
-#: tsp-svn-helper/tsh-common.c:562
+#: tsp-svn-helper/tsh-common.c:469 tsp-svn-helper/tsh-common.c:471
+#: tsp-svn-helper/tsh-common.c:568
 msgid "External"
 msgstr "Externí"
 
-#: tsp-svn-helper/tsh-common.c:466 tsp-svn-helper/tsh-common.c:557
-#: tsp-svn-helper/tsh-common.c:604 tsp-svn-helper/tsh-common.c:687
+#: tsp-svn-helper/tsh-common.c:472 tsp-svn-helper/tsh-common.c:563
+#: tsp-svn-helper/tsh-common.c:610 tsp-svn-helper/tsh-common.c:693
 msgid "Modified"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:469 tsp-svn-helper/tsh-common.c:556
-#: tsp-svn-helper/tsh-common.c:607 tsp-svn-helper/tsh-common.c:680
+#: tsp-svn-helper/tsh-common.c:475 tsp-svn-helper/tsh-common.c:562
+#: tsp-svn-helper/tsh-common.c:613 tsp-svn-helper/tsh-common.c:686
 msgid "Replaced"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:470
+#: tsp-svn-helper/tsh-common.c:476
 msgid "Transmitting"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:472
+#: tsp-svn-helper/tsh-common.c:478
 #, fuzzy
 msgid "Locked"
 msgstr "Zámek"
 
-#: tsp-svn-helper/tsh-common.c:473 tsp-svn-helper/tsh-common.c:693
+#: tsp-svn-helper/tsh-common.c:479 tsp-svn-helper/tsh-common.c:699
 #, fuzzy
 msgid "Unlocked"
 msgstr "Odemknout"
 
-#: tsp-svn-helper/tsh-common.c:474
+#: tsp-svn-helper/tsh-common.c:480
 msgid "Lock failed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:475
+#: tsp-svn-helper/tsh-common.c:481
 #, fuzzy
 msgid "Unlock failed"
 msgstr "Odemknout"
 
-#: tsp-svn-helper/tsh-common.c:517
+#: tsp-svn-helper/tsh-common.c:523
 msgid "Inapplicable"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:519
+#: tsp-svn-helper/tsh-common.c:525
 msgid "Unchanged"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:520 tsp-svn-helper/tsh-common.c:554
+#: tsp-svn-helper/tsh-common.c:526 tsp-svn-helper/tsh-common.c:560
 msgid "Missing"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:521 tsp-svn-helper/tsh-common.c:561
+#: tsp-svn-helper/tsh-common.c:527 tsp-svn-helper/tsh-common.c:567
 msgid "Obstructed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:522
+#: tsp-svn-helper/tsh-common.c:528
 msgid "Changed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:523 tsp-svn-helper/tsh-common.c:558
+#: tsp-svn-helper/tsh-common.c:529 tsp-svn-helper/tsh-common.c:564
 msgid "Merged"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:524 tsp-svn-helper/tsh-common.c:559
+#: tsp-svn-helper/tsh-common.c:530 tsp-svn-helper/tsh-common.c:565
 #, fuzzy
 msgid "Conflicted"
 msgstr "Dokončeno"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: tsp-svn-helper/tsh-common.c:552
+#: tsp-svn-helper/tsh-common.c:558
 msgid "Normal"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:560
+#: tsp-svn-helper/tsh-common.c:566
 msgid "Ignored"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:563
+#: tsp-svn-helper/tsh-common.c:569
 #, fuzzy
 msgid "Incomplete"
 msgstr "Dokončeno"
 
-#: tsp-svn-helper/tsh-copy.c:90
+#: tsp-svn-helper/tsh-copy.c:91
 msgid "Local copy"
 msgstr ""
 
-#: tsp-svn-helper/tsh-copy.c:131
+#: tsp-svn-helper/tsh-copy.c:134
 msgid "Copy To"
 msgstr ""
 
-#: tsp-svn-helper/tsh-delete.c:107
+#: tsp-svn-helper/tsh-delete.c:108
 msgid "Local delete"
 msgstr ""
 
-#: tsp-svn-helper/tsh-delete.c:142
+#: tsp-svn-helper/tsh-delete.c:145
 #, fuzzy
 msgid "Delete Message"
 msgstr "Smazat"
@@ -712,7 +721,7 @@ msgstr "Zapamatovat si"
 msgid "Certificate"
 msgstr "Oznámení"
 
-#: tsp-svn-helper/tsh-import.c:122
+#: tsp-svn-helper/tsh-import.c:125
 msgid "Import Message"
 msgstr ""
 
@@ -773,11 +782,11 @@ msgstr "_Heslo"
 msgid "Login"
 msgstr "Přihlásit se"
 
-#: tsp-svn-helper/tsh-move.c:88
+#: tsp-svn-helper/tsh-move.c:89
 msgid "Local move"
 msgstr ""
 
-#: tsp-svn-helper/tsh-move.c:128
+#: tsp-svn-helper/tsh-move.c:131
 msgid "Move To"
 msgstr ""
 

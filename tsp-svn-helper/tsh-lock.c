@@ -95,6 +95,7 @@ static gpointer lock_thread (gpointer user_data)
 
 		svn_error_clear(err);
 		return GINT_TO_POINTER (FALSE);
+    tsh_reset_cancel();
 	}
 
   svn_pool_destroy (subpool);
@@ -103,6 +104,7 @@ static gpointer lock_thread (gpointer user_data)
 	tsh_notify_dialog_done (dialog);
 	gdk_threads_leave();
 	
+  tsh_reset_cancel();
 	return GINT_TO_POINTER (TRUE);
 }
 

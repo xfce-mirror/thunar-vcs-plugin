@@ -46,6 +46,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-revert.c							\
 	tsh-status.h							\
 	tsh-status.c							\
+	tsh-switch.h							\
+	tsh-switch.c							\
 	tsh-unlock.h							\
 	tsh-unlock.c							\
 	tsh-update.h							\

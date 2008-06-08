@@ -73,7 +73,8 @@ static gpointer cleanup_thread (gpointer user_data)
     g_free(error_str);
 
 		svn_error_clear(err);
-		return GINT_TO_POINTER (FALSE);
+    tsh_reset_cancel();
+    return GINT_TO_POINTER (FALSE);
 	}
 
   svn_pool_destroy (subpool);
@@ -84,6 +85,7 @@ static gpointer cleanup_thread (gpointer user_data)
   tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
 	gdk_threads_leave();
 
+  tsh_reset_cancel();
 	return GINT_TO_POINTER (TRUE);
 }
 

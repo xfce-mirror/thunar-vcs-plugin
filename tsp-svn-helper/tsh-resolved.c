@@ -100,6 +100,7 @@ static gpointer resolved_thread (gpointer user_data)
 	tsh_notify_dialog_done (dialog);
 	gdk_threads_leave();
 	
+  tsh_reset_cancel();
 	return GINT_TO_POINTER (result);
 }
 

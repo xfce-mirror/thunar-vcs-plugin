@@ -511,7 +511,8 @@ subaction = gtk_action_new ("tsp::properties", Q_("Menu|Edit Properties"), _("Ed
 	if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
 	{
 	  subaction = gtk_action_new ("tsp::switch", Q_("Menu|Switch"), _("Switch"), GTK_STOCK_JUMP_TO);
-	  g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_unimplemented), _("Switch"));
+    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--switch");
+	  g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
 
 	  subitem = gtk_action_create_menu_item (subaction);
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);

@@ -444,6 +444,12 @@ tsh_check_cancel(void *baton)
 	return SVN_NO_ERROR;
 }
 
+void
+tsh_reset_cancel()
+{
+  cancelled = FALSE;
+}
+
 static const gchar *
 tsh_action_to_string(svn_wc_notify_action_t action)
 {

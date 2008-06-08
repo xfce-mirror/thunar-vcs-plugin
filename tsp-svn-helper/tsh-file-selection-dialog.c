@@ -193,7 +193,8 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
         gtk_widget_unref(GTK_WIDGET(dialog));
 
         svn_error_clear(err);
-        return NULL;
+        tsh_reset_cancel();
+        return NULL;  //FIXME: needed ??
       }
       files++;
     }
@@ -207,11 +208,14 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
       gtk_widget_unref(GTK_WIDGET(dialog));
 
       svn_error_clear(err);
+      tsh_reset_cancel();
       return NULL;
     }
   }
+
   svn_pool_destroy (subpool);
 
+  tsh_reset_cancel();
 	return GTK_WIDGET(dialog);
 }
 

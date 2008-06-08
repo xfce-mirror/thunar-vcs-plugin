@@ -90,6 +90,7 @@ static gpointer revert_thread (gpointer user_data)
     g_free(error_str);
 
 		svn_error_clear(err);
+    tsh_reset_cancel();
 		return GINT_TO_POINTER (FALSE);
 	}
 
@@ -99,6 +100,7 @@ static gpointer revert_thread (gpointer user_data)
 	tsh_notify_dialog_done (dialog);
 	gdk_threads_leave();
 	
+  tsh_reset_cancel();
 	return GINT_TO_POINTER (TRUE);
 }
 

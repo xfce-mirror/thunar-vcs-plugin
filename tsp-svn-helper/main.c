@@ -47,6 +47,7 @@
 #include "tsh-resolved.h"
 #include "tsh-revert.h"
 #include "tsh-status.h"
+#include "tsh-switch.h"
 #include "tsh-unlock.h"
 #include "tsh-update.h"
 
@@ -84,6 +85,7 @@ int main (int argc, char *argv[])
   gboolean resolved = FALSE;
   gboolean revert = FALSE;
   gboolean status = FALSE;
+  gboolean switch_ = FALSE;
 	gboolean unlock = FALSE;
 	gboolean update = FALSE;
 	gchar **files = NULL;
@@ -186,6 +188,12 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry switch_options_table[] =
+	{
+		{ "switch", '\0', 0, G_OPTION_ARG_NONE, &switch_, N_("Execute switch action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry unlock_options_table[] =
 	{
 		{ "unlock", '\0', 0, G_OPTION_ARG_NONE, &unlock, N_("Execute unlock action"), NULL },
@@ -262,6 +270,10 @@ int main (int argc, char *argv[])
 
 	option_group = g_option_group_new("status", N_("Status Related Options:"), N_("Status"), NULL, NULL);
 	g_option_group_add_entries(option_group, status_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("switch", N_("Switch Related Options:"), N_("Switch"), NULL, NULL);
+	g_option_group_add_entries(option_group, switch_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("unlock", N_("Unlock Related Options:"), N_("Unlock"), NULL, NULL);
@@ -393,6 +405,11 @@ int main (int argc, char *argv[])
   if(status)
   {
     thread = tsh_status(files, svn_ctx, pool);
+  }
+
+  if(switch_)
+  {
+    thread = tsh_switch(files, svn_ctx, pool);
   }
 
 	if(unlock)
