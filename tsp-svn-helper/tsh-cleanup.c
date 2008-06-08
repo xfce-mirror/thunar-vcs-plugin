@@ -80,7 +80,7 @@ static gpointer cleanup_thread (gpointer user_data)
 
 	gdk_threads_enter();
   gtk_widget_destroy(dialog);
-  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CLOSE, _("Cleanup finnished"));
+  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CLOSE, _("Cleanup finished"));
   tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
 	gdk_threads_leave();
 

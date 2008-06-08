@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar SVN plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-18 21:25+0100\n"
+"POT-Creation-Date: 2008-06-08 16:27+0200\n"
 "PO-Revision-Date: 2007-06-04 08:37+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -522,8 +522,9 @@ msgid "Cleanup failed"
 msgstr "Tisztít"
 
 #: tsp-svn-helper/tsh-cleanup.c:83
-msgid "Cleanup finnished"
-msgstr ""
+#, fuzzy
+msgid "Cleanup finished"
+msgstr "Tisztít"
 
 #: tsp-svn-helper/tsh-cleanup.c:96
 #, fuzzy
@@ -818,7 +819,7 @@ msgid "Status failed"
 msgstr "Állapot"
 
 #: tsp-svn-helper/tsh-status-dialog.c:156
-msgid "Show Recusive"
+msgid "Show Recursive"
 msgstr ""
 
 #: tsp-svn-helper/tsh-status-dialog.c:161

@@ -153,7 +153,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 
   table = gtk_table_new (3, 2, FALSE);
 
-	dialog->recursive = recursive = gtk_check_button_new_with_label (_("Show Recusive"));
+	dialog->recursive = recursive = gtk_check_button_new_with_label (_("Show Recursive"));
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (recursive), TRUE);
   gtk_table_attach (GTK_TABLE (table), recursive, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
 	gtk_widget_show (recursive);

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-i 18n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-18 21:25+0100\n"
+"POT-Creation-Date: 2008-06-08 16:27+0200\n"
 "PO-Revision-Date: 2007-10-24 13:04+0100\n"
 "Last-Translator: Mike Massonnet <mmassonnet@gmail.com>\n"
 "Language-Team: French\n"
@@ -527,8 +527,9 @@ msgid "Cleanup failed"
 msgstr "Nettoyer les verrous"
 
 #: tsp-svn-helper/tsh-cleanup.c:83
-msgid "Cleanup finnished"
-msgstr ""
+#, fuzzy
+msgid "Cleanup finished"
+msgstr "Nettoyer les verrous"
 
 #: tsp-svn-helper/tsh-cleanup.c:96
 #, fuzzy
@@ -826,7 +827,7 @@ msgid "Status failed"
 msgstr "État"
 
 #: tsp-svn-helper/tsh-status-dialog.c:156
-msgid "Show Recusive"
+msgid "Show Recursive"
 msgstr ""
 
 #: tsp-svn-helper/tsh-status-dialog.c:161
