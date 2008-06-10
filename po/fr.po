@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-i 18n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-09 00:31+0200\n"
+"POT-Creation-Date: 2008-06-11 00:56+0200\n"
 "PO-Revision-Date: 2007-10-24 13:04+0100\n"
 "Last-Translator: Mike Massonnet <mmassonnet@gmail.com>\n"
 "Language-Team: French\n"
@@ -27,7 +27,7 @@ msgstr "SVN"
 msgid "Menu|Add"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:215
+#: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:223
 #: tsp-svn-helper/tsh-add.c:113 tsp-svn-helper/tsh-add.c:126
 msgid "Add"
 msgstr "Ajouter"
@@ -47,7 +47,7 @@ msgstr "Différences détaillées"
 msgid "Menu|Checkout"
 msgstr "Extraction"
 
-#: thunar-svn-plugin/tsp-svn-action.c:274 tsp-svn-helper/main.c:219
+#: thunar-svn-plugin/tsp-svn-action.c:274 tsp-svn-helper/main.c:227
 #: tsp-svn-helper/tsh-checkout.c:98 tsp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr "Extraction"
@@ -57,7 +57,7 @@ msgstr "Extraction"
 msgid "Menu|Cleanup"
 msgstr "Nettoyer les verrous"
 
-#: thunar-svn-plugin/tsp-svn-action.c:287 tsp-svn-helper/main.c:223
+#: thunar-svn-plugin/tsp-svn-action.c:287 tsp-svn-helper/main.c:231
 msgid "Cleanup"
 msgstr "Nettoyer les verrous"
 
@@ -66,7 +66,7 @@ msgstr "Nettoyer les verrous"
 msgid "Menu|Commit"
 msgstr "Envoyer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:227
+#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:235
 #: tsp-svn-helper/tsh-commit.c:127 tsp-svn-helper/tsh-commit.c:140
 msgid "Commit"
 msgstr "Envoyer"
@@ -76,7 +76,7 @@ msgstr "Envoyer"
 msgid "Menu|Copy"
 msgstr "Complété"
 
-#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:231
+#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:239
 #: tsp-svn-helper/tsh-copy.c:152
 #, fuzzy
 msgid "Copy"
@@ -87,7 +87,7 @@ msgstr "Complété"
 msgid "Menu|Delete"
 msgstr "Effacer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:326 tsp-svn-helper/main.c:235
+#: thunar-svn-plugin/tsp-svn-action.c:326 tsp-svn-helper/main.c:243
 #: tsp-svn-helper/tsh-delete.c:127 tsp-svn-helper/tsh-delete.c:140
 msgid "Delete"
 msgstr "Effacer"
@@ -107,7 +107,7 @@ msgstr "Différences"
 msgid "Menu|Export"
 msgstr "Exporter"
 
-#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:247
 #: tsp-svn-helper/tsh-export.c:107 tsp-svn-helper/tsh-export.c:125
 msgid "Export"
 msgstr "Exporter"
@@ -117,7 +117,7 @@ msgstr "Exporter"
 msgid "Menu|Import"
 msgstr "SVN _Importer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:243
+#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:251
 #: tsp-svn-helper/tsh-import.c:102 tsp-svn-helper/tsh-import.c:120
 #, fuzzy
 msgid "Import"
@@ -138,8 +138,8 @@ msgstr "Information"
 msgid "Menu|Lock"
 msgstr "Bloquer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:394 tsp-svn-helper/main.c:247
-#: tsp-svn-helper/tsh-lock.c:130 tsp-svn-helper/tsh-lock-dialog.c:72
+#: thunar-svn-plugin/tsp-svn-action.c:394 tsp-svn-helper/main.c:255
+#: tsp-svn-helper/tsh-lock-dialog.c:72 tsp-svn-helper/tsh-lock.c:130
 msgid "Lock"
 msgstr "Bloquer"
 
@@ -147,7 +147,7 @@ msgstr "Bloquer"
 msgid "Menu|Log"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:251
+#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:259
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Journal"
@@ -156,7 +156,7 @@ msgstr "Journal"
 msgid "Menu|Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:429 tsp-svn-helper/main.c:255
+#: thunar-svn-plugin/tsp-svn-action.c:429 tsp-svn-helper/main.c:263
 #: tsp-svn-helper/tsh-move.c:151
 msgid "Move"
 msgstr ""
@@ -170,77 +170,90 @@ msgstr "Éditer les propriétés"
 msgid "Edit Properties"
 msgstr "Éditer les propriétés"
 
-#: thunar-svn-plugin/tsp-svn-action.c:462
+#: thunar-svn-plugin/tsp-svn-action.c:461
+#, fuzzy
+msgid "Menu|Relocate"
+msgstr "Effacer"
+
+#: thunar-svn-plugin/tsp-svn-action.c:461 tsp-svn-helper/main.c:275
+#: tsp-svn-helper/tsh-relocate-dialog.c:215
+msgid "Relocate"
+msgstr ""
+
+#: thunar-svn-plugin/tsp-svn-action.c:475
 #, fuzzy
 msgid "Menu|Resolved"
 msgstr "Fixer comme résolu"
 
-#: thunar-svn-plugin/tsp-svn-action.c:462 tsp-svn-helper/main.c:263
+#: thunar-svn-plugin/tsp-svn-action.c:475 tsp-svn-helper/main.c:271
 #: tsp-svn-helper/tsh-common.c:463 tsp-svn-helper/tsh-resolved.c:112
 #, fuzzy
 msgid "Resolved"
 msgstr "Fixer comme résolu"
 
-#: thunar-svn-plugin/tsp-svn-action.c:475
+#: thunar-svn-plugin/tsp-svn-action.c:488
 #, fuzzy
 msgid "Menu|Resolve"
 msgstr "Fixer comme résolu"
 
-#: thunar-svn-plugin/tsp-svn-action.c:475
-#: thunar-svn-plugin/tsp-svn-action.c:476
+#: thunar-svn-plugin/tsp-svn-action.c:488
+#: thunar-svn-plugin/tsp-svn-action.c:489
 msgid "Resolve"
 msgstr "Fixer comme résolu"
 
-#: thunar-svn-plugin/tsp-svn-action.c:487
+#: thunar-svn-plugin/tsp-svn-action.c:500
 #, fuzzy
 msgid "Menu|Revert"
 msgstr "Restaurer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:487 tsp-svn-helper/main.c:267
+#: thunar-svn-plugin/tsp-svn-action.c:500 tsp-svn-helper/main.c:279
 #: tsp-svn-helper/tsh-revert.c:112 tsp-svn-helper/tsh-revert.c:125
 msgid "Revert"
 msgstr "Restaurer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:500
+#: thunar-svn-plugin/tsp-svn-action.c:513
 #, fuzzy
 msgid "Menu|Status"
 msgstr "État"
 
-#: thunar-svn-plugin/tsp-svn-action.c:500 tsp-svn-helper/main.c:271
+#: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:283
+#: tsp-svn-helper/tsh-file-selection-dialog.c:144
 #: tsp-svn-helper/tsh-status-dialog.c:184
 msgid "Status"
 msgstr "État"
 
-#: thunar-svn-plugin/tsp-svn-action.c:513
+#: thunar-svn-plugin/tsp-svn-action.c:526
 #, fuzzy
 msgid "Menu|Switch"
 msgstr "Modifier l'adresse du dépôt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:275
+#: thunar-svn-plugin/tsp-svn-action.c:526 tsp-svn-helper/main.c:287
+#: tsp-svn-helper/tsh-relocate.c:122 tsp-svn-helper/tsh-switch.c:114
+#: tsp-svn-helper/tsh-switch.c:127
 msgid "Switch"
 msgstr "Modifier l'adresse du dépôt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:526
+#: thunar-svn-plugin/tsp-svn-action.c:539
 #, fuzzy
 msgid "Menu|Unlock"
 msgstr "Débloquer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:526 tsp-svn-helper/main.c:279
+#: thunar-svn-plugin/tsp-svn-action.c:539 tsp-svn-helper/main.c:291
 #: tsp-svn-helper/tsh-unlock.c:111
 msgid "Unlock"
 msgstr "Débloquer"
 
-#: thunar-svn-plugin/tsp-svn-action.c:539
+#: thunar-svn-plugin/tsp-svn-action.c:552
 #, fuzzy
 msgid "Menu|Update"
 msgstr "Mettre à jour"
 
-#: thunar-svn-plugin/tsp-svn-action.c:539 tsp-svn-helper/main.c:283
+#: thunar-svn-plugin/tsp-svn-action.c:552 tsp-svn-helper/main.c:295
 #: tsp-svn-helper/tsh-update.c:113
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: thunar-svn-plugin/tsp-svn-action.c:557
+#: thunar-svn-plugin/tsp-svn-action.c:570
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr ""
@@ -305,217 +318,227 @@ msgstr ""
 msgid "(None)"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:341
+#: tsp-svn-helper/gtkfilechooserentry.c:343
 msgid "Dialog"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:342
+#: tsp-svn-helper/gtkfilechooserentry.c:344
 msgid "The file chooser dialog to use."
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:358
+#: tsp-svn-helper/gtkfilechooserentry.c:360
 msgid "Focus on click"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:359
+#: tsp-svn-helper/gtkfilechooserentry.c:361
 msgid "Whether the entry grabs focus when it is clicked with the mouse"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:372
+#: tsp-svn-helper/gtkfilechooserentry.c:374
 msgid "Title"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:373
+#: tsp-svn-helper/gtkfilechooserentry.c:375
 msgid "The title of the file chooser dialog."
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:386
+#: tsp-svn-helper/gtkfilechooserentry.c:388
 msgid "Width In Characters"
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:387
+#: tsp-svn-helper/gtkfilechooserentry.c:389
 msgid "The desired width of the entry widget, in characters."
 msgstr ""
 
-#: tsp-svn-helper/gtkfilechooserentry.c:2055
+#: tsp-svn-helper/gtkfilechooserentry.c:2119
 msgid "Other..."
 msgstr ""
 
-#: tsp-svn-helper/main.c:96
+#: tsp-svn-helper/main.c:98
 msgid "Print version information"
 msgstr "Afficher l'information sur la version"
 
-#: tsp-svn-helper/main.c:103
+#: tsp-svn-helper/main.c:105
 #, fuzzy
 msgid "Execute add action"
 msgstr "Exécuter une mise à jour"
 
-#: tsp-svn-helper/main.c:109
+#: tsp-svn-helper/main.c:111
 msgid "Execute checkout action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:115
+#: tsp-svn-helper/main.c:117
 #, fuzzy
 msgid "Execute cleanup action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:121
+#: tsp-svn-helper/main.c:123
 #, fuzzy
 msgid "Execute commit action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:127
+#: tsp-svn-helper/main.c:129
 #, fuzzy
 msgid "Execute copy action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:133
+#: tsp-svn-helper/main.c:135
 #, fuzzy
 msgid "Execute delete action"
 msgstr "Exécuter une mise à jour"
 
-#: tsp-svn-helper/main.c:139
+#: tsp-svn-helper/main.c:141
 #, fuzzy
 msgid "Execute export action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:145
+#: tsp-svn-helper/main.c:147
 #, fuzzy
 msgid "Execute import action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:151
+#: tsp-svn-helper/main.c:153
 #, fuzzy
 msgid "Execute lock action"
 msgstr "Exécuter une mise à jour"
 
-#: tsp-svn-helper/main.c:157
+#: tsp-svn-helper/main.c:159
 #, fuzzy
 msgid "Execute log action"
 msgstr "Exécuter une mise à jour"
 
-#: tsp-svn-helper/main.c:163
+#: tsp-svn-helper/main.c:165
 #, fuzzy
 msgid "Execute move action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:169
+#: tsp-svn-helper/main.c:171
 #, fuzzy
 msgid "Execute properties action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:175
+#: tsp-svn-helper/main.c:177
 #, fuzzy
 msgid "Execute resolved action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:181
+#: tsp-svn-helper/main.c:183
+#, fuzzy
+msgid "Execute relocate action"
+msgstr "Exécuter une mise à jour"
+
+#: tsp-svn-helper/main.c:189
 #, fuzzy
 msgid "Execute revert action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:187
+#: tsp-svn-helper/main.c:195
 #, fuzzy
 msgid "Execute status action"
 msgstr "Exécuter une mise à jour"
 
-#: tsp-svn-helper/main.c:193
+#: tsp-svn-helper/main.c:201
 #, fuzzy
 msgid "Execute switch action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:199
+#: tsp-svn-helper/main.c:207
 #, fuzzy
 msgid "Execute unlock action"
 msgstr "Exécuter une extraction"
 
-#: tsp-svn-helper/main.c:205
+#: tsp-svn-helper/main.c:213
 msgid "Execute update action"
 msgstr "Exécuter une mise à jour"
 
-#: tsp-svn-helper/main.c:215
+#: tsp-svn-helper/main.c:223
 msgid "Add Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:219
+#: tsp-svn-helper/main.c:227
 #, fuzzy
 msgid "Checkout Related Options:"
 msgstr "Exécuter une mise à jour"
 
-#: tsp-svn-helper/main.c:223
+#: tsp-svn-helper/main.c:231
 msgid "Cleanup Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:227
+#: tsp-svn-helper/main.c:235
 msgid "Commit Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:231
+#: tsp-svn-helper/main.c:239
 msgid "Copy Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:235
+#: tsp-svn-helper/main.c:243
 msgid "Delete Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:239
+#: tsp-svn-helper/main.c:247
 msgid "Export Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:243
+#: tsp-svn-helper/main.c:251
 msgid "Import Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:247
+#: tsp-svn-helper/main.c:255
 msgid "Lock Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:251
+#: tsp-svn-helper/main.c:259
 msgid "Log Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:255
+#: tsp-svn-helper/main.c:263
 msgid "Move Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:259
+#: tsp-svn-helper/main.c:267
 #, fuzzy
 msgid "Properties Related Options:"
 msgstr "Éditer les propriétés"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:259 tsp-svn-helper/tsh-properties-dialog.c:217
+#: tsp-svn-helper/main.c:267 tsp-svn-helper/tsh-properties-dialog.c:217
 #, fuzzy
 msgid "Properties"
 msgstr "Éditer les propriétés"
 
-#: tsp-svn-helper/main.c:263
-msgid "Resolved Related Options:"
-msgstr ""
-
-#: tsp-svn-helper/main.c:267
-msgid "Revert Related Options:"
-msgstr ""
-
 #: tsp-svn-helper/main.c:271
-msgid "Status Related Options:"
+msgid "Resolved Related Options:"
 msgstr ""
 
 #: tsp-svn-helper/main.c:275
 #, fuzzy
-msgid "Switch Related Options:"
+msgid "Relocate Related Options:"
 msgstr "Exécuter une mise à jour"
 
 #: tsp-svn-helper/main.c:279
-msgid "Unlock Related Options:"
+msgid "Revert Related Options:"
 msgstr ""
 
 #: tsp-svn-helper/main.c:283
+msgid "Status Related Options:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:287
+#, fuzzy
+msgid "Switch Related Options:"
+msgstr "Exécuter une mise à jour"
+
+#: tsp-svn-helper/main.c:291
+msgid "Unlock Related Options:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:295
 msgid "Update Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:329
+#: tsp-svn-helper/main.c:341
 msgid "Not enough arguments provided"
 msgstr ""
 
@@ -525,8 +548,8 @@ msgstr ""
 #: tsp-svn-helper/tsh-export.c:72 tsp-svn-helper/tsh-import.c:72
 #: tsp-svn-helper/tsh-lock.c:91 tsp-svn-helper/tsh-move.c:72
 #: tsp-svn-helper/tsh-resolved.c:72 tsp-svn-helper/tsh-resolved.c:88
-#: tsp-svn-helper/tsh-revert.c:87 tsp-svn-helper/tsh-unlock.c:86
-#: tsp-svn-helper/tsh-update.c:88
+#: tsp-svn-helper/tsh-revert.c:87 tsp-svn-helper/tsh-switch.c:71
+#: tsp-svn-helper/tsh-unlock.c:86 tsp-svn-helper/tsh-update.c:88
 msgid "Failed"
 msgstr ""
 
@@ -725,15 +748,21 @@ msgstr "Se souvenir"
 msgid "Certificate"
 msgstr "Notification"
 
+#: tsp-svn-helper/tsh-file-selection-dialog.c:110
+#: tsp-svn-helper/tsh-log-message-dialog.c:92
+#: tsp-svn-helper/tsh-notify-dialog.c:94
+#: tsp-svn-helper/tsh-status-dialog.c:115
+msgid "Path"
+msgstr "Chemin"
+
+#: tsp-svn-helper/tsh-file-selection-dialog.c:137
+msgid "Select/Unselect all"
+msgstr ""
+
 #: tsp-svn-helper/tsh-import.c:125
 #, fuzzy
 msgid "Import Message"
 msgstr "Envoyer"
-
-#: tsp-svn-helper/tsh-log.c:98
-#, fuzzy
-msgid "Log failed"
-msgstr "Débloquer"
 
 #: tsp-svn-helper/tsh-log-dialog.c:118
 #, fuzzy
@@ -767,15 +796,14 @@ msgstr ""
 msgid "State"
 msgstr "État"
 
-#: tsp-svn-helper/tsh-log-message-dialog.c:92
-#: tsp-svn-helper/tsh-notify-dialog.c:94
-#: tsp-svn-helper/tsh-status-dialog.c:115
-msgid "Path"
-msgstr "Chemin"
-
 #: tsp-svn-helper/tsh-log-message-dialog.c:110
 msgid "Log Message"
 msgstr ""
+
+#: tsp-svn-helper/tsh-log.c:98
+#, fuzzy
+msgid "Log failed"
+msgstr "Débloquer"
 
 #: tsp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
@@ -805,17 +833,6 @@ msgstr "Type mime"
 msgid "Notification"
 msgstr "Notification"
 
-#. tsh_properties_dialog_done (dialog);
-#: tsp-svn-helper/tsh-properties.c:82
-#, fuzzy
-msgid "Set property failed"
-msgstr "Restaurer"
-
-#: tsp-svn-helper/tsh-properties.c:105
-#, fuzzy
-msgid "Properties failed"
-msgstr "Éditer les propriétés"
-
 #: tsp-svn-helper/tsh-properties-dialog.c:124
 #, fuzzy
 msgid "Name"
@@ -830,10 +847,55 @@ msgstr ""
 msgid "Modify Property Recursive"
 msgstr "Éditer les propriétés"
 
-#: tsp-svn-helper/tsh-status.c:82
+#. tsh_properties_dialog_done (dialog);
+#: tsp-svn-helper/tsh-properties.c:82
 #, fuzzy
-msgid "Status failed"
-msgstr "État"
+msgid "Set property failed"
+msgstr "Restaurer"
+
+#: tsp-svn-helper/tsh-properties.c:105
+#, fuzzy
+msgid "Properties failed"
+msgstr "Éditer les propriétés"
+
+#: tsp-svn-helper/tsh-relocate-dialog.c:86
+msgid "_From:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-relocate-dialog.c:96
+#: tsp-svn-helper/tsh-relocate-dialog.c:102
+#: tsp-svn-helper/tsh-relocate-dialog.c:151
+#: tsp-svn-helper/tsh-relocate-dialog.c:157
+#: tsp-svn-helper/tsh-relocate-dialog.c:203
+#: tsp-svn-helper/tsh-transfer-dialog.c:90
+#: tsp-svn-helper/tsh-transfer-dialog.c:96
+#: tsp-svn-helper/tsh-transfer-dialog.c:142
+msgid "Select a folder"
+msgstr ""
+
+#: tsp-svn-helper/tsh-relocate-dialog.c:141
+msgid "_To:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-relocate-dialog.c:196
+#: tsp-svn-helper/tsh-transfer-dialog.c:135
+msgid "_Directory:"
+msgstr ""
+
+#: tsp-svn-helper/tsh-relocate.c:74
+#, fuzzy
+msgid "Relocate failed"
+msgstr "Restaurer"
+
+#: tsp-svn-helper/tsh-relocate.c:89
+#, fuzzy
+msgid "Relocate finished"
+msgstr "Nettoyer les verrous"
+
+#: tsp-svn-helper/tsh-relocate.c:136
+#, fuzzy
+msgid "Relocating ..."
+msgstr "Nettoyer les verrous"
 
 #: tsp-svn-helper/tsh-status-dialog.c:156
 msgid "Show Recursive"
@@ -860,21 +922,16 @@ msgstr "Externe"
 msgid "Check Repository"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:79
+#: tsp-svn-helper/tsh-status.c:82
+#, fuzzy
+msgid "Status failed"
+msgstr "État"
+
+#: tsp-svn-helper/tsh-transfer-dialog.c:80
 msgid "_Repository:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-transfer-dialog.c:89
-#: tsp-svn-helper/tsh-transfer-dialog.c:95
-#: tsp-svn-helper/tsh-transfer-dialog.c:141
-msgid "Select a folder"
-msgstr ""
-
-#: tsp-svn-helper/tsh-transfer-dialog.c:134
-msgid "_Directory:"
-msgstr ""
-
-#: tsp-svn-helper/tsh-transfer-dialog.c:153
+#: tsp-svn-helper/tsh-transfer-dialog.c:154
 msgid "Transfer"
 msgstr ""
 

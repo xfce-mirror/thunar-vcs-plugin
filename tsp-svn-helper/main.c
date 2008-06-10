@@ -45,6 +45,7 @@
 #include "tsh-move.h"
 #include "tsh-properties.h"
 #include "tsh-resolved.h"
+#include "tsh-relocate.h"
 #include "tsh-revert.h"
 #include "tsh-status.h"
 #include "tsh-switch.h"
@@ -83,6 +84,7 @@ int main (int argc, char *argv[])
 	gboolean move = FALSE;
   gboolean properties = FALSE;
   gboolean resolved = FALSE;
+  gboolean relocate = FALSE;
   gboolean revert = FALSE;
   gboolean status = FALSE;
   gboolean switch_ = FALSE;
@@ -176,6 +178,12 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+	GOptionEntry relocate_options_table[] =
+	{
+		{ "relocate", '\0', 0, G_OPTION_ARG_NONE, &relocate, N_("Execute relocate action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
 	GOptionEntry revert_options_table[] =
 	{
 		{ "revert", '\0', 0, G_OPTION_ARG_NONE, &revert, N_("Execute revert action"), NULL },
@@ -262,6 +270,10 @@ int main (int argc, char *argv[])
 
 	option_group = g_option_group_new("resolved", N_("Resolved Related Options:"), N_("Resolved"), NULL, NULL);
 	g_option_group_add_entries(option_group, resolved_options_table);
+	g_option_context_add_group(option_context, option_group);
+
+	option_group = g_option_group_new("relocate", N_("Relocate Related Options:"), N_("Relocate"), NULL, NULL);
+	g_option_group_add_entries(option_group, relocate_options_table);
 	g_option_context_add_group(option_context, option_group);
 
 	option_group = g_option_group_new("revert", N_("Revert Related Options:"), N_("Revert"), NULL, NULL);
@@ -395,6 +407,11 @@ int main (int argc, char *argv[])
 	if(resolved)
 	{
 		thread = tsh_resolved(files, svn_ctx, pool);
+	}
+
+	if(relocate)
+	{
+		thread = tsh_relocate(files, svn_ctx, pool);
 	}
 
 	if(revert)

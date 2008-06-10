@@ -40,6 +40,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-move.c							\
 	tsh-properties.h						\
 	tsh-properties.c						\
+	tsh-relocate.h							\
+	tsh-relocate.c							\
 	tsh-resolved.h							\
 	tsh-resolved.c							\
 	tsh-revert.h							\
@@ -76,6 +78,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-properties-dialog.c						\
 	tsh-transfer-dialog.h						\
 	tsh-transfer-dialog.c						\
+	tsh-relocate-dialog.h						\
+	tsh-relocate-dialog.c						\
 	gtkfilechooserentry.h						\
 	gtkfilechooserentry.c						\
 	gtkfilechooserutils.h						\

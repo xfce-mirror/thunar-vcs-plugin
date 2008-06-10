@@ -455,6 +455,19 @@ subaction = gtk_action_new ("tsp::properties", Q_("Menu|Edit Properties"), _("Ed
 	  gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
 	  gtk_widget_show(subitem);
 	}
+	/* Version control (parent) */
+	if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
+	{
+	  subaction = gtk_action_new ("tsp::relocate", Q_("Menu|Relocate"), _("Relocate"), GTK_STOCK_FIND_AND_REPLACE);
+    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--relocate");
+	  g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
+
+	  subitem = gtk_action_create_menu_item (subaction);
+    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
+    gtk_widget_set_tooltip_text(subitem, tooltip);
+	  gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
+	  gtk_widget_show(subitem);
+	}
 /* Changed
 	subitem = gtk_menu_item_new_with_label (_("Mark Resolved"));
 */if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)

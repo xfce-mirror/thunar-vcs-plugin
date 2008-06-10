@@ -129,7 +129,7 @@ GThread *tsh_move (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   }
 
   dialog = gtk_file_chooser_dialog_new (_("Move To"), NULL,
-                               isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:GTK_FILE_CHOOSER_ACTION_SAVE,
+                               /*isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:*/GTK_FILE_CHOOSER_ACTION_SAVE,
                                GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
                                GTK_STOCK_OK, GTK_RESPONSE_OK,
                                NULL);

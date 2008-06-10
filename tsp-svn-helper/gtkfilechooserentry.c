@@ -237,6 +237,8 @@ static void          model_add_bookmarks          (GtkFileChooserEntry *entry,
                                                    GSList               *bookmarks);
 static void          model_update_current_folder  (GtkFileChooserEntry *entry,
                                                    const GtkFilePath    *path);
+static void          model_update_current_folder_uri  (GtkFileChooserEntry *entry,
+                                                       const gchar         *uri);
 static void          model_remove_rows            (GtkFileChooserEntry *entry,
                                                    gint                  pos,
                                                    gint                  n_rows);
@@ -2027,6 +2029,68 @@ model_update_current_folder (GtkFileChooserEntry *entry,
   }
 }
 
+static void
+model_update_current_folder_uri (GtkFileChooserEntry *entry,
+                                 const gchar         *uri)
+{
+  GtkListStore *store;
+  GtkTreeIter iter;
+  gint pos;
+  gchar *label;
+  GtkIconTheme *icon_theme;
+  GdkPixbuf *pixbuf;
+
+  if (!uri) 
+    return;
+
+  store = GTK_LIST_STORE (entry->priv->model);
+
+  if (!entry->priv->has_current_folder_separator)
+  {
+    pos = model_get_type_position (entry, ROW_TYPE_CURRENT_FOLDER_SEPARATOR);
+    gtk_list_store_insert (store, &iter, pos);
+    gtk_list_store_set (store, &iter,
+                        ICON_COLUMN, NULL,
+                        DISPLAY_NAME_COLUMN, NULL,
+                        FULL_PATH_COLUMN, NULL,
+                        TYPE_COLUMN, ROW_TYPE_CURRENT_FOLDER_SEPARATOR,
+                        DATA_COLUMN, NULL,
+                        IS_FOLDER_COLUMN, FALSE,
+                        -1);
+    entry->priv->has_current_folder_separator = TRUE;
+  }
+
+  pos = model_get_type_position (entry, ROW_TYPE_CURRENT_FOLDER);
+  if (!entry->priv->has_current_folder)
+  {
+    gtk_list_store_insert (store, &iter, pos);
+    entry->priv->has_current_folder = TRUE;
+  }
+  else
+  {
+    gtk_tree_model_iter_nth_child (entry->priv->model, &iter, NULL, pos);
+    model_free_row_data (entry, &iter);
+  }
+
+  label = _gtk_file_chooser_label_for_uri (uri);
+  
+  icon_theme = gtk_icon_theme_get_for_screen (gtk_widget_get_screen (GTK_WIDGET (entry)));
+  pixbuf = gtk_icon_theme_load_icon (icon_theme, "gnome-fs-directory", 
+                                     entry->priv->icon_size, 0, NULL);
+  
+  gtk_list_store_set (store, &iter,
+                      ICON_COLUMN, pixbuf,
+                      DISPLAY_NAME_COLUMN, label,
+                      FULL_PATH_COLUMN, uri,
+                      TYPE_COLUMN, ROW_TYPE_CURRENT_FOLDER,
+                      DATA_COLUMN, NULL,
+                      IS_FOLDER_COLUMN, TRUE,
+                      -1);
+  
+  g_free (label);
+  g_object_unref (pixbuf);
+}
+
 static inline void
 model_add_other (GtkFileChooserEntry *entry)
 {
@@ -2237,7 +2301,8 @@ update_combo_box (GtkFileChooserEntry *entry)
       case ROW_TYPE_SHORTCUT:
       case ROW_TYPE_BOOKMARK:
       case ROW_TYPE_CURRENT_FOLDER:
-        row_found = (paths &&
+        row_found = (data &&
+                     paths &&
                      paths->data &&
                      gtk_file_path_compare (data, paths->data) == 0);
         break;
@@ -2947,9 +3012,15 @@ gtk_file_chooser_entry_get_focus_on_click (GtkFileChooserEntry *entry)
 gchar *
 gtk_file_chooser_entry_get_uri (GtkFileChooserEntry *entry)
 {
-  gchar *path = gtk_combo_box_get_active_text (GTK_COMBO_BOX (entry->priv->combo_box));
-  gchar *uri = path;
+  gchar *path;
+  gchar *uri;
   gchar *ptr;
+
+  g_return_val_if_fail (GTK_IS_FILE_CHOOSER_ENTRY (entry), NULL);
+
+  path = gtk_combo_box_get_active_text (GTK_COMBO_BOX (entry->priv->combo_box));
+  uri = path;
+
   for(ptr = path; g_ascii_isalnum(*ptr); ptr++);
   /* No uri, guessing localfilename */
   if(*ptr != ':')
@@ -2958,6 +3029,32 @@ gtk_file_chooser_entry_get_uri (GtkFileChooserEntry *entry)
     g_free(path);
   }
   return uri;
+}
+
+void
+gtk_file_chooser_entry_set_uri (GtkFileChooserEntry  *entry, const gchar *uri)
+{
+  GtkFileChooserEntryPrivate *priv;
+  GtkTreeIter iter;
+  GtkTreeIter filter_iter;
+  gint pos;
+
+  g_return_if_fail (GTK_IS_FILE_CHOOSER_ENTRY (entry));
+
+  priv = entry->priv;
+
+  model_update_current_folder_uri (entry, uri);
+  gtk_tree_model_filter_refilter (GTK_TREE_MODEL_FILTER (priv->filter_model));
+
+  pos = model_get_type_position (entry, ROW_TYPE_CURRENT_FOLDER);
+  gtk_tree_model_iter_nth_child (priv->model, &iter, NULL, pos);
+
+  gtk_tree_model_filter_convert_child_iter_to_iter (GTK_TREE_MODEL_FILTER (priv->filter_model),
+                                                    &filter_iter, &iter);
+
+  g_signal_handler_block (priv->combo_box, priv->combo_box_changed_id);
+  gtk_combo_box_set_active_iter (GTK_COMBO_BOX (priv->combo_box), &filter_iter);
+  g_signal_handler_unblock (priv->combo_box, priv->combo_box_changed_id);
 }
 
 #define __GTK_FILE_CHOOSER_ENTRY_C__
