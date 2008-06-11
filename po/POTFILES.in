@@ -9,6 +9,8 @@ tsp-svn-helper/gtkfilechooserentry.c
 tsp-svn-helper/gtkfilechooserutils.c
 tsp-svn-helper/main.c
 tsp-svn-helper/tsh-add.c
+tsp-svn-helper/tsh-blame-dialog.c
+tsp-svn-helper/tsh-blame.c
 tsp-svn-helper/tsh-checkout.c
 tsp-svn-helper/tsh-cleanup.c
 tsp-svn-helper/tsh-commit.c

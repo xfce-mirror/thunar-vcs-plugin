@@ -31,6 +31,7 @@ void         tsh_notify_func2  (void *, const svn_wc_notify_t *, apr_pool_t *);
 void         tsh_status_func2  (void *, const char *, svn_wc_status2_t *);
 svn_error_t *tsh_log_msg_func2 (const char **, const char **, const apr_array_header_t *, void *, apr_pool_t *);
 svn_error_t *tsh_log_func      (void *, apr_hash_t *, svn_revnum_t, const char *, const char *, const char *, apr_pool_t *);
+svn_error_t *tsh_blame_func    (void *, apr_int64_t, svn_revnum_t, const char *, const char *, const char *, apr_pool_t *);
 
 gchar       *tsh_strerror  (svn_error_t *);
 

@@ -252,8 +252,9 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 	/* Version control (file) */
 	if (tsp_action->property.file_version_control)
 	{
-	  subaction = gtk_action_new ("tsp::blame", Q_("Menu|Blame"), _("Blame"), NULL);
-	  g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_unimplemented), _("Blame"));
+	  subaction = gtk_action_new ("tsp::blame", Q_("Menu|Blame"), _("Blame"), GTK_STOCK_INDEX);
+    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--blame");
+	  g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
 
 	  subitem = gtk_action_create_menu_item (subaction);
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);

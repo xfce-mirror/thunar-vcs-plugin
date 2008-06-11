@@ -59,9 +59,6 @@ static gpointer relocate_thread (gpointer user_data)
 
 	g_free (args);
 
-  if(!path)
-    path = "";
-
   subpool = svn_pool_create (pool);
 
 	if ((err = svn_client_relocate(path, from, to, TRUE, ctx, subpool)))

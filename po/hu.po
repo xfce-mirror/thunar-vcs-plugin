@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar SVN plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-11 00:56+0200\n"
+"POT-Creation-Date: 2008-06-12 00:42+0200\n"
 "PO-Revision-Date: 2007-06-04 08:37+0100\n"
 "Last-Translator: SZERVÁC Attila <sas@321.hu>\n"
 "Language-Team: Hungarian\n"
@@ -23,7 +23,7 @@ msgstr "SVN"
 msgid "Menu|Add"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:223
+#: thunar-svn-plugin/tsp-svn-action.c:242 tsp-svn-helper/main.c:231
 #: tsp-svn-helper/tsh-add.c:113 tsp-svn-helper/tsh-add.c:126
 msgid "Add"
 msgstr "Hozzáad"
@@ -32,223 +32,223 @@ msgstr "Hozzáad"
 msgid "Menu|Blame"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:255
-#: thunar-svn-plugin/tsp-svn-action.c:256
+#: thunar-svn-plugin/tsp-svn-action.c:255 tsp-svn-helper/main.c:235
+#: tsp-svn-helper/tsh-blame-dialog.c:133
 msgid "Blame"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:274
+#: thunar-svn-plugin/tsp-svn-action.c:275
 #, fuzzy
 msgid "Menu|Checkout"
 msgstr "SVN _Checkout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:274 tsp-svn-helper/main.c:227
+#: thunar-svn-plugin/tsp-svn-action.c:275 tsp-svn-helper/main.c:239
 #: tsp-svn-helper/tsh-checkout.c:98 tsp-svn-helper/tsh-checkout.c:110
 #, fuzzy
 msgid "Checkout"
 msgstr "SVN _Checkout"
 
-#: thunar-svn-plugin/tsp-svn-action.c:287
+#: thunar-svn-plugin/tsp-svn-action.c:288
 #, fuzzy
 msgid "Menu|Cleanup"
 msgstr "Tisztít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:287 tsp-svn-helper/main.c:231
+#: thunar-svn-plugin/tsp-svn-action.c:288 tsp-svn-helper/main.c:243
 msgid "Cleanup"
 msgstr "Tisztít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:300
+#: thunar-svn-plugin/tsp-svn-action.c:301
 msgid "Menu|Commit"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:300 tsp-svn-helper/main.c:235
+#: thunar-svn-plugin/tsp-svn-action.c:301 tsp-svn-helper/main.c:247
 #: tsp-svn-helper/tsh-commit.c:127 tsp-svn-helper/tsh-commit.c:140
 msgid "Commit"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:313
+#: thunar-svn-plugin/tsp-svn-action.c:314
 #, fuzzy
 msgid "Menu|Copy"
 msgstr "Kész"
 
-#: thunar-svn-plugin/tsp-svn-action.c:313 tsp-svn-helper/main.c:239
+#: thunar-svn-plugin/tsp-svn-action.c:314 tsp-svn-helper/main.c:251
 #: tsp-svn-helper/tsh-copy.c:152
 #, fuzzy
 msgid "Copy"
 msgstr "Kész"
 
-#: thunar-svn-plugin/tsp-svn-action.c:326
+#: thunar-svn-plugin/tsp-svn-action.c:327
 #, fuzzy
 msgid "Menu|Delete"
 msgstr "Töröl"
 
-#: thunar-svn-plugin/tsp-svn-action.c:326 tsp-svn-helper/main.c:243
+#: thunar-svn-plugin/tsp-svn-action.c:327 tsp-svn-helper/main.c:255
 #: tsp-svn-helper/tsh-delete.c:127 tsp-svn-helper/tsh-delete.c:140
 msgid "Delete"
 msgstr "Töröl"
 
-#: thunar-svn-plugin/tsp-svn-action.c:339
+#: thunar-svn-plugin/tsp-svn-action.c:340
 #, fuzzy
 msgid "Menu|Diff"
 msgstr "Különbség"
 
-#: thunar-svn-plugin/tsp-svn-action.c:339
 #: thunar-svn-plugin/tsp-svn-action.c:340
+#: thunar-svn-plugin/tsp-svn-action.c:341
 msgid "Diff"
 msgstr "Különbség"
 
-#: thunar-svn-plugin/tsp-svn-action.c:351
+#: thunar-svn-plugin/tsp-svn-action.c:352
 #, fuzzy
 msgid "Menu|Export"
 msgstr "Export"
 
-#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:247
+#: thunar-svn-plugin/tsp-svn-action.c:352 tsp-svn-helper/main.c:259
 #: tsp-svn-helper/tsh-export.c:107 tsp-svn-helper/tsh-export.c:125
 msgid "Export"
 msgstr "Export"
 
-#: thunar-svn-plugin/tsp-svn-action.c:364
+#: thunar-svn-plugin/tsp-svn-action.c:365
 #, fuzzy
 msgid "Menu|Import"
 msgstr "SVN _Import"
 
-#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:251
+#: thunar-svn-plugin/tsp-svn-action.c:365 tsp-svn-helper/main.c:263
 #: tsp-svn-helper/tsh-import.c:102 tsp-svn-helper/tsh-import.c:120
 #, fuzzy
 msgid "Import"
 msgstr "SVN _Import"
 
-#: thunar-svn-plugin/tsp-svn-action.c:377
+#: thunar-svn-plugin/tsp-svn-action.c:378
 #, fuzzy
 msgid "Menu|Info"
 msgstr "Adatok"
 
-#: thunar-svn-plugin/tsp-svn-action.c:377
 #: thunar-svn-plugin/tsp-svn-action.c:378
+#: thunar-svn-plugin/tsp-svn-action.c:379
 msgid "Info"
 msgstr "Adatok"
 
-#: thunar-svn-plugin/tsp-svn-action.c:394
+#: thunar-svn-plugin/tsp-svn-action.c:395
 #, fuzzy
 msgid "Menu|Lock"
 msgstr "Zár"
 
-#: thunar-svn-plugin/tsp-svn-action.c:394 tsp-svn-helper/main.c:255
+#: thunar-svn-plugin/tsp-svn-action.c:395 tsp-svn-helper/main.c:267
 #: tsp-svn-helper/tsh-lock-dialog.c:72 tsp-svn-helper/tsh-lock.c:130
 msgid "Lock"
 msgstr "Zár"
 
-#: thunar-svn-plugin/tsp-svn-action.c:407
+#: thunar-svn-plugin/tsp-svn-action.c:408
 msgid "Menu|Log"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:407 tsp-svn-helper/main.c:259
+#: thunar-svn-plugin/tsp-svn-action.c:408 tsp-svn-helper/main.c:271
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Napló"
 
-#: thunar-svn-plugin/tsp-svn-action.c:429
+#: thunar-svn-plugin/tsp-svn-action.c:430
 msgid "Menu|Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:429 tsp-svn-helper/main.c:263
+#: thunar-svn-plugin/tsp-svn-action.c:430 tsp-svn-helper/main.c:275
 #: tsp-svn-helper/tsh-move.c:151
 msgid "Move"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:448
+#: thunar-svn-plugin/tsp-svn-action.c:449
 #, fuzzy
 msgid "Menu|Edit Properties"
 msgstr "Tulajdonságok szerkesztése"
 
-#: thunar-svn-plugin/tsp-svn-action.c:448
+#: thunar-svn-plugin/tsp-svn-action.c:449
 msgid "Edit Properties"
 msgstr "Tulajdonságok szerkesztése"
 
-#: thunar-svn-plugin/tsp-svn-action.c:461
+#: thunar-svn-plugin/tsp-svn-action.c:462
 #, fuzzy
 msgid "Menu|Relocate"
 msgstr "Töröl"
 
-#: thunar-svn-plugin/tsp-svn-action.c:461 tsp-svn-helper/main.c:275
+#: thunar-svn-plugin/tsp-svn-action.c:462 tsp-svn-helper/main.c:287
 #: tsp-svn-helper/tsh-relocate-dialog.c:215
 msgid "Relocate"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-action.c:475
+#: thunar-svn-plugin/tsp-svn-action.c:476
 #, fuzzy
 msgid "Menu|Resolved"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:475 tsp-svn-helper/main.c:271
-#: tsp-svn-helper/tsh-common.c:463 tsp-svn-helper/tsh-resolved.c:112
+#: thunar-svn-plugin/tsp-svn-action.c:476 tsp-svn-helper/main.c:283
+#: tsp-svn-helper/tsh-common.c:464 tsp-svn-helper/tsh-resolved.c:112
 #, fuzzy
 msgid "Resolved"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:488
+#: thunar-svn-plugin/tsp-svn-action.c:489
 #, fuzzy
 msgid "Menu|Resolve"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:488
 #: thunar-svn-plugin/tsp-svn-action.c:489
+#: thunar-svn-plugin/tsp-svn-action.c:490
 msgid "Resolve"
 msgstr "Megold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:500
+#: thunar-svn-plugin/tsp-svn-action.c:501
 #, fuzzy
 msgid "Menu|Revert"
 msgstr "Visszaállít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:500 tsp-svn-helper/main.c:279
+#: thunar-svn-plugin/tsp-svn-action.c:501 tsp-svn-helper/main.c:291
 #: tsp-svn-helper/tsh-revert.c:112 tsp-svn-helper/tsh-revert.c:125
 msgid "Revert"
 msgstr "Visszaállít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:513
+#: thunar-svn-plugin/tsp-svn-action.c:514
 #, fuzzy
 msgid "Menu|Status"
 msgstr "Állapot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:283
-#: tsp-svn-helper/tsh-file-selection-dialog.c:144
+#: thunar-svn-plugin/tsp-svn-action.c:514 tsp-svn-helper/main.c:295
+#: tsp-svn-helper/tsh-file-selection-dialog.c:124
 #: tsp-svn-helper/tsh-status-dialog.c:184
 msgid "Status"
 msgstr "Állapot"
 
-#: thunar-svn-plugin/tsp-svn-action.c:526
+#: thunar-svn-plugin/tsp-svn-action.c:527
 #, fuzzy
 msgid "Menu|Switch"
 msgstr "Vált"
 
-#: thunar-svn-plugin/tsp-svn-action.c:526 tsp-svn-helper/main.c:287
-#: tsp-svn-helper/tsh-relocate.c:122 tsp-svn-helper/tsh-switch.c:114
+#: thunar-svn-plugin/tsp-svn-action.c:527 tsp-svn-helper/main.c:299
+#: tsp-svn-helper/tsh-relocate.c:119 tsp-svn-helper/tsh-switch.c:114
 #: tsp-svn-helper/tsh-switch.c:127
 msgid "Switch"
 msgstr "Vált"
 
-#: thunar-svn-plugin/tsp-svn-action.c:539
+#: thunar-svn-plugin/tsp-svn-action.c:540
 #, fuzzy
 msgid "Menu|Unlock"
 msgstr "Felold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:539 tsp-svn-helper/main.c:291
+#: thunar-svn-plugin/tsp-svn-action.c:540 tsp-svn-helper/main.c:303
 #: tsp-svn-helper/tsh-unlock.c:111
 msgid "Unlock"
 msgstr "Felold"
 
-#: thunar-svn-plugin/tsp-svn-action.c:552
+#: thunar-svn-plugin/tsp-svn-action.c:553
 #, fuzzy
 msgid "Menu|Update"
 msgstr "Frissít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:552 tsp-svn-helper/main.c:295
+#: thunar-svn-plugin/tsp-svn-action.c:553 tsp-svn-helper/main.c:307
 #: tsp-svn-helper/tsh-update.c:113
 msgid "Update"
 msgstr "Frissít"
 
-#: thunar-svn-plugin/tsp-svn-action.c:570
+#: thunar-svn-plugin/tsp-svn-action.c:571
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr ""
@@ -263,10 +263,10 @@ msgstr ""
 #: thunar-svn-plugin/tsp-svn-property-page.c:165
 #: thunar-svn-plugin/tsp-svn-property-page.c:177
 #: thunar-svn-plugin/tsp-svn-property-page.c:190
-#: tsp-svn-helper/tsh-common.c:484 tsp-svn-helper/tsh-common.c:524
-#: tsp-svn-helper/tsh-common.c:533 tsp-svn-helper/tsh-common.c:555
-#: tsp-svn-helper/tsh-common.c:572 tsp-svn-helper/tsh-common.c:599
-#: tsp-svn-helper/tsh-common.c:682
+#: tsp-svn-helper/tsh-common.c:485 tsp-svn-helper/tsh-common.c:525
+#: tsp-svn-helper/tsh-common.c:534 tsp-svn-helper/tsh-common.c:556
+#: tsp-svn-helper/tsh-common.c:573 tsp-svn-helper/tsh-common.c:600
+#: tsp-svn-helper/tsh-common.c:683
 msgid "Unknown"
 msgstr ""
 
@@ -349,191 +349,201 @@ msgstr ""
 msgid "Other..."
 msgstr ""
 
-#: tsp-svn-helper/main.c:98
+#: tsp-svn-helper/main.c:100
 msgid "Print version information"
 msgstr "Verzió kiírása"
 
-#: tsp-svn-helper/main.c:105
+#: tsp-svn-helper/main.c:107
 #, fuzzy
 msgid "Execute add action"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:111
+#: tsp-svn-helper/main.c:113
+#, fuzzy
+msgid "Execute blame action"
+msgstr "Checkout művelet futtatása"
+
+#: tsp-svn-helper/main.c:119
 msgid "Execute checkout action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:117
+#: tsp-svn-helper/main.c:125
 #, fuzzy
 msgid "Execute cleanup action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:123
+#: tsp-svn-helper/main.c:131
 #, fuzzy
 msgid "Execute commit action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:129
+#: tsp-svn-helper/main.c:137
 #, fuzzy
 msgid "Execute copy action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:135
+#: tsp-svn-helper/main.c:143
 #, fuzzy
 msgid "Execute delete action"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:141
+#: tsp-svn-helper/main.c:149
 #, fuzzy
 msgid "Execute export action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:147
+#: tsp-svn-helper/main.c:155
 #, fuzzy
 msgid "Execute import action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:153
+#: tsp-svn-helper/main.c:161
 #, fuzzy
 msgid "Execute lock action"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:159
+#: tsp-svn-helper/main.c:167
 #, fuzzy
 msgid "Execute log action"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:165
+#: tsp-svn-helper/main.c:173
 #, fuzzy
 msgid "Execute move action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:171
+#: tsp-svn-helper/main.c:179
 #, fuzzy
 msgid "Execute properties action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:177
+#: tsp-svn-helper/main.c:185
 #, fuzzy
 msgid "Execute resolved action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:183
+#: tsp-svn-helper/main.c:191
 #, fuzzy
 msgid "Execute relocate action"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:189
+#: tsp-svn-helper/main.c:197
 #, fuzzy
 msgid "Execute revert action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:195
+#: tsp-svn-helper/main.c:203
 #, fuzzy
 msgid "Execute status action"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:201
+#: tsp-svn-helper/main.c:209
 #, fuzzy
 msgid "Execute switch action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:207
+#: tsp-svn-helper/main.c:215
 #, fuzzy
 msgid "Execute unlock action"
 msgstr "Checkout művelet futtatása"
 
-#: tsp-svn-helper/main.c:213
+#: tsp-svn-helper/main.c:221
 msgid "Execute update action"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:223
+#: tsp-svn-helper/main.c:231
 msgid "Add Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:227
+#: tsp-svn-helper/main.c:235
+#, fuzzy
+msgid "Blame Related Options:"
+msgstr "Frissítési művelet futtatása"
+
+#: tsp-svn-helper/main.c:239
 #, fuzzy
 msgid "Checkout Related Options:"
 msgstr "Frissítési művelet futtatása"
 
-#: tsp-svn-helper/main.c:231
+#: tsp-svn-helper/main.c:243
 msgid "Cleanup Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:235
+#: tsp-svn-helper/main.c:247
 msgid "Commit Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:239
+#: tsp-svn-helper/main.c:251
 msgid "Copy Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:243
+#: tsp-svn-helper/main.c:255
 msgid "Delete Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:247
+#: tsp-svn-helper/main.c:259
 msgid "Export Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:251
+#: tsp-svn-helper/main.c:263
 msgid "Import Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:255
+#: tsp-svn-helper/main.c:267
 msgid "Lock Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:259
+#: tsp-svn-helper/main.c:271
 msgid "Log Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:263
+#: tsp-svn-helper/main.c:275
 msgid "Move Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:267
+#: tsp-svn-helper/main.c:279
 #, fuzzy
 msgid "Properties Related Options:"
 msgstr "Tulajdonságok szerkesztése"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:267 tsp-svn-helper/tsh-properties-dialog.c:217
+#: tsp-svn-helper/main.c:279 tsp-svn-helper/tsh-properties-dialog.c:217
 #, fuzzy
 msgid "Properties"
 msgstr "Tulajdonságok szerkesztése"
 
-#: tsp-svn-helper/main.c:271
-msgid "Resolved Related Options:"
-msgstr ""
-
-#: tsp-svn-helper/main.c:275
-#, fuzzy
-msgid "Relocate Related Options:"
-msgstr "Frissítési művelet futtatása"
-
-#: tsp-svn-helper/main.c:279
-msgid "Revert Related Options:"
-msgstr ""
-
 #: tsp-svn-helper/main.c:283
-msgid "Status Related Options:"
+msgid "Resolved Related Options:"
 msgstr ""
 
 #: tsp-svn-helper/main.c:287
 #, fuzzy
-msgid "Switch Related Options:"
+msgid "Relocate Related Options:"
 msgstr "Frissítési művelet futtatása"
 
 #: tsp-svn-helper/main.c:291
-msgid "Unlock Related Options:"
+msgid "Revert Related Options:"
 msgstr ""
 
 #: tsp-svn-helper/main.c:295
+msgid "Status Related Options:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:299
+#, fuzzy
+msgid "Switch Related Options:"
+msgstr "Frissítési művelet futtatása"
+
+#: tsp-svn-helper/main.c:303
+msgid "Unlock Related Options:"
+msgstr ""
+
+#: tsp-svn-helper/main.c:307
 msgid "Update Related Options:"
 msgstr ""
 
-#: tsp-svn-helper/main.c:341
+#: tsp-svn-helper/main.c:353
 msgid "Not enough arguments provided"
 msgstr ""
 
@@ -548,22 +558,46 @@ msgstr ""
 msgid "Failed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-cleanup.c:69
+#: tsp-svn-helper/tsh-blame-dialog.c:94
+#, fuzzy
+msgid "Line"
+msgstr "Bejelentkezés"
+
+#: tsp-svn-helper/tsh-blame-dialog.c:100 tsp-svn-helper/tsh-log-dialog.c:118
+#, fuzzy
+msgid "Revision"
+msgstr "E verziónál: %li"
+
+#: tsp-svn-helper/tsh-blame-dialog.c:106 tsp-svn-helper/tsh-log-dialog.c:124
+msgid "Author"
+msgstr ""
+
+#: tsp-svn-helper/tsh-blame-dialog.c:112 tsp-svn-helper/tsh-log-dialog.c:130
+#, fuzzy
+msgid "Date"
+msgstr "Állapot"
+
+#: tsp-svn-helper/tsh-blame.c:75
+#, fuzzy
+msgid "Blame failed"
+msgstr "Visszaállít"
+
+#: tsp-svn-helper/tsh-cleanup.c:66
 #, fuzzy
 msgid "Cleanup failed"
 msgstr "Tisztít"
 
-#: tsp-svn-helper/tsh-cleanup.c:84
+#: tsp-svn-helper/tsh-cleanup.c:81
 #, fuzzy
 msgid "Cleanup finished"
 msgstr "Tisztít"
 
-#: tsp-svn-helper/tsh-cleanup.c:98
+#: tsp-svn-helper/tsh-cleanup.c:95
 #, fuzzy
 msgid "Cleaning up ..."
 msgstr "Tisztít"
 
-#: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:646
+#: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:647
 #: tsp-svn-helper/tsh-copy.c:86 tsp-svn-helper/tsh-delete.c:103
 #: tsp-svn-helper/tsh-import.c:82 tsp-svn-helper/tsh-move.c:84
 #, fuzzy, c-format
@@ -574,8 +608,8 @@ msgstr "E verziónál: %li"
 msgid "Nothing to do"
 msgstr ""
 
-#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:468
-#: tsp-svn-helper/tsh-common.c:470 tsp-svn-helper/tsh-copy.c:97
+#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:469
+#: tsp-svn-helper/tsh-common.c:471 tsp-svn-helper/tsh-copy.c:97
 #: tsp-svn-helper/tsh-delete.c:114 tsp-svn-helper/tsh-import.c:87
 #: tsp-svn-helper/tsh-move.c:95
 msgid "Completed"
@@ -585,124 +619,124 @@ msgstr "Kész"
 msgid "Commit Message"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:457 tsp-svn-helper/tsh-common.c:466
-#: tsp-svn-helper/tsh-common.c:473 tsp-svn-helper/tsh-common.c:559
-#: tsp-svn-helper/tsh-common.c:604 tsp-svn-helper/tsh-common.c:688
+#: tsp-svn-helper/tsh-common.c:458 tsp-svn-helper/tsh-common.c:467
+#: tsp-svn-helper/tsh-common.c:474 tsp-svn-helper/tsh-common.c:560
+#: tsp-svn-helper/tsh-common.c:605 tsp-svn-helper/tsh-common.c:689
 msgid "Added"
 msgstr "Hozzáadva"
 
-#: tsp-svn-helper/tsh-common.c:458 tsp-svn-helper/tsh-common.c:697
+#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:698
 #, fuzzy
 msgid "Copied"
 msgstr "Kész"
 
-#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:465
-#: tsp-svn-helper/tsh-common.c:474 tsp-svn-helper/tsh-common.c:561
-#: tsp-svn-helper/tsh-common.c:607 tsp-svn-helper/tsh-common.c:690
+#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:466
+#: tsp-svn-helper/tsh-common.c:475 tsp-svn-helper/tsh-common.c:562
+#: tsp-svn-helper/tsh-common.c:608 tsp-svn-helper/tsh-common.c:691
 msgid "Deleted"
 msgstr "Törölve"
 
-#: tsp-svn-helper/tsh-common.c:460
+#: tsp-svn-helper/tsh-common.c:461
 #, fuzzy
 msgid "Restored"
 msgstr "Megold"
 
-#: tsp-svn-helper/tsh-common.c:461
+#: tsp-svn-helper/tsh-common.c:462
 #, fuzzy
 msgid "Reverted"
 msgstr "Visszaállít"
 
-#: tsp-svn-helper/tsh-common.c:462
+#: tsp-svn-helper/tsh-common.c:463
 #, fuzzy
 msgid "Revert failed"
 msgstr "Visszaállít"
 
-#: tsp-svn-helper/tsh-common.c:464
+#: tsp-svn-helper/tsh-common.c:465
 msgid "Skipped"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:467
+#: tsp-svn-helper/tsh-common.c:468
 msgid "Updated"
 msgstr "Frissítve"
 
-#: tsp-svn-helper/tsh-common.c:469 tsp-svn-helper/tsh-common.c:471
-#: tsp-svn-helper/tsh-common.c:568
+#: tsp-svn-helper/tsh-common.c:470 tsp-svn-helper/tsh-common.c:472
+#: tsp-svn-helper/tsh-common.c:569
 msgid "External"
 msgstr "Külső"
 
-#: tsp-svn-helper/tsh-common.c:472 tsp-svn-helper/tsh-common.c:563
-#: tsp-svn-helper/tsh-common.c:610 tsp-svn-helper/tsh-common.c:693
+#: tsp-svn-helper/tsh-common.c:473 tsp-svn-helper/tsh-common.c:564
+#: tsp-svn-helper/tsh-common.c:611 tsp-svn-helper/tsh-common.c:694
 msgid "Modified"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:475 tsp-svn-helper/tsh-common.c:562
-#: tsp-svn-helper/tsh-common.c:613 tsp-svn-helper/tsh-common.c:686
+#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:563
+#: tsp-svn-helper/tsh-common.c:614 tsp-svn-helper/tsh-common.c:687
 msgid "Replaced"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:476
+#: tsp-svn-helper/tsh-common.c:477
 msgid "Transmitting"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:478
+#: tsp-svn-helper/tsh-common.c:479
 #, fuzzy
 msgid "Locked"
 msgstr "Zár"
 
-#: tsp-svn-helper/tsh-common.c:479 tsp-svn-helper/tsh-common.c:699
+#: tsp-svn-helper/tsh-common.c:480 tsp-svn-helper/tsh-common.c:700
 #, fuzzy
 msgid "Unlocked"
 msgstr "Felold"
 
-#: tsp-svn-helper/tsh-common.c:480
+#: tsp-svn-helper/tsh-common.c:481
 msgid "Lock failed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:481
+#: tsp-svn-helper/tsh-common.c:482
 #, fuzzy
 msgid "Unlock failed"
 msgstr "Felold"
 
-#: tsp-svn-helper/tsh-common.c:523
+#: tsp-svn-helper/tsh-common.c:524
 msgid "Inapplicable"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:525
+#: tsp-svn-helper/tsh-common.c:526
 msgid "Unchanged"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:526 tsp-svn-helper/tsh-common.c:560
+#: tsp-svn-helper/tsh-common.c:527 tsp-svn-helper/tsh-common.c:561
 msgid "Missing"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:527 tsp-svn-helper/tsh-common.c:567
+#: tsp-svn-helper/tsh-common.c:528 tsp-svn-helper/tsh-common.c:568
 msgid "Obstructed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:528
+#: tsp-svn-helper/tsh-common.c:529
 msgid "Changed"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:529 tsp-svn-helper/tsh-common.c:564
+#: tsp-svn-helper/tsh-common.c:530 tsp-svn-helper/tsh-common.c:565
 msgid "Merged"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:530 tsp-svn-helper/tsh-common.c:565
+#: tsp-svn-helper/tsh-common.c:531 tsp-svn-helper/tsh-common.c:566
 #, fuzzy
 msgid "Conflicted"
 msgstr "Kész"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: tsp-svn-helper/tsh-common.c:558
+#: tsp-svn-helper/tsh-common.c:559
 msgid "Normal"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:566
+#: tsp-svn-helper/tsh-common.c:567
 msgid "Ignored"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:569
+#: tsp-svn-helper/tsh-common.c:570
 #, fuzzy
 msgid "Incomplete"
 msgstr "Kész"
@@ -741,14 +775,14 @@ msgstr "Emlékezz"
 msgid "Certificate"
 msgstr ""
 
-#: tsp-svn-helper/tsh-file-selection-dialog.c:110
+#: tsp-svn-helper/tsh-file-selection-dialog.c:90
 #: tsp-svn-helper/tsh-log-message-dialog.c:92
 #: tsp-svn-helper/tsh-notify-dialog.c:94
 #: tsp-svn-helper/tsh-status-dialog.c:115
 msgid "Path"
 msgstr "Útvonal"
 
-#: tsp-svn-helper/tsh-file-selection-dialog.c:137
+#: tsp-svn-helper/tsh-file-selection-dialog.c:117
 msgid "Select/Unselect all"
 msgstr ""
 
@@ -756,20 +790,6 @@ msgstr ""
 #, fuzzy
 msgid "Import Message"
 msgstr "Töröl"
-
-#: tsp-svn-helper/tsh-log-dialog.c:118
-#, fuzzy
-msgid "Revision"
-msgstr "E verziónál: %li"
-
-#: tsp-svn-helper/tsh-log-dialog.c:124
-msgid "Author"
-msgstr ""
-
-#: tsp-svn-helper/tsh-log-dialog.c:130
-#, fuzzy
-msgid "Date"
-msgstr "Állapot"
 
 #: tsp-svn-helper/tsh-log-dialog.c:136
 #, fuzzy
@@ -874,17 +894,17 @@ msgstr ""
 msgid "_Directory:"
 msgstr ""
 
-#: tsp-svn-helper/tsh-relocate.c:74
+#: tsp-svn-helper/tsh-relocate.c:71
 #, fuzzy
 msgid "Relocate failed"
 msgstr "Visszaállít"
 
-#: tsp-svn-helper/tsh-relocate.c:89
+#: tsp-svn-helper/tsh-relocate.c:86
 #, fuzzy
 msgid "Relocate finished"
 msgstr "Tisztít"
 
-#: tsp-svn-helper/tsh-relocate.c:136
+#: tsp-svn-helper/tsh-relocate.c:133
 #, fuzzy
 msgid "Relocating ..."
 msgstr "Tisztít"

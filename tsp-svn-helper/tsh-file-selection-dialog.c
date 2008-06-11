@@ -51,29 +51,9 @@ struct _TshFileSelectionDialogClass
 
 G_DEFINE_TYPE (TshFileSelectionDialog, tsh_file_selection_dialog, GTK_TYPE_DIALOG)
 
-enum {
-  SIGNAL_CANCEL = 0,
-  SIGNAL_REFRESH,
-  SIGNAL_COUNT
-};
-
-static guint signals[SIGNAL_COUNT];
-
 static void
 tsh_file_selection_dialog_class_init (TshFileSelectionDialogClass *klass)
 {
-  signals[SIGNAL_CANCEL] = g_signal_new("cancel-clicked",
-    G_OBJECT_CLASS_TYPE (klass),
-    G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
-    0, NULL, NULL,
-    g_cclosure_marshal_VOID__VOID,
-    G_TYPE_NONE, 0);
-  signals[SIGNAL_REFRESH] = g_signal_new("refresh-clicked",
-    G_OBJECT_CLASS_TYPE (klass),
-    G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
-    0, NULL, NULL,
-    g_cclosure_marshal_VOID__VOID,
-    G_TYPE_NONE, 0);
 }
 
 enum {
@@ -193,7 +173,6 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
         gtk_widget_unref(GTK_WIDGET(dialog));
 
         svn_error_clear(err);
-        tsh_reset_cancel();
         return NULL;  //FIXME: needed ??
       }
       files++;
@@ -208,14 +187,12 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
       gtk_widget_unref(GTK_WIDGET(dialog));
 
       svn_error_clear(err);
-      tsh_reset_cancel();
       return NULL;
     }
   }
 
   svn_pool_destroy (subpool);
 
-  tsh_reset_cancel();
 	return GTK_WIDGET(dialog);
 }
 

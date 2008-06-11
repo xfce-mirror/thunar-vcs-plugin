@@ -18,6 +18,8 @@ tsp_svn_helper_SOURCES =						\
 	tsh-common.c							\
 	tsh-add.h							\
 	tsh-add.c							\
+	tsh-blame.h							\
+	tsh-blame.c							\
 	tsh-checkout.h							\
 	tsh-checkout.c							\
 	tsh-cleanup.h							\
@@ -56,16 +58,10 @@ tsp_svn_helper_SOURCES =						\
 	tsh-update.c							\
 	tsh-dialog-common.h						\
 	tsh-dialog-common.c						\
-	tsh-login-dialog.h						\
-	tsh-login-dialog.c						\
+	tsh-blame-dialog.h						\
+	tsh-blame-dialog.c						\
 	tsh-file-dialog.h						\
 	tsh-file-dialog.c						\
-	tsh-trust-dialog.h						\
-	tsh-trust-dialog.c						\
-	tsh-notify-dialog.h						\
-	tsh-notify-dialog.c						\
-	tsh-status-dialog.h						\
-	tsh-status-dialog.c						\
 	tsh-file-selection-dialog.h					\
 	tsh-file-selection-dialog.c					\
 	tsh-lock-dialog.h						\
@@ -74,12 +70,20 @@ tsp_svn_helper_SOURCES =						\
 	tsh-log-dialog.c						\
 	tsh-log-message-dialog.h					\
 	tsh-log-message-dialog.c					\
+	tsh-login-dialog.h						\
+	tsh-login-dialog.c						\
+	tsh-notify-dialog.h						\
+	tsh-notify-dialog.c						\
 	tsh-properties-dialog.h						\
 	tsh-properties-dialog.c						\
-	tsh-transfer-dialog.h						\
-	tsh-transfer-dialog.c						\
 	tsh-relocate-dialog.h						\
 	tsh-relocate-dialog.c						\
+	tsh-status-dialog.h						\
+	tsh-status-dialog.c						\
+	tsh-transfer-dialog.h						\
+	tsh-transfer-dialog.c						\
+	tsh-trust-dialog.h						\
+	tsh-trust-dialog.c						\
 	gtkfilechooserentry.h						\
 	gtkfilechooserentry.c						\
 	gtkfilechooserutils.h						\

@@ -43,6 +43,7 @@
 #include "tsh-status-dialog.h"
 #include "tsh-log-message-dialog.h"
 #include "tsh-log-dialog.h"
+#include "tsh-blame-dialog.h"
 
 #include "tsh-common.h"
 
@@ -756,6 +757,28 @@ tsh_log_func (void *baton, apr_hash_t *changed_paths, svn_revnum_t revision, con
 
   gdk_threads_enter();
   tsh_log_dialog_add(dialog, files, revision, author, date_str, message);
+  gdk_threads_leave();
+
+  g_free(date_str);
+
+	return SVN_NO_ERROR;
+}
+
+svn_error_t *
+tsh_blame_func (void *baton, apr_int64_t line_no, svn_revnum_t revision, const char *author, const char *date, const char *line, apr_pool_t *pool)
+{
+  apr_time_t date_val;
+  gchar *date_str = NULL;
+	TshBlameDialog *dialog = TSH_BLAME_DIALOG (baton);
+
+  if(date)
+  {
+    svn_time_from_cstring(&date_val, date, pool);
+    apr_ctime((date_str = g_new0(gchar, APR_CTIME_LEN)), date_val);
+  }
+
+  gdk_threads_enter();
+  tsh_blame_dialog_add(dialog, line_no, revision, author, date_str, line);
   gdk_threads_leave();
 
   g_free(date_str);
