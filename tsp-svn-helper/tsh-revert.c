@@ -78,7 +78,7 @@ static gpointer revert_thread (gpointer user_data)
 		APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
 	}
 
-	if ((err = svn_client_revert(paths, TRUE, ctx, subpool)))
+	if ((err = svn_client_revert(paths, FALSE, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

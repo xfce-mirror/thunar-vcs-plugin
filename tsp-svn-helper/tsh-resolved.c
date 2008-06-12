@@ -32,6 +32,7 @@
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
+#include "tsh-file-selection-dialog.h"
 #include "tsh-notify-dialog.h"
 
 #include "tsh-resolved.h"
@@ -65,7 +66,7 @@ static gpointer resolved_thread (gpointer user_data)
 	{
 		for (i = 0; i < size; i++)
 		{
-      if ((err = svn_client_resolved(files[i], TRUE, ctx, subpool)))
+      if ((err = svn_client_resolved(files[i], FALSE, ctx, subpool)))
       {
         error_str = tsh_strerror(err);
         gdk_threads_enter();
@@ -81,7 +82,7 @@ static gpointer resolved_thread (gpointer user_data)
 	}
 	else
 	{
-    if ((err = svn_client_resolved("", TRUE, ctx, subpool)))
+    if ((err = svn_client_resolved("", FALSE, ctx, subpool)))
     {
       error_str = tsh_strerror(err);
       gdk_threads_enter();
@@ -108,6 +109,19 @@ GThread *tsh_resolved (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
+
+  dialog = tsh_file_selection_dialog_new (_("Resolved"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_CONFLICTED, ctx, pool);
+	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
+  {
+    gtk_widget_destroy (dialog);
+    return NULL;
+  }
+  g_strfreev (files);
+  files = tsh_file_selection_dialog_get_files (TSH_FILE_SELECTION_DIALOG (dialog));
+  gtk_widget_destroy (dialog);
+
+  if(!files)
+    return NULL;
 
 	dialog = tsh_notify_dialog_new (_("Resolved"), NULL, 0);
   g_signal_connect(dialog, "cancel-clicked", tsh_cancel, NULL);

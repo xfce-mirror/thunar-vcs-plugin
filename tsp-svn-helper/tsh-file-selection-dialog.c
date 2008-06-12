@@ -249,8 +249,16 @@ tsh_file_selection_dialog_get_files (TshFileSelectionDialog *dialog)
 static void tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t *status)
 {
 	TshFileSelectionDialog *dialog = TSH_FILE_SELECTION_DIALOG (baton);
+  gboolean add = FALSE;
 
   if (dialog->flags & (status->entry?(TSH_FILE_SELECTION_FLAG_MODIFIED|TSH_FILE_SELECTION_FLAG_UNCHANGED|TSH_FILE_SELECTION_FLAG_IGNORED):TSH_FILE_SELECTION_FLAG_UNVERSIONED))
+    add = TRUE;
+
+  if (dialog->flags & TSH_FILE_SELECTION_FLAG_CONFLICTED)
+    if(status->text_status == svn_wc_status_conflicted || status->prop_status == svn_wc_status_conflicted)
+      add = TRUE;
+
+  if (add)
   {
     GtkTreeModel *model;
     GtkTreeIter iter;

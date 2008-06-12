@@ -29,7 +29,8 @@ typedef enum {
   TSH_FILE_SELECTION_FLAG_MODIFIED    = 1<<1,
   TSH_FILE_SELECTION_FLAG_UNVERSIONED = 1<<2,
   TSH_FILE_SELECTION_FLAG_UNCHANGED   = 1<<3,
-  TSH_FILE_SELECTION_FLAG_IGNORED     = 1<<4
+  TSH_FILE_SELECTION_FLAG_IGNORED     = 1<<4,
+  TSH_FILE_SELECTION_FLAG_CONFLICTED  = 1<<5
 } TshFileSelectionFlags;
 
 typedef struct _TshFileSelectionDialogClass TshFileSelectionDialogClass;
