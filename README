@@ -5,16 +5,17 @@ The Thunar SVN Plugin adds Subversion actions to the context menu of thunar.
 This gives a SVN intergration to Thunar.
 
 The current features are:
-- Most of the svn action: add, checkout, cleanup, commit, copy, delete, export,
-  import, lock, log, move, properties, resolved, revert, status, unlock, update.
+- Most of the svn action: add, checkout, cleanup, commit, copy, delete,
+  export, import, lock, log, move, properties, resolved, revert, status,
+  unlock, update.
 - Subversion info in file properties dialog.
 
 
 Usage
 =====
 
-In the thunar file/folder view right click on a file ore folder and the context
-menu pops up showing the SVN submenu. Choose the appropriate action.
+In the thunar file/folder view right click on a file ore folder and the
+context menu pops up showing the SVN submenu. Choose the appropriate action.
 
 
 Required packages
@@ -34,17 +35,17 @@ The Thunar SVN Plugin depends on the following packages:
 Installation
 ============
 
-The file 'INSTALL' contains generic installation instructions. Make sure to run
-./configure --prefix=$(pkg-config --variable prefix thunarx-1) so Thunar can
-find the plugin. For more information, visit the thunar-svn-plugin website at
-http://goodies.xfce.org/projects/thunar-plugins/thunar-svn-plugin
+The file 'INSTALL' contains generic installation instructions. Make sure to
+run ./configure --prefix=$(pkg-config --variable prefix thunarx-1) so Thunar
+can find the plugin. For more information, visit the thunar-svn-plugin website
+at http://goodies.xfce.org/projects/thunar-plugins/thunar-svn-plugin
 
 
 How to report bugs?
 ===================
 
 Bugs should be reported to the Xfce bug tracking system
-(http://bugzilla.xfce.org, product Thunar Plugins, component thunar-svn-plugin).
-You will need to create an account for yourself.
+(http://bugzilla.xfce.org, product Thunar Plugins, component
+thunar-svn-plugin).  You will need to create an account for yourself.
 
-# vi:set ts=2 sw=2 et ai nocindent textwidth=80:
+# vi:set ts=2 sw=2 et ai nocindent textwidth=78:

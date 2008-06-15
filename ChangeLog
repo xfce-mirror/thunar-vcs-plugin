@@ -1,3 +1,38 @@
+2008-06-16	Peter de Ridder <peter@xfce.org>
+
+	* === Released 0.0.2 ===
+	* thunar-svn-plugin/tsp-svn-action.c thunar-svn-plugin/tsp-provider.c:
+	  Created signal which is emitted on new process spawn.
+
+2008-06-09	Peter de Ridder	<peter@xfce.org>
+
+	* thunar-svn-plugin/tsp-svn-action.c tsp-svn-helper/main.c
+	  tsp-svn-helper/tsh-blame.[ch] tsp-svn-helper/tsh-blame-dialog.[ch]:
+	  Added Subversion blame action.
+	* tsp-svn-helper/tsh-resolved.c: Added file selection dialog.
+
+2008-06-11	Peter de Ridder	<peter@xfce.org>
+
+	* thunar-svn-plugin/tsh-svn-action.c tsp-svn-helper/main.c
+	  tsp-svn-helper/tsh-relocate.[ch] tsp-svn-helper/tsh-relocate.[ch]:
+	  Added Subversion relocate action.
+
+2008-06-09	Peter de Ridder	<peter@xfce.org>
+
+	* thunar-svn-plugin/tsh-svn-action.c tsp-svn-helper/main.c
+	  tsp-svn-helper/tsh-switch.[ch]: Added Subversion switch action.
+
+2008-03-08	Peter de Ridder	<peter@xfce.org>
+
+	* tsp-svn-helper/tsh-revert.c tsp-svn-helper/tsh-delete.c
+	  tsp-svn-helper/tsh-commit.c tsp-svn-helper/tsh-add.c
+	  tsp-svn-helper/tsh-file-selection-dialog.[ch]: Added file selection
+	  dialog for some Subversion actions.
+
+2008-01-27	Peter de Ridder	<peter@xfce.org>
+
+	* tsp-svn-helper/tsh-log-dialog.c: Fixed log message is NULL bug.
+
 2008-01-19	Peter de Ridder <peter@xfce.org>
 
 	* === Released 0.0.1 ===
