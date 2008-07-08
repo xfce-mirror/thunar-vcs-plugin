@@ -95,6 +95,9 @@ int main (int argc, char *argv[])
 	gchar **files = NULL;
 	GError *error = NULL;
 
+	GOptionGroup *option_group;
+	GOptionContext *option_context;
+
 	GOptionEntry general_options_table[] =
 	{
 		{ "version", 'v', 0, G_OPTION_ARG_NONE, &print_version, N_("Print version information"), NULL },
@@ -222,8 +225,12 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
-	GOptionGroup *option_group;
-	GOptionContext *option_context = g_option_context_new("<action> [options] [args]");
+  if (!g_thread_supported ())
+    g_thread_init (NULL);
+	gdk_threads_init ();
+  gdk_threads_enter ();
+
+	option_context = g_option_context_new("<action> [options] [args]");
 
 	g_option_context_add_main_entries(option_context, general_options_table, GETTEXT_PACKAGE);
 	g_option_context_add_group(option_context, gtk_get_option_group(TRUE));
@@ -307,9 +314,6 @@ int main (int argc, char *argv[])
 	option_group = g_option_group_new("update", N_("Update Related Options:"), N_("Update"), NULL, NULL);
 	g_option_group_add_entries(option_group, update_options_table);
 	g_option_context_add_group(option_context, option_group);
-
-	g_thread_init (NULL);
-	gdk_threads_init ();
 
 	if(!g_option_context_parse(option_context, &argc, &argv, &error))
 	{
@@ -464,6 +468,8 @@ int main (int argc, char *argv[])
 	}
 
 	svn_pool_destroy(pool);
+
+  gdk_threads_leave ();
 
 	return EXIT_SUCCESS;
 }
