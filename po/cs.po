@@ -1,14 +1,14 @@
 # Czech translations for xfce package.
 # Copyright (C) 2007 THE xfce'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the xfce package.
-# Michal Várady <miko.vaji@gmail.com>, 2007.
+# Michal Várady <miko.vaji@gmail.com>, 2007-2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce 4-i18-goodies\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-06-16 00:45+0200\n"
-"PO-Revision-Date: 2008-11-09 02:47+0100\n"
+"PO-Revision-Date: 2008-12-22 02:12+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -448,58 +448,55 @@ msgstr "Spustit akci aktualizace (update)"
 
 #: tsp-svn-helper/main.c:231
 msgid "Add Related Options:"
-msgstr ""
+msgstr "Volby týkající se přidávání (add):"
 
 #: tsp-svn-helper/main.c:235
-#, fuzzy
 msgid "Blame Related Options:"
-msgstr "Spustit akci update (aktualizovat)"
+msgstr "Volby týkající se výpisu detailů (blame):"
 
 #: tsp-svn-helper/main.c:239
-#, fuzzy
 msgid "Checkout Related Options:"
-msgstr "Spustit akci update (aktualizovat)"
+msgstr "Volby týkající se stahování (checkout):"
 
 #: tsp-svn-helper/main.c:243
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Volby týkající se čištění (cleanup):"
 
 #: tsp-svn-helper/main.c:247
 msgid "Commit Related Options:"
-msgstr ""
+msgstr "Volby týkající se zapisování (checkin):"
 
 #: tsp-svn-helper/main.c:251
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Volby týkající se kopírování (copy):"
 
 #: tsp-svn-helper/main.c:255
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Volby týkající se mazání (delete):"
 
 #: tsp-svn-helper/main.c:259
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Volby týkající se exportování (export):"
 
 #: tsp-svn-helper/main.c:263
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Volby týkající se importování (import):"
 
 #: tsp-svn-helper/main.c:267
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Volby týkající se uzamykání (lock):"
 
 #: tsp-svn-helper/main.c:271
 msgid "Log Related Options:"
-msgstr ""
+msgstr "Volby týkající se protokolování (log):"
 
 #: tsp-svn-helper/main.c:275
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Volby týkající se přesunu (move):"
 
 #: tsp-svn-helper/main.c:279
-#, fuzzy
 msgid "Properties Related Options:"
-msgstr "Upravit vlastnosti"
+msgstr "Volby týkající se vlastností (propedit:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
@@ -510,33 +507,31 @@ msgstr "Vlastnosti"
 
 #: tsp-svn-helper/main.c:283
 msgid "Resolved Related Options:"
-msgstr ""
+msgstr "Volby týkající se řešení (resolved):"
 
 #: tsp-svn-helper/main.c:287
-#, fuzzy
 msgid "Relocate Related Options:"
-msgstr "Spustit akci update (aktualizovat)"
+msgstr "Volby týkající se přemístění (relocate):"
 
 #: tsp-svn-helper/main.c:291
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Volby týkající se obnovování (revert):"
 
 #: tsp-svn-helper/main.c:295
 msgid "Status Related Options:"
-msgstr ""
+msgstr "Volby týkající se stavu (status):"
 
 #: tsp-svn-helper/main.c:299
-#, fuzzy
 msgid "Switch Related Options:"
-msgstr "Spustit akci update (aktualizovat)"
+msgstr "Volby týkající se přepnutí (switch):"
 
 #: tsp-svn-helper/main.c:303
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Volby týkající se odemykání (unlock):"
 
 #: tsp-svn-helper/main.c:307
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Volby týkající se aktualizace (update):"
 
 #: tsp-svn-helper/main.c:353
 msgid "Not enough arguments provided"
@@ -562,9 +557,8 @@ msgid "Failed"
 msgstr "Selhal"
 
 #: tsp-svn-helper/tsh-blame-dialog.c:94
-#, fuzzy
 msgid "Line"
-msgstr "Přihlásit se"
+msgstr "Čára"
 
 #: tsp-svn-helper/tsh-blame-dialog.c:100
 #: tsp-svn-helper/tsh-log-dialog.c:118
@@ -724,7 +718,6 @@ msgstr "Chybí"
 
 #: tsp-svn-helper/tsh-common.c:528
 #: tsp-svn-helper/tsh-common.c:568
-#, fuzzy
 msgid "Obstructed"
 msgstr "Zabráněno"
 
