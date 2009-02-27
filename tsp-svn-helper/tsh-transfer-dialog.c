@@ -26,9 +26,11 @@
 #include <dirent.h>
 #include <subversion-1/svn_path.h>
 
+#define USE_FILE_ENTRY_REPLACEMENT 1
+
 #ifndef USE_FILE_ENTRY_REPLACEMENT
 //#include "tsh-file-chooser-entry.h"
-#include "gtkfilechooserentry.h"
+//#include "gtkfilechooserentry.h"
 //#include <gtk/gtkfilechooserentry.h>
 #endif
 
@@ -266,7 +268,7 @@ browse_callback(GtkButton *button, TshTransferDialog *dialog)
   gtk_widget_show(dialog->filechooser);
   if(gtk_dialog_run(GTK_DIALOG(dialog->filechooser)) == GTK_RESPONSE_OK)
   {
-    gchar *url = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->filechooser));
+    gchar *url = gtk_file_chooser_get_uri(GTK_FILE_CHOOSER(dialog->filechooser));
     gtk_entry_set_text(GTK_ENTRY(dialog->repository), url);
     g_free(url);
   }

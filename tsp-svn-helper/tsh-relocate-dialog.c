@@ -26,9 +26,11 @@
 #include <dirent.h>
 #include <subversion-1/svn_path.h>
 
+#define USE_FILE_ENTRY_REPLACEMENT 1
+
 #ifndef USE_FILE_ENTRY_REPLACEMENT
 //#include "tsh-file-chooser-entry.h"
-#include "gtkfilechooserentry.h"
+//#include "gtkfilechooserentry.h"
 //#include <gtk/gtkfilechooserentry.h>
 #endif
 
@@ -360,14 +362,14 @@ gchar* tsh_relocate_dialog_get_directory (TshRelocateDialog *dialog)
 static void
 browse_callback_from(GtkButton *button, TshRelocateDialog *dialog)
 {
-  gtk_widget_show(dialog->filechooser);
-  if(gtk_dialog_run(GTK_DIALOG(dialog->filechooser)) == GTK_RESPONSE_OK)
+  gtk_widget_show(dialog->filechooser_from);
+  if(gtk_dialog_run(GTK_DIALOG(dialog->filechooser_from)) == GTK_RESPONSE_OK)
   {
-    gchar *url = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->filechooser));
+    gchar *url = gtk_file_chooser_get_uri(GTK_FILE_CHOOSER(dialog->filechooser_from));
     gtk_entry_set_text(GTK_ENTRY(dialog->from), url);
     g_free(url);
   }
-  gtk_widget_hide(dialog->filechooser);
+  gtk_widget_hide(dialog->filechooser_from);
 }
 #endif
 
@@ -375,14 +377,14 @@ browse_callback_from(GtkButton *button, TshRelocateDialog *dialog)
 static void
 browse_callback_to(GtkButton *button, TshRelocateDialog *dialog)
 {
-  gtk_widget_show(dialog->filechooser);
-  if(gtk_dialog_run(GTK_DIALOG(dialog->filechooser)) == GTK_RESPONSE_OK)
+  gtk_widget_show(dialog->filechooser_to);
+  if(gtk_dialog_run(GTK_DIALOG(dialog->filechooser_to)) == GTK_RESPONSE_OK)
   {
-    gchar *url = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog->filechooser));
+    gchar *url = gtk_file_chooser_get_uri(GTK_FILE_CHOOSER(dialog->filechooser_to));
     gtk_entry_set_text(GTK_ENTRY(dialog->to), url);
     g_free(url);
   }
-  gtk_widget_hide(dialog->filechooser);
+  gtk_widget_hide(dialog->filechooser_to);
 }
 #endif
 
