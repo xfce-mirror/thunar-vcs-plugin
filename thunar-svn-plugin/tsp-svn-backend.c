@@ -205,8 +205,8 @@ tsp_svn_backend_get_status (const gchar *uri)
 
   subpool = svn_pool_create (pool);
 
-	/* check for the path is a working copy */
-	err = svn_client_status2 (NULL, path, &revision, status_callback, &list, FALSE, TRUE, FALSE, TRUE, TRUE, ctx, subpool);
+	/* get the status of all files in the directory */
+	err = svn_client_status3 (NULL, path, &revision, status_callback, &list, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL, ctx, subpool);
 
   svn_pool_destroy (subpool);
 
@@ -235,7 +235,7 @@ info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t
   TspSvnInfo **pinfo = baton;
   g_return_val_if_fail (*pinfo == NULL, SVN_NO_ERROR);
 
-  *pinfo = g_new (TspSvnInfo, 1);
+  *pinfo = g_new0 (TspSvnInfo, 1);
   (*pinfo)->path = g_strdup (path);
   (*pinfo)->url = g_strdup (info->URL);
   (*pinfo)->revision = info->rev;
@@ -243,6 +243,11 @@ info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t
   (*pinfo)->modrev = info->last_changed_rev;
   apr_ctime (((*pinfo)->moddate = g_new0(gchar, APR_CTIME_LEN)), info->last_changed_date);
   (*pinfo)->modauthor = g_strdup (info->last_changed_author);
+  if (((*pinfo)->has_wc_info = info->has_wc_info))
+  {
+    (*pinfo)->changelist = g_strdup (info->changelist);
+    (*pinfo)->depth =  info->depth;
+  }
 
   return SVN_NO_ERROR;
 }
@@ -265,7 +270,7 @@ tsp_svn_backend_get_info (const gchar *uri)
 
 	gchar *path = g_strdup (uri);
 
-	/* remove trailing '/' cause svn_client_status2 can't handle that */
+	/* remove trailing '/' cause svn_client_info can't handle that */
 	if (path[strlen (path) - 1] == '/')
 	{
 		path[strlen (path) - 1] = '\0';
@@ -273,8 +278,8 @@ tsp_svn_backend_get_info (const gchar *uri)
 
   subpool = svn_pool_create (pool);
 
-	/* check for the path is a working copy */
-	err = svn_client_info (path, &revision, &revision, info_callback, &info, FALSE, ctx, subpool);
+	/* get svn info for this file or directory */
+	err = svn_client_info2 (path, &revision, &revision, info_callback, &info, svn_depth_empty, NULL, ctx, subpool);
 
   svn_pool_destroy (subpool);
 
@@ -303,6 +308,10 @@ tsp_svn_info_free (TspSvnInfo *info)
   g_free (info->repository);
   g_free (info->moddate);
   g_free (info->modauthor);
+  if(info->has_wc_info)
+  {
+    g_free (info->changelist);
+  }
 
   g_free (info);
 }

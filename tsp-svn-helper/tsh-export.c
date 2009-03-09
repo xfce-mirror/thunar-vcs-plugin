@@ -63,7 +63,7 @@ static gpointer export_thread (gpointer user_data)
 
   peg_revision.kind = svn_opt_revision_unspecified;
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_export3(NULL, url, path, &peg_revision, &revision, TRUE, FALSE, TRUE, NULL, ctx, subpool)))
+	if ((err = svn_client_export4(NULL, url, path, &peg_revision, &revision, TRUE, FALSE, svn_depth_infinity, NULL, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

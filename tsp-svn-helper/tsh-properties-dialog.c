@@ -42,7 +42,7 @@ struct _TshPropertiesDialog
 	GtkWidget *tree_view;
   GtkWidget *combo_box;
   GtkWidget *text_view;
-  GtkWidget *recursive;
+  GtkWidget *depth;
 	GtkWidget *set;
 	GtkWidget *delete;
 	GtkWidget *close;
@@ -104,12 +104,13 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	GtkWidget *tree_view;
 	GtkWidget *combo_box;
 	GtkWidget *text_view;
-  GtkWidget *recursive;
+  GtkWidget *depth;
 	GtkWidget *scroll_window;
   GtkWidget *vpane;
   GtkWidget *box;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
+    GtkTreeIter iter;
   GtkEntryCompletion *completion;
 
   vpane = gtk_vpaned_new ();
@@ -155,6 +156,7 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
   gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_EXTERNALS);
   gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_IGNORE);
   gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_KEYWORDS);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_MERGEINFO);
   gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_MIME_TYPE);
   gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_NEEDS_LOCK);
   gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_SPECIAL);
@@ -178,9 +180,60 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_widget_show (text_view);
 	gtk_widget_show (scroll_window);
 
-  dialog->recursive = recursive = gtk_check_button_new_with_label (_("Modify Property Recursive"));
-  gtk_box_pack_start (GTK_BOX(box), recursive, FALSE, TRUE, 0);
-	gtk_widget_show (recursive);
+	dialog->depth = depth = gtk_combo_box_new ();
+
+	model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
+
+	gtk_combo_box_set_model (GTK_COMBO_BOX (depth), model);
+
+    /*
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Unknown"),
+	                    1, svn_depth_unknown,
+	                    -1);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Exclude"),
+	                    1, svn_depth_exclude,
+	                    -1);
+    */
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Self"),
+	                    1, svn_depth_empty,
+	                    -1);
+
+    gtk_combo_box_set_active_iter (GTK_COMBO_BOX (depth), &iter);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Immediate files"),
+	                    1, svn_depth_files,
+	                    -1);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Immediates"),
+	                    1, svn_depth_immediates,
+	                    -1);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Recursive"),
+	                    1, svn_depth_infinity,
+	                    -1);
+
+	g_object_unref (model);
+
+	renderer = gtk_cell_renderer_text_new ();
+    gtk_cell_layout_pack_start(GTK_CELL_LAYOUT (depth), renderer, TRUE);
+    gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (depth), renderer, "text", 0);
+
+  gtk_box_pack_start (GTK_BOX(box), depth, FALSE, TRUE, 0);
+	gtk_widget_show (depth);
 
   gtk_paned_pack2 (GTK_PANED(vpane), box, TRUE, FALSE);
   gtk_widget_show (box);
@@ -386,12 +439,29 @@ tsh_properties_dialog_get_value (TshPropertiesDialog *dialog)
   return gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
 }
 
-gboolean
-tsh_properties_dialog_get_recursive (TshPropertiesDialog *dialog)
+svn_depth_t
+tsh_properties_dialog_get_depth (TshPropertiesDialog *dialog)
 {
-  g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), FALSE);
+  GtkTreeModel *model;
+  GtkTreeIter iter;
+  svn_depth_t depth;
+  GValue value;
 
-  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->recursive));
+  memset(&value, 0, sizeof(GValue));
+
+  g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), svn_depth_unknown);
+
+  if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter))
+     return svn_depth_unknown;
+
+  model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->depth));
+  gtk_tree_model_get_value (model, &iter, 1, &value);
+
+  depth = g_value_get_int (&value);
+
+  g_value_unset(&value);
+
+  return depth;
 }
 
 static void

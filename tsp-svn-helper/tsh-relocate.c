@@ -91,32 +91,27 @@ static gpointer relocate_thread (gpointer user_data)
 	return GINT_TO_POINTER (TRUE);
 }
 
-static svn_error_t* info_callback(void *baton, const char *path, const svn_info_t *info, apr_pool_t *pool)
-{
-  (*((gchar**)baton)) = g_strdup(info->URL);
-  return NULL;
-}
-
 GThread *tsh_relocate (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	struct thread_args *args;
+  const char *url = NULL;
   gchar *repository = NULL;
   gchar *from;
   gchar *to;
   GtkWidget *dialog;
   gchar *path;
 	apr_pool_t *subpool;
-	svn_opt_revision_t revision = {svn_opt_revision_unspecified};
 
   path = files?files[0]:NULL;
 
   subpool = svn_pool_create(pool);
 
-  svn_error_clear(svn_client_info(path?path:"", &revision, &revision, info_callback, &repository, FALSE, ctx, subpool));
+  svn_error_clear(svn_client_url_from_path(&url, path?path:"", subpool));
+  repository = g_strdup(url);
 
   svn_pool_destroy(subpool);
 
-	dialog = tsh_relocate_dialog_new (_("Switch"), NULL, 0, repository, repository, path);
+	dialog = tsh_relocate_dialog_new (_("Relocate"), NULL, 0, repository, repository, path);
   g_free(repository);
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {

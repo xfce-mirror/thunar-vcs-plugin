@@ -31,6 +31,8 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
+#include <subversion-1/svn_types.h>
+
 #include <thunar-svn-plugin/tsp-svn-backend.h>
 #include <thunar-svn-plugin/tsp-svn-action.h>
 #include <thunar-svn-plugin/tsp-svn-property-page.h>

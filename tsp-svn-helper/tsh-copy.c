@@ -51,6 +51,8 @@ static gpointer copy_thread (gpointer user_data)
 	svn_error_t *err;
   svn_opt_revision_t revision;
   svn_commit_info_t *commit_info;
+  apr_array_header_t *paths;
+  svn_client_copy_source_t copy_source;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *subpool, *pool = args->pool;
   TshNotifyDialog *dialog = args->dialog;
@@ -64,8 +66,15 @@ static gpointer copy_thread (gpointer user_data)
 
   subpool = svn_pool_create (pool);
 
+    paths = apr_array_make (subpool, 1, sizeof (svn_client_copy_source_t *));
+
   revision.kind = svn_opt_revision_unspecified;
-	if ((err = svn_client_copy3(&commit_info, from, &revision, to, ctx, subpool)))
+    copy_source.path = from;
+    copy_source.revision = &revision;
+    copy_source.peg_revision = &revision;
+    APR_ARRAY_PUSH (paths, svn_client_copy_source_t *) = &copy_source;
+
+	if ((err = svn_client_copy4(&commit_info, paths, to, FALSE, FALSE, NULL, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

@@ -79,7 +79,7 @@ static gpointer update_thread (gpointer user_data)
 	}
 
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_update2(NULL, paths, &revision, TRUE, FALSE, ctx, subpool)))
+	if ((err = svn_client_update3(NULL, paths, &revision, svn_depth_unknown, FALSE, FALSE, FALSE, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

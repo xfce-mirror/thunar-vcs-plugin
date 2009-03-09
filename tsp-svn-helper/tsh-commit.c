@@ -82,7 +82,7 @@ static gpointer commit_thread (gpointer user_data)
     APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
   }
 
-	if ((err = svn_client_commit3(&commit_info, paths, TRUE, FALSE, ctx, subpool)))
+	if ((err = svn_client_commit4(&commit_info, paths, svn_depth_empty, FALSE, FALSE, NULL, NULL, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

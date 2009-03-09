@@ -76,25 +76,25 @@ XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.6.0])
 AC_CHECK_LIB([svn_subr-1], [main], ,
 [
 	echo "*** The required library 'svn_subr-1' was not found on your system."
-	echo "*** Please install libsvn (atleast version 1.4)."
+	echo "*** Please install libsvn (atleast version 1.5)."
 	exit 1
 ])
 AC_CHECK_LIB([svn_fs-1], [main], ,
 [
 	echo "*** The required library 'svn_fs-1' was not found on your system."
-	echo "*** Please install libsvn (atleast version 1.4)."
+	echo "*** Please install libsvn (atleast version 1.5)."
 	exit 1
 ])
 AC_CHECK_LIB([svn_wc-1], [main], ,
 [
 	echo "*** The required library 'svn_wc-1' was not found on your system."
-	echo "*** Please install libsvn (atleast version 1.4)."
+	echo "*** Please install libsvn (atleast version 1.5)."
 	exit 1
 ])
 AC_CHECK_LIB([svn_client-1], [main], ,
 [
 	echo "*** The required library 'svn_wc-1' was not found on your system."
-	echo "*** Please install libsvn (atleast version 1.4)."
+	echo "*** Please install libsvn (atleast version 1.5)."
 	exit 1
 ])
 

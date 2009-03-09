@@ -87,7 +87,7 @@ static gpointer log_thread (gpointer user_data)
   start.kind = svn_opt_revision_head;
   end.kind = svn_opt_revision_number;
   end.value.number = 0;
-	if ((err = svn_client_log3(paths, &revision, &start, &end, 0, TRUE, FALSE, tsh_log_func, dialog, ctx, subpool)))
+	if ((err = svn_client_log4(paths, &revision, &start, &end, 0, TRUE, FALSE, FALSE, NULL, tsh_log_func, dialog, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

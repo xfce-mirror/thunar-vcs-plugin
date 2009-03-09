@@ -20,8 +20,6 @@
 #ifndef __TSP_SVN_BACKEND_H__
 #define __TSP_SVN_BACKEND_H__
 
-#include <thunarx/thunarx.h>
-
 G_BEGIN_DECLS;
 
 typedef struct
@@ -38,11 +36,14 @@ typedef struct
 {
 	gchar *path;
   gchar *url;
-  glong revision;
+  svn_revnum_t revision;
   gchar *repository;
-  glong modrev;
+  svn_revnum_t modrev;
   gchar *moddate;
   gchar *modauthor;
+  gboolean has_wc_info;
+  gchar *changelist;
+  svn_depth_t depth;
 } TspSvnInfo;
 
 #define TSP_SVN_INFO(p) ((TspSvnInfo*)p)

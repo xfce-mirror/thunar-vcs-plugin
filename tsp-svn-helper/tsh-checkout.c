@@ -62,7 +62,7 @@ static gpointer checkout_thread (gpointer user_data)
   subpool = svn_pool_create (pool);
 
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_checkout2(NULL, url, path, &revision, &revision, TRUE, FALSE, ctx, subpool)))
+	if ((err = svn_client_checkout3(NULL, url, path, &revision, &revision, svn_depth_infinity, FALSE, FALSE, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

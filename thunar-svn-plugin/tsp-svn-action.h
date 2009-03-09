@@ -21,6 +21,7 @@
 #define __TSP_SVN_ACTION_H__
 
 #include <gtk/gtk.h>
+#include <thunarx/thunarx.h>
 
 G_BEGIN_DECLS;
 

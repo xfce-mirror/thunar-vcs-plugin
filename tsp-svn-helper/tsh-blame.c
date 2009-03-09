@@ -64,7 +64,7 @@ static gpointer blame_thread (gpointer user_data)
   start.kind = svn_opt_revision_number;
   start.value.number = 0;
   end.kind = svn_opt_revision_head;
-	if ((err = svn_client_blame3(file, &revision, &start, &end, &diff_options, FALSE, tsh_blame_func, dialog, ctx, subpool)))
+	if ((err = svn_client_blame4(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func2, dialog, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

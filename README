@@ -25,7 +25,7 @@ The Thunar SVN Plugin depends on the following packages:
 - Thunar
 - Thunar-VFS 0.4.0 or higher
 - Thunarx 0.4.0 or higher
-- libsvn 1.4 or higher
+- libsvn 1.5 or higher
 - libapr 0.9.7 or higher
 - gtk 2.6.0 or higher
 - glib 2.6.0 or higher

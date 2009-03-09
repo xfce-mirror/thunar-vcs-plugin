@@ -34,6 +34,7 @@
 #include "tsh-common.h"
 #include "tsh-add.h"
 #include "tsh-blame.h"
+//#include "tsh-changelist.h"
 #include "tsh-checkout.h"
 #include "tsh-cleanup.h"
 #include "tsh-commit.h"
@@ -74,6 +75,7 @@ int main (int argc, char *argv[])
 	gboolean print_version = FALSE;
 	gboolean add = FALSE;
 	gboolean blame = FALSE;
+	gboolean changelist = FALSE;
 	gboolean checkout = FALSE;
 	gboolean cleanup = FALSE;
 	gboolean commit = FALSE;
@@ -114,6 +116,12 @@ int main (int argc, char *argv[])
 	GOptionEntry blame_options_table[] =
 	{
 		{ "blame", '\0', 0, G_OPTION_ARG_NONE, &blame, N_("Execute blame action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry changelist_options_table[] =
+	{
+		{ "changelist", '\0', 0, G_OPTION_ARG_NONE, &changelist, N_("Execute changelist action"), NULL },
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
@@ -243,6 +251,10 @@ int main (int argc, char *argv[])
 	g_option_group_add_entries(option_group, blame_options_table);
 	g_option_context_add_group(option_context, option_group);
 
+	option_group = g_option_group_new("changelist", N_("Changelist Related Options:"), N_("Blame"), NULL, NULL);
+	g_option_group_add_entries(option_group, changelist_options_table);
+	g_option_context_add_group(option_context, option_group);
+
 	option_group = g_option_group_new("checkout", N_("Checkout Related Options:"), N_("Checkout"), NULL, NULL);
 	g_option_group_add_entries(option_group, checkout_options_table);
 	g_option_context_add_group(option_context, option_group);
@@ -350,7 +362,7 @@ int main (int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
-  if(add || blame || delete || revert || resolved)
+  if(add || blame || delete || revert || resolved || changelist)
   {
     if(!g_strv_length(files))
     {
@@ -368,6 +380,11 @@ int main (int argc, char *argv[])
 	if(blame)
 	{
 		thread = tsh_blame(files, svn_ctx, pool);
+	}
+
+	if(changelist)
+	{
+		//thread = tsh_changelist(files, svn_ctx, pool);
 	}
 
 	if(checkout)

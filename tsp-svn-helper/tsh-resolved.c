@@ -66,7 +66,7 @@ static gpointer resolved_thread (gpointer user_data)
 	{
 		for (i = 0; i < size; i++)
 		{
-      if ((err = svn_client_resolved(files[i], FALSE, ctx, subpool)))
+      if ((err = svn_client_resolve(files[i], svn_depth_empty, svn_wc_conflict_choose_merged, ctx, subpool)))
       {
         error_str = tsh_strerror(err);
         gdk_threads_enter();
@@ -82,7 +82,7 @@ static gpointer resolved_thread (gpointer user_data)
 	}
 	else
 	{
-    if ((err = svn_client_resolved("", FALSE, ctx, subpool)))
+    if ((err = svn_client_resolve("", svn_depth_empty, svn_wc_conflict_choose_merged, ctx, subpool)))
     {
       error_str = tsh_strerror(err);
       gdk_threads_enter();

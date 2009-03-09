@@ -66,7 +66,7 @@ static gpointer add_thread (gpointer user_data)
 	{
 		for (i = 0; i < size; i++)
 		{
-      if ((err = svn_client_add3(files[i], TRUE, FALSE, FALSE, ctx, subpool)))
+      if ((err = svn_client_add4(files[i], svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
       {
         error_str = tsh_strerror(err);
         gdk_threads_enter();
@@ -82,7 +82,7 @@ static gpointer add_thread (gpointer user_data)
 	}
 	else
 	{
-    if ((err = svn_client_add3("", TRUE, FALSE, FALSE, ctx, subpool)))
+    if ((err = svn_client_add4("", svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
     {
       error_str = tsh_strerror(err);
       gdk_threads_enter();

@@ -63,7 +63,7 @@ static gpointer import_thread (gpointer user_data)
 
   subpool = svn_pool_create (pool);
 
-	if ((err = svn_client_import2(&commit_info, path, url, FALSE, FALSE, ctx, subpool)))
+	if ((err = svn_client_import3(&commit_info, path, url, svn_depth_infinity, FALSE, FALSE, NULL, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

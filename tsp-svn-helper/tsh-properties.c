@@ -43,7 +43,7 @@ struct thread_args {
 	gchar *path;
   gchar *set_key;
   gchar *set_value;
-  gboolean recursive;
+  gboolean depth;
 };
 
 static gpointer properties_thread (gpointer user_data)
@@ -57,9 +57,8 @@ static gpointer properties_thread (gpointer user_data)
 	gchar *path = args->path;
   gchar *set_key = args->set_key;
   gchar *set_value = args->set_value;
-  gboolean recursive = args->recursive;
+  gboolean depth = args->depth;
   svn_string_t *value;
-  apr_array_header_t *prop_items;
   GtkWidget *error;
   gchar *error_str;
 
@@ -72,7 +71,7 @@ static gpointer properties_thread (gpointer user_data)
   {
     value = set_value?svn_string_create(set_value, subpool):NULL;
 
-    if ((err = svn_client_propset2(set_key, value, path, recursive, FALSE, ctx, subpool)))
+    if ((err = svn_client_propset3(NULL, set_key, value, path, depth, FALSE, SVN_INVALID_REVNUM, NULL, NULL, ctx, subpool)))
     {
       //svn_pool_destroy (subpool);
       error_str = tsh_strerror(err);
@@ -94,7 +93,7 @@ static gpointer properties_thread (gpointer user_data)
   g_free (set_value);
 
   revision.kind = svn_opt_revision_unspecified;
-	if ((err = svn_client_proplist2(&prop_items, path, &revision, &revision, FALSE, ctx, subpool)))
+	if ((err = svn_client_proplist3(path, &revision, &revision, svn_depth_empty, NULL, tsh_proplist_func, dialog, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 
@@ -112,27 +111,6 @@ static gpointer properties_thread (gpointer user_data)
     tsh_reset_cancel();
 		return GINT_TO_POINTER (FALSE);
 	}
-
-  if(prop_items)
-  {
-    if(prop_items->nelts)
-    {
-      apr_hash_index_t *hi;
-      svn_client_proplist_item_t *item = APR_ARRAY_IDX(prop_items, 0, svn_client_proplist_item_t*);
-
-      for (hi = apr_hash_first(subpool, item->prop_hash); hi; hi = apr_hash_next(hi)) {
-        const char *name;
-        svn_string_t *value;
-        gchar *str_value;
-        apr_hash_this(hi, (const void**)&name, NULL, (void**)&value);
-        str_value = g_strndup (value->data, value->len);
-        gdk_threads_enter();
-        tsh_properties_dialog_add (dialog, name, str_value);
-        gdk_threads_leave();
-        g_free (str_value);
-      }
-    }
-  }
 
   svn_pool_destroy (subpool);
 
@@ -157,7 +135,7 @@ static void set_property (TshPropertiesDialog *dialog, struct thread_args *args)
 {
   args->set_key = tsh_properties_dialog_get_key (dialog);
   args->set_value = tsh_properties_dialog_get_value (dialog);
-  args->recursive = tsh_properties_dialog_get_recursive (dialog);
+  args->depth = tsh_properties_dialog_get_depth (dialog);
 
   create_properties_thread (dialog, args);
 }
@@ -192,7 +170,7 @@ GThread *tsh_properties (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->path = path;
   args->set_key = NULL;
   args->set_value = NULL;
-  args->recursive = FALSE;
+  args->depth = svn_depth_unknown;
 
   g_signal_connect(dialog, "set-clicked", G_CALLBACK(set_property), args);
   g_signal_connect(dialog, "delete-clicked", G_CALLBACK(delete_property), args);

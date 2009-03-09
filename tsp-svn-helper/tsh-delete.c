@@ -82,7 +82,7 @@ static gpointer delete_thread (gpointer user_data)
     APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
   }
 
-	if ((err = svn_client_delete2(&commit_info, paths, FALSE, ctx, subpool)))
+	if ((err = svn_client_delete3(&commit_info, paths, FALSE, FALSE, NULL, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

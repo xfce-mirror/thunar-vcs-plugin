@@ -25,12 +25,12 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
+#include <subversion-1/svn_types.h>
+
 #include <thunar-svn-plugin/tsp-svn-backend.h>
 #include <thunar-svn-plugin/tsp-svn-property-page.h>
 
 #include <string.h>
-
-#include <subversion-1/svn_types.h>
 
 
 
@@ -52,6 +52,8 @@ struct _TspSvnPropertyPage
 	GtkWidget *modrev;
 	GtkWidget *moddate;
 	GtkWidget *modauthor;
+	GtkWidget *changelist;
+	GtkWidget *depth;
 };
 
 
@@ -109,7 +111,7 @@ tsp_svn_property_page_init (TspSvnPropertyPage *self)
 
   gtk_container_set_border_width (GTK_CONTAINER (self), 12);
 
-  table = gtk_table_new (7, 2, FALSE);
+  table = gtk_table_new (9, 2, FALSE);
   gtk_table_set_col_spacings (GTK_TABLE (table), 12);
   gtk_table_set_row_spacings (GTK_TABLE (table), 6);
 
@@ -193,9 +195,37 @@ tsp_svn_property_page_init (TspSvnPropertyPage *self)
   gtk_table_attach (GTK_TABLE (table), label, 1, 2, 6, 7, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (label);
 
-  /*TODO: lock*/
+  /* Alignment in the most simple widget to find, for just doing a size request */
+  spacer = g_object_new (GTK_TYPE_ALIGNMENT, "height-request", 12, NULL);
+  gtk_table_attach (GTK_TABLE (table), spacer, 0, 2, 7, 8, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (spacer);
 
-  /*TODO: wc info*/
+  label = gtk_label_new (_("Changelist:"));
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_attributes (GTK_LABEL (label), attr_list);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 8, 9, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (label);
+
+  self->changelist = label = gtk_label_new("");
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_selectable (GTK_LABEL (label), TRUE);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 8, 9, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (label);
+
+  label = gtk_label_new (_("Depth:"));
+  gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
+  gtk_label_set_attributes (GTK_LABEL (label), attr_list);
+  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 9, 10, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (label);
+
+  self->depth = label = gtk_label_new(_("Unknown"));
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_selectable (GTK_LABEL (label), TRUE);
+  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 9, 10, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (label);
+
+  /*TODO: kind, repos UUID, lock
+   * wc info: size, schedule, copy from, text time, prop time, checksum, confilct, prejfile, working size */
 
   gtk_container_add (GTK_CONTAINER (self), table);
   gtk_widget_show (GTK_WIDGET (table));
@@ -257,6 +287,38 @@ tsp_svn_property_page_get_property (GObject *object, guint property_id, GValue *
 
 
 
+const gchar *
+depth_to_string(svn_depth_t depth)
+{
+  const gchar *depth_string;
+
+	switch(depth)
+	{
+    default:
+    case svn_depth_unknown:
+      depth_string = _("Unknown");
+      break;
+    case svn_depth_exclude:
+      depth_string = _("Exclude");
+      break;
+    case svn_depth_empty:
+      depth_string = _("Empty");
+      break;
+    case svn_depth_files:
+      depth_string = _("Files");
+      break;
+    case svn_depth_immediates:
+      depth_string = _("Immediates");
+      break;
+    case svn_depth_infinity:
+      depth_string = _("Infinity");
+      break;
+	}
+  return depth_string;
+}
+
+
+
 static void
 tsp_svn_property_page_file_changed (ThunarxFileInfo *file, TspSvnPropertyPage *page)
 {
@@ -296,6 +358,13 @@ tsp_svn_property_page_file_changed (ThunarxFileInfo *file, TspSvnPropertyPage *p
     g_free (tmpstr);
     gtk_label_set_text (GTK_LABEL (page->moddate), info->moddate);
     gtk_label_set_text (GTK_LABEL (page->modauthor), info->modauthor);
+    if(info->has_wc_info)
+    {
+      if(info->changelist)
+        gtk_label_set_text (GTK_LABEL (page->changelist), info->changelist);
+      if(info->depth)
+        gtk_label_set_text (GTK_LABEL (page->depth), depth_to_string(info->depth));
+    }
 
     tsp_svn_info_free (info);
   }

@@ -62,7 +62,7 @@ static gpointer switch_thread (gpointer user_data)
   subpool = svn_pool_create (pool);
 
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_switch(NULL, path, url, &revision, TRUE, ctx, subpool)))
+	if ((err = svn_client_switch2(NULL, path, url, &revision, &revision, svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 
@@ -88,26 +88,21 @@ static gpointer switch_thread (gpointer user_data)
 	return GINT_TO_POINTER (TRUE);
 }
 
-static svn_error_t* info_callback(void *baton, const char *path, const svn_info_t *info, apr_pool_t *pool)
-{
-  (*((gchar**)baton)) = g_strdup(info->URL);
-  return NULL;
-}
-
 GThread *tsh_switch (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
+  const char *url = NULL;
   gchar *repository = NULL;
   gchar *path;
 	apr_pool_t *subpool;
-	svn_opt_revision_t revision = {svn_opt_revision_unspecified};
 
   path = files?files[0]:NULL;
 
   subpool = svn_pool_create(pool);
 
-  svn_error_clear(svn_client_info(path?path:"", &revision, &revision, info_callback, &repository, FALSE, ctx, subpool));
+  svn_error_clear(svn_client_url_from_path(&url, path?path:"", subpool));
+  repository = g_strdup(url);
 
   svn_pool_destroy(subpool);
 

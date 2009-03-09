@@ -166,7 +166,7 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   {
     while (*files)
     {
-      if((err = svn_client_status2(NULL, *files, &revision, tsh_file_selection_status_func2, dialog, selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, ctx, subpool)))
+      if((err = svn_client_status3(NULL, *files, &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
       {
         svn_pool_destroy (subpool);
 
@@ -180,7 +180,7 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   }
   else
   {
-    if((err = svn_client_status2(NULL, "", &revision, tsh_file_selection_status_func2, dialog, selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, ctx, subpool)))
+    if((err = svn_client_status3(NULL, "", &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
     {
       svn_pool_destroy (subpool);
 

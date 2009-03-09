@@ -293,7 +293,20 @@ tsp_svn_action_create_menu_item (GtkAction *action)
     gtk_widget_set_tooltip_text(subitem, tooltip);
   gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
   gtk_widget_show(subitem);
-*//* No version control (parent) */
+*//* Version control (file) */
+  if (tsp_action->property.file_version_control)
+  {
+    subaction = gtk_action_new ("tsp::changelist", Q_("Menu|Changelist"), _("Changelist"), GTK_STOCK_INDEX);
+    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--changelist");
+    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
+
+    subitem = gtk_action_create_menu_item (subaction);
+    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
+    gtk_widget_set_tooltip_text(subitem, tooltip);
+    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
+    gtk_widget_show(subitem);
+  }
+  /* No version control (parent) */
   if (tsp_action->property.is_parent && !tsp_action->property.parent_version_control)
   {
     subaction = gtk_action_new ("tsp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT);

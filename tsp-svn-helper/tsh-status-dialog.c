@@ -37,7 +37,7 @@ struct _TshStatusDialog
 	GtkDialog dialog;
 
 	GtkWidget *tree_view;
-  GtkWidget *recursive;
+  GtkWidget *depth;
   GtkWidget *get_all;
   GtkWidget *unversioned;
   GtkWidget *update;
@@ -95,7 +95,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	GtkWidget *button;
 	GtkWidget *tree_view;
 	GtkWidget *scroll_window;
-	GtkWidget *recursive;
+	GtkWidget *depth;
 	GtkWidget *get_all;
 	GtkWidget *unversioned;
 	GtkWidget *update;
@@ -104,6 +104,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
   GtkWidget *table;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
+    GtkTreeIter iter;
 
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -153,10 +154,60 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 
   table = gtk_table_new (3, 2, FALSE);
 
-	dialog->recursive = recursive = gtk_check_button_new_with_label (_("Show Recursive"));
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (recursive), TRUE);
-  gtk_table_attach (GTK_TABLE (table), recursive, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
-	gtk_widget_show (recursive);
+	dialog->depth = depth = gtk_combo_box_new ();
+
+	model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
+
+	gtk_combo_box_set_model (GTK_COMBO_BOX (depth), model);
+
+    /*
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Unknown"),
+	                    1, svn_depth_unknown,
+	                    -1);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Exclude"),
+	                    1, svn_depth_exclude,
+	                    -1);
+    */
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Self"),
+	                    1, svn_depth_empty,
+	                    -1);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Immediate files"),
+	                    1, svn_depth_files,
+	                    -1);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Immediates"),
+	                    1, svn_depth_immediates,
+	                    -1);
+
+	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+	                    0, _("Recursive"),
+	                    1, svn_depth_infinity,
+	                    -1);
+
+    gtk_combo_box_set_active_iter (GTK_COMBO_BOX (depth), &iter);
+
+	g_object_unref (model);
+
+	renderer = gtk_cell_renderer_text_new ();
+    gtk_cell_layout_pack_start(GTK_CELL_LAYOUT (depth), renderer, TRUE);
+    gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (depth), renderer, "text", 0);
+
+  gtk_table_attach (GTK_TABLE (table), depth, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_show (depth);
 
 	dialog->get_all = get_all = gtk_check_button_new_with_label (_("Show Unmodified Files"));
   gtk_table_attach (GTK_TABLE (table), get_all, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
@@ -253,12 +304,29 @@ tsh_status_dialog_done (TshStatusDialog *dialog)
 	gtk_widget_show (dialog->refresh);
 }
 
-gboolean
-tsh_status_dialog_get_show_recursive (TshStatusDialog *dialog)
+svn_depth_t
+tsh_status_dialog_get_depth (TshStatusDialog *dialog)
 {
-  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), FALSE);
+  GtkTreeModel *model;
+  GtkTreeIter iter;
+  svn_depth_t depth;
+  GValue value;
 
-  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->recursive));
+  memset(&value, 0, sizeof(GValue));
+
+  g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), svn_depth_unknown);
+
+  if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter))
+     return svn_depth_unknown;
+
+  model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->depth));
+  gtk_tree_model_get_value (model, &iter, 1, &value);
+
+  depth = g_value_get_int (&value);
+
+  g_value_unset(&value);
+
+  return depth;
 }
 
 gboolean

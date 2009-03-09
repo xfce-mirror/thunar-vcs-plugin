@@ -50,6 +50,7 @@ static gpointer move_thread (gpointer user_data)
 	struct thread_args *args = user_data;
 	svn_error_t *err;
   svn_commit_info_t *commit_info;
+  apr_array_header_t *paths;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *subpool, *pool = args->pool;
   TshNotifyDialog *dialog = args->dialog;
@@ -63,7 +64,11 @@ static gpointer move_thread (gpointer user_data)
 
   subpool = svn_pool_create (pool);
 
-	if ((err = svn_client_move4(&commit_info, from, to, FALSE, ctx, subpool)))
+    paths = apr_array_make (subpool, 1, sizeof (const char *));
+
+    APR_ARRAY_PUSH (paths, const char *) = from;
+
+	if ((err = svn_client_move5(&commit_info, paths, to, FALSE, FALSE, FALSE, NULL, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

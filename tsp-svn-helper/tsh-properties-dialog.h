@@ -34,30 +34,22 @@ typedef struct _TshPropertiesDialog      TshPropertiesDialog;
 #define TSH_IS_PROPERTIES_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_PROPERTIES_DIALOG))
 #define TSH_PROPERTIES_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_PROPERTIES_DIALOG, TshPropertiesDialogClass))
 
-typedef struct
-{
-  const gchar *action;
-  gchar *file;
-} TshLogFile;
+GType       tsh_properties_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 
-#define TSH_LOG_FILE(p) ((TshLogFile*)p)
+GtkWidget*  tsh_properties_dialog_new      (const gchar *title,
+                                            GtkWindow *parent,
+                                            GtkDialogFlags flags) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
-GType      tsh_properties_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
-
-GtkWidget* tsh_properties_dialog_new      (const gchar *title,
-                                           GtkWindow *parent,
-                                           GtkDialogFlags flags) G_GNUC_MALLOC G_GNUC_INTERNAL;
-
-void       tsh_properties_dialog_add      (TshPropertiesDialog *dialog,
-                                           const char *name,
-                                           const char *value);
-void       tsh_properties_dialog_done     (TshPropertiesDialog *dialog);
+void        tsh_properties_dialog_add      (TshPropertiesDialog *dialog,
+                                            const char *name,
+                                            const char *value);
+void        tsh_properties_dialog_done     (TshPropertiesDialog *dialog);
 
 
-gchar     *tsh_properties_dialog_get_key          (TshPropertiesDialog *dialog);
-gchar     *tsh_properties_dialog_get_selected_key (TshPropertiesDialog *dialog);
-gchar     *tsh_properties_dialog_get_value        (TshPropertiesDialog *dialog);
-gboolean   tsh_properties_dialog_get_recursive    (TshPropertiesDialog *dialog);
+gchar      *tsh_properties_dialog_get_key          (TshPropertiesDialog *dialog);
+gchar      *tsh_properties_dialog_get_selected_key (TshPropertiesDialog *dialog);
+gchar      *tsh_properties_dialog_get_value        (TshPropertiesDialog *dialog);
+svn_depth_t tsh_properties_dialog_get_depth        (TshPropertiesDialog *dialog);
 
 G_END_DECLS;
 

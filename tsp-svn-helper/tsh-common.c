@@ -44,6 +44,7 @@
 #include "tsh-log-message-dialog.h"
 #include "tsh-log-dialog.h"
 #include "tsh-blame-dialog.h"
+#include "tsh-properties-dialog.h"
 
 #include "tsh-common.h"
 
@@ -479,7 +480,14 @@ tsh_action_to_string(svn_wc_notify_action_t action)
     N_("Locked"),
     N_("Unlocked"),
     N_("Lock failed"),
-    N_("Unlock failed")
+    N_("Unlock failed"),
+    N_("Exists"),
+    N_("Changelist set"),
+    N_("Changelist cleared"),
+    N_("Changelist moved"),
+    N_("Merge begin"),
+    N_("Foreign merge begin"),
+    N_("Replace")
   };
 
   const gchar *action_string = N_("Unknown");
@@ -511,6 +519,13 @@ tsh_action_to_string(svn_wc_notify_action_t action)
     case svn_wc_notify_unlocked:
     case svn_wc_notify_failed_lock:
     case svn_wc_notify_failed_unlock:
+    case svn_wc_notify_exists:
+    case svn_wc_notify_changelist_set:
+    case svn_wc_notify_changelist_clear:
+    case svn_wc_notify_changelist_moved:
+    case svn_wc_notify_merge_begin:
+    case svn_wc_notify_foreign_merge_begin:
+    case svn_wc_notify_update_replace:
       action_string = action_table[action];
       break;
 	}
@@ -727,18 +742,34 @@ tsh_log_msg_func2(const char **log_msg, const char **tmp_file, const apr_array_h
 }
 
 svn_error_t *
-tsh_log_func (void *baton, apr_hash_t *changed_paths, svn_revnum_t revision, const char *author, const char *date, const char *message, apr_pool_t *pool)
+tsh_log_func (void *baton, svn_log_entry_t *log_entry, apr_pool_t *pool)
 {
+  apr_hash_t *changed_paths = log_entry->changed_paths;
+  apr_hash_t *revprops = log_entry->revprops;
   apr_time_t date_val;
-  gchar *date_str = NULL;
+  svn_string_t *value;
+  gchar *author = NULL;
+  gchar *date = NULL;
+  gchar *message = NULL;
   GSList *files = NULL;
 	TshLogDialog *dialog = TSH_LOG_DIALOG (baton);
 
-  if(date)
+  value = apr_hash_get(revprops, SVN_PROP_REVISION_AUTHOR, APR_HASH_KEY_STRING);
+  if(value)
+    author = g_strndup (value->data, value->len);
+
+  value = apr_hash_get(revprops, SVN_PROP_REVISION_DATE, APR_HASH_KEY_STRING);
+  if(value)
   {
+    date = g_strndup (value->data, value->len);
     svn_time_from_cstring(&date_val, date, pool);
-    apr_ctime((date_str = g_new0(gchar, APR_CTIME_LEN)), date_val);
+    g_free(date);
+    apr_ctime((date = g_new0(gchar, APR_CTIME_LEN)), date_val);
   }
+
+  value = apr_hash_get(revprops, SVN_PROP_REVISION_LOG, APR_HASH_KEY_STRING);
+  if(value)
+    message = g_strndup (value->data, value->len);
 
   if(changed_paths)
   {
@@ -756,16 +787,18 @@ tsh_log_func (void *baton, apr_hash_t *changed_paths, svn_revnum_t revision, con
   }
 
   gdk_threads_enter();
-  tsh_log_dialog_add(dialog, files, revision, author, date_str, message);
+  tsh_log_dialog_add(dialog, files, log_entry->revision, author, date, message);
   gdk_threads_leave();
 
-  g_free(date_str);
+  g_free(author);
+  g_free(date);
+  g_free(message);
 
 	return SVN_NO_ERROR;
 }
 
 svn_error_t *
-tsh_blame_func (void *baton, apr_int64_t line_no, svn_revnum_t revision, const char *author, const char *date, const char *line, apr_pool_t *pool)
+tsh_blame_func2 (void *baton, apr_int64_t line_no, svn_revnum_t revision, const char *author, const char *date, svn_revnum_t merged_revision, const char *merged_author, const char *merged_date, const char *merged_path, const char *line, apr_pool_t *pool)
 {
   apr_time_t date_val;
   gchar *date_str = NULL;
@@ -784,6 +817,27 @@ tsh_blame_func (void *baton, apr_int64_t line_no, svn_revnum_t revision, const c
   g_free(date_str);
 
 	return SVN_NO_ERROR;
+}
+
+svn_error_t *
+tsh_proplist_func (void *baton, const char *path, apr_hash_t *prop_hash, apr_pool_t *pool)
+{
+  TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (baton);
+  apr_hash_index_t *hi;
+
+  for (hi = apr_hash_first(pool, prop_hash); hi; hi = apr_hash_next(hi)) {
+    const char *name;
+    svn_string_t *value;
+    gchar *str_value;
+    apr_hash_this(hi, (const void**)&name, NULL, (void**)&value);
+    str_value = g_strndup (value->data, value->len);
+    gdk_threads_enter();
+    tsh_properties_dialog_add (dialog, name, str_value);
+    gdk_threads_leave();
+    g_free (str_value);
+  }
+
+  return SVN_NO_ERROR;
 }
 
 gchar *

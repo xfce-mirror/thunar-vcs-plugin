@@ -52,7 +52,7 @@ static gpointer status_thread (gpointer user_data)
 	apr_pool_t *subpool, *pool = args->pool;
 	TshStatusDialog *dialog = args->dialog;
 	gchar **files = args->files;
-  gboolean recursive;
+  svn_depth_t depth;
   gboolean get_all;
   gboolean update;
   gboolean no_ignore;
@@ -61,7 +61,7 @@ static gpointer status_thread (gpointer user_data)
   gchar *error_str;
 
   gdk_threads_enter();
-  recursive = tsh_status_dialog_get_show_recursive(dialog);
+  depth = tsh_status_dialog_get_depth(dialog);
   get_all = tsh_status_dialog_get_show_unmodified(dialog);
   update = tsh_status_dialog_get_check_reposetory(dialog);
   no_ignore = tsh_status_dialog_get_show_ignore(dialog);
@@ -71,7 +71,7 @@ static gpointer status_thread (gpointer user_data)
   subpool = svn_pool_create (pool);
 
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_status2(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, recursive, get_all, update, no_ignore, ignore_externals, ctx, subpool)))
+	if ((err = svn_client_status3(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 
