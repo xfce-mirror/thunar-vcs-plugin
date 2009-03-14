@@ -1,4 +1,25 @@
-2008-06-16	Peter de Ridder <peter@xfce.org>
+2009-03-14	Peter de Ridder	<peter@xfce.org>
+
+	* === Released 0.0.3 ===
+
+2009-03-09	Peter de Ridder	<peter@xfce.org>
+
+	* Changed all svn api fucntions to the 1.5 svn api.
+	* Thunar-SVN-Plugin now requires libsvn version 1.5 or newer.
+
+2009-02-27	Peter de Ridder	<peter@xfce.org>
+
+	* thunar-svn-helper/tsh-{transfer,relocate}-dialog.c
+	thunar-svn-helper/Makefile: Removed gtkfilechooserentry which got
+	broken with the later version of gtk.
+	* INSTALL: Updated to newer version provided by the auto tools.
+
+2008-07-17	Peter de Ridder	<peter@xfce.org>
+
+	* tsp-svn-helper/main.c: Fixed bug by moving gtk_threads_enter
+	directly behind gdk_threads_init.
+
+2008-06-16	Peter de Ridder	<peter@xfce.org>
 
 	* === Released 0.0.2 ===
 	* thunar-svn-plugin/tsp-svn-action.c thunar-svn-plugin/tsp-provider.c:
