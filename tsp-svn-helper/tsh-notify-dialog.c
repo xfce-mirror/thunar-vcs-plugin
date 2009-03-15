@@ -101,7 +101,7 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 	                                             renderer, "text",
 	                                             COLUMN_MIME, NULL);
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
+	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 

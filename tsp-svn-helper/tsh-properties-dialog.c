@@ -202,6 +202,9 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Self means only this file/direcotry is updated
+                         */
 	                    0, _("Self"),
 	                    1, svn_depth_empty,
 	                    -1);
@@ -210,18 +213,27 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Immediate files means this file/direcotry and the files it contains are updated
+                         */
 	                    0, _("Immediate files"),
 	                    1, svn_depth_files,
 	                    -1);
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Immediates means this file/direcotry and the subdirectories are updated
+                         */
 	                    0, _("Immediates"),
 	                    1, svn_depth_immediates,
 	                    -1);
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Recursive means the update is full recursive
+                         */
 	                    0, _("Recursive"),
 	                    1, svn_depth_infinity,
 	                    -1);

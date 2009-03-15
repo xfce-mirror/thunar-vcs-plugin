@@ -212,6 +212,7 @@ tsp_svn_property_page_init (TspSvnPropertyPage *self)
   gtk_table_attach (GTK_TABLE (table), label, 1, 2, 8, 9, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (label);
 
+  /* Translators: Depth as in depth of recursion */
   label = gtk_label_new (_("Depth:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
@@ -299,18 +300,33 @@ depth_to_string(svn_depth_t depth)
       depth_string = _("Unknown");
       break;
     case svn_depth_exclude:
+      /* Translators: svn recursion depth infotmation
+       * Exclude should not apear client side
+       */
       depth_string = _("Exclude");
       break;
     case svn_depth_empty:
+      /* Translators: svn recursion depth infotmation
+       * Empty depth means only this file/direcotry is checked out
+       */
       depth_string = _("Empty");
       break;
     case svn_depth_files:
+      /* Translators: svn recursion depth infotmation
+       * Files depth means this file/direcotry and all of it's files are checked out
+       */
       depth_string = _("Files");
       break;
     case svn_depth_immediates:
+      /* Translators: svn recursion depth infotmation
+       * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+       */
       depth_string = _("Immediates");
       break;
     case svn_depth_infinity:
+      /* Translators: svn recursion depth infotmation
+       * Infinity depth means this file/direcotry is checked out with full recursion
+       */
       depth_string = _("Infinity");
       break;
 	}

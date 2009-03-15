@@ -3,10 +3,6 @@ thunar-svn-plugin/tsp-provider.c
 thunar-svn-plugin/tsp-svn-action.c
 thunar-svn-plugin/tsp-svn-property-page.c
 thunar-svn-plugin/tsp-svn-backend.c
-tsp-svn-helper/gtkfilechooser.c
-tsp-svn-helper/gtkfilechooserdefault.c
-tsp-svn-helper/gtkfilechooserentry.c
-tsp-svn-helper/gtkfilechooserutils.c
 tsp-svn-helper/main.c
 tsp-svn-helper/tsh-add.c
 tsp-svn-helper/tsh-blame-dialog.c

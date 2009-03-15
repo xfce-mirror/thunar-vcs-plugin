@@ -176,24 +176,36 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Self means only this file/direcotry is shown
+                         */
 	                    0, _("Self"),
 	                    1, svn_depth_empty,
 	                    -1);
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Immediate files means this file/direcotry and the files it contains are shown
+                         */
 	                    0, _("Immediate files"),
 	                    1, svn_depth_files,
 	                    -1);
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Immediates means this file/direcotry and the subdirectories are shown
+                         */
 	                    0, _("Immediates"),
 	                    1, svn_depth_immediates,
 	                    -1);
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Recursive means the list is full recursive
+                         */
 	                    0, _("Recursive"),
 	                    1, svn_depth_infinity,
 	                    -1);

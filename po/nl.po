@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-14 21:25+0100\n"
+"POT-Creation-Date: 2009-03-15 15:49+0100\n"
 "PO-Revision-Date: 2008-06-12 00:44+0200\n"
 "Last-Translator: Peter de Ridder <peter@xfce.org>\n"
 "Language-Team: Dutch <xfce-i18n@xfce.org>\n"
@@ -205,7 +205,7 @@ msgstr ""
 
 #: thunar-svn-plugin/tsp-svn-action.c:551 tsp-svn-helper/main.c:314
 #: tsp-svn-helper/tsh-file-selection-dialog.c:124
-#: tsp-svn-helper/tsh-status-dialog.c:235
+#: tsp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
 msgstr "Status"
 
@@ -251,8 +251,8 @@ msgstr ""
 #: thunar-svn-plugin/tsp-svn-property-page.c:167
 #: thunar-svn-plugin/tsp-svn-property-page.c:179
 #: thunar-svn-plugin/tsp-svn-property-page.c:192
-#: thunar-svn-plugin/tsp-svn-property-page.c:221
-#: thunar-svn-plugin/tsp-svn-property-page.c:299
+#: thunar-svn-plugin/tsp-svn-property-page.c:222
+#: thunar-svn-plugin/tsp-svn-property-page.c:300
 #: tsp-svn-helper/tsh-common.c:493 tsp-svn-helper/tsh-common.c:540
 #: tsp-svn-helper/tsh-common.c:549 tsp-svn-helper/tsh-common.c:571
 #: tsp-svn-helper/tsh-common.c:588 tsp-svn-helper/tsh-common.c:615
@@ -284,88 +284,53 @@ msgstr "Auteur:"
 msgid "Changelist:"
 msgstr "Wijzigingslijst:"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:215
+#. Translators: Depth as in depth of recursion
+#: thunar-svn-plugin/tsp-svn-property-page.c:216
 msgid "Depth:"
 msgstr "Diepte:"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:302
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:306
 msgid "Exclude"
 msgstr "Uitsluiten"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:305
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:312
 msgid "Empty"
 msgstr "Leeg"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:308
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:318
 msgid "Files"
 msgstr "Bestanden"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:311
-#: tsp-svn-helper/tsh-properties-dialog.c:219
-#: tsp-svn-helper/tsh-status-dialog.c:191
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:324
+#: tsp-svn-helper/tsh-properties-dialog.c:228
+#: tsp-svn-helper/tsh-status-dialog.c:200
 msgid "Immediates"
 msgstr "Onderliggende"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:314
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:330
 msgid "Infinity"
 msgstr "Oneindig"
-
-#. Translators: the first string is a path and the second string
-#. * is a hostname. Nautilus and the panel contain the same string
-#. * to translate.
-#.
-#: tsp-svn-helper/gtkfilechooserdefault.c:71
-#, c-format
-msgid "%1$s on %2$s"
-msgstr "%1$s op %2$s"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:50
-msgid "Select A File"
-msgstr "Een bestand selecteren"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:51
-msgid "Desktop"
-msgstr "Bureaublad"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:52
-msgid "(None)"
-msgstr "(Geen)"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:343
-msgid "Dialog"
-msgstr "Dialoogvenster"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:344
-msgid "The file chooser dialog to use."
-msgstr "De te gebruiken bestandskiezer."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:360
-msgid "Focus on click"
-msgstr "Aandacht bij klikken"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:361
-msgid "Whether the entry grabs focus when it is clicked with the mouse"
-msgstr "Of het veld de aandacht krijgt als het met de muis wordt aangeklikt"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:374
-msgid "Title"
-msgstr "Titel"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:375
-msgid "The title of the file chooser dialog."
-msgstr "De titel van het bestandsselectie-dialoogvenster."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:388
-msgid "Width In Characters"
-msgstr "Breedte, in lettertekens"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:389
-msgid "The desired width of the entry widget, in characters."
-msgstr "De gewenste breedte van het text-widget, in lettertekens."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:2119
-msgid "Other..."
-msgstr "Andere..."
 
 #: tsp-svn-helper/main.c:105
 msgid "Print version information"
@@ -513,7 +478,7 @@ msgstr "Attributen gerelateerde opties:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:270
+#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:282
 msgid "Properties"
 msgstr "Attributen"
 
@@ -863,18 +828,36 @@ msgstr "Naam"
 msgid "Value"
 msgstr "Waarde"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:205
-#: tsp-svn-helper/tsh-status-dialog.c:179
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#.
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:208
+#: tsp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
 msgstr "Zelf"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:213
-#: tsp-svn-helper/tsh-status-dialog.c:185
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:219
+#: tsp-svn-helper/tsh-status-dialog.c:191
 msgid "Immediate files"
 msgstr "Ondliggende bestanden"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:225
-#: tsp-svn-helper/tsh-status-dialog.c:197
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#.
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:237
+#: tsp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
 msgstr "Recursief"
 
@@ -923,23 +906,23 @@ msgstr "Klaar met verplaatsen"
 msgid "Relocating ..."
 msgstr "Bezig met verplaatsen ..."
 
-#: tsp-svn-helper/tsh-status-dialog.c:212
+#: tsp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
 msgstr "Ongewijzigde bestanden weergeven"
 
-#: tsp-svn-helper/tsh-status-dialog.c:216
+#: tsp-svn-helper/tsh-status-dialog.c:228
 msgid "Show Unversioned Files"
 msgstr "Onbeheerde bestanden weergeven"
 
-#: tsp-svn-helper/tsh-status-dialog.c:220
+#: tsp-svn-helper/tsh-status-dialog.c:232
 msgid "Show Ignored Files"
 msgstr "Genegeerde bestanden weergeven"
 
-#: tsp-svn-helper/tsh-status-dialog.c:224
+#: tsp-svn-helper/tsh-status-dialog.c:236
 msgid "Hide Externals"
 msgstr "Externe bestanden verbergen"
 
-#: tsp-svn-helper/tsh-status-dialog.c:228
+#: tsp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
 msgstr ""
 
@@ -978,6 +961,3 @@ msgstr "Andere fout."
 #: tsp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
 msgstr "Vertrouwen"
-
-#~ msgid "Modify Property Recursive"
-#~ msgstr "Stel attributen op onderliggende mappen in"
