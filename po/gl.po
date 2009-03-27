@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-14 21:25+0100\n"
-"PO-Revision-Date: 2009-03-07 11:40+0100\n"
+"POT-Creation-Date: 2009-03-15 15:49+0100\n"
+"PO-Revision-Date: 2009-03-16 14:13+0100\n"
 "Last-Translator: Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,8 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-svn-plugin/tsp-provider.c:435 thunar-svn-plugin/tsp-provider.c:467
+#: thunar-svn-plugin/tsp-provider.c:435
+#: thunar-svn-plugin/tsp-provider.c:467
 msgid "SVN"
 msgstr "SVN"
 
@@ -30,8 +31,10 @@ msgstr "SVN"
 msgid "Menu|Add"
 msgstr "Engadir"
 
-#: thunar-svn-plugin/tsp-svn-action.c:266 tsp-svn-helper/main.c:246
-#: tsp-svn-helper/tsh-add.c:113 tsp-svn-helper/tsh-add.c:126
+#: thunar-svn-plugin/tsp-svn-action.c:266
+#: tsp-svn-helper/main.c:246
+#: tsp-svn-helper/tsh-add.c:113
+#: tsp-svn-helper/tsh-add.c:126
 msgid "Add"
 msgstr "Engadir"
 
@@ -40,8 +43,10 @@ msgstr "Engadir"
 msgid "Menu|Blame"
 msgstr "Menú Pinceis"
 
-#: thunar-svn-plugin/tsp-svn-action.c:279 tsp-svn-helper/main.c:250
-#: tsp-svn-helper/main.c:254 tsp-svn-helper/tsh-blame-dialog.c:133
+#: thunar-svn-plugin/tsp-svn-action.c:279
+#: tsp-svn-helper/main.c:250
+#: tsp-svn-helper/main.c:254
+#: tsp-svn-helper/tsh-blame-dialog.c:133
 msgid "Blame"
 msgstr ""
 
@@ -53,15 +58,17 @@ msgstr "Menú Pinceis"
 #: thunar-svn-plugin/tsp-svn-action.c:299
 #, fuzzy
 msgid "Changelist"
-msgstr "Modificado"
+msgstr "Lista de cambios"
 
 #: thunar-svn-plugin/tsp-svn-action.c:312
 #, fuzzy
 msgid "Menu|Checkout"
 msgstr "Menú Pinceis"
 
-#: thunar-svn-plugin/tsp-svn-action.c:312 tsp-svn-helper/main.c:258
-#: tsp-svn-helper/tsh-checkout.c:98 tsp-svn-helper/tsh-checkout.c:110
+#: thunar-svn-plugin/tsp-svn-action.c:312
+#: tsp-svn-helper/main.c:258
+#: tsp-svn-helper/tsh-checkout.c:98
+#: tsp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr ""
 
@@ -70,7 +77,8 @@ msgstr ""
 msgid "Menu|Cleanup"
 msgstr "Menú Pinceis"
 
-#: thunar-svn-plugin/tsp-svn-action.c:325 tsp-svn-helper/main.c:262
+#: thunar-svn-plugin/tsp-svn-action.c:325
+#: tsp-svn-helper/main.c:262
 #, fuzzy
 msgid "Cleanup"
 msgstr "A limpar"
@@ -80,8 +88,10 @@ msgstr "A limpar"
 msgid "Menu|Commit"
 msgstr "Enviar cambios"
 
-#: thunar-svn-plugin/tsp-svn-action.c:338 tsp-svn-helper/main.c:266
-#: tsp-svn-helper/tsh-commit.c:127 tsp-svn-helper/tsh-commit.c:140
+#: thunar-svn-plugin/tsp-svn-action.c:338
+#: tsp-svn-helper/main.c:266
+#: tsp-svn-helper/tsh-commit.c:127
+#: tsp-svn-helper/tsh-commit.c:140
 #, fuzzy
 msgid "Commit"
 msgstr "E_fectuar"
@@ -90,7 +100,8 @@ msgstr "E_fectuar"
 msgid "Menu|Copy"
 msgstr "Copiar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:270
+#: thunar-svn-plugin/tsp-svn-action.c:351
+#: tsp-svn-helper/main.c:270
 #: tsp-svn-helper/tsh-copy.c:161
 msgid "Copy"
 msgstr "Copiar"
@@ -99,8 +110,10 @@ msgstr "Copiar"
 msgid "Menu|Delete"
 msgstr "Eliminar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:274
-#: tsp-svn-helper/tsh-delete.c:127 tsp-svn-helper/tsh-delete.c:140
+#: thunar-svn-plugin/tsp-svn-action.c:364
+#: tsp-svn-helper/main.c:274
+#: tsp-svn-helper/tsh-delete.c:127
+#: tsp-svn-helper/tsh-delete.c:140
 msgid "Delete"
 msgstr "Eliminar"
 
@@ -118,8 +131,10 @@ msgstr "Diff"
 msgid "Menu|Export"
 msgstr "Exportar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:389 tsp-svn-helper/main.c:278
-#: tsp-svn-helper/tsh-export.c:107 tsp-svn-helper/tsh-export.c:125
+#: thunar-svn-plugin/tsp-svn-action.c:389
+#: tsp-svn-helper/main.c:278
+#: tsp-svn-helper/tsh-export.c:107
+#: tsp-svn-helper/tsh-export.c:125
 msgid "Export"
 msgstr "Exportar"
 
@@ -127,8 +142,10 @@ msgstr "Exportar"
 msgid "Menu|Import"
 msgstr "Importar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:402 tsp-svn-helper/main.c:282
-#: tsp-svn-helper/tsh-import.c:102 tsp-svn-helper/tsh-import.c:120
+#: thunar-svn-plugin/tsp-svn-action.c:402
+#: tsp-svn-helper/main.c:282
+#: tsp-svn-helper/tsh-import.c:102
+#: tsp-svn-helper/tsh-import.c:120
 msgid "Import"
 msgstr "Importar"
 
@@ -145,8 +162,10 @@ msgstr "Información"
 msgid "Menu|Lock"
 msgstr "Bloquear"
 
-#: thunar-svn-plugin/tsp-svn-action.c:432 tsp-svn-helper/main.c:286
-#: tsp-svn-helper/tsh-lock-dialog.c:72 tsp-svn-helper/tsh-lock.c:130
+#: thunar-svn-plugin/tsp-svn-action.c:432
+#: tsp-svn-helper/main.c:286
+#: tsp-svn-helper/tsh-lock-dialog.c:72
+#: tsp-svn-helper/tsh-lock.c:130
 msgid "Lock"
 msgstr "Bloquear"
 
@@ -154,7 +173,8 @@ msgstr "Bloquear"
 msgid "Menu|Log"
 msgstr "Rexistro"
 
-#: thunar-svn-plugin/tsp-svn-action.c:445 tsp-svn-helper/main.c:290
+#: thunar-svn-plugin/tsp-svn-action.c:445
+#: tsp-svn-helper/main.c:290
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Rexistro"
@@ -163,7 +183,8 @@ msgstr "Rexistro"
 msgid "Menu|Move"
 msgstr "Mover"
 
-#: thunar-svn-plugin/tsp-svn-action.c:467 tsp-svn-helper/main.c:294
+#: thunar-svn-plugin/tsp-svn-action.c:467
+#: tsp-svn-helper/main.c:294
 #: tsp-svn-helper/tsh-move.c:156
 msgid "Move"
 msgstr "Mover"
@@ -181,8 +202,10 @@ msgstr "Editar as propiedades"
 msgid "Menu|Relocate"
 msgstr "Menú Pinceis"
 
-#: thunar-svn-plugin/tsp-svn-action.c:499 tsp-svn-helper/main.c:306
-#: tsp-svn-helper/tsh-relocate-dialog.c:217 tsp-svn-helper/tsh-relocate.c:114
+#: thunar-svn-plugin/tsp-svn-action.c:499
+#: tsp-svn-helper/main.c:306
+#: tsp-svn-helper/tsh-relocate-dialog.c:217
+#: tsp-svn-helper/tsh-relocate.c:114
 msgid "Relocate"
 msgstr ""
 
@@ -191,12 +214,13 @@ msgstr ""
 msgid "Menu|Resolved"
 msgstr "Menú Pinceis"
 
-#: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:302
-#: tsp-svn-helper/tsh-common.c:465 tsp-svn-helper/tsh-resolved.c:113
+#: thunar-svn-plugin/tsp-svn-action.c:513
+#: tsp-svn-helper/main.c:302
+#: tsp-svn-helper/tsh-common.c:465
+#: tsp-svn-helper/tsh-resolved.c:113
 #: tsp-svn-helper/tsh-resolved.c:126
-#, fuzzy
 msgid "Resolved"
-msgstr "Resolto: %s"
+msgstr "Resolto"
 
 #: thunar-svn-plugin/tsp-svn-action.c:526
 #, fuzzy
@@ -214,8 +238,10 @@ msgstr "_Resolver conflitos..."
 msgid "Menu|Revert"
 msgstr "Reverter imaxe"
 
-#: thunar-svn-plugin/tsp-svn-action.c:538 tsp-svn-helper/main.c:310
-#: tsp-svn-helper/tsh-revert.c:112 tsp-svn-helper/tsh-revert.c:125
+#: thunar-svn-plugin/tsp-svn-action.c:538
+#: tsp-svn-helper/main.c:310
+#: tsp-svn-helper/tsh-revert.c:112
+#: tsp-svn-helper/tsh-revert.c:125
 #, fuzzy
 msgid "Revert"
 msgstr "Reverter"
@@ -224,9 +250,10 @@ msgstr "Reverter"
 msgid "Menu|Status"
 msgstr "Estado"
 
-#: thunar-svn-plugin/tsp-svn-action.c:551 tsp-svn-helper/main.c:314
+#: thunar-svn-plugin/tsp-svn-action.c:551
+#: tsp-svn-helper/main.c:314
 #: tsp-svn-helper/tsh-file-selection-dialog.c:124
-#: tsp-svn-helper/tsh-status-dialog.c:235
+#: tsp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
 msgstr "Estado"
 
@@ -235,8 +262,10 @@ msgstr "Estado"
 msgid "Menu|Switch"
 msgstr "Cambiar de usuario"
 
-#: thunar-svn-plugin/tsp-svn-action.c:564 tsp-svn-helper/main.c:318
-#: tsp-svn-helper/tsh-switch.c:109 tsp-svn-helper/tsh-switch.c:122
+#: thunar-svn-plugin/tsp-svn-action.c:564
+#: tsp-svn-helper/main.c:318
+#: tsp-svn-helper/tsh-switch.c:109
+#: tsp-svn-helper/tsh-switch.c:122
 #, fuzzy
 msgid "Switch"
 msgstr "Intercambio"
@@ -245,7 +274,8 @@ msgstr "Intercambio"
 msgid "Menu|Unlock"
 msgstr "Desbloquear"
 
-#: thunar-svn-plugin/tsp-svn-action.c:577 tsp-svn-helper/main.c:322
+#: thunar-svn-plugin/tsp-svn-action.c:577
+#: tsp-svn-helper/main.c:322
 #: tsp-svn-helper/tsh-unlock.c:111
 msgid "Unlock"
 msgstr "Desbloquear"
@@ -254,7 +284,8 @@ msgstr "Desbloquear"
 msgid "Menu|Update"
 msgstr "Actualizar"
 
-#: thunar-svn-plugin/tsp-svn-action.c:590 tsp-svn-helper/main.c:326
+#: thunar-svn-plugin/tsp-svn-action.c:590
+#: tsp-svn-helper/main.c:326
 #: tsp-svn-helper/tsh-update.c:113
 msgid "Update"
 msgstr "Actualizar"
@@ -274,11 +305,14 @@ msgstr "URL:"
 #: thunar-svn-plugin/tsp-svn-property-page.c:167
 #: thunar-svn-plugin/tsp-svn-property-page.c:179
 #: thunar-svn-plugin/tsp-svn-property-page.c:192
-#: thunar-svn-plugin/tsp-svn-property-page.c:221
-#: thunar-svn-plugin/tsp-svn-property-page.c:299
-#: tsp-svn-helper/tsh-common.c:493 tsp-svn-helper/tsh-common.c:540
-#: tsp-svn-helper/tsh-common.c:549 tsp-svn-helper/tsh-common.c:571
-#: tsp-svn-helper/tsh-common.c:588 tsp-svn-helper/tsh-common.c:615
+#: thunar-svn-plugin/tsp-svn-property-page.c:222
+#: thunar-svn-plugin/tsp-svn-property-page.c:300
+#: tsp-svn-helper/tsh-common.c:493
+#: tsp-svn-helper/tsh-common.c:540
+#: tsp-svn-helper/tsh-common.c:549
+#: tsp-svn-helper/tsh-common.c:571
+#: tsp-svn-helper/tsh-common.c:588
+#: tsp-svn-helper/tsh-common.c:615
 #: tsp-svn-helper/tsh-common.c:698
 msgid "Unknown"
 msgstr "Descoñecido"
@@ -304,98 +338,58 @@ msgid "Author:"
 msgstr "Autor:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:203
-#, fuzzy
 msgid "Changelist:"
-msgstr "Modificado"
+msgstr "Lista de cambios:"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:215
+#. Translators: Depth as in depth of recursion
+#: thunar-svn-plugin/tsp-svn-property-page.c:216
 msgid "Depth:"
-msgstr ""
+msgstr "Profundidade:"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:302
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:306
 msgid "Exclude"
-msgstr ""
+msgstr "Excluír"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:305
-msgid "Empty"
-msgstr ""
-
-#: thunar-svn-plugin/tsp-svn-property-page.c:308
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:312
 #, fuzzy
-msgid "Files"
-msgstr "Ficheiro"
+msgid "Empty"
+msgstr "Baleiro"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:311
-#: tsp-svn-helper/tsh-properties-dialog.c:219
-#: tsp-svn-helper/tsh-status-dialog.c:191
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:318
+msgid "Files"
+msgstr "Ficheiros"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:324
+#: tsp-svn-helper/tsh-properties-dialog.c:228
+#: tsp-svn-helper/tsh-status-dialog.c:200
 msgid "Immediates"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:314
-msgid "Infinity"
-msgstr ""
-
-#. Translators: the first string is a path and the second string
-#. * is a hostname. Nautilus and the panel contain the same string
-#. * to translate.
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full recursion
 #.
-#: tsp-svn-helper/gtkfilechooserdefault.c:71
-#, c-format
-msgid "%1$s on %2$s"
-msgstr "%1$s en %2$s"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:50
-msgid "Select A File"
-msgstr "Seleccione un ficheiro"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:51
-msgid "Desktop"
-msgstr "Escritorio"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:52
-msgid "(None)"
-msgstr "(Ningún)"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:343
-msgid "Dialog"
-msgstr "Diálogo"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:344
-msgid "The file chooser dialog to use."
-msgstr "O selector de ficheiros a usar."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:360
+#: thunar-svn-plugin/tsp-svn-property-page.c:330
 #, fuzzy
-msgid "Focus on click"
-msgstr "Enfocar ao premer"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:361
-#, fuzzy
-msgid "Whether the entry grabs focus when it is clicked with the mouse"
-msgstr "Indica se o botón captura o foco cando se preme co rato"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:374
-msgid "Title"
-msgstr "Título"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:375
-msgid "The title of the file chooser dialog."
-msgstr "O título do selector de ficheiros."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:388
-#, fuzzy
-msgid "Width In Characters"
-msgstr "Largura en caracteres"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:389
-#, fuzzy
-msgid "The desired width of the entry widget, in characters."
-msgstr "A largura desexada do widget do botón, en caracteres."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:2119
-#, fuzzy
-msgid "Other..."
-msgstr "Outro..."
+msgid "Infinity"
+msgstr "infinito"
 
 #: tsp-svn-helper/main.c:105
 msgid "Print version information"
@@ -612,7 +606,8 @@ msgstr "Opcións para modificar as propiedades dunha ventá"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:270
+#: tsp-svn-helper/main.c:298
+#: tsp-svn-helper/tsh-properties-dialog.c:282
 msgid "Properties"
 msgstr "Propiedades"
 
@@ -676,14 +671,22 @@ msgstr ""
 msgid "Not enough arguments provided"
 msgstr "Non se proporcionaron argumentos suficientes"
 
-#: tsp-svn-helper/tsh-add.c:73 tsp-svn-helper/tsh-add.c:89
-#: tsp-svn-helper/tsh-checkout.c:71 tsp-svn-helper/tsh-commit.c:91
-#: tsp-svn-helper/tsh-copy.c:83 tsp-svn-helper/tsh-delete.c:91
-#: tsp-svn-helper/tsh-export.c:72 tsp-svn-helper/tsh-import.c:72
-#: tsp-svn-helper/tsh-lock.c:91 tsp-svn-helper/tsh-move.c:77
-#: tsp-svn-helper/tsh-resolved.c:73 tsp-svn-helper/tsh-resolved.c:89
-#: tsp-svn-helper/tsh-revert.c:87 tsp-svn-helper/tsh-switch.c:71
-#: tsp-svn-helper/tsh-unlock.c:86 tsp-svn-helper/tsh-update.c:88
+#: tsp-svn-helper/tsh-add.c:73
+#: tsp-svn-helper/tsh-add.c:89
+#: tsp-svn-helper/tsh-checkout.c:71
+#: tsp-svn-helper/tsh-commit.c:91
+#: tsp-svn-helper/tsh-copy.c:83
+#: tsp-svn-helper/tsh-delete.c:91
+#: tsp-svn-helper/tsh-export.c:72
+#: tsp-svn-helper/tsh-import.c:72
+#: tsp-svn-helper/tsh-lock.c:91
+#: tsp-svn-helper/tsh-move.c:77
+#: tsp-svn-helper/tsh-resolved.c:73
+#: tsp-svn-helper/tsh-resolved.c:89
+#: tsp-svn-helper/tsh-revert.c:87
+#: tsp-svn-helper/tsh-switch.c:71
+#: tsp-svn-helper/tsh-unlock.c:86
+#: tsp-svn-helper/tsh-update.c:88
 msgid "Failed"
 msgstr "Fallou"
 
@@ -691,15 +694,18 @@ msgstr "Fallou"
 msgid "Line"
 msgstr "Liña"
 
-#: tsp-svn-helper/tsh-blame-dialog.c:100 tsp-svn-helper/tsh-log-dialog.c:118
+#: tsp-svn-helper/tsh-blame-dialog.c:100
+#: tsp-svn-helper/tsh-log-dialog.c:118
 msgid "Revision"
 msgstr "Revisión"
 
-#: tsp-svn-helper/tsh-blame-dialog.c:106 tsp-svn-helper/tsh-log-dialog.c:124
+#: tsp-svn-helper/tsh-blame-dialog.c:106
+#: tsp-svn-helper/tsh-log-dialog.c:124
 msgid "Author"
 msgstr "Autor"
 
-#: tsp-svn-helper/tsh-blame-dialog.c:112 tsp-svn-helper/tsh-log-dialog.c:130
+#: tsp-svn-helper/tsh-blame-dialog.c:112
+#: tsp-svn-helper/tsh-log-dialog.c:130
 msgid "Date"
 msgstr "Data"
 
@@ -729,9 +735,12 @@ msgstr "Debuxo rematado"
 msgid "Cleaning up ..."
 msgstr "Subir cursor"
 
-#: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:662
-#: tsp-svn-helper/tsh-copy.c:95 tsp-svn-helper/tsh-delete.c:103
-#: tsp-svn-helper/tsh-import.c:82 tsp-svn-helper/tsh-move.c:89
+#: tsp-svn-helper/tsh-commit.c:103
+#: tsp-svn-helper/tsh-common.c:662
+#: tsp-svn-helper/tsh-copy.c:95
+#: tsp-svn-helper/tsh-delete.c:103
+#: tsp-svn-helper/tsh-import.c:82
+#: tsp-svn-helper/tsh-move.c:89
 #, fuzzy, c-format
 msgid "At revision: %ld"
 msgstr "Vectorizar: %d.  %ld nodos"
@@ -741,9 +750,12 @@ msgstr "Vectorizar: %d.  %ld nodos"
 msgid "Nothing to do"
 msgstr "Non hai nada que desfacer."
 
-#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:470
-#: tsp-svn-helper/tsh-common.c:472 tsp-svn-helper/tsh-copy.c:106
-#: tsp-svn-helper/tsh-delete.c:114 tsp-svn-helper/tsh-import.c:87
+#: tsp-svn-helper/tsh-commit.c:114
+#: tsp-svn-helper/tsh-common.c:470
+#: tsp-svn-helper/tsh-common.c:472
+#: tsp-svn-helper/tsh-copy.c:106
+#: tsp-svn-helper/tsh-delete.c:114
+#: tsp-svn-helper/tsh-import.c:87
 #: tsp-svn-helper/tsh-move.c:100
 msgid "Completed"
 msgstr "Completado"
@@ -753,19 +765,26 @@ msgstr "Completado"
 msgid "Commit Message"
 msgstr "Mensaxe de GIMP"
 
-#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:468
-#: tsp-svn-helper/tsh-common.c:475 tsp-svn-helper/tsh-common.c:575
-#: tsp-svn-helper/tsh-common.c:620 tsp-svn-helper/tsh-common.c:704
+#: tsp-svn-helper/tsh-common.c:459
+#: tsp-svn-helper/tsh-common.c:468
+#: tsp-svn-helper/tsh-common.c:475
+#: tsp-svn-helper/tsh-common.c:575
+#: tsp-svn-helper/tsh-common.c:620
+#: tsp-svn-helper/tsh-common.c:704
 msgid "Added"
 msgstr "Engadido"
 
-#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:713
+#: tsp-svn-helper/tsh-common.c:460
+#: tsp-svn-helper/tsh-common.c:713
 msgid "Copied"
 msgstr "Copiado"
 
-#: tsp-svn-helper/tsh-common.c:461 tsp-svn-helper/tsh-common.c:467
-#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:577
-#: tsp-svn-helper/tsh-common.c:623 tsp-svn-helper/tsh-common.c:706
+#: tsp-svn-helper/tsh-common.c:461
+#: tsp-svn-helper/tsh-common.c:467
+#: tsp-svn-helper/tsh-common.c:476
+#: tsp-svn-helper/tsh-common.c:577
+#: tsp-svn-helper/tsh-common.c:623
+#: tsp-svn-helper/tsh-common.c:706
 msgid "Deleted"
 msgstr "Eliminado"
 
@@ -793,19 +812,23 @@ msgstr ""
 msgid "Updated"
 msgstr "Actualizado"
 
-#: tsp-svn-helper/tsh-common.c:471 tsp-svn-helper/tsh-common.c:473
+#: tsp-svn-helper/tsh-common.c:471
+#: tsp-svn-helper/tsh-common.c:473
 #: tsp-svn-helper/tsh-common.c:584
-#, fuzzy
 msgid "External"
 msgstr "Externo"
 
-#: tsp-svn-helper/tsh-common.c:474 tsp-svn-helper/tsh-common.c:579
-#: tsp-svn-helper/tsh-common.c:626 tsp-svn-helper/tsh-common.c:709
+#: tsp-svn-helper/tsh-common.c:474
+#: tsp-svn-helper/tsh-common.c:579
+#: tsp-svn-helper/tsh-common.c:626
+#: tsp-svn-helper/tsh-common.c:709
 msgid "Modified"
 msgstr "Modificado"
 
-#: tsp-svn-helper/tsh-common.c:477 tsp-svn-helper/tsh-common.c:578
-#: tsp-svn-helper/tsh-common.c:629 tsp-svn-helper/tsh-common.c:702
+#: tsp-svn-helper/tsh-common.c:477
+#: tsp-svn-helper/tsh-common.c:578
+#: tsp-svn-helper/tsh-common.c:629
+#: tsp-svn-helper/tsh-common.c:702
 msgid "Replaced"
 msgstr "Substituido"
 
@@ -817,7 +840,8 @@ msgstr "Transmitindo"
 msgid "Locked"
 msgstr "Bloqueado"
 
-#: tsp-svn-helper/tsh-common.c:481 tsp-svn-helper/tsh-common.c:715
+#: tsp-svn-helper/tsh-common.c:481
+#: tsp-svn-helper/tsh-common.c:715
 msgid "Unlocked"
 msgstr "Desbloqueado"
 
@@ -831,33 +855,36 @@ msgstr "Fallo ó desbloquear"
 
 #: tsp-svn-helper/tsh-common.c:484
 msgid "Exists"
-msgstr ""
+msgstr "Existe"
 
 #: tsp-svn-helper/tsh-common.c:485
+#, fuzzy
 msgid "Changelist set"
-msgstr ""
+msgstr "Establecer o atributo"
 
 #: tsp-svn-helper/tsh-common.c:486
+#, fuzzy
 msgid "Changelist cleared"
-msgstr ""
+msgstr "O gatekeeper eliminou a chamada"
 
 #: tsp-svn-helper/tsh-common.c:487
 #, fuzzy
 msgid "Changelist moved"
-msgstr "Modificado"
+msgstr "Movido permanentemente"
 
 #: tsp-svn-helper/tsh-common.c:488
+#, fuzzy
 msgid "Merge begin"
-msgstr ""
+msgstr "_Combinar paletas..."
 
 #: tsp-svn-helper/tsh-common.c:489
+#, fuzzy
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Combinar capas _visibles..."
 
 #: tsp-svn-helper/tsh-common.c:490
-#, fuzzy
 msgid "Replace"
-msgstr "Substituido"
+msgstr "Substituír"
 
 #: tsp-svn-helper/tsh-common.c:539
 msgid "Inapplicable"
@@ -867,12 +894,14 @@ msgstr ""
 msgid "Unchanged"
 msgstr "Sen cambios"
 
-#: tsp-svn-helper/tsh-common.c:542 tsp-svn-helper/tsh-common.c:576
+#: tsp-svn-helper/tsh-common.c:542
+#: tsp-svn-helper/tsh-common.c:576
 #, fuzzy
 msgid "Missing"
 msgstr "Falta"
 
-#: tsp-svn-helper/tsh-common.c:543 tsp-svn-helper/tsh-common.c:583
+#: tsp-svn-helper/tsh-common.c:543
+#: tsp-svn-helper/tsh-common.c:583
 #, fuzzy
 msgid "Obstructed"
 msgstr "Obstruídos: %s"
@@ -882,12 +911,14 @@ msgstr "Obstruídos: %s"
 msgid "Changed"
 msgstr "Modificado"
 
-#: tsp-svn-helper/tsh-common.c:545 tsp-svn-helper/tsh-common.c:580
+#: tsp-svn-helper/tsh-common.c:545
+#: tsp-svn-helper/tsh-common.c:580
 #, fuzzy
 msgid "Merged"
 msgstr "Combinado: %s"
 
-#: tsp-svn-helper/tsh-common.c:546 tsp-svn-helper/tsh-common.c:581
+#: tsp-svn-helper/tsh-common.c:546
+#: tsp-svn-helper/tsh-common.c:581
 #, fuzzy
 msgid "Conflicted"
 msgstr "Con conflitos"
@@ -903,9 +934,8 @@ msgid "Ignored"
 msgstr "Ignorado"
 
 #: tsp-svn-helper/tsh-common.c:585
-#, fuzzy
 msgid "Incomplete"
-msgstr "Entrada incompleta"
+msgstr "Incompleto"
 
 #: tsp-svn-helper/tsh-copy.c:100
 msgid "Local copy"
@@ -933,7 +963,8 @@ msgstr "_Certificado:"
 msgid "Select a file"
 msgstr "Seleccione un ficheiro"
 
-#: tsp-svn-helper/tsh-file-dialog.c:78 tsp-svn-helper/tsh-login-dialog.c:98
+#: tsp-svn-helper/tsh-file-dialog.c:78
+#: tsp-svn-helper/tsh-login-dialog.c:98
 #: tsp-svn-helper/tsh-trust-dialog.c:73
 #, fuzzy
 msgid "Remember"
@@ -963,7 +994,8 @@ msgstr "Mensaxe de importación"
 msgid "Message"
 msgstr "Mensaxe"
 
-#: tsp-svn-helper/tsh-log-dialog.c:174 tsp-svn-helper/tsh-notify-dialog.c:88
+#: tsp-svn-helper/tsh-log-dialog.c:174
+#: tsp-svn-helper/tsh-notify-dialog.c:88
 msgid "Action"
 msgstr "Acción"
 
@@ -1026,22 +1058,38 @@ msgstr "Nome"
 msgid "Value"
 msgstr "Valor"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:205
-#: tsp-svn-helper/tsh-status-dialog.c:179
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#.
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:208
+#: tsp-svn-helper/tsh-status-dialog.c:182
+#, fuzzy
 msgid "Self"
-msgstr ""
+msgstr "Propio"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:213
-#: tsp-svn-helper/tsh-status-dialog.c:185
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:219
+#: tsp-svn-helper/tsh-status-dialog.c:191
 #, fuzzy
 msgid "Immediate files"
-msgstr ""
-"Erro ao abrir '%s':\n"
-"\n"
-"%s"
+msgstr "Exportando %d ficheiros"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:225
-#: tsp-svn-helper/tsh-status-dialog.c:197
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#.
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:237
+#: tsp-svn-helper/tsh-status-dialog.c:209
 #, fuzzy
 msgid "Recursive"
 msgstr "Amosar/Agochar"
@@ -1101,27 +1149,27 @@ msgstr "Debuxo rematado"
 msgid "Relocating ..."
 msgstr ""
 
-#: tsp-svn-helper/tsh-status-dialog.c:212
+#: tsp-svn-helper/tsh-status-dialog.c:224
 #, fuzzy
 msgid "Show Unmodified Files"
 msgstr "Mostrar os ficheiros binarios"
 
-#: tsp-svn-helper/tsh-status-dialog.c:216
+#: tsp-svn-helper/tsh-status-dialog.c:228
 #, fuzzy
 msgid "Show Unversioned Files"
 msgstr "Mostrar os ficheiros binarios"
 
-#: tsp-svn-helper/tsh-status-dialog.c:220
+#: tsp-svn-helper/tsh-status-dialog.c:232
 #, fuzzy
 msgid "Show Ignored Files"
 msgstr "Mostrar os ficheiros binarios"
 
-#: tsp-svn-helper/tsh-status-dialog.c:224
+#: tsp-svn-helper/tsh-status-dialog.c:236
 #, fuzzy
 msgid "Hide Externals"
 msgstr "Agochar o obxecto"
 
-#: tsp-svn-helper/tsh-status-dialog.c:228
+#: tsp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
 msgstr "Comprobar o repositorio"
 
@@ -1163,6 +1211,44 @@ msgstr "Outro fallo."
 msgid "Trust"
 msgstr "Confiar"
 
+#~ msgid "%1$s on %2$s"
+#~ msgstr "%1$s en %2$s"
+#~ msgid "Select A File"
+#~ msgstr "Seleccione un ficheiro"
+#~ msgid "Desktop"
+#~ msgstr "Escritorio"
+#~ msgid "(None)"
+#~ msgstr "(Ningún)"
+#~ msgid "Dialog"
+#~ msgstr "Diálogo"
+#~ msgid "The file chooser dialog to use."
+#~ msgstr "O selector de ficheiros a usar."
+
+#, fuzzy
+#~ msgid "Focus on click"
+#~ msgstr "Enfocar ao premer"
+
+#, fuzzy
+#~ msgid "Whether the entry grabs focus when it is clicked with the mouse"
+#~ msgstr "Indica se o botón captura o foco cando se preme co rato"
+#~ msgid "Title"
+#~ msgstr "Título"
+#~ msgid "The title of the file chooser dialog."
+#~ msgstr "O título do selector de ficheiros."
+
+#, fuzzy
+#~ msgid "Width In Characters"
+#~ msgstr "Largura en caracteres"
+
+#, fuzzy
+#~ msgid "The desired width of the entry widget, in characters."
+#~ msgstr "A largura desexada do widget do botón, en caracteres."
+
+#, fuzzy
+#~ msgid "Other..."
+#~ msgstr "Outro..."
+
 #, fuzzy
 #~ msgid "Modify Property Recursive"
 #~ msgstr "Establecer as propiedades do sinal"
+
