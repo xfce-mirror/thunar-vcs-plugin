@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-15 15:49+0100\n"
-"PO-Revision-Date: 2009-03-23 21:49+0100\n"
+"PO-Revision-Date: 2009-04-06 11:57+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgstr "Kontrola wersji SVN"
 
 #: thunar-svn-plugin/tsp-svn-action.c:266
 msgid "Menu|Add"
-msgstr "Dodaj"
+msgstr "Dodaj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:266
 #: tsp-svn-helper/main.c:246
@@ -58,28 +58,28 @@ msgstr "Zmieniony"
 
 #: thunar-svn-plugin/tsp-svn-action.c:312
 msgid "Menu|Checkout"
-msgstr ""
+msgstr "Utwórz lokalną kopię..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:312
 #: tsp-svn-helper/main.c:258
 #: tsp-svn-helper/tsh-checkout.c:98
 #: tsp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
-msgstr ""
+msgstr "Tworzenie lokalnej kopii"
 
 #: thunar-svn-plugin/tsp-svn-action.c:325
 msgid "Menu|Cleanup"
-msgstr ""
+msgstr "Uporządkuj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:325
 #: tsp-svn-helper/main.c:262
 msgid "Cleanup"
-msgstr ""
+msgstr "Porządkowanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:338
 #, fuzzy
 msgid "Menu|Commit"
-msgstr "Zatwierdź zmiany"
+msgstr "Wprowadź zmiany..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:338
 #: tsp-svn-helper/main.c:266
@@ -87,11 +87,11 @@ msgstr "Zatwierdź zmiany"
 #: tsp-svn-helper/tsh-commit.c:140
 #, fuzzy
 msgid "Commit"
-msgstr "Zatwierdzanie zmian"
+msgstr "Wprowadzanie zmian"
 
 #: thunar-svn-plugin/tsp-svn-action.c:351
 msgid "Menu|Copy"
-msgstr "Skopiuj"
+msgstr "Skopiuj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:351
 #: tsp-svn-helper/main.c:270
@@ -101,7 +101,7 @@ msgstr "Kopiowanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:364
 msgid "Menu|Delete"
-msgstr "Usuń"
+msgstr "Usuń..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:364
 #: tsp-svn-helper/main.c:274
@@ -112,7 +112,7 @@ msgstr "Usuwanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:377
 msgid "Menu|Diff"
-msgstr "Różnice"
+msgstr "Różnice..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:377
 #: thunar-svn-plugin/tsp-svn-action.c:378
@@ -121,7 +121,7 @@ msgstr "Różnice"
 
 #: thunar-svn-plugin/tsp-svn-action.c:389
 msgid "Menu|Export"
-msgstr "Eksportuj"
+msgstr "Eksportuj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:389
 #: tsp-svn-helper/main.c:278
@@ -132,7 +132,7 @@ msgstr "Eksportowanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:402
 msgid "Menu|Import"
-msgstr "Importuj"
+msgstr "Importuj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:402
 #: tsp-svn-helper/main.c:282
@@ -143,7 +143,7 @@ msgstr "Importowanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:415
 msgid "Menu|Info"
-msgstr "Informacja"
+msgstr "Informacja..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:415
 #: thunar-svn-plugin/tsp-svn-action.c:416
@@ -152,18 +152,18 @@ msgstr "Informacja"
 
 #: thunar-svn-plugin/tsp-svn-action.c:432
 msgid "Menu|Lock"
-msgstr "Zablokuj"
+msgstr "Zablokuj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:432
 #: tsp-svn-helper/main.c:286
 #: tsp-svn-helper/tsh-lock-dialog.c:72
 #: tsp-svn-helper/tsh-lock.c:130
 msgid "Lock"
-msgstr "Zablokowywanie"
+msgstr "Blokowanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:445
 msgid "Menu|Log"
-msgstr "Dziennik"
+msgstr "Dziennik..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:445
 #: tsp-svn-helper/main.c:290
@@ -183,7 +183,7 @@ msgstr "Przenoszenie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:486
 msgid "Menu|Edit Properties"
-msgstr "Edytuj właściwości"
+msgstr "Edytuj właściwości..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:486
 #, fuzzy
@@ -215,27 +215,29 @@ msgstr ""
 
 #: thunar-svn-plugin/tsp-svn-action.c:526
 msgid "Menu|Resolve"
-msgstr ""
+msgstr "Rozwiąż..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:526
 #: thunar-svn-plugin/tsp-svn-action.c:527
 msgid "Resolve"
-msgstr ""
+msgstr "Rozwiązywanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:538
+#, fuzzy
 msgid "Menu|Revert"
-msgstr ""
+msgstr "Cofnij zmiany..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:538
 #: tsp-svn-helper/main.c:310
 #: tsp-svn-helper/tsh-revert.c:112
 #: tsp-svn-helper/tsh-revert.c:125
+#, fuzzy
 msgid "Revert"
-msgstr ""
+msgstr "Cofanie zmian"
 
 #: thunar-svn-plugin/tsp-svn-action.c:551
 msgid "Menu|Status"
-msgstr "Stan"
+msgstr "Stan..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:551
 #: tsp-svn-helper/main.c:314
@@ -257,7 +259,7 @@ msgstr ""
 
 #: thunar-svn-plugin/tsp-svn-action.c:577
 msgid "Menu|Unlock"
-msgstr "Odblokuj"
+msgstr "Odblokuj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:577
 #: tsp-svn-helper/main.c:322
@@ -267,7 +269,7 @@ msgstr "Odblokowywanie"
 
 #: thunar-svn-plugin/tsp-svn-action.c:590
 msgid "Menu|Update"
-msgstr "Zaktualizuj"
+msgstr "Zaktualizuj..."
 
 #: thunar-svn-plugin/tsp-svn-action.c:590
 #: tsp-svn-helper/main.c:326
@@ -299,7 +301,6 @@ msgstr "URL:"
 #: tsp-svn-helper/tsh-common.c:588
 #: tsp-svn-helper/tsh-common.c:615
 #: tsp-svn-helper/tsh-common.c:698
-#, fuzzy
 msgid "Unknown"
 msgstr "Nieznany"
 
@@ -313,10 +314,9 @@ msgstr "Repozytorium:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:161
 msgid "Modified revision:"
-msgstr ""
+msgstr "Numer poprawki:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:173
-#, fuzzy
 msgid "Modified date:"
 msgstr "Ostatnio zmodyfikowany:"
 
@@ -325,9 +325,8 @@ msgid "Author:"
 msgstr "Autor:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:203
-#, fuzzy
 msgid "Changelist:"
-msgstr "Zmieniony"
+msgstr "Lista zmian:"
 
 #. Translators: Depth as in depth of recursion
 #: thunar-svn-plugin/tsp-svn-property-page.c:216
@@ -353,9 +352,8 @@ msgstr "Pusty"
 #. * Files depth means this file/direcotry and all of it's files are checked out
 #.
 #: thunar-svn-plugin/tsp-svn-property-page.c:318
-#, fuzzy
 msgid "Files"
-msgstr "Plik"
+msgstr "Pliki"
 
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
@@ -559,8 +557,9 @@ msgid "Update Related Options:"
 msgstr ""
 
 #: tsp-svn-helper/main.c:369
+#, fuzzy
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Nie podano wystarczającej ilości argumentów"
 
 #: tsp-svn-helper/tsh-add.c:73
 #: tsp-svn-helper/tsh-add.c:89
@@ -607,15 +606,15 @@ msgstr ""
 
 #: tsp-svn-helper/tsh-cleanup.c:66
 msgid "Cleanup failed"
-msgstr ""
+msgstr "Nie udało się uporządkować"
 
 #: tsp-svn-helper/tsh-cleanup.c:81
 msgid "Cleanup finished"
-msgstr ""
+msgstr "Zakończono porządkowanie"
 
 #: tsp-svn-helper/tsh-cleanup.c:95
 msgid "Cleaning up ..."
-msgstr ""
+msgstr "Porządkowanie..."
 
 #: tsp-svn-helper/tsh-commit.c:103
 #: tsp-svn-helper/tsh-common.c:662
@@ -625,11 +624,12 @@ msgstr ""
 #: tsp-svn-helper/tsh-move.c:89
 #, c-format
 msgid "At revision: %ld"
-msgstr ""
+msgstr "na poprawce: %ld"
 
 #: tsp-svn-helper/tsh-commit.c:108
+#, fuzzy
 msgid "Nothing to do"
-msgstr ""
+msgstr "Brak zadań do wykonania"
 
 #: tsp-svn-helper/tsh-commit.c:114
 #: tsp-svn-helper/tsh-common.c:470
@@ -639,7 +639,7 @@ msgstr ""
 #: tsp-svn-helper/tsh-import.c:87
 #: tsp-svn-helper/tsh-move.c:100
 msgid "Completed"
-msgstr ""
+msgstr "Ukończono"
 
 #: tsp-svn-helper/tsh-commit.c:145
 msgid "Commit Message"
@@ -656,7 +656,6 @@ msgstr "Dodany"
 
 #: tsp-svn-helper/tsh-common.c:460
 #: tsp-svn-helper/tsh-common.c:713
-#, fuzzy
 msgid "Copied"
 msgstr "Skopiowany"
 
@@ -715,13 +714,11 @@ msgid "Transmitting"
 msgstr ""
 
 #: tsp-svn-helper/tsh-common.c:480
-#, fuzzy
 msgid "Locked"
 msgstr "Zablokowany"
 
 #: tsp-svn-helper/tsh-common.c:481
 #: tsp-svn-helper/tsh-common.c:715
-#, fuzzy
 msgid "Unlocked"
 msgstr "Odblokowany"
 
@@ -767,7 +764,6 @@ msgid "Inapplicable"
 msgstr ""
 
 #: tsp-svn-helper/tsh-common.c:541
-#, fuzzy
 msgid "Unchanged"
 msgstr "Niezmieniony"
 
@@ -804,12 +800,10 @@ msgid "Normal"
 msgstr ""
 
 #: tsp-svn-helper/tsh-common.c:582
-#, fuzzy
 msgid "Ignored"
 msgstr "Zignorowany"
 
 #: tsp-svn-helper/tsh-common.c:585
-#, fuzzy
 msgid "Incomplete"
 msgstr "Niekompletny"
 
@@ -827,7 +821,6 @@ msgid "Local delete"
 msgstr ""
 
 #: tsp-svn-helper/tsh-delete.c:145
-#, fuzzy
 msgid "Delete Message"
 msgstr "Usuń komentarz"
 
@@ -957,8 +950,9 @@ msgstr ""
 #.
 #: tsp-svn-helper/tsh-properties-dialog.c:237
 #: tsp-svn-helper/tsh-status-dialog.c:209
+#, fuzzy
 msgid "Recursive"
-msgstr ""
+msgstr "Rekursywnie"
 
 #. tsh_properties_dialog_done (dialog);
 #: tsp-svn-helper/tsh-properties.c:81
@@ -1006,16 +1000,15 @@ msgid "Relocating ..."
 msgstr ""
 
 #: tsp-svn-helper/tsh-status-dialog.c:224
-#, fuzzy
 msgid "Show Unmodified Files"
 msgstr "Pliki niezmodyfikowane"
 
 #: tsp-svn-helper/tsh-status-dialog.c:228
+#, fuzzy
 msgid "Show Unversioned Files"
-msgstr ""
+msgstr "Pliki bez wersji"
 
 #: tsp-svn-helper/tsh-status-dialog.c:232
-#, fuzzy
 msgid "Show Ignored Files"
 msgstr "Pliki ignorowane"
 
@@ -1053,8 +1046,9 @@ msgid "Certificate does not match the remote hostname."
 msgstr "Certyfikat nie pasuje do nazwy głównego komputera."
 
 #: tsp-svn-helper/tsh-trust-dialog.c:67
+#, fuzzy
 msgid "Certificate authority is unknown."
-msgstr ""
+msgstr "Upoważnienia certyfikatu są nieznane."
 
 #: tsp-svn-helper/tsh-trust-dialog.c:70
 msgid "Other failure."
