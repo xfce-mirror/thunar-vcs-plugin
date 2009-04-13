@@ -1,19 +1,20 @@
-# Indonesian translations for thunar-svn-plugin package.
-# Copyright (C) 2008 thunar-svn-plugin'S COPYRIGHT HOLDER
+# Catalan translation of thunar-svn-plugin
+# Copyright (C) 2007 THE thunar-svn-plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the thunar-svn-plugin package.
-# Andhika Padmawan <andhika.padmawan@gmail.com>, 2008.
-#
+# Harald Servat <redcrash@gmail.com>, 2009
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-14 21:25+0100\n"
-"PO-Revision-Date: 2009-04-09 21:38-0400\n"
-"Last-Translator: Andhika Padmawan <andhika.padmawan@gmail.com>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"POT-Creation-Date: 2009-03-15 15:49+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Harald Servat <redcrash@gmail.com>\n"
+"Language-Team: Harald Servat <redcrash@gmail.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Catalan\n"
+"X-Poedit-Country: Spain\n"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
@@ -23,223 +24,223 @@ msgstr "SVN"
 
 #: thunar-svn-plugin/tsp-svn-action.c:266
 msgid "Menu|Add"
-msgstr "Tambah"
+msgstr "Afegir"
 
 #: thunar-svn-plugin/tsp-svn-action.c:266 tsp-svn-helper/main.c:246
 #: tsp-svn-helper/tsh-add.c:113 tsp-svn-helper/tsh-add.c:126
 msgid "Add"
-msgstr "Tambah"
+msgstr "Afegir"
 
 #: thunar-svn-plugin/tsp-svn-action.c:279
 msgid "Menu|Blame"
-msgstr "Salahkan"
+msgstr "Culpar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:279 tsp-svn-helper/main.c:250
 #: tsp-svn-helper/main.c:254 tsp-svn-helper/tsh-blame-dialog.c:133
 msgid "Blame"
-msgstr "Salahkan"
+msgstr "Culpar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:299
 msgid "Menu|Changelist"
-msgstr "Senarai Ubah"
+msgstr "Llista de canvis"
 
 #: thunar-svn-plugin/tsp-svn-action.c:299
 msgid "Changelist"
-msgstr "Senarai Ubah"
+msgstr "Llista de canvis"
 
 #: thunar-svn-plugin/tsp-svn-action.c:312
 msgid "Menu|Checkout"
-msgstr "Cek Keluar"
+msgstr "Obtenir"
 
 #: thunar-svn-plugin/tsp-svn-action.c:312 tsp-svn-helper/main.c:258
 #: tsp-svn-helper/tsh-checkout.c:98 tsp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
-msgstr "Cek keluar"
+msgstr "Obtenir"
 
 #: thunar-svn-plugin/tsp-svn-action.c:325
 msgid "Menu|Cleanup"
-msgstr "Bersihkan"
+msgstr "Netejar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:325 tsp-svn-helper/main.c:262
 msgid "Cleanup"
-msgstr "Bersihkan"
+msgstr "Netejar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:338
 msgid "Menu|Commit"
-msgstr "Terapkan "
+msgstr "Confirmació"
 
 #: thunar-svn-plugin/tsp-svn-action.c:338 tsp-svn-helper/main.c:266
 #: tsp-svn-helper/tsh-commit.c:127 tsp-svn-helper/tsh-commit.c:140
 msgid "Commit"
-msgstr "Terapkan"
+msgstr "Confirmació"
 
 #: thunar-svn-plugin/tsp-svn-action.c:351
 msgid "Menu|Copy"
-msgstr "Salin"
+msgstr "Copiar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:270
 #: tsp-svn-helper/tsh-copy.c:161
 msgid "Copy"
-msgstr "Salin"
+msgstr "Copiar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:364
 msgid "Menu|Delete"
-msgstr "Hapus"
+msgstr "Esborrar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:274
 #: tsp-svn-helper/tsh-delete.c:127 tsp-svn-helper/tsh-delete.c:140
 msgid "Delete"
-msgstr "Hapus"
+msgstr "Esborrar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:377
 msgid "Menu|Diff"
-msgstr "Beda"
+msgstr "Diferències"
 
 #: thunar-svn-plugin/tsp-svn-action.c:377
 #: thunar-svn-plugin/tsp-svn-action.c:378
 msgid "Diff"
-msgstr "Beda"
+msgstr "Diferències"
 
 #: thunar-svn-plugin/tsp-svn-action.c:389
 msgid "Menu|Export"
-msgstr "Ekspor"
+msgstr "Exportar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:389 tsp-svn-helper/main.c:278
 #: tsp-svn-helper/tsh-export.c:107 tsp-svn-helper/tsh-export.c:125
 msgid "Export"
-msgstr "Ekspor"
+msgstr "Exportar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:402
 msgid "Menu|Import"
-msgstr "Impor"
+msgstr "Importar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:402 tsp-svn-helper/main.c:282
 #: tsp-svn-helper/tsh-import.c:102 tsp-svn-helper/tsh-import.c:120
 msgid "Import"
-msgstr "Impor"
+msgstr "Importar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:415
 msgid "Menu|Info"
-msgstr "Info"
+msgstr "Informació"
 
 #: thunar-svn-plugin/tsp-svn-action.c:415
 #: thunar-svn-plugin/tsp-svn-action.c:416
 msgid "Info"
-msgstr "Info"
+msgstr "Informació"
 
 #: thunar-svn-plugin/tsp-svn-action.c:432
 msgid "Menu|Lock"
-msgstr "Kunci"
+msgstr "Bloquejar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:432 tsp-svn-helper/main.c:286
 #: tsp-svn-helper/tsh-lock-dialog.c:72 tsp-svn-helper/tsh-lock.c:130
 msgid "Lock"
-msgstr "Kunci"
+msgstr "Bloquejar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:445
 msgid "Menu|Log"
-msgstr "Catatan"
+msgstr "Registre"
 
 #: thunar-svn-plugin/tsp-svn-action.c:445 tsp-svn-helper/main.c:290
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
-msgstr "Catatan"
+msgstr "Registre"
 
 #: thunar-svn-plugin/tsp-svn-action.c:467
 msgid "Menu|Move"
-msgstr "Pindah"
+msgstr "Moure"
 
 #: thunar-svn-plugin/tsp-svn-action.c:467 tsp-svn-helper/main.c:294
 #: tsp-svn-helper/tsh-move.c:156
 msgid "Move"
-msgstr "Pindah"
+msgstr "Moure"
 
 #: thunar-svn-plugin/tsp-svn-action.c:486
 msgid "Menu|Edit Properties"
-msgstr "Sunting Properti"
+msgstr "Editar propietats"
 
 #: thunar-svn-plugin/tsp-svn-action.c:486
 msgid "Edit Properties"
-msgstr "Sunting Properti"
+msgstr "Editar propietats"
 
 #: thunar-svn-plugin/tsp-svn-action.c:499
 msgid "Menu|Relocate"
-msgstr "Relokasi"
+msgstr "Deslocalitzar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:499 tsp-svn-helper/main.c:306
 #: tsp-svn-helper/tsh-relocate-dialog.c:217 tsp-svn-helper/tsh-relocate.c:114
 msgid "Relocate"
-msgstr "Relokasi"
+msgstr "Deslocalitzar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:513
 msgid "Menu|Resolved"
-msgstr "Benahi"
+msgstr "Resolt"
 
 #: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:302
 #: tsp-svn-helper/tsh-common.c:465 tsp-svn-helper/tsh-resolved.c:113
 #: tsp-svn-helper/tsh-resolved.c:126
 msgid "Resolved"
-msgstr "Benahi"
+msgstr "Resolt"
 
 #: thunar-svn-plugin/tsp-svn-action.c:526
 msgid "Menu|Resolve"
-msgstr "Benah"
+msgstr "Resoldre"
 
 #: thunar-svn-plugin/tsp-svn-action.c:526
 #: thunar-svn-plugin/tsp-svn-action.c:527
 msgid "Resolve"
-msgstr "Benah"
+msgstr "Resoldre"
 
 #: thunar-svn-plugin/tsp-svn-action.c:538
 msgid "Menu|Revert"
-msgstr "Kembalikan"
+msgstr "Restituir"
 
 #: thunar-svn-plugin/tsp-svn-action.c:538 tsp-svn-helper/main.c:310
 #: tsp-svn-helper/tsh-revert.c:112 tsp-svn-helper/tsh-revert.c:125
 msgid "Revert"
-msgstr "Kembalikan"
+msgstr "Restituir"
 
 #: thunar-svn-plugin/tsp-svn-action.c:551
 msgid "Menu|Status"
-msgstr "Status"
+msgstr "Estat"
 
 #: thunar-svn-plugin/tsp-svn-action.c:551 tsp-svn-helper/main.c:314
 #: tsp-svn-helper/tsh-file-selection-dialog.c:124
-#: tsp-svn-helper/tsh-status-dialog.c:235
+#: tsp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
-msgstr "Status"
+msgstr "Estat"
 
 #: thunar-svn-plugin/tsp-svn-action.c:564
 msgid "Menu|Switch"
-msgstr "Ganti"
+msgstr "Canviar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:564 tsp-svn-helper/main.c:318
 #: tsp-svn-helper/tsh-switch.c:109 tsp-svn-helper/tsh-switch.c:122
 msgid "Switch"
-msgstr "Ganti"
+msgstr "Canviar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:577
 msgid "Menu|Unlock"
-msgstr "Buka Kunci"
+msgstr "Desbloquejar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:577 tsp-svn-helper/main.c:322
 #: tsp-svn-helper/tsh-unlock.c:111
 msgid "Unlock"
-msgstr "Buka Kunci"
+msgstr "Desbloquejar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:590
 msgid "Menu|Update"
-msgstr "Mutakhirkan"
+msgstr "Actualitzar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:590 tsp-svn-helper/main.c:326
 #: tsp-svn-helper/tsh-update.c:113
 msgid "Update"
-msgstr "Mutakhirkan"
+msgstr "Actualitzar"
 
 #: thunar-svn-plugin/tsp-svn-action.c:608
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr "Aksi %s tak diimplementasikan"
+msgstr "L'acció %s no està implementada"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:118
 msgid "URL:"
@@ -251,303 +252,268 @@ msgstr "URL:"
 #: thunar-svn-plugin/tsp-svn-property-page.c:167
 #: thunar-svn-plugin/tsp-svn-property-page.c:179
 #: thunar-svn-plugin/tsp-svn-property-page.c:192
-#: thunar-svn-plugin/tsp-svn-property-page.c:221
-#: thunar-svn-plugin/tsp-svn-property-page.c:299
+#: thunar-svn-plugin/tsp-svn-property-page.c:222
+#: thunar-svn-plugin/tsp-svn-property-page.c:300
 #: tsp-svn-helper/tsh-common.c:493 tsp-svn-helper/tsh-common.c:540
 #: tsp-svn-helper/tsh-common.c:549 tsp-svn-helper/tsh-common.c:571
 #: tsp-svn-helper/tsh-common.c:588 tsp-svn-helper/tsh-common.c:615
 #: tsp-svn-helper/tsh-common.c:698
 msgid "Unknown"
-msgstr "Tak Diketahui"
+msgstr "Desconegut"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:131
 msgid "Revision:"
-msgstr "Revisi:"
+msgstr "Revisió:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:143
 msgid "Repository:"
-msgstr "Gudang:"
+msgstr "Repositori:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:161
 msgid "Modified revision:"
-msgstr "Revisi dimodifikasi:"
+msgstr "Revisió de modificació:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:173
 msgid "Modified date:"
-msgstr "Tanggal dimodifikasi:"
+msgstr "Data de modificació:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:186
 msgid "Author:"
-msgstr "Penulis:"
+msgstr "Autor:"
 
 #: thunar-svn-plugin/tsp-svn-property-page.c:203
 msgid "Changelist:"
-msgstr "Senarai Ubah:"
+msgstr "Llista de canvis:"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:215
+#. Translators: Depth as in depth of recursion
+#: thunar-svn-plugin/tsp-svn-property-page.c:216
 msgid "Depth:"
-msgstr "Kedalaman:"
+msgstr "Profunditat:"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:302
-msgid "Exclude"
-msgstr "Kecualikan"
-
-#: thunar-svn-plugin/tsp-svn-property-page.c:305
-msgid "Empty"
-msgstr "Kosong"
-
-#: thunar-svn-plugin/tsp-svn-property-page.c:308
-msgid "Files"
-msgstr "Berkas"
-
-#: thunar-svn-plugin/tsp-svn-property-page.c:311
-#: tsp-svn-helper/tsh-properties-dialog.c:219
-#: tsp-svn-helper/tsh-status-dialog.c:191
-msgid "Immediates"
-msgstr "Segera"
-
-#: thunar-svn-plugin/tsp-svn-property-page.c:314
-msgid "Infinity"
-msgstr "Ketakterhinggaan"
-
-#. Translators: the first string is a path and the second string
-#. * is a hostname. Nautilus and the panel contain the same string
-#. * to translate.
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
 #.
-#: tsp-svn-helper/gtkfilechooserdefault.c:71
-#, c-format
-msgid "%1$s on %2$s"
-msgstr "%1$s di %2$s"
+#: thunar-svn-plugin/tsp-svn-property-page.c:306
+msgid "Exclude"
+msgstr "Excloure"
 
-#: tsp-svn-helper/gtkfilechooserentry.c:50
-msgid "Select A File"
-msgstr "Pilih Berkas"
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:312
+msgid "Empty"
+msgstr "Buit"
 
-#: tsp-svn-helper/gtkfilechooserentry.c:51
-msgid "Desktop"
-msgstr "Destop"
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:318
+msgid "Files"
+msgstr "Fitxers"
 
-#: tsp-svn-helper/gtkfilechooserentry.c:52
-msgid "(None)"
-msgstr "(tak ada)"
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:324
+#: tsp-svn-helper/tsh-properties-dialog.c:228
+#: tsp-svn-helper/tsh-status-dialog.c:200
+msgid "Immediates"
+msgstr "Immediats"
 
-#: tsp-svn-helper/gtkfilechooserentry.c:343
-msgid "Dialog"
-msgstr "Dialog"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:344
-msgid "The file chooser dialog to use."
-msgstr "Dialog pemilih berkas yang akan digunakan."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:360
-msgid "Focus on click"
-msgstr "Fokus pada klik"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:361
-msgid "Whether the entry grabs focus when it is clicked with the mouse"
-msgstr "Apakah entri memegang fouks ketika diklik dengan tetikus"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:374
-msgid "Title"
-msgstr "Judul"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:375
-msgid "The title of the file chooser dialog."
-msgstr "Judul dialog pemilih berkas."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:388
-msgid "Width In Characters"
-msgstr "Lebar Dalam Karakter"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:389
-msgid "The desired width of the entry widget, in characters."
-msgstr "Lebar entri widget yang diinginkan, dalam karakter."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:2119
-msgid "Other..."
-msgstr "Lainnya..."
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:330
+msgid "Infinity"
+msgstr "Infinitat"
 
 #: tsp-svn-helper/main.c:105
 msgid "Print version information"
-msgstr "Cetak informasi versi"
+msgstr "Imprimir informació de la versió"
 
 #: tsp-svn-helper/main.c:112
 msgid "Execute add action"
-msgstr "Eksekusi aksi tambah"
+msgstr "Executar l'acció d'afegir"
 
 #: tsp-svn-helper/main.c:118
 msgid "Execute blame action"
-msgstr "Eksekusi aksi salahkan"
+msgstr "Executar l'acció de culpar"
 
 #: tsp-svn-helper/main.c:124
 msgid "Execute changelist action"
-msgstr "Eksekusi aksi senarai ubah"
+msgstr "Executar l'acció de llista de canvis"
 
 #: tsp-svn-helper/main.c:130
 msgid "Execute checkout action"
-msgstr "Eksekusi aksi cek keluar"
+msgstr "Executar l'acció d'obtenir"
 
 #: tsp-svn-helper/main.c:136
 msgid "Execute cleanup action"
-msgstr "Eksekusi aksi bersihkan"
+msgstr "Executar l'acció de netejar"
 
 #: tsp-svn-helper/main.c:142
 msgid "Execute commit action"
-msgstr "Eksekusi aksi terapkan"
+msgstr "Executar l'acció de confirmar"
 
 #: tsp-svn-helper/main.c:148
 msgid "Execute copy action"
-msgstr "Eksekusi aksi salin"
+msgstr "Executar l'acció de copiar"
 
 #: tsp-svn-helper/main.c:154
 msgid "Execute delete action"
-msgstr "Eksekusi aksi hapus"
+msgstr "Executar l'acció d'esborrar"
 
 #: tsp-svn-helper/main.c:160
 msgid "Execute export action"
-msgstr "Eksekusi aksi ekspor"
+msgstr "Executar l'acció d'exportar"
 
 #: tsp-svn-helper/main.c:166
 msgid "Execute import action"
-msgstr "Eksekusi aksi impor"
+msgstr "Executar l'acció d'importar"
 
 #: tsp-svn-helper/main.c:172
 msgid "Execute lock action"
-msgstr "Eksekusi aksi kunci"
+msgstr "Executar l'acció de bloquejar"
 
 #: tsp-svn-helper/main.c:178
 msgid "Execute log action"
-msgstr "Eksekusi aksi catatan"
+msgstr "Executar l'acció de registre"
 
 #: tsp-svn-helper/main.c:184
 msgid "Execute move action"
-msgstr "Eksekusi aksi pindah"
+msgstr "Executar l'acció de moure"
 
 #: tsp-svn-helper/main.c:190
 msgid "Execute properties action"
-msgstr "Eksekusi aksi properti"
+msgstr "Executar l'acció de propietats"
 
 #: tsp-svn-helper/main.c:196
 msgid "Execute resolved action"
-msgstr "Eksekusi aksi benahi"
+msgstr "Executar l'acció de resoldre"
 
 #: tsp-svn-helper/main.c:202
 msgid "Execute relocate action"
-msgstr "Eksekusi aksi relokasi"
+msgstr "Executar l'acció de deslocalitzar"
 
 #: tsp-svn-helper/main.c:208
 msgid "Execute revert action"
-msgstr "Eksekusi aksi kembalikan"
+msgstr "Executar l'acció de restituir"
 
 #: tsp-svn-helper/main.c:214
 msgid "Execute status action"
-msgstr "Eksekusi aksi status"
+msgstr "Executar l'acció d'estat"
 
 #: tsp-svn-helper/main.c:220
 msgid "Execute switch action"
-msgstr "Eksekusi aksi ganti"
+msgstr "Executar l'acció de canviar"
 
 #: tsp-svn-helper/main.c:226
 msgid "Execute unlock action"
-msgstr "Eksekusi aksi buka kunci"
+msgstr "Executar l'acció de desbloquejar"
 
 #: tsp-svn-helper/main.c:232
 msgid "Execute update action"
-msgstr "Eksekusi aksi mutakhirkan"
+msgstr "Executar l'acció d'actualitzar"
 
 #: tsp-svn-helper/main.c:246
 msgid "Add Related Options:"
-msgstr "Opsi Tambah Terkait:"
+msgstr "Opcions relacionades amb afegir:"
 
 #: tsp-svn-helper/main.c:250
 msgid "Blame Related Options:"
-msgstr "Opsi Terkait Salahkan:"
+msgstr "Opcions relatives a culpar:"
 
 #: tsp-svn-helper/main.c:254
 msgid "Changelist Related Options:"
-msgstr "Opsi Terkait Senarai Ubah:"
+msgstr "Opcions relatives a la llista de canvis:"
 
 #: tsp-svn-helper/main.c:258
 msgid "Checkout Related Options:"
-msgstr "Opsi Terkait Cek Keluar:"
+msgstr "Opcions relatives a obtenir:"
 
 #: tsp-svn-helper/main.c:262
 msgid "Cleanup Related Options:"
-msgstr "Opsi Bersihkan Terkait:"
+msgstr "Opcions relatives a netejar:"
 
 #: tsp-svn-helper/main.c:266
 msgid "Commit Related Options:"
-msgstr "Opsi Terapkan Terkait:"
+msgstr "Opcions relatives a confirmar:"
 
 #: tsp-svn-helper/main.c:270
 msgid "Copy Related Options:"
-msgstr "Opsi Salin Terkait:"
+msgstr "Opcions relatives a copiar:"
 
 #: tsp-svn-helper/main.c:274
 msgid "Delete Related Options:"
-msgstr "Opsi Hapus Terkait:"
+msgstr "Opcions relatives a copiar:"
 
 #: tsp-svn-helper/main.c:278
 msgid "Export Related Options:"
-msgstr "Opsi Ekspor Terkait:"
+msgstr "Opcions relatives a exportar:"
 
 #: tsp-svn-helper/main.c:282
 msgid "Import Related Options:"
-msgstr "Opsi Impor Terkait:"
+msgstr "Opcions relatives a importar:"
 
 #: tsp-svn-helper/main.c:286
 msgid "Lock Related Options:"
-msgstr "Opsi Kunci Terkait:"
+msgstr "Opcions relatives a bloquejar:"
 
 #: tsp-svn-helper/main.c:290
 msgid "Log Related Options:"
-msgstr "Opsi Catatan Terkait:"
+msgstr "Opcions relatives al registre:"
 
 #: tsp-svn-helper/main.c:294
 msgid "Move Related Options:"
-msgstr "Opsi Pindah Terkait:"
+msgstr "Opcions relatives a moure: "
 
 #: tsp-svn-helper/main.c:298
 msgid "Properties Related Options:"
-msgstr "Opsi Properti Terkait:"
+msgstr "Opcions relatives a les propietats:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:270
+#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:282
 msgid "Properties"
-msgstr "Properti"
+msgstr "Propietats"
 
 #: tsp-svn-helper/main.c:302
 msgid "Resolved Related Options:"
-msgstr "Opsi Benahi Terkait:"
+msgstr "Opcions relatives a resoldre:"
 
 #: tsp-svn-helper/main.c:306
 msgid "Relocate Related Options:"
-msgstr "Opsi Terkait Relokasi:"
+msgstr "Opcions relatives a deslocalitzar:"
 
 #: tsp-svn-helper/main.c:310
 msgid "Revert Related Options:"
-msgstr "Opsi Kembalikan Terkait:"
+msgstr "Opcions relacionades amb restituir:"
 
 #: tsp-svn-helper/main.c:314
 msgid "Status Related Options:"
-msgstr "Opsi Status Terkait:"
+msgstr "Opcions relatives a l'estat:"
 
 #: tsp-svn-helper/main.c:318
 msgid "Switch Related Options:"
-msgstr "Opsi Ganti Terkait:"
+msgstr "Opcions relatives a canviar:"
 
 #: tsp-svn-helper/main.c:322
 msgid "Unlock Related Options:"
-msgstr "Opsi Buka Kunci Terkait:"
+msgstr "Opcions relatives a desbloquejar:"
 
 #: tsp-svn-helper/main.c:326
 msgid "Update Related Options:"
-msgstr "Opsi Mutakhirkan Terkait:"
+msgstr "Opcions relatives a actualitzar:"
 
 #: tsp-svn-helper/main.c:369
 msgid "Not enough arguments provided"
-msgstr "Argumen yang diberikan tak cukup"
+msgstr "Falten paràmetres"
 
 #: tsp-svn-helper/tsh-add.c:73 tsp-svn-helper/tsh-add.c:89
 #: tsp-svn-helper/tsh-checkout.c:71 tsp-svn-helper/tsh-commit.c:91
@@ -558,188 +524,188 @@ msgstr "Argumen yang diberikan tak cukup"
 #: tsp-svn-helper/tsh-revert.c:87 tsp-svn-helper/tsh-switch.c:71
 #: tsp-svn-helper/tsh-unlock.c:86 tsp-svn-helper/tsh-update.c:88
 msgid "Failed"
-msgstr "Gagal"
+msgstr "Fallat"
 
 #: tsp-svn-helper/tsh-blame-dialog.c:94
 msgid "Line"
-msgstr "Jalur"
+msgstr "Línia"
 
 #: tsp-svn-helper/tsh-blame-dialog.c:100 tsp-svn-helper/tsh-log-dialog.c:118
 msgid "Revision"
-msgstr "Revisi"
+msgstr "Revisió"
 
 #: tsp-svn-helper/tsh-blame-dialog.c:106 tsp-svn-helper/tsh-log-dialog.c:124
 msgid "Author"
-msgstr "Penulis"
+msgstr "Autor"
 
 #: tsp-svn-helper/tsh-blame-dialog.c:112 tsp-svn-helper/tsh-log-dialog.c:130
 msgid "Date"
-msgstr "Tanggal"
+msgstr "Data"
 
 #: tsp-svn-helper/tsh-blame.c:75
 msgid "Blame failed"
-msgstr "Salahkan gagal"
+msgstr "No s'ha pogut culpar"
 
 #: tsp-svn-helper/tsh-cleanup.c:66
 msgid "Cleanup failed"
-msgstr "Bersihkan gagal"
+msgstr "No s'ha pogut netejar"
 
 #: tsp-svn-helper/tsh-cleanup.c:81
 msgid "Cleanup finished"
-msgstr "Bersihkan selesai"
+msgstr "La neteja ha finalitzat"
 
 #: tsp-svn-helper/tsh-cleanup.c:95
 msgid "Cleaning up ..."
-msgstr "Membersihkan ..."
+msgstr "Netejant ..."
 
 #: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:662
 #: tsp-svn-helper/tsh-copy.c:95 tsp-svn-helper/tsh-delete.c:103
 #: tsp-svn-helper/tsh-import.c:82 tsp-svn-helper/tsh-move.c:89
 #, c-format
 msgid "At revision: %ld"
-msgstr "Di revisi: %ld"
+msgstr "En la revisió: %ld"
 
 #: tsp-svn-helper/tsh-commit.c:108
 msgid "Nothing to do"
-msgstr "Tak ada yang dikerjakan"
+msgstr "Res a fer"
 
 #: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:470
 #: tsp-svn-helper/tsh-common.c:472 tsp-svn-helper/tsh-copy.c:106
 #: tsp-svn-helper/tsh-delete.c:114 tsp-svn-helper/tsh-import.c:87
 #: tsp-svn-helper/tsh-move.c:100
 msgid "Completed"
-msgstr "Selesai"
+msgstr "Completat"
 
 #: tsp-svn-helper/tsh-commit.c:145
 msgid "Commit Message"
-msgstr "Pesan Terapkan"
+msgstr "Missatge de confirmació"
 
 #: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:468
 #: tsp-svn-helper/tsh-common.c:475 tsp-svn-helper/tsh-common.c:575
 #: tsp-svn-helper/tsh-common.c:620 tsp-svn-helper/tsh-common.c:704
 msgid "Added"
-msgstr "Ditambah"
+msgstr "Afegit"
 
 #: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:713
 msgid "Copied"
-msgstr "Disalin"
+msgstr "Copiat"
 
 #: tsp-svn-helper/tsh-common.c:461 tsp-svn-helper/tsh-common.c:467
 #: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:577
 #: tsp-svn-helper/tsh-common.c:623 tsp-svn-helper/tsh-common.c:706
 msgid "Deleted"
-msgstr "Dihapus"
+msgstr "Esborrat"
 
 #: tsp-svn-helper/tsh-common.c:462
 msgid "Restored"
-msgstr "Disimpan ulang"
+msgstr "Restaurat"
 
 #: tsp-svn-helper/tsh-common.c:463
 msgid "Reverted"
-msgstr "Dikembalikan"
+msgstr "Restituït"
 
 #: tsp-svn-helper/tsh-common.c:464
 msgid "Revert failed"
-msgstr "Kembalikan gagal"
+msgstr "No s'ha pogut restituir"
 
 #: tsp-svn-helper/tsh-common.c:466
 msgid "Skipped"
-msgstr "Dilewati"
+msgstr "Omès"
 
 #: tsp-svn-helper/tsh-common.c:469
 msgid "Updated"
-msgstr "Dimutakhirkan"
+msgstr "Actualitzat"
 
 #: tsp-svn-helper/tsh-common.c:471 tsp-svn-helper/tsh-common.c:473
 #: tsp-svn-helper/tsh-common.c:584
 msgid "External"
-msgstr "Eksternal"
+msgstr "Extern"
 
 #: tsp-svn-helper/tsh-common.c:474 tsp-svn-helper/tsh-common.c:579
 #: tsp-svn-helper/tsh-common.c:626 tsp-svn-helper/tsh-common.c:709
 msgid "Modified"
-msgstr "Dimodifikasi"
+msgstr "Modificat"
 
 #: tsp-svn-helper/tsh-common.c:477 tsp-svn-helper/tsh-common.c:578
 #: tsp-svn-helper/tsh-common.c:629 tsp-svn-helper/tsh-common.c:702
 msgid "Replaced"
-msgstr "Diganti"
+msgstr "Substituït"
 
 #: tsp-svn-helper/tsh-common.c:478
 msgid "Transmitting"
-msgstr "Mentransmisikan"
+msgstr "Transmetent"
 
 #: tsp-svn-helper/tsh-common.c:480
 msgid "Locked"
-msgstr "Terkunci"
+msgstr "Bloquejat"
 
 #: tsp-svn-helper/tsh-common.c:481 tsp-svn-helper/tsh-common.c:715
 msgid "Unlocked"
-msgstr "Kunci dibuka"
+msgstr "Desbloquejat"
 
 #: tsp-svn-helper/tsh-common.c:482
 msgid "Lock failed"
-msgstr "Gagal mengunci"
+msgstr "No s'ha pogut bloquejar"
 
 #: tsp-svn-helper/tsh-common.c:483
 msgid "Unlock failed"
-msgstr "Gagal membuka kunci"
+msgstr "No s'ha pogut desbloquejar"
 
 #: tsp-svn-helper/tsh-common.c:484
 msgid "Exists"
-msgstr "Ada"
+msgstr "Existeix"
 
 #: tsp-svn-helper/tsh-common.c:485
 msgid "Changelist set"
-msgstr "Atur senarai ubah"
+msgstr "Llista de canvis establerta"
 
 #: tsp-svn-helper/tsh-common.c:486
 msgid "Changelist cleared"
-msgstr "Senarai ubah dibersihkan"
+msgstr "Llista de canvis buida"
 
 #: tsp-svn-helper/tsh-common.c:487
 msgid "Changelist moved"
-msgstr "Senarai ubah dipindah"
+msgstr "Llista de canvis moguda"
 
 #: tsp-svn-helper/tsh-common.c:488
 msgid "Merge begin"
-msgstr "Penggabungan dimulai"
+msgstr "Iniciant fusió"
 
 #: tsp-svn-helper/tsh-common.c:489
 msgid "Foreign merge begin"
-msgstr "Penggabungan asing dimulai"
+msgstr "Iniciant fusió forana"
 
 #: tsp-svn-helper/tsh-common.c:490
 msgid "Replace"
-msgstr "Ganti"
+msgstr "Substituir"
 
 #: tsp-svn-helper/tsh-common.c:539
 msgid "Inapplicable"
-msgstr "Tak dapat diterapkan"
+msgstr "Inaplicable"
 
 #: tsp-svn-helper/tsh-common.c:541
 msgid "Unchanged"
-msgstr "Tak diubah"
+msgstr "No modificat"
 
 #: tsp-svn-helper/tsh-common.c:542 tsp-svn-helper/tsh-common.c:576
 msgid "Missing"
-msgstr "Hilang"
+msgstr "Desaparegut"
 
 #: tsp-svn-helper/tsh-common.c:543 tsp-svn-helper/tsh-common.c:583
 msgid "Obstructed"
-msgstr "Rintangan"
+msgstr "Obstruït"
 
 #: tsp-svn-helper/tsh-common.c:544
 msgid "Changed"
-msgstr "Diubah"
+msgstr "Canviat"
 
 #: tsp-svn-helper/tsh-common.c:545 tsp-svn-helper/tsh-common.c:580
 msgid "Merged"
-msgstr "Dimerger"
+msgstr "Fusionat"
 
 #: tsp-svn-helper/tsh-common.c:546 tsp-svn-helper/tsh-common.c:581
 msgid "Conflicted"
-msgstr "Konflik"
+msgstr "Està en conflicte"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -749,147 +715,165 @@ msgstr "Normal"
 
 #: tsp-svn-helper/tsh-common.c:582
 msgid "Ignored"
-msgstr "Diabaikan"
+msgstr "Ignorat"
 
 #: tsp-svn-helper/tsh-common.c:585
 msgid "Incomplete"
-msgstr "Tidak selesai"
+msgstr "Incomplet"
 
 #: tsp-svn-helper/tsh-copy.c:100
 msgid "Local copy"
-msgstr "Salinan lokal"
+msgstr "Còpia local"
 
 #: tsp-svn-helper/tsh-copy.c:143
 msgid "Copy To"
-msgstr "Salin Ke"
+msgstr "Copiar a"
 
 #: tsp-svn-helper/tsh-delete.c:108
 msgid "Local delete"
-msgstr "Hapus lokal"
+msgstr "Esborrar local"
 
 #: tsp-svn-helper/tsh-delete.c:145
 msgid "Delete Message"
-msgstr "Hapus Pesan"
+msgstr "Missatge d'esborrat"
 
 #: tsp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
-msgstr "_Sertifikat"
+msgstr "_Certificat:"
 
 #: tsp-svn-helper/tsh-file-dialog.c:67
 msgid "Select a file"
-msgstr "Pilih berkas"
+msgstr "Seleccioneu un fitxer"
 
 #: tsp-svn-helper/tsh-file-dialog.c:78 tsp-svn-helper/tsh-login-dialog.c:98
 #: tsp-svn-helper/tsh-trust-dialog.c:73
 msgid "Remember"
-msgstr "Ingat"
+msgstr "Recordar"
 
 #: tsp-svn-helper/tsh-file-dialog.c:86
 msgid "Certificate"
-msgstr "Sertifikat"
+msgstr "Certificat"
 
 #: tsp-svn-helper/tsh-file-selection-dialog.c:90
 #: tsp-svn-helper/tsh-log-message-dialog.c:92
 #: tsp-svn-helper/tsh-notify-dialog.c:94
 #: tsp-svn-helper/tsh-status-dialog.c:116
 msgid "Path"
-msgstr "Alamat"
+msgstr "Camí"
 
 #: tsp-svn-helper/tsh-file-selection-dialog.c:117
 msgid "Select/Unselect all"
-msgstr "Pilih/Tak Pilih semua"
+msgstr "Selecciona tot/cap"
 
 #: tsp-svn-helper/tsh-import.c:125
 msgid "Import Message"
-msgstr "Impor Pesan"
+msgstr "Missatge d'importació"
 
 #: tsp-svn-helper/tsh-log-dialog.c:136
 msgid "Message"
-msgstr "Pesan"
+msgstr "Missatge"
 
 #: tsp-svn-helper/tsh-log-dialog.c:174 tsp-svn-helper/tsh-notify-dialog.c:88
 msgid "Action"
-msgstr "Aksi"
+msgstr "Acció"
 
 #: tsp-svn-helper/tsh-log-dialog.c:180
 msgid "File"
-msgstr "Berkas"
+msgstr "Fitxer"
 
 #: tsp-svn-helper/tsh-log-message-dialog.c:86
 msgid "State"
-msgstr "Tingkat"
+msgstr "Estat"
 
 #: tsp-svn-helper/tsh-log-message-dialog.c:110
 msgid "Log Message"
-msgstr "Pesan Log"
+msgstr "Missatge del registre"
 
 #: tsp-svn-helper/tsh-log.c:98
 msgid "Log failed"
-msgstr "Log gagal"
+msgstr "No s'ha pogut registrar"
 
 #: tsp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
-msgstr "_Nama pengguna:"
+msgstr "_Usuari:"
 
 #: tsp-svn-helper/tsh-login-dialog.c:81
 msgid "_Password:"
-msgstr "_Sandi lewat:"
+msgstr "_Contrasenya:"
 
 #: tsp-svn-helper/tsh-login-dialog.c:106
 msgid "Login"
-msgstr "Log masuk"
+msgstr "Inici de sessió"
 
 #: tsp-svn-helper/tsh-move.c:94
 msgid "Local move"
-msgstr "Pindah lokal"
+msgstr "Moviment local"
 
 #: tsp-svn-helper/tsh-move.c:136
 msgid "Move To"
-msgstr "Pinda Ke"
+msgstr "Moure a"
 
 #: tsp-svn-helper/tsh-notify-dialog.c:100
 msgid "Mime type"
-msgstr "Tipe mime"
+msgstr "Tipus MIME"
 
 #: tsp-svn-helper/tsh-notify-dialog.c:115
 msgid "Notification"
-msgstr "Pemberitahuan"
+msgstr "Notificació"
 
 #: tsp-svn-helper/tsh-properties-dialog.c:125
 msgid "Name"
-msgstr "Nama"
+msgstr "Nom"
 
 #: tsp-svn-helper/tsh-properties-dialog.c:131
 msgid "Value"
-msgstr "Nilai"
+msgstr "Valor"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:205
-#: tsp-svn-helper/tsh-status-dialog.c:179
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#.
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:208
+#: tsp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
-msgstr "Sendiri"
+msgstr "Propi"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:213
-#: tsp-svn-helper/tsh-status-dialog.c:185
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:219
+#: tsp-svn-helper/tsh-status-dialog.c:191
 msgid "Immediate files"
-msgstr "Berkas segera"
+msgstr "Fitxers immediats"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:225
-#: tsp-svn-helper/tsh-status-dialog.c:197
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#.
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:237
+#: tsp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
-msgstr "Rekursif"
+msgstr "Recursiu"
 
 #. tsh_properties_dialog_done (dialog);
 #: tsp-svn-helper/tsh-properties.c:81
 msgid "Set property failed"
-msgstr "Atur properti gagal"
+msgstr "No s'ha pogut establir la propietat"
 
 #: tsp-svn-helper/tsh-properties.c:104
 msgid "Properties failed"
-msgstr "Properti gagal"
+msgstr "Han fallat les propietats"
 
 #: tsp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr "_Dari:"
+msgstr "_De:"
 
 #: tsp-svn-helper/tsh-relocate-dialog.c:98
 #: tsp-svn-helper/tsh-relocate-dialog.c:104
@@ -900,84 +884,81 @@ msgstr "_Dari:"
 #: tsp-svn-helper/tsh-transfer-dialog.c:98
 #: tsp-svn-helper/tsh-transfer-dialog.c:144
 msgid "Select a folder"
-msgstr "Pilih folder"
+msgstr "Seleccioneu una carpeta"
 
 #: tsp-svn-helper/tsh-relocate-dialog.c:143
 msgid "_To:"
-msgstr "_Ke:"
+msgstr "_A:"
 
 #: tsp-svn-helper/tsh-relocate-dialog.c:198
 #: tsp-svn-helper/tsh-transfer-dialog.c:137
 msgid "_Directory:"
-msgstr "_Direktori:"
+msgstr "D_irectori:"
 
 #: tsp-svn-helper/tsh-relocate.c:71
 msgid "Relocate failed"
-msgstr "Relokasi gagal"
+msgstr "La deslocalització ha fallat"
 
 #: tsp-svn-helper/tsh-relocate.c:86
 msgid "Relocate finished"
-msgstr "Relokasi selesai"
+msgstr "La deslocalització ha finalitzat"
 
 #: tsp-svn-helper/tsh-relocate.c:128
 msgid "Relocating ..."
-msgstr "Merelokasi ..."
-
-#: tsp-svn-helper/tsh-status-dialog.c:212
-msgid "Show Unmodified Files"
-msgstr "Tampilkan Berkas yang Tidak Dimodifikasi"
-
-#: tsp-svn-helper/tsh-status-dialog.c:216
-msgid "Show Unversioned Files"
-msgstr "Tampilkan Berkas yang Tidak Memiliki Versi"
-
-#: tsp-svn-helper/tsh-status-dialog.c:220
-msgid "Show Ignored Files"
-msgstr "Tampilkan Berkas yang Diabaikan"
+msgstr "Deslocalitzant ..."
 
 #: tsp-svn-helper/tsh-status-dialog.c:224
-msgid "Hide Externals"
-msgstr "Sembunyikan Eksternal"
+msgid "Show Unmodified Files"
+msgstr "Mostrar els fitxers no modificats"
 
 #: tsp-svn-helper/tsh-status-dialog.c:228
+msgid "Show Unversioned Files"
+msgstr "Mostrar els fitxers sense versió"
+
+#: tsp-svn-helper/tsh-status-dialog.c:232
+msgid "Show Ignored Files"
+msgstr "Mostrar els fitxers ignorats"
+
+#: tsp-svn-helper/tsh-status-dialog.c:236
+msgid "Hide Externals"
+msgstr "Ocultar els externs"
+
+#: tsp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
-msgstr "Cek Gudang"
+msgstr "Comprovar repositori"
 
 #: tsp-svn-helper/tsh-status.c:82
 msgid "Status failed"
-msgstr "Status gagal"
+msgstr "L'estat ha fallat"
 
 #: tsp-svn-helper/tsh-transfer-dialog.c:82
 msgid "_Repository:"
-msgstr "_Gudang:"
+msgstr "_Repositori:"
 
 #: tsp-svn-helper/tsh-transfer-dialog.c:156
 msgid "Transfer"
-msgstr "Transfer"
+msgstr "Transferència"
 
 #: tsp-svn-helper/tsh-trust-dialog.c:58
 msgid "Certificate is not yet valid."
-msgstr "Sertifikat belum sah."
+msgstr "El certificat no és vàlid encara."
 
 #: tsp-svn-helper/tsh-trust-dialog.c:61
 msgid "Certificate has expired."
-msgstr "Sertifikat telah kadaluarsa."
+msgstr "El certificat ha expirat."
 
 #: tsp-svn-helper/tsh-trust-dialog.c:64
 msgid "Certificate does not match the remote hostname."
-msgstr "Sertifikat tidak cocok dengan nama host jarak jauh."
+msgstr "El certificat no es correspon amb l'ordinador central."
 
 #: tsp-svn-helper/tsh-trust-dialog.c:67
 msgid "Certificate authority is unknown."
-msgstr "Otoritas sertifikat tak diketahui."
+msgstr "L'autoritat del certificat és desconeguda."
 
 #: tsp-svn-helper/tsh-trust-dialog.c:70
 msgid "Other failure."
-msgstr "Kesalahan lainnya."
+msgstr "Un altre tipus d'error."
 
 #: tsp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
-msgstr "Percaya"
-
-#~ msgid "Modify Property Recursive"
-#~ msgstr "Ubah Properti Secara Rekursif"
+msgstr "Confiança"
