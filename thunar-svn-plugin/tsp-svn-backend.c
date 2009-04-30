@@ -152,7 +152,7 @@ tsp_svn_backend_is_working_copy (const gchar *uri)
 
 
 static void
-status_callback (void *baton, const char *path, svn_wc_status2_t *status)
+status_callback2 (void *baton, const char *path, svn_wc_status2_t *status)
 {
 	GSList **list = baton;
 	TspSvnFileStatus *entry = g_new (TspSvnFileStatus, 1);
@@ -177,6 +177,14 @@ status_callback (void *baton, const char *path, svn_wc_status2_t *status)
 	}
 
 	*list = g_slist_prepend (*list, entry);
+}
+
+
+static svn_error_t *
+status_callback3 (void *baton, const char *path, svn_wc_status2_t *status, apr_pool_t *pool)
+{
+    status_callback2(baton, path, status);
+    return SVN_NO_ERROR;
 }
 
 
@@ -206,7 +214,11 @@ tsp_svn_backend_get_status (const gchar *uri)
   subpool = svn_pool_create (pool);
 
 	/* get the status of all files in the directory */
-	err = svn_client_status3 (NULL, path, &revision, status_callback, &list, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL, ctx, subpool);
+#if CHECK_SVN_VERSION(1,5)
+	err = svn_client_status3 (NULL, path, &revision, status_callback2, &list, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL, ctx, subpool);
+#else /* CHECK_SVN_VERSION(1,6) */
+	err = svn_client_status4 (NULL, path, &revision, status_callback3, &list, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL, ctx, subpool);
+#endif
 
   svn_pool_destroy (subpool);
 

@@ -71,7 +71,11 @@ static gpointer status_thread (gpointer user_data)
   subpool = svn_pool_create (pool);
 
   revision.kind = svn_opt_revision_head;
+#if CHECK_SVN_VERSION(1,5)
 	if ((err = svn_client_status3(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,6) */
+	if ((err = svn_client_status4(NULL, files?files[0]:"", &revision, tsh_status_func3, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
+#endif
 	{
     svn_pool_destroy (subpool);
 

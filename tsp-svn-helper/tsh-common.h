@@ -29,6 +29,7 @@ gboolean tsh_create_context (svn_client_ctx_t**, apr_pool_t*, svn_error_t**);
 
 void         tsh_notify_func2  (void *, const svn_wc_notify_t *, apr_pool_t *);
 void         tsh_status_func2  (void *, const char *, svn_wc_status2_t *);
+svn_error_t *tsh_status_func3  (void *, const char *, svn_wc_status2_t *, apr_pool_t *);
 svn_error_t *tsh_log_msg_func2 (const char **, const char **, const apr_array_header_t *, void *, apr_pool_t *);
 svn_error_t *tsh_log_func      (void *, svn_log_entry_t *, apr_pool_t *);
 svn_error_t *tsh_blame_func2   (void *, apr_int64_t, svn_revnum_t, const char *, const char *, svn_revnum_t, const char *, const char *, const char *, const char *, apr_pool_t *);
@@ -39,6 +40,10 @@ gchar       *tsh_strerror  (svn_error_t *);
 const gchar *tsh_status_to_string(enum svn_wc_status_kind status);
 
 gchar *tsh_is_working_copy (const gchar *, apr_pool_t *);
+
+#define CHECK_SVN_VERSION(major, minor) ((major == SVN_VER_MAJOR) && (minor == SVN_VER_MINOR))
+#define CHECK_SVN_VERSION_G(major, minor) ((major < SVN_VER_MAJOR) || ((major == SVN_VER_MAJOR) && (minor <= SVN_VER_MINOR)))
+#define CHECK_SVN_VERSION_S(major, minor) ((major > SVN_VER_MAJOR) || ((major == SVN_VER_MAJOR) && (minor >= SVN_VER_MINOR)))
 
 G_END_DECLS
 

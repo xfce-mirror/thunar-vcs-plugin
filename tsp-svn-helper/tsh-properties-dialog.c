@@ -25,6 +25,7 @@
 #include <gtk/gtk.h>
 
 #include <subversion-1/svn_client.h>
+#include <subversion-1/svn_props.h>
 
 #include "tsh-common.h"
 #include "tsh-properties-dialog.h"

@@ -59,6 +59,8 @@ TspSvnInfo *tsp_svn_backend_get_info (const gchar *uri);
 
 void     tsp_svn_info_free (TspSvnInfo *info);
 
+#define CHECK_SVN_VERSION(major, minor) ((major == SVN_VER_MAJOR) && (minor == SVN_VER_MINOR))
+
 G_END_DECLS;
 
 #endif /* !__TSP_SVN_BACKEND_H__ */

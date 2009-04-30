@@ -74,7 +74,11 @@ static gpointer copy_thread (gpointer user_data)
     copy_source.peg_revision = &revision;
     APR_ARRAY_PUSH (paths, svn_client_copy_source_t *) = &copy_source;
 
+#if CHECK_SVN_VERSION(1,5)
 	if ((err = svn_client_copy4(&commit_info, paths, to, FALSE, FALSE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,6) */
+	if ((err = svn_client_copy5(&commit_info, paths, to, FALSE, FALSE, FALSE, NULL, ctx, subpool)))
+#endif
 	{
     svn_pool_destroy (subpool);
 

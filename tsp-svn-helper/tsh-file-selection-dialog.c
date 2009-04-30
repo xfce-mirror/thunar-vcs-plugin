@@ -31,6 +31,7 @@
 #include "tsh-file-selection-dialog.h"
 
 static void tsh_file_selection_status_func2 (void *, const char *, svn_wc_status2_t *);
+static svn_error_t *tsh_file_selection_status_func3 (void *, const char *, svn_wc_status2_t *, apr_pool_t *);
 static void selection_cell_toggled (GtkCellRendererToggle *, gchar *, gpointer);
 static void selection_all_toggled (GtkToggleButton *, gpointer);
 
@@ -166,7 +167,11 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   {
     while (*files)
     {
+#if CHECK_SVN_VERSION(1,5)
       if((err = svn_client_status3(NULL, *files, &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,6) */
+      if((err = svn_client_status4(NULL, *files, &revision, tsh_file_selection_status_func3, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
+#endif
       {
         svn_pool_destroy (subpool);
 
@@ -180,7 +185,11 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   }
   else
   {
+#if CHECK_SVN_VERSION(1,5)
     if((err = svn_client_status3(NULL, "", &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,6) */
+    if((err = svn_client_status4(NULL, "", &revision, tsh_file_selection_status_func3, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
+#endif
     {
       svn_pool_destroy (subpool);
 
@@ -273,6 +282,12 @@ static void tsh_file_selection_status_func2(void *baton, const char *path, svn_w
                         COLUMN_SELECTION, TRUE,
                         -1);
   }
+}
+
+static svn_error_t *tsh_file_selection_status_func3(void *baton, const char *path, svn_wc_status2_t *status, apr_pool_t *pool)
+{
+    tsh_file_selection_status_func2(baton, path, status);
+    return SVN_NO_ERROR;
 }
 
 static void selection_cell_toggled (GtkCellRendererToggle *renderer, gchar *path, gpointer user_data)

@@ -433,7 +433,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 
   /* append the svn submenu action */
   action = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
-  g_signal_connect(action, "new-watch", G_CALLBACK(tsp_new_process), menu_provider);
+  g_signal_connect(action, "new-process", G_CALLBACK(tsp_new_process), menu_provider);
   actions = g_list_append (actions, action);
 
   return actions;

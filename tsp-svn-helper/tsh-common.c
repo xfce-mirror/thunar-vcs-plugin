@@ -34,6 +34,7 @@
 #include <subversion-1/svn_pools.h>
 #include <subversion-1/svn_fs.h>
 #include <subversion-1/svn_time.h>
+#include <subversion-1/svn_props.h>
 
 #include "tsh-dialog-common.h"
 #include "tsh-login-dialog.h"
@@ -48,6 +49,7 @@
 
 #include "tsh-common.h"
 
+static svn_error_t* tsh_auth_simple_plaintext_prompt(svn_boolean_t*, const char*, void*, apr_pool_t*);
 static svn_error_t* tsh_auth_simple_prompt(svn_auth_cred_simple_t**, void*, const char*, const char*, svn_boolean_t, apr_pool_t*);
 static svn_error_t* tsh_auth_username_prompt(svn_auth_cred_username_t**, void*, const char*, svn_boolean_t, apr_pool_t*);
 static svn_error_t* tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t**, void*, const char*, apr_uint32_t, const svn_auth_ssl_server_cert_info_t*, svn_boolean_t, apr_pool_t*);
@@ -78,8 +80,10 @@ gboolean tsh_init (apr_pool_t **ppool, svn_error_t **perr)
 
 	*ppool = pool = svn_pool_create (NULL);
 
-	/* Initialize utf routines */
-	svn_utf_initialize (pool);
+	/* Initialize utf routines.
+     * This is only for performance, don't think the plugin actualy uses it.
+     * Removed because of compile error with libsvn 1.6 */
+	/* svn_utf_initialize (pool); */
 
 	/* Initialize FS lib */
 	if ((err = svn_fs_initialize (pool)))
@@ -165,7 +169,11 @@ gboolean tsh_create_context (svn_client_ctx_t **pctx, apr_pool_t *pool, svn_erro
 	svn_auth_get_keychain_simple_provider (&provider, pool);
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
 #endif
+#if CHECK_SVN_VERSION(1,5)
 	svn_auth_get_simple_provider (&provider, pool);
+#else /* CHECK_SVN_VERSION(1,6)*/
+	svn_auth_get_simple_provider2 (&provider, tsh_auth_simple_plaintext_prompt, NULL, pool);
+#endif
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
 	svn_auth_get_username_provider (&provider, pool);
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
@@ -175,7 +183,11 @@ gboolean tsh_create_context (svn_client_ctx_t **pctx, apr_pool_t *pool, svn_erro
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
 	svn_auth_get_ssl_client_cert_file_provider (&provider, pool);
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
+#if CHECK_SVN_VERSION(1,5)
 	svn_auth_get_ssl_client_cert_pw_file_provider (&provider, pool);
+#else /* CHECK_SVN_VERSION(1,6)*/
+	svn_auth_get_ssl_client_cert_pw_file_provider2 (&provider, tsh_auth_simple_plaintext_prompt, NULL, pool);
+#endif
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
 
 	/* Prompt providers */
@@ -243,6 +255,29 @@ gboolean tsh_create_context (svn_client_ctx_t **pctx, apr_pool_t *pool, svn_erro
     svn_auth_set_parameter(ab, SVN_AUTH_PARAM_NO_AUTH_CACHE, "");
 
 	return TRUE;
+}
+
+static svn_error_t*
+tsh_auth_simple_plaintext_prompt(svn_boolean_t *may_save_plaintext,
+        const char *realm,
+        void *baton,
+        apr_pool_t *pool)
+{
+    gint result;
+
+	gdk_threads_enter();
+
+	GtkWidget *dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO, _("Store password a plaintext?"));
+
+	result = gtk_dialog_run(GTK_DIALOG(dialog));
+
+    gtk_widget_destroy(dialog);
+
+    gdk_threads_leave();
+
+    *may_save_plaintext = (result == GTK_RESPONSE_YES);
+
+	return SVN_NO_ERROR;
 }
 
 static svn_error_t*
@@ -487,7 +522,18 @@ tsh_action_to_string(svn_wc_notify_action_t action)
     N_("Changelist moved"),
     N_("Merge begin"),
     N_("Foreign merge begin"),
-    N_("Replace")
+    N_("Replace"),
+#if CHECK_SVN_VERSION_G(1,6)
+    N_("Property added"),
+    N_("Property modified"),
+    N_("Property deleted"),
+    N_("Property nonexisting"),
+    N_("Revision property set"),
+    N_("Revision property deleted"),
+    N_("Merge completed"),
+    N_("Tree conflict"),
+    N_("External failed"),
+#endif
   };
 
   const gchar *action_string = N_("Unknown");
@@ -526,6 +572,17 @@ tsh_action_to_string(svn_wc_notify_action_t action)
     case svn_wc_notify_merge_begin:
     case svn_wc_notify_foreign_merge_begin:
     case svn_wc_notify_update_replace:
+#if CHECK_SVN_VERSION_G(1,6)
+    case svn_wc_notify_property_added:
+    case svn_wc_notify_property_modified:
+    case svn_wc_notify_property_deleted:
+    case svn_wc_notify_property_deleted_nonexistent:
+    case svn_wc_notify_revprop_set:
+    case svn_wc_notify_revprop_deleted:
+    case svn_wc_notify_merge_completed:
+    case svn_wc_notify_tree_conflict:
+    case svn_wc_notify_failed_external:
+#endif
       action_string = action_table[action];
       break;
 	}
@@ -679,6 +736,13 @@ tsh_status_func2(void *baton, const char *path, svn_wc_status2_t *status)
   if (tsh_status_dialog_get_show_unversioned (dialog) || status->entry)
     tsh_status_dialog_add(dialog, path, tsh_status_to_string(status->text_status), tsh_status_to_string(status->prop_status), tsh_status_to_string(status->repos_text_status), tsh_status_to_string(status->repos_prop_status));
   gdk_threads_leave();
+}
+
+svn_error_t *
+tsh_status_func3(void *baton, const char *path, svn_wc_status2_t *status, apr_pool_t *pool)
+{
+    tsh_status_func2(baton, path, status);
+    return SVN_NO_ERROR;
 }
 
 svn_error_t*

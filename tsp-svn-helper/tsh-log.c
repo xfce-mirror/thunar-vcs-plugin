@@ -47,18 +47,20 @@ struct thread_args {
 static gpointer log_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
-  svn_opt_revision_t revision, start, end;
+  svn_opt_revision_t revision;
+  svn_opt_revision_range_t range;
 	svn_error_t *err;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *subpool, *pool = args->pool;
 	TshLogDialog *dialog = args->dialog;
 	gchar **files = args->files;
 	apr_array_header_t *paths = args->paths;
+	apr_array_header_t *ranges;
 	gint size, i;
   GtkWidget *error;
   gchar *error_str;
 
-  if(!args->paths)
+  if(!paths)
   {
     size = files?g_strv_length(files):0;
 
@@ -84,10 +86,16 @@ static gpointer log_thread (gpointer user_data)
   subpool = svn_pool_create (pool);
 
   revision.kind = svn_opt_revision_unspecified;
-  start.kind = svn_opt_revision_head;
-  end.kind = svn_opt_revision_number;
-  end.value.number = 0;
-	if ((err = svn_client_log4(paths, &revision, &start, &end, 0, TRUE, FALSE, FALSE, NULL, tsh_log_func, dialog, ctx, subpool)))
+  range.start.kind = svn_opt_revision_head;
+  range.end.kind = svn_opt_revision_number;
+  range.end.value.number = 0;
+  ranges = apr_array_make (pool, 1, sizeof (svn_opt_revision_range_t *));
+  APR_ARRAY_PUSH (ranges, svn_opt_revision_range_t *) = &range;
+#if CHECK_SVN_VERSION(1,5)
+	if ((err = svn_client_log4(paths, &revision, &range.start, &renge.end, 0, TRUE, FALSE, FALSE, NULL, tsh_log_func, dialog, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,6) */
+	if ((err = svn_client_log5(paths, &revision, ranges, 0, TRUE, FALSE, FALSE, NULL, tsh_log_func, dialog, ctx, subpool)))
+#endif
 	{
     svn_pool_destroy (subpool);
 
