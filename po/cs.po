@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce 4-i18-goodies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-14 21:25+0100\n"
+"POT-Creation-Date: 2009-04-30 17:48+0200\n"
 "PO-Revision-Date: 2008-12-22 02:12+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech\n"
@@ -81,7 +81,7 @@ msgid "Menu|Copy"
 msgstr "Zkopírovat (copy)"
 
 #: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:270
-#: tsp-svn-helper/tsh-copy.c:161
+#: tsp-svn-helper/tsh-copy.c:165
 msgid "Copy"
 msgstr "Zkopírovat (copy)"
 
@@ -179,7 +179,7 @@ msgid "Menu|Resolved"
 msgstr "Vyřešeno (resolved)"
 
 #: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:302
-#: tsp-svn-helper/tsh-common.c:465 tsp-svn-helper/tsh-resolved.c:113
+#: tsp-svn-helper/tsh-common.c:500 tsp-svn-helper/tsh-resolved.c:113
 #: tsp-svn-helper/tsh-resolved.c:126
 msgid "Resolved"
 msgstr "Vyřešeno (resolved)"
@@ -207,8 +207,8 @@ msgid "Menu|Status"
 msgstr "Stav (status)"
 
 #: thunar-svn-plugin/tsp-svn-action.c:551 tsp-svn-helper/main.c:314
-#: tsp-svn-helper/tsh-file-selection-dialog.c:124
-#: tsp-svn-helper/tsh-status-dialog.c:235
+#: tsp-svn-helper/tsh-file-selection-dialog.c:125
+#: tsp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
 msgstr "Stav (status)"
 
@@ -254,12 +254,12 @@ msgstr "Adresa URL:"
 #: thunar-svn-plugin/tsp-svn-property-page.c:167
 #: thunar-svn-plugin/tsp-svn-property-page.c:179
 #: thunar-svn-plugin/tsp-svn-property-page.c:192
-#: thunar-svn-plugin/tsp-svn-property-page.c:221
-#: thunar-svn-plugin/tsp-svn-property-page.c:299
-#: tsp-svn-helper/tsh-common.c:493 tsp-svn-helper/tsh-common.c:540
-#: tsp-svn-helper/tsh-common.c:549 tsp-svn-helper/tsh-common.c:571
-#: tsp-svn-helper/tsh-common.c:588 tsp-svn-helper/tsh-common.c:615
-#: tsp-svn-helper/tsh-common.c:698
+#: thunar-svn-plugin/tsp-svn-property-page.c:222
+#: thunar-svn-plugin/tsp-svn-property-page.c:300
+#: tsp-svn-helper/tsh-common.c:539 tsp-svn-helper/tsh-common.c:597
+#: tsp-svn-helper/tsh-common.c:606 tsp-svn-helper/tsh-common.c:628
+#: tsp-svn-helper/tsh-common.c:645 tsp-svn-helper/tsh-common.c:672
+#: tsp-svn-helper/tsh-common.c:762
 msgid "Unknown"
 msgstr "Neznámá"
 
@@ -288,89 +288,54 @@ msgstr "Autor:"
 msgid "Changelist:"
 msgstr "Změněno"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:215
+#. Translators: Depth as in depth of recursion
+#: thunar-svn-plugin/tsp-svn-property-page.c:216
 msgid "Depth:"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:302
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:306
 msgid "Exclude"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:305
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:312
 msgid "Empty"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:308
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:318
 #, fuzzy
 msgid "Files"
 msgstr "Soubor"
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:311
-#: tsp-svn-helper/tsh-properties-dialog.c:219
-#: tsp-svn-helper/tsh-status-dialog.c:191
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:324
+#: tsp-svn-helper/tsh-properties-dialog.c:229
+#: tsp-svn-helper/tsh-status-dialog.c:200
 msgid "Immediates"
 msgstr ""
 
-#: thunar-svn-plugin/tsp-svn-property-page.c:314
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
+#: thunar-svn-plugin/tsp-svn-property-page.c:330
 msgid "Infinity"
 msgstr ""
-
-#. Translators: the first string is a path and the second string
-#. * is a hostname. Nautilus and the panel contain the same string
-#. * to translate.
-#.
-#: tsp-svn-helper/gtkfilechooserdefault.c:71
-#, c-format
-msgid "%1$s on %2$s"
-msgstr "%1$s na serveru %2$s"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:50
-msgid "Select A File"
-msgstr "Vyberte soubor"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:51
-msgid "Desktop"
-msgstr "Pracovní prostředí"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:52
-msgid "(None)"
-msgstr "(Žádný)"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:343
-msgid "Dialog"
-msgstr "Dialogové okno"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:344
-msgid "The file chooser dialog to use."
-msgstr "Používané dialogové okno pro výběr souboru."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:360
-msgid "Focus on click"
-msgstr "Zaměřit při kliknutí"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:361
-msgid "Whether the entry grabs focus when it is clicked with the mouse"
-msgstr "Určuje, zda bude položka vybrána po kliknutí"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:374
-msgid "Title"
-msgstr "Titulek"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:375
-msgid "The title of the file chooser dialog."
-msgstr "Titulek dialogového okna pro výběr souboru."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:388
-msgid "Width In Characters"
-msgstr "Šířka v počtu znaků"
-
-#: tsp-svn-helper/gtkfilechooserentry.c:389
-msgid "The desired width of the entry widget, in characters."
-msgstr "Požadovaná šířka vstupního prvku, uveďte počet znaků."
-
-#: tsp-svn-helper/gtkfilechooserentry.c:2119
-msgid "Other..."
-msgstr "Jiné..."
 
 #: tsp-svn-helper/main.c:105
 msgid "Print version information"
@@ -520,7 +485,7 @@ msgstr "Volby týkající se vlastností (propedit:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:270
+#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:283
 msgid "Properties"
 msgstr "Vlastnosti"
 
@@ -558,7 +523,7 @@ msgstr "Nedostatek argumentů"
 
 #: tsp-svn-helper/tsh-add.c:73 tsp-svn-helper/tsh-add.c:89
 #: tsp-svn-helper/tsh-checkout.c:71 tsp-svn-helper/tsh-commit.c:91
-#: tsp-svn-helper/tsh-copy.c:83 tsp-svn-helper/tsh-delete.c:91
+#: tsp-svn-helper/tsh-copy.c:87 tsp-svn-helper/tsh-delete.c:91
 #: tsp-svn-helper/tsh-export.c:72 tsp-svn-helper/tsh-import.c:72
 #: tsp-svn-helper/tsh-lock.c:91 tsp-svn-helper/tsh-move.c:77
 #: tsp-svn-helper/tsh-resolved.c:73 tsp-svn-helper/tsh-resolved.c:89
@@ -599,8 +564,8 @@ msgstr "Čištění ukončeno"
 msgid "Cleaning up ..."
 msgstr "Čistí se..."
 
-#: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:662
-#: tsp-svn-helper/tsh-copy.c:95 tsp-svn-helper/tsh-delete.c:103
+#: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:719
+#: tsp-svn-helper/tsh-copy.c:99 tsp-svn-helper/tsh-delete.c:103
 #: tsp-svn-helper/tsh-import.c:82 tsp-svn-helper/tsh-move.c:89
 #, c-format
 msgid "At revision: %ld"
@@ -610,8 +575,8 @@ msgstr "Na revizi: %ld"
 msgid "Nothing to do"
 msgstr "Žádné úlohy"
 
-#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:470
-#: tsp-svn-helper/tsh-common.c:472 tsp-svn-helper/tsh-copy.c:106
+#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:505
+#: tsp-svn-helper/tsh-common.c:507 tsp-svn-helper/tsh-copy.c:110
 #: tsp-svn-helper/tsh-delete.c:114 tsp-svn-helper/tsh-import.c:87
 #: tsp-svn-helper/tsh-move.c:100
 msgid "Completed"
@@ -621,154 +586,203 @@ msgstr "Dokončeno"
 msgid "Commit Message"
 msgstr "Odeslat zprávu"
 
-#: tsp-svn-helper/tsh-common.c:459 tsp-svn-helper/tsh-common.c:468
-#: tsp-svn-helper/tsh-common.c:475 tsp-svn-helper/tsh-common.c:575
-#: tsp-svn-helper/tsh-common.c:620 tsp-svn-helper/tsh-common.c:704
+#: tsp-svn-helper/tsh-common.c:270
+msgid "Store password a plaintext?"
+msgstr ""
+
+#: tsp-svn-helper/tsh-common.c:494 tsp-svn-helper/tsh-common.c:503
+#: tsp-svn-helper/tsh-common.c:510 tsp-svn-helper/tsh-common.c:632
+#: tsp-svn-helper/tsh-common.c:677 tsp-svn-helper/tsh-common.c:768
 msgid "Added"
 msgstr "Přidáno"
 
-#: tsp-svn-helper/tsh-common.c:460 tsp-svn-helper/tsh-common.c:713
+#: tsp-svn-helper/tsh-common.c:495 tsp-svn-helper/tsh-common.c:777
 msgid "Copied"
 msgstr "Zkopírováno"
 
-#: tsp-svn-helper/tsh-common.c:461 tsp-svn-helper/tsh-common.c:467
-#: tsp-svn-helper/tsh-common.c:476 tsp-svn-helper/tsh-common.c:577
-#: tsp-svn-helper/tsh-common.c:623 tsp-svn-helper/tsh-common.c:706
+#: tsp-svn-helper/tsh-common.c:496 tsp-svn-helper/tsh-common.c:502
+#: tsp-svn-helper/tsh-common.c:511 tsp-svn-helper/tsh-common.c:634
+#: tsp-svn-helper/tsh-common.c:680 tsp-svn-helper/tsh-common.c:770
 msgid "Deleted"
 msgstr "Smazáno"
 
-#: tsp-svn-helper/tsh-common.c:462
+#: tsp-svn-helper/tsh-common.c:497
 msgid "Restored"
 msgstr "Obnoveno"
 
-#: tsp-svn-helper/tsh-common.c:463
+#: tsp-svn-helper/tsh-common.c:498
 msgid "Reverted"
 msgstr "Předchozí obnoveno"
 
-#: tsp-svn-helper/tsh-common.c:464
+#: tsp-svn-helper/tsh-common.c:499
 msgid "Revert failed"
 msgstr "Obnovení předchozího se nezdařilo"
 
-#: tsp-svn-helper/tsh-common.c:466
+#: tsp-svn-helper/tsh-common.c:501
 msgid "Skipped"
 msgstr "Vynecháno"
 
-#: tsp-svn-helper/tsh-common.c:469
+#: tsp-svn-helper/tsh-common.c:504
 msgid "Updated"
 msgstr "Aktualizováno"
 
-#: tsp-svn-helper/tsh-common.c:471 tsp-svn-helper/tsh-common.c:473
-#: tsp-svn-helper/tsh-common.c:584
+#: tsp-svn-helper/tsh-common.c:506 tsp-svn-helper/tsh-common.c:508
+#: tsp-svn-helper/tsh-common.c:641
 msgid "External"
 msgstr "Externí"
 
-#: tsp-svn-helper/tsh-common.c:474 tsp-svn-helper/tsh-common.c:579
-#: tsp-svn-helper/tsh-common.c:626 tsp-svn-helper/tsh-common.c:709
+#: tsp-svn-helper/tsh-common.c:509 tsp-svn-helper/tsh-common.c:636
+#: tsp-svn-helper/tsh-common.c:683 tsp-svn-helper/tsh-common.c:773
 msgid "Modified"
 msgstr "Pozměněno"
 
-#: tsp-svn-helper/tsh-common.c:477 tsp-svn-helper/tsh-common.c:578
-#: tsp-svn-helper/tsh-common.c:629 tsp-svn-helper/tsh-common.c:702
+#: tsp-svn-helper/tsh-common.c:512 tsp-svn-helper/tsh-common.c:635
+#: tsp-svn-helper/tsh-common.c:686 tsp-svn-helper/tsh-common.c:766
 msgid "Replaced"
 msgstr "Nahrazeno"
 
-#: tsp-svn-helper/tsh-common.c:478
+#: tsp-svn-helper/tsh-common.c:513
 msgid "Transmitting"
 msgstr "Přenáší se"
 
-#: tsp-svn-helper/tsh-common.c:480
+#: tsp-svn-helper/tsh-common.c:515
 msgid "Locked"
 msgstr "Uzamčeno"
 
-#: tsp-svn-helper/tsh-common.c:481 tsp-svn-helper/tsh-common.c:715
+#: tsp-svn-helper/tsh-common.c:516 tsp-svn-helper/tsh-common.c:779
 msgid "Unlocked"
 msgstr "Odemčeno"
 
-#: tsp-svn-helper/tsh-common.c:482
+#: tsp-svn-helper/tsh-common.c:517
 msgid "Lock failed"
 msgstr "Uzamknutí se nezdařilo"
 
-#: tsp-svn-helper/tsh-common.c:483
+#: tsp-svn-helper/tsh-common.c:518
 msgid "Unlock failed"
 msgstr "Odemknutí se nezdařilo"
 
-#: tsp-svn-helper/tsh-common.c:484
+#: tsp-svn-helper/tsh-common.c:519
 msgid "Exists"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:485
+#: tsp-svn-helper/tsh-common.c:520
 msgid "Changelist set"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:486
+#: tsp-svn-helper/tsh-common.c:521
 msgid "Changelist cleared"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:487
+#: tsp-svn-helper/tsh-common.c:522
 #, fuzzy
 msgid "Changelist moved"
 msgstr "Změněno"
 
-#: tsp-svn-helper/tsh-common.c:488
+#: tsp-svn-helper/tsh-common.c:523
 msgid "Merge begin"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:489
+#: tsp-svn-helper/tsh-common.c:524
 msgid "Foreign merge begin"
 msgstr ""
 
-#: tsp-svn-helper/tsh-common.c:490
+#: tsp-svn-helper/tsh-common.c:525
 #, fuzzy
 msgid "Replace"
 msgstr "Nahrazeno"
 
-#: tsp-svn-helper/tsh-common.c:539
+#: tsp-svn-helper/tsh-common.c:527
+#, fuzzy
+msgid "Property added"
+msgstr "Vlastnosti selhaly"
+
+#: tsp-svn-helper/tsh-common.c:528
+#, fuzzy
+msgid "Property modified"
+msgstr "Vlastnosti selhaly"
+
+#: tsp-svn-helper/tsh-common.c:529
+#, fuzzy
+msgid "Property deleted"
+msgstr "Vlastnosti selhaly"
+
+#: tsp-svn-helper/tsh-common.c:530
+#, fuzzy
+msgid "Property nonexisting"
+msgstr "Vlastnosti"
+
+#: tsp-svn-helper/tsh-common.c:531
+#, fuzzy
+msgid "Revision property set"
+msgstr "Nastavení vlastnosti se nezdařilo"
+
+#: tsp-svn-helper/tsh-common.c:532
+#, fuzzy
+msgid "Revision property deleted"
+msgstr "Nastavení vlastnosti se nezdařilo"
+
+#: tsp-svn-helper/tsh-common.c:533
+#, fuzzy
+msgid "Merge completed"
+msgstr "Dokončeno"
+
+#: tsp-svn-helper/tsh-common.c:534
+#, fuzzy
+msgid "Tree conflict"
+msgstr "V konfliktu"
+
+#: tsp-svn-helper/tsh-common.c:535
+#, fuzzy
+msgid "External failed"
+msgstr "Externí"
+
+#: tsp-svn-helper/tsh-common.c:596
 msgid "Inapplicable"
 msgstr "Nepoužitelné"
 
-#: tsp-svn-helper/tsh-common.c:541
+#: tsp-svn-helper/tsh-common.c:598
 msgid "Unchanged"
 msgstr "Nezměněno"
 
-#: tsp-svn-helper/tsh-common.c:542 tsp-svn-helper/tsh-common.c:576
+#: tsp-svn-helper/tsh-common.c:599 tsp-svn-helper/tsh-common.c:633
 msgid "Missing"
 msgstr "Chybí"
 
-#: tsp-svn-helper/tsh-common.c:543 tsp-svn-helper/tsh-common.c:583
+#: tsp-svn-helper/tsh-common.c:600 tsp-svn-helper/tsh-common.c:640
 msgid "Obstructed"
 msgstr "Zabráněno"
 
-#: tsp-svn-helper/tsh-common.c:544
+#: tsp-svn-helper/tsh-common.c:601
 msgid "Changed"
 msgstr "Změněno"
 
-#: tsp-svn-helper/tsh-common.c:545 tsp-svn-helper/tsh-common.c:580
+#: tsp-svn-helper/tsh-common.c:602 tsp-svn-helper/tsh-common.c:637
 msgid "Merged"
 msgstr "Spojeno"
 
-#: tsp-svn-helper/tsh-common.c:546 tsp-svn-helper/tsh-common.c:581
+#: tsp-svn-helper/tsh-common.c:603 tsp-svn-helper/tsh-common.c:638
 msgid "Conflicted"
 msgstr "V konfliktu"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: tsp-svn-helper/tsh-common.c:574
+#: tsp-svn-helper/tsh-common.c:631
 msgid "Normal"
 msgstr "Běžný"
 
-#: tsp-svn-helper/tsh-common.c:582
+#: tsp-svn-helper/tsh-common.c:639
 msgid "Ignored"
 msgstr "Ignorováno"
 
-#: tsp-svn-helper/tsh-common.c:585
+#: tsp-svn-helper/tsh-common.c:642
 msgid "Incomplete"
 msgstr "Nedokončeno"
 
-#: tsp-svn-helper/tsh-copy.c:100
+#: tsp-svn-helper/tsh-copy.c:104
 msgid "Local copy"
 msgstr "Místní kopie"
 
-#: tsp-svn-helper/tsh-copy.c:143
+#: tsp-svn-helper/tsh-copy.c:147
 msgid "Copy To"
 msgstr "Kopírovat do umístění"
 
@@ -797,14 +811,14 @@ msgstr "Zapamatovat si"
 msgid "Certificate"
 msgstr "Certifikát"
 
-#: tsp-svn-helper/tsh-file-selection-dialog.c:90
+#: tsp-svn-helper/tsh-file-selection-dialog.c:91
 #: tsp-svn-helper/tsh-log-message-dialog.c:92
 #: tsp-svn-helper/tsh-notify-dialog.c:94
 #: tsp-svn-helper/tsh-status-dialog.c:116
 msgid "Path"
 msgstr "Cesta"
 
-#: tsp-svn-helper/tsh-file-selection-dialog.c:117
+#: tsp-svn-helper/tsh-file-selection-dialog.c:118
 msgid "Select/Unselect all"
 msgstr "Vybrat vše nebo zrušit výběr"
 
@@ -832,7 +846,7 @@ msgstr "Stav"
 msgid "Log Message"
 msgstr "Zpráva záznamu"
 
-#: tsp-svn-helper/tsh-log.c:98
+#: tsp-svn-helper/tsh-log.c:106
 msgid "Log failed"
 msgstr "Záznam se nezdařil"
 
@@ -864,27 +878,45 @@ msgstr "Typ MIME"
 msgid "Notification"
 msgstr "Oznámení"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:125
+#: tsp-svn-helper/tsh-properties-dialog.c:126
 msgid "Name"
 msgstr "Název"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:131
+#: tsp-svn-helper/tsh-properties-dialog.c:132
 msgid "Value"
 msgstr "Hodnota"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:205
-#: tsp-svn-helper/tsh-status-dialog.c:179
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#.
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:209
+#: tsp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
 msgstr ""
 
-#: tsp-svn-helper/tsh-properties-dialog.c:213
-#: tsp-svn-helper/tsh-status-dialog.c:185
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:220
+#: tsp-svn-helper/tsh-status-dialog.c:191
 #, fuzzy
 msgid "Immediate files"
 msgstr "Přemisťování se nezdařilo"
 
-#: tsp-svn-helper/tsh-properties-dialog.c:225
-#: tsp-svn-helper/tsh-status-dialog.c:197
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#.
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#.
+#: tsp-svn-helper/tsh-properties-dialog.c:238
+#: tsp-svn-helper/tsh-status-dialog.c:209
 #, fuzzy
 msgid "Recursive"
 msgstr "Zobrazit rekurzivně"
@@ -934,27 +966,27 @@ msgstr "Přemisťování dokončeno"
 msgid "Relocating ..."
 msgstr "Přemisťování..."
 
-#: tsp-svn-helper/tsh-status-dialog.c:212
+#: tsp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
 msgstr "Zobrazit nepozměněné soubory"
 
-#: tsp-svn-helper/tsh-status-dialog.c:216
+#: tsp-svn-helper/tsh-status-dialog.c:228
 msgid "Show Unversioned Files"
 msgstr "Zobrazit soubory bez verze"
 
-#: tsp-svn-helper/tsh-status-dialog.c:220
+#: tsp-svn-helper/tsh-status-dialog.c:232
 msgid "Show Ignored Files"
 msgstr "Zobrazit ignorované soubory"
 
-#: tsp-svn-helper/tsh-status-dialog.c:224
+#: tsp-svn-helper/tsh-status-dialog.c:236
 msgid "Hide Externals"
 msgstr "Skrýt externí"
 
-#: tsp-svn-helper/tsh-status-dialog.c:228
+#: tsp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
 msgstr "Ověřit repozitář"
 
-#: tsp-svn-helper/tsh-status.c:82
+#: tsp-svn-helper/tsh-status.c:86
 msgid "Status failed"
 msgstr "Stav selhal"
 
@@ -989,6 +1021,45 @@ msgstr "Jiná chyba."
 #: tsp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
 msgstr "Důvěřovat"
+
+#~ msgid "%1$s on %2$s"
+#~ msgstr "%1$s na serveru %2$s"
+
+#~ msgid "Select A File"
+#~ msgstr "Vyberte soubor"
+
+#~ msgid "Desktop"
+#~ msgstr "Pracovní prostředí"
+
+#~ msgid "(None)"
+#~ msgstr "(Žádný)"
+
+#~ msgid "Dialog"
+#~ msgstr "Dialogové okno"
+
+#~ msgid "The file chooser dialog to use."
+#~ msgstr "Používané dialogové okno pro výběr souboru."
+
+#~ msgid "Focus on click"
+#~ msgstr "Zaměřit při kliknutí"
+
+#~ msgid "Whether the entry grabs focus when it is clicked with the mouse"
+#~ msgstr "Určuje, zda bude položka vybrána po kliknutí"
+
+#~ msgid "Title"
+#~ msgstr "Titulek"
+
+#~ msgid "The title of the file chooser dialog."
+#~ msgstr "Titulek dialogového okna pro výběr souboru."
+
+#~ msgid "Width In Characters"
+#~ msgstr "Šířka v počtu znaků"
+
+#~ msgid "The desired width of the entry widget, in characters."
+#~ msgstr "Požadovaná šířka vstupního prvku, uveďte počet znaků."
+
+#~ msgid "Other..."
+#~ msgstr "Jiné..."
 
 #~ msgid "Modify Property Recursive"
 #~ msgstr "Pozměnit vlastnosti rekurzivně"
