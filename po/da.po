@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-04-30 17:48+0200\n"
-"PO-Revision-Date: 2009-03-15 22:03+0100\n"
+"PO-Revision-Date: 2009-05-01 13:18+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,8 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-svn-plugin/tsp-provider.c:435 thunar-svn-plugin/tsp-provider.c:467
+#: thunar-svn-plugin/tsp-provider.c:435
+#: thunar-svn-plugin/tsp-provider.c:467
 msgid "SVN"
 msgstr "SVN"
 
@@ -28,8 +29,10 @@ msgstr "SVN"
 msgid "Menu|Add"
 msgstr "Tilføj"
 
-#: thunar-svn-plugin/tsp-svn-action.c:266 tsp-svn-helper/main.c:246
-#: tsp-svn-helper/tsh-add.c:113 tsp-svn-helper/tsh-add.c:126
+#: thunar-svn-plugin/tsp-svn-action.c:266
+#: tsp-svn-helper/main.c:246
+#: tsp-svn-helper/tsh-add.c:113
+#: tsp-svn-helper/tsh-add.c:126
 msgid "Add"
 msgstr "Tilføj"
 
@@ -39,8 +42,10 @@ msgid "Menu|Blame"
 msgstr "Vis ansvarlige"
 
 # http://svnbook.red-bean.com/en/1.0/re02.html
-#: thunar-svn-plugin/tsp-svn-action.c:279 tsp-svn-helper/main.c:250
-#: tsp-svn-helper/main.c:254 tsp-svn-helper/tsh-blame-dialog.c:133
+#: thunar-svn-plugin/tsp-svn-action.c:279
+#: tsp-svn-helper/main.c:250
+#: tsp-svn-helper/main.c:254
+#: tsp-svn-helper/tsh-blame-dialog.c:133
 msgid "Blame"
 msgstr "Vis ansvarlige"
 
@@ -56,8 +61,10 @@ msgstr "Ændringsliste"
 msgid "Menu|Checkout"
 msgstr "Tjek ud"
 
-#: thunar-svn-plugin/tsp-svn-action.c:312 tsp-svn-helper/main.c:258
-#: tsp-svn-helper/tsh-checkout.c:98 tsp-svn-helper/tsh-checkout.c:110
+#: thunar-svn-plugin/tsp-svn-action.c:312
+#: tsp-svn-helper/main.c:258
+#: tsp-svn-helper/tsh-checkout.c:98
+#: tsp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr "Tjek ud"
 
@@ -65,7 +72,8 @@ msgstr "Tjek ud"
 msgid "Menu|Cleanup"
 msgstr "Oprydning"
 
-#: thunar-svn-plugin/tsp-svn-action.c:325 tsp-svn-helper/main.c:262
+#: thunar-svn-plugin/tsp-svn-action.c:325
+#: tsp-svn-helper/main.c:262
 msgid "Cleanup"
 msgstr "Oprydning"
 
@@ -73,8 +81,10 @@ msgstr "Oprydning"
 msgid "Menu|Commit"
 msgstr "Integrér"
 
-#: thunar-svn-plugin/tsp-svn-action.c:338 tsp-svn-helper/main.c:266
-#: tsp-svn-helper/tsh-commit.c:127 tsp-svn-helper/tsh-commit.c:140
+#: thunar-svn-plugin/tsp-svn-action.c:338
+#: tsp-svn-helper/main.c:266
+#: tsp-svn-helper/tsh-commit.c:127
+#: tsp-svn-helper/tsh-commit.c:140
 msgid "Commit"
 msgstr "Integrér"
 
@@ -82,7 +92,8 @@ msgstr "Integrér"
 msgid "Menu|Copy"
 msgstr "Kopiér"
 
-#: thunar-svn-plugin/tsp-svn-action.c:351 tsp-svn-helper/main.c:270
+#: thunar-svn-plugin/tsp-svn-action.c:351
+#: tsp-svn-helper/main.c:270
 #: tsp-svn-helper/tsh-copy.c:165
 msgid "Copy"
 msgstr "Kopiér"
@@ -91,8 +102,10 @@ msgstr "Kopiér"
 msgid "Menu|Delete"
 msgstr "Slet"
 
-#: thunar-svn-plugin/tsp-svn-action.c:364 tsp-svn-helper/main.c:274
-#: tsp-svn-helper/tsh-delete.c:127 tsp-svn-helper/tsh-delete.c:140
+#: thunar-svn-plugin/tsp-svn-action.c:364
+#: tsp-svn-helper/main.c:274
+#: tsp-svn-helper/tsh-delete.c:127
+#: tsp-svn-helper/tsh-delete.c:140
 msgid "Delete"
 msgstr "Slet"
 
@@ -109,8 +122,10 @@ msgstr "Diff"
 msgid "Menu|Export"
 msgstr "Eksportér"
 
-#: thunar-svn-plugin/tsp-svn-action.c:389 tsp-svn-helper/main.c:278
-#: tsp-svn-helper/tsh-export.c:107 tsp-svn-helper/tsh-export.c:125
+#: thunar-svn-plugin/tsp-svn-action.c:389
+#: tsp-svn-helper/main.c:278
+#: tsp-svn-helper/tsh-export.c:107
+#: tsp-svn-helper/tsh-export.c:125
 msgid "Export"
 msgstr "Eksportér"
 
@@ -118,8 +133,10 @@ msgstr "Eksportér"
 msgid "Menu|Import"
 msgstr "Importér"
 
-#: thunar-svn-plugin/tsp-svn-action.c:402 tsp-svn-helper/main.c:282
-#: tsp-svn-helper/tsh-import.c:102 tsp-svn-helper/tsh-import.c:120
+#: thunar-svn-plugin/tsp-svn-action.c:402
+#: tsp-svn-helper/main.c:282
+#: tsp-svn-helper/tsh-import.c:102
+#: tsp-svn-helper/tsh-import.c:120
 msgid "Import"
 msgstr "Importér"
 
@@ -136,8 +153,10 @@ msgstr "Info"
 msgid "Menu|Lock"
 msgstr "Lås"
 
-#: thunar-svn-plugin/tsp-svn-action.c:432 tsp-svn-helper/main.c:286
-#: tsp-svn-helper/tsh-lock-dialog.c:72 tsp-svn-helper/tsh-lock.c:130
+#: thunar-svn-plugin/tsp-svn-action.c:432
+#: tsp-svn-helper/main.c:286
+#: tsp-svn-helper/tsh-lock-dialog.c:72
+#: tsp-svn-helper/tsh-lock.c:130
 msgid "Lock"
 msgstr "Lås"
 
@@ -145,7 +164,8 @@ msgstr "Lås"
 msgid "Menu|Log"
 msgstr "Log"
 
-#: thunar-svn-plugin/tsp-svn-action.c:445 tsp-svn-helper/main.c:290
+#: thunar-svn-plugin/tsp-svn-action.c:445
+#: tsp-svn-helper/main.c:290
 #: tsp-svn-helper/tsh-log-dialog.c:201
 msgid "Log"
 msgstr "Log"
@@ -154,7 +174,8 @@ msgstr "Log"
 msgid "Menu|Move"
 msgstr "Flyt"
 
-#: thunar-svn-plugin/tsp-svn-action.c:467 tsp-svn-helper/main.c:294
+#: thunar-svn-plugin/tsp-svn-action.c:467
+#: tsp-svn-helper/main.c:294
 #: tsp-svn-helper/tsh-move.c:156
 msgid "Move"
 msgstr "Flyt"
@@ -171,8 +192,10 @@ msgstr "Redigér egenskaber"
 msgid "Menu|Relocate"
 msgstr "Skift adresse"
 
-#: thunar-svn-plugin/tsp-svn-action.c:499 tsp-svn-helper/main.c:306
-#: tsp-svn-helper/tsh-relocate-dialog.c:217 tsp-svn-helper/tsh-relocate.c:114
+#: thunar-svn-plugin/tsp-svn-action.c:499
+#: tsp-svn-helper/main.c:306
+#: tsp-svn-helper/tsh-relocate-dialog.c:217
+#: tsp-svn-helper/tsh-relocate.c:114
 msgid "Relocate"
 msgstr "Skift adresse"
 
@@ -180,8 +203,10 @@ msgstr "Skift adresse"
 msgid "Menu|Resolved"
 msgstr "Løst"
 
-#: thunar-svn-plugin/tsp-svn-action.c:513 tsp-svn-helper/main.c:302
-#: tsp-svn-helper/tsh-common.c:500 tsp-svn-helper/tsh-resolved.c:113
+#: thunar-svn-plugin/tsp-svn-action.c:513
+#: tsp-svn-helper/main.c:302
+#: tsp-svn-helper/tsh-common.c:500
+#: tsp-svn-helper/tsh-resolved.c:113
 #: tsp-svn-helper/tsh-resolved.c:126
 msgid "Resolved"
 msgstr "Løst"
@@ -199,8 +224,10 @@ msgstr "Løs"
 msgid "Menu|Revert"
 msgstr "Forkast"
 
-#: thunar-svn-plugin/tsp-svn-action.c:538 tsp-svn-helper/main.c:310
-#: tsp-svn-helper/tsh-revert.c:112 tsp-svn-helper/tsh-revert.c:125
+#: thunar-svn-plugin/tsp-svn-action.c:538
+#: tsp-svn-helper/main.c:310
+#: tsp-svn-helper/tsh-revert.c:112
+#: tsp-svn-helper/tsh-revert.c:125
 msgid "Revert"
 msgstr "Forkast"
 
@@ -208,7 +235,8 @@ msgstr "Forkast"
 msgid "Menu|Status"
 msgstr "Status"
 
-#: thunar-svn-plugin/tsp-svn-action.c:551 tsp-svn-helper/main.c:314
+#: thunar-svn-plugin/tsp-svn-action.c:551
+#: tsp-svn-helper/main.c:314
 #: tsp-svn-helper/tsh-file-selection-dialog.c:125
 #: tsp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
@@ -218,8 +246,10 @@ msgstr "Status"
 msgid "Menu|Switch"
 msgstr "Skift"
 
-#: thunar-svn-plugin/tsp-svn-action.c:564 tsp-svn-helper/main.c:318
-#: tsp-svn-helper/tsh-switch.c:109 tsp-svn-helper/tsh-switch.c:122
+#: thunar-svn-plugin/tsp-svn-action.c:564
+#: tsp-svn-helper/main.c:318
+#: tsp-svn-helper/tsh-switch.c:109
+#: tsp-svn-helper/tsh-switch.c:122
 msgid "Switch"
 msgstr "Skift"
 
@@ -227,7 +257,8 @@ msgstr "Skift"
 msgid "Menu|Unlock"
 msgstr "Lås op"
 
-#: thunar-svn-plugin/tsp-svn-action.c:577 tsp-svn-helper/main.c:322
+#: thunar-svn-plugin/tsp-svn-action.c:577
+#: tsp-svn-helper/main.c:322
 #: tsp-svn-helper/tsh-unlock.c:111
 msgid "Unlock"
 msgstr "Lås op"
@@ -236,7 +267,8 @@ msgstr "Lås op"
 msgid "Menu|Update"
 msgstr "Opdatér"
 
-#: thunar-svn-plugin/tsp-svn-action.c:590 tsp-svn-helper/main.c:326
+#: thunar-svn-plugin/tsp-svn-action.c:590
+#: tsp-svn-helper/main.c:326
 #: tsp-svn-helper/tsh-update.c:113
 msgid "Update"
 msgstr "Opdatér"
@@ -258,9 +290,12 @@ msgstr "URL:"
 #: thunar-svn-plugin/tsp-svn-property-page.c:192
 #: thunar-svn-plugin/tsp-svn-property-page.c:222
 #: thunar-svn-plugin/tsp-svn-property-page.c:300
-#: tsp-svn-helper/tsh-common.c:539 tsp-svn-helper/tsh-common.c:597
-#: tsp-svn-helper/tsh-common.c:606 tsp-svn-helper/tsh-common.c:628
-#: tsp-svn-helper/tsh-common.c:645 tsp-svn-helper/tsh-common.c:672
+#: tsp-svn-helper/tsh-common.c:539
+#: tsp-svn-helper/tsh-common.c:597
+#: tsp-svn-helper/tsh-common.c:606
+#: tsp-svn-helper/tsh-common.c:628
+#: tsp-svn-helper/tsh-common.c:645
+#: tsp-svn-helper/tsh-common.c:672
 #: tsp-svn-helper/tsh-common.c:762
 msgid "Unknown"
 msgstr "Ukendt"
@@ -483,7 +518,8 @@ msgstr "Egenskab-relaterede tilvalg:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: tsp-svn-helper/main.c:298 tsp-svn-helper/tsh-properties-dialog.c:283
+#: tsp-svn-helper/main.c:298
+#: tsp-svn-helper/tsh-properties-dialog.c:283
 msgid "Properties"
 msgstr "Egenskaber"
 
@@ -519,14 +555,22 @@ msgstr "Opdatér-relaterede tilvalg:"
 msgid "Not enough arguments provided"
 msgstr "For få parametre angivet"
 
-#: tsp-svn-helper/tsh-add.c:73 tsp-svn-helper/tsh-add.c:89
-#: tsp-svn-helper/tsh-checkout.c:71 tsp-svn-helper/tsh-commit.c:91
-#: tsp-svn-helper/tsh-copy.c:87 tsp-svn-helper/tsh-delete.c:91
-#: tsp-svn-helper/tsh-export.c:72 tsp-svn-helper/tsh-import.c:72
-#: tsp-svn-helper/tsh-lock.c:91 tsp-svn-helper/tsh-move.c:77
-#: tsp-svn-helper/tsh-resolved.c:73 tsp-svn-helper/tsh-resolved.c:89
-#: tsp-svn-helper/tsh-revert.c:87 tsp-svn-helper/tsh-switch.c:71
-#: tsp-svn-helper/tsh-unlock.c:86 tsp-svn-helper/tsh-update.c:88
+#: tsp-svn-helper/tsh-add.c:73
+#: tsp-svn-helper/tsh-add.c:89
+#: tsp-svn-helper/tsh-checkout.c:71
+#: tsp-svn-helper/tsh-commit.c:91
+#: tsp-svn-helper/tsh-copy.c:87
+#: tsp-svn-helper/tsh-delete.c:91
+#: tsp-svn-helper/tsh-export.c:72
+#: tsp-svn-helper/tsh-import.c:72
+#: tsp-svn-helper/tsh-lock.c:91
+#: tsp-svn-helper/tsh-move.c:77
+#: tsp-svn-helper/tsh-resolved.c:73
+#: tsp-svn-helper/tsh-resolved.c:89
+#: tsp-svn-helper/tsh-revert.c:87
+#: tsp-svn-helper/tsh-switch.c:71
+#: tsp-svn-helper/tsh-unlock.c:86
+#: tsp-svn-helper/tsh-update.c:88
 msgid "Failed"
 msgstr "Fejlede"
 
@@ -534,15 +578,18 @@ msgstr "Fejlede"
 msgid "Line"
 msgstr "Linje"
 
-#: tsp-svn-helper/tsh-blame-dialog.c:100 tsp-svn-helper/tsh-log-dialog.c:118
+#: tsp-svn-helper/tsh-blame-dialog.c:100
+#: tsp-svn-helper/tsh-log-dialog.c:118
 msgid "Revision"
 msgstr "Revision"
 
-#: tsp-svn-helper/tsh-blame-dialog.c:106 tsp-svn-helper/tsh-log-dialog.c:124
+#: tsp-svn-helper/tsh-blame-dialog.c:106
+#: tsp-svn-helper/tsh-log-dialog.c:124
 msgid "Author"
 msgstr "Forfatter"
 
-#: tsp-svn-helper/tsh-blame-dialog.c:112 tsp-svn-helper/tsh-log-dialog.c:130
+#: tsp-svn-helper/tsh-blame-dialog.c:112
+#: tsp-svn-helper/tsh-log-dialog.c:130
 msgid "Date"
 msgstr "Dato"
 
@@ -562,9 +609,12 @@ msgstr "Oprydning afsluttet"
 msgid "Cleaning up ..."
 msgstr "Rydder op ..."
 
-#: tsp-svn-helper/tsh-commit.c:103 tsp-svn-helper/tsh-common.c:719
-#: tsp-svn-helper/tsh-copy.c:99 tsp-svn-helper/tsh-delete.c:103
-#: tsp-svn-helper/tsh-import.c:82 tsp-svn-helper/tsh-move.c:89
+#: tsp-svn-helper/tsh-commit.c:103
+#: tsp-svn-helper/tsh-common.c:719
+#: tsp-svn-helper/tsh-copy.c:99
+#: tsp-svn-helper/tsh-delete.c:103
+#: tsp-svn-helper/tsh-import.c:82
+#: tsp-svn-helper/tsh-move.c:89
 #, c-format
 msgid "At revision: %ld"
 msgstr "Ved revision: %ld"
@@ -573,9 +623,12 @@ msgstr "Ved revision: %ld"
 msgid "Nothing to do"
 msgstr "Intet at udføre"
 
-#: tsp-svn-helper/tsh-commit.c:114 tsp-svn-helper/tsh-common.c:505
-#: tsp-svn-helper/tsh-common.c:507 tsp-svn-helper/tsh-copy.c:110
-#: tsp-svn-helper/tsh-delete.c:114 tsp-svn-helper/tsh-import.c:87
+#: tsp-svn-helper/tsh-commit.c:114
+#: tsp-svn-helper/tsh-common.c:505
+#: tsp-svn-helper/tsh-common.c:507
+#: tsp-svn-helper/tsh-copy.c:110
+#: tsp-svn-helper/tsh-delete.c:114
+#: tsp-svn-helper/tsh-import.c:87
 #: tsp-svn-helper/tsh-move.c:100
 msgid "Completed"
 msgstr "Fuldført"
@@ -586,21 +639,28 @@ msgstr "Integrérbesked"
 
 #: tsp-svn-helper/tsh-common.c:270
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Gemme adgangskode i klartekst?"
 
-#: tsp-svn-helper/tsh-common.c:494 tsp-svn-helper/tsh-common.c:503
-#: tsp-svn-helper/tsh-common.c:510 tsp-svn-helper/tsh-common.c:632
-#: tsp-svn-helper/tsh-common.c:677 tsp-svn-helper/tsh-common.c:768
+#: tsp-svn-helper/tsh-common.c:494
+#: tsp-svn-helper/tsh-common.c:503
+#: tsp-svn-helper/tsh-common.c:510
+#: tsp-svn-helper/tsh-common.c:632
+#: tsp-svn-helper/tsh-common.c:677
+#: tsp-svn-helper/tsh-common.c:768
 msgid "Added"
 msgstr "Tilføjet"
 
-#: tsp-svn-helper/tsh-common.c:495 tsp-svn-helper/tsh-common.c:777
+#: tsp-svn-helper/tsh-common.c:495
+#: tsp-svn-helper/tsh-common.c:777
 msgid "Copied"
 msgstr "Kopieret"
 
-#: tsp-svn-helper/tsh-common.c:496 tsp-svn-helper/tsh-common.c:502
-#: tsp-svn-helper/tsh-common.c:511 tsp-svn-helper/tsh-common.c:634
-#: tsp-svn-helper/tsh-common.c:680 tsp-svn-helper/tsh-common.c:770
+#: tsp-svn-helper/tsh-common.c:496
+#: tsp-svn-helper/tsh-common.c:502
+#: tsp-svn-helper/tsh-common.c:511
+#: tsp-svn-helper/tsh-common.c:634
+#: tsp-svn-helper/tsh-common.c:680
+#: tsp-svn-helper/tsh-common.c:770
 msgid "Deleted"
 msgstr "Slettet"
 
@@ -624,18 +684,23 @@ msgstr "Udeladt"
 msgid "Updated"
 msgstr "Opdateret"
 
-#: tsp-svn-helper/tsh-common.c:506 tsp-svn-helper/tsh-common.c:508
+#: tsp-svn-helper/tsh-common.c:506
+#: tsp-svn-helper/tsh-common.c:508
 #: tsp-svn-helper/tsh-common.c:641
 msgid "External"
 msgstr "Ekstern"
 
-#: tsp-svn-helper/tsh-common.c:509 tsp-svn-helper/tsh-common.c:636
-#: tsp-svn-helper/tsh-common.c:683 tsp-svn-helper/tsh-common.c:773
+#: tsp-svn-helper/tsh-common.c:509
+#: tsp-svn-helper/tsh-common.c:636
+#: tsp-svn-helper/tsh-common.c:683
+#: tsp-svn-helper/tsh-common.c:773
 msgid "Modified"
 msgstr "Ændret"
 
-#: tsp-svn-helper/tsh-common.c:512 tsp-svn-helper/tsh-common.c:635
-#: tsp-svn-helper/tsh-common.c:686 tsp-svn-helper/tsh-common.c:766
+#: tsp-svn-helper/tsh-common.c:512
+#: tsp-svn-helper/tsh-common.c:635
+#: tsp-svn-helper/tsh-common.c:686
+#: tsp-svn-helper/tsh-common.c:766
 msgid "Replaced"
 msgstr "Erstattet"
 
@@ -647,7 +712,8 @@ msgstr "Overfører"
 msgid "Locked"
 msgstr "Låst"
 
-#: tsp-svn-helper/tsh-common.c:516 tsp-svn-helper/tsh-common.c:779
+#: tsp-svn-helper/tsh-common.c:516
+#: tsp-svn-helper/tsh-common.c:779
 msgid "Unlocked"
 msgstr "Ikke låst"
 
@@ -688,49 +754,40 @@ msgid "Replace"
 msgstr "Erstat"
 
 #: tsp-svn-helper/tsh-common.c:527
-#, fuzzy
 msgid "Property added"
-msgstr "Egenskaber fejlede"
+msgstr "Egenskab tilføjet"
 
 #: tsp-svn-helper/tsh-common.c:528
-#, fuzzy
 msgid "Property modified"
-msgstr "Egenskaber fejlede"
+msgstr "Egenskab ændret"
 
 #: tsp-svn-helper/tsh-common.c:529
-#, fuzzy
 msgid "Property deleted"
-msgstr "Egenskaber fejlede"
+msgstr "Egenskab slettet"
 
 #: tsp-svn-helper/tsh-common.c:530
-#, fuzzy
 msgid "Property nonexisting"
-msgstr "Egenskaber"
+msgstr "Egenskab findes ikke"
 
 #: tsp-svn-helper/tsh-common.c:531
-#, fuzzy
 msgid "Revision property set"
-msgstr "Indstilling af egenskab fejlede"
+msgstr "Indstillet egenskabversion"
 
 #: tsp-svn-helper/tsh-common.c:532
-#, fuzzy
 msgid "Revision property deleted"
-msgstr "Indstilling af egenskab fejlede"
+msgstr "Egenskabversion slettet"
 
 #: tsp-svn-helper/tsh-common.c:533
-#, fuzzy
 msgid "Merge completed"
-msgstr "Fuldført"
+msgstr "Fletning gennemført"
 
 #: tsp-svn-helper/tsh-common.c:534
-#, fuzzy
 msgid "Tree conflict"
-msgstr "I konflikt"
+msgstr "Trækonflikt"
 
 #: tsp-svn-helper/tsh-common.c:535
-#, fuzzy
 msgid "External failed"
-msgstr "Ekstern"
+msgstr "Ekstern fejlede"
 
 #: tsp-svn-helper/tsh-common.c:596
 msgid "Inapplicable"
@@ -740,11 +797,13 @@ msgstr "Upassende"
 msgid "Unchanged"
 msgstr "Uændret"
 
-#: tsp-svn-helper/tsh-common.c:599 tsp-svn-helper/tsh-common.c:633
+#: tsp-svn-helper/tsh-common.c:599
+#: tsp-svn-helper/tsh-common.c:633
 msgid "Missing"
 msgstr "Mangler"
 
-#: tsp-svn-helper/tsh-common.c:600 tsp-svn-helper/tsh-common.c:640
+#: tsp-svn-helper/tsh-common.c:600
+#: tsp-svn-helper/tsh-common.c:640
 msgid "Obstructed"
 msgstr "Spærret"
 
@@ -752,11 +811,13 @@ msgstr "Spærret"
 msgid "Changed"
 msgstr "Ændret"
 
-#: tsp-svn-helper/tsh-common.c:602 tsp-svn-helper/tsh-common.c:637
+#: tsp-svn-helper/tsh-common.c:602
+#: tsp-svn-helper/tsh-common.c:637
 msgid "Merged"
 msgstr "Sammenføjet"
 
-#: tsp-svn-helper/tsh-common.c:603 tsp-svn-helper/tsh-common.c:638
+#: tsp-svn-helper/tsh-common.c:603
+#: tsp-svn-helper/tsh-common.c:638
 msgid "Conflicted"
 msgstr "I konflikt"
 
@@ -798,7 +859,8 @@ msgstr "_Certifikat:"
 msgid "Select a file"
 msgstr "Vælg en fil"
 
-#: tsp-svn-helper/tsh-file-dialog.c:78 tsp-svn-helper/tsh-login-dialog.c:98
+#: tsp-svn-helper/tsh-file-dialog.c:78
+#: tsp-svn-helper/tsh-login-dialog.c:98
 #: tsp-svn-helper/tsh-trust-dialog.c:73
 msgid "Remember"
 msgstr "Husk"
@@ -826,7 +888,8 @@ msgstr "Importbesked"
 msgid "Message"
 msgstr "Besked"
 
-#: tsp-svn-helper/tsh-log-dialog.c:174 tsp-svn-helper/tsh-notify-dialog.c:88
+#: tsp-svn-helper/tsh-log-dialog.c:174
+#: tsp-svn-helper/tsh-notify-dialog.c:88
 msgid "Action"
 msgstr "Handling"
 
@@ -1018,42 +1081,30 @@ msgstr "Stol på"
 
 #~ msgid "%1$s on %2$s"
 #~ msgstr "%1$s på %2$s"
-
 #~ msgid "Select A File"
 #~ msgstr "Vælg en fil"
-
 #~ msgid "Desktop"
 #~ msgstr "Skrivebord"
-
 #~ msgid "(None)"
 #~ msgstr "(Ingen)"
-
 #~ msgid "Dialog"
 #~ msgstr "Dialogboks"
-
 #~ msgid "The file chooser dialog to use."
 #~ msgstr "Filvælgervinduet der skal bruges."
-
 #~ msgid "Focus on click"
 #~ msgstr "Fokus ved klik"
-
 #~ msgid "Whether the entry grabs focus when it is clicked with the mouse"
 #~ msgstr "Om knappen tager fokus, når denne klikkes på med musen"
-
 #~ msgid "Title"
 #~ msgstr "Titel"
-
 #~ msgid "The title of the file chooser dialog."
 #~ msgstr "Titlen på filvælgervinduet."
-
 #~ msgid "Width In Characters"
 #~ msgstr "Bredde i tegn"
-
 #~ msgid "The desired width of the entry widget, in characters."
 #~ msgstr "Den ønskede bredde i tegn på indtastningsfeltet."
-
 #~ msgid "Other..."
 #~ msgstr "Andet..."
-
 #~ msgid "Modify Property Recursive"
 #~ msgstr "Ændr egenskaber rekursivt"
+
