@@ -23,9 +23,9 @@
 
 #include <exo/exo.h>
 
-#include <thunar-svn-plugin/tsp-provider.h>
-#include <thunar-svn-plugin/tsp-svn-action.h>
-#include <thunar-svn-plugin/tsp-svn-property-page.h>
+#include <thunar-vcs-plugin/tvp-provider.h>
+#include <thunar-vcs-plugin/tvp-svn-action.h>
+#include <thunar-vcs-plugin/tvp-svn-property-page.h>
 
 
 
@@ -53,16 +53,16 @@ thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 #endif
 
 #ifdef G_ENABLE_DEBUG
-  g_message ("Initializing thunar-svn-plugin extension");
+  g_message ("Initializing thunar-vcs-plugin extension");
 #endif
 
   /* register the types provided by this plugin */
-  tsp_provider_register_type (plugin);
-  tsp_svn_action_register_type (plugin);
-  tsp_svn_property_page_register_type (plugin);
+  tvp_provider_register_type (plugin);
+  tvp_svn_action_register_type (plugin);
+  tvp_svn_property_page_register_type (plugin);
 
   /* setup the plugin provider type list */
-  type_list[0] = TSP_TYPE_PROVIDER;
+  type_list[0] = TVP_TYPE_PROVIDER;
 }
 
 
@@ -71,7 +71,7 @@ G_MODULE_EXPORT void
 thunar_extension_shutdown (void)
 {
 #ifdef G_ENABLE_DEBUG
-  g_message ("Shutting down thunar-svn-plugin extension");
+  g_message ("Shutting down thunar-vcs-plugin extension");
 #endif
 }
 

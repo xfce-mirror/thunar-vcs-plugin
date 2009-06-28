@@ -27,21 +27,21 @@
 
 #include <subversion-1/svn_types.h>
 
-#include <thunar-svn-plugin/tsp-svn-backend.h>
-#include <thunar-svn-plugin/tsp-svn-property-page.h>
+#include <thunar-vcs-plugin/tvp-svn-backend.h>
+#include <thunar-vcs-plugin/tvp-svn-property-page.h>
 
 #include <string.h>
 
 
 
-struct _TspSvnPropertyPageClass
+struct _TvpSvnPropertyPageClass
 {
 	ThunarxPropertyPageClass __parent__;
 };
 
 
 
-struct _TspSvnPropertyPage
+struct _TvpSvnPropertyPage
 {
 	ThunarxPropertyPage __parent__;
 
@@ -64,26 +64,26 @@ enum {
 
 
 
-static void tsp_svn_property_page_finalize (GObject*);
+static void tvp_svn_property_page_finalize (GObject*);
 
-static void tsp_svn_property_page_set_property (GObject*, guint, const GValue*, GParamSpec*);
+static void tvp_svn_property_page_set_property (GObject*, guint, const GValue*, GParamSpec*);
 
-static void tsp_svn_property_page_get_property (GObject*, guint, GValue*, GParamSpec*);
+static void tvp_svn_property_page_get_property (GObject*, guint, GValue*, GParamSpec*);
 
 
 
-THUNARX_DEFINE_TYPE (TspSvnPropertyPage, tsp_svn_property_page, THUNARX_TYPE_PROPERTY_PAGE)
+THUNARX_DEFINE_TYPE (TvpSvnPropertyPage, tvp_svn_property_page, THUNARX_TYPE_PROPERTY_PAGE)
 
 
 
 static void
-tsp_svn_property_page_class_init (TspSvnPropertyPageClass *klass)
+tvp_svn_property_page_class_init (TvpSvnPropertyPageClass *klass)
 {
 	GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
 
-	gobject_class->finalize = tsp_svn_property_page_finalize;
-	gobject_class->set_property = tsp_svn_property_page_set_property;
-	gobject_class->get_property = tsp_svn_property_page_get_property;
+	gobject_class->finalize = tvp_svn_property_page_finalize;
+	gobject_class->set_property = tvp_svn_property_page_set_property;
+	gobject_class->get_property = tvp_svn_property_page_get_property;
 
 	g_object_class_install_property (gobject_class, PROPERTY_FILE,
 		g_param_spec_object ("file", "file", "file", THUNARX_TYPE_FILE_INFO, G_PARAM_READWRITE));
@@ -92,7 +92,7 @@ tsp_svn_property_page_class_init (TspSvnPropertyPageClass *klass)
 
 
 static void
-tsp_svn_property_page_init (TspSvnPropertyPage *self)
+tvp_svn_property_page_init (TvpSvnPropertyPage *self)
 {
   GtkWidget *table;
   GtkWidget *label;
@@ -235,9 +235,9 @@ tsp_svn_property_page_init (TspSvnPropertyPage *self)
 
 
 GtkAction *
-tsp_svn_property_page_new (ThunarxFileInfo *file)
+tvp_svn_property_page_new (ThunarxFileInfo *file)
 {
-	GtkAction *action = g_object_new (TSP_TYPE_SVN_PROPERTY_PAGE,
+	GtkAction *action = g_object_new (TVP_TYPE_SVN_PROPERTY_PAGE,
                                     "label", "Subversion",
                                     "file", file,
 																		NULL);
@@ -247,22 +247,22 @@ tsp_svn_property_page_new (ThunarxFileInfo *file)
 
 
 static void
-tsp_svn_property_page_finalize (GObject *object)
+tvp_svn_property_page_finalize (GObject *object)
 {
-	tsp_svn_property_page_set_file (TSP_SVN_PROPERTY_PAGE (object), NULL);
+	tvp_svn_property_page_set_file (TVP_SVN_PROPERTY_PAGE (object), NULL);
 
-	G_OBJECT_CLASS (tsp_svn_property_page_parent_class)->finalize (object);
+	G_OBJECT_CLASS (tvp_svn_property_page_parent_class)->finalize (object);
 }
 
 
 
 static void
-tsp_svn_property_page_set_property (GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
+tvp_svn_property_page_set_property (GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
 {
 	switch (property_id)
 	{
 		case PROPERTY_FILE:
-      tsp_svn_property_page_set_file (TSP_SVN_PROPERTY_PAGE (object), g_value_get_object (value));
+      tvp_svn_property_page_set_file (TVP_SVN_PROPERTY_PAGE (object), g_value_get_object (value));
 		break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -273,12 +273,12 @@ tsp_svn_property_page_set_property (GObject *object, guint property_id, const GV
 
 
 static void
-tsp_svn_property_page_get_property (GObject *object, guint property_id, GValue *value, GParamSpec *pspec)
+tvp_svn_property_page_get_property (GObject *object, guint property_id, GValue *value, GParamSpec *pspec)
 {
 	switch (property_id)
 	{
 		case PROPERTY_FILE:
-      g_value_set_object (value, tsp_svn_property_page_get_file (TSP_SVN_PROPERTY_PAGE (object)));
+      g_value_set_object (value, tvp_svn_property_page_get_file (TVP_SVN_PROPERTY_PAGE (object)));
 		break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -336,9 +336,9 @@ depth_to_string(svn_depth_t depth)
 
 
 static void
-tsp_svn_property_page_file_changed (ThunarxFileInfo *file, TspSvnPropertyPage *page)
+tvp_svn_property_page_file_changed (ThunarxFileInfo *file, TvpSvnPropertyPage *page)
 {
-  TspSvnInfo *info = NULL;
+  TvpSvnInfo *info = NULL;
   gchar  *filename;
   gchar  *uri;
 
@@ -351,7 +351,7 @@ tsp_svn_property_page_file_changed (ThunarxFileInfo *file, TspSvnPropertyPage *p
     if (G_LIKELY (filename != NULL))
     {
       /* check if the folder is a working copy */
-      info = tsp_svn_backend_get_info (filename);
+      info = tvp_svn_backend_get_info (filename);
 
       /* release the filename */
       g_free (filename);
@@ -382,21 +382,21 @@ tsp_svn_property_page_file_changed (ThunarxFileInfo *file, TspSvnPropertyPage *p
         gtk_label_set_text (GTK_LABEL (page->depth), depth_to_string(info->depth));
     }
 
-    tsp_svn_info_free (info);
+    tvp_svn_info_free (info);
   }
 }
 
 
 
 void
-tsp_svn_property_page_set_file (TspSvnPropertyPage *page, ThunarxFileInfo *file)
+tvp_svn_property_page_set_file (TvpSvnPropertyPage *page, ThunarxFileInfo *file)
 {
-  g_return_if_fail (TSP_IS_SVN_PROPERTY_PAGE (page));
+  g_return_if_fail (TVP_IS_SVN_PROPERTY_PAGE (page));
   g_return_if_fail (file == NULL || THUNARX_IS_FILE_INFO (file));
 
   if (page->file != NULL)
   {
-    g_signal_handlers_disconnect_by_func (page->file, tsp_svn_property_page_file_changed, page);
+    g_signal_handlers_disconnect_by_func (page->file, tvp_svn_property_page_file_changed, page);
     g_object_unref (G_OBJECT (page->file));
   }
 
@@ -405,8 +405,8 @@ tsp_svn_property_page_set_file (TspSvnPropertyPage *page, ThunarxFileInfo *file)
   if (file != NULL)
   {
     g_object_ref (file);
-    tsp_svn_property_page_file_changed (file, page);
-    g_signal_connect (file, "changed", G_CALLBACK (tsp_svn_property_page_file_changed), page);
+    tvp_svn_property_page_file_changed (file, page);
+    g_signal_connect (file, "changed", G_CALLBACK (tvp_svn_property_page_file_changed), page);
   }
 
   g_object_notify (G_OBJECT (page), "file");
@@ -415,9 +415,9 @@ tsp_svn_property_page_set_file (TspSvnPropertyPage *page, ThunarxFileInfo *file)
 
 
 ThunarxFileInfo*
-tsp_svn_property_page_get_file (TspSvnPropertyPage *page)
+tvp_svn_property_page_get_file (TvpSvnPropertyPage *page)
 {
-  g_return_val_if_fail (TSP_IS_SVN_PROPERTY_PAGE (page), NULL);
+  g_return_val_if_fail (TVP_IS_SVN_PROPERTY_PAGE (page), NULL);
   return page->file;
 }
 

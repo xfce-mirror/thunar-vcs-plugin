@@ -17,28 +17,28 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __TSP_SVN_ACTION_H__
-#define __TSP_SVN_ACTION_H__
+#ifndef __TVP_SVN_ACTION_H__
+#define __TVP_SVN_ACTION_H__
 
 #include <gtk/gtk.h>
 #include <thunarx/thunarx.h>
 
 G_BEGIN_DECLS;
 
-typedef struct _TspSvnActionClass TspSvnActionClass;
-typedef struct _TspSvnAction      TspSvnAction;
+typedef struct _TvpSvnActionClass TvpSvnActionClass;
+typedef struct _TvpSvnAction      TvpSvnAction;
 
-#define TSP_TYPE_SVN_ACTION             (tsp_svn_action_get_type ())
-#define TSP_SVN_ACTION(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), TSP_TYPE_SVN_ACTION, TspSvnAction))
-#define TSP_SVN_ACTION_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), TSP_TYPE_SVN_ACTION, TspSvnActionClass))
-#define TSP_IS_SVN_ACTION(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TSP_TYPE_SVN_ACTION))
-#define TSP_IS_SVN_ACTION_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSP_TYPE_SVN_ACTION))
-#define TSP_SVN_ACTION_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSP_TYPE_SVN_ACTION, TspSvnActionClass))
+#define TVP_TYPE_SVN_ACTION             (tvp_svn_action_get_type ())
+#define TVP_SVN_ACTION(obj)             (G_TYPE_CHECK_INSTANCE_CAST ((obj), TVP_TYPE_SVN_ACTION, TvpSvnAction))
+#define TVP_SVN_ACTION_CLASS(klass)     (G_TYPE_CHECK_CLASS_CAST ((klass), TVP_TYPE_SVN_ACTION, TvpSvnActionClass))
+#define TVP_IS_SVN_ACTION(obj)          (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TVP_TYPE_SVN_ACTION))
+#define TVP_IS_SVN_ACTION_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TVP_TYPE_SVN_ACTION))
+#define TVP_SVN_ACTION_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TVP_TYPE_SVN_ACTION, TvpSvnActionClass))
 
-GType      tsp_svn_action_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
-void       tsp_svn_action_register_type (ThunarxProviderPlugin *) G_GNUC_INTERNAL;
+GType      tvp_svn_action_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
+void       tvp_svn_action_register_type (ThunarxProviderPlugin *) G_GNUC_INTERNAL;
 
-GtkAction *tsp_svn_action_new           (const gchar*,
+GtkAction *tvp_svn_action_new           (const gchar*,
                                          const gchar*,
                                          GList *,
                                          GtkWidget *,
@@ -51,4 +51,4 @@ GtkAction *tsp_svn_action_new           (const gchar*,
 
 G_END_DECLS;
 
-#endif /* !__TSP_SVN_ACTION_H__ */
+#endif /* !__TVP_SVN_ACTION_H__ */

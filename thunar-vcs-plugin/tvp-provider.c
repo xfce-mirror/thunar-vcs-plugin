@@ -33,10 +33,10 @@
 
 #include <subversion-1/svn_types.h>
 
-#include <thunar-svn-plugin/tsp-svn-backend.h>
-#include <thunar-svn-plugin/tsp-svn-action.h>
-#include <thunar-svn-plugin/tsp-svn-property-page.h>
-#include <thunar-svn-plugin/tsp-provider.h>
+#include <thunar-vcs-plugin/tvp-svn-backend.h>
+#include <thunar-vcs-plugin/tvp-svn-action.h>
+#include <thunar-vcs-plugin/tvp-svn-property-page.h>
+#include <thunar-vcs-plugin/tvp-provider.h>
 
 /* use g_access() on win32 */
 #if defined(G_OS_WIN32)
@@ -46,27 +46,27 @@
 #endif
 
 
-#define TSP_SVN_WORKING_COPY "tsp-svn-working-copy"
+#define TVP_SVN_WORKING_COPY "tvp-svn-working-copy"
 
 
 
-static void   tsp_provider_class_init           (TspProviderClass         *klass);
-static void   tsp_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
-static void   tsp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
-static void   tsp_provider_init                 (TspProvider              *tsp_provider);
-static void   tsp_provider_finalize             (GObject                  *object);
-static GList *tsp_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
+static void   tvp_provider_class_init           (TvpProviderClass         *klass);
+static void   tvp_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
+static void   tvp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
+static void   tvp_provider_init                 (TvpProvider              *tvp_provider);
+static void   tvp_provider_finalize             (GObject                  *object);
+static GList *tvp_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
                                                  GList                    *files);
-static GList *tsp_provider_get_folder_actions   (ThunarxMenuProvider      *menu_provider,
+static GList *tvp_provider_get_folder_actions   (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
                                                  ThunarxFileInfo          *folder);
-static GList *tsp_provider_get_pages            (ThunarxPropertyPageProvider *menu_provider,
+static GList *tvp_provider_get_pages            (ThunarxPropertyPageProvider *menu_provider,
                                                  GList                    *files);
-static void   tsp_new_process                   (TspSvnAction             *action,
+static void   tvp_new_process                   (TvpSvnAction             *action,
                                                  const GPid               *pid,
                                                  const gchar              *path,
-                                                 TspProvider              *tsp_provider);
+                                                 TvpProvider              *tvp_provider);
 
 
 
@@ -75,19 +75,19 @@ typedef struct
   GPid pid;
   guint watch_id;
   gchar *path;
-  TspProvider *provider;
-} TspChildWatch;
+  TvpProvider *provider;
+} TvpChildWatch;
 
-struct _TspProviderClass
+struct _TvpProviderClass
 {
   GObjectClass __parent__;
 };
 
-struct _TspProvider
+struct _TvpProvider
 {
   GObject __parent__;
 
-  TspChildWatch *child_watch;
+  TvpChildWatch *child_watch;
 
 #if !GTK_CHECK_VERSION(2,9,0)
   /* GTK+ 2.9.0 and above provide an icon-name property
@@ -99,104 +99,104 @@ struct _TspProvider
 
 
 
-//static GQuark tsp_action_files_quark;
-//static GQuark tsp_action_provider_quark;
+//static GQuark tvp_action_files_quark;
+//static GQuark tvp_action_provider_quark;
 
 
 
-THUNARX_DEFINE_TYPE_WITH_CODE (TspProvider,
-                               tsp_provider,
+THUNARX_DEFINE_TYPE_WITH_CODE (TvpProvider,
+                               tvp_provider,
                                G_TYPE_OBJECT,
                                THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_MENU_PROVIDER,
-                                                            tsp_provider_menu_provider_init)
+                                                            tvp_provider_menu_provider_init)
                                THUNARX_IMPLEMENT_INTERFACE (THUNARX_TYPE_PROPERTY_PAGE_PROVIDER,
-                                                            tsp_provider_property_page_provider_init));
+                                                            tvp_provider_property_page_provider_init));
 
 
 static void
-tsp_provider_class_init (TspProviderClass *klass)
+tvp_provider_class_init (TvpProviderClass *klass)
 {
   GObjectClass *gobject_class;
 
-  /* determine the "tsp-action-files", "tsp-action-folder" and "tsp-action-provider" quarks */
-  //tsp_action_files_quark = g_quark_from_string ("tsp-action-files");
-  //tsp_action_provider_quark = g_quark_from_string ("tsp-action-provider");
+  /* determine the "tvp-action-files", "tvp-action-folder" and "tvp-action-provider" quarks */
+  //tvp_action_files_quark = g_quark_from_string ("tvp-action-files");
+  //tvp_action_provider_quark = g_quark_from_string ("tvp-action-provider");
 
   gobject_class = G_OBJECT_CLASS (klass);
-  gobject_class->finalize = tsp_provider_finalize;
+  gobject_class->finalize = tvp_provider_finalize;
 }
 
 
 
 static void
-tsp_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
+tvp_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
 {
-  iface->get_file_actions = tsp_provider_get_file_actions;
-  iface->get_folder_actions = tsp_provider_get_folder_actions;
+  iface->get_file_actions = tvp_provider_get_file_actions;
+  iface->get_folder_actions = tvp_provider_get_folder_actions;
 }
 
 
 
 static void
-tsp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface)
+tvp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface)
 {
-  iface->get_pages = tsp_provider_get_pages;
+  iface->get_pages = tvp_provider_get_pages;
 }
 
 
 
 static void
-tsp_provider_init (TspProvider *tsp_provider)
+tvp_provider_init (TvpProvider *tvp_provider)
 {
 #if !GTK_CHECK_VERSION(2,9,0)
   GtkIconSource *icon_source;
   GtkIconSet *icon_set;
 
   /* setup our icon factory */
-  tsp_provider->icon_factory = gtk_icon_factory_new ();
-  gtk_icon_factory_add_default (tsp_provider->icon_factory);
+  tvp_provider->icon_factory = gtk_icon_factory_new ();
+  gtk_icon_factory_add_default (tvp_provider->icon_factory);
 
   /* add the "subversion" stock icon */
   icon_set = gtk_icon_set_new ();
   icon_source = gtk_icon_source_new ();
   gtk_icon_source_set_icon_name (icon_source, "subversion");
   gtk_icon_set_add_source (icon_set, icon_source);
-  gtk_icon_factory_add (tsp_provider->icon_factory, "subversion", icon_set);
+  gtk_icon_factory_add (tvp_provider->icon_factory, "subversion", icon_set);
   gtk_icon_source_free (icon_source);
   gtk_icon_set_unref (icon_set);
 #endif /* !GTK_CHECK_VERSION(2,9,0) */
 
-  tsp_svn_backend_init();
+  tvp_svn_backend_init();
 }
 
 
 
 static void
-tsp_provider_finalize (GObject *object)
+tvp_provider_finalize (GObject *object)
 {
-  TspProvider *tsp_provider = TSP_PROVIDER (object);
+  TvpProvider *tvp_provider = TVP_PROVIDER (object);
 
-  if (tsp_provider->child_watch)
+  if (tvp_provider->child_watch)
   {
-    GSource *source = g_main_context_find_source_by_id (NULL, tsp_provider->child_watch->watch_id);
+    GSource *source = g_main_context_find_source_by_id (NULL, tvp_provider->child_watch->watch_id);
     g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
   }
 
 #if !GTK_CHECK_VERSION(2,9,0)
   /* release our icon factory */
-  gtk_icon_factory_remove_default (tsp_provider->icon_factory);
-  g_object_unref (G_OBJECT (tsp_provider->icon_factory));
+  gtk_icon_factory_remove_default (tvp_provider->icon_factory);
+  g_object_unref (G_OBJECT (tvp_provider->icon_factory));
 #endif
 
-  tsp_svn_backend_free();
+  tvp_svn_backend_free();
 
-  (*G_OBJECT_CLASS (tsp_provider_parent_class)->finalize) (object);
+  (*G_OBJECT_CLASS (tvp_provider_parent_class)->finalize) (object);
 }
 
 
 
 static gboolean
-tsp_is_working_copy (ThunarxFileInfo *file_info)
+tvp_is_working_copy (ThunarxFileInfo *file_info)
 {
   gboolean result = FALSE;
   gchar   *filename;
@@ -211,7 +211,7 @@ tsp_is_working_copy (ThunarxFileInfo *file_info)
       if (G_LIKELY (filename != NULL))
         {
           /* check if the folder is a working copy */
-          result = tsp_svn_backend_is_working_copy (filename);
+          result = tvp_svn_backend_is_working_copy (filename);
 
           /* release the filename */
           g_free (filename);
@@ -227,7 +227,7 @@ tsp_is_working_copy (ThunarxFileInfo *file_info)
 
 
 static gboolean
-tsp_is_parent_working_copy (ThunarxFileInfo *file_info)
+tvp_is_parent_working_copy (ThunarxFileInfo *file_info)
 {
   gboolean result = FALSE;
   gchar   *filename;
@@ -242,7 +242,7 @@ tsp_is_parent_working_copy (ThunarxFileInfo *file_info)
       if (G_LIKELY (filename != NULL))
         {
           /* check if the folder is a working copy */
-          result = tsp_svn_backend_is_working_copy (filename);
+          result = tvp_svn_backend_is_working_copy (filename);
 
           /* release the filename */
           g_free (filename);
@@ -258,7 +258,7 @@ tsp_is_parent_working_copy (ThunarxFileInfo *file_info)
 
 
 static GSList *
-tsp_get_parent_status (ThunarxFileInfo *file_info)
+tvp_get_parent_status (ThunarxFileInfo *file_info)
 {
   GSList *result = NULL;
   gchar  *filename;
@@ -273,7 +273,7 @@ tsp_get_parent_status (ThunarxFileInfo *file_info)
       if (G_LIKELY (filename != NULL))
         {
           /* check if the folder is a working copy */
-          result = tsp_svn_backend_get_status (filename);
+          result = tvp_svn_backend_get_status (filename);
 
           /* release the filename */
           g_free (filename);
@@ -289,7 +289,7 @@ tsp_get_parent_status (ThunarxFileInfo *file_info)
 
 
 gint
-tsp_compare_filename (const gchar *uri1, const gchar *uri2)
+tvp_compare_filename (const gchar *uri1, const gchar *uri2)
 {
   /* strip the "file://" part of the uri */
   if (strncmp (uri1, "file://", 7) == 0)
@@ -329,7 +329,7 @@ tsp_compare_filename (const gchar *uri1, const gchar *uri2)
 
 
 static gint
-tsp_compare_path (TspSvnFileStatus *file_status, ThunarxFileInfo *file_info)
+tvp_compare_path (TvpSvnFileStatus *file_status, ThunarxFileInfo *file_info)
 {
   gint   result = 1;
   gchar *filename;
@@ -344,7 +344,7 @@ tsp_compare_path (TspSvnFileStatus *file_status, ThunarxFileInfo *file_info)
       if (G_LIKELY (filename != NULL))
         {
           /* check if the folder is a working copy */
-          result = tsp_compare_filename (file_status->path, filename);
+          result = tvp_compare_filename (file_status->path, filename);
 
           /* release the filename */
           g_free (filename);
@@ -360,7 +360,7 @@ tsp_compare_path (TspSvnFileStatus *file_status, ThunarxFileInfo *file_info)
 
 
 static GList*
-tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
+tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                GtkWidget           *window,
                                GList               *files)
 {
@@ -378,7 +378,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   GSList             *file_status;
   GSList             *iter;
 
-  file_status = tsp_get_parent_status (files->data);
+  file_status = tvp_get_parent_status (files->data);
 
   /* check all supplied files */
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
@@ -393,29 +393,29 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       return NULL;
 
     /* check if the parent folder is a working copy */
-    if (!parent_wc && tsp_is_parent_working_copy (lp->data))
+    if (!parent_wc && tvp_is_parent_working_copy (lp->data))
       parent_wc = TRUE;
 
     if (thunarx_file_info_is_directory (lp->data))
     {
-      if (tsp_is_working_copy (lp->data))
+      if (tvp_is_working_copy (lp->data))
       {
         directory_is_wc = TRUE;
-        //g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(TRUE));
+        //g_object_set_data(lp->data, TVP_SVN_WORKING_COPY, GINT_TO_POINTER(TRUE));
       }
       else
       {
         directory_is_not_wc = TRUE;
-        //g_object_set_data(lp->data, TSP_SVN_WORKING_COPY, GINT_TO_POINTER(FALSE));
+        //g_object_set_data(lp->data, TVP_SVN_WORKING_COPY, GINT_TO_POINTER(FALSE));
       }
     }
     else
     {
       for (iter = file_status; iter; iter = iter->next)
       {
-        if (!tsp_compare_path (iter->data, lp->data))
+        if (!tvp_compare_path (iter->data, lp->data))
         {
-          if (TSP_SVN_FILE_STATUS (iter->data)->flag.version_control)
+          if (TVP_SVN_FILE_STATUS (iter->data)->flag.version_control)
           {
             file_is_vc = TRUE;
           }
@@ -432,8 +432,8 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   }
 
   /* append the svn submenu action */
-  action = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
-  g_signal_connect(action, "new-process", G_CALLBACK(tsp_new_process), menu_provider);
+  action = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
+  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   actions = g_list_append (actions, action);
 
   return actions;
@@ -442,7 +442,7 @@ tsp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 
 
 static GList*
-tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
+tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
                                  GtkWidget           *window,
                                  ThunarxFileInfo     *folder)
 {
@@ -464,8 +464,8 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
   files = g_list_append (NULL, folder);
 
   /* Lets see if we are dealing with a working copy */
-  action = tsp_svn_action_new ("Tsp::svn", _("SVN"), files, window, TRUE, tsp_is_working_copy (folder), FALSE, FALSE, FALSE, FALSE);
-  g_signal_connect(action, "new-process", G_CALLBACK(tsp_new_process), menu_provider);
+  action = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, TRUE, tvp_is_working_copy (folder), FALSE, FALSE, FALSE, FALSE);
+  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   /* append the svn submenu action */
   actions = g_list_append (actions, action);
 
@@ -477,7 +477,7 @@ tsp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 
 
 static GList*
-tsp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
+tvp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
 {
   GList *pages = NULL;
   if (g_list_length (files) == 1)
@@ -498,7 +498,7 @@ tsp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
     if (thunarx_file_info_is_directory (files->data))
     {
       /* Lets see if we are dealing with a working copy */
-      if (tsp_is_working_copy (files->data))
+      if (tvp_is_working_copy (files->data))
       {
         is_vc = TRUE;
       }
@@ -508,13 +508,13 @@ tsp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
       GSList             *file_status;
       GSList             *iter;
 
-      file_status = tsp_get_parent_status (files->data);
+      file_status = tvp_get_parent_status (files->data);
 
       for (iter = file_status; iter; iter = iter->next)
       {
-        if (!tsp_compare_path (iter->data, files->data))
+        if (!tvp_compare_path (iter->data, files->data))
         {
-          if (TSP_SVN_FILE_STATUS (iter->data)->flag.version_control)
+          if (TVP_SVN_FILE_STATUS (iter->data)->flag.version_control)
           {
             is_vc = TRUE;
           }
@@ -524,7 +524,7 @@ tsp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
     }
     if(is_vc)
     {
-      pages = g_list_prepend (pages, tsp_svn_property_page_new (files->data));
+      pages = g_list_prepend (pages, tvp_svn_property_page_new (files->data));
     }
   }
   return pages;
@@ -533,7 +533,7 @@ tsp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
 
 
 static void
-tsp_child_watch (GPid pid, gint status, gpointer data)
+tvp_child_watch (GPid pid, gint status, gpointer data)
 {
   gchar *watch_path = data;
 
@@ -563,7 +563,7 @@ tsp_child_watch (GPid pid, gint status, gpointer data)
 
 
 static void
-tsp_child_watch_free (TspChildWatch *watch)
+tvp_child_watch_free (TvpChildWatch *watch)
 {
   if (watch->provider->child_watch == watch)
     watch->provider->child_watch = NULL;
@@ -574,19 +574,19 @@ tsp_child_watch_free (TspChildWatch *watch)
 
 
 static void
-tsp_new_process (TspSvnAction *action, const GPid *pid, const gchar *path, TspProvider *tsp_provider)
+tvp_new_process (TvpSvnAction *action, const GPid *pid, const gchar *path, TvpProvider *tvp_provider)
 {
-  TspChildWatch *watch;
-  if (tsp_provider->child_watch)
+  TvpChildWatch *watch;
+  if (tvp_provider->child_watch)
   {
-    GSource *source = g_main_context_find_source_by_id (NULL, tsp_provider->child_watch->watch_id);
+    GSource *source = g_main_context_find_source_by_id (NULL, tvp_provider->child_watch->watch_id);
     g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
   }
-  watch = g_new(TspChildWatch, 1);
+  watch = g_new(TvpChildWatch, 1);
   watch->pid = *pid;
   watch->path = g_strdup (path);
-  watch->provider = tsp_provider;
-  watch->watch_id = g_child_watch_add_full (G_PRIORITY_LOW, *pid, tsp_child_watch, watch, (GDestroyNotify)tsp_child_watch_free);
-  tsp_provider->child_watch = watch;
+  watch->provider = tvp_provider;
+  watch->watch_id = g_child_watch_add_full (G_PRIORITY_LOW, *pid, tvp_child_watch, watch, (GDestroyNotify)tvp_child_watch_free);
+  tvp_provider->child_watch = watch;
 }
 

@@ -28,7 +28,7 @@
 #include <subversion-1/svn_pools.h>
 #include <subversion-1/svn_fs.h>
 
-#include <thunar-svn-plugin/tsp-svn-backend.h>
+#include <thunar-vcs-plugin/tvp-svn-backend.h>
 
 
 
@@ -37,7 +37,7 @@ static svn_client_ctx_t *ctx = NULL;
 
 
 gboolean
-tsp_svn_backend_init ()
+tvp_svn_backend_init ()
 {
 	if (pool)
 		return TRUE;
@@ -101,7 +101,7 @@ tsp_svn_backend_init ()
 
 
 void
-tsp_svn_backend_free ()
+tvp_svn_backend_free ()
 {
 	if (pool)
     svn_pool_destroy (pool);
@@ -110,7 +110,7 @@ tsp_svn_backend_free ()
 
 
 gboolean
-tsp_svn_backend_is_working_copy (const gchar *uri)
+tvp_svn_backend_is_working_copy (const gchar *uri)
 {
   apr_pool_t *subpool;
 	svn_error_t *err;
@@ -155,7 +155,7 @@ static void
 status_callback2 (void *baton, const char *path, svn_wc_status2_t *status)
 {
 	GSList **list = baton;
-	TspSvnFileStatus *entry = g_new (TspSvnFileStatus, 1);
+	TvpSvnFileStatus *entry = g_new (TvpSvnFileStatus, 1);
 	
 	entry->path = g_strdup (path);
 	switch (status->text_status)
@@ -190,7 +190,7 @@ status_callback3 (void *baton, const char *path, svn_wc_status2_t *status, apr_p
 
 
 GSList *
-tsp_svn_backend_get_status (const gchar *uri)
+tvp_svn_backend_get_status (const gchar *uri)
 {
   apr_pool_t *subpool;
 	svn_error_t *err;
@@ -244,10 +244,10 @@ tsp_svn_backend_get_status (const gchar *uri)
 static svn_error_t *
 info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t *pool)
 {
-  TspSvnInfo **pinfo = baton;
+  TvpSvnInfo **pinfo = baton;
   g_return_val_if_fail (*pinfo == NULL, SVN_NO_ERROR);
 
-  *pinfo = g_new0 (TspSvnInfo, 1);
+  *pinfo = g_new0 (TvpSvnInfo, 1);
   (*pinfo)->path = g_strdup (path);
   (*pinfo)->url = g_strdup (info->URL);
   (*pinfo)->revision = info->rev;
@@ -266,13 +266,13 @@ info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t
 
 
 
-TspSvnInfo *
-tsp_svn_backend_get_info (const gchar *uri)
+TvpSvnInfo *
+tvp_svn_backend_get_info (const gchar *uri)
 {
   apr_pool_t *subpool;
 	svn_error_t *err;
 	svn_opt_revision_t revision = {svn_opt_revision_unspecified};
-  TspSvnInfo *info = NULL;
+  TvpSvnInfo *info = NULL;
 
 	/* strip the "file://" part of the uri */
 	if (strncmp (uri, "file://", 7) == 0)
@@ -299,7 +299,7 @@ tsp_svn_backend_get_info (const gchar *uri)
 
 	if (err)
 	{
-    tsp_svn_info_free (info);
+    tvp_svn_info_free (info);
     svn_error_clear (err);
 		return NULL;
 	}
@@ -310,7 +310,7 @@ tsp_svn_backend_get_info (const gchar *uri)
 
 
 void
-tsp_svn_info_free (TspSvnInfo *info)
+tvp_svn_info_free (TvpSvnInfo *info)
 {
   if (!info)
     return;

@@ -2,7 +2,7 @@
 INCLUDES =								\
 	-I$(top_builddir)						\
 	-I$(top_srcdir)							\
-	-DG_LOG_DOMAIN=\"thunar-svn-plugin\"				\
+	-DG_LOG_DOMAIN=\"thunar-vcs-plugin\"				\
 	-DEXO_API_SUBJECT_TO_CHANGE					\
 	-DLIBEXECDIR=\"$(libexecdir)\"					\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
@@ -10,27 +10,27 @@ INCLUDES =								\
 
 extensionsdir = $(libdir)/thunarx-1
 extensions_LTLIBRARIES =						\
-	thunar-svn-plugin.la
+	thunar-vcs-plugin.la
 
-thunar_svn_plugin_la_SOURCES =						\
-	tsp-svn-backend.c						\
-	tsp-svn-backend.h						\
-	tsp-svn-action.c						\
-	tsp-svn-action.h						\
-	tsp-svn-property-page.c						\
-	tsp-svn-property-page.h						\
-	tsp-provider.c							\
-	tsp-provider.h							\
-	thunar-svn-plugin.c
+thunar_vcs_plugin_la_SOURCES =						\
+	tvp-svn-backend.c						\
+	tvp-svn-backend.h						\
+	tvp-svn-action.c						\
+	tvp-svn-action.h						\
+	tvp-svn-property-page.c						\
+	tvp-svn-property-page.h						\
+	tvp-provider.c							\
+	tvp-provider.h							\
+	thunar-vcs-plugin.c
 
-thunar_svn_plugin_la_CFLAGS =						\
+thunar_vcs_plugin_la_CFLAGS =						\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
 	$(THUNAR_VFS_CFLAGS)						\
 	$(APR_CFLAGS)							\
-	-DTSP_SVN_HELPER=\"$(libexecdir)/tsp-svn-helper\"
+	-DTVP_SVN_HELPER=\"$(libexecdir)/tvp-svn-helper\"
 
-thunar_svn_plugin_la_LDFLAGS =						\
+thunar_vcs_plugin_la_LDFLAGS =						\
 	-avoid-version							\
 	-export-dynamic							\
 	-module								\

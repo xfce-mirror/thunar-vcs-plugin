@@ -25,7 +25,7 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
-#include <thunar-svn-plugin/tsp-svn-action.h>
+#include <thunar-vcs-plugin/tvp-svn-action.h>
 
 #include <string.h>
 
@@ -42,14 +42,14 @@ static void tsh_cclosure_marshal_VOID__POINTER_STRING (GClosure     *closure,
 
 
 
-struct _TspSvnActionClass
+struct _TvpSvnActionClass
 {
   GtkActionClass __parent__;
 };
 
 
 
-struct _TspSvnAction
+struct _TvpSvnAction
 {
   GtkAction __parent__;
 
@@ -90,38 +90,38 @@ static guint action_signal[SIGNAL_COUNT];
 
 
 
-static GtkWidget *tsp_svn_action_create_menu_item (GtkAction *action);
+static GtkWidget *tvp_svn_action_create_menu_item (GtkAction *action);
 
 
 
-static void tsp_svn_action_finalize (GObject*);
+static void tvp_svn_action_finalize (GObject*);
 
-static void tsp_svn_action_set_property (GObject*, guint, const GValue*, GParamSpec*);
-
-
-static GQuark tsp_action_arg_quark = 0;
+static void tvp_svn_action_set_property (GObject*, guint, const GValue*, GParamSpec*);
 
 
-static void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action);
-
-static void tsp_action_unimplemented (GtkAction *, const gchar *);
+static GQuark tvp_action_arg_quark = 0;
 
 
+static void tvp_action_exec (GtkAction *item, TvpSvnAction *tvp_action);
 
-THUNARX_DEFINE_TYPE (TspSvnAction, tsp_svn_action, GTK_TYPE_ACTION)
+static void tvp_action_unimplemented (GtkAction *, const gchar *);
+
+
+
+THUNARX_DEFINE_TYPE (TvpSvnAction, tvp_svn_action, GTK_TYPE_ACTION)
 
 
 
 static void
-tsp_svn_action_class_init (TspSvnActionClass *klass)
+tvp_svn_action_class_init (TvpSvnActionClass *klass)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
   GtkActionClass *gtkaction_class = GTK_ACTION_CLASS (klass);
 
-  gobject_class->finalize = tsp_svn_action_finalize;
-  gobject_class->set_property = tsp_svn_action_set_property;
+  gobject_class->finalize = tvp_svn_action_finalize;
+  gobject_class->set_property = tvp_svn_action_set_property;
 
-  gtkaction_class->create_menu_item = tsp_svn_action_create_menu_item;
+  gtkaction_class->create_menu_item = tvp_svn_action_create_menu_item;
 
   g_object_class_install_property (gobject_class, PROPERTY_IS_PARENT,
     g_param_spec_boolean ("is-parent", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
@@ -144,13 +144,13 @@ tsp_svn_action_class_init (TspSvnActionClass *klass)
   action_signal[SIGNAL_NEW_PROCESS] = g_signal_new("new-process", G_OBJECT_CLASS_TYPE(gobject_class), G_SIGNAL_RUN_FIRST,
     0, NULL, NULL, tsh_cclosure_marshal_VOID__POINTER_STRING, G_TYPE_NONE, 2, G_TYPE_POINTER, G_TYPE_STRING);
 
-  tsp_action_arg_quark = g_quark_from_static_string ("tsp-action-arg");
+  tvp_action_arg_quark = g_quark_from_static_string ("tvp-action-arg");
 }
 
 
 
 static void
-tsp_svn_action_init (TspSvnAction *self)
+tvp_svn_action_init (TvpSvnAction *self)
 {
   self->property.is_parent = 0;
   self->property.parent_version_control = 0;
@@ -165,7 +165,7 @@ tsp_svn_action_init (TspSvnAction *self)
 
 
 GtkAction *
-tsp_svn_action_new (const gchar *name,
+tvp_svn_action_new (const gchar *name,
                     const gchar *label,
                     GList *files,
                     GtkWidget *window,
@@ -179,7 +179,7 @@ tsp_svn_action_new (const gchar *name,
   g_return_val_if_fail(name, NULL);
   g_return_val_if_fail(label, NULL);
 
-  GtkAction *action = g_object_new (TSP_TYPE_SVN_ACTION,
+  GtkAction *action = g_object_new (TVP_TYPE_SVN_ACTION,
             "hide-if-empty", FALSE,
             "name", name,
             "label", label,
@@ -195,49 +195,49 @@ tsp_svn_action_new (const gchar *name,
             "icon-name", "subversion",
 #endif
             NULL);
-  TSP_SVN_ACTION (action)->files = thunarx_file_info_list_copy (files);
-//  TSP_SVN_ACTION (action)->window = gtk_widget_ref (window);
-  TSP_SVN_ACTION (action)->window = window;
+  TVP_SVN_ACTION (action)->files = thunarx_file_info_list_copy (files);
+//  TVP_SVN_ACTION (action)->window = gtk_widget_ref (window);
+  TVP_SVN_ACTION (action)->window = window;
   return action;
 }
 
 
 
 static void
-tsp_svn_action_finalize (GObject *object)
+tvp_svn_action_finalize (GObject *object)
 {
-  thunarx_file_info_list_free (TSP_SVN_ACTION (object)->files);
-  TSP_SVN_ACTION (object)->files = NULL;
-//  gtk_widget_unref (TSP_SVN_ACTION (object)->window);
-  TSP_SVN_ACTION (object)->window = NULL;
+  thunarx_file_info_list_free (TVP_SVN_ACTION (object)->files);
+  TVP_SVN_ACTION (object)->files = NULL;
+//  gtk_widget_unref (TVP_SVN_ACTION (object)->window);
+  TVP_SVN_ACTION (object)->window = NULL;
 
-  G_OBJECT_CLASS (tsp_svn_action_parent_class)->finalize (object);
+  G_OBJECT_CLASS (tvp_svn_action_parent_class)->finalize (object);
 }
 
 
 
 static void
-tsp_svn_action_set_property (GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
+tvp_svn_action_set_property (GObject *object, guint property_id, const GValue *value, GParamSpec *pspec)
 {
   switch (property_id)
   {
     case PROPERTY_IS_PARENT:
-      TSP_SVN_ACTION (object)->property.is_parent = g_value_get_boolean (value)?1:0;
+      TVP_SVN_ACTION (object)->property.is_parent = g_value_get_boolean (value)?1:0;
     break;
     case PROPERTY_PARENT_VERSION_CONTROL:
-      TSP_SVN_ACTION (object)->property.parent_version_control = g_value_get_boolean (value)?1:0;
+      TVP_SVN_ACTION (object)->property.parent_version_control = g_value_get_boolean (value)?1:0;
     break;
     case PROPERTY_DIRECTORY_VERSION_CONTROL:
-      TSP_SVN_ACTION (object)->property.directory_version_control = g_value_get_boolean (value)?1:0;
+      TVP_SVN_ACTION (object)->property.directory_version_control = g_value_get_boolean (value)?1:0;
     break;
     case PROPERTY_DIRECTORY_NO_VERSION_CONTROL:
-      TSP_SVN_ACTION (object)->property.directory_no_version_control = g_value_get_boolean (value)?1:0;
+      TVP_SVN_ACTION (object)->property.directory_no_version_control = g_value_get_boolean (value)?1:0;
     break;
     case PROPERTY_FILE_VERSION_CONTROL:
-      TSP_SVN_ACTION (object)->property.file_version_control = g_value_get_boolean (value)?1:0;
+      TVP_SVN_ACTION (object)->property.file_version_control = g_value_get_boolean (value)?1:0;
     break;
     case PROPERTY_FILE_NO_VERSION_CONTROL:
-      TSP_SVN_ACTION (object)->property.file_no_version_control = g_value_get_boolean (value)?1:0;
+      TVP_SVN_ACTION (object)->property.file_no_version_control = g_value_get_boolean (value)?1:0;
     break;
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -253,8 +253,8 @@ add_subaction (GtkAction *action, GtkMenuShell *menu, const gchar *name, const g
     GtkWidget *subitem;
 
     subaction = gtk_action_new (name, text, tooltip, stock);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, arg);
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
+    g_object_set_qdata (G_OBJECT (subaction), tvp_action_arg_quark, arg);
+    g_signal_connect_after (subaction, "activate", G_CALLBACK (tvp_action_exec), action);
 
     subitem = gtk_action_create_menu_item (subaction);
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
@@ -271,7 +271,7 @@ add_subaction_u (GtkMenuShell *menu, const gchar *name, const gchar *text, const
     GtkWidget *subitem;
 
     subaction = gtk_action_new (name, text, tooltip, stock);
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_unimplemented), arg);
+    g_signal_connect_after (subaction, "activate", G_CALLBACK (tvp_action_unimplemented), arg);
 
     subitem = gtk_action_create_menu_item (subaction);
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
@@ -282,112 +282,112 @@ add_subaction_u (GtkMenuShell *menu, const gchar *name, const gchar *text, const
 
 
 static GtkWidget *
-tsp_svn_action_create_menu_item (GtkAction *action)
+tvp_svn_action_create_menu_item (GtkAction *action)
 {
   GtkWidget *item;
   GtkWidget *menu;
-  TspSvnAction *tsp_action = TSP_SVN_ACTION (action);
+  TvpSvnAction *tvp_action = TVP_SVN_ACTION (action);
 
-  item = GTK_ACTION_CLASS(tsp_svn_action_parent_class)->create_menu_item (action);
+  item = GTK_ACTION_CLASS(tvp_svn_action_parent_class)->create_menu_item (action);
 
   menu = gtk_menu_new ();
   gtk_menu_item_set_submenu (GTK_MENU_ITEM (item), menu);
   /* No version control */
-  if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_no_version_control || tsp_action->property.file_no_version_control)) 
+  if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_no_version_control || tvp_action->property.file_no_version_control)) 
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD, "--add");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD, "--add");
   }
   /* Version control (file) */
-  if (tsp_action->property.file_version_control)
+  if (tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::blame", Q_("Menu|Blame"), _("Blame"), GTK_STOCK_INDEX, "--blame");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::blame", Q_("Menu|Blame"), _("Blame"), GTK_STOCK_INDEX, "--blame");
   }
 /* No need
   subitem = gtk_menu_item_new_with_label (_("Cat"));
-    g_signal_connect_after (subitem, "activate", G_CALLBACK (tsp_action_unimplemented), "Cat");
+    g_signal_connect_after (subitem, "activate", G_CALLBACK (tvp_action_unimplemented), "Cat");
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
     gtk_widget_set_tooltip_text(subitem, tooltip);
   gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
   gtk_widget_show(subitem);
 *//* Version control (file) */
-  if (tsp_action->property.file_version_control)
+  if (tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::changelist", Q_("Menu|Changelist"), _("Changelist"), GTK_STOCK_INDEX, "--changelist");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::changelist", Q_("Menu|Changelist"), _("Changelist"), GTK_STOCK_INDEX, "--changelist");
   }
   /* No version control (parent) */
-  if (tsp_action->property.is_parent && !tsp_action->property.parent_version_control)
+  if (tvp_action->property.is_parent && !tvp_action->property.parent_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT, "--checkout");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT, "--checkout");
   }
   /* Version control (parent) */
-  if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
+  if (tvp_action->property.is_parent && tvp_action->property.parent_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::cleanup", Q_("Menu|Cleanup"), _("Cleanup"), GTK_STOCK_CLEAR, "--cleanup");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::cleanup", Q_("Menu|Cleanup"), _("Cleanup"), GTK_STOCK_CLEAR, "--cleanup");
   }
   /* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::commit", Q_("Menu|Commit"), _("Commit"), GTK_STOCK_APPLY, "--commit");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::commit", Q_("Menu|Commit"), _("Commit"), GTK_STOCK_APPLY, "--commit");
   }
   /* Version control (no parent) */
-  if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_version_control || tsp_action->property.file_version_control))
+  if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_version_control || tvp_action->property.file_version_control))
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::copy", Q_("Menu|Copy"), _("Copy"), GTK_STOCK_COPY, "--copy");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::copy", Q_("Menu|Copy"), _("Copy"), GTK_STOCK_COPY, "--copy");
   }
   /* Version control (no parent) */
-  if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_version_control || tsp_action->property.file_version_control))
+  if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_version_control || tvp_action->property.file_version_control))
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::delete", Q_("Menu|Delete"), _("Delete"), GTK_STOCK_DELETE, "--delete");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::delete", Q_("Menu|Delete"), _("Delete"), GTK_STOCK_DELETE, "--delete");
   }
   /* Version control (file) */
-  if (tsp_action->property.file_version_control) 
+  if (tvp_action->property.file_version_control) 
   {
-    add_subaction_u (GTK_MENU_SHELL (menu), "tsp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_FIND_AND_REPLACE, _("Diff"));
+    add_subaction_u (GTK_MENU_SHELL (menu), "tvp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_FIND_AND_REPLACE, _("Diff"));
   }
   /* Version control and No version control (parent) */
-  if (tsp_action->property.is_parent || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if (tvp_action->property.is_parent || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::export", Q_("Menu|Export"), _("Export"), GTK_STOCK_SAVE, "--export");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::export", Q_("Menu|Export"), _("Export"), GTK_STOCK_SAVE, "--export");
   }
   /* No version control (all) */
-  if (!tsp_action->property.parent_version_control && (tsp_action->property.is_parent || tsp_action->property.directory_no_version_control || tsp_action->property.file_no_version_control))
+  if (!tvp_action->property.parent_version_control && (tvp_action->property.is_parent || tvp_action->property.directory_no_version_control || tvp_action->property.file_no_version_control))
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::import", Q_("Menu|Import"), _("Import"), GTK_STOCK_NETWORK, "--import");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::import", Q_("Menu|Import"), _("Import"), GTK_STOCK_NETWORK, "--import");
   }
   /* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction_u (GTK_MENU_SHELL (menu), "tsp::info", Q_("Menu|Info"), _("Info"), GTK_STOCK_INFO, _("Info"));
+    add_subaction_u (GTK_MENU_SHELL (menu), "tvp::info", Q_("Menu|Info"), _("Info"), GTK_STOCK_INFO, _("Info"));
   }
 /* Ehmm...
   subitem = gtk_menu_item_new_with_label (_("List"));
-    g_signal_connect_after (subitem, "activate", G_CALLBACK (tsp_action_unimplemented), "List");
+    g_signal_connect_after (subitem, "activate", G_CALLBACK (tvp_action_unimplemented), "List");
   gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
   gtk_widget_show(subitem);
 *//* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::lock", Q_("Menu|Lock"), _("Lock"), GTK_STOCK_DIALOG_AUTHENTICATION, "--lock");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::lock", Q_("Menu|Lock"), _("Lock"), GTK_STOCK_DIALOG_AUTHENTICATION, "--lock");
   }
   /* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::log", Q_("Menu|Log"), _("Log"), GTK_STOCK_INDEX, "--log");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::log", Q_("Menu|Log"), _("Log"), GTK_STOCK_INDEX, "--log");
   }
 /* Ehmm ...
   subitem = gtk_menu_item_new_with_label (_("Merge"));
-    g_signal_connect_after (subitem, "activate", G_CALLBACK (tsp_action_unimplemented), "Merge");
+    g_signal_connect_after (subitem, "activate", G_CALLBACK (tvp_action_unimplemented), "Merge");
   gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
   gtk_widget_show(subitem);
 *//* No need
   subitem = gtk_menu_item_new_with_label (_("Make Dir"));
-    g_signal_connect_after (subitem, "activate", G_CALLBACK (tsp_action_unimplemented), "Make Dir");
+    g_signal_connect_after (subitem, "activate", G_CALLBACK (tvp_action_unimplemented), "Make Dir");
   gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
   gtk_widget_show(subitem);
 *//* Version control (no parent) */
-  if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_version_control || tsp_action->property.file_version_control))
+  if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_version_control || tvp_action->property.file_version_control))
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::move", Q_("Menu|Move"), _("Move"), GTK_STOCK_DND_MULTIPLE, "--move");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::move", Q_("Menu|Move"), _("Move"), GTK_STOCK_DND_MULTIPLE, "--move");
   }
 /* Merged
   subitem = gtk_menu_item_new_with_label (_("Delete Properties"));
@@ -396,50 +396,50 @@ tsp_svn_action_create_menu_item (GtkAction *action)
   subitem = gtk_menu_item_new_with_label (_("List Properties"));
   subitem = gtk_menu_item_new_with_label (_("Set Properties"));
 *//* Version control */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::properties", Q_("Menu|Edit Properties"), _("Edit Properties"), GTK_STOCK_EDIT, "--properties");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::properties", Q_("Menu|Edit Properties"), _("Edit Properties"), GTK_STOCK_EDIT, "--properties");
   }
   /* Version control (parent) */
-  if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
+  if (tvp_action->property.is_parent && tvp_action->property.parent_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::relocate", Q_("Menu|Relocate"), _("Relocate"), GTK_STOCK_FIND_AND_REPLACE, "--relocate");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::relocate", Q_("Menu|Relocate"), _("Relocate"), GTK_STOCK_FIND_AND_REPLACE, "--relocate");
   }
 /* Changed
   subitem = gtk_menu_item_new_with_label (_("Mark Resolved"));
-*/if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+*/if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::resolved", Q_("Menu|Resolved"), _("Resolved"), GTK_STOCK_YES, "--resolved");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::resolved", Q_("Menu|Resolved"), _("Resolved"), GTK_STOCK_YES, "--resolved");
   }/*
 *//* Version control (file) */
-  if (tsp_action->property.file_version_control)
+  if (tvp_action->property.file_version_control)
   {
-    add_subaction_u (GTK_MENU_SHELL (menu), "tsp::resolve", Q_("Menu|Resolve"), _("Resolve"), GTK_STOCK_YES, _("Resolve"));
+    add_subaction_u (GTK_MENU_SHELL (menu), "tvp::resolve", Q_("Menu|Resolve"), _("Resolve"), GTK_STOCK_YES, _("Resolve"));
   }
   /* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::revert", Q_("Menu|Revert"), _("Revert"), GTK_STOCK_UNDO, "--revert");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::revert", Q_("Menu|Revert"), _("Revert"), GTK_STOCK_UNDO, "--revert");
   }
   /* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::status", Q_("Menu|Status"), _("Status"), GTK_STOCK_DIALOG_INFO, "--status");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::status", Q_("Menu|Status"), _("Status"), GTK_STOCK_DIALOG_INFO, "--status");
   }
   /* Version control (parent) */
-  if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
+  if (tvp_action->property.is_parent && tvp_action->property.parent_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::switch", Q_("Menu|Switch"), _("Switch"), GTK_STOCK_JUMP_TO, "--switch");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::switch", Q_("Menu|Switch"), _("Switch"), GTK_STOCK_JUMP_TO, "--switch");
   }
   /* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::unlock", Q_("Menu|Unlock"), _("Unlock"), NULL, "--unlock");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::unlock", Q_("Menu|Unlock"), _("Unlock"), NULL, "--unlock");
   }
   /* Version control (all) */
-  if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::update", Q_("Menu|Update"), _("Update"), GTK_STOCK_REFRESH, "--update");
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::update", Q_("Menu|Update"), _("Update"), GTK_STOCK_REFRESH, "--update");
   }
 
   return item;
@@ -447,16 +447,16 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 
 
 
-static void tsp_action_unimplemented (GtkAction *item, const gchar *tsp_action)
+static void tvp_action_unimplemented (GtkAction *item, const gchar *tvp_action)
 {
-  GtkWidget *dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, _("Action %s is unimplemented"), tsp_action);
+  GtkWidget *dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, _("Action %s is unimplemented"), tvp_action);
   gtk_dialog_run (GTK_DIALOG (dialog));
   gtk_widget_destroy(dialog);
 }
 
 
 
-static void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
+static void tvp_action_exec (GtkAction *item, TvpSvnAction *tvp_action)
 {
   guint size, i;
   gchar **argv;
@@ -467,21 +467,21 @@ static void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
   gchar *watch_path = NULL;
   gint pid;
   GError *error = NULL;
-  GdkScreen *screen = gtk_window_get_screen (GTK_WINDOW (tsp_action->window));
+  GdkScreen *screen = gtk_window_get_screen (GTK_WINDOW (tvp_action->window));
 
-  iter = tsp_action->files;
+  iter = tvp_action->files;
 
   size = g_list_length (iter);
 
   argv = g_new (gchar *, size + 3);
 
-  argv[0] = g_strdup (TSP_SVN_HELPER);
-  argv[1] = g_strdup (g_object_get_qdata (G_OBJECT (item), tsp_action_arg_quark));
+  argv[0] = g_strdup (TVP_SVN_HELPER);
+  argv[1] = g_strdup (g_object_get_qdata (G_OBJECT (item), tvp_action_arg_quark));
   argv[size + 2] = NULL;
 
   if(iter)
   {
-    if(tsp_action->property.is_parent)
+    if(tvp_action->property.is_parent)
     {
       uri = thunarx_file_info_get_uri (iter->data);
       watch_path = g_filename_from_uri (uri, NULL, NULL);
@@ -535,7 +535,7 @@ static void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
   pid = 0;
   if (!gdk_spawn_on_screen (screen, NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, &error))
   {
-    GtkWidget *dialog = gtk_message_dialog_new (GTK_WINDOW (tsp_action->window), GTK_DIALOG_DESTROY_WITH_PARENT|GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, "Could not spawn \'" TSP_SVN_HELPER "\'");
+    GtkWidget *dialog = gtk_message_dialog_new (GTK_WINDOW (tvp_action->window), GTK_DIALOG_DESTROY_WITH_PARENT|GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, "Could not spawn \'" TVP_SVN_HELPER "\'");
     gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
     gtk_dialog_run (GTK_DIALOG (dialog));
     gtk_widget_destroy (dialog);
@@ -543,7 +543,7 @@ static void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
   }
   else
   {
-    g_signal_emit(tsp_action, action_signal[SIGNAL_NEW_PROCESS], 0, &pid, watch_path);
+    g_signal_emit(tvp_action, action_signal[SIGNAL_NEW_PROCESS], 0, &pid, watch_path);
   }
   g_free (watch_path);
   g_strfreev (argv);

@@ -17,8 +17,8 @@
  * Boston, MA 02111-1307, USA.
  */
 
-#ifndef __TSP_SVN_BACKEND_H__
-#define __TSP_SVN_BACKEND_H__
+#ifndef __TVP_SVN_BACKEND_H__
+#define __TVP_SVN_BACKEND_H__
 
 G_BEGIN_DECLS;
 
@@ -28,9 +28,9 @@ typedef struct
 	struct {
 		unsigned version_control : 1;
 	} flag;
-} TspSvnFileStatus;
+} TvpSvnFileStatus;
 
-#define TSP_SVN_FILE_STATUS(p) ((TspSvnFileStatus*)p)
+#define TVP_SVN_FILE_STATUS(p) ((TvpSvnFileStatus*)p)
 
 typedef struct
 {
@@ -44,23 +44,23 @@ typedef struct
   gboolean has_wc_info;
   gchar *changelist;
   svn_depth_t depth;
-} TspSvnInfo;
+} TvpSvnInfo;
 
-#define TSP_SVN_INFO(p) ((TspSvnInfo*)p)
+#define TVP_SVN_INFO(p) ((TvpSvnInfo*)p)
 
-gboolean tsp_svn_backend_init();
-void     tsp_svn_backend_free();
+gboolean tvp_svn_backend_init();
+void     tvp_svn_backend_free();
 
-gboolean tsp_svn_backend_is_working_copy (const gchar *uri);
+gboolean tvp_svn_backend_is_working_copy (const gchar *uri);
 
-GSList  *tsp_svn_backend_get_status (const gchar *uri);
+GSList  *tvp_svn_backend_get_status (const gchar *uri);
 
-TspSvnInfo *tsp_svn_backend_get_info (const gchar *uri);
+TvpSvnInfo *tvp_svn_backend_get_info (const gchar *uri);
 
-void     tsp_svn_info_free (TspSvnInfo *info);
+void     tvp_svn_info_free (TvpSvnInfo *info);
 
 #define CHECK_SVN_VERSION(major, minor) ((major == SVN_VER_MAJOR) && (minor == SVN_VER_MINOR))
 
 G_END_DECLS;
 
-#endif /* !__TSP_SVN_BACKEND_H__ */
+#endif /* !__TVP_SVN_BACKEND_H__ */

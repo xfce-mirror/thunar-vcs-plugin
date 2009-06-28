@@ -10,9 +10,9 @@ AM_CPPFLAGS =								\
 	$(PLATFORM_CPPFLAGS)
 
 libexec_PROGRAMS =							\
-	tsp-svn-helper
+	tvp-svn-helper
 
-tsp_svn_helper_SOURCES =						\
+tvp_svn_helper_SOURCES =						\
 	main.c								\
 	tsh-common.h							\
 	tsh-common.c							\
@@ -85,10 +85,10 @@ tsp_svn_helper_SOURCES =						\
 	tsh-trust-dialog.h						\
 	tsh-trust-dialog.c
 
-tsp_svn_helper_CPPFLAGS =						\
-	-DG_LOG_DOMAIN=\"tsp-svn-helper\"
+tvp_svn_helper_CPPFLAGS =						\
+	-DG_LOG_DOMAIN=\"tvp-svn-helper\"
 
-tsp_svn_helper_CFLAGS =							\
+tvp_svn_helper_CFLAGS =							\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNAR_VFS_CFLAGS)						\
 	$(GTK_CFLAGS)							\
@@ -96,7 +96,7 @@ tsp_svn_helper_CFLAGS =							\
 	$(GOBJECT_CFLAGS)						\
 	$(APR_CFLAGS)
 
-tsp_svn_helper_LDFLAGS =						\
+tvp_svn_helper_LDFLAGS =						\
 	$(PLATFORM_LIBS)						\
 	$(THUNAR_VFS_LIBS)						\
 	$(GTK_LIBS)							\
