@@ -175,5 +175,6 @@ icons/48x48/Makefile
 po/Makefile.in
 thunar-vcs-plugin/Makefile
 tvp-svn-helper/Makefile
+tvp-git-helper/Makefile
 ])
 

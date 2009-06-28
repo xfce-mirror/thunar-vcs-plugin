@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-28 14:10+0200\n"
+"POT-Creation-Date: 2009-06-28 14:42+0200\n"
 "PO-Revision-Date: 2009-04-14 22:02+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
@@ -22,9 +22,14 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-vcs-plugin/tvp-provider.c:435 thunar-vcs-plugin/tvp-provider.c:467
+#: thunar-vcs-plugin/tvp-provider.c:436 thunar-vcs-plugin/tvp-provider.c:473
 msgid "SVN"
 msgstr "SVN"
+
+#. append the git submenu action
+#: thunar-vcs-plugin/tvp-provider.c:441 thunar-vcs-plugin/tvp-provider.c:478
+msgid "GIT"
+msgstr ""
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298
 msgid "Menu|Add"
@@ -32,6 +37,7 @@ msgstr "Engadir"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298 tvp-svn-helper/main.c:246
 #: tvp-svn-helper/tsh-add.c:113 tvp-svn-helper/tsh-add.c:126
+#: tvp-git-helper/main.c:98 tvp-git-helper/tgh-add.c:105
 msgid "Add"
 msgstr "Engadir"
 
@@ -222,7 +228,9 @@ msgstr "Estado"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:427 tvp-svn-helper/main.c:314
 #: tvp-svn-helper/tsh-file-selection-dialog.c:125
-#: tvp-svn-helper/tsh-status-dialog.c:247
+#: tvp-svn-helper/tsh-status-dialog.c:247 tvp-git-helper/main.c:110
+#: tvp-git-helper/tgh-file-selection-dialog.c:120
+#: tvp-git-helper/tgh-reset-dialog.c:93 tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
 msgstr "Estado"
 
@@ -353,11 +361,11 @@ msgstr ""
 msgid "Infinity"
 msgstr "infinito"
 
-#: tvp-svn-helper/main.c:105
+#: tvp-svn-helper/main.c:105 tvp-git-helper/main.c:64
 msgid "Print version information"
 msgstr "Mostrar a información da versión"
 
-#: tvp-svn-helper/main.c:112
+#: tvp-svn-helper/main.c:112 tvp-git-helper/main.c:71
 msgid "Execute add action"
 msgstr "Executar a acción de engadir"
 
@@ -440,7 +448,7 @@ msgstr "Desface-la última acción"
 msgid "Execute revert action"
 msgstr "Desface-la última acción"
 
-#: tvp-svn-helper/main.c:214
+#: tvp-svn-helper/main.c:214 tvp-git-helper/main.c:89
 #, fuzzy
 msgid "Execute status action"
 msgstr "Desface-la última acción"
@@ -460,7 +468,7 @@ msgstr "Desface-la última acción"
 msgid "Execute update action"
 msgstr "Desface-la última acción"
 
-#: tvp-svn-helper/main.c:246
+#: tvp-svn-helper/main.c:246 tvp-git-helper/main.c:98
 #, fuzzy
 msgid "Add Related Options:"
 msgstr ""
@@ -596,7 +604,7 @@ msgstr ""
 "\n"
 "Opcións dispoñibles:"
 
-#: tvp-svn-helper/main.c:314
+#: tvp-svn-helper/main.c:314 tvp-git-helper/main.c:110
 #, fuzzy
 msgid "Status Related Options:"
 msgstr ""
@@ -962,10 +970,14 @@ msgstr "Certificado"
 #: tvp-svn-helper/tsh-log-message-dialog.c:92
 #: tvp-svn-helper/tsh-notify-dialog.c:94
 #: tvp-svn-helper/tsh-status-dialog.c:116
+#: tvp-git-helper/tgh-branch-dialog.c:104
+#: tvp-git-helper/tgh-file-selection-dialog.c:92
+#: tvp-git-helper/tgh-reset-dialog.c:87 tvp-git-helper/tgh-status-dialog.c:104
 msgid "Path"
 msgstr "Ruta"
 
 #: tvp-svn-helper/tsh-file-selection-dialog.c:118
+#: tvp-git-helper/tgh-file-selection-dialog.c:113
 #, fuzzy
 msgid "Select/Unselect all"
 msgstr "Seleccionar todos os erros"
@@ -1156,7 +1168,7 @@ msgstr "Agochar o obxecto"
 msgid "Check Repository"
 msgstr "Comprobar o repositorio"
 
-#: tvp-svn-helper/tsh-status.c:86
+#: tvp-svn-helper/tsh-status.c:86 tvp-git-helper/tgh-common.c:40
 #, fuzzy
 msgid "Status failed"
 msgstr "Fallou"
@@ -1192,6 +1204,56 @@ msgstr "Outro fallo."
 #: tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
 msgstr "Confiar"
+
+#: tvp-git-helper/main.c:77
+#, fuzzy
+msgid "Execute branch action"
+msgstr "Desface-la última acción"
+
+#: tvp-git-helper/main.c:83
+#, fuzzy
+msgid "Execute reset action"
+msgstr "Desface-la última acción"
+
+#: tvp-git-helper/main.c:102
+#, fuzzy
+msgid "Branch Related Options:"
+msgstr ""
+"[OPCIÓNS...] [FICHEIRO...]\n"
+"\n"
+"Opcións dispoñibles:"
+
+#: tvp-git-helper/main.c:102 tvp-git-helper/tgh-branch-dialog.c:119
+msgid "Branch"
+msgstr ""
+
+#: tvp-git-helper/main.c:106
+#, fuzzy
+msgid "Reset Related Options:"
+msgstr ""
+"[OPCIÓNS...] [FICHEIRO...]\n"
+"\n"
+"Opcións dispoñibles:"
+
+#: tvp-git-helper/main.c:106 tvp-git-helper/tgh-reset-dialog.c:108
+#: tvp-git-helper/tgh-reset.c:125
+#, fuzzy
+msgid "Reset"
+msgstr "Reverter"
+
+#: tvp-git-helper/tgh-add.c:50
+#, fuzzy
+msgid "Add finished"
+msgstr "Debuxo rematado"
+
+#: tvp-git-helper/tgh-add.c:118
+msgid "Adding ..."
+msgstr ""
+
+#: tvp-git-helper/tgh-common.c:115
+#: tvp-git-helper/tgh-file-selection-dialog.c:267
+msgid "untracked"
+msgstr ""
 
 #~ msgid "%1$s on %2$s"
 #~ msgstr "%1$s en %2$s"

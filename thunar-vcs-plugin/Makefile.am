@@ -19,6 +19,8 @@ thunar_vcs_plugin_la_SOURCES =						\
 	tvp-svn-action.h						\
 	tvp-svn-property-page.c						\
 	tvp-svn-property-page.h						\
+	tvp-git-action.c						\
+	tvp-git-action.h						\
 	tvp-provider.c							\
 	tvp-provider.h							\
 	thunar-vcs-plugin.c
@@ -28,7 +30,8 @@ thunar_vcs_plugin_la_CFLAGS =						\
 	$(THUNARX_CFLAGS)						\
 	$(THUNAR_VFS_CFLAGS)						\
 	$(APR_CFLAGS)							\
-	-DTVP_SVN_HELPER=\"$(libexecdir)/tvp-svn-helper\"
+	-DTVP_SVN_HELPER=\"$(libexecdir)/tvp-svn-helper\"		\
+	-DTVP_GIT_HELPER=\"$(libexecdir)/tvp-git-helper\"
 
 thunar_vcs_plugin_la_LDFLAGS =						\
 	-avoid-version							\

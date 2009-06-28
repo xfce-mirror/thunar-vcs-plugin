@@ -3,7 +3,8 @@ SUBDIRS =								\
 	icons								\
 	po								\
 	thunar-vcs-plugin						\
-	tvp-svn-helper
+	tvp-svn-helper							\
+	tvp-git-helper
 
 distclean-local:
 	rm -rf *.spec *.cache *~

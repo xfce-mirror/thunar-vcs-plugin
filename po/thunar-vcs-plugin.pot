@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-28 14:10+0200\n"
+"POT-Creation-Date: 2009-06-28 14:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,8 +18,13 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-vcs-plugin/tvp-provider.c:435 thunar-vcs-plugin/tvp-provider.c:467
+#: thunar-vcs-plugin/tvp-provider.c:436 thunar-vcs-plugin/tvp-provider.c:473
 msgid "SVN"
+msgstr ""
+
+#. append the git submenu action
+#: thunar-vcs-plugin/tvp-provider.c:441 thunar-vcs-plugin/tvp-provider.c:478
+msgid "GIT"
 msgstr ""
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298
@@ -28,6 +33,7 @@ msgstr ""
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298 tvp-svn-helper/main.c:246
 #: tvp-svn-helper/tsh-add.c:113 tvp-svn-helper/tsh-add.c:126
+#: tvp-git-helper/main.c:98 tvp-git-helper/tgh-add.c:105
 msgid "Add"
 msgstr ""
 
@@ -203,7 +209,9 @@ msgstr ""
 
 #: thunar-vcs-plugin/tvp-svn-action.c:427 tvp-svn-helper/main.c:314
 #: tvp-svn-helper/tsh-file-selection-dialog.c:125
-#: tvp-svn-helper/tsh-status-dialog.c:247
+#: tvp-svn-helper/tsh-status-dialog.c:247 tvp-git-helper/main.c:110
+#: tvp-git-helper/tgh-file-selection-dialog.c:120
+#: tvp-git-helper/tgh-reset-dialog.c:93 tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
 msgstr ""
 
@@ -330,11 +338,11 @@ msgstr ""
 msgid "Infinity"
 msgstr ""
 
-#: tvp-svn-helper/main.c:105
+#: tvp-svn-helper/main.c:105 tvp-git-helper/main.c:64
 msgid "Print version information"
 msgstr ""
 
-#: tvp-svn-helper/main.c:112
+#: tvp-svn-helper/main.c:112 tvp-git-helper/main.c:71
 msgid "Execute add action"
 msgstr ""
 
@@ -402,7 +410,7 @@ msgstr ""
 msgid "Execute revert action"
 msgstr ""
 
-#: tvp-svn-helper/main.c:214
+#: tvp-svn-helper/main.c:214 tvp-git-helper/main.c:89
 msgid "Execute status action"
 msgstr ""
 
@@ -418,7 +426,7 @@ msgstr ""
 msgid "Execute update action"
 msgstr ""
 
-#: tvp-svn-helper/main.c:246
+#: tvp-svn-helper/main.c:246 tvp-git-helper/main.c:98
 msgid "Add Related Options:"
 msgstr ""
 
@@ -492,7 +500,7 @@ msgstr ""
 msgid "Revert Related Options:"
 msgstr ""
 
-#: tvp-svn-helper/main.c:314
+#: tvp-svn-helper/main.c:314 tvp-git-helper/main.c:110
 msgid "Status Related Options:"
 msgstr ""
 
@@ -795,10 +803,14 @@ msgstr ""
 #: tvp-svn-helper/tsh-log-message-dialog.c:92
 #: tvp-svn-helper/tsh-notify-dialog.c:94
 #: tvp-svn-helper/tsh-status-dialog.c:116
+#: tvp-git-helper/tgh-branch-dialog.c:104
+#: tvp-git-helper/tgh-file-selection-dialog.c:92
+#: tvp-git-helper/tgh-reset-dialog.c:87 tvp-git-helper/tgh-status-dialog.c:104
 msgid "Path"
 msgstr ""
 
 #: tvp-svn-helper/tsh-file-selection-dialog.c:118
+#: tvp-git-helper/tgh-file-selection-dialog.c:113
 msgid "Select/Unselect all"
 msgstr ""
 
@@ -964,7 +976,7 @@ msgstr ""
 msgid "Check Repository"
 msgstr ""
 
-#: tvp-svn-helper/tsh-status.c:86
+#: tvp-svn-helper/tsh-status.c:86 tvp-git-helper/tgh-common.c:40
 msgid "Status failed"
 msgstr ""
 
@@ -998,4 +1010,42 @@ msgstr ""
 
 #: tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
+msgstr ""
+
+#: tvp-git-helper/main.c:77
+msgid "Execute branch action"
+msgstr ""
+
+#: tvp-git-helper/main.c:83
+msgid "Execute reset action"
+msgstr ""
+
+#: tvp-git-helper/main.c:102
+msgid "Branch Related Options:"
+msgstr ""
+
+#: tvp-git-helper/main.c:102 tvp-git-helper/tgh-branch-dialog.c:119
+msgid "Branch"
+msgstr ""
+
+#: tvp-git-helper/main.c:106
+msgid "Reset Related Options:"
+msgstr ""
+
+#: tvp-git-helper/main.c:106 tvp-git-helper/tgh-reset-dialog.c:108
+#: tvp-git-helper/tgh-reset.c:125
+msgid "Reset"
+msgstr ""
+
+#: tvp-git-helper/tgh-add.c:50
+msgid "Add finished"
+msgstr ""
+
+#: tvp-git-helper/tgh-add.c:118
+msgid "Adding ..."
+msgstr ""
+
+#: tvp-git-helper/tgh-common.c:115
+#: tvp-git-helper/tgh-file-selection-dialog.c:267
+msgid "untracked"
 msgstr ""

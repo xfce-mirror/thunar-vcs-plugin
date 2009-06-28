@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce-i 18n\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-28 14:10+0200\n"
+"POT-Creation-Date: 2009-06-28 14:42+0200\n"
 "PO-Revision-Date: 2007-10-24 13:04+0100\n"
 "Last-Translator: Mike Massonnet <mmassonnet@gmail.com>\n"
 "Language-Team: French\n"
@@ -19,9 +19,14 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-vcs-plugin/tvp-provider.c:435 thunar-vcs-plugin/tvp-provider.c:467
+#: thunar-vcs-plugin/tvp-provider.c:436 thunar-vcs-plugin/tvp-provider.c:473
 msgid "SVN"
 msgstr "SVN"
+
+#. append the git submenu action
+#: thunar-vcs-plugin/tvp-provider.c:441 thunar-vcs-plugin/tvp-provider.c:478
+msgid "GIT"
+msgstr ""
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298
 msgid "Menu|Add"
@@ -29,6 +34,7 @@ msgstr ""
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298 tvp-svn-helper/main.c:246
 #: tvp-svn-helper/tsh-add.c:113 tvp-svn-helper/tsh-add.c:126
+#: tvp-git-helper/main.c:98 tvp-git-helper/tgh-add.c:105
 msgid "Add"
 msgstr "Ajouter"
 
@@ -225,7 +231,9 @@ msgstr "État"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:427 tvp-svn-helper/main.c:314
 #: tvp-svn-helper/tsh-file-selection-dialog.c:125
-#: tvp-svn-helper/tsh-status-dialog.c:247
+#: tvp-svn-helper/tsh-status-dialog.c:247 tvp-git-helper/main.c:110
+#: tvp-git-helper/tgh-file-selection-dialog.c:120
+#: tvp-git-helper/tgh-reset-dialog.c:93 tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
 msgstr "État"
 
@@ -357,11 +365,11 @@ msgstr ""
 msgid "Infinity"
 msgstr ""
 
-#: tvp-svn-helper/main.c:105
+#: tvp-svn-helper/main.c:105 tvp-git-helper/main.c:64
 msgid "Print version information"
 msgstr "Afficher l'information sur la version"
 
-#: tvp-svn-helper/main.c:112
+#: tvp-svn-helper/main.c:112 tvp-git-helper/main.c:71
 #, fuzzy
 msgid "Execute add action"
 msgstr "Exécuter une mise à jour"
@@ -445,7 +453,7 @@ msgstr "Exécuter une mise à jour"
 msgid "Execute revert action"
 msgstr "Exécuter une extraction"
 
-#: tvp-svn-helper/main.c:214
+#: tvp-svn-helper/main.c:214 tvp-git-helper/main.c:89
 #, fuzzy
 msgid "Execute status action"
 msgstr "Exécuter une mise à jour"
@@ -464,7 +472,7 @@ msgstr "Exécuter une extraction"
 msgid "Execute update action"
 msgstr "Exécuter une mise à jour"
 
-#: tvp-svn-helper/main.c:246
+#: tvp-svn-helper/main.c:246 tvp-git-helper/main.c:98
 msgid "Add Related Options:"
 msgstr ""
 
@@ -544,7 +552,7 @@ msgstr "Exécuter une mise à jour"
 msgid "Revert Related Options:"
 msgstr ""
 
-#: tvp-svn-helper/main.c:314
+#: tvp-svn-helper/main.c:314 tvp-git-helper/main.c:110
 msgid "Status Related Options:"
 msgstr ""
 
@@ -876,10 +884,14 @@ msgstr "Notification"
 #: tvp-svn-helper/tsh-log-message-dialog.c:92
 #: tvp-svn-helper/tsh-notify-dialog.c:94
 #: tvp-svn-helper/tsh-status-dialog.c:116
+#: tvp-git-helper/tgh-branch-dialog.c:104
+#: tvp-git-helper/tgh-file-selection-dialog.c:92
+#: tvp-git-helper/tgh-reset-dialog.c:87 tvp-git-helper/tgh-status-dialog.c:104
 msgid "Path"
 msgstr "Chemin"
 
 #: tvp-svn-helper/tsh-file-selection-dialog.c:118
+#: tvp-git-helper/tgh-file-selection-dialog.c:113
 msgid "Select/Unselect all"
 msgstr ""
 
@@ -1058,7 +1070,7 @@ msgstr "Externe"
 msgid "Check Repository"
 msgstr ""
 
-#: tvp-svn-helper/tsh-status.c:86
+#: tvp-svn-helper/tsh-status.c:86 tvp-git-helper/tgh-common.c:40
 #, fuzzy
 msgid "Status failed"
 msgstr "État"
@@ -1093,6 +1105,50 @@ msgstr ""
 
 #: tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
+msgstr ""
+
+#: tvp-git-helper/main.c:77
+#, fuzzy
+msgid "Execute branch action"
+msgstr "Exécuter une extraction"
+
+#: tvp-git-helper/main.c:83
+#, fuzzy
+msgid "Execute reset action"
+msgstr "Exécuter une extraction"
+
+#: tvp-git-helper/main.c:102
+#, fuzzy
+msgid "Branch Related Options:"
+msgstr "Exécuter une mise à jour"
+
+#: tvp-git-helper/main.c:102 tvp-git-helper/tgh-branch-dialog.c:119
+msgid "Branch"
+msgstr ""
+
+#: tvp-git-helper/main.c:106
+#, fuzzy
+msgid "Reset Related Options:"
+msgstr "Exécuter une mise à jour"
+
+#: tvp-git-helper/main.c:106 tvp-git-helper/tgh-reset-dialog.c:108
+#: tvp-git-helper/tgh-reset.c:125
+#, fuzzy
+msgid "Reset"
+msgstr "Restaurer"
+
+#: tvp-git-helper/tgh-add.c:50
+#, fuzzy
+msgid "Add finished"
+msgstr "Nettoyer les verrous"
+
+#: tvp-git-helper/tgh-add.c:118
+msgid "Adding ..."
+msgstr ""
+
+#: tvp-git-helper/tgh-common.c:115
+#: tvp-git-helper/tgh-file-selection-dialog.c:267
+msgid "untracked"
 msgstr ""
 
 #, fuzzy

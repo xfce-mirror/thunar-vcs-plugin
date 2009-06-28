@@ -36,6 +36,7 @@
 #include <thunar-vcs-plugin/tvp-svn-backend.h>
 #include <thunar-vcs-plugin/tvp-svn-action.h>
 #include <thunar-vcs-plugin/tvp-svn-property-page.h>
+#include <thunar-vcs-plugin/tvp-git-action.h>
 #include <thunar-vcs-plugin/tvp-provider.h>
 
 /* use g_access() on win32 */
@@ -436,6 +437,11 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   actions = g_list_append (actions, action);
 
+  /* append the git submenu action */
+  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE);
+  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
+  actions = g_list_append (actions, action);
+
   return actions;
 }
 
@@ -467,6 +473,11 @@ tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
   action = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, TRUE, tvp_is_working_copy (folder), FALSE, FALSE, FALSE, FALSE);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   /* append the svn submenu action */
+  actions = g_list_append (actions, action);
+
+  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, TRUE);
+  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
+  /* append the git submenu action */
   actions = g_list_append (actions, action);
 
   g_list_free (files);
