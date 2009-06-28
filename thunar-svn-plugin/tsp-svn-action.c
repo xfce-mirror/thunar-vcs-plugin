@@ -102,9 +102,9 @@ static void tsp_svn_action_set_property (GObject*, guint, const GValue*, GParamS
 static GQuark tsp_action_arg_quark = 0;
 
 
-void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action);
+static void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action);
 
-void tsp_action_unimplemented (GtkAction *, const gchar *);
+static void tsp_action_unimplemented (GtkAction *, const gchar *);
 
 
 
@@ -246,14 +246,46 @@ tsp_svn_action_set_property (GObject *object, guint property_id, const GValue *v
 }
 
 
+static void
+add_subaction (GtkAction *action, GtkMenuShell *menu, const gchar *name, const gchar *text, const gchar *tooltip, const gchar *stock, gchar *arg)
+{
+    GtkAction *subaction;
+    GtkWidget *subitem;
+
+    subaction = gtk_action_new (name, text, tooltip, stock);
+    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, arg);
+    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
+
+    subitem = gtk_action_create_menu_item (subaction);
+    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
+    gtk_widget_set_tooltip_text(subitem, tooltip);
+    gtk_menu_shell_append (menu, subitem);
+    gtk_widget_show(subitem);
+}
+
+
+static void
+add_subaction_u (GtkMenuShell *menu, const gchar *name, const gchar *text, const gchar *tooltip, const gchar *stock, gchar *arg)
+{
+    GtkAction *subaction;
+    GtkWidget *subitem;
+
+    subaction = gtk_action_new (name, text, tooltip, stock);
+    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_unimplemented), arg);
+
+    subitem = gtk_action_create_menu_item (subaction);
+    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
+    gtk_widget_set_tooltip_text(subitem, tooltip);
+    gtk_menu_shell_append (menu, subitem);
+    gtk_widget_show(subitem);
+}
+
+
 static GtkWidget *
 tsp_svn_action_create_menu_item (GtkAction *action)
 {
   GtkWidget *item;
   GtkWidget *menu;
-  GtkAction *subaction;
-  GtkWidget *subitem;
-  const gchar *tooltip;
   TspSvnAction *tsp_action = TSP_SVN_ACTION (action);
 
   item = GTK_ACTION_CLASS(tsp_svn_action_parent_class)->create_menu_item (action);
@@ -263,28 +295,12 @@ tsp_svn_action_create_menu_item (GtkAction *action)
   /* No version control */
   if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_no_version_control || tsp_action->property.file_no_version_control)) 
   {
-    subaction = gtk_action_new ("tsp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--add");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD, "--add");
   }
   /* Version control (file) */
   if (tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::blame", Q_("Menu|Blame"), _("Blame"), GTK_STOCK_INDEX);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--blame");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::blame", Q_("Menu|Blame"), _("Blame"), GTK_STOCK_INDEX, "--blame");
   }
 /* No need
   subitem = gtk_menu_item_new_with_label (_("Cat"));
@@ -296,130 +312,52 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 *//* Version control (file) */
   if (tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::changelist", Q_("Menu|Changelist"), _("Changelist"), GTK_STOCK_INDEX);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--changelist");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::changelist", Q_("Menu|Changelist"), _("Changelist"), GTK_STOCK_INDEX, "--changelist");
   }
   /* No version control (parent) */
   if (tsp_action->property.is_parent && !tsp_action->property.parent_version_control)
   {
-    subaction = gtk_action_new ("tsp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--checkout");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT, "--checkout");
   }
   /* Version control (parent) */
   if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
   {
-    subaction = gtk_action_new ("tsp::cleanup", Q_("Menu|Cleanup"), _("Cleanup"), GTK_STOCK_CLEAR);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--cleanup");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::cleanup", Q_("Menu|Cleanup"), _("Cleanup"), GTK_STOCK_CLEAR, "--cleanup");
   }
   /* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::commit", Q_("Menu|Commit"), _("Commit"), GTK_STOCK_APPLY);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--commit");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::commit", Q_("Menu|Commit"), _("Commit"), GTK_STOCK_APPLY, "--commit");
   }
   /* Version control (no parent) */
   if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_version_control || tsp_action->property.file_version_control))
   {
-    subaction = gtk_action_new ("tsp::copy", Q_("Menu|Copy"), _("Copy"), GTK_STOCK_COPY);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--copy");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
-        }
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::copy", Q_("Menu|Copy"), _("Copy"), GTK_STOCK_COPY, "--copy");
+  }
   /* Version control (no parent) */
   if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_version_control || tsp_action->property.file_version_control))
   {
-    subaction = gtk_action_new ("tsp::delete", Q_("Menu|Delete"), _("Delete"), GTK_STOCK_DELETE);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--delete");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::delete", Q_("Menu|Delete"), _("Delete"), GTK_STOCK_DELETE, "--delete");
   }
   /* Version control (file) */
   if (tsp_action->property.file_version_control) 
   {
-    subaction = gtk_action_new ("tsp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_FIND_AND_REPLACE);
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_unimplemented), _("Diff"));
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction_u (GTK_MENU_SHELL (menu), "tsp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_FIND_AND_REPLACE, _("Diff"));
   }
   /* Version control and No version control (parent) */
   if (tsp_action->property.is_parent || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::export", Q_("Menu|Export"), _("Export"), GTK_STOCK_SAVE);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--export");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::export", Q_("Menu|Export"), _("Export"), GTK_STOCK_SAVE, "--export");
   }
   /* No version control (all) */
   if (!tsp_action->property.parent_version_control && (tsp_action->property.is_parent || tsp_action->property.directory_no_version_control || tsp_action->property.file_no_version_control))
   {
-    subaction = gtk_action_new ("tsp::import", Q_("Menu|Import"), _("Import"), GTK_STOCK_NETWORK);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--import");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::import", Q_("Menu|Import"), _("Import"), GTK_STOCK_NETWORK, "--import");
   }
   /* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::info", Q_("Menu|Info"), _("Info"), GTK_STOCK_INFO);
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_unimplemented), _("Info"));
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction_u (GTK_MENU_SHELL (menu), "tsp::info", Q_("Menu|Info"), _("Info"), GTK_STOCK_INFO, _("Info"));
   }
 /* Ehmm...
   subitem = gtk_menu_item_new_with_label (_("List"));
@@ -429,27 +367,12 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 *//* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::lock", Q_("Menu|Lock"), _("Lock"), GTK_STOCK_DIALOG_AUTHENTICATION);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--lock");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::lock", Q_("Menu|Lock"), _("Lock"), GTK_STOCK_DIALOG_AUTHENTICATION, "--lock");
   }
   /* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::log", Q_("Menu|Log"), _("Log"), GTK_STOCK_INDEX);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--log");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::log", Q_("Menu|Log"), _("Log"), GTK_STOCK_INDEX, "--log");
   }
 /* Ehmm ...
   subitem = gtk_menu_item_new_with_label (_("Merge"));
@@ -464,15 +387,7 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 *//* Version control (no parent) */
   if (!tsp_action->property.is_parent && tsp_action->property.parent_version_control && (tsp_action->property.directory_version_control || tsp_action->property.file_version_control))
   {
-    subaction = gtk_action_new ("tsp::move", Q_("Menu|Move"), _("Move"), GTK_STOCK_DND_MULTIPLE);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--move");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::move", Q_("Menu|Move"), _("Move"), GTK_STOCK_DND_MULTIPLE, "--move");
   }
 /* Merged
   subitem = gtk_menu_item_new_with_label (_("Delete Properties"));
@@ -483,119 +398,48 @@ tsp_svn_action_create_menu_item (GtkAction *action)
 *//* Version control */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-subaction = gtk_action_new ("tsp::properties", Q_("Menu|Edit Properties"), _("Edit Properties"), GTK_STOCK_EDIT);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--properties");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::properties", Q_("Menu|Edit Properties"), _("Edit Properties"), GTK_STOCK_EDIT, "--properties");
   }
   /* Version control (parent) */
   if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
   {
-    subaction = gtk_action_new ("tsp::relocate", Q_("Menu|Relocate"), _("Relocate"), GTK_STOCK_FIND_AND_REPLACE);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--relocate");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::relocate", Q_("Menu|Relocate"), _("Relocate"), GTK_STOCK_FIND_AND_REPLACE, "--relocate");
   }
 /* Changed
   subitem = gtk_menu_item_new_with_label (_("Mark Resolved"));
 */if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::resolved", Q_("Menu|Resolved"), _("Resolved"), GTK_STOCK_YES);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--resolved");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::resolved", Q_("Menu|Resolved"), _("Resolved"), GTK_STOCK_YES, "--resolved");
   }/*
 *//* Version control (file) */
   if (tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::resolve", Q_("Menu|Resolve"), _("Resolve"), GTK_STOCK_YES);
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_unimplemented), _("Resolve"));
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction_u (GTK_MENU_SHELL (menu), "tsp::resolve", Q_("Menu|Resolve"), _("Resolve"), GTK_STOCK_YES, _("Resolve"));
   }
   /* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::revert", Q_("Menu|Revert"), _("Revert"), GTK_STOCK_UNDO);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--revert");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::revert", Q_("Menu|Revert"), _("Revert"), GTK_STOCK_UNDO, "--revert");
   }
   /* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::status", Q_("Menu|Status"), _("Status"), GTK_STOCK_DIALOG_INFO);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--status");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::status", Q_("Menu|Status"), _("Status"), GTK_STOCK_DIALOG_INFO, "--status");
   }
   /* Version control (parent) */
   if (tsp_action->property.is_parent && tsp_action->property.parent_version_control)
   {
-    subaction = gtk_action_new ("tsp::switch", Q_("Menu|Switch"), _("Switch"), GTK_STOCK_JUMP_TO);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--switch");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::switch", Q_("Menu|Switch"), _("Switch"), GTK_STOCK_JUMP_TO, "--switch");
   }
   /* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::unlock", Q_("Menu|Unlock"), _("Unlock"), NULL);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--unlock");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::unlock", Q_("Menu|Unlock"), _("Unlock"), NULL, "--unlock");
   }
   /* Version control (all) */
   if ((tsp_action->property.is_parent && tsp_action->property.parent_version_control) || tsp_action->property.directory_version_control || tsp_action->property.file_version_control)
   {
-    subaction = gtk_action_new ("tsp::update", Q_("Menu|Update"), _("Update"), GTK_STOCK_REFRESH);
-    g_object_set_qdata (G_OBJECT (subaction), tsp_action_arg_quark, "--update");
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tsp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (GTK_MENU_SHELL (menu), subitem);
-    gtk_widget_show(subitem);
+    add_subaction (action, GTK_MENU_SHELL (menu), "tsp::update", Q_("Menu|Update"), _("Update"), GTK_STOCK_REFRESH, "--update");
   }
 
   return item;
@@ -603,7 +447,7 @@ subaction = gtk_action_new ("tsp::properties", Q_("Menu|Edit Properties"), _("Ed
 
 
 
-void tsp_action_unimplemented (GtkAction *item, const gchar *tsp_action)
+static void tsp_action_unimplemented (GtkAction *item, const gchar *tsp_action)
 {
   GtkWidget *dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, _("Action %s is unimplemented"), tsp_action);
   gtk_dialog_run (GTK_DIALOG (dialog));
@@ -612,7 +456,7 @@ void tsp_action_unimplemented (GtkAction *item, const gchar *tsp_action)
 
 
 
-void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
+static void tsp_action_exec (GtkAction *item, TspSvnAction *tsp_action)
 {
   guint size, i;
   gchar **argv;
