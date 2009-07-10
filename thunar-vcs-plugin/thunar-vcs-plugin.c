@@ -24,9 +24,15 @@
 #include <exo/exo.h>
 
 #include <thunar-vcs-plugin/tvp-provider.h>
+
+#ifdef HAVE_SUBVERSION
 #include <thunar-vcs-plugin/tvp-svn-action.h>
 #include <thunar-vcs-plugin/tvp-svn-property-page.h>
+#endif
+
+#ifdef HAVE_GIT
 #include <thunar-vcs-plugin/tvp-git-action.h>
+#endif
 
 
 
@@ -59,9 +65,13 @@ thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 
   /* register the types provided by this plugin */
   tvp_provider_register_type (plugin);
+#ifdef HAVE_SUBVERSION
   tvp_svn_action_register_type (plugin);
   tvp_svn_property_page_register_type (plugin);
+#endif
+#ifdef HAVE_GIT
   tvp_git_action_register_type (plugin);
+#endif
 
   /* setup the plugin provider type list */
   type_list[0] = TVP_TYPE_PROVIDER;

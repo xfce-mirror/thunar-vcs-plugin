@@ -31,12 +31,17 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
+#ifdef HAVE_SUBVERSION
 #include <subversion-1/svn_types.h>
-
 #include <thunar-vcs-plugin/tvp-svn-backend.h>
 #include <thunar-vcs-plugin/tvp-svn-action.h>
 #include <thunar-vcs-plugin/tvp-svn-property-page.h>
+#endif
+
+#ifdef HAVE_GIT
 #include <thunar-vcs-plugin/tvp-git-action.h>
+#endif
+
 #include <thunar-vcs-plugin/tvp-provider.h>
 
 /* use g_access() on win32 */
@@ -64,7 +69,7 @@ static GList *tvp_provider_get_folder_actions   (ThunarxMenuProvider      *menu_
                                                  ThunarxFileInfo          *folder);
 static GList *tvp_provider_get_pages            (ThunarxPropertyPageProvider *menu_provider,
                                                  GList                    *files);
-static void   tvp_new_process                   (TvpSvnAction             *action,
+static void   tvp_new_process                   (GtkAction                *action,
                                                  const GPid               *pid,
                                                  const gchar              *path,
                                                  TvpProvider              *tvp_provider);
@@ -167,7 +172,9 @@ tvp_provider_init (TvpProvider *tvp_provider)
   gtk_icon_set_unref (icon_set);
 #endif /* !GTK_CHECK_VERSION(2,9,0) */
 
+#ifdef HAVE_SUBVERSION
   tvp_svn_backend_init();
+#endif
 }
 
 
@@ -189,13 +196,17 @@ tvp_provider_finalize (GObject *object)
   g_object_unref (G_OBJECT (tvp_provider->icon_factory));
 #endif
 
+#ifdef HAVE_SUBVERSION
   tvp_svn_backend_free();
+#endif
+
 
   (*G_OBJECT_CLASS (tvp_provider_parent_class)->finalize) (object);
 }
 
 
 
+#ifdef HAVE_SUBVERSION
 static gboolean
 tvp_is_working_copy (ThunarxFileInfo *file_info)
 {
@@ -224,9 +235,11 @@ tvp_is_working_copy (ThunarxFileInfo *file_info)
 
   return result;
 }
+#endif
 
 
 
+#ifdef HAVE_SUBVERSION
 static gboolean
 tvp_is_parent_working_copy (ThunarxFileInfo *file_info)
 {
@@ -255,9 +268,11 @@ tvp_is_parent_working_copy (ThunarxFileInfo *file_info)
 
   return result;
 }
+#endif
 
 
 
+#ifdef HAVE_SUBVERSION
 static GSList *
 tvp_get_parent_status (ThunarxFileInfo *file_info)
 {
@@ -286,6 +301,7 @@ tvp_get_parent_status (ThunarxFileInfo *file_info)
 
   return result;
 }
+#endif
 
 
 
@@ -329,6 +345,7 @@ tvp_compare_filename (const gchar *uri1, const gchar *uri2)
 
 
 
+#ifdef HAVE_SUBVERSION
 static gint
 tvp_compare_path (TvpSvnFileStatus *file_status, ThunarxFileInfo *file_info)
 {
@@ -357,6 +374,7 @@ tvp_compare_path (TvpSvnFileStatus *file_status, ThunarxFileInfo *file_info)
 
   return result;
 }
+#endif
 
 
 
@@ -365,6 +383,9 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
                                GtkWidget           *window,
                                GList               *files)
 {
+  GList              *actions = NULL;
+  GtkAction          *action;
+#ifdef HAVE_SUBVERSION
   ThunarVfsPathScheme scheme;
   ThunarVfsInfo      *info;
   gboolean            parent_wc = FALSE;
@@ -372,8 +393,6 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   gboolean            directory_is_not_wc = FALSE;
   gboolean            file_is_vc = FALSE;
   gboolean            file_is_not_vc = FALSE;
-  GtkAction          *action;
-  GList              *actions = NULL;
   GList              *lp;
   gint                n_files = 0;
   GSList             *file_status;
@@ -436,11 +455,14 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   action = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   actions = g_list_append (actions, action);
+#endif
 
+#ifdef HAVE_GIT
   /* append the git submenu action */
   action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   actions = g_list_append (actions, action);
+#endif
 
   return actions;
 }
@@ -469,16 +491,20 @@ tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 
   files = g_list_append (NULL, folder);
 
+#ifdef HAVE_SUBVERSION
   /* Lets see if we are dealing with a working copy */
   action = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, TRUE, tvp_is_working_copy (folder), FALSE, FALSE, FALSE, FALSE);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   /* append the svn submenu action */
   actions = g_list_append (actions, action);
+#endif
 
+#ifdef HAVE_GIT
   action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, TRUE);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   /* append the git submenu action */
   actions = g_list_append (actions, action);
+#endif
 
   g_list_free (files);
 
@@ -491,6 +517,7 @@ static GList*
 tvp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files)
 {
   GList *pages = NULL;
+#ifdef HAVE_SUBVERSION
   if (g_list_length (files) == 1)
   {
     gboolean            is_vc = FALSE;
@@ -538,6 +565,7 @@ tvp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
       pages = g_list_prepend (pages, tvp_svn_property_page_new (files->data));
     }
   }
+#endif
   return pages;
 }
 
@@ -585,7 +613,7 @@ tvp_child_watch_free (TvpChildWatch *watch)
 
 
 static void
-tvp_new_process (TvpSvnAction *action, const GPid *pid, const gchar *path, TvpProvider *tvp_provider)
+tvp_new_process (GtkAction *action, const GPid *pid, const gchar *path, TvpProvider *tvp_provider)
 {
   TvpChildWatch *watch;
   if (tvp_provider->child_watch)

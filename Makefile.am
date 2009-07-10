@@ -2,9 +2,13 @@
 SUBDIRS =								\
 	icons								\
 	po								\
-	thunar-vcs-plugin						\
-	tvp-svn-helper							\
-	tvp-git-helper
+	thunar-vcs-plugin
+if HAVE_SUBVERSION
+SUBDIRS += tvp-svn-helper
+endif
+if HAVE_GIT
+SUBDIRS += tvp-git-helper
+endif
 
 distclean-local:
 	rm -rf *.spec *.cache *~
