@@ -312,7 +312,7 @@ tvp_svn_action_create_menu_item (GtkAction *action)
 *//* Version control (file) */
   if (tvp_action->property.file_version_control)
   {
-    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::changelist", Q_("Menu|Changelist"), _("Changelist"), GTK_STOCK_INDEX, "--changelist");
+    add_subaction_u (GTK_MENU_SHELL (menu), "tvp::changelist", Q_("Menu|Changelist"), _("Changelist"), GTK_STOCK_INDEX, _("Changelist"));
   }
   /* No version control (parent) */
   if (tvp_action->property.is_parent && !tvp_action->property.parent_version_control)

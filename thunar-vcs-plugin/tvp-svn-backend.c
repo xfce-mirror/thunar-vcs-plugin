@@ -27,6 +27,7 @@
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 #include <subversion-1/svn_fs.h>
+#include <subversion-1/svn_dso.h>
 
 #include <thunar-vcs-plugin/tvp-svn-backend.h>
 
@@ -44,8 +45,21 @@ tvp_svn_backend_init ()
 
 	svn_error_t *err;
 
-	if (svn_cmdline_init (NULL, NULL) == EXIT_FAILURE)
+    /* Initialize apr */
+    if (apr_initialize())
+        return FALSE;
+
+    /* Initialize the DSO library, this must be done before svn_pool_create */
+#if CHECK_SVN_VERSION(1,5)
+    svn_dso_initialize ();
+#else /* CHECK_SVN_VERSION(1,6) */
+    err = svn_dso_initialize2 ();
+	if(err)
+  {
+    svn_error_clear (err);
 		return FALSE;
+  }
+#endif
 
 	/* Create top-level memory pool */
 	pool = svn_pool_create (NULL);
@@ -104,7 +118,11 @@ void
 tvp_svn_backend_free ()
 {
 	if (pool)
+    {
     svn_pool_destroy (pool);
+    apr_terminate ();
+    }
+    pool = NULL;
 }
 
 

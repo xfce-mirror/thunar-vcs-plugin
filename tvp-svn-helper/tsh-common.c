@@ -49,7 +49,7 @@
 
 #include "tsh-common.h"
 
-static svn_error_t* tsh_auth_simple_plaintext_prompt(svn_boolean_t*, const char*, void*, apr_pool_t*);
+static svn_error_t* tsh_auth_simple_plaintext_prompt(svn_boolean_t*, const char*, void*, apr_pool_t*) G_GNUC_UNUSED;
 static svn_error_t* tsh_auth_simple_prompt(svn_auth_cred_simple_t**, void*, const char*, const char*, svn_boolean_t, apr_pool_t*);
 static svn_error_t* tsh_auth_username_prompt(svn_auth_cred_username_t**, void*, const char*, svn_boolean_t, apr_pool_t*);
 static svn_error_t* tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t**, void*, const char*, apr_uint32_t, const svn_auth_ssl_server_cert_info_t*, svn_boolean_t, apr_pool_t*);
@@ -490,7 +490,7 @@ tsh_reset_cancel()
 static const gchar *
 tsh_action_to_string(svn_wc_notify_action_t action)
 {
-  static const gchar const * const action_table[] = {
+  static const gchar * const action_table[] = {
     N_("Added"),
     N_("Copied"),
     N_("Deleted"),
@@ -592,7 +592,7 @@ tsh_action_to_string(svn_wc_notify_action_t action)
 static const gchar *
 tsh_notify_state_to_string(enum svn_wc_notify_state_t state)
 {
-  static const gchar const * const state_table[] = {
+  static const gchar * const state_table[] = {
     N_("Inapplicable"),
     N_("Unknown"),
     N_("Unchanged"),
@@ -624,7 +624,7 @@ tsh_notify_state_to_string(enum svn_wc_notify_state_t state)
 const gchar *
 tsh_status_to_string(enum svn_wc_status_kind status)
 {
-  static const gchar const * const status_table[] = {
+  static const gchar * const status_table[] = {
     N_("Unknown"),
     (""),//N_("None"),
     (""),//N_("Unversioned"),

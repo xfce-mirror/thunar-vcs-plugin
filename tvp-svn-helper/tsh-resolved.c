@@ -48,7 +48,7 @@ static gpointer resolved_thread (gpointer user_data)
 {
 	struct thread_args *args = user_data;
 	svn_error_t *err;
-  gboolean result;
+  gboolean result = TRUE;
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *subpool, *pool = args->pool;
 	TshNotifyDialog *dialog = args->dialog;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-28 14:42+0200\n"
+"POT-Creation-Date: 2009-07-25 01:00+0200\n"
 "PO-Revision-Date: 2009-04-06 11:57+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
@@ -20,12 +20,12 @@ msgstr ""
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: thunar-vcs-plugin/tvp-provider.c:436 thunar-vcs-plugin/tvp-provider.c:473
+#: thunar-vcs-plugin/tvp-provider.c:455 thunar-vcs-plugin/tvp-provider.c:496
 msgid "SVN"
 msgstr "Kontrola wersji SVN"
 
 #. append the git submenu action
-#: thunar-vcs-plugin/tvp-provider.c:441 thunar-vcs-plugin/tvp-provider.c:478
+#: thunar-vcs-plugin/tvp-provider.c:462 thunar-vcs-plugin/tvp-provider.c:503
 msgid "GIT"
 msgstr ""
 
@@ -35,7 +35,7 @@ msgstr "Dodaj..."
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298 tvp-svn-helper/main.c:246
 #: tvp-svn-helper/tsh-add.c:113 tvp-svn-helper/tsh-add.c:126
-#: tvp-git-helper/main.c:98 tvp-git-helper/tgh-add.c:105
+#: tvp-git-helper/main.c:98 tvp-git-helper/tgh-add.c:113
 msgid "Add"
 msgstr "Dodawanie"
 
@@ -1005,7 +1005,7 @@ msgstr ""
 msgid "Check Repository"
 msgstr ""
 
-#: tvp-svn-helper/tsh-status.c:86 tvp-git-helper/tgh-common.c:40
+#: tvp-svn-helper/tsh-status.c:86 tvp-git-helper/tgh-common.c:48
 msgid "Status failed"
 msgstr ""
 
@@ -1069,16 +1069,16 @@ msgstr ""
 msgid "Reset"
 msgstr "Cofanie zmian"
 
-#: tvp-git-helper/tgh-add.c:50
+#: tvp-git-helper/tgh-add.c:58
 #, fuzzy
 msgid "Add finished"
 msgstr "Zakończono porządkowanie"
 
-#: tvp-git-helper/tgh-add.c:118
+#: tvp-git-helper/tgh-add.c:126
 msgid "Adding ..."
 msgstr ""
 
-#: tvp-git-helper/tgh-common.c:115
+#: tvp-git-helper/tgh-common.c:123
 #: tvp-git-helper/tgh-file-selection-dialog.c:267
 msgid "untracked"
 msgstr ""
