@@ -42,19 +42,24 @@ typedef struct
 
 #define TSH_LOG_FILE(p) ((TshLogFile*)p)
 
-GType      tsh_log_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType        tsh_log_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
 
-GtkWidget* tsh_log_dialog_new      (const gchar *title,
-                                    GtkWindow *parent,
-                                    GtkDialogFlags flags) G_GNUC_MALLOC G_GNUC_INTERNAL;
+GtkWidget*   tsh_log_dialog_new      (const gchar *title,
+                                      GtkWindow *parent,
+                                      GtkDialogFlags flags) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
-void       tsh_log_dialog_add      (TshLogDialog *dialog,
-                                    GSList *paths,
-                                    glong revision,
-                                    const char *author,
-                                    const char *date,
-                                    const char *message);
-void       tsh_log_dialog_done     (TshLogDialog *dialog);
+gchar*       tsh_log_dialog_add      (TshLogDialog *dialog,
+                                      const gchar *parent,
+                                      GSList *paths,
+                                      glong revision,
+                                      const char *author,
+                                      const char *date,
+                                      const char *message) G_GNUC_WARN_UNUSED_RESULT;
+void         tsh_log_dialog_push     (TshLogDialog *dialog,
+                                      gchar *path);
+const gchar* tsh_log_dialog_top      (TshLogDialog *dialog);
+void         tsh_log_dialog_pop      (TshLogDialog *dialog);
+void         tsh_log_dialog_done     (TshLogDialog *dialog);
 
 G_END_DECLS;
 

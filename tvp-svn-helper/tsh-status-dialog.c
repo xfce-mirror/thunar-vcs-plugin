@@ -27,10 +27,12 @@
 #include <subversion-1/svn_client.h>
 
 #include "tsh-common.h"
+#include "tsh-tree-common.h"
 #include "tsh-status-dialog.h"
 
 static void cancel_clicked (GtkButton*, gpointer);
 static void refresh_clicked (GtkButton*, gpointer);
+static void move_info (GtkTreeStore*, GtkTreeIter*, GtkTreeIter*);
 
 struct _TshStatusDialog
 {
@@ -141,7 +143,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	                                             renderer, "text",
 	                                             COLUMN_REPO_PROP_STAT, NULL);
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
+  model = GTK_TREE_MODEL (gtk_tree_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
@@ -297,14 +299,14 @@ tsh_status_dialog_add (TshStatusDialog *dialog, const char *file, const char *te
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
-	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
-	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-	                    COLUMN_PATH, file,
-	                    COLUMN_TEXT_STAT, text,
-	                    COLUMN_PROP_STAT, prop,
-	                    COLUMN_REPO_TEXT_STAT, repo_text,
-	                    COLUMN_REPO_PROP_STAT, repo_prop,
-	                    -1);
+  tsh_tree_get_iter_for_path (GTK_TREE_STORE (model), file, &iter, COLUMN_PATH, move_info);
+  gtk_tree_store_set (GTK_TREE_STORE (model), &iter,
+                      //COLUMN_PATH, file,
+                      COLUMN_TEXT_STAT, text,
+                      COLUMN_PROP_STAT, prop,
+                      COLUMN_REPO_TEXT_STAT, repo_text,
+                      COLUMN_REPO_PROP_STAT, repo_prop,
+                      -1);
 }
 
 void
@@ -312,8 +314,10 @@ tsh_status_dialog_done (TshStatusDialog *dialog)
 {
   g_return_if_fail (TSH_IS_STATUS_DIALOG (dialog));
 
-	gtk_widget_hide (dialog->cancel);
-	gtk_widget_show (dialog->refresh);
+  gtk_tree_view_expand_all (GTK_TREE_VIEW (dialog->tree_view));
+
+  gtk_widget_hide (dialog->cancel);
+  gtk_widget_show (dialog->refresh);
 }
 
 svn_depth_t
@@ -329,7 +333,7 @@ tsh_status_dialog_get_depth (TshStatusDialog *dialog)
   g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), svn_depth_unknown);
 
   if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter))
-     return svn_depth_unknown;
+    return svn_depth_unknown;
 
   model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->depth));
   gtk_tree_model_get_value (model, &iter, 1, &value);
@@ -403,7 +407,32 @@ refresh_clicked (GtkButton *button, gpointer user_data)
 
   g_signal_emit (dialog, signals[SIGNAL_REFRESH], 0);
 
-	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
-  gtk_list_store_clear (GTK_LIST_STORE (model));
+  model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+  gtk_tree_store_clear (GTK_TREE_STORE (model));
+}
+
+static void
+move_info (GtkTreeStore *store, GtkTreeIter *dest, GtkTreeIter *src)
+{
+  gchar *text, *prop, *repo_text, *repo_prop;
+
+  gtk_tree_model_get (GTK_TREE_MODEL (store), src,
+                      COLUMN_TEXT_STAT, &text,
+                      COLUMN_PROP_STAT, &prop,
+                      COLUMN_REPO_TEXT_STAT, &repo_text,
+                      COLUMN_REPO_PROP_STAT, &repo_prop,
+                      -1);
+
+  gtk_tree_store_set (store, dest,
+                      COLUMN_TEXT_STAT, text,
+                      COLUMN_PROP_STAT, prop,
+                      COLUMN_REPO_TEXT_STAT, repo_text,
+                      COLUMN_REPO_PROP_STAT, repo_prop,
+                      -1);
+
+  g_free (text);
+  g_free (prop);
+  g_free (repo_text);
+  g_free (repo_prop);
 }
 

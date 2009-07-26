@@ -56,6 +56,8 @@ tvp_svn_helper_SOURCES =						\
 	tsh-unlock.c							\
 	tsh-update.h							\
 	tsh-update.c							\
+	tsh-tree-common.h						\
+	tsh-tree-common.c						\
 	tsh-dialog-common.h						\
 	tsh-dialog-common.c						\
 	tsh-blame-dialog.h						\

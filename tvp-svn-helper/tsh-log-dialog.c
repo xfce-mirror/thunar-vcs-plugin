@@ -27,11 +27,14 @@
 #include <subversion-1/svn_client.h>
 
 #include "tsh-common.h"
+#include "tsh-tree-common.h"
 #include "tsh-log-dialog.h"
 
 static void selection_changed (GtkTreeView*, gpointer);
 static void cancel_clicked (GtkButton*, gpointer);
 static void refresh_clicked (GtkButton*, gpointer);
+
+static void move_info (GtkTreeStore*, GtkTreeIter*, GtkTreeIter*);
 
 struct _TshLogDialog
 {
@@ -43,6 +46,8 @@ struct _TshLogDialog
 	GtkWidget *close;
 	GtkWidget *cancel;
 	GtkWidget *refresh;
+
+  GSList *message_stack;
 };
 
 struct _TshLogDialogClass
@@ -105,6 +110,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
   GtkWidget *vpane;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
+  gint n_columns;
 
   pane = gtk_vpaned_new ();
 
@@ -137,7 +143,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	                                             renderer, "text",
 	                                             COLUMN_MESSAGE, NULL);
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_LONG, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER));
+  model = GTK_TREE_MODEL (gtk_tree_store_new (COLUMN_COUNT, G_TYPE_LONG, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
@@ -175,13 +181,14 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	                                             renderer, "text",
 	                                             FILE_COLUMN_ACTION, NULL);
 	
-	renderer = gtk_cell_renderer_text_new ();
-	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (file_view),
-	                                             -1, _("File"),
-	                                             renderer, "text",
-	                                             FILE_COLUMN_FILE, NULL);
+  renderer = gtk_cell_renderer_text_new ();
+  n_columns = gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (file_view),
+                                                           -1, _("File"),
+                                                           renderer, "text",
+                                                           FILE_COLUMN_FILE, NULL);
+  gtk_tree_view_set_expander_column (GTK_TREE_VIEW (file_view), gtk_tree_view_get_column (GTK_TREE_VIEW (file_view), n_columns - 1));
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (FILE_COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING));
+  model = GTK_TREE_MODEL (gtk_tree_store_new (FILE_COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (file_view), model);
 
@@ -241,16 +248,16 @@ tsh_log_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
 	return GTK_WIDGET(dialog);
 }
 
-void       
-tsh_log_dialog_add (TshLogDialog *dialog, GSList *files, glong revision, const char *author, const char *date, const char *message)
+gchar*     
+tsh_log_dialog_add (TshLogDialog *dialog, const gchar *parent, GSList *files, glong revision, const char *author, const char *date, const char *message)
 {
-	GtkTreeModel *model;
-	GtkTreeIter iter;
+  GtkTreeModel *model;
+  GtkTreeIter iter, parent_iter;
   gchar **lines = NULL;
   gchar **line_iter;
   gchar *first_line = NULL;
 
-  g_return_if_fail (TSH_IS_LOG_DIALOG (dialog));
+  g_return_val_if_fail (TSH_IS_LOG_DIALOG (dialog), NULL);
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
@@ -269,17 +276,50 @@ tsh_log_dialog_add (TshLogDialog *dialog, GSList *files, glong revision, const c
     first_line = *line_iter;
   }
 
-	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
-	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-	                    COLUMN_REVISION, revision,
-	                    COLUMN_AUTHOR, author,
-	                    COLUMN_DATE, date,
-	                    COLUMN_MESSAGE, first_line,
-	                    COLUMN_FULL_MESSAGE, message,
+  if (parent && !gtk_tree_model_get_iter_from_string (model, &parent_iter, parent))
+    parent = NULL;
+
+  gtk_tree_store_append (GTK_TREE_STORE (model), &iter, parent?&parent_iter:NULL);
+  gtk_tree_store_set (GTK_TREE_STORE (model), &iter,
+                      COLUMN_REVISION, revision,
+                      COLUMN_AUTHOR, author,
+                      COLUMN_DATE, date,
+                      COLUMN_MESSAGE, first_line,
+                      COLUMN_FULL_MESSAGE, message,
                       COLUMN_FILE_LIST, files,
-	                    -1);
+                      -1);
 
   g_strfreev (lines);
+
+  return gtk_tree_model_get_string_from_iter (model, &iter);
+}
+
+void
+tsh_log_dialog_push (TshLogDialog *dialog, gchar *path)
+{
+  g_return_if_fail (TSH_IS_LOG_DIALOG (dialog));
+
+  dialog->message_stack = g_slist_prepend (dialog->message_stack, path);
+}
+
+const gchar*
+tsh_log_dialog_top (TshLogDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_LOG_DIALOG (dialog), NULL);
+
+  if (dialog->message_stack)
+    return dialog->message_stack->data;
+  return NULL;
+}
+
+void
+tsh_log_dialog_pop (TshLogDialog *dialog)
+{
+  g_return_if_fail (TSH_IS_LOG_DIALOG (dialog));
+  g_return_if_fail (dialog->message_stack);
+
+  g_free (dialog->message_stack->data);
+  dialog->message_stack = g_slist_delete_link (dialog->message_stack, dialog->message_stack);
 }
 
 void
@@ -287,8 +327,15 @@ tsh_log_dialog_done (TshLogDialog *dialog)
 {
   g_return_if_fail (TSH_IS_LOG_DIALOG (dialog));
 
-	gtk_widget_hide (dialog->cancel);
-	gtk_widget_show (dialog->refresh);
+  if (dialog->message_stack)
+  {
+    g_slist_foreach (dialog->message_stack, (GFunc)g_free, NULL);
+    g_slist_free (dialog->message_stack);
+    dialog->message_stack = NULL;
+  }
+
+  gtk_widget_hide (dialog->cancel);
+  gtk_widget_show (dialog->refresh);
 }
 
 static void
@@ -311,17 +358,18 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
     g_free (message);
 
     model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->file_view));
-    gtk_list_store_clear (GTK_LIST_STORE (model));
+    gtk_tree_store_clear (GTK_TREE_STORE (model));
 
     while(files)
     {
-      gtk_list_store_append (GTK_LIST_STORE (model), &iter);
-      gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+      tsh_tree_get_iter_for_path (GTK_TREE_STORE (model), TSH_LOG_FILE (files->data)->file, &iter, FILE_COLUMN_FILE, move_info);
+      gtk_tree_store_set (GTK_TREE_STORE (model), &iter,
                           FILE_COLUMN_ACTION, TSH_LOG_FILE (files->data)->action,
-                          FILE_COLUMN_FILE, TSH_LOG_FILE (files->data)->file,
                           -1);
       files = files->next;
     }
+
+    gtk_tree_view_expand_all (GTK_TREE_VIEW (dialog->file_view));
   }
 }
 
@@ -348,11 +396,27 @@ refresh_clicked (GtkButton *button, gpointer user_data)
   g_signal_emit (dialog, signals[SIGNAL_REFRESH], 0);
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
-  gtk_list_store_clear (GTK_LIST_STORE (model));
+  gtk_tree_store_clear (GTK_TREE_STORE (model));
 
   gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), "", -1);
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->file_view));
-  gtk_list_store_clear (GTK_LIST_STORE (model));
+  k_tree_store_clear (GTK_TREE_STORE (model));
+}
+
+static void
+move_info (GtkTreeStore *store, GtkTreeIter *dest, GtkTreeIter *src)
+{
+  gchar *action;
+
+  gtk_tree_model_get (GTK_TREE_MODEL (store), src,
+                      FILE_COLUMN_ACTION, &action,
+                      -1);
+
+  gtk_tree_store_set (store, dest,
+                      FILE_COLUMN_ACTION, action,
+                      -1);
+
+  g_free (action);
 }
 

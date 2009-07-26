@@ -24,7 +24,10 @@
 #include <thunar-vfs/thunar-vfs.h>
 #include <gtk/gtk.h>
 
+#include "tsh-tree-common.h"
 #include "tsh-log-message-dialog.h"
+
+static void move_info (GtkTreeStore*, GtkTreeIter*, GtkTreeIter*);
 
 struct _TshLogMessageDialog
 {
@@ -62,6 +65,7 @@ tsh_log_message_dialog_init (TshLogMessageDialog *dialog)
   GtkWidget *vpane;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
+  gint n_columns;
 
   dialog->vpane = vpane = gtk_vpaned_new ();
 
@@ -79,6 +83,9 @@ tsh_log_message_dialog_init (TshLogMessageDialog *dialog)
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
+  scroll_window = gtk_scrolled_window_new (NULL, NULL);
+  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
+
 	dialog->tree_view = tree_view = gtk_tree_view_new ();
 	
 	renderer = gtk_cell_renderer_text_new ();
@@ -87,13 +94,14 @@ tsh_log_message_dialog_init (TshLogMessageDialog *dialog)
 	                                             renderer, "text",
 	                                             COLUMN_STATE, NULL);
 
-	renderer = gtk_cell_renderer_text_new ();
-	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, _("Path"),
-	                                             renderer, "text",
-	                                             COLUMN_PATH, NULL);
+  renderer = gtk_cell_renderer_text_new ();
+  n_columns = gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
+                                                           -1, _("Path"),
+                                                           renderer, "text",
+                                                           COLUMN_PATH, NULL);
+  gtk_tree_view_set_expander_column (GTK_TREE_VIEW (tree_view), gtk_tree_view_get_column (GTK_TREE_VIEW (tree_view), n_columns - 1));
 
-	model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING));
+  model = GTK_TREE_MODEL (gtk_tree_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
@@ -152,11 +160,12 @@ tsh_log_message_dialog_add (TshLogMessageDialog *dialog, const char *state, cons
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
-	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
-	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-	                    COLUMN_STATE, state,
-	                    COLUMN_PATH, file,
-	                    -1);
+  tsh_tree_get_iter_for_path (GTK_TREE_STORE (model), file, &iter, COLUMN_PATH, move_info);
+  gtk_tree_store_set (GTK_TREE_STORE (model), &iter,
+                      COLUMN_STATE, state,
+                      -1);
+
+  gtk_tree_view_expand_all (GTK_TREE_VIEW (dialog->tree_view));
 }
 
 gchar *
@@ -170,5 +179,21 @@ tsh_log_message_dialog_get_message (TshLogMessageDialog *dialog)
   gtk_text_buffer_get_start_iter (buffer, &start);
   gtk_text_buffer_get_end_iter (buffer, &end);
   return gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
+}
+
+static void
+move_info (GtkTreeStore *store, GtkTreeIter *dest, GtkTreeIter *src)
+{
+  gchar *state;
+
+  gtk_tree_model_get (GTK_TREE_MODEL (store), src,
+                      COLUMN_STATE, &state,
+                      -1);
+
+  gtk_tree_store_set (store, dest,
+                      COLUMN_STATE, state,
+                      -1);
+
+  g_free (state);
 }
 

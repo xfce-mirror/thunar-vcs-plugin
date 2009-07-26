@@ -816,7 +816,16 @@ tsh_log_func (void *baton, svn_log_entry_t *log_entry, apr_pool_t *pool)
   gchar *date = NULL;
   gchar *message = NULL;
   GSList *files = NULL;
+  const gchar *parent = NULL;
+  gchar *path = NULL;
 	TshLogDialog *dialog = TSH_LOG_DIALOG (baton);
+
+  if (log_entry->revision == SVN_INVALID_REVNUM)
+  {
+    tsh_log_dialog_pop (dialog);
+	return SVN_NO_ERROR;
+  }
+
 
   value = apr_hash_get(revprops, SVN_PROP_REVISION_AUTHOR, APR_HASH_KEY_STRING);
   if(value)
@@ -850,9 +859,16 @@ tsh_log_func (void *baton, svn_log_entry_t *log_entry, apr_pool_t *pool)
     }
   }
 
+  parent = tsh_log_dialog_top (dialog);
+
   gdk_threads_enter();
-  tsh_log_dialog_add(dialog, files, log_entry->revision, author, date, message);
+  path = tsh_log_dialog_add(dialog, parent, files, log_entry->revision, author, date, message);
   gdk_threads_leave();
+
+  if (log_entry->has_children)
+    tsh_log_dialog_push (dialog, path);
+  else
+    g_free (path);
 
   g_free(author);
   g_free(date);

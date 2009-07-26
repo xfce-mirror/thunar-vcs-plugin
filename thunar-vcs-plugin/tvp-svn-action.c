@@ -292,8 +292,8 @@ tvp_svn_action_create_menu_item (GtkAction *action)
 
   menu = gtk_menu_new ();
   gtk_menu_item_set_submenu (GTK_MENU_ITEM (item), menu);
-  /* No version control */
-  if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_no_version_control || tvp_action->property.file_no_version_control)) 
+  /* No version control or version control (parent) */
+  if (tvp_action->property.parent_version_control && (tvp_action->property.is_parent || tvp_action->property.directory_no_version_control || tvp_action->property.file_no_version_control)) 
   {
     add_subaction (action, GTK_MENU_SHELL (menu), "tvp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD, "--add");
   }

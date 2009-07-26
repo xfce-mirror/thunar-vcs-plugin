@@ -29,6 +29,7 @@
 
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
+#include <subversion-1/svn_props.h>
 
 #include "tsh-common.h"
 #include "tsh-dialog-common.h"
@@ -56,6 +57,7 @@ static gpointer log_thread (gpointer user_data)
 	gchar **files = args->files;
 	apr_array_header_t *paths = args->paths;
 	apr_array_header_t *ranges;
+	apr_array_header_t *revprops;
 	gint size, i;
   GtkWidget *error;
   gchar *error_str;
@@ -85,16 +87,21 @@ static gpointer log_thread (gpointer user_data)
 
   subpool = svn_pool_create (pool);
 
+  revprops = apr_array_make (subpool, 3, sizeof (const char*));
+  APR_ARRAY_PUSH (revprops, const char*) = SVN_PROP_REVISION_AUTHOR;
+  APR_ARRAY_PUSH (revprops, const char*) = SVN_PROP_REVISION_DATE;
+  APR_ARRAY_PUSH (revprops, const char*) = SVN_PROP_REVISION_LOG;
+
   revision.kind = svn_opt_revision_unspecified;
   range.start.kind = svn_opt_revision_head;
   range.end.kind = svn_opt_revision_number;
   range.end.value.number = 0;
-  ranges = apr_array_make (pool, 1, sizeof (svn_opt_revision_range_t *));
+  ranges = apr_array_make (subpool, 1, sizeof (svn_opt_revision_range_t *));
   APR_ARRAY_PUSH (ranges, svn_opt_revision_range_t *) = &range;
 #if CHECK_SVN_VERSION(1,5)
-	if ((err = svn_client_log4(paths, &revision, &range.start, &range.end, 0, TRUE, FALSE, FALSE, NULL, tsh_log_func, dialog, ctx, subpool)))
+	if ((err = svn_client_log4(paths, &revision, &range.start, &range.end, 0, TRUE, FALSE, TRUE, revprops, tsh_log_func, dialog, ctx, subpool)))
 #else /* CHECK_SVN_VERSION(1,6) */
-	if ((err = svn_client_log5(paths, &revision, ranges, 0, TRUE, FALSE, FALSE, NULL, tsh_log_func, dialog, ctx, subpool)))
+	if ((err = svn_client_log5(paths, &revision, ranges, 0, TRUE, FALSE, TRUE, revprops, tsh_log_func, dialog, ctx, subpool)))
 #endif
 	{
     svn_pool_destroy (subpool);
