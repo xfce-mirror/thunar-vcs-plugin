@@ -42,99 +42,135 @@ struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
 	TshNotifyDialog *dialog;
-  gchar **files;
+  GSList *files;
 };
 
 static gpointer commit_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
-	svn_error_t *err;
+  struct thread_args *args = user_data;
+  gboolean result = TRUE;
+  svn_error_t *err;
   svn_commit_info_t *commit_info;
   apr_array_header_t *paths;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
-	TshNotifyDialog *dialog = args->dialog;
-  gchar **files = args->files;
-  gint size, i;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
+  TshNotifyDialog *dialog = args->dialog;
+  GSList *files = args->files;
+  GSList *iter;
+  gint size;
   gchar *error_str;
   gchar *message;
   gchar buffer[256];
 
-	g_free (args);
+  g_free (args);
 
-  size = files?g_strv_length(files):0;
+  size = 0;
 
   subpool = svn_pool_create (pool);
 
-  if(size)
+  for (iter = files; iter; iter = g_slist_next (iter))
   {
-    paths = apr_array_make (subpool, size, sizeof (const char *));
+    TshFileInfo *info;
+    size++;
 
-    for (i = 0; i < size; i++)
+    info = iter->data;
+    if (info->status == TSH_FILE_STATUS_UNVERSIONED && !(info->flags&TSH_FILE_INFO_INDIRECT))
     {
-      APR_ARRAY_PUSH (paths, const char *) = files[i];
+      if ((err = svn_client_add4(info->path, (info->flags&TSH_FILE_INFO_RECURSIVE)?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, FALSE, ctx, subpool)))
+      {
+        error_str = tsh_strerror(err);
+        gdk_threads_enter();
+        tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
+        gdk_threads_leave();
+        g_free(error_str);
+
+        svn_error_clear(err);
+        result = FALSE;
+        break;//FIXME: needed ??
+      }
     }
-  }
-  else
-  {
-    paths = apr_array_make (subpool, 1, sizeof (const char *));
-
-    APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
-  }
-
-	if ((err = svn_client_commit4(&commit_info, paths, svn_depth_empty, FALSE, FALSE, NULL, NULL, ctx, subpool)))
-	{
-    svn_pool_destroy (subpool);
-
-    error_str = tsh_strerror(err);
-		gdk_threads_enter();
-    tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
-    g_free(error_str);
-
-		svn_error_clear(err);
-    tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
-
-  if(SVN_IS_VALID_REVNUM(commit_info->revision))
-  {
-    g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
-    message = buffer;
-  }
-  else
-  {
-    message = _("Nothing to do");
   }
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
-  tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
-	tsh_notify_dialog_done (dialog);
-	gdk_threads_leave();
-	
+  /* check if an error occurred in add commands */
+  if (result)//FIXME: needed ??
+  {
+    subpool = svn_pool_create (pool);
+
+    if(size)
+    {
+      paths = apr_array_make (subpool, size, sizeof (const char *));
+
+      for (iter = files; iter; iter = g_slist_next (iter))
+      {
+        TshFileInfo *info = iter->data;
+        APR_ARRAY_PUSH (paths, const char *) = info->path;
+      }
+    }
+    else
+    {
+      paths = apr_array_make (subpool, 1, sizeof (const char *));
+
+      APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
+    }
+
+    if ((err = svn_client_commit4(&commit_info, paths, svn_depth_empty, FALSE, FALSE, NULL, NULL, ctx, subpool)))
+    {
+      svn_pool_destroy (subpool);
+
+      error_str = tsh_strerror(err);
+      gdk_threads_enter();
+      tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
+      tsh_notify_dialog_done (dialog);
+      gdk_threads_leave();
+      g_free(error_str);
+
+      svn_error_clear(err);
+      tsh_reset_cancel();
+      return GINT_TO_POINTER (FALSE);
+    }
+
+    if(SVN_IS_VALID_REVNUM(commit_info->revision))
+    {
+      g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
+      message = buffer;
+    }
+    else
+    {
+      message = _("Nothing to do");
+    }
+
+    svn_pool_destroy (subpool);
+  }
+
+  gdk_threads_enter();
+  if (result)
+    tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
+  tsh_notify_dialog_done (dialog);
+  gdk_threads_leave();
+
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (result);
 }
 
 GThread *tsh_commit (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
+  GSList *file_list;
 
-  dialog = tsh_file_selection_dialog_new (_("Commit"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_MODIFIED/*|TSH_FILE_SELECTION_FLAG_UNVERSIONED*/, ctx, pool);
+  dialog = tsh_file_selection_dialog_new (_("Commit"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_MODIFIED|TSH_FILE_SELECTION_FLAG_UNVERSIONED, ctx, pool);
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);
     return NULL;
   }
   g_strfreev (files);
-  files = tsh_file_selection_dialog_get_files (TSH_FILE_SELECTION_DIALOG (dialog));
+  file_list = tsh_file_selection_dialog_get_file_info (TSH_FILE_SELECTION_DIALOG (dialog));
   gtk_widget_destroy (dialog);
 
-  if(!files)
+  if(!file_list)
     return NULL;
 
 	dialog = tsh_notify_dialog_new (_("Commit"), NULL, 0);
@@ -151,7 +187,7 @@ GThread *tsh_commit (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->ctx = ctx;
 	args->pool = pool;
 	args->dialog = TSH_NOTIFY_DIALOG (dialog);
-	args->files = files;
+	args->files = file_list;
 
 	return g_thread_create (commit_thread, args, TRUE, NULL);
 }

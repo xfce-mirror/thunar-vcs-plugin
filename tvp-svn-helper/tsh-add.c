@@ -41,7 +41,7 @@ struct thread_args {
 	svn_client_ctx_t *ctx;
 	apr_pool_t *pool;
 	TshNotifyDialog *dialog;
-	gchar **files;
+	GSList *files;
 };
 
 static gpointer add_thread (gpointer user_data)
@@ -52,36 +52,38 @@ static gpointer add_thread (gpointer user_data)
 	svn_client_ctx_t *ctx = args->ctx;
 	apr_pool_t *subpool, *pool = args->pool;
 	TshNotifyDialog *dialog = args->dialog;
-	gchar **files = args->files;
-	gint size, i;
+	GSList *files = args->files;
   gchar *error_str;
 
 	g_free (args);
 
-	size = files?g_strv_length(files):0;
-
   subpool = svn_pool_create (pool);
 
-	if(size)
-	{
-		for (i = 0; i < size; i++)
-		{
-      if ((err = svn_client_add4(files[i], svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
+  if(files)
+  {
+    do
+    {
+      TshFileInfo *info = files->data;
+      if (!(info->flags & TSH_FILE_INFO_INDIRECT))
       {
-        error_str = tsh_strerror(err);
-        gdk_threads_enter();
-        tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-        gdk_threads_leave();
-        g_free(error_str);
+        if ((err = svn_client_add4(info->path, (info->flags&TSH_FILE_INFO_RECURSIVE)?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, FALSE, ctx, subpool)))
+        {
+          error_str = tsh_strerror(err);
+          gdk_threads_enter();
+          tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
+          gdk_threads_leave();
+          g_free(error_str);
 
-        svn_error_clear(err);
-        result = FALSE;
-        break;//FIXME: needed ??
+          svn_error_clear(err);
+          result = FALSE;
+          break;//FIXME: needed ??
+        }
       }
-		}
-	}
-	else
-	{
+    }
+    while ((files = g_slist_next (files)));
+  }
+  else
+  {
     if ((err = svn_client_add4("", svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
     {
       error_str = tsh_strerror(err);
@@ -93,7 +95,7 @@ static gpointer add_thread (gpointer user_data)
       svn_error_clear(err);
       result = FALSE;
     }
-	}
+  }
 
   svn_pool_destroy (subpool);
 
@@ -109,18 +111,19 @@ GThread *tsh_add (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
 	GtkWidget *dialog;
 	struct thread_args *args;
+  GSList *file_list;
 
-  dialog = tsh_file_selection_dialog_new (_("Add"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_UNVERSIONED, ctx, pool);
+  dialog = tsh_file_selection_dialog_new (_("Add"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_UNVERSIONED|TSH_FILE_SELECTION_FLAG_AUTO_SELECT_UNVERSIONED, ctx, pool);
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);
     return NULL;
   }
   g_strfreev (files);
-  files = tsh_file_selection_dialog_get_files (TSH_FILE_SELECTION_DIALOG (dialog));
+  file_list = tsh_file_selection_dialog_get_file_info (TSH_FILE_SELECTION_DIALOG (dialog));
   gtk_widget_destroy (dialog);
 
-  if(!files)
+  if(!file_list)
     return NULL;
 
 	dialog = tsh_notify_dialog_new (_("Add"), NULL, 0);
@@ -134,7 +137,7 @@ GThread *tsh_add (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->ctx = ctx;
 	args->pool = pool;
 	args->dialog = TSH_NOTIFY_DIALOG (dialog);
-	args->files = files;
+	args->files = file_list;
 
 	return g_thread_create (add_thread, args, TRUE, NULL);
 }

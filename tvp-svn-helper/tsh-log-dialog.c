@@ -401,7 +401,7 @@ refresh_clicked (GtkButton *button, gpointer user_data)
   gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), "", -1);
 
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->file_view));
-  k_tree_store_clear (GTK_TREE_STORE (model));
+  gtk_tree_store_clear (GTK_TREE_STORE (model));
 }
 
 static void

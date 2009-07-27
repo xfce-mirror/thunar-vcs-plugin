@@ -98,7 +98,7 @@ static gpointer delete_thread (gpointer user_data)
 		return GINT_TO_POINTER (FALSE);
 	}
 
-  if(SVN_IS_VALID_REVNUM(commit_info->revision))
+  if(commit_info && SVN_IS_VALID_REVNUM(commit_info->revision))
   {
     g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
     message = buffer;

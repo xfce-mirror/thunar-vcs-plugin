@@ -53,7 +53,7 @@ static gpointer revert_thread (gpointer user_data)
 	apr_pool_t *subpool, *pool = args->pool;
 	TshNotifyDialog *dialog = args->dialog;
 	gchar **files = args->files;
-	gint size, i;
+	gint size;
   gchar *error_str;
 
 	g_free (args);
@@ -66,9 +66,9 @@ static gpointer revert_thread (gpointer user_data)
 	{
 		paths = apr_array_make (subpool, size, sizeof (const char *));
 		
-		for (i = 0; i < size; i++)
+		while (size--)
 		{
-			APR_ARRAY_PUSH (paths, const char *) = files[i];
+			APR_ARRAY_PUSH (paths, const char *) = files[size];
 		}
 	}
 	else

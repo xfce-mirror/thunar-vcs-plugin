@@ -30,8 +30,26 @@ typedef enum {
   TSH_FILE_SELECTION_FLAG_UNVERSIONED = 1<<2,
   TSH_FILE_SELECTION_FLAG_UNCHANGED   = 1<<3,
   TSH_FILE_SELECTION_FLAG_IGNORED     = 1<<4,
-  TSH_FILE_SELECTION_FLAG_CONFLICTED  = 1<<5
+  TSH_FILE_SELECTION_FLAG_CONFLICTED  = 1<<5,
+
+  TSH_FILE_SELECTION_FLAG_AUTO_SELECT_UNVERSIONED = 1<<6
 } TshFileSelectionFlags;
+
+typedef enum {
+  TSH_FILE_STATUS_OTHER = 0,
+  TSH_FILE_STATUS_UNVERSIONED
+} TshFileStatus;
+
+typedef enum {
+  TSH_FILE_INFO_RECURSIVE   = 1<<0,
+  TSH_FILE_INFO_INDIRECT    = 1<<1
+} TshFileInfoFlags;
+
+typedef struct {
+  gchar *path;
+  TshFileInfoFlags flags;
+  TshFileStatus status;
+} TshFileInfo;
 
 typedef struct _TshFileSelectionDialogClass TshFileSelectionDialogClass;
 typedef struct _TshFileSelectionDialog      TshFileSelectionDialog;
@@ -53,7 +71,11 @@ GtkWidget* tsh_file_selection_dialog_new        (const gchar *title,
                                                  svn_client_ctx_t *ctx,
                                                  apr_pool_t *pool) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
-gchar**    tsh_file_selection_dialog_get_files  (TshFileSelectionDialog *dialog);
+gchar**    tsh_file_selection_dialog_get_files              (TshFileSelectionDialog *dialog) G_GNUC_WARN_UNUSED_RESULT;
+gchar**    tsh_file_selection_dialog_get_files_by_status    (TshFileSelectionDialog *dialog, TshFileStatus status) G_GNUC_WARN_UNUSED_RESULT;
+
+GSList*    tsh_file_selection_dialog_get_file_info              (TshFileSelectionDialog *dialog) G_GNUC_WARN_UNUSED_RESULT;
+GSList*    tsh_file_selection_dialog_get_file_info_by_status    (TshFileSelectionDialog *dialog, TshFileStatus status) G_GNUC_WARN_UNUSED_RESULT;
 
 G_END_DECLS;
 

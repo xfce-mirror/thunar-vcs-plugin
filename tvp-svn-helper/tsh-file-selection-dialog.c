@@ -36,10 +36,15 @@ static svn_error_t *tsh_file_selection_status_func3 (void *, const char *, svn_w
 static void selection_cell_toggled (GtkCellRendererToggle *, gchar *, gpointer);
 static void selection_all_toggled (GtkToggleButton *, gpointer);
 
+struct copy_context { union { gchar **string; GSList *linked; guint count; } list; TshFileStatus status; };
 static gboolean count_selected (GtkTreeModel*, GtkTreePath*, GtkTreeIter*, gpointer);
-static gboolean copy_selected (GtkTreeModel*, GtkTreePath*, GtkTreeIter*, gpointer);
+static gboolean copy_selected_string (GtkTreeModel*, GtkTreePath*, GtkTreeIter*, gpointer);
+static gboolean copy_selected_linked (GtkTreeModel*, GtkTreePath*, GtkTreeIter*, gpointer);
 static gboolean set_selected (GtkTreeModel*, GtkTreePath*, GtkTreeIter*, gpointer);
 static void move_info (GtkTreeStore*, GtkTreeIter*, GtkTreeIter*);
+
+static void add_unversioned (GtkTreeStore*, const gchar*, gboolean, gboolean);
+static void set_children_status (GtkTreeStore*, GtkTreeIter*, gboolean, gboolean);
 
 struct _TshFileSelectionDialog
 {
@@ -69,7 +74,9 @@ enum {
   COLUMN_TEXT_STAT,
   COLUMN_PROP_STAT,
   COLUMN_SELECTION,
+  COLUMN_NON_RECURSIVE,
   COLUMN_ENABLED,
+  COLUMN_STATUS,
   COLUMN_COUNT
 };
 
@@ -93,6 +100,7 @@ tsh_file_selection_dialog_init (TshFileSelectionDialog *dialog)
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, "", renderer,
                                                "active", COLUMN_SELECTION,
+                                               "inconsistent", COLUMN_NON_RECURSIVE,
                                                "activatable", COLUMN_ENABLED,
                                                NULL);
 
@@ -115,7 +123,7 @@ tsh_file_selection_dialog_init (TshFileSelectionDialog *dialog)
                                                "text", COLUMN_PROP_STAT,
                                                NULL);
 
-  model = GTK_TREE_MODEL (gtk_tree_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_BOOLEAN, G_TYPE_BOOLEAN));
+  model = GTK_TREE_MODEL (gtk_tree_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_BOOLEAN, G_TYPE_BOOLEAN, G_TYPE_BOOLEAN, G_TYPE_INT));
 
 	gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
@@ -221,26 +229,60 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
 gchar**
 tsh_file_selection_dialog_get_files (TshFileSelectionDialog *dialog)
 {
+  return tsh_file_selection_dialog_get_files_by_status (dialog, TSH_FILE_STATUS_OTHER);
+}
+
+gchar**
+tsh_file_selection_dialog_get_files_by_status (TshFileSelectionDialog *dialog, TshFileStatus status)
+{
   GtkTreeModel *model;
-  gchar **files, **files_iter;
-  guint count = 0;
+  gchar **files;
+  struct copy_context ctx;
 
   g_return_val_if_fail (TSH_IS_FILE_SELECTION_DIALOG (dialog), NULL);
 
+  ctx.status = status;
+
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
-  gtk_tree_model_foreach (model, count_selected, &count);
+  ctx.list.count = 0;
+  gtk_tree_model_foreach (model, count_selected, &ctx);
 
-  if (!count)
+  if (!ctx.list.count)
     return NULL;
 
-  files_iter = files = g_new(gchar *, count+1);
+  ctx.list.string = files = g_new(gchar *, ctx.list.count+1);
 
-  gtk_tree_model_foreach (model, copy_selected, &files_iter);
+  gtk_tree_model_foreach (model, copy_selected_string, &ctx);
 
-  *files_iter = NULL;
+  *ctx.list.string = NULL;
 
   return files;
+}
+
+GSList*
+tsh_file_selection_dialog_get_file_info (TshFileSelectionDialog *dialog)
+{
+  return tsh_file_selection_dialog_get_file_info_by_status (dialog, TSH_FILE_STATUS_OTHER);
+}
+
+GSList*
+tsh_file_selection_dialog_get_file_info_by_status (TshFileSelectionDialog *dialog, TshFileStatus status)
+{
+  GtkTreeModel *model;
+  struct copy_context ctx;
+
+  g_return_val_if_fail (TSH_IS_FILE_SELECTION_DIALOG (dialog), NULL);
+
+  ctx.status = status;
+
+  model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+
+  ctx.list.linked = NULL;
+
+  gtk_tree_model_foreach (model, copy_selected_linked, &ctx);
+
+  return g_slist_reverse (ctx.list.linked);
 }
 
 static void
@@ -268,9 +310,17 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
                         COLUMN_PATH, path,
                         COLUMN_TEXT_STAT, tsh_status_to_string(status->text_status),
                         COLUMN_PROP_STAT, tsh_status_to_string(status->prop_status),
-                        COLUMN_SELECTION, TRUE,
+                        COLUMN_SELECTION, (status->entry || dialog->flags & TSH_FILE_SELECTION_FLAG_AUTO_SELECT_UNVERSIONED),
+                        COLUMN_NON_RECURSIVE, FALSE,
                         COLUMN_ENABLED, TRUE,
+                        COLUMN_STATUS, status->entry?TSH_FILE_STATUS_OTHER:TSH_FILE_STATUS_UNVERSIONED,
                         -1);
+
+    if (!status->entry)
+    {
+      /* Unversioned: get all children */
+      add_unversioned (GTK_TREE_STORE (model), path, dialog->flags & TSH_FILE_SELECTION_FLAG_AUTO_SELECT_UNVERSIONED, FALSE);
+    }
   }
 }
 
@@ -287,7 +337,8 @@ selection_cell_toggled (GtkCellRendererToggle *renderer, gchar *path, gpointer u
 	TshFileSelectionDialog *dialog = TSH_FILE_SELECTION_DIALOG (user_data);
   GtkTreeModel *model;
   GtkTreeIter iter;
-  gboolean selection;
+  gboolean selection, non_recursive;
+  gint status;
 
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
 
@@ -295,10 +346,47 @@ selection_cell_toggled (GtkCellRendererToggle *renderer, gchar *path, gpointer u
 
   gtk_tree_model_get (model, &iter,
                       COLUMN_SELECTION, &selection,
+                      COLUMN_NON_RECURSIVE, &non_recursive,
+                      COLUMN_STATUS, &status,
                       -1);
+  switch (status)
+  {
+    case TSH_FILE_STATUS_UNVERSIONED:
+      if (gtk_tree_model_iter_has_child (model, &iter))
+      {
+#if 0   /* 4 states, not selected -> non recursive (no children selected) -> selected -> non recursive (children selected) */
+        if (non_recursive)
+        {
+          non_recursive = FALSE;
+          selection = !selection;
+        }
+        else
+          non_recursive = TRUE;
+#else   /* 3 states, not selected -> selected -> non recursive (children selected) */
+        if (non_recursive)
+        {
+          non_recursive = FALSE;
+          selection = FALSE;
+        }
+        else if (selection)
+          non_recursive = TRUE;
+        else
+          selection = TRUE;
+#endif
+        break;
+      }
+    default:
+      selection = !selection;
+      break;
+  }
   gtk_tree_store_set (GTK_TREE_STORE (model), &iter,
-                      COLUMN_SELECTION, !selection,
+                      COLUMN_SELECTION, selection,
+                      COLUMN_NON_RECURSIVE, non_recursive,
                       -1);
+  if (status == TSH_FILE_STATUS_UNVERSIONED)
+  {
+    set_children_status (GTK_TREE_STORE (model), &iter, selection, non_recursive);
+  }
 
   gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (dialog->all), TRUE);
 }
@@ -320,30 +408,61 @@ selection_all_toggled (GtkToggleButton *button, gpointer user_data)
 }
 
 static gboolean
-count_selected (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer count)
+count_selected (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer ctx)
 {
   gboolean selection;
+  gint status;
   gtk_tree_model_get (model, iter,
                       COLUMN_SELECTION, &selection,
+                      COLUMN_STATUS, &status,
                       -1);
-  if (selection)
-    (*(guint*)count)++;
+  if (selection && (((struct copy_context*)ctx)->status == TSH_FILE_STATUS_OTHER || ((struct copy_context*)ctx)->status == status))
+    ((struct copy_context*)ctx)->list.count++;
   return FALSE;
 }
 
 static gboolean
-copy_selected (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer files_iter)
+copy_selected_string (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer ctx)
 {
   gboolean selection;
+  gint status;
   gtk_tree_model_get (model, iter,
                       COLUMN_SELECTION, &selection,
+                      COLUMN_STATUS, &status,
                       -1);
-  if (selection)
+  if (selection && (((struct copy_context*)ctx)->status == TSH_FILE_STATUS_OTHER || ((struct copy_context*)ctx)->status == status))
   {
     gtk_tree_model_get (model, iter,
-                        COLUMN_PATH, *(gchar***)files_iter,
+                        COLUMN_PATH, ((struct copy_context*)ctx)->list.string,
                         -1);
-    (*(gchar***)files_iter)++;
+    ((struct copy_context*)ctx)->list.string++;
+  }
+  return FALSE;
+}
+
+static gboolean
+copy_selected_linked (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer ctx)
+{
+  gboolean selection;
+  gint status;
+  gtk_tree_model_get (model, iter,
+                      COLUMN_SELECTION, &selection,
+                      COLUMN_STATUS, &status,
+                      -1);
+  if (selection && (((struct copy_context*)ctx)->status == TSH_FILE_STATUS_OTHER || ((struct copy_context*)ctx)->status == status))
+  {
+    gboolean non_recursive, enabled;
+    TshFileInfo *info = g_new (TshFileInfo, 1);
+    gtk_tree_model_get (model, iter,
+                        COLUMN_PATH, &info->path,
+                        COLUMN_NON_RECURSIVE, &non_recursive,
+                        COLUMN_ENABLED, &enabled,
+                        -1);
+    if (status != TSH_FILE_STATUS_UNVERSIONED)
+      non_recursive = !non_recursive;
+    info->flags = (non_recursive?0:TSH_FILE_INFO_RECURSIVE) | (enabled?0:TSH_FILE_INFO_INDIRECT);
+    info->status = status;
+    ((struct copy_context*)ctx)->list.linked = g_slist_prepend (((struct copy_context*)ctx)->list.linked, info);
   }
   return FALSE;
 }
@@ -351,13 +470,30 @@ copy_selected (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpoint
 static gboolean
 set_selected (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer selection)
 {
-  gboolean enabled;
+  GtkTreeIter parent;
+  gboolean enabled, unversioned_enabled = TRUE;
   gtk_tree_model_get (model, iter,
                       COLUMN_ENABLED, &enabled,
                       -1);
+
+  if (gtk_tree_model_iter_parent (model, &parent, iter))
+  {
+    gint status;
+    gtk_tree_model_get (model, &parent,
+                        COLUMN_STATUS, &status,
+                        -1);
+    if (status == TSH_FILE_STATUS_UNVERSIONED)
+    {
+      unversioned_enabled = FALSE;
+      enabled = TRUE;
+    }
+  }
+
   if (enabled)
     gtk_tree_store_set (GTK_TREE_STORE (model), iter,
                         COLUMN_SELECTION, GPOINTER_TO_INT (selection),
+                        COLUMN_NON_RECURSIVE, FALSE,
+                        COLUMN_ENABLED, unversioned_enabled,
                         -1);
   return FALSE;
 }
@@ -366,14 +502,17 @@ static void
 move_info (GtkTreeStore *store, GtkTreeIter *dest, GtkTreeIter *src)
 {
   gchar *path, *text, *prop;
-  gboolean selected, enabled;
+  gboolean selected, non_recursive, enabled;
+  gint status;
 
   gtk_tree_model_get (GTK_TREE_MODEL (store), src,
                       COLUMN_PATH, &path,
                       COLUMN_TEXT_STAT, &text,
                       COLUMN_PROP_STAT, &prop,
                       COLUMN_SELECTION, &selected,
+                      COLUMN_NON_RECURSIVE, &non_recursive,
                       COLUMN_ENABLED, &enabled,
+                      COLUMN_STATUS, &status,
                       -1);
 
   gtk_tree_store_set (store, dest,
@@ -381,11 +520,58 @@ move_info (GtkTreeStore *store, GtkTreeIter *dest, GtkTreeIter *src)
                       COLUMN_TEXT_STAT, text,
                       COLUMN_PROP_STAT, prop,
                       COLUMN_SELECTION, selected,
+                      COLUMN_NON_RECURSIVE, non_recursive,
                       COLUMN_ENABLED, enabled,
+                      COLUMN_STATUS, status,
                       -1);
 
   g_free (path);
   g_free (text);
   g_free (prop);
+}
+
+static void
+add_unversioned (GtkTreeStore *model, const gchar *path, gboolean select, gboolean enabled)
+{
+  GDir *dir = g_dir_open (path, 0, NULL);
+  if (dir)
+  {
+    const gchar *file;
+    while ((file = g_dir_read_name (dir)))
+    {
+      GtkTreeIter iter;
+      gchar *file_path = g_build_filename (path, file, NULL);
+      tsh_tree_get_iter_for_path (model, file_path, &iter, COLUMN_NAME, move_info);
+      gtk_tree_store_set (model, &iter,
+                          COLUMN_PATH, file_path,
+                          COLUMN_TEXT_STAT, "",
+                          COLUMN_PROP_STAT, "",
+                          COLUMN_SELECTION, select,
+                          COLUMN_NON_RECURSIVE, FALSE,
+                          COLUMN_ENABLED, enabled,
+                          COLUMN_STATUS, TSH_FILE_STATUS_UNVERSIONED,
+                          -1);
+      add_unversioned (model, file_path, select, FALSE);
+      g_free (file_path);
+    }
+    g_dir_close (dir);
+  }
+}
+
+static void
+set_children_status (GtkTreeStore *model, GtkTreeIter *parent, gboolean select, gboolean enabled)
+{
+  GtkTreeIter iter;
+  if (gtk_tree_model_iter_children (GTK_TREE_MODEL (model), &iter, parent))
+    do
+    {
+      gtk_tree_store_set (model, &iter,
+                          COLUMN_SELECTION, select,
+                          COLUMN_NON_RECURSIVE, FALSE,
+                          COLUMN_ENABLED, enabled,
+                          -1);
+      set_children_status (model, &iter, select, FALSE);
+    }
+    while (gtk_tree_model_iter_next (GTK_TREE_MODEL (model), &iter));
 }
 
