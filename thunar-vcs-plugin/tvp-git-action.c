@@ -23,7 +23,7 @@
 
 #include <thunarx/thunarx.h>
 
-#include <thunar-vfs/thunar-vfs.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include <thunar-vcs-plugin/tvp-git-action.h>
 

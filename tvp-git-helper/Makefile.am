@@ -40,14 +40,14 @@ tvp_git_helper_CPPFLAGS =						\
 
 tvp_git_helper_CFLAGS =							\
 	$(PLATFORM_CFLAGS)						\
-	$(THUNAR_VFS_CFLAGS)						\
+	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(GTK_CFLAGS)							\
 	$(GLIB_CFLAGS)							\
 	$(GOBJECT_CFLAGS)
 
 tvp_git_helper_LDFLAGS =						\
 	$(PLATFORM_LIBS)						\
-	$(THUNAR_VFS_LIBS)						\
+	$(LIBXFCE4UTIL_LIBS)						\
 	$(GTK_LIBS)							\
 	$(GLIB_LIBS)							\
 	$(GOBJECT_LIBS)

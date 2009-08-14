@@ -8,7 +8,7 @@ INCLUDES =								\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
 
-extensionsdir = $(libdir)/thunarx-1
+extensionsdir = $(libdir)/thunarx-2
 extensions_LTLIBRARIES =						\
 	thunar-vcs-plugin.la
 
@@ -34,7 +34,8 @@ endif
 thunar_vcs_plugin_la_CFLAGS =						\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
-	$(THUNAR_VFS_CFLAGS)
+	$(EXO_CFLAGS)							\
+	$(LIBXFCE4UTIL_CFLAGS)
 if HAVE_SUBVERSION
 thunar_vcs_plugin_la_CFLAGS +=						\
 	$(APR_CFLAGS)							\
@@ -51,7 +52,8 @@ thunar_vcs_plugin_la_LDFLAGS =						\
 	-module								\
 	$(PLATFORM_LDFLAGS)						\
 	$(THUNARX_LDFLAGS)						\
-	$(THUNAR_VFS_LDFLAGS)
+	$(EXO_LDFLAGS)							\
+	$(LIBXFCE4UTIL_LDFLAGS)
 if HAVE_SUBVERSION
 thunar_vcs_plugin_la_LDFLAGS +=						\
 	$(APR_LDFLAGS)

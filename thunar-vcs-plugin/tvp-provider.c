@@ -29,7 +29,7 @@
 #include <string.h>
 #endif
 
-#include <thunar-vfs/thunar-vfs.h>
+#include <libxfce4util/libxfce4util.h>
 
 #ifdef HAVE_SUBVERSION
 #include <subversion-1/svn_types.h>
@@ -386,8 +386,7 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   GList              *actions = NULL;
   GtkAction          *action;
 #ifdef HAVE_SUBVERSION
-  ThunarVfsPathScheme scheme;
-  ThunarVfsInfo      *info;
+  gchar              *scheme;
   gboolean            parent_wc = FALSE;
   gboolean            directory_is_wc = FALSE;
   gboolean            directory_is_not_wc = FALSE;
@@ -404,13 +403,15 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
   {
     /* check if the file is a local file */
-    info = thunarx_file_info_get_vfs_info (lp->data);
-    scheme = thunar_vfs_path_get_scheme (info->path);
-    thunar_vfs_info_unref (info);
+    scheme = thunarx_file_info_get_uri_scheme (lp->data);
 
     /* unable to handle non-local files */
-    if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+    if (G_UNLIKELY (strcmp (scheme, "file")))
+    {
+      g_free (scheme);
       return NULL;
+    }
+    g_free (scheme);
 
     /* check if the parent folder is a working copy */
     if (!parent_wc && tvp_is_parent_working_copy (lp->data))
@@ -476,18 +477,19 @@ tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 {
   GtkAction          *action;
   GList              *actions = NULL;
-  ThunarVfsPathScheme scheme;
-  ThunarVfsInfo      *info;
+  gchar              *scheme;
   GList              *files;
 
   /* check if the file is a local file */
-  info = thunarx_file_info_get_vfs_info (folder);
-  scheme = thunar_vfs_path_get_scheme (info->path);
-  thunar_vfs_info_unref (info);
+  scheme = thunarx_file_info_get_uri_scheme (folder);
 
   /* unable to handle non-local files */
-  if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+  if (G_UNLIKELY (strcmp (scheme, "file")))
+  {
+    g_free (scheme);
     return NULL;
+  }
+  g_free (scheme);
 
   files = g_list_append (NULL, folder);
 
@@ -521,17 +523,18 @@ tvp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
   if (g_list_length (files) == 1)
   {
     gboolean            is_vc = FALSE;
-    ThunarVfsPathScheme scheme;
-    ThunarVfsInfo      *info;
+    gchar              *scheme;
 
     /* check if the file is a local file */
-    info = thunarx_file_info_get_vfs_info (files->data);
-    scheme = thunar_vfs_path_get_scheme (info->path);
-    thunar_vfs_info_unref (info);
+    scheme = thunarx_file_info_get_uri_scheme (files->data);
 
     /* unable to handle non-local files */
-    if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+    if (G_UNLIKELY (strcmp (scheme, "file")))
+    {
+      g_free (scheme);
       return NULL;
+    }
+    g_free (scheme);
 
     if (thunarx_file_info_is_directory (files->data))
     {
@@ -574,6 +577,7 @@ tvp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
 static void
 tvp_child_watch (GPid pid, gint status, gpointer data)
 {
+  /*
   gchar *watch_path = data;
 
   if (G_LIKELY (data))
@@ -595,7 +599,7 @@ tvp_child_watch (GPid pid, gint status, gpointer data)
     //this is done by destroy callback
     //g_free (watch_path);
   }
-
+  */
   g_spawn_close_pid (pid);
 }
 

@@ -20,6 +20,8 @@
 #ifndef __TVP_SVN_BACKEND_H__
 #define __TVP_SVN_BACKEND_H__
 
+#include <glib.h>
+
 G_BEGIN_DECLS;
 
 typedef struct

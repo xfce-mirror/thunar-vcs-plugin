@@ -26,7 +26,7 @@
 #include <glib/gprintf.h>
 #include <gtk/gtk.h>
 
-#include <thunar-vfs/thunar-vfs.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include "tgh-add.h"
 #include "tgh-branch.h"

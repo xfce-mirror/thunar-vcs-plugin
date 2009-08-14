@@ -19,7 +19,6 @@
 #include <config.h>
 #endif
 
-#include <thunar-vfs/thunar-vfs.h>
 #include <gtk/gtk.h>
 
 #include "tsh-dialog-common.h"
