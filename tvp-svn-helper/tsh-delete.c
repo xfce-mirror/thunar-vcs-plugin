@@ -124,7 +124,7 @@ GThread *tsh_delete (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	GtkWidget *dialog;
 	struct thread_args *args;
 
-  dialog = tsh_file_selection_dialog_new (_("Delete"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_MODIFIED|TSH_FILE_SELECTION_FLAG_UNCHANGED, ctx, pool);
+  dialog = tsh_file_selection_dialog_new (_("Delete"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_UNCHANGED, ctx, pool);
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);

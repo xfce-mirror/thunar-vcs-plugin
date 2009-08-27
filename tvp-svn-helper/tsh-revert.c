@@ -53,7 +53,7 @@ static gpointer revert_thread (gpointer user_data)
 	apr_pool_t *subpool, *pool = args->pool;
 	TshNotifyDialog *dialog = args->dialog;
 	gchar **files = args->files;
-	gint size;
+	gint size, i;
   gchar *error_str;
 
 	g_free (args);
@@ -66,9 +66,9 @@ static gpointer revert_thread (gpointer user_data)
 	{
 		paths = apr_array_make (subpool, size, sizeof (const char *));
 		
-		while (size--)
+		for (i=0; i < size; i++)
 		{
-			APR_ARRAY_PUSH (paths, const char *) = files[size];
+			APR_ARRAY_PUSH (paths, const char *) = files[i];
 		}
 	}
 	else
@@ -109,7 +109,7 @@ GThread *tsh_revert (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	GtkWidget *dialog;
 	struct thread_args *args;
 
-  dialog = tsh_file_selection_dialog_new (_("Revert"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_MODIFIED, ctx, pool);
+  dialog = tsh_file_selection_dialog_new (_("Revert"), NULL, 0, files, TSH_FILE_SELECTION_FLAG_RECURSIVE|TSH_FILE_SELECTION_FLAG_MODIFIED|TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN, ctx, pool);
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);
