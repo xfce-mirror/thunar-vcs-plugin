@@ -2,13 +2,15 @@
 # Copyright (C) 2007 THE thunar-svn-plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the thunar-svn-plugin package.
 # Harald Servat <redcrash@gmail.com>, 2009
+# Carles Muñoz Gorriz <carlesmu@internautas.org>, 2009
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-07-25 01:00+0200\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Harald Servat <redcrash@gmail.com>\n"
+"Last-Translator: Carles Muñoz Gorriz <carlesmu@internautas.org>\n"
 "Language-Team: Harald Servat <redcrash@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +27,11 @@ msgstr "SVN"
 #. append the git submenu action
 #: thunar-vcs-plugin/tvp-provider.c:462 thunar-vcs-plugin/tvp-provider.c:503
 msgid "GIT"
-msgstr ""
+msgstr "GIT"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298
 msgid "Menu|Add"
-msgstr "Afegir"
+msgstr "Afegeix"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298 tvp-svn-helper/main.c:246
 #: tvp-svn-helper/tsh-add.c:113 tvp-svn-helper/tsh-add.c:126
@@ -39,7 +41,7 @@ msgstr "Afegir"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:303
 msgid "Menu|Blame"
-msgstr "Culpar"
+msgstr "Culpa"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:303 tvp-svn-helper/main.c:250
 #: tvp-svn-helper/main.c:254 tvp-svn-helper/tsh-blame-dialog.c:133
@@ -56,7 +58,7 @@ msgstr "Llista de canvis"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:320
 msgid "Menu|Checkout"
-msgstr "Obtenir"
+msgstr "Obté"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:320 tvp-svn-helper/main.c:258
 #: tvp-svn-helper/tsh-checkout.c:98 tvp-svn-helper/tsh-checkout.c:110
@@ -65,7 +67,7 @@ msgstr "Obtenir"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:325
 msgid "Menu|Cleanup"
-msgstr "Netejar"
+msgstr "Neteja"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:325 tvp-svn-helper/main.c:262
 msgid "Cleanup"
@@ -73,16 +75,16 @@ msgstr "Netejar"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:330
 msgid "Menu|Commit"
-msgstr "Confirmació"
+msgstr "Publica"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:330 tvp-svn-helper/main.c:266
 #: tvp-svn-helper/tsh-commit.c:127 tvp-svn-helper/tsh-commit.c:140
 msgid "Commit"
-msgstr "Confirmació"
+msgstr "Publicar"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:335
 msgid "Menu|Copy"
-msgstr "Copiar"
+msgstr "Copia"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:335 tvp-svn-helper/main.c:270
 #: tvp-svn-helper/tsh-copy.c:165
@@ -91,7 +93,7 @@ msgstr "Copiar"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:340
 msgid "Menu|Delete"
-msgstr "Esborrar"
+msgstr "Esborra"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:340 tvp-svn-helper/main.c:274
 #: tvp-svn-helper/tsh-delete.c:127 tvp-svn-helper/tsh-delete.c:140
@@ -108,7 +110,7 @@ msgstr "Diferències"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:350
 msgid "Menu|Export"
-msgstr "Exportar"
+msgstr "Exporta"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:350 tvp-svn-helper/main.c:278
 #: tvp-svn-helper/tsh-export.c:107 tvp-svn-helper/tsh-export.c:125
@@ -117,7 +119,7 @@ msgstr "Exportar"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:355
 msgid "Menu|Import"
-msgstr "Importar"
+msgstr "Importa"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:355 tvp-svn-helper/main.c:282
 #: tvp-svn-helper/tsh-import.c:102 tvp-svn-helper/tsh-import.c:120
@@ -134,7 +136,7 @@ msgstr "Informació"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:370
 msgid "Menu|Lock"
-msgstr "Bloquejar"
+msgstr "Bloqueja"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:370 tvp-svn-helper/main.c:286
 #: tvp-svn-helper/tsh-lock-dialog.c:72 tvp-svn-helper/tsh-lock.c:130
@@ -152,7 +154,7 @@ msgstr "Registre"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:390
 msgid "Menu|Move"
-msgstr "Moure"
+msgstr "Mou"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:390 tvp-svn-helper/main.c:294
 #: tvp-svn-helper/tsh-move.c:156
@@ -161,20 +163,20 @@ msgstr "Moure"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:401
 msgid "Menu|Edit Properties"
-msgstr "Editar propietats"
+msgstr "Edita les propietats"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:401
 msgid "Edit Properties"
-msgstr "Editar propietats"
+msgstr "Editar les propietats"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:406
 msgid "Menu|Relocate"
-msgstr "Deslocalitzar"
+msgstr "Re-ubica"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:406 tvp-svn-helper/main.c:306
 #: tvp-svn-helper/tsh-relocate-dialog.c:217 tvp-svn-helper/tsh-relocate.c:114
 msgid "Relocate"
-msgstr "Deslocalitzar"
+msgstr "Re-ubicar"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:412
 msgid "Menu|Resolved"
@@ -188,7 +190,7 @@ msgstr "Resolt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:417
 msgid "Menu|Resolve"
-msgstr "Resoldre"
+msgstr "Resol"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:417
 msgid "Resolve"
@@ -196,7 +198,7 @@ msgstr "Resoldre"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:422
 msgid "Menu|Revert"
-msgstr "Restituir"
+msgstr "Restitueix"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:422 tvp-svn-helper/main.c:310
 #: tvp-svn-helper/tsh-revert.c:112 tvp-svn-helper/tsh-revert.c:125
@@ -217,7 +219,7 @@ msgstr "Estat"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:432
 msgid "Menu|Switch"
-msgstr "Canviar"
+msgstr "Canvia"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:432 tvp-svn-helper/main.c:318
 #: tvp-svn-helper/tsh-switch.c:109 tvp-svn-helper/tsh-switch.c:122
@@ -226,7 +228,7 @@ msgstr "Canviar"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:437
 msgid "Menu|Unlock"
-msgstr "Desbloquejar"
+msgstr "Desbloqueja"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:437 tvp-svn-helper/main.c:322
 #: tvp-svn-helper/tsh-unlock.c:111
@@ -235,7 +237,7 @@ msgstr "Desbloquejar"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:442
 msgid "Menu|Update"
-msgstr "Actualitzar"
+msgstr "Actualitza"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:442 tvp-svn-helper/main.c:326
 #: tvp-svn-helper/tsh-update.c:113
@@ -272,11 +274,11 @@ msgstr "Revisió:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:143
 msgid "Repository:"
-msgstr "Repositori:"
+msgstr "Diposit:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:161
 msgid "Modified revision:"
-msgstr "Revisió de modificació:"
+msgstr "Revisió modificada:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:173
 msgid "Modified date:"
@@ -300,7 +302,7 @@ msgstr "Profunditat:"
 #.
 #: thunar-vcs-plugin/tvp-svn-property-page.c:306
 msgid "Exclude"
-msgstr "Excloure"
+msgstr "Exclouu"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
@@ -340,75 +342,75 @@ msgstr "Infinitat"
 
 #: tvp-svn-helper/main.c:105 tvp-git-helper/main.c:64
 msgid "Print version information"
-msgstr "Imprimir informació de la versió"
+msgstr "Mostra informació de la versió"
 
 #: tvp-svn-helper/main.c:112 tvp-git-helper/main.c:71
 msgid "Execute add action"
-msgstr "Executar l'acció d'afegir"
+msgstr "Executa l'acció d'afegir"
 
 #: tvp-svn-helper/main.c:118
 msgid "Execute blame action"
-msgstr "Executar l'acció de culpar"
+msgstr "Executa l'acció de culpar"
 
 #: tvp-svn-helper/main.c:124
 msgid "Execute changelist action"
-msgstr "Executar l'acció de llista de canvis"
+msgstr "Executa l'acció de llista de canvis"
 
 #: tvp-svn-helper/main.c:130
 msgid "Execute checkout action"
-msgstr "Executar l'acció d'obtenir"
+msgstr "Executa l'acció d'obtenir"
 
 #: tvp-svn-helper/main.c:136
 msgid "Execute cleanup action"
-msgstr "Executar l'acció de netejar"
+msgstr "Executa l'acció de netejar"
 
 #: tvp-svn-helper/main.c:142
 msgid "Execute commit action"
-msgstr "Executar l'acció de confirmar"
+msgstr "Executa l'acció de publicar"
 
 #: tvp-svn-helper/main.c:148
 msgid "Execute copy action"
-msgstr "Executar l'acció de copiar"
+msgstr "Executa l'acció de copiar"
 
 #: tvp-svn-helper/main.c:154
 msgid "Execute delete action"
-msgstr "Executar l'acció d'esborrar"
+msgstr "Executa l'acció d'esborrar"
 
 #: tvp-svn-helper/main.c:160
 msgid "Execute export action"
-msgstr "Executar l'acció d'exportar"
+msgstr "Executa l'acció d'exportar"
 
 #: tvp-svn-helper/main.c:166
 msgid "Execute import action"
-msgstr "Executar l'acció d'importar"
+msgstr "Executa l'acció d'importar"
 
 #: tvp-svn-helper/main.c:172
 msgid "Execute lock action"
-msgstr "Executar l'acció de bloquejar"
+msgstr "Executa l'acció de bloquejar"
 
 #: tvp-svn-helper/main.c:178
 msgid "Execute log action"
-msgstr "Executar l'acció de registre"
+msgstr "Executa l'acció de registre"
 
 #: tvp-svn-helper/main.c:184
 msgid "Execute move action"
-msgstr "Executar l'acció de moure"
+msgstr "Executa l'acció de moure"
 
 #: tvp-svn-helper/main.c:190
 msgid "Execute properties action"
-msgstr "Executar l'acció de propietats"
+msgstr "Executa l'acció de propietats"
 
 #: tvp-svn-helper/main.c:196
 msgid "Execute resolved action"
-msgstr "Executar l'acció de resoldre"
+msgstr "Executa l'acció de resoldre"
 
 #: tvp-svn-helper/main.c:202
 msgid "Execute relocate action"
-msgstr "Executar l'acció de deslocalitzar"
+msgstr "Executa l'acció de re-ubicar"
 
 #: tvp-svn-helper/main.c:208
 msgid "Execute revert action"
-msgstr "Executar l'acció de restituir"
+msgstr "Executa l'acció de restituir"
 
 #: tvp-svn-helper/main.c:214 tvp-git-helper/main.c:89
 msgid "Execute status action"
@@ -448,7 +450,7 @@ msgstr "Opcions relatives a netejar:"
 
 #: tvp-svn-helper/main.c:266
 msgid "Commit Related Options:"
-msgstr "Opcions relatives a confirmar:"
+msgstr "Opcions relatives a publicar:"
 
 #: tvp-svn-helper/main.c:270
 msgid "Copy Related Options:"
@@ -494,7 +496,7 @@ msgstr "Opcions relatives a resoldre:"
 
 #: tvp-svn-helper/main.c:306
 msgid "Relocate Related Options:"
-msgstr "Opcions relatives a deslocalitzar:"
+msgstr "Opcions relatives a re-ubicar:"
 
 #: tvp-svn-helper/main.c:310
 msgid "Revert Related Options:"
@@ -583,11 +585,11 @@ msgstr "Completat"
 
 #: tvp-svn-helper/tsh-commit.c:145
 msgid "Commit Message"
-msgstr "Missatge de confirmació"
+msgstr "Missatge de publicació"
 
 #: tvp-svn-helper/tsh-common.c:270
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Desa la contrasenya com a text pla"
 
 #: tvp-svn-helper/tsh-common.c:494 tvp-svn-helper/tsh-common.c:503
 #: tvp-svn-helper/tsh-common.c:510 tvp-svn-helper/tsh-common.c:632
@@ -689,49 +691,40 @@ msgid "Replace"
 msgstr "Substituir"
 
 #: tvp-svn-helper/tsh-common.c:527
-#, fuzzy
 msgid "Property added"
-msgstr "Han fallat les propietats"
+msgstr "Propietat afegida"
 
 #: tvp-svn-helper/tsh-common.c:528
-#, fuzzy
 msgid "Property modified"
-msgstr "Han fallat les propietats"
+msgstr "Propietat modificada"
 
 #: tvp-svn-helper/tsh-common.c:529
-#, fuzzy
 msgid "Property deleted"
-msgstr "Han fallat les propietats"
+msgstr "Propietat esborrada"
 
 #: tvp-svn-helper/tsh-common.c:530
-#, fuzzy
 msgid "Property nonexisting"
-msgstr "Propietats"
+msgstr "Propietat inexistent"
 
 #: tvp-svn-helper/tsh-common.c:531
-#, fuzzy
 msgid "Revision property set"
-msgstr "No s'ha pogut establir la propietat"
+msgstr "Propietat de revisió fixada"
 
 #: tvp-svn-helper/tsh-common.c:532
-#, fuzzy
 msgid "Revision property deleted"
-msgstr "No s'ha pogut establir la propietat"
+msgstr "Propietat de revisió esborrada"
 
 #: tvp-svn-helper/tsh-common.c:533
-#, fuzzy
 msgid "Merge completed"
-msgstr "Completat"
+msgstr "Fusió completada"
 
 #: tvp-svn-helper/tsh-common.c:534
-#, fuzzy
 msgid "Tree conflict"
-msgstr "Està en conflicte"
+msgstr "Conflicte d'arbre"
 
 #: tvp-svn-helper/tsh-common.c:535
-#, fuzzy
 msgid "External failed"
-msgstr "Extern"
+msgstr "Fallida externa"
 
 #: tvp-svn-helper/tsh-common.c:596
 msgid "Inapplicable"
@@ -781,7 +774,7 @@ msgstr "Còpia local"
 
 #: tvp-svn-helper/tsh-copy.c:147
 msgid "Copy To"
-msgstr "Copiar a"
+msgstr "Copia a"
 
 #: tvp-svn-helper/tsh-delete.c:108
 msgid "Local delete"
@@ -802,7 +795,7 @@ msgstr "Seleccioneu un fitxer"
 #: tvp-svn-helper/tsh-file-dialog.c:78 tvp-svn-helper/tsh-login-dialog.c:98
 #: tvp-svn-helper/tsh-trust-dialog.c:73
 msgid "Remember"
-msgstr "Recordar"
+msgstr "Recorda"
 
 #: tvp-svn-helper/tsh-file-dialog.c:86
 msgid "Certificate"
@@ -869,7 +862,7 @@ msgstr "Moviment local"
 
 #: tvp-svn-helper/tsh-move.c:136
 msgid "Move To"
-msgstr "Moure a"
+msgstr "Mou a"
 
 #: tvp-svn-helper/tsh-notify-dialog.c:100
 msgid "Mime type"
@@ -896,7 +889,7 @@ msgstr "Valor"
 #: tvp-svn-helper/tsh-properties-dialog.c:209
 #: tvp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
-msgstr "Propi"
+msgstr "Només ell"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are updated
@@ -955,15 +948,15 @@ msgstr "D_irectori:"
 
 #: tvp-svn-helper/tsh-relocate.c:71
 msgid "Relocate failed"
-msgstr "La deslocalització ha fallat"
+msgstr "La re-ubicació ha fallat"
 
 #: tvp-svn-helper/tsh-relocate.c:86
 msgid "Relocate finished"
-msgstr "La deslocalització ha finalitzat"
+msgstr "La re-ubicació ha finalitzat"
 
 #: tvp-svn-helper/tsh-relocate.c:128
 msgid "Relocating ..."
-msgstr "Deslocalitzant ..."
+msgstr "Re-ubicant…"
 
 #: tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
@@ -1015,52 +1008,46 @@ msgstr "L'autoritat del certificat és desconeguda."
 
 #: tvp-svn-helper/tsh-trust-dialog.c:70
 msgid "Other failure."
-msgstr "Un altre tipus d'error."
+msgstr "Un altre error."
 
 #: tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
 msgstr "Confiança"
 
 #: tvp-git-helper/main.c:77
-#, fuzzy
 msgid "Execute branch action"
-msgstr "Executar l'acció de culpar"
+msgstr "Executa acció de branca"
 
 #: tvp-git-helper/main.c:83
-#, fuzzy
 msgid "Execute reset action"
-msgstr "Executar l'acció de restituir"
+msgstr "Executa acció de reiniciar"
 
 #: tvp-git-helper/main.c:102
-#, fuzzy
 msgid "Branch Related Options:"
-msgstr "Opcions relatives a culpar:"
+msgstr "Opcions relatives a la branca:"
 
 #: tvp-git-helper/main.c:102 tvp-git-helper/tgh-branch-dialog.c:119
 msgid "Branch"
-msgstr ""
+msgstr "Branca"
 
 #: tvp-git-helper/main.c:106
-#, fuzzy
 msgid "Reset Related Options:"
-msgstr "Opcions relacionades amb restituir:"
+msgstr "Opcions relatives a reiniciar:"
 
 #: tvp-git-helper/main.c:106 tvp-git-helper/tgh-reset-dialog.c:108
 #: tvp-git-helper/tgh-reset.c:125
-#, fuzzy
 msgid "Reset"
-msgstr "Restituir"
+msgstr "Reiniciar"
 
 #: tvp-git-helper/tgh-add.c:58
-#, fuzzy
 msgid "Add finished"
-msgstr "La neteja ha finalitzat"
+msgstr "S'ha acabar l'afegició"
 
 #: tvp-git-helper/tgh-add.c:126
 msgid "Adding ..."
-msgstr ""
+msgstr "S'està afegint…"
 
 #: tvp-git-helper/tgh-common.c:123
 #: tvp-git-helper/tgh-file-selection-dialog.c:267
 msgid "untracked"
-msgstr ""
+msgstr "sense seguiment"
