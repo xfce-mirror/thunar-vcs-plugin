@@ -1,19 +1,23 @@
 # rench translations for hunar-svn-plugin package
 # Copyright (C) 2007 THE thunar-svn-plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the thunar-svn-plugin package.
-# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
 #
+# Rihards Prieditis <rprieditis@inbox.lv>, 2007.
+# Rihards Prieditis <rprieditis@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-07-25 01:00+0200\n"
-"PO-Revision-Date: 2007-11-15 21:18+0300\n"
-"Last-Translator: Rihards Priedītis <rprieditis@inbox.lv>\n"
-"Language-Team: Latvian <rprieditis@inbox.lv>\n"
+"PO-Revision-Date: 2009-09-18 21:17+0100\n"
+"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
@@ -24,11 +28,11 @@ msgstr "SVN"
 #. append the git submenu action
 #: thunar-vcs-plugin/tvp-provider.c:462 thunar-vcs-plugin/tvp-provider.c:503
 msgid "GIT"
-msgstr ""
+msgstr "GIT"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298
 msgid "Menu|Add"
-msgstr ""
+msgstr "Pievienot"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:298 tvp-svn-helper/main.c:246
 #: tvp-svn-helper/tsh-add.c:113 tvp-svn-helper/tsh-add.c:126
@@ -49,11 +53,11 @@ msgstr "Vainot"
 #: thunar-vcs-plugin/tvp-svn-action.c:315
 #, fuzzy
 msgid "Menu|Changelist"
-msgstr "Izrakstīt"
+msgstr "Izmaiņu saraksts"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:315
 msgid "Changelist"
-msgstr ""
+msgstr "Izmaiņu saraksts"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:320
 #, fuzzy
@@ -77,23 +81,23 @@ msgstr "Uzkopt"
 #: thunar-vcs-plugin/tvp-svn-action.c:330
 #, fuzzy
 msgid "Menu|Commit"
-msgstr "Apstiprināt"
+msgstr "Iesniegt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:330 tvp-svn-helper/main.c:266
 #: tvp-svn-helper/tsh-commit.c:127 tvp-svn-helper/tsh-commit.c:140
 msgid "Commit"
-msgstr "Apstiprināt"
+msgstr "Iesniegt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:335
 #, fuzzy
 msgid "Menu|Copy"
-msgstr "Pabeigts"
+msgstr "Kopēt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:335 tvp-svn-helper/main.c:270
 #: tvp-svn-helper/tsh-copy.c:165
 #, fuzzy
 msgid "Copy"
-msgstr "Pabeigts"
+msgstr "Kopēt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:340
 #, fuzzy
@@ -127,13 +131,13 @@ msgstr "Eksportēt"
 #: thunar-vcs-plugin/tvp-svn-action.c:355
 #, fuzzy
 msgid "Menu|Import"
-msgstr "SVN _Imports"
+msgstr "Imports"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:355 tvp-svn-helper/main.c:282
 #: tvp-svn-helper/tsh-import.c:102 tvp-svn-helper/tsh-import.c:120
 #, fuzzy
 msgid "Import"
-msgstr "SVN _Imports"
+msgstr "Imports"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:360
 #, fuzzy
@@ -156,7 +160,7 @@ msgstr "Slēgt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:375
 msgid "Menu|Log"
-msgstr ""
+msgstr "Reģistrēt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:375 tvp-svn-helper/main.c:290
 #: tvp-svn-helper/tsh-log-dialog.c:201
@@ -165,52 +169,52 @@ msgstr "Reģistrēt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:390
 msgid "Menu|Move"
-msgstr ""
+msgstr "Pārvietot"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:390 tvp-svn-helper/main.c:294
 #: tvp-svn-helper/tsh-move.c:156
 msgid "Move"
-msgstr ""
+msgstr "Pārvietot"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:401
 #, fuzzy
 msgid "Menu|Edit Properties"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rediģēt rekvizītus"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:401
 msgid "Edit Properties"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rediģēt rekvizītus"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:406
 #, fuzzy
 msgid "Menu|Relocate"
-msgstr "Dzēst"
+msgstr "Atiedalīt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:406 tvp-svn-helper/main.c:306
 #: tvp-svn-helper/tsh-relocate-dialog.c:217 tvp-svn-helper/tsh-relocate.c:114
 msgid "Relocate"
-msgstr ""
+msgstr "Atiedalīt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:412
 #, fuzzy
 msgid "Menu|Resolved"
-msgstr "Atpazīt"
+msgstr "Atrisināts"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:412 tvp-svn-helper/main.c:302
 #: tvp-svn-helper/tsh-common.c:500 tvp-svn-helper/tsh-resolved.c:113
 #: tvp-svn-helper/tsh-resolved.c:126
 #, fuzzy
 msgid "Resolved"
-msgstr "Atpazīt"
+msgstr "Atrisināts"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:417
 #, fuzzy
 msgid "Menu|Resolve"
-msgstr "Atpazīt"
+msgstr "Atrisināt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:417
 msgid "Resolve"
-msgstr "Atpazīt"
+msgstr "Atrisināt"
 
 #: thunar-vcs-plugin/tvp-svn-action.c:422
 #, fuzzy
@@ -268,11 +272,11 @@ msgstr "Atjaunot"
 #: thunar-vcs-plugin/tvp-svn-action.c:452
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr ""
+msgstr "Darbība %s nav izstrādāta"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:118
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:124
 #: thunar-vcs-plugin/tvp-svn-property-page.c:137
@@ -287,59 +291,59 @@ msgstr ""
 #: tvp-svn-helper/tsh-common.c:645 tvp-svn-helper/tsh-common.c:672
 #: tvp-svn-helper/tsh-common.c:762
 msgid "Unknown"
-msgstr ""
+msgstr "Nezināms"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:131
 #, fuzzy
 msgid "Revision:"
-msgstr "Revizija: %li"
+msgstr "Revīzija:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:143
 #, fuzzy
 msgid "Repository:"
-msgstr "Atpazīt"
+msgstr "Repozitorijs:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:161
 msgid "Modified revision:"
-msgstr ""
+msgstr "Modifikācijas revīzija:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:173
 msgid "Modified date:"
-msgstr ""
+msgstr "Modifikācijas datums:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:186
 msgid "Author:"
-msgstr ""
+msgstr "Autors:"
 
 #: thunar-vcs-plugin/tvp-svn-property-page.c:203
 msgid "Changelist:"
-msgstr ""
+msgstr "Izmaiņu saraksts:"
 
 #. Translators: Depth as in depth of recursion
 #: thunar-vcs-plugin/tvp-svn-property-page.c:216
 msgid "Depth:"
-msgstr ""
+msgstr "Dziļums: "
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
 #.
 #: thunar-vcs-plugin/tvp-svn-property-page.c:306
 msgid "Exclude"
-msgstr ""
+msgstr "Izkļaut"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
 #.
 #: thunar-vcs-plugin/tvp-svn-property-page.c:312
 msgid "Empty"
-msgstr ""
+msgstr "Tukšs"
 
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked out
 #.
 #: thunar-vcs-plugin/tvp-svn-property-page.c:318
 msgid "Files"
-msgstr ""
+msgstr "Faili"
 
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
@@ -354,14 +358,14 @@ msgstr ""
 #: tvp-svn-helper/tsh-properties-dialog.c:229
 #: tvp-svn-helper/tsh-status-dialog.c:200
 msgid "Immediates"
-msgstr ""
+msgstr "Tūlītējs"
 
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full recursion
 #.
 #: thunar-vcs-plugin/tvp-svn-property-page.c:330
 msgid "Infinity"
-msgstr ""
+msgstr "Bezgalīgi"
 
 #: tvp-svn-helper/main.c:105 tvp-git-helper/main.c:64
 msgid "Print version information"
@@ -370,17 +374,17 @@ msgstr "Izdrukāt versijas informāciju"
 #: tvp-svn-helper/main.c:112 tvp-git-helper/main.c:71
 #, fuzzy
 msgid "Execute add action"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izpildīt pievienošanas darbību"
 
 #: tvp-svn-helper/main.c:118
 #, fuzzy
 msgid "Execute blame action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt vainošanas darbību"
 
 #: tvp-svn-helper/main.c:124
 #, fuzzy
 msgid "Execute changelist action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt izmaiņu saraksta darbību"
 
 #: tvp-svn-helper/main.c:130
 msgid "Execute checkout action"
@@ -389,187 +393,187 @@ msgstr "Izpildīt izrakstīšanas darbību"
 #: tvp-svn-helper/main.c:136
 #, fuzzy
 msgid "Execute cleanup action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt uzkopšanas darbību"
 
 #: tvp-svn-helper/main.c:142
 #, fuzzy
 msgid "Execute commit action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt iesniegšanas darbību"
 
 #: tvp-svn-helper/main.c:148
 #, fuzzy
 msgid "Execute copy action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt kopēšanas darbību"
 
 #: tvp-svn-helper/main.c:154
 #, fuzzy
 msgid "Execute delete action"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izpildīt dzēšanas darbību"
 
 #: tvp-svn-helper/main.c:160
 #, fuzzy
 msgid "Execute export action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt eksportēšanas darbību"
 
 #: tvp-svn-helper/main.c:166
 #, fuzzy
 msgid "Execute import action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt importēšanas darbību"
 
 #: tvp-svn-helper/main.c:172
 #, fuzzy
 msgid "Execute lock action"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izpildīt noslēgšanas darbību"
 
 #: tvp-svn-helper/main.c:178
 #, fuzzy
 msgid "Execute log action"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izpildīt reģistrēšanas darbību"
 
 #: tvp-svn-helper/main.c:184
 #, fuzzy
 msgid "Execute move action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt pārvietošanas darbību"
 
 #: tvp-svn-helper/main.c:190
 #, fuzzy
 msgid "Execute properties action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt rekvizītu darbību"
 
 #: tvp-svn-helper/main.c:196
 #, fuzzy
 msgid "Execute resolved action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt atrisināts darbību"
 
 #: tvp-svn-helper/main.c:202
 #, fuzzy
 msgid "Execute relocate action"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izpildīt atiedalīt darbību"
 
 #: tvp-svn-helper/main.c:208
 #, fuzzy
 msgid "Execute revert action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt atgriezt darbību"
 
 #: tvp-svn-helper/main.c:214 tvp-git-helper/main.c:89
 #, fuzzy
 msgid "Execute status action"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izpildīt statusa darbību"
 
 #: tvp-svn-helper/main.c:220
 #, fuzzy
 msgid "Execute switch action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt pārslēgšanas darbību"
 
 #: tvp-svn-helper/main.c:226
 #, fuzzy
 msgid "Execute unlock action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt atslēgt darbību"
 
 #: tvp-svn-helper/main.c:232
 msgid "Execute update action"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izpildīt atjaunot darbību"
 
 #: tvp-svn-helper/main.c:246 tvp-git-helper/main.c:98
 msgid "Add Related Options:"
-msgstr ""
+msgstr "Pievienot saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:250
 #, fuzzy
 msgid "Blame Related Options:"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Vainot saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:254
 #, fuzzy
 msgid "Changelist Related Options:"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izmaiņu saraksta saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:258
 #, fuzzy
 msgid "Checkout Related Options:"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Izrakstīšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:262
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Uzkopšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:266
 msgid "Commit Related Options:"
-msgstr ""
+msgstr "Iesniegšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:270
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Kopēšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:274
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Dzēšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:278
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Eksporta saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:282
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Importa saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:286
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Noslēgšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:290
 msgid "Log Related Options:"
-msgstr ""
+msgstr "Reģistrēšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:294
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Pārvietošanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:298
 #, fuzzy
 msgid "Properties Related Options:"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rekvizītu saistītās opcijas:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: tvp-svn-helper/main.c:298 tvp-svn-helper/tsh-properties-dialog.c:283
 #, fuzzy
 msgid "Properties"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rekvizīti"
 
 #: tvp-svn-helper/main.c:302
 msgid "Resolved Related Options:"
-msgstr ""
+msgstr "Atrisināts saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:306
 #, fuzzy
 msgid "Relocate Related Options:"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Atiedalīt saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:310
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Atgriezt saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:314 tvp-git-helper/main.c:110
 msgid "Status Related Options:"
-msgstr ""
+msgstr "Statusa saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:318
 #, fuzzy
 msgid "Switch Related Options:"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Pārslēgšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:322
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Atslēgšanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:326
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Atjaunošanas saistītās opcijas:"
 
 #: tvp-svn-helper/main.c:369
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Nav norādīti pietiekams argumentu daudzums"
 
 #: tvp-svn-helper/tsh-add.c:73 tvp-svn-helper/tsh-add.c:89
 #: tvp-svn-helper/tsh-checkout.c:71 tvp-svn-helper/tsh-commit.c:91
@@ -580,57 +584,57 @@ msgstr ""
 #: tvp-svn-helper/tsh-revert.c:87 tvp-svn-helper/tsh-switch.c:71
 #: tvp-svn-helper/tsh-unlock.c:86 tvp-svn-helper/tsh-update.c:88
 msgid "Failed"
-msgstr ""
+msgstr "Neizdevās"
 
 #: tvp-svn-helper/tsh-blame-dialog.c:94
 #, fuzzy
 msgid "Line"
-msgstr "Pieteikties"
+msgstr "Rinda"
 
 #: tvp-svn-helper/tsh-blame-dialog.c:100 tvp-svn-helper/tsh-log-dialog.c:118
 #, fuzzy
 msgid "Revision"
-msgstr "Revizija: %li"
+msgstr "Revīzija"
 
 #: tvp-svn-helper/tsh-blame-dialog.c:106 tvp-svn-helper/tsh-log-dialog.c:124
 msgid "Author"
-msgstr ""
+msgstr "Autors"
 
 #: tvp-svn-helper/tsh-blame-dialog.c:112 tvp-svn-helper/tsh-log-dialog.c:130
 #, fuzzy
 msgid "Date"
-msgstr "Status"
+msgstr "Datums"
 
 #: tvp-svn-helper/tsh-blame.c:75
 #, fuzzy
 msgid "Blame failed"
-msgstr "Atgriezt"
+msgstr "Vainot neizdevās"
 
 #: tvp-svn-helper/tsh-cleanup.c:66
 #, fuzzy
 msgid "Cleanup failed"
-msgstr "Uzkopt"
+msgstr "Uzkopt neizdevās"
 
 #: tvp-svn-helper/tsh-cleanup.c:81
 #, fuzzy
 msgid "Cleanup finished"
-msgstr "Uzkopt"
+msgstr "Uzkopšana pabeigta"
 
 #: tvp-svn-helper/tsh-cleanup.c:95
 #, fuzzy
 msgid "Cleaning up ..."
-msgstr "Uzkopt"
+msgstr "Uzkopšana..."
 
 #: tvp-svn-helper/tsh-commit.c:103 tvp-svn-helper/tsh-common.c:719
 #: tvp-svn-helper/tsh-copy.c:99 tvp-svn-helper/tsh-delete.c:103
 #: tvp-svn-helper/tsh-import.c:82 tvp-svn-helper/tsh-move.c:89
 #, fuzzy, c-format
 msgid "At revision: %ld"
-msgstr "Revizija: %li"
+msgstr "Revīzija:"
 
 #: tvp-svn-helper/tsh-commit.c:108
 msgid "Nothing to do"
-msgstr ""
+msgstr "Nav ko darīt"
 
 #: tvp-svn-helper/tsh-commit.c:114 tvp-svn-helper/tsh-common.c:505
 #: tvp-svn-helper/tsh-common.c:507 tvp-svn-helper/tsh-copy.c:110
@@ -642,11 +646,11 @@ msgstr "Pabeigts"
 #: tvp-svn-helper/tsh-commit.c:145
 #, fuzzy
 msgid "Commit Message"
-msgstr "Apstiprināt"
+msgstr "Iesniegšanas ziņa"
 
 #: tvp-svn-helper/tsh-common.c:270
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Glabāt paroli kā atklātu tekstu?"
 
 #: tvp-svn-helper/tsh-common.c:494 tvp-svn-helper/tsh-common.c:503
 #: tvp-svn-helper/tsh-common.c:510 tvp-svn-helper/tsh-common.c:632
@@ -657,7 +661,7 @@ msgstr "Pievienots"
 #: tvp-svn-helper/tsh-common.c:495 tvp-svn-helper/tsh-common.c:777
 #, fuzzy
 msgid "Copied"
-msgstr "Pabeigts"
+msgstr "Nokopēts"
 
 #: tvp-svn-helper/tsh-common.c:496 tvp-svn-helper/tsh-common.c:502
 #: tvp-svn-helper/tsh-common.c:511 tvp-svn-helper/tsh-common.c:634
@@ -668,21 +672,21 @@ msgstr "Dzēsts"
 #: tvp-svn-helper/tsh-common.c:497
 #, fuzzy
 msgid "Restored"
-msgstr "Atpazīt"
+msgstr "Atjaunots"
 
 #: tvp-svn-helper/tsh-common.c:498
 #, fuzzy
 msgid "Reverted"
-msgstr "Atgriezt"
+msgstr "Atgrieztais"
 
 #: tvp-svn-helper/tsh-common.c:499
 #, fuzzy
 msgid "Revert failed"
-msgstr "Atgriezt"
+msgstr "Atgriešana neizdevās"
 
 #: tvp-svn-helper/tsh-common.c:501
 msgid "Skipped"
-msgstr ""
+msgstr "Izlaists"
 
 #: tvp-svn-helper/tsh-common.c:504
 msgid "Updated"
@@ -696,16 +700,16 @@ msgstr "Ārējs"
 #: tvp-svn-helper/tsh-common.c:509 tvp-svn-helper/tsh-common.c:636
 #: tvp-svn-helper/tsh-common.c:683 tvp-svn-helper/tsh-common.c:773
 msgid "Modified"
-msgstr ""
+msgstr "Modificēts"
 
 #: tvp-svn-helper/tsh-common.c:512 tvp-svn-helper/tsh-common.c:635
 #: tvp-svn-helper/tsh-common.c:686 tvp-svn-helper/tsh-common.c:766
 msgid "Replaced"
-msgstr ""
+msgstr "Aizvietos"
 
 #: tvp-svn-helper/tsh-common.c:513
 msgid "Transmitting"
-msgstr ""
+msgstr "Pārraida"
 
 #: tvp-svn-helper/tsh-common.c:515
 #, fuzzy
@@ -719,164 +723,151 @@ msgstr "Atslēgt"
 
 #: tvp-svn-helper/tsh-common.c:517
 msgid "Lock failed"
-msgstr ""
+msgstr "Slēgšana neizdevās"
 
 #: tvp-svn-helper/tsh-common.c:518
 #, fuzzy
 msgid "Unlock failed"
-msgstr "Atslēgt"
+msgstr "Atslēgšana neizdevās"
 
 #: tvp-svn-helper/tsh-common.c:519
 msgid "Exists"
-msgstr ""
+msgstr "Eksistē"
 
 #: tvp-svn-helper/tsh-common.c:520
 msgid "Changelist set"
-msgstr ""
+msgstr "Izmaiņu saraksta komplekts"
 
 #: tvp-svn-helper/tsh-common.c:521
 msgid "Changelist cleared"
-msgstr ""
+msgstr "Izmaiņu saraksts notīrīts"
 
 #: tvp-svn-helper/tsh-common.c:522
 msgid "Changelist moved"
-msgstr ""
+msgstr "Izmaiņu saraksts pārvietots"
 
 #: tvp-svn-helper/tsh-common.c:523
 msgid "Merge begin"
-msgstr ""
+msgstr "Apvienošana sākta"
 
 #: tvp-svn-helper/tsh-common.c:524
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Ārzemnieka apvienošana sākta"
 
 #: tvp-svn-helper/tsh-common.c:525
 msgid "Replace"
-msgstr ""
+msgstr "Aizvietot"
 
 #: tvp-svn-helper/tsh-common.c:527
-#, fuzzy
 msgid "Property added"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rekvizīts pievienots"
 
 #: tvp-svn-helper/tsh-common.c:528
-#, fuzzy
 msgid "Property modified"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rekvizīts modificēts"
 
 #: tvp-svn-helper/tsh-common.c:529
-#, fuzzy
 msgid "Property deleted"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rekvizīts dzēsts"
 
 #: tvp-svn-helper/tsh-common.c:530
-#, fuzzy
 msgid "Property nonexisting"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Neeksistējošs rekvizīts"
 
 #: tvp-svn-helper/tsh-common.c:531
-#, fuzzy
 msgid "Revision property set"
-msgstr "Atgriezt"
+msgstr "Revīzijas rekvizīts uzstādīts"
 
 #: tvp-svn-helper/tsh-common.c:532
-#, fuzzy
 msgid "Revision property deleted"
-msgstr "Atgriezt"
+msgstr "Revīzijas rekvizīts dzēsts"
 
 #: tvp-svn-helper/tsh-common.c:533
-#, fuzzy
 msgid "Merge completed"
-msgstr "Pabeigts"
+msgstr "Apvienošana pabeigta"
 
 #: tvp-svn-helper/tsh-common.c:534
-#, fuzzy
 msgid "Tree conflict"
-msgstr "Pabeigts"
+msgstr "Koka konflikts"
 
 #: tvp-svn-helper/tsh-common.c:535
-#, fuzzy
 msgid "External failed"
-msgstr "Ārējs"
+msgstr "Ārējais neizdevās"
 
 #: tvp-svn-helper/tsh-common.c:596
 msgid "Inapplicable"
-msgstr ""
+msgstr "Nepielietojams"
 
 #: tvp-svn-helper/tsh-common.c:598
 msgid "Unchanged"
-msgstr ""
+msgstr "Nemainīts"
 
 #: tvp-svn-helper/tsh-common.c:599 tvp-svn-helper/tsh-common.c:633
 msgid "Missing"
-msgstr ""
+msgstr "Trūkst"
 
 #: tvp-svn-helper/tsh-common.c:600 tvp-svn-helper/tsh-common.c:640
 msgid "Obstructed"
-msgstr ""
+msgstr "Traucēts"
 
 #: tvp-svn-helper/tsh-common.c:601
 msgid "Changed"
-msgstr ""
+msgstr "Mainīts"
 
 #: tvp-svn-helper/tsh-common.c:602 tvp-svn-helper/tsh-common.c:637
 msgid "Merged"
-msgstr ""
+msgstr "Apvienots"
 
 #: tvp-svn-helper/tsh-common.c:603 tvp-svn-helper/tsh-common.c:638
-#, fuzzy
 msgid "Conflicted"
-msgstr "Pabeigts"
+msgstr "Konfliktēts"
 
 #. N_("None"),
 #. N_("Unversioned"),
 #: tvp-svn-helper/tsh-common.c:631
 msgid "Normal"
-msgstr ""
+msgstr "Parasts"
 
 #: tvp-svn-helper/tsh-common.c:639
 msgid "Ignored"
-msgstr ""
+msgstr "Ignorēts"
 
 #: tvp-svn-helper/tsh-common.c:642
-#, fuzzy
 msgid "Incomplete"
-msgstr "Pabeigts"
+msgstr "Nepabeigts"
 
 #: tvp-svn-helper/tsh-copy.c:104
 msgid "Local copy"
-msgstr ""
+msgstr "Lokāla kopija"
 
 #: tvp-svn-helper/tsh-copy.c:147
 msgid "Copy To"
-msgstr ""
+msgstr "Kopēt uz"
 
 #: tvp-svn-helper/tsh-delete.c:108
 msgid "Local delete"
-msgstr ""
+msgstr "Lokāli dzēst"
 
 #: tvp-svn-helper/tsh-delete.c:145
-#, fuzzy
 msgid "Delete Message"
-msgstr "Apstiprināt"
+msgstr "Dzēšanas ziņa"
 
 #: tvp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
-msgstr ""
+msgstr "_Sertifikāts:"
 
 #: tvp-svn-helper/tsh-file-dialog.c:67
 msgid "Select a file"
-msgstr ""
+msgstr "Atlasīt failu"
 
 #: tvp-svn-helper/tsh-file-dialog.c:78 tvp-svn-helper/tsh-login-dialog.c:98
 #: tvp-svn-helper/tsh-trust-dialog.c:73
 msgid "Remember"
-msgstr "Atceries"
+msgstr "Atcerēties"
 
 #: tvp-svn-helper/tsh-file-dialog.c:86
-#, fuzzy
 msgid "Certificate"
-msgstr "Paziņošana"
+msgstr "Sertifikāts"
 
 #: tvp-svn-helper/tsh-file-selection-dialog.c:91
 #: tvp-svn-helper/tsh-log-message-dialog.c:92
@@ -891,17 +882,15 @@ msgstr "Ceļš"
 #: tvp-svn-helper/tsh-file-selection-dialog.c:118
 #: tvp-git-helper/tgh-file-selection-dialog.c:113
 msgid "Select/Unselect all"
-msgstr ""
+msgstr "Atlasīt visu/Atcelt atlasi"
 
 #: tvp-svn-helper/tsh-import.c:125
-#, fuzzy
 msgid "Import Message"
-msgstr "Apstiprināt"
+msgstr "Importa ziņa"
 
 #: tvp-svn-helper/tsh-log-dialog.c:136
-#, fuzzy
 msgid "Message"
-msgstr "Apstiprināt"
+msgstr "Ziņa"
 
 #: tvp-svn-helper/tsh-log-dialog.c:174 tvp-svn-helper/tsh-notify-dialog.c:88
 msgid "Action"
@@ -909,21 +898,19 @@ msgstr "Darbība"
 
 #: tvp-svn-helper/tsh-log-dialog.c:180
 msgid "File"
-msgstr ""
+msgstr "Fails"
 
 #: tvp-svn-helper/tsh-log-message-dialog.c:86
-#, fuzzy
 msgid "State"
-msgstr "Status"
+msgstr "Stāvoklis"
 
 #: tvp-svn-helper/tsh-log-message-dialog.c:110
 msgid "Log Message"
-msgstr ""
+msgstr "Reģistrēšanas ziņa"
 
 #: tvp-svn-helper/tsh-log.c:106
-#, fuzzy
 msgid "Log failed"
-msgstr "Atslēgt"
+msgstr "Reģistrēšana neizdevās"
 
 #: tvp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
@@ -939,11 +926,11 @@ msgstr "Pieteikties"
 
 #: tvp-svn-helper/tsh-move.c:94
 msgid "Local move"
-msgstr ""
+msgstr "Lokāla pārvietošana"
 
 #: tvp-svn-helper/tsh-move.c:136
 msgid "Move To"
-msgstr ""
+msgstr "Pārvietot uz"
 
 #: tvp-svn-helper/tsh-notify-dialog.c:100
 msgid "Mime type"
@@ -954,13 +941,12 @@ msgid "Notification"
 msgstr "Paziņošana"
 
 #: tvp-svn-helper/tsh-properties-dialog.c:126
-#, fuzzy
 msgid "Name"
-msgstr "Vainot"
+msgstr "Nosaukums"
 
 #: tvp-svn-helper/tsh-properties-dialog.c:132
 msgid "Value"
-msgstr ""
+msgstr "Vērtība"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
@@ -971,7 +957,7 @@ msgstr ""
 #: tvp-svn-helper/tsh-properties-dialog.c:209
 #: tvp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
-msgstr ""
+msgstr "Pats"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are updated
@@ -981,9 +967,8 @@ msgstr ""
 #.
 #: tvp-svn-helper/tsh-properties-dialog.c:220
 #: tvp-svn-helper/tsh-status-dialog.c:191
-#, fuzzy
 msgid "Immediate files"
-msgstr "Atgriezt"
+msgstr "Neatliekamie faili"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
@@ -993,24 +978,21 @@ msgstr "Atgriezt"
 #.
 #: tvp-svn-helper/tsh-properties-dialog.c:238
 #: tvp-svn-helper/tsh-status-dialog.c:209
-#, fuzzy
 msgid "Recursive"
-msgstr "Atpazīt"
+msgstr "Rekursīvi"
 
 #. tsh_properties_dialog_done (dialog);
 #: tvp-svn-helper/tsh-properties.c:81
-#, fuzzy
 msgid "Set property failed"
-msgstr "Atgriezt"
+msgstr "Rekvizīta uzstādīšana neizdevās"
 
 #: tvp-svn-helper/tsh-properties.c:104
-#, fuzzy
 msgid "Properties failed"
-msgstr "Rediģēt Rekvizītus"
+msgstr "Rekvizīts neizdevās"
 
 #: tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr ""
+msgstr "_No:"
 
 #: tvp-svn-helper/tsh-relocate-dialog.c:98
 #: tvp-svn-helper/tsh-relocate-dialog.c:104
@@ -1021,133 +1003,122 @@ msgstr ""
 #: tvp-svn-helper/tsh-transfer-dialog.c:98
 #: tvp-svn-helper/tsh-transfer-dialog.c:144
 msgid "Select a folder"
-msgstr ""
+msgstr "Atlasiet mapi"
 
 #: tvp-svn-helper/tsh-relocate-dialog.c:143
 msgid "_To:"
-msgstr ""
+msgstr "_Uz:"
 
 #: tvp-svn-helper/tsh-relocate-dialog.c:198
 #: tvp-svn-helper/tsh-transfer-dialog.c:137
 msgid "_Directory:"
-msgstr ""
+msgstr "_Direktorija:"
 
 #: tvp-svn-helper/tsh-relocate.c:71
-#, fuzzy
 msgid "Relocate failed"
-msgstr "Atgriezt"
+msgstr "Atiedalīšana neizdevās"
 
 #: tvp-svn-helper/tsh-relocate.c:86
-#, fuzzy
 msgid "Relocate finished"
-msgstr "Uzkopt"
+msgstr "Atiedalīšana pabeigta"
 
 #: tvp-svn-helper/tsh-relocate.c:128
-#, fuzzy
 msgid "Relocating ..."
-msgstr "Uzkopt"
+msgstr "Atiedalīšana..."
 
 #: tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr ""
+msgstr "Rādīt nemainītos failus"
 
 #: tvp-svn-helper/tsh-status-dialog.c:228
 msgid "Show Unversioned Files"
-msgstr ""
+msgstr "Rādīt bez versiju failus"
 
 #: tvp-svn-helper/tsh-status-dialog.c:232
 msgid "Show Ignored Files"
-msgstr ""
+msgstr "Rādīt ignorētos failus"
 
 #: tvp-svn-helper/tsh-status-dialog.c:236
-#, fuzzy
 msgid "Hide Externals"
-msgstr "Ārējs"
+msgstr "Slēpt ārējos"
 
 #: tvp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
-msgstr ""
+msgstr "Pārbaudīt repozitoriju"
 
 #: tvp-svn-helper/tsh-status.c:86 tvp-git-helper/tgh-common.c:48
-#, fuzzy
 msgid "Status failed"
-msgstr "Status"
+msgstr "Status neizdevās"
 
 #: tvp-svn-helper/tsh-transfer-dialog.c:82
 msgid "_Repository:"
-msgstr ""
+msgstr "_Repozitorijs:"
 
 #: tvp-svn-helper/tsh-transfer-dialog.c:156
 msgid "Transfer"
-msgstr ""
+msgstr "Pārvietot"
 
 #: tvp-svn-helper/tsh-trust-dialog.c:58
 msgid "Certificate is not yet valid."
-msgstr ""
+msgstr "Sertifikāts nav vēl derīgs."
 
 #: tvp-svn-helper/tsh-trust-dialog.c:61
 msgid "Certificate has expired."
-msgstr ""
+msgstr "Sertifikātam ir iztecējis derīgums."
 
 #: tvp-svn-helper/tsh-trust-dialog.c:64
 msgid "Certificate does not match the remote hostname."
-msgstr ""
+msgstr "Sertifikāts nesakrīt ar resursdatora nosaukumu."
 
 #: tvp-svn-helper/tsh-trust-dialog.c:67
 msgid "Certificate authority is unknown."
-msgstr ""
+msgstr "Sertifikātā autoritāte nav zināma."
 
 #: tvp-svn-helper/tsh-trust-dialog.c:70
 msgid "Other failure."
-msgstr ""
+msgstr "Cita kļūme."
 
 #: tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
-msgstr ""
+msgstr "Uzticība"
 
 #: tvp-git-helper/main.c:77
-#, fuzzy
 msgid "Execute branch action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt atzarošanas darbību"
 
 #: tvp-git-helper/main.c:83
-#, fuzzy
 msgid "Execute reset action"
-msgstr "Izpildīt izrakstīšanas darbību"
+msgstr "Izpildīt atstatīšanas darbību"
 
 #: tvp-git-helper/main.c:102
-#, fuzzy
 msgid "Branch Related Options:"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Atzara saistītas opcijas:"
 
 #: tvp-git-helper/main.c:102 tvp-git-helper/tgh-branch-dialog.c:119
 msgid "Branch"
-msgstr ""
+msgstr "Atzars"
 
 #: tvp-git-helper/main.c:106
-#, fuzzy
 msgid "Reset Related Options:"
-msgstr "Izpildīt atjaunošanas darbību"
+msgstr "Atstatīšanas saistītās opcijas:"
 
 #: tvp-git-helper/main.c:106 tvp-git-helper/tgh-reset-dialog.c:108
 #: tvp-git-helper/tgh-reset.c:125
-#, fuzzy
 msgid "Reset"
-msgstr "Atgriezt"
+msgstr "Atstatīt"
 
 #: tvp-git-helper/tgh-add.c:58
-#, fuzzy
 msgid "Add finished"
-msgstr "Uzkopt"
+msgstr "Pievienošana pabeigta"
 
 #: tvp-git-helper/tgh-add.c:126
 msgid "Adding ..."
-msgstr ""
+msgstr "Pievieno ..."
 
 #: tvp-git-helper/tgh-common.c:123
 #: tvp-git-helper/tgh-file-selection-dialog.c:267
 msgid "untracked"
-msgstr ""
+msgstr "neseko"
 
 #, fuzzy
 #~ msgid "Modify Property Recursive"
