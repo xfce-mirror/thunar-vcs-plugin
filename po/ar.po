@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-27 15:20+0200\n"
+"POT-Creation-Date: 2009-09-27 16:09+0200\n"
 "PO-Revision-Date: 2008-07-15 16:14+0200\n"
 "Last-Translator: Mohamed Magdy <mohamedmk@gmail.com>\n"
 "Language-Team: Arabeyes <doc@arabeyes.org>\n"
@@ -25,10 +25,12 @@ msgid "GIT"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
 msgid "Menu|Add"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-svn-helper/main.c:246
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242 ../tvp-svn-helper/main.c:246
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
 #: ../tvp-git-helper/main.c:100 ../tvp-git-helper/tgh-add.c:113
 msgid "Add"
@@ -52,10 +54,12 @@ msgid "Changelist"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
 msgid "Menu|Checkout"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:258
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-svn-helper/main.c:258
 #: ../tvp-svn-helper/tsh-checkout.c:98 ../tvp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr ""
@@ -69,10 +73,12 @@ msgid "Cleanup"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:247
 msgid "Menu|Commit"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-svn-helper/main.c:266
 #: ../tvp-svn-helper/tsh-commit.c:223 ../tvp-svn-helper/tsh-commit.c:236
 msgid "Commit"
 msgstr ""
@@ -96,10 +102,12 @@ msgid "Delete"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Menu|Diff"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Diff"
 msgstr ""
 
@@ -139,19 +147,23 @@ msgid "Lock"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:252
 msgid "Menu|Log"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-svn-helper/main.c:290
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-svn-helper/main.c:290
 #: ../tvp-svn-helper/tsh-log-dialog.c:208
 msgid "Log"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Menu|Move"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-svn-helper/main.c:294
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:254 ../tvp-svn-helper/main.c:294
 #: ../tvp-svn-helper/tsh-move.c:157
 msgid "Move"
 msgstr ""
@@ -202,10 +214,12 @@ msgid "Revert"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Menu|Status"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-svn-helper/main.c:314
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:261 ../tvp-svn-helper/main.c:314
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:112
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
@@ -242,6 +256,7 @@ msgid "Update"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr ""
@@ -335,6 +350,120 @@ msgstr ""
 #.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
 msgid "Infinity"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
+msgid "Menu|Bisect"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
+msgid "Bisect"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+msgid "Menu|Branch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:104
+#: ../tvp-git-helper/tgh-branch-dialog.c:119
+msgid "Branch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+msgid "Menu|Clone"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+msgid "Clone"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+msgid "Menu|Fetch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+msgid "Fetch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+msgid "Menu|Grep"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+msgid "Grep"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+msgid "Menu|Init"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+msgid "Init"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+msgid "Menu|Merge"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+msgid "Merge"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
+msgid "Menu|Pull"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
+msgid "Pull"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
+msgid "Menu|Push"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
+msgid "Push"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+msgid "Menu|Rebase"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+msgid "Rebase"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+msgid "Menu|Reset"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:258 ../tvp-git-helper/main.c:108
+#: ../tvp-git-helper/tgh-reset-dialog.c:108 ../tvp-git-helper/tgh-reset.c:125
+msgid "Reset"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+msgid "Menu|Remove"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+msgid "Remove"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+msgid "Menu|Show"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+msgid "Show"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
+msgid "Menu|Tag"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
+msgid "Tag"
 msgstr ""
 
 #: ../tvp-svn-helper/main.c:105 ../tvp-git-helper/main.c:66
@@ -1030,17 +1159,8 @@ msgstr ""
 msgid "Branch Related Options:"
 msgstr ""
 
-#: ../tvp-git-helper/main.c:104 ../tvp-git-helper/tgh-branch-dialog.c:119
-msgid "Branch"
-msgstr ""
-
 #: ../tvp-git-helper/main.c:108
 msgid "Reset Related Options:"
-msgstr ""
-
-#: ../tvp-git-helper/main.c:108 ../tvp-git-helper/tgh-reset-dialog.c:108
-#: ../tvp-git-helper/tgh-reset.c:125
-msgid "Reset"
 msgstr ""
 
 #: ../tvp-git-helper/tgh-add.c:58

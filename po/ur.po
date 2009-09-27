@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-27 15:20+0200\n"
+"POT-Creation-Date: 2009-09-27 16:09+0200\n"
 "PO-Revision-Date: 2009-05-14 02:39+0500\n"
 "Last-Translator: Muhammad Ali Makki <makki.ma@gmail.com>\n"
 "Language-Team: Urdu <makki.ma@gmail.com>\n"
@@ -33,10 +33,12 @@ msgid "GIT"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
 msgid "Menu|Add"
 msgstr "مینیو|شامل کریں"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-svn-helper/main.c:246
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242 ../tvp-svn-helper/main.c:246
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
 #: ../tvp-git-helper/main.c:100 ../tvp-git-helper/tgh-add.c:113
 msgid "Add"
@@ -60,10 +62,12 @@ msgid "Changelist"
 msgstr "تبدیلی کی فہرست"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
 msgid "Menu|Checkout"
 msgstr "مینیو|چیک کریں"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:258
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-svn-helper/main.c:258
 #: ../tvp-svn-helper/tsh-checkout.c:98 ../tvp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr "چیک کریں"
@@ -77,10 +81,12 @@ msgid "Cleanup"
 msgstr "صاف کریں"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:247
 msgid "Menu|Commit"
 msgstr "مینیو|کمٹ"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-svn-helper/main.c:266
 #: ../tvp-svn-helper/tsh-commit.c:223 ../tvp-svn-helper/tsh-commit.c:236
 msgid "Commit"
 msgstr "تبصرہ"
@@ -104,10 +110,12 @@ msgid "Delete"
 msgstr "حذف"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Menu|Diff"
 msgstr "مینیو|فرق"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Diff"
 msgstr "فرق"
 
@@ -147,19 +155,23 @@ msgid "Lock"
 msgstr "قفل"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:252
 msgid "Menu|Log"
 msgstr "مینیو|لاگ"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-svn-helper/main.c:290
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-svn-helper/main.c:290
 #: ../tvp-svn-helper/tsh-log-dialog.c:208
 msgid "Log"
 msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Menu|Move"
 msgstr "مینیو|منتقل کریں"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-svn-helper/main.c:294
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:254 ../tvp-svn-helper/main.c:294
 #: ../tvp-svn-helper/tsh-move.c:157
 msgid "Move"
 msgstr "منتقل کریں"
@@ -210,10 +222,12 @@ msgid "Revert"
 msgstr "واپس"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Menu|Status"
 msgstr "مینیو|حالت"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-svn-helper/main.c:314
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:261 ../tvp-svn-helper/main.c:314
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:112
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
@@ -250,6 +264,7 @@ msgid "Update"
 msgstr "تجدید"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "عمل %s لاگو نہیں کیا گیا ہے"
@@ -344,6 +359,139 @@ msgstr "فوراً"
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
 msgid "Infinity"
 msgstr "مطلق"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
+#, fuzzy
+msgid "Menu|Bisect"
+msgstr "مینیو|بلیم"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
+msgid "Bisect"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+#, fuzzy
+msgid "Menu|Branch"
+msgstr "مینیو|بلیم"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:104
+#: ../tvp-git-helper/tgh-branch-dialog.c:119
+msgid "Branch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+#, fuzzy
+msgid "Menu|Clone"
+msgstr "مینیو|کاپی"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+msgid "Clone"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+#, fuzzy
+msgid "Menu|Fetch"
+msgstr "مینیو|تبدیل"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+msgid "Fetch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#, fuzzy
+msgid "Menu|Grep"
+msgstr "مینیو|صاف کریں"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+msgid "Grep"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+#, fuzzy
+msgid "Menu|Init"
+msgstr "مینیو|معلومات"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+#, fuzzy
+msgid "Init"
+msgstr "مطلق"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#, fuzzy
+msgid "Menu|Merge"
+msgstr "مینیو|منتقل کریں"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#, fuzzy
+msgid "Merge"
+msgstr "مرج شدہ"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
+#, fuzzy
+msgid "Menu|Pull"
+msgstr "مینیو|بلیم"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
+msgid "Pull"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
+#, fuzzy
+msgid "Menu|Push"
+msgstr "مینیو|حالت"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
+msgid "Push"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#, fuzzy
+msgid "Menu|Rebase"
+msgstr "مینیو|ریزولو"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#, fuzzy
+msgid "Rebase"
+msgstr "واپس"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#, fuzzy
+msgid "Menu|Reset"
+msgstr "مینیو|واپس"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:258 ../tvp-git-helper/main.c:108
+#: ../tvp-git-helper/tgh-reset-dialog.c:108 ../tvp-git-helper/tgh-reset.c:125
+#, fuzzy
+msgid "Reset"
+msgstr "واپس"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+#, fuzzy
+msgid "Menu|Remove"
+msgstr "مینیو|ریزولو"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+#, fuzzy
+msgid "Remove"
+msgstr "Resolve"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+#, fuzzy
+msgid "Menu|Show"
+msgstr "مینیو|لاگ"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+msgid "Show"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
+#, fuzzy
+msgid "Menu|Tag"
+msgstr "مینیو|لاگ"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
+msgid "Tag"
+msgstr ""
 
 #: ../tvp-svn-helper/main.c:105 ../tvp-git-helper/main.c:66
 msgid "Print version information"
@@ -1050,20 +1198,10 @@ msgstr "ریورٹ حرکت چلائیں"
 msgid "Branch Related Options:"
 msgstr "بلیم متعلقہ اختیارات:"
 
-#: ../tvp-git-helper/main.c:104 ../tvp-git-helper/tgh-branch-dialog.c:119
-msgid "Branch"
-msgstr ""
-
 #: ../tvp-git-helper/main.c:108
 #, fuzzy
 msgid "Reset Related Options:"
 msgstr "متعلقہ اختیارات منعکس کریں:"
-
-#: ../tvp-git-helper/main.c:108 ../tvp-git-helper/tgh-reset-dialog.c:108
-#: ../tvp-git-helper/tgh-reset.c:125
-#, fuzzy
-msgid "Reset"
-msgstr "واپس"
 
 #: ../tvp-git-helper/tgh-add.c:58
 #, fuzzy

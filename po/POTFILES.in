@@ -3,6 +3,7 @@ thunar-vcs-plugin/tvp-provider.c
 thunar-vcs-plugin/tvp-svn-action.c
 thunar-vcs-plugin/tvp-svn-property-page.c
 thunar-vcs-plugin/tvp-svn-backend.c
+thunar-vcs-plugin/tvp-git-action.c
 tvp-svn-helper/main.c
 tvp-svn-helper/tsh-add.c
 tvp-svn-helper/tsh-blame-dialog.c

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xfce 4-i18-goodies\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-27 15:20+0200\n"
+"POT-Creation-Date: 2009-09-27 16:09+0200\n"
 "PO-Revision-Date: 2009-06-06 22:04+0100\n"
 "Last-Translator: Michal Várady <miko.vaji@gmail.com>\n"
 "Language-Team: Czech\n"
@@ -30,10 +30,12 @@ msgid "GIT"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
 msgid "Menu|Add"
 msgstr "Přidat (add)"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-svn-helper/main.c:246
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242 ../tvp-svn-helper/main.c:246
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
 #: ../tvp-git-helper/main.c:100 ../tvp-git-helper/tgh-add.c:113
 msgid "Add"
@@ -57,10 +59,12 @@ msgid "Changelist"
 msgstr "Seznam změn"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
 msgid "Menu|Checkout"
 msgstr "Stáhnout (checkout)"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:258
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-svn-helper/main.c:258
 #: ../tvp-svn-helper/tsh-checkout.c:98 ../tvp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr "Stáhnout (checkout)"
@@ -74,10 +78,12 @@ msgid "Cleanup"
 msgstr "Vyčistit (cleanup)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:247
 msgid "Menu|Commit"
 msgstr "Zapsat (commit)"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-svn-helper/main.c:266
 #: ../tvp-svn-helper/tsh-commit.c:223 ../tvp-svn-helper/tsh-commit.c:236
 msgid "Commit"
 msgstr "Zapsat (commit)"
@@ -101,10 +107,12 @@ msgid "Delete"
 msgstr "Smazat (delete)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Menu|Diff"
 msgstr "Rozdíl (diff)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Diff"
 msgstr "Rozdíl (diff)"
 
@@ -144,19 +152,23 @@ msgid "Lock"
 msgstr "Uzamknout (lock)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:252
 msgid "Menu|Log"
 msgstr "Protokol (log)"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-svn-helper/main.c:290
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-svn-helper/main.c:290
 #: ../tvp-svn-helper/tsh-log-dialog.c:208
 msgid "Log"
 msgstr "Protokol (log)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Menu|Move"
 msgstr "Přesunout (move)"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-svn-helper/main.c:294
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:254 ../tvp-svn-helper/main.c:294
 #: ../tvp-svn-helper/tsh-move.c:157
 msgid "Move"
 msgstr "Přesunout (move)"
@@ -207,10 +219,12 @@ msgid "Revert"
 msgstr "Obnovit předchozí (revert)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Menu|Status"
 msgstr "Stav (status)"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-svn-helper/main.c:314
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:261 ../tvp-svn-helper/main.c:314
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:112
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
@@ -247,6 +261,7 @@ msgid "Update"
 msgstr "Aktualizovat (update)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "Akce %s není implementovaná"
@@ -341,6 +356,139 @@ msgstr "Tento soubor nebo adresář a v něm obsažené soubury a adresáře"
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
 msgid "Infinity"
 msgstr "Nekonečná"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
+#, fuzzy
+msgid "Menu|Bisect"
+msgstr "Vypsat detaily (blame)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
+msgid "Bisect"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+#, fuzzy
+msgid "Menu|Branch"
+msgstr "Vypsat detaily (blame)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:104
+#: ../tvp-git-helper/tgh-branch-dialog.c:119
+msgid "Branch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+#, fuzzy
+msgid "Menu|Clone"
+msgstr "Zkopírovat (copy)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+msgid "Clone"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+#, fuzzy
+msgid "Menu|Fetch"
+msgstr "Přepnout (switch)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+msgid "Fetch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#, fuzzy
+msgid "Menu|Grep"
+msgstr "Vyčistit (cleanup)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+msgid "Grep"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+#, fuzzy
+msgid "Menu|Init"
+msgstr "Informace (info)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+#, fuzzy
+msgid "Init"
+msgstr "Nekonečná"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#, fuzzy
+msgid "Menu|Merge"
+msgstr "Přesunout (move)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#, fuzzy
+msgid "Merge"
+msgstr "Spojeno"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
+#, fuzzy
+msgid "Menu|Pull"
+msgstr "Vypsat detaily (blame)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
+msgid "Pull"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
+#, fuzzy
+msgid "Menu|Push"
+msgstr "Stav (status)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
+msgid "Push"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#, fuzzy
+msgid "Menu|Rebase"
+msgstr "Vyřešit (resolve)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#, fuzzy
+msgid "Rebase"
+msgstr "Obnovit předchozí (revert)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#, fuzzy
+msgid "Menu|Reset"
+msgstr "Obnovit předchozí (revert)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:258 ../tvp-git-helper/main.c:108
+#: ../tvp-git-helper/tgh-reset-dialog.c:108 ../tvp-git-helper/tgh-reset.c:125
+#, fuzzy
+msgid "Reset"
+msgstr "Obnovit předchozí (revert)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+#, fuzzy
+msgid "Menu|Remove"
+msgstr "Vyřešit (resolve)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+#, fuzzy
+msgid "Remove"
+msgstr "Vyřešit (resolve)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+#, fuzzy
+msgid "Menu|Show"
+msgstr "Protokol (log)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+msgid "Show"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
+#, fuzzy
+msgid "Menu|Tag"
+msgstr "Protokol (log)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
+msgid "Tag"
+msgstr ""
 
 #: ../tvp-svn-helper/main.c:105 ../tvp-git-helper/main.c:66
 msgid "Print version information"
@@ -1038,20 +1186,10 @@ msgstr "Spustit akci obnovení (revert)"
 msgid "Branch Related Options:"
 msgstr "Volby týkající se výpisu detailů (blame):"
 
-#: ../tvp-git-helper/main.c:104 ../tvp-git-helper/tgh-branch-dialog.c:119
-msgid "Branch"
-msgstr ""
-
 #: ../tvp-git-helper/main.c:108
 #, fuzzy
 msgid "Reset Related Options:"
 msgstr "Volby týkající se obnovování (revert):"
-
-#: ../tvp-git-helper/main.c:108 ../tvp-git-helper/tgh-reset-dialog.c:108
-#: ../tvp-git-helper/tgh-reset.c:125
-#, fuzzy
-msgid "Reset"
-msgstr "Obnovit předchozí (revert)"
 
 #: ../tvp-git-helper/tgh-add.c:58
 #, fuzzy
