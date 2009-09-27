@@ -505,10 +505,7 @@ selection_cell_toggled (GtkCellRendererToggle *renderer, gchar *path, gpointer u
       break;
     case TSH_FILE_STATUS_DELETED:
       if (dialog->flags & TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN)
-      {
-        if(selection)
-          set_children_status (dialog, GTK_TREE_STORE (model), &iter, selection, non_recursive);
-      }
+        set_children_status (dialog, GTK_TREE_STORE (model), &iter, selection, non_recursive);
       else
         set_children_status (dialog, GTK_TREE_STORE (model), &iter, selection, !selection);
       break;
@@ -628,7 +625,7 @@ set_selected (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointe
           enabled = status == TSH_FILE_STATUS_UNVERSIONED && ((struct select_context*)ctx)->select;
         break;
       case TSH_FILE_STATUS_DELETED:
-        enabled = !((struct select_context*)ctx)->select;
+        enabled = !(((struct select_context*)ctx)->dialog->flags & TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN) && !((struct select_context*)ctx)->select;
         break;
       case TSH_FILE_STATUS_UNVERSIONED:
         enabled = FALSE;
