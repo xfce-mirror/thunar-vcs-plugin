@@ -442,11 +442,12 @@ tsh_properties_dialog_get_selected_key (TshPropertiesDialog *dialog)
 gchar *
 tsh_properties_dialog_get_value (TshPropertiesDialog *dialog)
 {
+  GtkTextBuffer *buffer;
   GtkTextIter start, end;
 
   g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), NULL);
 
-  GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view));
+  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view));
   gtk_text_buffer_get_start_iter (buffer, &start);
   gtk_text_buffer_get_end_iter (buffer, &end);
   return gtk_text_buffer_get_text (buffer, &start, &end, FALSE);

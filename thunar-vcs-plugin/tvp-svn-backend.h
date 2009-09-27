@@ -48,8 +48,8 @@ typedef struct
 
 #define TVP_SVN_INFO(p) ((TvpSvnInfo*)p)
 
-gboolean tvp_svn_backend_init();
-void     tvp_svn_backend_free();
+gboolean tvp_svn_backend_init(void);
+void     tvp_svn_backend_free(void);
 
 gboolean tvp_svn_backend_is_working_copy (const gchar *uri);
 

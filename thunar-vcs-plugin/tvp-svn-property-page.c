@@ -288,7 +288,7 @@ tvp_svn_property_page_get_property (GObject *object, guint property_id, GValue *
 
 
 
-const gchar *
+static const gchar *
 depth_to_string(svn_depth_t depth)
 {
   const gchar *depth_string;

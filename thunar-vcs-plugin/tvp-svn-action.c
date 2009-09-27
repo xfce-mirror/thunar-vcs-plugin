@@ -176,10 +176,12 @@ tvp_svn_action_new (const gchar *name,
                     gboolean file_version_control,
                     gboolean file_no_version_control)
 {
+  GtkAction *action;
+
   g_return_val_if_fail(name, NULL);
   g_return_val_if_fail(label, NULL);
 
-  GtkAction *action = g_object_new (TVP_TYPE_SVN_ACTION,
+  action = g_object_new (TVP_TYPE_SVN_ACTION,
             "hide-if-empty", FALSE,
             "name", name,
             "label", label,

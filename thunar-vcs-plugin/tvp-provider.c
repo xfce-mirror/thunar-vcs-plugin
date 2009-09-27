@@ -56,10 +56,8 @@
 
 
 
-static void   tvp_provider_class_init           (TvpProviderClass         *klass);
 static void   tvp_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
 static void   tvp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
-static void   tvp_provider_init                 (TvpProvider              *tvp_provider);
 static void   tvp_provider_finalize             (GObject                  *object);
 static GList *tvp_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
@@ -305,9 +303,12 @@ tvp_get_parent_status (ThunarxFileInfo *file_info)
 
 
 
-gint
+static gint
 tvp_compare_filename (const gchar *uri1, const gchar *uri2)
 {
+  gchar *path1, *path2;
+  gint result;
+
   /* strip the "file://" part of the uri */
   if (strncmp (uri1, "file://", 7) == 0)
   {
@@ -320,8 +321,8 @@ tvp_compare_filename (const gchar *uri1, const gchar *uri2)
     uri2 += 7;
   }
 
-  gchar *path1 = g_strdup (uri1);
-  gchar *path2 = g_strdup (uri2);
+  path1 = g_strdup (uri1);
+  path2 = g_strdup (uri2);
 
   /* remove trailing '/' */
   if (path1[strlen (path1) - 1] == '/')
@@ -335,7 +336,7 @@ tvp_compare_filename (const gchar *uri1, const gchar *uri2)
     path2[strlen (path2) - 1] = '\0';
   }
   
-  gint result = strcmp (path1, path2);
+  result = strcmp (path1, path2);
 
   g_free (path1);
   g_free (path2);
@@ -575,12 +576,13 @@ static void
 tvp_child_watch (GPid pid, gint status, gpointer data)
 {
   gchar *watch_path = data;
+  ThunarVfsPath *path;
 
   if (G_LIKELY (data))
   {
     GDK_THREADS_ENTER ();
 
-    ThunarVfsPath *path = thunar_vfs_path_new (watch_path, NULL);
+    path = thunar_vfs_path_new (watch_path, NULL);
 
     if (G_LIKELY (path))
     {

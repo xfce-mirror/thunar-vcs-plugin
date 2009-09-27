@@ -1,4 +1,8 @@
 2009-09-27	Peter de Ridder <peter@xfce.org>
+	* Made Thuner VCS Plugin compile with --enable-debug=full.
+	* Updated the po files.
+
+2009-09-27	Peter de Ridder <peter@xfce.org>
 
 	* autogen.sh configure.ac.in: Changed scripts to xfce4-dev-tools
 	  version 4.7.2. Thunar VCS Plugin depends on 4.7.2 of

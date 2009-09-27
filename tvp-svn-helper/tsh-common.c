@@ -263,11 +263,12 @@ tsh_auth_simple_plaintext_prompt(svn_boolean_t *may_save_plaintext,
         void *baton,
         apr_pool_t *pool)
 {
+    GtkWidget *dialog;
     gint result;
 
 	gdk_threads_enter();
 
-	GtkWidget *dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO, _("Store password a plaintext?"));
+	dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO, _("Store password a plaintext?"));
 
 	result = gtk_dialog_run(GTK_DIALOG(dialog));
 
@@ -288,12 +289,16 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
                        svn_boolean_t may_save,
                        apr_pool_t *pool)
 {
+  GtkWidget *dialog;
+  svn_auth_cred_simple_t *ret;
+  TshLoginDialog *login_dialog;
+      
 	if(!username)
 		username = "";
 
 	gdk_threads_enter();
 
-	GtkWidget *dialog = tsh_login_dialog_new(NULL, NULL, 0, username, TRUE, may_save);
+  dialog = tsh_login_dialog_new(NULL, NULL, 0, username, TRUE, may_save);
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
@@ -309,8 +314,8 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 
 	gdk_threads_leave();
 
-  svn_auth_cred_simple_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_simple_t));
-	TshLoginDialog *login_dialog = TSH_LOGIN_DIALOG(dialog);
+  ret = apr_pcalloc(pool, sizeof(svn_auth_cred_simple_t));
+  login_dialog = TSH_LOGIN_DIALOG(dialog);
 	ret->username = apr_pstrdup(pool, tsh_login_dialog_get_username(login_dialog));
 	ret->password = apr_pstrdup(pool, tsh_login_dialog_get_password(login_dialog));
 	ret->may_save = tsh_login_dialog_get_may_save(login_dialog);
@@ -328,9 +333,13 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
                                              svn_boolean_t may_save,
                                              apr_pool_t *pool)
 {
+  GtkWidget *dialog;
+  svn_auth_cred_username_t *ret;
+  TshLoginDialog *login_dialog;
+
 	gdk_threads_enter();
 
-	GtkWidget *dialog = tsh_login_dialog_new(NULL, NULL, 0, "", FALSE, may_save);
+  dialog = tsh_login_dialog_new(NULL, NULL, 0, "", FALSE, may_save);
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
@@ -346,8 +355,8 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
 
 	gdk_threads_leave();
 
-  svn_auth_cred_username_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_username_t));
-	TshLoginDialog *login_dialog = TSH_LOGIN_DIALOG(dialog);
+  ret = apr_pcalloc(pool, sizeof(svn_auth_cred_username_t));
+  login_dialog = TSH_LOGIN_DIALOG(dialog);
 	ret->username = apr_pstrdup(pool, tsh_login_dialog_get_username(login_dialog));
 	ret->may_save = tsh_login_dialog_get_may_save(login_dialog);
 	*cred = ret;
@@ -366,9 +375,13 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
                                  svn_boolean_t may_save,
                                  apr_pool_t *pool)
 {
+  GtkWidget *dialog;
+  svn_auth_cred_ssl_server_trust_t *ret;
+  TshTrustDialog *trust_dialog;
+
 	gdk_threads_enter();
 
-	GtkWidget *dialog = tsh_trust_dialog_new(NULL, NULL, 0, failures, may_save);
+  dialog = tsh_trust_dialog_new(NULL, NULL, 0, failures, may_save);
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
@@ -384,8 +397,8 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
 
 	gdk_threads_leave();
 
-  svn_auth_cred_ssl_server_trust_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_server_trust_t));
-	TshTrustDialog *trust_dialog = TSH_TRUST_DIALOG(dialog);
+  ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_server_trust_t));
+  trust_dialog = TSH_TRUST_DIALOG(dialog);
 	ret->may_save = tsh_trust_dialog_get_may_save(trust_dialog);
 	ret->accepted_failures = tsh_trust_dialog_get_accepted(trust_dialog);
 	*cred = ret;
@@ -402,9 +415,13 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
                                 svn_boolean_t may_save,
                                 apr_pool_t *pool)
 {
+  GtkWidget *dialog;
+  svn_auth_cred_ssl_client_cert_t *ret;
+  TshFileDialog *file_dialog;
+
 	gdk_threads_enter();
 
-	GtkWidget *dialog = tsh_file_dialog_new(NULL, NULL, 0, may_save);
+  dialog = tsh_file_dialog_new(NULL, NULL, 0, may_save);
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
@@ -420,8 +437,8 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
 
 	gdk_threads_leave();
 
-  svn_auth_cred_ssl_client_cert_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_t));
-	TshFileDialog *file_dialog = TSH_FILE_DIALOG(dialog);
+  ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_t));
+  file_dialog = TSH_FILE_DIALOG(dialog);
 	ret->cert_file = apr_pstrdup(pool, tsh_file_dialog_get_filename(file_dialog));
 	ret->may_save = tsh_file_dialog_get_may_save(file_dialog);
 	*cred = ret;
@@ -438,9 +455,13 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
                                    svn_boolean_t may_save,
                                    apr_pool_t *pool)
 {
+  GtkWidget *dialog;
+  svn_auth_cred_ssl_client_cert_pw_t *ret;
+  TshLoginDialog *login_dialog;
+
 	gdk_threads_enter();
 
-	GtkWidget *dialog = tsh_login_dialog_new(NULL, NULL, 0, NULL, TRUE, may_save);
+  dialog = tsh_login_dialog_new(NULL, NULL, 0, NULL, TRUE, may_save);
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
@@ -456,8 +477,8 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 
 	gdk_threads_leave();
 
-  svn_auth_cred_ssl_client_cert_pw_t *ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_pw_t));
-	TshLoginDialog *login_dialog = TSH_LOGIN_DIALOG(dialog);
+  ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_pw_t));
+  login_dialog = TSH_LOGIN_DIALOG(dialog);
 	ret->password = apr_pstrdup(pool, tsh_login_dialog_get_password(login_dialog));
 	ret->may_save = tsh_login_dialog_get_may_save(login_dialog);
 	*cred = ret;
@@ -468,7 +489,7 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 }
 
 void
-tsh_cancel()
+tsh_cancel(void)
 {
   cancelled = TRUE;
 }
@@ -482,7 +503,7 @@ tsh_check_cancel(void *baton)
 }
 
 void
-tsh_reset_cancel()
+tsh_reset_cancel(void)
 {
   cancelled = FALSE;
 }
@@ -849,12 +870,12 @@ tsh_log_func (void *baton, svn_log_entry_t *log_entry, apr_pool_t *pool)
     apr_hash_index_t *hi;
     for (hi = apr_hash_first(pool, changed_paths); hi; hi = apr_hash_next(hi)) {
       const svn_log_changed_path_t *changed;
-      const char *path;
+      const char *path_;
       TshLogFile *file;
-      apr_hash_this(hi, (const void**)&path, NULL, (void**)&changed);
+      apr_hash_this(hi, (const void**)&path_, NULL, (void**)&changed);
       file = g_new(TshLogFile, 1);
       file->action = tsh_char_to_string (changed->action);
-      file->file = g_strdup (path);
+      file->file = g_strdup (path_);
       files = g_slist_prepend (files, file);
     }
   }
@@ -975,6 +996,7 @@ tsh_strerror(svn_error_t *err)
 gchar *
 tsh_is_working_copy (const gchar *uri, apr_pool_t *pool)
 {
+  gchar *path;
 	svn_error_t *err;
 	int wc_format;
 
@@ -984,7 +1006,7 @@ tsh_is_working_copy (const gchar *uri, apr_pool_t *pool)
 		uri += 7;
 	}
 
-	gchar *path = g_strdup (uri);
+	path = g_strdup (uri);
 
 	/* remove trailing '/' cause svn_wc_check_wc can't handle that */
 	if (path[strlen (path) - 1] == '/')

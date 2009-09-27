@@ -67,7 +67,7 @@ static void reset_parser_func(ResetParser *parser, gchar *line)
   }
 }
 
-TghOutputParser* reset_parser_new(GtkWidget *dialog)
+static TghOutputParser* reset_parser_new(GtkWidget *dialog)
 {
   ResetParser *parser = g_new(ResetParser, 1);
 
@@ -78,7 +78,7 @@ TghOutputParser* reset_parser_new(GtkWidget *dialog)
   return TGH_OUTPUT_PARSER(parser);
 }
 
-gboolean reset_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
+static gboolean reset_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
 {
   GError *error = NULL;
   gint fd_out, fd_err;

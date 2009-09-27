@@ -141,10 +141,12 @@ tvp_git_action_new (const gchar *name,
         GtkWidget *window,
         gboolean is_parent)
 {
+  GtkAction *action;
+
     g_return_val_if_fail(name, NULL);
     g_return_val_if_fail(label, NULL);
 
-    GtkAction *action = g_object_new (TVP_TYPE_GIT_ACTION,
+    action = g_object_new (TVP_TYPE_GIT_ACTION,
             "hide-if-empty", FALSE,
             "name", name,
             "label", label,

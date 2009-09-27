@@ -64,7 +64,7 @@ static void child_exit(GPid pid, gint status, gpointer user_data)
   g_free(args);
 }
 
-gboolean add_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
+static gboolean add_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
 {
   GError *error = NULL;
   gint fd_err;

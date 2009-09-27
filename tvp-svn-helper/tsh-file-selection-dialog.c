@@ -339,7 +339,7 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
   {
     GtkTreeModel *model;
     GtkTreeIter iter;
-    gboolean select = TRUE;
+    gboolean select_ = TRUE;
     gboolean enable = TRUE;
     gint file_status = TSH_FILE_STATUS_OTHER;
     TshFileStatus parent_status;
@@ -360,14 +360,14 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
         if (dialog->flags & TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN)
           enable = FALSE;
         else if (!(dialog->flags & TSH_FILE_SELECTION_FLAG_AUTO_SELECT_MISSING))
-          select = FALSE;
+          select_ = FALSE;
       }
     }
     else
     {
       file_status = TSH_FILE_STATUS_UNVERSIONED;
       if (!(dialog->flags & TSH_FILE_SELECTION_FLAG_AUTO_SELECT_UNVERSIONED))
-        select = FALSE;
+        select_ = FALSE;
     }
 
     model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
@@ -392,7 +392,7 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
                         COLUMN_PATH, path,
                         COLUMN_TEXT_STAT, tsh_status_to_string(status->text_status),
                         COLUMN_PROP_STAT, tsh_status_to_string(status->prop_status),
-                        COLUMN_SELECTION, select,
+                        COLUMN_SELECTION, select_,
                         COLUMN_NON_RECURSIVE, FALSE,
                         COLUMN_ENABLED, enable,
                         COLUMN_STATUS, file_status,
@@ -401,26 +401,26 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
     switch (file_status)
     {
       case TSH_FILE_STATUS_UNCHANGED:
-        set_children_status (dialog, GTK_TREE_STORE (model), &iter, select, !select);
+        set_children_status (dialog, GTK_TREE_STORE (model), &iter, select_, !select_);
         break;
       case TSH_FILE_STATUS_ADDED:
         if (dialog->flags & TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN)
-          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select, !select);
+          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select_, !select_);
         else
-          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select, FALSE);
+          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select_, FALSE);
         break;
       case TSH_FILE_STATUS_DELETED:
         if (dialog->flags & TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN)
-          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select, FALSE);
+          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select_, FALSE);
         else
-          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select, !select);
+          set_children_status (dialog, GTK_TREE_STORE (model), &iter, select_, !select_);
         break;
       case TSH_FILE_STATUS_UNVERSIONED:
         /* Unversioned: get all children */
-        add_unversioned (GTK_TREE_STORE (model), path, select, FALSE);
+        add_unversioned (GTK_TREE_STORE (model), path, select_, FALSE);
         break;
       default:
-        set_children_status (dialog, GTK_TREE_STORE (model), &iter, select, !select);
+        set_children_status (dialog, GTK_TREE_STORE (model), &iter, select_, !select_);
         break;
     }
   }
@@ -543,7 +543,7 @@ static gboolean
 count_selected (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer ctx)
 {
   gboolean selection, enabled;
-  gint status;
+  TshFileStatus status;
   gtk_tree_model_get (model, iter,
                       COLUMN_SELECTION, &selection,
                       COLUMN_STATUS, &status,
@@ -558,7 +558,7 @@ static gboolean
 copy_selected_string (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer ctx)
 {
   gboolean selection, enabled;
-  gint status;
+  TshFileStatus status;
   gtk_tree_model_get (model, iter,
                       COLUMN_SELECTION, &selection,
                       COLUMN_STATUS, &status,
@@ -578,7 +578,7 @@ static gboolean
 copy_selected_linked (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer ctx)
 {
   gboolean selection, enabled;
-  gint status;
+  TshFileStatus status;
   gtk_tree_model_get (model, iter,
                       COLUMN_SELECTION, &selection,
                       COLUMN_STATUS, &status,
@@ -681,7 +681,7 @@ move_info (GtkTreeStore *store, GtkTreeIter *dest, GtkTreeIter *src)
 }
 
 static void
-add_unversioned (GtkTreeStore *model, const gchar *path, gboolean select, gboolean enabled)
+add_unversioned (GtkTreeStore *model, const gchar *path, gboolean select_, gboolean enabled)
 {
   GDir *dir = g_dir_open (path, 0, NULL);
   if (dir)
@@ -696,12 +696,12 @@ add_unversioned (GtkTreeStore *model, const gchar *path, gboolean select, gboole
                           COLUMN_PATH, file_path,
                           COLUMN_TEXT_STAT, "",
                           COLUMN_PROP_STAT, "",
-                          COLUMN_SELECTION, select,
+                          COLUMN_SELECTION, select_,
                           COLUMN_NON_RECURSIVE, FALSE,
                           COLUMN_ENABLED, enabled,
                           COLUMN_STATUS, TSH_FILE_STATUS_UNVERSIONED,
                           -1);
-      add_unversioned (model, file_path, select, FALSE);
+      add_unversioned (model, file_path, select_, FALSE);
       g_free (file_path);
     }
     g_dir_close (dir);
@@ -709,7 +709,7 @@ add_unversioned (GtkTreeStore *model, const gchar *path, gboolean select, gboole
 }
 
 static void
-set_children_status (TshFileSelectionDialog *dialog, GtkTreeStore *model, GtkTreeIter *parent, gboolean select, gboolean enabled)
+set_children_status (TshFileSelectionDialog *dialog, GtkTreeStore *model, GtkTreeIter *parent, gboolean select_, gboolean enabled)
 {
   gint parent_status;
   GtkTreeIter iter;
@@ -736,13 +736,13 @@ set_children_status (TshFileSelectionDialog *dialog, GtkTreeStore *model, GtkTre
           switch (status)
           {
             case TSH_FILE_STATUS_UNVERSIONED:
-              enable = select;
-              if (!select)
+              enable = select_;
+              if (!select_)
                 selection = FALSE;
               break;
             default:
               enable = enabled;
-              selection = select;
+              selection = select_;
               break;
           }
           break;
@@ -751,15 +751,15 @@ set_children_status (TshFileSelectionDialog *dialog, GtkTreeStore *model, GtkTre
           switch (status)
           {
             case TSH_FILE_STATUS_UNVERSIONED:
-              if (select)
+              if (select_)
                 continue;
               break;
             case TSH_FILE_STATUS_MISSING:
-              if (select && !(dialog->flags & TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN))
+              if (select_ && !(dialog->flags & TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN))
                 continue;
               break;
             default:
-              selection = select;
+              selection = select_;
           }
           break;
       }
@@ -794,18 +794,18 @@ set_children_status (TshFileSelectionDialog *dialog, GtkTreeStore *model, GtkTre
 }
 
 static void
-set_children_status_unversioned (GtkTreeStore *model, GtkTreeIter *parent, gboolean select, gboolean enabled)
+set_children_status_unversioned (GtkTreeStore *model, GtkTreeIter *parent, gboolean select_, gboolean enabled)
 {
   GtkTreeIter iter;
   if (gtk_tree_model_iter_children (GTK_TREE_MODEL (model), &iter, parent))
     do
     {
       gtk_tree_store_set (model, &iter,
-                          COLUMN_SELECTION, select,
+                          COLUMN_SELECTION, select_,
                           COLUMN_NON_RECURSIVE, FALSE,
                           COLUMN_ENABLED, enabled,
                           -1);
-      set_children_status_unversioned (model, &iter, select, FALSE);
+      set_children_status_unversioned (model, &iter, select_, FALSE);
     }
     while (gtk_tree_model_iter_next (GTK_TREE_MODEL (model), &iter));
 }

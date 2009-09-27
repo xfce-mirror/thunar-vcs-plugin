@@ -260,7 +260,7 @@ status_parser_func(StatusParser *parser, gchar *line)
   if(line)
   {
     gboolean add = FALSE;
-    gboolean select = FALSE;
+    gboolean select_ = FALSE;
     if(line[0] == '#' && line[1] == '\t')
     {
       gchar *file = strchr(line, ':');
@@ -279,19 +279,19 @@ status_parser_func(StatusParser *parser, gchar *line)
         case STATE_ADDED:
           if(dialog->flags & TGH_FILE_SELECTION_FLAG_ADDED)
             add = TRUE;
-          select = TRUE;
+          select_ = TRUE;
           break;
         case STATE_MODIFIED:
           if(dialog->flags & TGH_FILE_SELECTION_FLAG_MODIFIED)
             add = TRUE;
           if(!(dialog->flags & TGH_FILE_SELECTION_FLAG_ADDED))
-            select = TRUE;
+            select_ = TRUE;
           break;
         case STATE_UNTRACKED:
           if(dialog->flags & TGH_FILE_SELECTION_FLAG_UNTRACKED)
             add = TRUE;
           if(!(dialog->flags & (TGH_FILE_SELECTION_FLAG_ADDED|TGH_FILE_SELECTION_FLAG_MODIFIED)))
-            select = TRUE;
+            select_ = TRUE;
           break;
       }
 
@@ -306,7 +306,7 @@ status_parser_func(StatusParser *parser, gchar *line)
         gtk_list_store_set (GTK_LIST_STORE (model), &iter,
                             COLUMN_PATH, file,
                             COLUMN_STAT, state,
-                            COLUMN_SELECTION, select,
+                            COLUMN_SELECTION, select_,
                             -1);
       }
     }

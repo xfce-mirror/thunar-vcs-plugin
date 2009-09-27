@@ -42,7 +42,7 @@ struct proc_args
     gchar **files;
 };
 
-gboolean status_spawn (TghStatusDialog *dialog, GPid *pid)
+static gboolean status_spawn (TghStatusDialog *dialog, GPid *pid)
 {
   GError *error = NULL;
   gint fd_out;

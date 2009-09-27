@@ -64,7 +64,7 @@ static gpointer cleanup_thread (gpointer user_data)
     gdk_threads_enter();
     gtk_widget_destroy(dialog);
     dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, _("Cleanup failed"));
-    gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), error_str);
+    gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
     gdk_threads_leave();
     g_free(error_str);

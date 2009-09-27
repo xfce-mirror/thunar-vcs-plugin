@@ -42,7 +42,7 @@ struct proc_args
     gchar **files;
 };
 
-gboolean branch_spawn (TghBranchDialog *dialog, GPid *pid)
+static gboolean branch_spawn (TghBranchDialog *dialog, GPid *pid)
 {
   GError *error = NULL;
   gint fd_out;

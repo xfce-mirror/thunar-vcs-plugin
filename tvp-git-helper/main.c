@@ -28,6 +28,8 @@
 
 #include <thunar-vfs/thunar-vfs.h>
 
+#include "tgh-common.h"
+
 #include "tgh-add.h"
 #include "tgh-branch.h"
 #include "tgh-reset.h"
