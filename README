@@ -2,7 +2,7 @@ About Thunar VCS Plugin
 =======================
 
 The Thunar VCS Plugin adds Subversion actions to the context menu of thunar.
-This gives a VCS intergration to Thunar.
+This gives a VCS integration to Thunar.
 
 The current features are:
 - Most of the svn action: add, checkout, cleanup, commit, copy, delete,
@@ -35,10 +35,10 @@ The Thunar SVN Plugin depends on the following packages:
 Installation
 ============
 
-The file 'INSTALL' contains generic installation instructions. Make sure to
-run ./configure --prefix=$(pkg-config --variable prefix thunarx-1) so Thunar
-can find the plugin. For more information, visit the thunar-vcs-plugin website
-at http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin
+The file 'INSTALL' contains generic installation instructions. To build the
+plugin xfce4-dev-tool version 4.7.2 or higher is required. For more
+information, visit the thunar-vcs-plugin website at
+http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin
 
 
 How to report bugs?
