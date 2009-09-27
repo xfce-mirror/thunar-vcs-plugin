@@ -9,6 +9,9 @@ config.status
 config.sub
 configure
 configure.ac
+intltool-extract.in
+intltool-merge.in
+intltool-update.in
 depcomp
 install-sh
 libtool
@@ -22,6 +25,7 @@ stamp-h1
 .libs
 po/Makefile.in.in
 po/POTFILES
+po/stamp-it
 po/*gmo
 thunar-vcs-plugin/thunar-vcs-plugin.la
 thunar-vcs-plugin/thunar_vcs_plugin_la-*.lo
