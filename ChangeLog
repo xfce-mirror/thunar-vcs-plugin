@@ -1,4 +1,4 @@
-2009-09-27	Peter de Ridder <peter@xfce.org>
+2009-09-29	Peter de Ridder <peter@xfce.org>
 
 	* tvp-{svn,git}-helper/main.c: Added xfce_textdomain to correctly init
 	  translations.
@@ -10,6 +10,7 @@
 
 2009-09-27	Peter de Ridder <peter@xfce.org>
 
+	* === Released 0.1.0 ===
 	* Made Thuner VCS Plugin compile with --enable-debug=full.
 	* Updated the po files.
 	* autogen.sh configure.ac.in: Changed scripts to xfce4-dev-tools
@@ -115,14 +116,14 @@
 	* thunar-svn-plugin/tsp-svn-action.c thunar-svn-plugin/tsp-provider.c:
 	  Created signal which is emitted on new process spawn.
 
-2008-06-09	Peter de Ridder	<peter@xfce.org>
+2008-06-11	Peter de Ridder	<peter@xfce.org>
 
 	* thunar-svn-plugin/tsp-svn-action.c tsp-svn-helper/main.c
 	  tsp-svn-helper/tsh-blame.[ch] tsp-svn-helper/tsh-blame-dialog.[ch]:
 	  Added Subversion blame action.
 	* tsp-svn-helper/tsh-resolved.c: Added file selection dialog.
 
-2008-06-11	Peter de Ridder	<peter@xfce.org>
+2008-06-10	Peter de Ridder	<peter@xfce.org>
 
 	* thunar-svn-plugin/tsh-svn-action.c tsp-svn-helper/main.c
 	  tsp-svn-helper/tsh-relocate.[ch] tsp-svn-helper/tsh-relocate.[ch]:
