@@ -1,5 +1,5 @@
 
-INCLUDES =								\
+AM_CPPFLAGS =								\
 	-I$(top_builddir)						\
 	-I$(top_srcdir)							\
 	-DG_LOG_DOMAIN=\"thunar-vcs-plugin\"				\
@@ -31,18 +31,24 @@ thunar_vcs_plugin_la_SOURCES +=						\
 	tvp-git-action.h
 endif
 
+thunar_vcs_plugin_la_CPPFLAGS =						\
+	$(AM_CPPFLAGS)
+if HAVE_SUBVERSION
+thunar_vcs_plugin_la_CPPFLAGS +=					\
+	-DTVP_SVN_HELPER=\"$(libexecdir)/tvp-svn-helper\"
+endif
+if HAVE_GIT
+thunar_vcs_plugin_la_CPPFLAGS +=					\
+	-DTVP_GIT_HELPER=\"$(libexecdir)/tvp-git-helper\"
+endif
+
 thunar_vcs_plugin_la_CFLAGS =						\
 	$(PLATFORM_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
 	$(THUNAR_VFS_CFLAGS)
 if HAVE_SUBVERSION
 thunar_vcs_plugin_la_CFLAGS +=						\
-	$(APR_CFLAGS)							\
-	-DTVP_SVN_HELPER=\"$(libexecdir)/tvp-svn-helper\"
-endif
-if HAVE_GIT
-thunar_vcs_plugin_la_CFLAGS +=						\
-	-DTVP_GIT_HELPER=\"$(libexecdir)/tvp-git-helper\"
+	$(APR_CFLAGS)
 endif
 
 thunar_vcs_plugin_la_LDFLAGS =						\

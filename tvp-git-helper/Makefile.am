@@ -36,7 +36,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-status-dialog.c
 
 tvp_git_helper_CPPFLAGS =						\
-	-DG_LOG_DOMAIN=\"tvp-git-helper\"
+	-DG_LOG_DOMAIN=\"tvp-git-helper\"				\
+	$(AM_CPPFLAGS)
 
 tvp_git_helper_CFLAGS =							\
 	$(PLATFORM_CFLAGS)						\

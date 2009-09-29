@@ -233,6 +233,9 @@ int main (int argc, char *argv[])
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
+  /* setup translation domain */
+  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
+
   if (!g_thread_supported ())
     g_thread_init (NULL);
 	gdk_threads_init ();

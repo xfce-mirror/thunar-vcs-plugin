@@ -684,7 +684,9 @@ tsh_status_to_string(enum svn_wc_status_kind status)
       status_string = status_table[status];
       break;
 	}
-  return _(status_string);
+
+  /* Check for None and Unversioned empty strings */
+  return status_string[0]?_(status_string):"";
 }
 
 static const gchar *

@@ -88,7 +88,8 @@ tvp_svn_helper_SOURCES =						\
 	tsh-trust-dialog.c
 
 tvp_svn_helper_CPPFLAGS =						\
-	-DG_LOG_DOMAIN=\"tvp-svn-helper\"
+	-DG_LOG_DOMAIN=\"tvp-svn-helper\"				\
+	$(AM_CPPFLAGS)
 
 tvp_svn_helper_CFLAGS =							\
 	$(PLATFORM_CFLAGS)						\

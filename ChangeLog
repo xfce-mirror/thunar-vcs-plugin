@@ -1,17 +1,22 @@
 2009-09-27	Peter de Ridder <peter@xfce.org>
-	* Made Thuner VCS Plugin compile with --enable-debug=full.
-	* Updated the po files.
+
+	* tvp-{svn,git}-helper/main.c: Added xfce_textdomain to correctly init
+	  translations.
+	* tvp-svn-helper/tsh-comon.c(tsh_status_to_string): Check for empty
+	  string before translations, otherwise the po header will be
+	  returned.
+	* */Makefile.am: Removed deprecated INCLUDES and fix AM_CPPGLAGS
+	  overriding.
 
 2009-09-27	Peter de Ridder <peter@xfce.org>
 
+	* Made Thuner VCS Plugin compile with --enable-debug=full.
+	* Updated the po files.
 	* autogen.sh configure.ac.in: Changed scripts to xfce4-dev-tools
 	  version 4.7.2. Thunar VCS Plugin depends on 4.7.2 of
 	  xfce4-dev-tools, now.
 	* tvp-svn-helper/tsh-file-selection-dialog.c: Fixed revert for
 	  directory deletion.
-
-2009-08-27	Peter de Ridder <peter@xfce.org>
-
 	* tvp-svn-helper/tsh-commit.c
 	  tvp-svn-helper/tsh-file-selection-dialog.[ch]: Better file Selector.
 	  Using recursion info in file selection and commit command to be able
@@ -20,9 +25,6 @@
 	  flag.
 	* tvp-svn-helper/tsh-revert.c: Added
 	  TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN flag.
-
-2009-07-27	Peter de Ridder <peter@xfce.org>
-
 	* tvp-svn-helper/tsh-delete.c(delete_thread): Fixed segfault.
 	* tvp-svn-helper/tsh-file-selection-dialog.[ch]: Support for
 	  unversioned directory trees.

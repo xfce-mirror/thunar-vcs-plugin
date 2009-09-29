@@ -92,6 +92,9 @@ int main (int argc, char *argv[])
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
+  /* setup translation domain */
+  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
+
   option_context = g_option_context_new("<action> [options] [args]");
 
   g_option_context_add_main_entries(option_context, general_options_table, GETTEXT_PACKAGE);
