@@ -139,7 +139,9 @@ tvp_git_action_new (const gchar *name,
         const gchar *label,
         GList *files,
         GtkWidget *window,
-        gboolean is_parent)
+        gboolean is_parent,
+        gboolean is_direcotry,
+        gboolean is_file)
 {
   GtkAction *action;
 
@@ -223,8 +225,9 @@ add_subaction_u (GtkMenuShell *menu, const gchar *name, const gchar *text, const
     subitem = gtk_action_create_menu_item (subaction);
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
     gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (menu, subitem);
-    gtk_widget_show(subitem);
+    //gtk_menu_shell_append (menu, subitem);
+    //gtk_widget_show(subitem);
+    gtk_widget_unref (subitem);
 }
 
 
@@ -233,6 +236,7 @@ tvp_git_action_create_menu_item (GtkAction *action)
 {
     GtkWidget *item;
     GtkWidget *menu;
+    TvpGitAction *tvp_action = TVP_GIT_ACTION (action);
 
     item = GTK_ACTION_CLASS(tvp_git_action_parent_class)->create_menu_item (action);
 
@@ -241,9 +245,11 @@ tvp_git_action_create_menu_item (GtkAction *action)
 
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD, "--add");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::bisect", Q_("Menu|Bisect"), _("Bisect"), NULL, _("Bisect"));
+  if(tvp_action->property.is_parent)
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::branch", Q_("Menu|Branch"), _("Branch"), NULL, "--branch");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT, _("Checkout"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::clone", Q_("Menu|Clone"), _("Clone"), GTK_STOCK_COPY, _("Clone"));
+  if(tvp_action->property.is_parent)
+    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::clone", Q_("Menu|Clone"), _("Clone"), GTK_STOCK_COPY, "--clone");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::commit", Q_("Menu|Commit"), _("Commit"), GTK_STOCK_APPLY, _("Commit"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_FIND_AND_REPLACE, _("Diff"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::fetch", Q_("Menu|Fetch"), _("Fetch"), NULL, _("Fetch"));
@@ -258,6 +264,7 @@ tvp_git_action_create_menu_item (GtkAction *action)
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::reset", Q_("Menu|Reset"), _("Reset"), GTK_STOCK_UNDO, "--reset");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::remove", Q_("Menu|Remove"), _("Remove"), GTK_STOCK_DELETE, _("Remove"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::show", Q_("Menu|Show"), _("Show"), NULL, _("Show"));
+  if(tvp_action->property.is_parent)
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::status", Q_("Menu|Status"), _("Status"), GTK_STOCK_DIALOG_INFO, "--status");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::tag", Q_("Menu|Tag"), _("Tag"), NULL, _("Tag"));
 

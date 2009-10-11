@@ -386,19 +386,25 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 {
   GList              *actions = NULL;
   GtkAction          *action;
-#ifdef HAVE_SUBVERSION
   ThunarVfsPathScheme scheme;
   ThunarVfsInfo      *info;
+  GList              *lp;
+#ifdef HAVE_SUBVERSION
   gboolean            parent_wc = FALSE;
   gboolean            directory_is_wc = FALSE;
   gboolean            directory_is_not_wc = FALSE;
   gboolean            file_is_vc = FALSE;
   gboolean            file_is_not_vc = FALSE;
-  GList              *lp;
   gint                n_files = 0;
   GSList             *file_status;
   GSList             *iter;
+#endif
+#ifdef HAVE_GIT
+  gboolean            directory = FALSE;
+  gboolean            file = FALSE;
+#endif
 
+#ifdef HAVE_SUBVERSION
   file_status = tvp_get_parent_status (files->data);
 
   /* check all supplied files */
@@ -459,8 +465,30 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 #endif
 
 #ifdef HAVE_GIT
+  /* check all supplied files */
+  for (lp = files; lp != NULL; lp = lp->next, ++n_files)
+  {
+    /* check if the file is a local file */
+    info = thunarx_file_info_get_vfs_info (lp->data);
+    scheme = thunar_vfs_path_get_scheme (info->path);
+    thunar_vfs_info_unref (info);
+
+    /* unable to handle non-local files */
+    if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+      return NULL;
+
+    if (thunarx_file_info_is_directory (lp->data))
+    {
+      directory = TRUE;
+    }
+    else
+    {
+      file = TRUE;
+    }
+  }
+
   /* append the git submenu action */
-  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE);
+  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE, directory, file);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   actions = g_list_append (actions, action);
 #endif
@@ -501,7 +529,7 @@ tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 #endif
 
 #ifdef HAVE_GIT
-  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, TRUE);
+  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, TRUE, TRUE, FALSE);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   /* append the git submenu action */
   actions = g_list_append (actions, action);

@@ -278,8 +278,9 @@ add_subaction_u (GtkMenuShell *menu, const gchar *name, const gchar *text, const
     subitem = gtk_action_create_menu_item (subaction);
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
     gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (menu, subitem);
-    gtk_widget_show(subitem);
+    //gtk_menu_shell_append (menu, subitem);
+    //gtk_widget_show(subitem);
+    gtk_widget_unref (subitem);
 }
 
 
