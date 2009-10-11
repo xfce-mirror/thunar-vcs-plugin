@@ -103,8 +103,10 @@ static gboolean reset_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
 
   if(!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, &fd_out, &fd_err, &error))
   {
+    g_free (argv);
     return FALSE;
   }
+  g_free (argv);
 
   parser = tgh_error_parser_new(GTK_WIDGET(dialog));
 

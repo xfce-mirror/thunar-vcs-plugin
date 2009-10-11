@@ -18,6 +18,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-add.c							\
 	tgh-branch.h							\
 	tgh-branch.c							\
+	tgh-clone.h							\
+	tgh-clone.c							\
 	tgh-common.h							\
 	tgh-common.c							\
 	tgh-reset.h							\
@@ -33,7 +35,9 @@ tvp_git_helper_SOURCES =						\
 	tgh-reset-dialog.h						\
 	tgh-reset-dialog.c						\
 	tgh-status-dialog.h						\
-	tgh-status-dialog.c
+	tgh-status-dialog.c						\
+	tgh-transfer-dialog.h						\
+	tgh-transfer-dialog.c
 
 tvp_git_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tvp-git-helper\"				\

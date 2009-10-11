@@ -35,13 +35,6 @@
 
 static gchar *argv[] = {"git", "branch", NULL};
 
-struct proc_args
-{
-    GtkWidget *dialog;
-    gchar *error;
-    gchar **files;
-};
-
 static gboolean branch_spawn (TghBranchDialog *dialog, GPid *pid)
 {
   GError *error = NULL;
@@ -88,7 +81,8 @@ gboolean tgh_branch (gchar **files, GPid *pid)
   g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_branch_child), NULL);
 
   if (files)
-      chdir(files[0]);
+    if (chdir(files[0]))
+      return FALSE;
 
   return branch_spawn(TGH_BRANCH_DIALOG(dialog), pid);
 }

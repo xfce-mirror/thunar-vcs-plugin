@@ -37,9 +37,9 @@
 
 #include "tgh-common.h"
 #include "tgh-dialog-common.h"
-#include "tgh-file-selection-dialog.h"
+#include "tgh-transfer-dialog.h"
 
-#include "tgh-add.h"
+#include "tgh-clone.h"
 
 struct exit_args
 {
@@ -55,7 +55,7 @@ static void child_exit(GPid pid, gint status, gpointer user_data)
 
   if(WEXITSTATUS(status) <= 1)
   {
-    GtkWidget *dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CLOSE, _("Add finished"));
+    GtkWidget *dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CLOSE, _("Clone finished"));
     tgh_dialog_start(GTK_DIALOG(dialog), TRUE);
   }
 
@@ -64,36 +64,27 @@ static void child_exit(GPid pid, gint status, gpointer user_data)
   g_free(args);
 }
 
-static gboolean add_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
+static gboolean clone_spawn (GtkWidget *dialog, gchar *repository, gchar *path, GPid *pid)
 {
   GError *error = NULL;
   gint fd_err;
   GIOChannel *chan_err;
   TghOutputParser *parser;
-  gsize length;
-  gint i;
   gchar **argv;
   struct exit_args *args = g_new(struct exit_args, 1);
 
-  length = 3;
-  length += g_strv_length(files);
-
-  argv = g_new(gchar*, length);
+  argv = g_new(gchar*, 5);
 
   argv[0] = "git";
-  argv[1] = "add";
-  argv[length-1] = NULL;
-
-  i = 2;
-  while(*files)
-    argv[i++] = *files++;
+  argv[1] = "clone";
+  argv[2] = repository;
+  argv[3] = path;
+  argv[4] = NULL;
 
   if(!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {
-    g_free (argv);
     return FALSE;
   }
-  g_free (argv);
 
   parser = tgh_error_parser_new(GTK_WIDGET(dialog));
 
@@ -108,27 +99,27 @@ static gboolean add_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
   return TRUE;
 }
 
-gboolean tgh_add (gchar **files, GPid *pid)
+gboolean tgh_clone (gchar **files, GPid *pid)
 {
   GtkWidget *dialog;
+  gchar *repository;
+  gchar *path;
 
-  dialog = tgh_file_selection_dialog_new (_("Add"), NULL, 0, files, TGH_FILE_SELECTION_FLAG_MODIFIED|TGH_FILE_SELECTION_FLAG_UNTRACKED);
+  dialog = tgh_transfer_dialog_new (_("Clone"), NULL, 0, NULL, files?files[0]:NULL);
   if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);
     return FALSE;
   }
   g_strfreev (files);
-  files = tgh_file_selection_dialog_get_files (TGH_FILE_SELECTION_DIALOG (dialog));
+  repository = tgh_transfer_dialog_get_repository (TGH_TRANSFER_DIALOG (dialog));
+  path = tgh_transfer_dialog_get_directory(TGH_TRANSFER_DIALOG(dialog));
   gtk_widget_destroy (dialog);
 
-  if(!files)
-    return FALSE;
-
-  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Adding ..."));
+  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cloning ..."));
 	g_signal_connect (G_OBJECT (dialog), "response", G_CALLBACK (tgh_cancel), NULL);
   tgh_dialog_start(GTK_DIALOG(dialog), TRUE);
 
-  return add_spawn(dialog, files, pid);
+  return clone_spawn(dialog, repository, path, pid);
 }
 
