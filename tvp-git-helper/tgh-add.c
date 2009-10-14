@@ -112,7 +112,19 @@ gboolean tgh_add (gchar **files, GPid *pid)
 {
   GtkWidget *dialog;
 
-  dialog = tgh_file_selection_dialog_new (_("Add"), NULL, 0, files, TGH_FILE_SELECTION_FLAG_MODIFIED|TGH_FILE_SELECTION_FLAG_UNTRACKED);
+  if (files)
+    if (chdir(files[0]))
+    {
+      gchar *dirname = g_dirname (files[0]);
+      if (chdir(dirname))
+      {
+        g_free (dirname);
+        return FALSE;
+      }
+      g_free (dirname);
+    }
+
+  dialog = tgh_file_selection_dialog_new (_("Add"), NULL, 0, TGH_FILE_SELECTION_FLAG_MODIFIED|TGH_FILE_SELECTION_FLAG_UNTRACKED);
   if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);

@@ -54,6 +54,8 @@ struct _TghFileSelectionDialogClass
 
 G_DEFINE_TYPE (TghFileSelectionDialog, tgh_file_selection_dialog, GTK_TYPE_DIALOG)
 
+static gchar *argv[] = {"git", "status", NULL};
+
 static void
 tgh_file_selection_dialog_class_init (TghFileSelectionDialogClass *klass)
 {
@@ -141,11 +143,8 @@ static TghOutputParser* status_parser_new (GtkWidget *dialog)
 }
 
 GtkWidget*
-tgh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, gchar **files, TghFileSelectionFlags selection_flags)
+tgh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, TghFileSelectionFlags selection_flags)
 {
-  gsize length;
-  gint i;
-  gchar **argv;
   GPid pid;
   gint fd_out, fd_err;
   GError *error = NULL;
@@ -170,21 +169,6 @@ tgh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
     gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
 
   dialog->flags = selection_flags;
-
-  length = 3;
-  if(files)
-    length += g_strv_length(files);
-
-  argv = g_new(gchar*, length);
-
-  argv[0] = "git";
-  argv[1] = "status";
-  argv[length-1] = NULL;
-
-  i = 2;
-  if(files)
-    while(*files)
-      argv[i++] = *files++;
 
   if(!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, &pid, NULL, &fd_out, &fd_err, &error))
   {
@@ -294,6 +278,8 @@ status_parser_func(StatusParser *parser, gchar *line)
             select_ = TRUE;
           break;
       }
+
+      g_debug ("%s, %d", line, add);
 
       if (add)
       {

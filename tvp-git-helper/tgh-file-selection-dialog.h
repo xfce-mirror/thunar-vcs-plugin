@@ -45,7 +45,6 @@ GType      tgh_file_selection_dialog_get_type   (void) G_GNUC_CONST G_GNUC_INTER
 GtkWidget* tgh_file_selection_dialog_new        (const gchar *title,
                                                  GtkWindow *parent,
                                                  GtkDialogFlags flags,
-                                                 gchar **files,
                                                  TghFileSelectionFlags selection_flags) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
 gchar**    tgh_file_selection_dialog_get_files  (TghFileSelectionDialog *dialog);
