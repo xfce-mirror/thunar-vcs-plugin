@@ -255,7 +255,7 @@ tvp_git_action_create_menu_item (GtkAction *action)
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::fetch", Q_("Menu|Fetch"), _("Fetch"), NULL, _("Fetch"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::grep", Q_("Menu|Grep"), _("Grep"), NULL, _("Grep"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::init", Q_("Menu|Init"), _("Init"), NULL, _("Init"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::log", Q_("Menu|Log"), _("Log"), GTK_STOCK_INDEX, _("Log"));
+  add_subaction (action, GTK_MENU_SHELL(menu), "tvp::log", Q_("Menu|Log"), _("Log"), GTK_STOCK_INDEX, "--log");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::merge", Q_("Menu|Merge"), _("Merge"), NULL, _("Merge"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::move", Q_("Menu|Move"), _("Move"), GTK_STOCK_DND_MULTIPLE, _("Move"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::pull", Q_("Menu|Pull"), _("Pull"), NULL, _("Pull"));

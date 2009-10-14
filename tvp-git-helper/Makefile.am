@@ -22,6 +22,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-clone.c							\
 	tgh-common.h							\
 	tgh-common.c							\
+	tgh-log.h							\
+	tgh-log.c							\
 	tgh-reset.h							\
 	tgh-reset.c							\
 	tgh-status.h							\
@@ -32,6 +34,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-branch-dialog.c						\
 	tgh-file-selection-dialog.h					\
 	tgh-file-selection-dialog.c					\
+	tgh-log-dialog.h						\
+	tgh-log-dialog.c						\
 	tgh-reset-dialog.h						\
 	tgh-reset-dialog.c						\
 	tgh-status-dialog.h						\

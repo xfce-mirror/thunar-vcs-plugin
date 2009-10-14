@@ -37,6 +37,7 @@
 
 #include "tgh-dialog-common.h"
 #include "tgh-status-dialog.h"
+#include "tgh-log-dialog.h"
 #include "tgh-branch-dialog.h"
 
 #include "tgh-common.h"
@@ -146,6 +147,117 @@ tgh_status_parser_new (GtkWidget *dialog)
   TghStatusParser *parser = g_new(TghStatusParser,1);
 
   TGH_OUTPUT_PARSER(parser)->parse = TGH_OUTPUT_PARSER_FUNC(status_parser_func);
+
+  parser->dialog = dialog;
+
+  return TGH_OUTPUT_PARSER(parser);
+}
+
+typedef struct {
+  TghOutputParser parent;
+  GtkWidget *dialog;
+  gchar *revision;
+  gchar *author;
+  gchar *author_date;
+  gchar *commit;
+  gchar *commit_date;
+  gchar *message;
+  GSList *files;
+} TghLogParser;
+
+static void
+log_parser_add_entry(TghLogParser *parser, TghLogDialog *dialog)
+{
+  tgh_log_dialog_add(dialog,
+      g_slist_reverse(parser->files),
+      parser->revision,
+      parser->author,
+      parser->author_date,
+      parser->commit,
+      parser->commit_date,
+      parser->message);
+
+  parser->files = NULL;
+  g_free(parser->revision);
+  parser->revision = NULL;
+  parser->author = NULL;
+  g_free(parser->author_date);
+  parser->author_date = NULL;
+  g_free(parser->commit);
+  parser->commit = NULL;
+  g_free(parser->commit_date);
+  parser->commit_date = NULL;
+  g_free(parser->message);
+  parser->message = NULL;
+}
+
+static void
+log_parser_func(TghLogParser *parser, gchar *line)
+{
+  TghLogDialog *dialog = TGH_LOG_DIALOG(parser->dialog);
+  if(line)
+  {
+    if(strncmp(line, "commit ", 7) == 0)
+    {
+      gchar *revision;
+
+      if(parser->revision)
+        log_parser_add_entry(parser, dialog);
+
+      // read first 6 chars of hash?
+      revision = g_strstrip(line+6);
+      parser->revision = g_strndup(revision, revision[0]=='-'?7:6);
+    }
+    else if(strncmp(line, "Author:", 7) == 0)
+    {
+      parser->author = g_strdup(g_strstrip(line+7));
+    }
+    else if(strncmp(line, "AuthorDate:", 11) == 0)
+    {
+      parser->author_date = g_strdup(g_strstrip(line+11));
+    }
+    else if(strncmp(line, "Commit:", 7) == 0)
+    {
+      parser->commit = g_strdup(g_strstrip(line+7));
+    }
+    else if(strncmp(line, "CommitDate:", 11) == 0)
+    {
+      parser->commit_date = g_strdup(g_strstrip(line+11));
+    }
+    else if(strncmp(line, "    ", 4) == 0)
+    {
+      if(parser->message)
+        parser->message = g_strconcat(parser->message, line+4, NULL);
+      else
+        parser->message = g_strdup(line+4);
+    }
+    else if(g_ascii_isdigit(line[0]))
+    {
+      gchar *ptr, *path;
+      TghLogFile *file;
+      file = g_new(TghLogFile, 1);
+      file->insertions = strtoul(line, &ptr, 10);
+      file->deletions = strtoul(ptr, &path, 10);
+      path++;
+      file->file = g_strndup (path, strlen(path)-1);
+      parser->files = g_slist_prepend (parser->files, file);
+    }
+  }
+  else
+  {
+    if(parser->revision)
+      log_parser_add_entry(parser, dialog);
+    tgh_log_dialog_done(dialog);
+    g_free(parser);
+  }
+}
+
+TghOutputParser*
+tgh_log_parser_new (GtkWidget *dialog)
+{
+  TghLogParser *parser = g_new0(TghLogParser,1);
+
+  TGH_OUTPUT_PARSER(parser)->parse = TGH_OUTPUT_PARSER_FUNC(log_parser_func);
 
   parser->dialog = dialog;
 

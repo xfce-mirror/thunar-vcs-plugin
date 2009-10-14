@@ -33,6 +33,7 @@
 #include "tgh-add.h"
 #include "tgh-branch.h"
 #include "tgh-clone.h"
+#include "tgh-log.h"
 #include "tgh-reset.h"
 #include "tgh-status.h"
 
@@ -55,6 +56,7 @@ int main (int argc, char *argv[])
   gboolean add = FALSE;
   gboolean branch = FALSE;
   gboolean clone = FALSE;
+  gboolean log = FALSE;
   gboolean reset = FALSE;
   gboolean status = FALSE;
   gchar **files = NULL;
@@ -85,6 +87,12 @@ int main (int argc, char *argv[])
   GOptionEntry clone_options_table[] =
   {
     { "clone", '\0', 0, G_OPTION_ARG_NONE, &clone, N_("Execute clone action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
+  GOptionEntry log_options_table[] =
+  {
+    { "log", '\0', 0, G_OPTION_ARG_NONE, &log, N_("Execute log action"), NULL },
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
@@ -120,6 +128,10 @@ int main (int argc, char *argv[])
   g_option_group_add_entries(option_group, clone_options_table);
   g_option_context_add_group(option_context, option_group);
 
+  option_group = g_option_group_new("log", N_("Log Related Options:"), N_("Log"), NULL, NULL);
+  g_option_group_add_entries(option_group, log_options_table);
+  g_option_context_add_group(option_context, option_group);
+
   option_group = g_option_group_new("reset", N_("Reset Related Options:"), N_("Reset"), NULL, NULL);
   g_option_group_add_entries(option_group, reset_options_table);
   g_option_context_add_group(option_context, option_group);
@@ -153,6 +165,11 @@ int main (int argc, char *argv[])
   if(clone)
   {
     has_child = tgh_clone(files, &pid);
+  }
+
+  if(log)
+  {
+    has_child = tgh_log(files, &pid);
   }
 
   if(reset)
