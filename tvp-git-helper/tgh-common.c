@@ -36,6 +36,7 @@
 #include <thunar-vfs/thunar-vfs.h>
 
 #include "tgh-dialog-common.h"
+#include "tgh-notify-dialog.h"
 #include "tgh-status-dialog.h"
 #include "tgh-log-dialog.h"
 #include "tgh-branch-dialog.h"
@@ -105,7 +106,54 @@ tgh_error_parser_new(GtkWidget *dialog)
 typedef struct {
   TghOutputParser parent;
   GtkWidget *dialog;
-  gboolean commit;
+} TghNotifyParser;
+
+static void
+notify_parser_func(TghNotifyParser *parser, gchar *line)
+{
+  TghNotifyDialog *dialog = TGH_NOTIFY_DIALOG(parser->dialog);
+  if(line)
+  {
+    gchar *action, *file;
+
+    file = strchr(line, '\'');
+    if(file)
+    {
+      *file++ = '\0';
+      *strrchr(file, '\'') = '\0';
+
+      action = g_strstrip(line);
+
+      tgh_notify_dialog_add(dialog, action, file);
+    }
+  }
+  else
+  {
+    tgh_notify_dialog_done(dialog);
+    g_free(parser);
+  }
+}
+
+TghOutputParser*
+tgh_notify_parser_new (GtkWidget *dialog)
+{
+  TghNotifyParser *parser = g_new(TghNotifyParser,1);
+
+  TGH_OUTPUT_PARSER(parser)->parse = TGH_OUTPUT_PARSER_FUNC(notify_parser_func);
+
+  parser->dialog = dialog;
+
+  return TGH_OUTPUT_PARSER(parser);
+}
+
+typedef struct {
+  TghOutputParser parent;
+  GtkWidget *dialog;
+  enum {
+    STATUS_COMMIT,
+    STATUS_MODIFIED,
+    STATUS_UNTRACKED
+  } state;
 } TghStatusParser;
 
 static void
@@ -114,25 +162,31 @@ status_parser_func(TghStatusParser *parser, gchar *line)
   TghStatusDialog *dialog = TGH_STATUS_DIALOG(parser->dialog);
   if(line)
   {
-    if(strstr(line, "git reset"))
-      parser->commit = TRUE;
-    else if(strstr(line, "git add"))
-      parser->commit = FALSE;
     if(line[0] == '#' && line[1] == '\t')
     {
       gchar *file = strchr(line, ':');
       gchar *state = _("untracked");
-      if(file)
+      if(file && parser->state != STATUS_UNTRACKED)
       {
         *file = '\0';
         state = line+2;
-        file = g_strstrip(file+1);
+        file = line+14;
       }
       else
-        file = g_strstrip(line+2);
+        file = line+2;
+      file[strlen(file)-1] = '\0';
+      file = g_shell_unquote(file, NULL);
 
-      tgh_status_dialog_add(dialog, file, state, parser->commit);
+      tgh_status_dialog_add(dialog, file, state, parser->state == STATUS_COMMIT);
+
+      g_free(file);
     }
+    else if(strstr(line, "git reset"))
+      parser->state = STATUS_COMMIT;
+    else if(strstr(line, "git add"))
+      parser->state = STATUS_UNTRACKED;
+    else if(strstr(line, "git checkout"))
+      parser->state = STATUS_MODIFIED;
   }
   else
   {

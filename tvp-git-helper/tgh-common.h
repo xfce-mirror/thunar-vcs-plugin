@@ -36,6 +36,8 @@ struct _TghOutputParser {
 
 TghOutputParser* tgh_error_parser_new  (GtkWidget *);
 
+TghOutputParser* tgh_notify_parser_new (GtkWidget *);
+
 TghOutputParser* tgh_status_parser_new (GtkWidget *);
 
 TghOutputParser* tgh_log_parser_new    (GtkWidget *);

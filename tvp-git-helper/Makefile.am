@@ -36,6 +36,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-file-selection-dialog.c					\
 	tgh-log-dialog.h						\
 	tgh-log-dialog.c						\
+	tgh-notify-dialog.h						\
+	tgh-notify-dialog.c						\
 	tgh-status-dialog.h						\
 	tgh-status-dialog.c						\
 	tgh-transfer-dialog.h						\

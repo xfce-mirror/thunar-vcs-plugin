@@ -30,7 +30,7 @@
 typedef struct {
   TghOutputParser parent;
   GtkWidget *dialog;
-  enum {STATE_ADDED, STATE_MODIFIED, STATE_UNTRACKED} state;
+  enum {STATUS_ADDED, STATUS_MODIFIED, STATUS_UNTRACKED} state;
 } StatusParser;
 
 static void status_parser_func(StatusParser *, gchar *);
@@ -249,37 +249,37 @@ status_parser_func(StatusParser *parser, gchar *line)
     {
       gchar *file = strchr(line, ':');
       gchar *state = _("untracked");
-      if(file)
+      if(file && parser->state != STATUS_UNTRACKED)
       {
         *file = '\0';
         state = line+2;
-        file = g_strstrip(file+1);
+        file = line+14;
       }
       else
-        file = g_strstrip(line+2);
+        file = line+2;
+      file[strlen(file)-1] = '\0';
+      file = g_shell_unquote(file, NULL);
 
       switch(parser->state)
       {
-        case STATE_ADDED:
+        case STATUS_ADDED:
           if(dialog->flags & TGH_FILE_SELECTION_FLAG_ADDED)
             add = TRUE;
           select_ = TRUE;
           break;
-        case STATE_MODIFIED:
+        case STATUS_MODIFIED:
           if(dialog->flags & TGH_FILE_SELECTION_FLAG_MODIFIED)
             add = TRUE;
           if(!(dialog->flags & TGH_FILE_SELECTION_FLAG_ADDED))
             select_ = TRUE;
           break;
-        case STATE_UNTRACKED:
+        case STATUS_UNTRACKED:
           if(dialog->flags & TGH_FILE_SELECTION_FLAG_UNTRACKED)
             add = TRUE;
           if(!(dialog->flags & (TGH_FILE_SELECTION_FLAG_ADDED|TGH_FILE_SELECTION_FLAG_MODIFIED)))
             select_ = TRUE;
           break;
       }
-
-      g_debug ("%s, %d", line, add);
 
       if (add)
       {
@@ -295,13 +295,15 @@ status_parser_func(StatusParser *parser, gchar *line)
                             COLUMN_SELECTION, select_,
                             -1);
       }
+
+      g_free(file);
     }
     else if(strstr(line, "git reset"))
-      parser->state = STATE_ADDED;
+      parser->state = STATUS_ADDED;
     else if(strstr(line, "git add"))
-      parser->state = STATE_UNTRACKED;
+      parser->state = STATUS_UNTRACKED;
     else if(strstr(line, "git checkout"))
-      parser->state = STATE_MODIFIED;
+      parser->state = STATUS_MODIFIED;
   }
   else
   {
