@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 22:17+0200\n"
+"POT-Creation-Date: 2009-10-23 15:56+0200\n"
 "PO-Revision-Date: 2009-09-18 21:21+0100\n"
 "Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
 "Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
@@ -40,7 +40,8 @@ msgstr "Pievienot"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
 #: ../thunar-vcs-plugin/tvp-git-action.c:246 ../tvp-svn-helper/main.c:249
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
-#: ../tvp-git-helper/main.c:119 ../tvp-git-helper/tgh-add.c:115
+#: ../tvp-git-helper/main.c:119 ../tvp-git-helper/tgh-add.c:105
+#: ../tvp-git-helper/tgh-add.c:118
 msgid "Add"
 msgstr "Pievienot"
 
@@ -232,8 +233,7 @@ msgstr "Status"
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:139
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:120
-#: ../tvp-git-helper/tgh-reset-dialog.c:93
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:122
 #: ../tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
 msgstr "Status"
@@ -387,7 +387,7 @@ msgid "Menu|Clone"
 msgstr "Kopēt"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-git-helper/main.c:127
-#: ../tvp-git-helper/tgh-clone.c:108
+#: ../tvp-git-helper/tgh-clone.c:109
 msgid "Clone"
 msgstr ""
 
@@ -463,7 +463,7 @@ msgid "Menu|Reset"
 msgstr "Atgriezt"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:135
-#: ../tvp-git-helper/tgh-reset.c:127 ../tvp-git-helper/tgh-reset-dialog.c:108
+#: ../tvp-git-helper/tgh-reset.c:122
 msgid "Reset"
 msgstr "Atstatīt"
 
@@ -968,14 +968,14 @@ msgstr "Sertifikāts"
 #: ../tvp-svn-helper/tsh-notify-dialog.c:94
 #: ../tvp-svn-helper/tsh-status-dialog.c:118
 #: ../tvp-git-helper/tgh-branch-dialog.c:104
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:92
-#: ../tvp-git-helper/tgh-reset-dialog.c:87
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:94
+#: ../tvp-git-helper/tgh-notify-dialog.c:93
 #: ../tvp-git-helper/tgh-status-dialog.c:104
 msgid "Path"
 msgstr "Ceļš"
 
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:113
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 msgid "Select/Unselect all"
 msgstr "Atlasīt visu/Atcelt atlasi"
 
@@ -990,6 +990,7 @@ msgstr "Ziņa"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:180
 #: ../tvp-svn-helper/tsh-notify-dialog.c:88
+#: ../tvp-git-helper/tgh-notify-dialog.c:87
 msgid "Action"
 msgstr "Darbība"
 
@@ -1147,7 +1148,7 @@ msgstr "Slēpt ārējos"
 msgid "Check Repository"
 msgstr "Pārbaudīt repozitoriju"
 
-#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:49
+#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:50
 msgid "Status failed"
 msgstr "Status neizdevās"
 
@@ -1211,26 +1212,18 @@ msgstr "Kopēšanas saistītās opcijas:"
 msgid "Reset Related Options:"
 msgstr "Atstatīšanas saistītās opcijas:"
 
-#: ../tvp-git-helper/tgh-add.c:58
-msgid "Add finished"
-msgstr "Pievienošana pabeigta"
-
-#: ../tvp-git-helper/tgh-add.c:128
-msgid "Adding ..."
-msgstr "Pievieno ..."
-
 #: ../tvp-git-helper/tgh-clone.c:58
 #, fuzzy
 msgid "Clone finished"
 msgstr "Uzkopšana pabeigta"
 
-#: ../tvp-git-helper/tgh-clone.c:119
+#: ../tvp-git-helper/tgh-clone.c:120
 #, fuzzy
 msgid "Cloning ..."
 msgstr "Uzkopšana..."
 
-#: ../tvp-git-helper/tgh-common.c:124
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:267
+#: ../tvp-git-helper/tgh-common.c:168
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
 msgstr "neseko"
 
@@ -1248,6 +1241,34 @@ msgstr "Iesniegt"
 #, fuzzy
 msgid "Changes"
 msgstr "Mainīts"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:108
+msgid "Notify"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-reset.c:50
+#, fuzzy
+msgid "Reset finished"
+msgstr "Atiedalīšana pabeigta"
+
+#: ../tvp-git-helper/tgh-reset.c:135
+#, fuzzy
+msgid "Reset ..."
+msgstr "Atstatīt"
+
+#, fuzzy
+#~ msgid "Execute remove action"
+#~ msgstr "Izpildīt pārvietošanas darbību"
+
+#, fuzzy
+#~ msgid "Remove Related Options:"
+#~ msgstr "Atrisināts saistītās opcijas:"
+
+#~ msgid "Add finished"
+#~ msgstr "Pievienošana pabeigta"
+
+#~ msgid "Adding ..."
+#~ msgstr "Pievieno ..."
 
 #, fuzzy
 #~ msgid "Modify Property Recursive"

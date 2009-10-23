@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 22:17+0200\n"
+"POT-Creation-Date: 2009-10-23 15:56+0200\n"
 "PO-Revision-Date: 2009-06-22 02:22+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
@@ -36,7 +36,8 @@ msgstr "Add"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
 #: ../thunar-vcs-plugin/tvp-git-action.c:246 ../tvp-svn-helper/main.c:249
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
-#: ../tvp-git-helper/main.c:119 ../tvp-git-helper/tgh-add.c:115
+#: ../tvp-git-helper/main.c:119 ../tvp-git-helper/tgh-add.c:105
+#: ../tvp-git-helper/tgh-add.c:118
 msgid "Add"
 msgstr "Add"
 
@@ -228,8 +229,7 @@ msgstr "Status"
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:139
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:120
-#: ../tvp-git-helper/tgh-reset-dialog.c:93
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:122
 #: ../tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
 msgstr "Status"
@@ -387,7 +387,7 @@ msgid "Menu|Clone"
 msgstr "Copy"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-git-helper/main.c:127
-#: ../tvp-git-helper/tgh-clone.c:108
+#: ../tvp-git-helper/tgh-clone.c:109
 msgid "Clone"
 msgstr ""
 
@@ -463,7 +463,7 @@ msgid "Menu|Reset"
 msgstr "Revert"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:135
-#: ../tvp-git-helper/tgh-reset.c:127 ../tvp-git-helper/tgh-reset-dialog.c:108
+#: ../tvp-git-helper/tgh-reset.c:122
 #, fuzzy
 msgid "Reset"
 msgstr "Revert"
@@ -969,14 +969,14 @@ msgstr "证书"
 #: ../tvp-svn-helper/tsh-notify-dialog.c:94
 #: ../tvp-svn-helper/tsh-status-dialog.c:118
 #: ../tvp-git-helper/tgh-branch-dialog.c:104
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:92
-#: ../tvp-git-helper/tgh-reset-dialog.c:87
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:94
+#: ../tvp-git-helper/tgh-notify-dialog.c:93
 #: ../tvp-git-helper/tgh-status-dialog.c:104
 msgid "Path"
 msgstr "路径"
 
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:113
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 msgid "Select/Unselect all"
 msgstr "全选/全不选"
 
@@ -991,6 +991,7 @@ msgstr "信息"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:180
 #: ../tvp-svn-helper/tsh-notify-dialog.c:88
+#: ../tvp-git-helper/tgh-notify-dialog.c:87
 msgid "Action"
 msgstr "操作"
 
@@ -1148,7 +1149,7 @@ msgstr "隐藏外部内容"
 msgid "Check Repository"
 msgstr "检查仓库"
 
-#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:49
+#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:50
 msgid "Status failed"
 msgstr "Status 操作失败"
 
@@ -1216,27 +1217,18 @@ msgstr "Copy 操作相关选项:"
 msgid "Reset Related Options:"
 msgstr "Revert 操作相关选项:"
 
-#: ../tvp-git-helper/tgh-add.c:58
-#, fuzzy
-msgid "Add finished"
-msgstr "Cleanup 操作完成"
-
-#: ../tvp-git-helper/tgh-add.c:128
-msgid "Adding ..."
-msgstr ""
-
 #: ../tvp-git-helper/tgh-clone.c:58
 #, fuzzy
 msgid "Clone finished"
 msgstr "Cleanup 操作完成"
 
-#: ../tvp-git-helper/tgh-clone.c:119
+#: ../tvp-git-helper/tgh-clone.c:120
 #, fuzzy
 msgid "Cloning ..."
 msgstr "正在进行 cleanup 操作..."
 
-#: ../tvp-git-helper/tgh-common.c:124
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:267
+#: ../tvp-git-helper/tgh-common.c:168
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
 msgstr ""
 
@@ -1254,3 +1246,29 @@ msgstr "Commit"
 #, fuzzy
 msgid "Changes"
 msgstr "已被改变"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:108
+msgid "Notify"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-reset.c:50
+#, fuzzy
+msgid "Reset finished"
+msgstr "Relocate 操作完成"
+
+#: ../tvp-git-helper/tgh-reset.c:135
+#, fuzzy
+msgid "Reset ..."
+msgstr "Revert"
+
+#, fuzzy
+#~ msgid "Execute remove action"
+#~ msgstr "执行 move 操作"
+
+#, fuzzy
+#~ msgid "Remove Related Options:"
+#~ msgstr "Resolved 操作相关选项:"
+
+#, fuzzy
+#~ msgid "Add finished"
+#~ msgstr "Cleanup 操作完成"

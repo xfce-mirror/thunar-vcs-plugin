@@ -73,13 +73,14 @@ static gboolean clone_spawn (GtkWidget *dialog, gchar *repository, gchar *path, 
   gchar **argv;
   struct exit_args *args = g_new(struct exit_args, 1);
 
-  argv = g_new(gchar*, 5);
+  argv = g_new(gchar*, 6);
 
   argv[0] = "git";
   argv[1] = "clone";
-  argv[2] = repository;
-  argv[3] = path;
-  argv[4] = NULL;
+  argv[2] = "--";
+  argv[3] = repository;
+  argv[4] = path;
+  argv[5] = NULL;
 
   if(!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {
@@ -106,7 +107,7 @@ gboolean tgh_clone (gchar **files, GPid *pid)
   gchar *path;
 
   dialog = tgh_transfer_dialog_new (_("Clone"), NULL, 0, NULL, files?files[0]:NULL);
-  if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
+  if (gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);
     return FALSE;
@@ -116,9 +117,9 @@ gboolean tgh_clone (gchar **files, GPid *pid)
   path = tgh_transfer_dialog_get_directory(TGH_TRANSFER_DIALOG(dialog));
   gtk_widget_destroy (dialog);
 
-  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cloning ..."));
-	g_signal_connect (G_OBJECT (dialog), "response", G_CALLBACK (tgh_cancel), NULL);
-  tgh_dialog_start(GTK_DIALOG(dialog), TRUE);
+  dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cloning ..."));
+  g_signal_connect (dialog, "response", tgh_cancel, NULL);
+  tgh_dialog_start (GTK_DIALOG(dialog), TRUE);
 
   return clone_spawn(dialog, repository, path, pid);
 }

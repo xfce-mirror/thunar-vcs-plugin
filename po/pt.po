@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-14 22:17+0200\n"
+"POT-Creation-Date: 2009-10-23 15:56+0200\n"
 "PO-Revision-Date: 2008-11-01 11:37+0100\n"
 "Last-Translator: Nuno Miguel <nunis@netcabo.pt>\n"
 "Language-Team: \n"
@@ -37,7 +37,8 @@ msgstr "Adicionar"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
 #: ../thunar-vcs-plugin/tvp-git-action.c:246 ../tvp-svn-helper/main.c:249
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
-#: ../tvp-git-helper/main.c:119 ../tvp-git-helper/tgh-add.c:115
+#: ../tvp-git-helper/main.c:119 ../tvp-git-helper/tgh-add.c:105
+#: ../tvp-git-helper/tgh-add.c:118
 msgid "Add"
 msgstr "Adicionar"
 
@@ -231,8 +232,7 @@ msgstr "Estado"
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:139
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:120
-#: ../tvp-git-helper/tgh-reset-dialog.c:93
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:122
 #: ../tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
 msgstr "Status"
@@ -388,7 +388,7 @@ msgid "Menu|Clone"
 msgstr "Copiar"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-git-helper/main.c:127
-#: ../tvp-git-helper/tgh-clone.c:108
+#: ../tvp-git-helper/tgh-clone.c:109
 msgid "Clone"
 msgstr ""
 
@@ -463,7 +463,7 @@ msgid "Menu|Reset"
 msgstr "Reverter"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:135
-#: ../tvp-git-helper/tgh-reset.c:127 ../tvp-git-helper/tgh-reset-dialog.c:108
+#: ../tvp-git-helper/tgh-reset.c:122
 #, fuzzy
 msgid "Reset"
 msgstr "Reverter"
@@ -982,14 +982,14 @@ msgstr "Certificado"
 #: ../tvp-svn-helper/tsh-notify-dialog.c:94
 #: ../tvp-svn-helper/tsh-status-dialog.c:118
 #: ../tvp-git-helper/tgh-branch-dialog.c:104
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:92
-#: ../tvp-git-helper/tgh-reset-dialog.c:87
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:94
+#: ../tvp-git-helper/tgh-notify-dialog.c:93
 #: ../tvp-git-helper/tgh-status-dialog.c:104
 msgid "Path"
 msgstr "Caminho"
 
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:113
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 msgid "Select/Unselect all"
 msgstr "Seleccionar/De-seleccionar tudo"
 
@@ -1004,6 +1004,7 @@ msgstr "Mensagem"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:180
 #: ../tvp-svn-helper/tsh-notify-dialog.c:88
+#: ../tvp-git-helper/tgh-notify-dialog.c:87
 msgid "Action"
 msgstr "Acção"
 
@@ -1163,7 +1164,7 @@ msgstr "Ocultar Externos"
 msgid "Check Repository"
 msgstr "Verificar Repositório"
 
-#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:49
+#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:50
 msgid "Status failed"
 msgstr "Estado falhou"
 
@@ -1231,27 +1232,18 @@ msgstr "Opções Relacionadas de Cópia:"
 msgid "Reset Related Options:"
 msgstr "Opções de Reversão:"
 
-#: ../tvp-git-helper/tgh-add.c:58
-#, fuzzy
-msgid "Add finished"
-msgstr "Limpeza concluída"
-
-#: ../tvp-git-helper/tgh-add.c:128
-msgid "Adding ..."
-msgstr ""
-
 #: ../tvp-git-helper/tgh-clone.c:58
 #, fuzzy
 msgid "Clone finished"
 msgstr "Limpeza concluída"
 
-#: ../tvp-git-helper/tgh-clone.c:119
+#: ../tvp-git-helper/tgh-clone.c:120
 #, fuzzy
 msgid "Cloning ..."
 msgstr "Limpando..."
 
-#: ../tvp-git-helper/tgh-common.c:124
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:267
+#: ../tvp-git-helper/tgh-common.c:168
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
 msgstr ""
 
@@ -1269,6 +1261,32 @@ msgstr "Enviar"
 #, fuzzy
 msgid "Changes"
 msgstr "Modificado"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:108
+msgid "Notify"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-reset.c:50
+#, fuzzy
+msgid "Reset finished"
+msgstr "Re-alocação concluída"
+
+#: ../tvp-git-helper/tgh-reset.c:135
+#, fuzzy
+msgid "Reset ..."
+msgstr "Reverter"
+
+#, fuzzy
+#~ msgid "Execute remove action"
+#~ msgstr "Executar acção mover"
+
+#, fuzzy
+#~ msgid "Remove Related Options:"
+#~ msgstr "Opções de Resolução"
+
+#, fuzzy
+#~ msgid "Add finished"
+#~ msgstr "Limpeza concluída"
 
 #~ msgid "%1$s on %2$s"
 #~ msgstr "%1$s em %2$s"
