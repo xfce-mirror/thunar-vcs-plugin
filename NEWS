@@ -1,3 +1,9 @@
+0.1.1
+=====
+- Unimplemented options are hidden in menu.
+- Problems with text domain for translations fixed.
+- More git support added.
+
 0.1.0
 =====
 - The plugin is renamed to thunar-vcs-plugin.

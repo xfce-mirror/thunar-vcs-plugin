@@ -12,9 +12,9 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([tvp_version_major], [0])
 m4_define([tvp_version_minor], [1])
-m4_define([tvp_version_micro], [0])
+m4_define([tvp_version_micro], [1])
 m4_define([tvp_version_build], [@REVISION@])
-m4_define([tvp_version_tag], [git]) # Leave empty for releases
+m4_define([tvp_version_tag], []) # Leave empty for releases
 m4_define([tvp_version], [tvp_version_major().tvp_version_minor().tvp_version_micro()ifelse(tvp_version_tag(), [], [], [tvp_version_tag()-tvp_version_build()])])
 
 dnl *******************************************

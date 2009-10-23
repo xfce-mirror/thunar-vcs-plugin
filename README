@@ -5,31 +5,38 @@ The Thunar VCS Plugin adds Subversion actions to the context menu of thunar.
 This gives a VCS integration to Thunar.
 
 The current features are:
-- Most of the svn action: add, checkout, cleanup, commit, copy, delete,
-  export, import, lock, log, move, properties, resolved, revert, status,
-  unlock, update.
+- Most of the svn action: add, blame, checkout, cleanup, commit, copy, delete,
+  export, import, lock, log, move, properties, relocate, resolved, revert,
+  status, switch, unlock, update.
 - Subversion info in file properties dialog.
+- Limmited git support: add, branch, clone, log, reset, status.
 
 
 Usage
 =====
 
 In the thunar file/folder view right click on a file ore folder and the
-context menu pops up showing the SVN submenu. Choose the appropriate action.
+context menu pops up showing the SVN and GIT submenu. Choose the appropriate
+action.
 
 
 Required packages
 =================
 
-The Thunar SVN Plugin depends on the following packages:
+The Thunar VCS Plugin depends on the following packages:
 - Thunar
 - Thunar-VFS 0.4.0 or higher
 - Thunarx 0.4.0 or higher
-- libsvn 1.5 or higher
-- libapr 0.9.7 or higher
 - gtk 2.6.0 or higher
 - glib 2.6.0 or higher
 - gobject 2.6.0 or higher
+
+For svn support it requires the following packages:
+- libsvn 1.5 or higher
+- libapr 0.9.7 or higher
+
+For git support it requires the following packages:
+- git
 
 
 Installation
