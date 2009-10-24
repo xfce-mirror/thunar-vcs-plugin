@@ -26,6 +26,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-log.c							\
 	tgh-reset.h							\
 	tgh-reset.c							\
+	tgh-stash.h							\
+	tgh-stash.c							\
 	tgh-status.h							\
 	tgh-status.c							\
 	tgh-dialog-common.h						\
@@ -38,6 +40,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-log-dialog.c						\
 	tgh-notify-dialog.h						\
 	tgh-notify-dialog.c						\
+	tgh-stash-dialog.h						\
+	tgh-stash-dialog.c						\
 	tgh-status-dialog.h						\
 	tgh-status-dialog.c						\
 	tgh-transfer-dialog.h						\

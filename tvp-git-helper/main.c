@@ -35,6 +35,7 @@
 #include "tgh-clone.h"
 #include "tgh-log.h"
 #include "tgh-reset.h"
+#include "tgh-stash.h"
 #include "tgh-status.h"
 
 static GPid pid;
@@ -58,6 +59,7 @@ int main (int argc, char *argv[])
   gboolean clone = FALSE;
   gboolean log = FALSE;
   gboolean reset = FALSE;
+  gboolean stash = FALSE;
   gboolean status = FALSE;
   gchar **files = NULL;
   GError *error = NULL;
@@ -102,6 +104,12 @@ int main (int argc, char *argv[])
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
+  GOptionEntry stash_options_table[] =
+  {
+    { "stash", '\0', 0, G_OPTION_ARG_NONE, &stash, N_("Execute stash action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
   GOptionEntry status_options_table[] =
   {
     { "status", '\0', 0, G_OPTION_ARG_NONE, &status, N_("Execute status action"), NULL },
@@ -134,6 +142,10 @@ int main (int argc, char *argv[])
 
   option_group = g_option_group_new("reset", N_("Reset Related Options:"), N_("Reset"), NULL, NULL);
   g_option_group_add_entries(option_group, reset_options_table);
+  g_option_context_add_group(option_context, option_group);
+
+  option_group = g_option_group_new("stash", N_("Stash Related Options:"), N_("Stash"), NULL, NULL);
+  g_option_group_add_entries(option_group, stash_options_table);
   g_option_context_add_group(option_context, option_group);
 
   option_group = g_option_group_new("status", N_("Status Related Options:"), N_("Status"), NULL, NULL);
@@ -175,6 +187,11 @@ int main (int argc, char *argv[])
   if(reset)
   {
     has_child = tgh_reset(files, &pid);
+  }
+
+  if(stash)
+  {
+    has_child = tgh_stash(files, &pid);
   }
 
   if(status)

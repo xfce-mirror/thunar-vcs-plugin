@@ -265,6 +265,8 @@ tvp_git_action_create_menu_item (GtkAction *action)
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::remove", Q_("Menu|Remove"), _("Remove"), GTK_STOCK_DELETE, _("Remove"));
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::show", Q_("Menu|Show"), _("Show"), NULL, _("Show"));
   if(tvp_action->property.is_parent)
+    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::stash", Q_("Menu|Stash"), _("Stash"), GTK_STOCK_SAVE, "--stash");
+  if(tvp_action->property.is_parent)
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::status", Q_("Menu|Status"), _("Status"), GTK_STOCK_DIALOG_INFO, "--status");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::tag", Q_("Menu|Tag"), _("Tag"), NULL, _("Tag"));
 

@@ -34,15 +34,18 @@ struct _TghOutputParser {
   TghOutputParserFunc parse;
 };
 
-TghOutputParser* tgh_error_parser_new  (GtkWidget *);
+TghOutputParser* tgh_error_parser_new      (GtkWidget *);
 
-TghOutputParser* tgh_notify_parser_new (GtkWidget *);
+TghOutputParser* tgh_notify_parser_new     (GtkWidget *);
 
-TghOutputParser* tgh_status_parser_new (GtkWidget *);
+TghOutputParser* tgh_status_parser_new     (GtkWidget *);
 
-TghOutputParser* tgh_log_parser_new    (GtkWidget *);
+TghOutputParser* tgh_log_parser_new        (GtkWidget *);
 
-TghOutputParser* tgh_branch_parser_new (GtkWidget *);
+TghOutputParser* tgh_branch_parser_new     (GtkWidget *);
+
+TghOutputParser* tgh_stash_list_parser_new (GtkWidget *);
+TghOutputParser* tgh_stash_show_parser_new (GtkWidget *);
 
 gboolean tgh_parse_output_func  (GIOChannel *, GIOCondition, gpointer);
 

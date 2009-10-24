@@ -40,6 +40,7 @@
 #include "tgh-status-dialog.h"
 #include "tgh-log-dialog.h"
 #include "tgh-branch-dialog.h"
+#include "tgh-stash-dialog.h"
 
 #include "tgh-common.h"
 
@@ -350,6 +351,83 @@ tgh_branch_parser_new (GtkWidget *dialog)
   parser->dialog = dialog;
 
   return TGH_OUTPUT_PARSER(parser);
+}
+
+typedef struct {
+  TghOutputParser parent;
+  GtkWidget *dialog;
+} TghStashListParser;
+
+static void
+stash_list_parser_func (TghStashListParser *parser, gchar *line)
+{
+  TghStashDialog *dialog = TGH_STASH_DIALOG (parser->dialog);
+  if (line)
+  {
+    gchar *stash, *branch, *desc;
+    branch = strchr (line, ':');
+    *branch++ = '\0';
+    stash = g_strstrip (line);
+    desc = strchr (branch, ':');
+    *desc++ = '\0';
+    branch = g_strstrip (branch);
+    desc = g_strstrip (desc);
+    tgh_stash_dialog_add (dialog, stash, branch, desc);
+  }
+  else
+  {
+    tgh_stash_dialog_done (dialog);
+    g_free (parser);
+  }
+}
+
+TghOutputParser*
+tgh_stash_list_parser_new (GtkWidget *dialog)
+{
+  TghStashListParser *parser = g_new (TghStashListParser,1);
+
+  TGH_OUTPUT_PARSER (parser)->parse = TGH_OUTPUT_PARSER_FUNC (stash_list_parser_func);
+
+  parser->dialog = dialog;
+
+  return TGH_OUTPUT_PARSER (parser);
+}
+
+typedef struct {
+  TghOutputParser parent;
+  GtkWidget *dialog;
+} TghStashShowParser;
+
+static void
+stash_show_parser_func (TghStashShowParser *parser, gchar *line)
+{
+  TghStashDialog *dialog = TGH_STASH_DIALOG (parser->dialog);
+  if (line)
+  {
+    gchar *ptr, *file;
+    guint insertions = strtoul (line, &ptr, 10);
+    guint deletions = strtoul (ptr, &file, 10);
+    file++;
+    file = g_strndup (file, strlen(file)-1);
+    tgh_stash_dialog_add_file (dialog, insertions, deletions, file);
+  }
+  else
+  {
+    tgh_stash_dialog_done (dialog);
+    g_free (parser);
+  }
+}
+
+TghOutputParser*
+tgh_stash_show_parser_new (GtkWidget *dialog)
+{
+  TghStashShowParser *parser = g_new (TghStashShowParser,1);
+
+  TGH_OUTPUT_PARSER (parser)->parse = TGH_OUTPUT_PARSER_FUNC (stash_show_parser_func);
+
+  parser->dialog = dialog;
+
+  return TGH_OUTPUT_PARSER (parser);
 }
 
 gboolean
