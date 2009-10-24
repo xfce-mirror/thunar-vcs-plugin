@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-23 15:56+0200\n"
+"POT-Creation-Date: 2009-10-25 00:59+0200\n"
 "PO-Revision-Date: 2009-08-19 23:52+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -39,7 +39,7 @@ msgstr "Tilføj"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
 #: ../thunar-vcs-plugin/tvp-git-action.c:246 ../tvp-svn-helper/main.c:249
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
-#: ../tvp-git-helper/main.c:119 ../tvp-git-helper/tgh-add.c:105
+#: ../tvp-git-helper/main.c:127 ../tvp-git-helper/tgh-add.c:105
 #: ../tvp-git-helper/tgh-add.c:118
 msgid "Add"
 msgstr "Tilføj"
@@ -90,7 +90,7 @@ msgstr "Integrér"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:333
 #: ../thunar-vcs-plugin/tvp-git-action.c:253 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-commit.c:223 ../tvp-svn-helper/tsh-commit.c:236
-#: ../tvp-git-helper/tgh-log-dialog.c:138
+#: ../tvp-git-helper/tgh-log-dialog.c:137
 msgid "Commit"
 msgstr "Integrér"
 
@@ -164,8 +164,8 @@ msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:378
 #: ../thunar-vcs-plugin/tvp-git-action.c:258 ../tvp-svn-helper/main.c:293
-#: ../tvp-svn-helper/tsh-log-dialog.c:208 ../tvp-git-helper/main.c:131
-#: ../tvp-git-helper/tgh-log-dialog.c:217
+#: ../tvp-svn-helper/tsh-log-dialog.c:208 ../tvp-git-helper/main.c:139
+#: ../tvp-git-helper/tgh-log-dialog.c:215
 msgid "Log"
 msgstr "Log"
 
@@ -226,14 +226,14 @@ msgid "Revert"
 msgstr "Forkast"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
-#: ../thunar-vcs-plugin/tvp-git-action.c:268
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
 msgid "Menu|Status"
 msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
-#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-svn-helper/main.c:317
+#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
-#: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:139
+#: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:151
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:122
 #: ../tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
@@ -267,7 +267,7 @@ msgid "Update"
 msgstr "Opdatér"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
-#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-git-action.c:280
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "Handling %s er ikke implementeret"
@@ -378,8 +378,9 @@ msgstr ""
 msgid "Menu|Branch"
 msgstr "Gren"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:123
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:131
 #: ../tvp-git-helper/tgh-branch-dialog.c:119
+#: ../tvp-git-helper/tgh-stash-dialog.c:168
 msgid "Branch"
 msgstr "Gren"
 
@@ -388,8 +389,8 @@ msgstr "Gren"
 msgid "Menu|Clone"
 msgstr "Kopiér"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-git-helper/main.c:127
-#: ../tvp-git-helper/tgh-clone.c:109
+#: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-git-helper/main.c:135
+#: ../tvp-git-helper/tgh-clone.c:112
 msgid "Clone"
 msgstr ""
 
@@ -465,7 +466,7 @@ msgstr "Nulstil"
 msgid "Menu|Reset"
 msgstr "Forkast"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:135
+#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:143
 #: ../tvp-git-helper/tgh-reset.c:122
 msgid "Reset"
 msgstr "Nulstil"
@@ -489,20 +490,33 @@ msgstr "Log"
 msgid "Show"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
+#, fuzzy
+msgid "Menu|Stash"
+msgstr "Status"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:147
+#: ../tvp-git-helper/tgh-stash-dialog.c:264
+#, fuzzy
+msgid "Stash"
+msgstr "Status"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 #, fuzzy
 msgid "Menu|Tag"
 msgstr "Log"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Tag"
 msgstr ""
 
-#: ../tvp-svn-helper/main.c:105 ../tvp-git-helper/main.c:70
+#: ../tvp-svn-helper/main.c:105 ../tvp-git-helper/main.c:72
 msgid "Print version information"
 msgstr "Udskriv versionsinformation"
 
-#: ../tvp-svn-helper/main.c:112 ../tvp-git-helper/main.c:77
+#: ../tvp-svn-helper/main.c:112 ../tvp-git-helper/main.c:79
 msgid "Execute add action"
 msgstr "Kør handlingen tilføj"
 
@@ -546,7 +560,7 @@ msgstr "Kør importérhandling"
 msgid "Execute lock action"
 msgstr "Kør låsehandling"
 
-#: ../tvp-svn-helper/main.c:178 ../tvp-git-helper/main.c:95
+#: ../tvp-svn-helper/main.c:178 ../tvp-git-helper/main.c:97
 msgid "Execute log action"
 msgstr "Kør loghandling"
 
@@ -570,7 +584,7 @@ msgstr "Kør adresseskifthandling"
 msgid "Execute revert action"
 msgstr "Kør forkastehandling"
 
-#: ../tvp-svn-helper/main.c:214 ../tvp-git-helper/main.c:107
+#: ../tvp-svn-helper/main.c:214 ../tvp-git-helper/main.c:115
 msgid "Execute status action"
 msgstr "Kør statushandling"
 
@@ -586,7 +600,7 @@ msgstr "Kør låsophandling"
 msgid "Execute update action"
 msgstr "Udfør opdatérhandling"
 
-#: ../tvp-svn-helper/main.c:249 ../tvp-git-helper/main.c:119
+#: ../tvp-svn-helper/main.c:249 ../tvp-git-helper/main.c:127
 msgid "Add Related Options:"
 msgstr "Tilføj-relaterede tilvalg:"
 
@@ -630,7 +644,7 @@ msgstr "Importér-relaterede tilvalg:"
 msgid "Lock Related Options:"
 msgstr "Låse-relaterede tilvalg:"
 
-#: ../tvp-svn-helper/main.c:293 ../tvp-git-helper/main.c:131
+#: ../tvp-svn-helper/main.c:293 ../tvp-git-helper/main.c:139
 msgid "Log Related Options:"
 msgstr "Log-relaterede tilvalg:"
 
@@ -660,7 +674,7 @@ msgstr "Adresseskift-relaterede tilvalg:"
 msgid "Revert Related Options:"
 msgstr "Forkast-relaterede tilvalg:"
 
-#: ../tvp-svn-helper/main.c:317 ../tvp-git-helper/main.c:139
+#: ../tvp-svn-helper/main.c:317 ../tvp-git-helper/main.c:151
 msgid "Status Related Options:"
 msgstr "Status-relaterede tilvalg:"
 
@@ -698,13 +712,13 @@ msgstr "Linje"
 
 #: ../tvp-svn-helper/tsh-blame-dialog.c:100
 #: ../tvp-svn-helper/tsh-log-dialog.c:124
-#: ../tvp-git-helper/tgh-log-dialog.c:120
+#: ../tvp-git-helper/tgh-log-dialog.c:119
 msgid "Revision"
 msgstr "Revision"
 
 #: ../tvp-svn-helper/tsh-blame-dialog.c:106
 #: ../tvp-svn-helper/tsh-log-dialog.c:130
-#: ../tvp-git-helper/tgh-log-dialog.c:126
+#: ../tvp-git-helper/tgh-log-dialog.c:125
 msgid "Author"
 msgstr "Forfatter"
 
@@ -967,6 +981,7 @@ msgid "Certificate"
 msgstr "Certifikat"
 
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:186
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:99
 #: ../tvp-svn-helper/tsh-notify-dialog.c:94
 #: ../tvp-svn-helper/tsh-status-dialog.c:118
@@ -987,7 +1002,7 @@ msgid "Import Message"
 msgstr "Importbesked"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:142
-#: ../tvp-git-helper/tgh-log-dialog.c:150
+#: ../tvp-git-helper/tgh-log-dialog.c:149
 msgid "Message"
 msgstr "Besked"
 
@@ -996,11 +1011,6 @@ msgstr "Besked"
 #: ../tvp-git-helper/tgh-notify-dialog.c:87
 msgid "Action"
 msgstr "Handling"
-
-#: ../tvp-svn-helper/tsh-log-dialog.c:186
-#: ../tvp-git-helper/tgh-log-dialog.c:195
-msgid "File"
-msgstr "Fil"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:93
 msgid "State"
@@ -1043,6 +1053,7 @@ msgid "Notification"
 msgstr "Påmindelse"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:126
+#: ../tvp-git-helper/tgh-stash-dialog.c:162
 msgid "Name"
 msgstr "Navn"
 
@@ -1151,7 +1162,7 @@ msgstr "Skjul eksterne"
 msgid "Check Repository"
 msgstr "Tjek arkiv"
 
-#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:50
+#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:51
 msgid "Status failed"
 msgstr "Status fejlede"
 
@@ -1189,61 +1200,77 @@ msgstr "Anden fejl."
 msgid "Trust"
 msgstr "Stol på"
 
-#: ../tvp-git-helper/main.c:83
+#: ../tvp-git-helper/main.c:85
 msgid "Execute branch action"
 msgstr "Kør grenhandling"
 
-#: ../tvp-git-helper/main.c:89
+#: ../tvp-git-helper/main.c:91
 #, fuzzy
 msgid "Execute clone action"
 msgstr "Kør loghandling"
 
-#: ../tvp-git-helper/main.c:101
+#: ../tvp-git-helper/main.c:103
 msgid "Execute reset action"
 msgstr "Kør nulstilhandling"
 
-#: ../tvp-git-helper/main.c:123
+#: ../tvp-git-helper/main.c:109
+#, fuzzy
+msgid "Execute stash action"
+msgstr "Kør statushandling"
+
+#: ../tvp-git-helper/main.c:131
 msgid "Branch Related Options:"
 msgstr "Gren-relaterede tilvalg:"
 
-#: ../tvp-git-helper/main.c:127
+#: ../tvp-git-helper/main.c:135
 #, fuzzy
 msgid "Clone Related Options:"
 msgstr "Kopiér-relaterede tilvalg:"
 
-#: ../tvp-git-helper/main.c:135
+#: ../tvp-git-helper/main.c:143
 msgid "Reset Related Options:"
 msgstr "Nulstil-relaterede tilvalg:"
+
+#: ../tvp-git-helper/main.c:147
+#, fuzzy
+msgid "Stash Related Options:"
+msgstr "Status-relaterede tilvalg:"
 
 #: ../tvp-git-helper/tgh-clone.c:58
 #, fuzzy
 msgid "Clone finished"
 msgstr "Oprydning afsluttet"
 
-#: ../tvp-git-helper/tgh-clone.c:120
+#: ../tvp-git-helper/tgh-clone.c:123
 #, fuzzy
 msgid "Cloning ..."
 msgstr "Rydder op ..."
 
-#: ../tvp-git-helper/tgh-common.c:168
+#: ../tvp-git-helper/tgh-common.c:169
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
 msgstr "uden revisionsspor"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:132
+#: ../tvp-git-helper/tgh-log-dialog.c:131
 #, fuzzy
 msgid "AuthorDate"
 msgstr "Forfatter"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:144
+#: ../tvp-git-helper/tgh-log-dialog.c:143
 #, fuzzy
 msgid "CommitDate"
 msgstr "Integrér"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:188
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-git-helper/tgh-stash-dialog.c:198
 #, fuzzy
 msgid "Changes"
 msgstr "Ændret"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:194
+#: ../tvp-git-helper/tgh-stash-dialog.c:205
+msgid "File"
+msgstr "Fil"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:108
 msgid "Notify"
@@ -1258,6 +1285,23 @@ msgstr "Adresseskift afsluttet"
 #, fuzzy
 msgid "Reset ..."
 msgstr "Nulstil"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:174
+msgid "Description"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:438
+msgid "Stash description:"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:574
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:602
+msgid "Are you sure you want to clear all stash?"
+msgstr ""
 
 #, fuzzy
 #~ msgid "Execute remove action"

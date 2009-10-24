@@ -52,6 +52,8 @@ tvp-git-helper/tgh-log.c
 tvp-git-helper/tgh-log-dialog.c
 tvp-git-helper/tgh-notify-dialog.c
 tvp-git-helper/tgh-reset.c
+tvp-git-helper/tgh-stash.c
+tvp-git-helper/tgh-stash-dialog.c
 tvp-git-helper/tgh-status.c
 tvp-git-helper/tgh-status-dialog.c
 tvp-git-helper/tgh-transfer-dialog.c

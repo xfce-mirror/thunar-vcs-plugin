@@ -1,3 +1,18 @@
+2009-10-25	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-clone.c: Fixed a memory leak.
+	* tvp-git-helper/tgh-log-dialog.c: Removed expander column.
+	* tvp-svn-helper/tsh-log-dialog.c: Changed "File" to "Path".
+	* tvp-svn-helper/tsh-properties-dialog.c: Swapped signal emit and tree
+	  clear order.
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-stash{,-dialog}.[ch]: Added stash action.
+
+2009-10-24	Peter de Ridder <peter@xfce.org>
+
+	* icons/: Added git icons and 16x16 subversion icon.
+
 2009-10-23	Peter de Ridder <peter@xfce.org>
 
 	* === Released 0.1.1 ===
