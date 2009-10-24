@@ -71,7 +71,7 @@ static gboolean clone_spawn (GtkWidget *dialog, gchar *repository, gchar *path, 
   GIOChannel *chan_err;
   TghOutputParser *parser;
   gchar **argv;
-  struct exit_args *args = g_new(struct exit_args, 1);
+  struct exit_args *args;
 
   argv = g_new(gchar*, 6);
 
@@ -84,11 +84,14 @@ static gboolean clone_spawn (GtkWidget *dialog, gchar *repository, gchar *path, 
 
   if(!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {
+    g_free (argv);
     return FALSE;
   }
+  g_free (argv);
 
   parser = tgh_error_parser_new(GTK_WIDGET(dialog));
 
+  args = g_new(struct exit_args, 1);
   args->parser = parser;
   args->dialog = dialog;
 

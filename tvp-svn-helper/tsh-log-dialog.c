@@ -183,7 +183,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	
   renderer = gtk_cell_renderer_text_new ();
   n_columns = gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (file_view),
-                                                           -1, _("File"),
+                                                           -1, _("Path"),
                                                            renderer, "text",
                                                            FILE_COLUMN_FILE, NULL);
   gtk_tree_view_set_expander_column (GTK_TREE_VIEW (file_view), gtk_tree_view_get_column (GTK_TREE_VIEW (file_view), n_columns - 1));

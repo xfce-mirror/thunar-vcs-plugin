@@ -106,7 +106,6 @@ tgh_log_dialog_init (TghLogDialog *dialog)
   GtkWidget *vpane;
   GtkCellRenderer *renderer;
   GtkTreeModel *model;
-  gint n_columns;
 
   pane = gtk_vpaned_new ();
 
@@ -191,11 +190,10 @@ tgh_log_dialog_init (TghLogDialog *dialog)
       NULL);
 
   renderer = gtk_cell_renderer_text_new ();
-  n_columns = gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (file_view),
+  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (file_view),
       -1, _("File"),
       renderer, "text",
       FILE_COLUMN_FILE, NULL);
-  gtk_tree_view_set_expander_column (GTK_TREE_VIEW (file_view), gtk_tree_view_get_column (GTK_TREE_VIEW (file_view), n_columns - 1));
 
   model = GTK_TREE_MODEL (gtk_list_store_new (FILE_COLUMN_COUNT, G_TYPE_STRING, G_TYPE_INT, G_TYPE_STRING));
 

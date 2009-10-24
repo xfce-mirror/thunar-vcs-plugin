@@ -552,11 +552,11 @@ set_clicked (GtkButton *button, gpointer user_data)
 	
 	gtk_widget_hide (dialog->close);
 	gtk_widget_show (dialog->cancel);
-
-  g_signal_emit (dialog, signals[SIGNAL_SET], 0);
   
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
+
+  g_signal_emit (dialog, signals[SIGNAL_SET], 0);
 }
 
 static void
@@ -567,10 +567,10 @@ delete_clicked (GtkButton *button, gpointer user_data)
 	
 	gtk_widget_hide (dialog->close);
 	gtk_widget_show (dialog->cancel);
-
-  g_signal_emit (dialog, signals[SIGNAL_DELETE], 0);
   
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
+
+  g_signal_emit (dialog, signals[SIGNAL_DELETE], 0);
 }
 
