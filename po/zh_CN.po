@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-25 00:59+0200\n"
+"POT-Creation-Date: 2009-10-25 23:08+0100\n"
 "PO-Revision-Date: 2009-06-22 02:22+0800\n"
 "Last-Translator: Hunt Xu <huntxu@live.cn>\n"
 "Language-Team: Chinese (simplified) <xfce-i18n@xfce.org>\n"
@@ -29,24 +29,27 @@ msgid "GIT"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
-#: ../thunar-vcs-plugin/tvp-git-action.c:246
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Add"
 msgstr "Add"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
-#: ../thunar-vcs-plugin/tvp-git-action.c:246 ../tvp-svn-helper/main.c:249
+#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-svn-helper/main.c:249
 #: ../tvp-svn-helper/tsh-add.c:116 ../tvp-svn-helper/tsh-add.c:129
-#: ../tvp-git-helper/main.c:127 ../tvp-git-helper/tgh-add.c:105
+#: ../tvp-git-helper/main.c:143 ../tvp-git-helper/tgh-add.c:105
 #: ../tvp-git-helper/tgh-add.c:118
 msgid "Add"
 msgstr "Add"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:306
+#: ../thunar-vcs-plugin/tvp-git-action.c:267
 msgid "Menu|Blame"
 msgstr "Blame"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:306 ../tvp-svn-helper/main.c:253
+#: ../thunar-vcs-plugin/tvp-svn-action.c:306
+#: ../thunar-vcs-plugin/tvp-git-action.c:267 ../tvp-svn-helper/main.c:253
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-blame-dialog.c:133
+#: ../tvp-git-helper/main.c:147
 msgid "Blame"
 msgstr "Blame"
 
@@ -59,12 +62,12 @@ msgid "Changelist"
 msgstr "Changelist"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
 msgid "Menu|Checkout"
 msgstr "Checkout"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323
-#: ../thunar-vcs-plugin/tvp-git-action.c:250 ../tvp-svn-helper/main.c:261
+#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/tsh-checkout.c:98 ../tvp-svn-helper/tsh-checkout.c:110
 msgid "Checkout"
 msgstr "Checkout"
@@ -78,12 +81,12 @@ msgid "Cleanup"
 msgstr "Cleanup"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:333
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
 msgid "Menu|Commit"
 msgstr "Commit"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:333
-#: ../thunar-vcs-plugin/tvp-git-action.c:253 ../tvp-svn-helper/main.c:269
+#: ../thunar-vcs-plugin/tvp-git-action.c:274 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-commit.c:223 ../tvp-svn-helper/tsh-commit.c:236
 #: ../tvp-git-helper/tgh-log-dialog.c:137
 msgid "Commit"
@@ -108,12 +111,12 @@ msgid "Delete"
 msgstr "Delete"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Diff"
 msgstr "Diff"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Diff"
 msgstr "Diff"
 
@@ -153,24 +156,24 @@ msgid "Lock"
 msgstr "Lock"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:378
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Log"
 msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:378
-#: ../thunar-vcs-plugin/tvp-git-action.c:258 ../tvp-svn-helper/main.c:293
-#: ../tvp-svn-helper/tsh-log-dialog.c:208 ../tvp-git-helper/main.c:139
+#: ../thunar-vcs-plugin/tvp-git-action.c:279 ../tvp-svn-helper/main.c:293
+#: ../tvp-svn-helper/tsh-log-dialog.c:208 ../tvp-git-helper/main.c:163
 #: ../tvp-git-helper/tgh-log-dialog.c:215
 msgid "Log"
 msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393
-#: ../thunar-vcs-plugin/tvp-git-action.c:260
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
 msgid "Menu|Move"
 msgstr "Move"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393
-#: ../thunar-vcs-plugin/tvp-git-action.c:260 ../tvp-svn-helper/main.c:297
+#: ../thunar-vcs-plugin/tvp-git-action.c:281 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-move.c:157
 msgid "Move"
 msgstr "Move"
@@ -221,14 +224,14 @@ msgid "Revert"
 msgstr "Revert"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
 msgid "Menu|Status"
 msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
-#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-svn-helper/main.c:317
+#: ../thunar-vcs-plugin/tvp-git-action.c:291 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
-#: ../tvp-svn-helper/tsh-status-dialog.c:249 ../tvp-git-helper/main.c:151
+#: ../tvp-svn-helper/tsh-status-dialog.c:247 ../tvp-git-helper/main.c:175
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:122
 #: ../tvp-git-helper/tgh-status-dialog.c:125
 msgid "Status"
@@ -262,7 +265,7 @@ msgid "Update"
 msgstr "Update"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
-#: ../thunar-vcs-plugin/tvp-git-action.c:280
+#: ../thunar-vcs-plugin/tvp-git-action.c:301
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "操作 %s 未实现"
@@ -348,8 +351,8 @@ msgstr "文件 (取出当前的文件或目录中的内容)"
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:324
-#: ../tvp-svn-helper/tsh-properties-dialog.c:229
-#: ../tvp-svn-helper/tsh-status-dialog.c:202
+#: ../tvp-svn-helper/tsh-properties-dialog.c:227
+#: ../tvp-svn-helper/tsh-status-dialog.c:200
 #, fuzzy
 msgid "Immediates"
 msgstr "立即 (当前文件或当前目录及其子文件夹内容)"
@@ -362,163 +365,173 @@ msgstr "立即 (当前文件或当前目录及其子文件夹内容)"
 msgid "Infinity"
 msgstr "无穷 (取出当前文件或递归取出当前目录及其子目录中的内容)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
+#: ../thunar-vcs-plugin/tvp-git-action.c:265
 #, fuzzy
 msgid "Menu|Bisect"
 msgstr "Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
+#: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Bisect"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:249
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
 #, fuzzy
 msgid "Menu|Branch"
 msgstr "Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:131
+#: ../thunar-vcs-plugin/tvp-git-action.c:269 ../tvp-git-helper/main.c:151
 #: ../tvp-git-helper/tgh-branch-dialog.c:119
 #: ../tvp-git-helper/tgh-stash-dialog.c:168
 msgid "Branch"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:252
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
+#, fuzzy
+msgid "Menu|Clean"
+msgstr "Cleanup"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:271 ../tvp-git-helper/main.c:155
+#, fuzzy
+msgid "Clean"
+msgstr "Cleanup"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
 #, fuzzy
 msgid "Menu|Clone"
 msgstr "Copy"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:252 ../tvp-git-helper/main.c:135
+#: ../thunar-vcs-plugin/tvp-git-action.c:273 ../tvp-git-helper/main.c:159
 #: ../tvp-git-helper/tgh-clone.c:112
 msgid "Clone"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
 #, fuzzy
 msgid "Menu|Fetch"
 msgstr "Switch"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Fetch"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
 #, fuzzy
 msgid "Menu|Grep"
 msgstr "Cleanup"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Grep"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
 #, fuzzy
 msgid "Menu|Init"
 msgstr "Info"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
 #, fuzzy
 msgid "Init"
 msgstr "无穷 (取出当前文件或递归取出当前目录及其子目录中的内容)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:259
+#: ../thunar-vcs-plugin/tvp-git-action.c:280
 #, fuzzy
 msgid "Menu|Merge"
 msgstr "Move"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:259
+#: ../thunar-vcs-plugin/tvp-git-action.c:280
 #, fuzzy
 msgid "Merge"
 msgstr "已被合并"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
 #, fuzzy
 msgid "Menu|Pull"
 msgstr "Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Pull"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:262
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
 #, fuzzy
 msgid "Menu|Push"
 msgstr "Status"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:262
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Push"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
 #, fuzzy
 msgid "Menu|Rebase"
 msgstr "Resolve"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
 #, fuzzy
 msgid "Rebase"
 msgstr "Revert"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
 #, fuzzy
 msgid "Menu|Reset"
 msgstr "Revert"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:143
+#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:167
 #: ../tvp-git-helper/tgh-reset.c:122
 #, fuzzy
 msgid "Reset"
 msgstr "Revert"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
 #, fuzzy
 msgid "Menu|Remove"
 msgstr "Resolve"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
 #, fuzzy
 msgid "Remove"
 msgstr "Resolve"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
 #, fuzzy
 msgid "Menu|Show"
 msgstr "Log"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Show"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:268
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
 #, fuzzy
 msgid "Menu|Stash"
 msgstr "Status"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:147
+#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:171
 #: ../tvp-git-helper/tgh-stash-dialog.c:264
 #, fuzzy
 msgid "Stash"
 msgstr "Status"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
 #, fuzzy
 msgid "Menu|Tag"
 msgstr "Log"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
 msgstr ""
 
-#: ../tvp-svn-helper/main.c:105 ../tvp-git-helper/main.c:72
+#: ../tvp-svn-helper/main.c:105 ../tvp-git-helper/main.c:76
 msgid "Print version information"
 msgstr "打印版本信息"
 
-#: ../tvp-svn-helper/main.c:112 ../tvp-git-helper/main.c:79
+#: ../tvp-svn-helper/main.c:112 ../tvp-git-helper/main.c:83
 msgid "Execute add action"
 msgstr "执行 add 操作"
 
-#: ../tvp-svn-helper/main.c:118
+#: ../tvp-svn-helper/main.c:118 ../tvp-git-helper/main.c:89
 msgid "Execute blame action"
 msgstr "执行 blame 操作"
 
@@ -558,7 +571,7 @@ msgstr "执行 import 操作"
 msgid "Execute lock action"
 msgstr "执行 lock 操作"
 
-#: ../tvp-svn-helper/main.c:178 ../tvp-git-helper/main.c:97
+#: ../tvp-svn-helper/main.c:178 ../tvp-git-helper/main.c:113
 msgid "Execute log action"
 msgstr "执行 log 操作"
 
@@ -582,7 +595,7 @@ msgstr "执行 relocate 操作"
 msgid "Execute revert action"
 msgstr "执行 revert 操作"
 
-#: ../tvp-svn-helper/main.c:214 ../tvp-git-helper/main.c:115
+#: ../tvp-svn-helper/main.c:214 ../tvp-git-helper/main.c:131
 msgid "Execute status action"
 msgstr "执行 status 操作"
 
@@ -598,11 +611,11 @@ msgstr "执行 unlock 操作"
 msgid "Execute update action"
 msgstr "执行 update 操作"
 
-#: ../tvp-svn-helper/main.c:249 ../tvp-git-helper/main.c:127
+#: ../tvp-svn-helper/main.c:249 ../tvp-git-helper/main.c:143
 msgid "Add Related Options:"
 msgstr "Add 操作相关选项:"
 
-#: ../tvp-svn-helper/main.c:253
+#: ../tvp-svn-helper/main.c:253 ../tvp-git-helper/main.c:147
 msgid "Blame Related Options:"
 msgstr "Blame 操作相关选项:"
 
@@ -642,7 +655,7 @@ msgstr "Import 操作相关选项:"
 msgid "Lock Related Options:"
 msgstr "Lock 操作相关选项:"
 
-#: ../tvp-svn-helper/main.c:293 ../tvp-git-helper/main.c:139
+#: ../tvp-svn-helper/main.c:293 ../tvp-git-helper/main.c:163
 msgid "Log Related Options:"
 msgstr "Log 操作相关选项:"
 
@@ -656,7 +669,7 @@ msgstr "Prop 操作相关选项:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:283
+#: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
 msgid "Properties"
 msgstr "属性"
 
@@ -672,7 +685,7 @@ msgstr "Relocate 操作相关选项:"
 msgid "Revert Related Options:"
 msgstr "Revert 操作相关选项:"
 
-#: ../tvp-svn-helper/main.c:317 ../tvp-git-helper/main.c:151
+#: ../tvp-svn-helper/main.c:317 ../tvp-git-helper/main.c:175
 msgid "Status Related Options:"
 msgstr "Status 操作相关选项:"
 
@@ -701,6 +714,7 @@ msgstr "参数不足"
 #: ../tvp-svn-helper/tsh-resolved.c:73 ../tvp-svn-helper/tsh-resolved.c:89
 #: ../tvp-svn-helper/tsh-revert.c:87 ../tvp-svn-helper/tsh-switch.c:71
 #: ../tvp-svn-helper/tsh-unlock.c:86 ../tvp-svn-helper/tsh-update.c:88
+#: ../tvp-git-helper/tgh-common.c:80
 msgid "Failed"
 msgstr "失败"
 
@@ -1065,8 +1079,8 @@ msgstr "值"
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
 #.
-#: ../tvp-svn-helper/tsh-properties-dialog.c:209
-#: ../tvp-svn-helper/tsh-status-dialog.c:184
+#: ../tvp-svn-helper/tsh-properties-dialog.c:207
+#: ../tvp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
 msgstr "自身 (只 显示/更新 此 文件/目录)"
 
@@ -1076,8 +1090,8 @@ msgstr "自身 (只 显示/更新 此 文件/目录)"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are shown
 #.
-#: ../tvp-svn-helper/tsh-properties-dialog.c:220
-#: ../tvp-svn-helper/tsh-status-dialog.c:193
+#: ../tvp-svn-helper/tsh-properties-dialog.c:218
+#: ../tvp-svn-helper/tsh-status-dialog.c:191
 msgid "Immediate files"
 msgstr "立即 文件 (显示/更新 当前文件或者当前文件夹中的文件)"
 
@@ -1087,8 +1101,8 @@ msgstr "立即 文件 (显示/更新 当前文件或者当前文件夹中的文�
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
 #.
-#: ../tvp-svn-helper/tsh-properties-dialog.c:238
-#: ../tvp-svn-helper/tsh-status-dialog.c:211
+#: ../tvp-svn-helper/tsh-properties-dialog.c:236
+#: ../tvp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
 msgstr "递归 (递归 显示/更新 当前文件或者当前文件夹及其子文件夹中的内容)"
 
@@ -1140,27 +1154,27 @@ msgstr "Relocate 操作完成"
 msgid "Relocating ..."
 msgstr "正在执行 relocate 操作..."
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:226
+#: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
 msgstr "显示未被修改的文件"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:230
+#: ../tvp-svn-helper/tsh-status-dialog.c:228
 msgid "Show Unversioned Files"
 msgstr "显示未被加入版本控制的文件"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:234
+#: ../tvp-svn-helper/tsh-status-dialog.c:232
 msgid "Show Ignored Files"
 msgstr "显示被忽略的文件"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:238
+#: ../tvp-svn-helper/tsh-status-dialog.c:236
 msgid "Hide Externals"
 msgstr "隐藏外部内容"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:242
+#: ../tvp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
 msgstr "检查仓库"
 
-#: ../tvp-svn-helper/tsh-status.c:86 ../tvp-git-helper/tgh-common.c:51
+#: ../tvp-svn-helper/tsh-status.c:86
 msgid "Status failed"
 msgstr "Status 操作失败"
 
@@ -1198,42 +1212,47 @@ msgstr "其他失败。"
 msgid "Trust"
 msgstr "信任"
 
-#: ../tvp-git-helper/main.c:85
+#: ../tvp-git-helper/main.c:95
 #, fuzzy
 msgid "Execute branch action"
 msgstr "执行 blame 操作"
 
-#: ../tvp-git-helper/main.c:91
+#: ../tvp-git-helper/main.c:101
+#, fuzzy
+msgid "Execute clean action"
+msgstr "执行 cleanup 操作"
+
+#: ../tvp-git-helper/main.c:107
 #, fuzzy
 msgid "Execute clone action"
 msgstr "执行 log 操作"
 
-#: ../tvp-git-helper/main.c:103
+#: ../tvp-git-helper/main.c:119
 #, fuzzy
 msgid "Execute reset action"
 msgstr "执行 revert 操作"
 
-#: ../tvp-git-helper/main.c:109
+#: ../tvp-git-helper/main.c:125
 #, fuzzy
 msgid "Execute stash action"
 msgstr "执行 status 操作"
 
-#: ../tvp-git-helper/main.c:131
+#: ../tvp-git-helper/main.c:151
 #, fuzzy
 msgid "Branch Related Options:"
 msgstr "Blame 操作相关选项:"
 
-#: ../tvp-git-helper/main.c:135
+#: ../tvp-git-helper/main.c:155 ../tvp-git-helper/main.c:159
 #, fuzzy
 msgid "Clone Related Options:"
 msgstr "Copy 操作相关选项:"
 
-#: ../tvp-git-helper/main.c:143
+#: ../tvp-git-helper/main.c:167
 #, fuzzy
 msgid "Reset Related Options:"
 msgstr "Revert 操作相关选项:"
 
-#: ../tvp-git-helper/main.c:147
+#: ../tvp-git-helper/main.c:171
 #, fuzzy
 msgid "Stash Related Options:"
 msgstr "Status 操作相关选项:"
@@ -1248,7 +1267,7 @@ msgstr "Cleanup 操作完成"
 msgid "Cloning ..."
 msgstr "正在进行 cleanup 操作..."
 
-#: ../tvp-git-helper/tgh-common.c:169
+#: ../tvp-git-helper/tgh-common.c:199
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
 msgstr ""

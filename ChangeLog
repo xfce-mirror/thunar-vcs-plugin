@@ -1,5 +1,10 @@
 2009-10-25	Peter de Ridder <peter@xfce.org>
 
+	* tvp-svn-helper/tvp-properties-dialog.c
+	  tvp-svn-helper/tvp-status-dialog.c: Improved depth combo box.
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-clean{,-dialog}.[ch]: Added clean action.
 	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
 	  tvp-git-helper/tgh-common.[ch]
 	  tvp-git-helper/tgh-blame{,-dialog}.[ch]: Added blame action.
