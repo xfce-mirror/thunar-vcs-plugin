@@ -16,6 +16,8 @@ tvp_git_helper_SOURCES =						\
 	main.c								\
 	tgh-add.h							\
 	tgh-add.c							\
+	tgh-blame.h							\
+	tgh-blame.c							\
 	tgh-branch.h							\
 	tgh-branch.c							\
 	tgh-clone.h							\
@@ -32,6 +34,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-status.c							\
 	tgh-dialog-common.h						\
 	tgh-dialog-common.c						\
+	tgh-blame-dialog.h						\
+	tgh-blame-dialog.c						\
 	tgh-branch-dialog.h						\
 	tgh-branch-dialog.c						\
 	tgh-file-selection-dialog.h					\

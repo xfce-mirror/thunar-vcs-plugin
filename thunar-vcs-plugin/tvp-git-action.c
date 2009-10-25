@@ -55,6 +55,8 @@ struct _TvpGitAction
 
     struct {
         unsigned is_parent : 1;
+        unsigned is_directory : 1;
+        unsigned is_file : 1;
     } property;
 
     GList *files;
@@ -65,6 +67,8 @@ struct _TvpGitAction
 
 enum {
     PROPERTY_IS_PARENT = 1,
+    PROPERTY_IS_DIRECTORY,
+    PROPERTY_IS_FILE
 };
 
 
@@ -116,6 +120,12 @@ tvp_git_action_class_init (TvpGitActionClass *klass)
     g_object_class_install_property (gobject_class, PROPERTY_IS_PARENT,
             g_param_spec_boolean ("is-parent", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
 
+    g_object_class_install_property (gobject_class, PROPERTY_IS_DIRECTORY,
+            g_param_spec_boolean ("is-directory", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
+
+    g_object_class_install_property (gobject_class, PROPERTY_IS_FILE,
+            g_param_spec_boolean ("is-file", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
+
     action_signal[SIGNAL_NEW_PROCESS] = g_signal_new("new-process", G_OBJECT_CLASS_TYPE(gobject_class), G_SIGNAL_RUN_FIRST,
             0, NULL, NULL, tsh_cclosure_marshal_VOID__POINTER_STRING, G_TYPE_NONE, 2, G_TYPE_POINTER, G_TYPE_STRING);
 
@@ -153,6 +163,8 @@ tvp_git_action_new (const gchar *name,
             "name", name,
             "label", label,
             "is-parent", is_parent,
+            "is-directory", is_direcotry,
+            "is-file", is_file,
 #if !GTK_CHECK_VERSION(2,9,0)
             "stock-id", "git",
 #else
@@ -187,6 +199,12 @@ tvp_git_action_set_property (GObject *object, guint property_id, const GValue *v
     {
         case PROPERTY_IS_PARENT:
             TVP_GIT_ACTION (object)->property.is_parent = g_value_get_boolean (value)?1:0;
+            break;
+        case PROPERTY_IS_DIRECTORY:
+            TVP_GIT_ACTION (object)->property.is_directory = g_value_get_boolean (value)?1:0;
+            break;
+        case PROPERTY_IS_FILE:
+            TVP_GIT_ACTION (object)->property.is_file = g_value_get_boolean (value)?1:0;
             break;
         default:
             G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
@@ -245,6 +263,8 @@ tvp_git_action_create_menu_item (GtkAction *action)
 
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD, "--add");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::bisect", Q_("Menu|Bisect"), _("Bisect"), NULL, _("Bisect"));
+  if (tvp_action->property.is_file)
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::blame", Q_("Menu|Blame"), _("Blame"), GTK_STOCK_INDEX, "--blame");
   if(tvp_action->property.is_parent)
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::branch", Q_("Menu|Branch"), _("Branch"), NULL, "--branch");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT, _("Checkout"));

@@ -1,5 +1,8 @@
 2009-10-25	Peter de Ridder <peter@xfce.org>
 
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-blame{,-dialog}.[ch]: Added blame action.
 	* tvp-git-helper/tgh-clone.c: Fixed a memory leak.
 	* tvp-git-helper/tgh-log-dialog.c: Removed expander column.
 	* tvp-svn-helper/tsh-log-dialog.c: Changed "File" to "Path".

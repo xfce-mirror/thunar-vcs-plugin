@@ -41,6 +41,7 @@
 #include "tgh-log-dialog.h"
 #include "tgh-branch-dialog.h"
 #include "tgh-stash-dialog.h"
+#include "tgh-blame-dialog.h"
 
 #include "tgh-common.h"
 
@@ -424,6 +425,68 @@ tgh_stash_show_parser_new (GtkWidget *dialog)
   TghStashShowParser *parser = g_new (TghStashShowParser,1);
 
   TGH_OUTPUT_PARSER (parser)->parse = TGH_OUTPUT_PARSER_FUNC (stash_show_parser_func);
+
+  parser->dialog = dialog;
+
+  return TGH_OUTPUT_PARSER (parser);
+}
+
+typedef struct {
+  TghOutputParser parent;
+  GtkWidget *dialog;
+} TghBlameParser;
+
+static void
+blame_parser_func (TghBlameParser *parser, gchar *line)
+{
+  TghBlameDialog *dialog = TGH_BLAME_DIALOG (parser->dialog);
+  if (line)
+  {
+    gchar *revision, *name, *date, *text, *ptr;
+    guint64 line_no;
+
+    name = strchr (line, '(');
+    *name++ = '\0';
+
+    revision = g_strstrip (line);
+
+    text = strchr (name, ')');
+    *text = '\0';
+    text += 2;
+    text[strlen (text)-1] = '\0';
+
+    ptr = strrchr (name, ' ');
+    line_no = g_ascii_strtoull (ptr, NULL, 10);
+
+    while (*--ptr == ' ');
+    ptr[1] = '\0';
+
+    date = strrchr (name, ' ');
+    *date = '\0';
+    ptr = strrchr (name, ' ');
+    *date = ' ';
+    *ptr = '\0';
+    date = strrchr (name, ' ');
+    *ptr = ' ';
+    *date++ = '\0';
+
+    name = g_strstrip (name);
+
+    tgh_blame_dialog_add (dialog, line_no, revision, name, date, text);
+  }
+  else
+  {
+    tgh_blame_dialog_done (dialog);
+    g_free (parser);
+  }
+}
+
+TghOutputParser*
+tgh_blame_parser_new (GtkWidget *dialog)
+{
+  TghBlameParser *parser = g_new (TghBlameParser,1);
+
+  TGH_OUTPUT_PARSER (parser)->parse = TGH_OUTPUT_PARSER_FUNC (blame_parser_func);
 
   parser->dialog = dialog;
 

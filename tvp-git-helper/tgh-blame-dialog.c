@@ -1,0 +1,205 @@
+/*-
+ * Copyright (c) 2006 Peter de Ridder <peter@xfce.org>
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ */
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
+
+#include <thunar-vfs/thunar-vfs.h>
+#include <gtk/gtk.h>
+
+#include "tgh-common.h"
+#include "tgh-blame-dialog.h"
+
+static void cancel_clicked (GtkButton*, gpointer);
+
+struct _TghBlameDialog
+{
+  GtkDialog dialog;
+
+  GtkWidget *tree_view;
+  GtkWidget *close;
+  GtkWidget *cancel;
+};
+
+struct _TghBlameDialogClass
+{
+  GtkDialogClass dialog_class;
+};
+
+G_DEFINE_TYPE (TghBlameDialog, tgh_blame_dialog, GTK_TYPE_DIALOG)
+
+enum {
+  SIGNAL_CANCEL = 0,
+  SIGNAL_COUNT
+};
+
+static guint signals[SIGNAL_COUNT];
+
+static void
+tgh_blame_dialog_class_init (TghBlameDialogClass *klass)
+{
+  signals[SIGNAL_CANCEL] = g_signal_new("cancel-clicked",
+      G_OBJECT_CLASS_TYPE (klass),
+      G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
+      0, NULL, NULL,
+      g_cclosure_marshal_VOID__VOID,
+      G_TYPE_NONE, 0);
+}
+
+enum {
+  COLUMN_LINE_NO = 0,
+  COLUMN_REVISION,
+  COLUMN_AUTHOR,
+  COLUMN_DATE,
+  COLUMN_LINE,
+  COLUMN_COUNT
+};
+
+static void
+tgh_blame_dialog_init (TghBlameDialog *dialog)
+{
+  GtkWidget *tree_view;
+  GtkWidget *scroll_window;
+  GtkWidget *button;
+  GtkCellRenderer *renderer;
+  GtkTreeModel *model;
+
+  scroll_window = gtk_scrolled_window_new (NULL, NULL);
+  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
+
+  dialog->tree_view = tree_view = gtk_tree_view_new ();
+
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
+      -1, _("Line"), renderer,
+      "text", COLUMN_LINE_NO,
+      NULL);
+
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
+      -1, _("Revision"), renderer,
+      "text", COLUMN_REVISION,
+      NULL);
+
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
+      -1, _("Author"), renderer,
+      "text", COLUMN_AUTHOR,
+      NULL);
+
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
+      -1, _("Date"), renderer,
+      "text", COLUMN_DATE,
+      NULL);
+
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
+      -1, NULL, renderer,
+      "text", COLUMN_LINE,
+      NULL);
+
+  model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_INT64, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING));
+
+  gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
+
+  g_object_unref (model);
+
+  gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
+  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+  gtk_widget_show (tree_view);
+  gtk_widget_show (scroll_window);
+
+  gtk_window_set_title (GTK_WINDOW (dialog), _("Blame"));
+
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  gtk_widget_hide (button);
+
+  dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
+  gtk_widget_show (button);
+
+  gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
+}
+
+GtkWidget*
+tgh_blame_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
+{
+  TghBlameDialog *dialog = g_object_new (TGH_TYPE_BLAME_DIALOG, NULL);
+
+  if(title)
+    gtk_window_set_title (GTK_WINDOW(dialog), title);
+
+  if(parent)
+    gtk_window_set_transient_for (GTK_WINDOW(dialog), parent);
+
+  if(flags & GTK_DIALOG_MODAL)
+    gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
+
+  if(flags & GTK_DIALOG_DESTROY_WITH_PARENT)
+    gtk_window_set_destroy_with_parent (GTK_WINDOW(dialog), TRUE);
+
+  if(flags & GTK_DIALOG_NO_SEPARATOR)
+    gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
+
+  return GTK_WIDGET(dialog);
+}
+
+void       
+tgh_blame_dialog_add (TghBlameDialog *dialog, gint64 line_no, const gchar *revision, const gchar *author, const gchar *date, const gchar *line)
+{
+  GtkTreeModel *model;
+  GtkTreeIter iter;
+
+  g_return_if_fail (TGH_IS_BLAME_DIALOG (dialog));
+
+  model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+
+  gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+  gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+      COLUMN_LINE_NO, line_no,
+      COLUMN_REVISION, revision,
+      COLUMN_AUTHOR, author,
+      COLUMN_DATE, date,
+      COLUMN_LINE, line,
+      -1);
+}
+
+void
+tgh_blame_dialog_done (TghBlameDialog *dialog)
+{
+  g_return_if_fail (TGH_IS_BLAME_DIALOG (dialog));
+
+  gtk_widget_hide (dialog->cancel);
+  gtk_widget_show (dialog->close);
+}
+
+static void
+cancel_clicked (GtkButton *button, gpointer user_data)
+{
+  TghBlameDialog *dialog = TGH_BLAME_DIALOG (user_data);
+
+  gtk_widget_hide (dialog->cancel);
+  gtk_widget_show (dialog->close);
+
+  g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
+}
+
