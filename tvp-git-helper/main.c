@@ -34,6 +34,7 @@
 #include "tgh-blame.h"
 #include "tgh-branch.h"
 #include "tgh-clone.h"
+#include "tgh-clean.h"
 #include "tgh-log.h"
 #include "tgh-reset.h"
 #include "tgh-stash.h"
@@ -58,6 +59,7 @@ int main (int argc, char *argv[])
   gboolean add = FALSE;
   gboolean blame = FALSE;
   gboolean branch = FALSE;
+  gboolean clean = FALSE;
   gboolean clone = FALSE;
   gboolean log = FALSE;
   gboolean reset = FALSE;
@@ -91,6 +93,12 @@ int main (int argc, char *argv[])
   GOptionEntry blame_options_table[] =
   {
     { "branch", '\0', 0, G_OPTION_ARG_NONE, &branch, N_("Execute branch action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
+  GOptionEntry clean_options_table[] =
+  {
+    { "clean", '\0', 0, G_OPTION_ARG_NONE, &clean, N_("Execute clean action"), NULL },
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
@@ -144,6 +152,10 @@ int main (int argc, char *argv[])
   g_option_group_add_entries(option_group, branch_options_table);
   g_option_context_add_group(option_context, option_group);
 
+  option_group = g_option_group_new("clean", N_("Clone Related Options:"), N_("Clean"), NULL, NULL);
+  g_option_group_add_entries(option_group, clean_options_table);
+  g_option_context_add_group(option_context, option_group);
+
   option_group = g_option_group_new("clone", N_("Clone Related Options:"), N_("Clone"), NULL, NULL);
   g_option_group_add_entries(option_group, clone_options_table);
   g_option_context_add_group(option_context, option_group);
@@ -189,6 +201,11 @@ int main (int argc, char *argv[])
   if(branch)
   {
     has_child = tgh_branch(files, &pid);
+  }
+
+  if(clean)
+  {
+    has_child = tgh_clean(files, &pid);
   }
 
   if(clone)

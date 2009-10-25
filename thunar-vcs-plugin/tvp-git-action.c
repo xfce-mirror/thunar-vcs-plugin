@@ -268,6 +268,7 @@ tvp_git_action_create_menu_item (GtkAction *action)
   if(tvp_action->property.is_parent)
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::branch", Q_("Menu|Branch"), _("Branch"), NULL, "--branch");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT, _("Checkout"));
+  add_subaction (action, GTK_MENU_SHELL(menu), "tvp::clean", Q_("Menu|Clean"), _("Clean"), GTK_STOCK_CLEAR, "--clean");
   if(tvp_action->property.is_parent)
     add_subaction (action, GTK_MENU_SHELL(menu), "tvp::clone", Q_("Menu|Clone"), _("Clone"), GTK_STOCK_COPY, "--clone");
     add_subaction_u(GTK_MENU_SHELL(menu), "tvp::commit", Q_("Menu|Commit"), _("Commit"), GTK_STOCK_APPLY, _("Commit"));

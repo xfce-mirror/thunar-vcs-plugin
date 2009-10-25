@@ -49,6 +49,8 @@ TghOutputParser* tgh_stash_show_parser_new (GtkWidget *);
 
 TghOutputParser* tgh_blame_parser_new      (GtkWidget *);
 
+TghOutputParser* tgh_clean_parser_new      (GtkWidget *);
+
 gboolean tgh_parse_output_func  (GIOChannel *, GIOCondition, gpointer);
 
 G_END_DECLS

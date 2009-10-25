@@ -46,12 +46,41 @@
 #include "tgh-common.h"
 
 static void
-create_error_dialog(GtkWindow *parent, gchar *message)
+create_error_dialog (GtkWindow *parent, gchar *message)
 {
-  GtkWidget *error;
-  error = gtk_message_dialog_new(GTK_WINDOW(parent), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Status failed"));
-  gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", g_strstrip(message));
-  tgh_dialog_start(GTK_DIALOG(error), FALSE);
+  if (TGH_IS_NOTIFY_DIALOG (parent))
+  {
+    gchar **lines, **iter;
+    lines = g_strsplit_set (message, "\r\n", -1);
+
+    for (iter = lines; *iter; iter++)
+    {
+      gchar *action, *text;
+
+      if ((*iter)[1])
+      {
+        text = *iter;
+        action = strchr (text, ':');
+        if (action)
+        {
+          *action = '\0';
+          text = action+2;
+          action = *iter;
+        }
+
+        tgh_notify_dialog_add (TGH_NOTIFY_DIALOG (parent), action, text);
+      }
+    }
+
+    g_strfreev (lines);
+  }
+  else
+  {
+    GtkWidget *error;
+    error = gtk_message_dialog_new (parent?GTK_WINDOW (parent):NULL, parent?GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL:0, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Failed"));
+    gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (error), "%s", g_strstrip (message));
+    tgh_dialog_start (GTK_DIALOG (error), FALSE);
+  }
 }
 
 void
@@ -70,7 +99,7 @@ void
 tgh_child_exit(GPid pid, gint status, gpointer user_data)
 {
   TghErrorParser *parser = user_data;
-  if(WEXITSTATUS(status) > 1)
+  if(WEXITSTATUS(status))
   {
     if(parser->done)
       create_error_dialog(GTK_WINDOW(parser->dialog), parser->error);
@@ -491,6 +520,51 @@ tgh_blame_parser_new (GtkWidget *dialog)
   parser->dialog = dialog;
 
   return TGH_OUTPUT_PARSER (parser);
+}
+
+typedef struct {
+  TghOutputParser parent;
+  GtkWidget *dialog;
+} TghCleanParser;
+
+static void
+clean_parser_func(TghNotifyParser *parser, gchar *line)
+{
+  TghNotifyDialog *dialog = TGH_NOTIFY_DIALOG(parser->dialog);
+  if(line)
+  {
+    gchar *action, *file;
+
+    action = file = line;
+    if (g_ascii_strncasecmp (line, "Would ", 6) == 0)
+      file += 6;
+
+    if (g_ascii_strncasecmp (file, "Not ", 4) == 0)
+      file += 4;
+
+    file = strchr (file, ' ');
+    *file++ = '\0';
+    file[strlen (file)-1] = '\0';
+
+    tgh_notify_dialog_add(dialog, action, file);
+  }
+  else
+  {
+    tgh_notify_dialog_done(dialog);
+    g_free(parser);
+  }
+}
+
+TghOutputParser*
+tgh_clean_parser_new (GtkWidget *dialog)
+{
+  TghCleanParser *parser = g_new(TghCleanParser,1);
+
+  TGH_OUTPUT_PARSER(parser)->parse = TGH_OUTPUT_PARSER_FUNC(clean_parser_func);
+
+  parser->dialog = dialog;
+
+  return TGH_OUTPUT_PARSER(parser);
 }
 
 gboolean
