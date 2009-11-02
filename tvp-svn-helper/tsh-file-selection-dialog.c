@@ -307,6 +307,8 @@ get_parent_status(GtkTreeModel *model, GtkTreeIter *iter)
       status = parent_status;
       break;
     }
+
+    child = parent;
   }
 
   return status;
