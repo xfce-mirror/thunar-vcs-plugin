@@ -103,7 +103,7 @@ gboolean tgh_log (gchar **files, GPid *pid)
   if (files)
     if (chdir(files[0]))
     {
-      gchar *dirname = g_dirname (files[0]);
+      gchar *dirname = g_path_get_dirname (files[0]);
       if (chdir(dirname))
       {
         g_free (dirname);

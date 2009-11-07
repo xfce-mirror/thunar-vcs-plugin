@@ -89,7 +89,7 @@ static gboolean reset_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
   }
   g_free (argv);
 
-  parser = tgh_error_parser_new(GTK_WIDGET(dialog));
+  parser = tgh_error_parser_new(NULL);
 
   args = g_new(struct exit_args, 1);
   args->parser = parser;
@@ -110,7 +110,7 @@ gboolean tgh_reset (gchar **files, GPid *pid)
   if (files)
     if (chdir(files[0]))
     {
-      gchar *dirname = g_dirname (files[0]);
+      gchar *dirname = g_path_get_dirname (files[0]);
       if (chdir(dirname))
       {
         g_free (dirname);
