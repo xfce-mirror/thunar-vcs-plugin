@@ -36,6 +36,7 @@
 #include "tgh-clone.h"
 #include "tgh-clean.h"
 #include "tgh-log.h"
+#include "tgh-move.h"
 #include "tgh-reset.h"
 #include "tgh-stash.h"
 #include "tgh-status.h"
@@ -62,6 +63,7 @@ int main (int argc, char *argv[])
   gboolean clean = FALSE;
   gboolean clone = FALSE;
   gboolean log = FALSE;
+  gboolean move = FALSE;
   gboolean reset = FALSE;
   gboolean stash = FALSE;
   gboolean status = FALSE;
@@ -114,6 +116,12 @@ int main (int argc, char *argv[])
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
+  GOptionEntry move_options_table[] =
+  {
+    { "move", '\0', 0, G_OPTION_ARG_NONE, &move, N_("Execute move action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
   GOptionEntry reset_options_table[] =
   {
     { "reset", '\0', 0, G_OPTION_ARG_NONE, &reset, N_("Execute reset action"), NULL },
@@ -162,6 +170,10 @@ int main (int argc, char *argv[])
 
   option_group = g_option_group_new("log", N_("Log Related Options:"), N_("Log"), NULL, NULL);
   g_option_group_add_entries(option_group, log_options_table);
+  g_option_context_add_group(option_context, option_group);
+
+  option_group = g_option_group_new("move", N_("Move Related Options:"), N_("Move"), NULL, NULL);
+  g_option_group_add_entries(option_group, move_options_table);
   g_option_context_add_group(option_context, option_group);
 
   option_group = g_option_group_new("reset", N_("Reset Related Options:"), N_("Reset"), NULL, NULL);
@@ -216,6 +228,11 @@ int main (int argc, char *argv[])
   if(log)
   {
     has_child = tgh_log(files, &pid);
+  }
+
+  if(move)
+  {
+    has_child = tgh_move(files, &pid);
   }
 
   if(reset)

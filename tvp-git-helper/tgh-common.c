@@ -79,7 +79,7 @@ create_error_dialog (GtkWindow *parent, gchar *message)
     GtkWidget *error;
     error = gtk_message_dialog_new (parent?GTK_WINDOW (parent):NULL, parent?GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL:0, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Failed"));
     gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (error), "%s", g_strstrip (message));
-    tgh_dialog_start (GTK_DIALOG (error), FALSE);
+    tgh_dialog_start (GTK_DIALOG (error), !parent);
   }
 }
 

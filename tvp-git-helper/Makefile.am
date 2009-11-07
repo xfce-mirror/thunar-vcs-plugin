@@ -28,6 +28,8 @@ tvp_git_helper_SOURCES =						\
 	tgh-common.c							\
 	tgh-log.h							\
 	tgh-log.c							\
+	tgh-move.h							\
+	tgh-move.c							\
 	tgh-reset.h							\
 	tgh-reset.c							\
 	tgh-stash.h							\
