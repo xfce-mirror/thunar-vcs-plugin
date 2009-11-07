@@ -1,3 +1,19 @@
+2009-11-07	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-{add,blame,clean,log,reset}.c: Changed deprecated
+	  g_dirname in g_path_get_dirname.
+	* tvp-git-helper/tgh-reset.c: Don't pass dialog as parent for the
+	  error dialog.
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-move.[ch]: Added move action.
+	* tvp-git-helper/tgh-common.c: Correctly exit the helper if no parent
+	  was given for an error dialog.
+
+2009-11-02	Peter de Ridder <peter@xfce.org>
+
+	* tvp-svn-helper/tsh-file-selection-dialog.c(get_parent_status): Fixed
+	  possible infinite loop. Fixing bug #5916.
+
 2009-10-25	Peter de Ridder <peter@xfce.org>
 
 	* tvp-svn-helper/tvp-properties-dialog.c
