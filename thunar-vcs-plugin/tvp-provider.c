@@ -303,6 +303,7 @@ tvp_get_parent_status (ThunarxFileInfo *file_info)
 
 
 
+#ifdef HAVE_SUBVERSION
 static gint
 tvp_compare_filename (const gchar *uri1, const gchar *uri2)
 {
@@ -343,6 +344,7 @@ tvp_compare_filename (const gchar *uri1, const gchar *uri2)
 
   return result;
 }
+#endif
 
 
 
@@ -389,13 +391,13 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   ThunarVfsPathScheme scheme;
   ThunarVfsInfo      *info;
   GList              *lp;
+  gint                n_files = 0;
 #ifdef HAVE_SUBVERSION
   gboolean            parent_wc = FALSE;
   gboolean            directory_is_wc = FALSE;
   gboolean            directory_is_not_wc = FALSE;
   gboolean            file_is_vc = FALSE;
   gboolean            file_is_not_vc = FALSE;
-  gint                n_files = 0;
   GSList             *file_status;
   GSList             *iter;
 #endif
