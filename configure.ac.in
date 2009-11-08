@@ -12,9 +12,9 @@ dnl *** Version information ***
 dnl ***************************
 m4_define([tvp_version_major], [0])
 m4_define([tvp_version_minor], [1])
-m4_define([tvp_version_micro], [1])
+m4_define([tvp_version_micro], [2])
 m4_define([tvp_version_build], [@REVISION@])
-m4_define([tvp_version_tag], [git]) # Leave empty for releases
+m4_define([tvp_version_tag], []) # Leave empty for releases
 m4_define([tvp_version], [tvp_version_major().tvp_version_minor().tvp_version_micro()ifelse(tvp_version_tag(), [], [], [tvp_version_tag()-tvp_version_build()])])
 
 dnl *******************************************
@@ -99,9 +99,9 @@ fi
 AM_CONDITIONAL([HAVE_SUBVERSION], [test x"$found_subversion" = x"yes"])
 
 AC_ARG_ENABLE([git], 
-    AC_HELP_STRING([--enable-git], [Enable git])
-AC_HELP_STRING([--disable-git], [Disable git (default)]),
-    [check_for_git=$enableval], [check_for_git=no])
+    AC_HELP_STRING([--enable-git], [Enable git (default)])
+AC_HELP_STRING([--disable-git], [Disable git]),
+    [check_for_git=$enableval], [check_for_git=yes])
 AC_MSG_CHECKING([for optional package git])
 if test x"$check_for_git" = x"yes"; then
     found_git=yes

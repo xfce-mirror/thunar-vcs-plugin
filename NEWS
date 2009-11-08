@@ -1,3 +1,8 @@
+0.1.2
+=====
+- More git actions are added: blame, clean, move and stash.
+- Git icon added.
+
 0.1.1
 =====
 - Unimplemented options are hidden in menu.
@@ -18,7 +23,7 @@ thunar-svn-plugin-0.0.3
 
 thunar-svn-plugin-0.0.2
 =======================
-- New Subversion actions have been added: switch, relocate, blame.
+- New Subversion actions are added: switch, relocate, blame.
 - File selection dialog added for various Subversion actions.
 
 thunar-svn-plugin-0.0.1

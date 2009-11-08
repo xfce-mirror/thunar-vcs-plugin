@@ -1,3 +1,9 @@
+2009-11-08	Peter de Ridder <peter@xfce.org>
+
+	* === Released 0.1.2 ===
+	* thunar-vcs-plugin/tvp-provider.c: Fixed build when svn is disabled.
+	* tvp-git-helper/tgh-{add,move,reset}.c: Fixed WEXITSTATUS includes.
+
 2009-11-07	Peter de Ridder <peter@xfce.org>
 
 	* tvp-git-helper/tgh-{add,blame,clean,log,reset}.c: Changed deprecated
