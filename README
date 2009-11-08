@@ -9,8 +9,8 @@ The current features are:
   export, import, lock, log, move, properties, relocate, resolved, revert,
   status, switch, unlock, update.
 - Subversion info in file properties dialog.
-- Limmited git support: add, blame, branch, clean, clone, log, reset, stash,
-  status.
+- Basic git support: add, blame, branch, clean, clone, log, move, reset,
+  stash, status.
 
 
 Usage
