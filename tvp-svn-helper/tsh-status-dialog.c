@@ -156,11 +156,9 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 
   table = gtk_table_new (3, 2, FALSE);
 
-	dialog->depth = depth = gtk_combo_box_new ();
-
 	model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
 
-	gtk_combo_box_set_model (GTK_COMBO_BOX (depth), model);
+	dialog->depth = depth = gtk_combo_box_new_with_model (model);
 
     /*
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
@@ -332,8 +330,7 @@ tsh_status_dialog_get_depth (TshStatusDialog *dialog)
 
   g_return_val_if_fail (TSH_IS_STATUS_DIALOG (dialog), svn_depth_unknown);
 
-  if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter))
-    return svn_depth_unknown;
+  g_return_val_if_fail (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter), svn_depth_unknown);
 
   model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->depth));
   gtk_tree_model_get_value (model, &iter, 1, &value);

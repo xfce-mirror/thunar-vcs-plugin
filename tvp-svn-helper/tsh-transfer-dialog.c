@@ -214,6 +214,8 @@ tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
   {
     gboolean isdir = TRUE;
     gchar *absolute = NULL;
+    DIR *dir;
+    FILE *fp;
     if(!g_path_is_absolute (local_dir))
     {
       //TODO: ".."
@@ -221,8 +223,7 @@ tsh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
       absolute = g_build_filename(currdir, (local_dir[0] == '.' && (!local_dir[1] || local_dir[1] == G_DIR_SEPARATOR || local_dir[1] == '/'))?&local_dir[1]:local_dir, NULL);
       g_free (currdir);
     }
-    DIR *dir = opendir(absolute?absolute:local_dir);
-    FILE *fp;
+    dir = opendir(absolute?absolute:local_dir);
     if(dir)
       closedir(dir);
     else if((fp = fopen(absolute?absolute:local_dir, "r")))

@@ -1,15 +1,33 @@
-0.0.3
+0.1.2
 =====
+- More git actions are added: blame, clean, move and stash.
+- Git icon added.
+
+0.1.1
+=====
+- Unimplemented options are hidden in menu.
+- Problems with text domain for translations fixed.
+- More git support added.
+
+0.1.0
+=====
+- The plugin is renamed to thunar-vcs-plugin.
+- All svn api functions are changed to both 1.5 and 1.6.
+- File selection dialog changed to work in more cases.
+- Limited git support added, but disabled.
+
+thunar-svn-plugin-0.0.3
+=======================
 - All svn api functions changed to the 1.5 svn api. libsvn version 1.5 or
   newer is now required.
 
-0.0.2
-=====
-- New Subversion actions have been added: switch, relocate, blame.
+thunar-svn-plugin-0.0.2
+=======================
+- New Subversion actions are added: switch, relocate, blame.
 - File selection dialog added for various Subversion actions.
 
-0.0.1
-=====
+thunar-svn-plugin-0.0.1
+=======================
 - Initial release of the Thunar SVN Plugin. This version of the Subversion
   Plugin has suport for various Subversion action: add, checkout, cleanup,
   commit, copy, delete, export, import, lock, log, move, properties, resolved,

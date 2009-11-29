@@ -181,11 +181,9 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_widget_show (text_view);
 	gtk_widget_show (scroll_window);
 
-	dialog->depth = depth = gtk_combo_box_new ();
-
 	model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
 
-	gtk_combo_box_set_model (GTK_COMBO_BOX (depth), model);
+	dialog->depth = depth = gtk_combo_box_new_with_model (model);
 
     /*
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
@@ -442,11 +440,12 @@ tsh_properties_dialog_get_selected_key (TshPropertiesDialog *dialog)
 gchar *
 tsh_properties_dialog_get_value (TshPropertiesDialog *dialog)
 {
+  GtkTextBuffer *buffer;
   GtkTextIter start, end;
 
   g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), NULL);
 
-  GtkTextBuffer *buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view));
+  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view));
   gtk_text_buffer_get_start_iter (buffer, &start);
   gtk_text_buffer_get_end_iter (buffer, &end);
   return gtk_text_buffer_get_text (buffer, &start, &end, FALSE);
@@ -464,8 +463,7 @@ tsh_properties_dialog_get_depth (TshPropertiesDialog *dialog)
 
   g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), svn_depth_unknown);
 
-  if (!gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter))
-     return svn_depth_unknown;
+  g_return_val_if_fail (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter), svn_depth_unknown);
 
   model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->depth));
   gtk_tree_model_get_value (model, &iter, 1, &value);
@@ -551,11 +549,11 @@ set_clicked (GtkButton *button, gpointer user_data)
 	
 	gtk_widget_hide (dialog->close);
 	gtk_widget_show (dialog->cancel);
-
-  g_signal_emit (dialog, signals[SIGNAL_SET], 0);
   
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
+
+  g_signal_emit (dialog, signals[SIGNAL_SET], 0);
 }
 
 static void
@@ -566,10 +564,10 @@ delete_clicked (GtkButton *button, gpointer user_data)
 	
 	gtk_widget_hide (dialog->close);
 	gtk_widget_show (dialog->cancel);
-
-  g_signal_emit (dialog, signals[SIGNAL_DELETE], 0);
   
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
+
+  g_signal_emit (dialog, signals[SIGNAL_DELETE], 0);
 }
 

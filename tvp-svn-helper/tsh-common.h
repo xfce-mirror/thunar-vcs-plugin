@@ -22,8 +22,8 @@ G_BEGIN_DECLS
 gboolean tsh_init (apr_pool_t**, svn_error_t**);
 
 void tsh_replace_thread (GThread *);
-void tsh_cancel ();
-void tsh_reset_cancel();
+void tsh_cancel (void);
+void tsh_reset_cancel(void);
 
 gboolean tsh_create_context (svn_client_ctx_t**, apr_pool_t*, svn_error_t**);
 

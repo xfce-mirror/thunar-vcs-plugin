@@ -2,43 +2,51 @@ About Thunar VCS Plugin
 =======================
 
 The Thunar VCS Plugin adds Subversion actions to the context menu of thunar.
-This gives a VCS intergration to Thunar.
+This gives a VCS integration to Thunar.
 
 The current features are:
-- Most of the svn action: add, checkout, cleanup, commit, copy, delete,
-  export, import, lock, log, move, properties, resolved, revert, status,
-  unlock, update.
+- Most of the svn action: add, blame, checkout, cleanup, commit, copy, delete,
+  export, import, lock, log, move, properties, relocate, resolved, revert,
+  status, switch, unlock, update.
 - Subversion info in file properties dialog.
+- Basic git support: add, blame, branch, clean, clone, log, move, reset,
+  stash, status.
 
 
 Usage
 =====
 
 In the thunar file/folder view right click on a file ore folder and the
-context menu pops up showing the SVN submenu. Choose the appropriate action.
+context menu pops up showing the SVN and GIT submenu. Choose the appropriate
+action.
 
 
 Required packages
 =================
 
-The Thunar SVN Plugin depends on the following packages:
+The Thunar VCS Plugin depends on the following packages:
 - Thunar
 - Thunar-VFS 0.4.0 or higher
 - Thunarx 0.4.0 or higher
-- libsvn 1.5 or higher
-- libapr 0.9.7 or higher
 - gtk 2.6.0 or higher
 - glib 2.6.0 or higher
 - gobject 2.6.0 or higher
+
+For svn support it requires the following packages:
+- libsvn 1.5 or higher
+- libapr 0.9.7 or higher
+
+For git support it requires the following packages:
+- git
 
 
 Installation
 ============
 
-The file 'INSTALL' contains generic installation instructions. Make sure to
-run ./configure --prefix=$(pkg-config --variable prefix thunarx-1) so Thunar
-can find the plugin. For more information, visit the thunar-vcs-plugin website
-at http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin
+The file 'INSTALL' contains generic installation instructions. To build the
+plugin xfce4-dev-tool version 4.7.2 or higher is required. For more
+information, visit the thunar-vcs-plugin website at
+http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin
 
 
 How to report bugs?

@@ -1,3 +1,176 @@
+2009-11-08	Peter de Ridder <peter@xfce.org>
+
+	* === Released 0.1.2 ===
+	* thunar-vcs-plugin/tvp-provider.c: Fixed build when svn is disabled.
+	* tvp-git-helper/tgh-{add,move,reset}.c: Fixed WEXITSTATUS includes.
+
+2009-11-07	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-{add,blame,clean,log,reset}.c: Changed deprecated
+	  g_dirname in g_path_get_dirname.
+	* tvp-git-helper/tgh-reset.c: Don't pass dialog as parent for the
+	  error dialog.
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-move.[ch]: Added move action.
+	* tvp-git-helper/tgh-common.c: Correctly exit the helper if no parent
+	  was given for an error dialog.
+
+2009-11-02	Peter de Ridder <peter@xfce.org>
+
+	* tvp-svn-helper/tsh-file-selection-dialog.c(get_parent_status): Fixed
+	  possible infinite loop. Fixing bug #5916.
+
+2009-10-25	Peter de Ridder <peter@xfce.org>
+
+	* tvp-svn-helper/tvp-properties-dialog.c
+	  tvp-svn-helper/tvp-status-dialog.c: Improved depth combo box.
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-clean{,-dialog}.[ch]: Added clean action.
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-blame{,-dialog}.[ch]: Added blame action.
+	* tvp-git-helper/tgh-clone.c: Fixed a memory leak.
+	* tvp-git-helper/tgh-log-dialog.c: Removed expander column.
+	* tvp-svn-helper/tsh-log-dialog.c: Changed "File" to "Path".
+	* tvp-svn-helper/tsh-properties-dialog.c: Swapped signal emit and tree
+	  clear order.
+	* thunar-vcs-plugin/tvp-git-action.c tvp-git-helper/main.c
+	  tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-stash{,-dialog}.[ch]: Added stash action.
+
+2009-10-24	Peter de Ridder <peter@xfce.org>
+
+	* icons/: Added git icons and 16x16 subversion icon.
+
+2009-10-23	Peter de Ridder <peter@xfce.org>
+
+	* === Released 0.1.1 ===
+	* tvp-git-helper/tgh-clone.c: Added -- to the argument list.
+	* po/*: Updated po files.
+	* tvp-git-helper/tgh-add.c tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-notify-dialog.[ch]: Added notify dialog to make add
+	  more verbose.
+	* tvp-git-helper/tgh-common.c
+	  tvp-git-helper/tgh-file-selection-dialog.c: Improved status output
+	  parsing.
+	* tvp-git-helper/tgh-reset{,-dialog}.[ch]: Replaced the reset dialog by
+	  message boxes.
+
+2009-10-14	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-{add,reset}.c: Made chdir work correct.
+	* tvp-git-helper/tgh-file-selection-dialog.[ch]: Don't use input files
+	  for git call since this gives the wrong results.
+	* po/POTFILES.in: added git helper files.
+	* po/thunar-vcs-plugin.pot po/*.po: updated po files.
+	* thunar-vcs-lpugin/tvp-git-action.c tvp-git-helper/Makefile.am
+	  tvp-git-helper/main.c tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-log{-dialog,}.[ch]: Added log action.
+
+2009-10-11	Peter de Ridder <peter@xfce.org>
+
+	* thunar-vcs-plugin/tvp-provider.c
+	  thunar-vcs-plugin/tvp-git-action.[ch]: Added extra flags to
+	  tvp_git_action_new.
+	* thunar-vcs-plugin/yvp-{svn,git}-action.c: Only show menu items if they
+	  are implemented.
+	* tvp-git-helper/main.c tvp-git-helper/tgh-clone.[ch]
+	  tvp-git-helper/tgh-transfer-dialog.[ch]: Added clone action.
+	* tvp-git-helper/tgh-{add,branch,reset,status}.[ch]: Cleaned the code a
+	  bit.
+
+2009-09-29	Peter de Ridder <peter@xfce.org>
+
+	* tvp-{svn,git}-helper/main.c: Added xfce_textdomain to correctly init
+	  translations.
+	* tvp-svn-helper/tsh-comon.c(tsh_status_to_string): Check for empty
+	  string before translations, otherwise the po header will be
+	  returned.
+	* */Makefile.am: Removed deprecated INCLUDES and fix AM_CPPGLAGS
+	  overriding.
+
+2009-09-27	Peter de Ridder <peter@xfce.org>
+
+	* === Released 0.1.0 ===
+	* Made Thuner VCS Plugin compile with --enable-debug=full.
+	* Updated the po files.
+	* autogen.sh configure.ac.in: Changed scripts to xfce4-dev-tools
+	  version 4.7.2. Thunar VCS Plugin depends on 4.7.2 of
+	  xfce4-dev-tools, now.
+	* tvp-svn-helper/tsh-file-selection-dialog.c: Fixed revert for
+	  directory deletion.
+	* tvp-svn-helper/tsh-commit.c
+	  tvp-svn-helper/tsh-file-selection-dialog.[ch]: Better file Selector.
+	  Using recursion info in file selection and commit command to be able
+	  to commit directory deletion.
+	* tvp-svn-helper/tsh-delete.c: Removed TSH_FILE_SELECTION_FLAG_MODIFIED
+	  flag.
+	* tvp-svn-helper/tsh-revert.c: Added
+	  TSH_FILE_SELECTION_FLAG_REVERSE_DISABLE_CHILDREN flag.
+	* tvp-svn-helper/tsh-delete.c(delete_thread): Fixed segfault.
+	* tvp-svn-helper/tsh-file-selection-dialog.[ch]: Support for
+	  unversioned directory trees.
+	* tvp-svn-helper/tsh-revert.c(revert_thread): Execute revert in
+	  reverse directory order.
+	* tvp-svn-helper/tsh-add.c: Support for non-recursive add.
+	* tvp-svn-helper/tsh-log-dialog.c: Fixed 2 missing characters in last
+	  commit.
+	* tvp-svn-helper/tsh-commit.c: Support adding unversioned files before
+	  commiting. This fixes bug #3921.
+	
+2009-07-26	Peter de Ridder <peter@xfce.org>
+
+	* thunar-vcs-plugin/tvp-svn-action.c: The add context menu item is now
+	  visible on folder background menu too.
+	* tvp-svn-helper/tsh-{file-selection,log-message,log,status}-dialog.c:
+	  The file lists are tree views now.
+	* tvp-svn-helper/tsh-tree-common.[ch]: Common routines to build a tree
+	  view of files.
+	* tvp-svn-helper/tsh-common.c(tsh_log_func)
+	  tvp-svn-helper/tsh-log-dialog.[ch]: Support has_children for log
+	  entries.
+	* tvp-svn-helper/Makefile.am: tsh-tree-common.[ch] added.
+	
+2009-07-25	Peter de Ridder <peter@xfce.org>
+
+	* thunar-vcs-plugin/tvp-svn-backend.c(tvp_svn_backend_init,
+	  tvp_svn_backend_free): Changed the libsvn init. Not using
+	  svn_cmdline_init anymore. This fixes bug #5106.
+	* thunar-vcs-plugin/tvp-svn-action.c(tvp_svn_action_create_menu_item):
+	  Made the changelist menu item popup unimplemented.
+	* tvp-git-helper/tgh-{add,common}.c: Fixed system includes.
+	* configure.ac.in: Added check for 'sys/wait.h'.
+	* tvp-svn-helper/gtk*.[ch]: Removed the gtkfilechooser files from the
+	  project.
+	* tvp-svn-helper/ths-log.c(log_thread): Fixed libsvn 1.5 support.
+	* tvp-svn-helper/tsh-common.c: Fixed compiler compatibility.
+	* tvp-svn-helper/tsh-resolved.c(resolved_thread): Added initializer
+	  for posible uninintialized variable.
+	
+2009-07-10	Peter de Ridder <peter@xfce.org>
+
+	* configure.ac.in: Added flags to disable subversion or git support.
+
+2009-06-28	Peter de Ridder <peter@xfce.org>
+
+	* Renaming the thunar-svn-plugin to thunar-vcs-plugin.
+	* Added basic git support to the thunar-vcs-plugin.
+
+2009-06-28	Peter de Ridder <peter@xfce.org>
+
+	* thunar-svn-plugin.c: Added add_subaction{,_u} to save alot of code
+	  for adding items to the action menu.
+
+2009-04-30	Peter de Ridder <peter@xfce.org>
+
+	* configure.ac.in: version incremented after release.
+	* thunar-svn-plugin tsp-svn-helper: changed functions to svn 1.6 api.
+
+2009-03-15	Peter de Ridder <peter@xfce.org>
+
+	* Added comments about 1.5 recursion information for translators.
+
 2009-03-14	Peter de Ridder	<peter@xfce.org>
 
 	* === Released 0.0.3 ===
@@ -10,14 +183,14 @@
 2009-02-27	Peter de Ridder	<peter@xfce.org>
 
 	* thunar-svn-helper/tsh-{transfer,relocate}-dialog.c
-	thunar-svn-helper/Makefile: Removed gtkfilechooserentry which got
-	broken with the later version of gtk.
+	  thunar-svn-helper/Makefile: Removed gtkfilechooserentry which got
+	  broken with the later version of gtk.
 	* INSTALL: Updated to newer version provided by the auto tools.
 
 2008-07-17	Peter de Ridder	<peter@xfce.org>
 
 	* tsp-svn-helper/main.c: Fixed bug by moving gtk_threads_enter
-	directly behind gdk_threads_init.
+	  directly behind gdk_threads_init.
 
 2008-06-16	Peter de Ridder	<peter@xfce.org>
 
@@ -25,14 +198,14 @@
 	* thunar-svn-plugin/tsp-svn-action.c thunar-svn-plugin/tsp-provider.c:
 	  Created signal which is emitted on new process spawn.
 
-2008-06-09	Peter de Ridder	<peter@xfce.org>
+2008-06-11	Peter de Ridder	<peter@xfce.org>
 
 	* thunar-svn-plugin/tsp-svn-action.c tsp-svn-helper/main.c
 	  tsp-svn-helper/tsh-blame.[ch] tsp-svn-helper/tsh-blame-dialog.[ch]:
 	  Added Subversion blame action.
 	* tsp-svn-helper/tsh-resolved.c: Added file selection dialog.
 
-2008-06-11	Peter de Ridder	<peter@xfce.org>
+2008-06-10	Peter de Ridder	<peter@xfce.org>
 
 	* thunar-svn-plugin/tsh-svn-action.c tsp-svn-helper/main.c
 	  tsp-svn-helper/tsh-relocate.[ch] tsp-svn-helper/tsh-relocate.[ch]:

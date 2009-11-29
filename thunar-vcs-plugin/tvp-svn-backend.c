@@ -38,12 +38,12 @@ static svn_client_ctx_t *ctx = NULL;
 
 
 gboolean
-tvp_svn_backend_init ()
+tvp_svn_backend_init (void)
 {
+	svn_error_t *err;
+
 	if (pool)
 		return TRUE;
-
-	svn_error_t *err;
 
     /* Initialize apr */
     if (apr_initialize())
@@ -115,7 +115,7 @@ tvp_svn_backend_init ()
 
 
 void
-tvp_svn_backend_free ()
+tvp_svn_backend_free (void)
 {
 	if (pool)
     {
@@ -133,6 +133,7 @@ tvp_svn_backend_is_working_copy (const gchar *uri)
   apr_pool_t *subpool;
 	svn_error_t *err;
 	int wc_format;
+  gchar *path;
 
 	/* strip the "file://" part of the uri */
 	if (strncmp (uri, "file://", 7) == 0)
@@ -140,7 +141,7 @@ tvp_svn_backend_is_working_copy (const gchar *uri)
 		uri += 7;
 	}
 
-	gchar *path = g_strdup (uri);
+	path = g_strdup (uri);
 
 	/* remove trailing '/' cause svn_wc_check_wc can't handle that */
 	if (path[strlen (path) - 1] == '/')
@@ -199,7 +200,7 @@ status_callback2 (void *baton, const char *path, svn_wc_status2_t *status)
 
 
 static svn_error_t *
-status_callback3 (void *baton, const char *path, svn_wc_status2_t *status, apr_pool_t *pool)
+status_callback3 (void *baton, const char *path, svn_wc_status2_t *status, apr_pool_t *pool_)
 {
     status_callback2(baton, path, status);
     return SVN_NO_ERROR;
@@ -214,6 +215,7 @@ tvp_svn_backend_get_status (const gchar *uri)
 	svn_error_t *err;
 	svn_opt_revision_t revision = {svn_opt_revision_working};
 	GSList *list = NULL;
+  gchar *path;
 
 	/* strip the "file://" part of the uri */
 	if (strncmp (uri, "file://", 7) == 0)
@@ -221,7 +223,7 @@ tvp_svn_backend_get_status (const gchar *uri)
 		uri += 7;
 	}
 
-	gchar *path = g_strdup (uri);
+	path = g_strdup (uri);
 
 	/* remove trailing '/' cause svn_client_status2 can't handle that */
 	if (path[strlen (path) - 1] == '/')
@@ -260,7 +262,7 @@ tvp_svn_backend_get_status (const gchar *uri)
 
 
 static svn_error_t *
-info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t *pool)
+info_callback (void *baton, const char *path, const svn_info_t *info, apr_pool_t *pool_)
 {
   TvpSvnInfo **pinfo = baton;
   g_return_val_if_fail (*pinfo == NULL, SVN_NO_ERROR);
@@ -291,6 +293,7 @@ tvp_svn_backend_get_info (const gchar *uri)
 	svn_error_t *err;
 	svn_opt_revision_t revision = {svn_opt_revision_unspecified};
   TvpSvnInfo *info = NULL;
+  gchar *path;
 
 	/* strip the "file://" part of the uri */
 	if (strncmp (uri, "file://", 7) == 0)
@@ -298,7 +301,7 @@ tvp_svn_backend_get_info (const gchar *uri)
 		uri += 7;
 	}
 
-	gchar *path = g_strdup (uri);
+	path = g_strdup (uri);
 
 	/* remove trailing '/' cause svn_client_info can't handle that */
 	if (path[strlen (path) - 1] == '/')

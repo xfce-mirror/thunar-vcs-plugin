@@ -40,6 +40,9 @@ static GType type_list[1];
 
 
 
+/* delcare it here to make the compiler happy */
+G_MODULE_EXPORT void thunar_extension_initialize (ThunarxProviderPlugin *plugin);
+
 G_MODULE_EXPORT void
 thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 {
@@ -79,6 +82,9 @@ thunar_extension_initialize (ThunarxProviderPlugin *plugin)
 
 
 
+/* delcare it here to make the compiler happy */
+G_MODULE_EXPORT void thunar_extension_shutdown (void);
+
 G_MODULE_EXPORT void
 thunar_extension_shutdown (void)
 {
@@ -89,6 +95,9 @@ thunar_extension_shutdown (void)
 
 
 
+/* delcare it here to make the compiler happy */
+G_MODULE_EXPORT void thunar_extension_list_types (const GType **types, gint *n_types);
+
 G_MODULE_EXPORT void
 thunar_extension_list_types (const GType **types,
                              gint         *n_types)
@@ -96,6 +105,4 @@ thunar_extension_list_types (const GType **types,
   *types = type_list;
   *n_types = G_N_ELEMENTS (type_list);
 }
-
-
 

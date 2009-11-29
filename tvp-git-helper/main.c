@@ -28,9 +28,17 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include "tgh-common.h"
+
 #include "tgh-add.h"
+#include "tgh-blame.h"
 #include "tgh-branch.h"
+#include "tgh-clone.h"
+#include "tgh-clean.h"
+#include "tgh-log.h"
+#include "tgh-move.h"
 #include "tgh-reset.h"
+#include "tgh-stash.h"
 #include "tgh-status.h"
 
 static GPid pid;
@@ -50,8 +58,14 @@ int main (int argc, char *argv[])
   /* CMD-line options */
   gboolean print_version = FALSE;
   gboolean add = FALSE;
+  gboolean blame = FALSE;
   gboolean branch = FALSE;
+  gboolean clean = FALSE;
+  gboolean clone = FALSE;
+  gboolean log = FALSE;
+  gboolean move = FALSE;
   gboolean reset = FALSE;
+  gboolean stash = FALSE;
   gboolean status = FALSE;
   gchar **files = NULL;
   GError *error = NULL;
@@ -74,7 +88,37 @@ int main (int argc, char *argv[])
 
   GOptionEntry branch_options_table[] =
   {
+    { "blame", '\0', 0, G_OPTION_ARG_NONE, &blame, N_("Execute blame action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
+  GOptionEntry blame_options_table[] =
+  {
     { "branch", '\0', 0, G_OPTION_ARG_NONE, &branch, N_("Execute branch action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
+  GOptionEntry clean_options_table[] =
+  {
+    { "clean", '\0', 0, G_OPTION_ARG_NONE, &clean, N_("Execute clean action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
+  GOptionEntry clone_options_table[] =
+  {
+    { "clone", '\0', 0, G_OPTION_ARG_NONE, &clone, N_("Execute clone action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
+  GOptionEntry log_options_table[] =
+  {
+    { "log", '\0', 0, G_OPTION_ARG_NONE, &log, N_("Execute log action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
+  GOptionEntry move_options_table[] =
+  {
+    { "move", '\0', 0, G_OPTION_ARG_NONE, &move, N_("Execute move action"), NULL },
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
@@ -84,11 +128,20 @@ int main (int argc, char *argv[])
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
+  GOptionEntry stash_options_table[] =
+  {
+    { "stash", '\0', 0, G_OPTION_ARG_NONE, &stash, N_("Execute stash action"), NULL },
+    { NULL, '\0', 0, 0, NULL, NULL, NULL }
+  };
+
   GOptionEntry status_options_table[] =
   {
     { "status", '\0', 0, G_OPTION_ARG_NONE, &status, N_("Execute status action"), NULL },
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
+
+  /* setup translation domain */
+  xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
   option_context = g_option_context_new("<action> [options] [args]");
 
@@ -99,12 +152,36 @@ int main (int argc, char *argv[])
   g_option_group_add_entries(option_group, add_options_table);
   g_option_context_add_group(option_context, option_group);
 
+  option_group = g_option_group_new("blame", N_("Blame Related Options:"), N_("Blame"), NULL, NULL);
+  g_option_group_add_entries(option_group, blame_options_table);
+  g_option_context_add_group(option_context, option_group);
+
   option_group = g_option_group_new("branch", N_("Branch Related Options:"), N_("Branch"), NULL, NULL);
   g_option_group_add_entries(option_group, branch_options_table);
   g_option_context_add_group(option_context, option_group);
 
+  option_group = g_option_group_new("clean", N_("Clone Related Options:"), N_("Clean"), NULL, NULL);
+  g_option_group_add_entries(option_group, clean_options_table);
+  g_option_context_add_group(option_context, option_group);
+
+  option_group = g_option_group_new("clone", N_("Clone Related Options:"), N_("Clone"), NULL, NULL);
+  g_option_group_add_entries(option_group, clone_options_table);
+  g_option_context_add_group(option_context, option_group);
+
+  option_group = g_option_group_new("log", N_("Log Related Options:"), N_("Log"), NULL, NULL);
+  g_option_group_add_entries(option_group, log_options_table);
+  g_option_context_add_group(option_context, option_group);
+
+  option_group = g_option_group_new("move", N_("Move Related Options:"), N_("Move"), NULL, NULL);
+  g_option_group_add_entries(option_group, move_options_table);
+  g_option_context_add_group(option_context, option_group);
+
   option_group = g_option_group_new("reset", N_("Reset Related Options:"), N_("Reset"), NULL, NULL);
   g_option_group_add_entries(option_group, reset_options_table);
+  g_option_context_add_group(option_context, option_group);
+
+  option_group = g_option_group_new("stash", N_("Stash Related Options:"), N_("Stash"), NULL, NULL);
+  g_option_group_add_entries(option_group, stash_options_table);
   g_option_context_add_group(option_context, option_group);
 
   option_group = g_option_group_new("status", N_("Status Related Options:"), N_("Status"), NULL, NULL);
@@ -128,14 +205,44 @@ int main (int argc, char *argv[])
     has_child = tgh_add(files, &pid);
   }
 
+  if(blame)
+  {
+    has_child = tgh_blame(files, &pid);
+  }
+
   if(branch)
   {
     has_child = tgh_branch(files, &pid);
   }
 
+  if(clean)
+  {
+    has_child = tgh_clean(files, &pid);
+  }
+
+  if(clone)
+  {
+    has_child = tgh_clone(files, &pid);
+  }
+
+  if(log)
+  {
+    has_child = tgh_log(files, &pid);
+  }
+
+  if(move)
+  {
+    has_child = tgh_move(files, &pid);
+  }
+
   if(reset)
   {
     has_child = tgh_reset(files, &pid);
+  }
+
+  if(stash)
+  {
+    has_child = tgh_stash(files, &pid);
   }
 
   if(status)

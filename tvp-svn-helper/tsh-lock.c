@@ -35,7 +35,7 @@
 #include "tsh-notify-dialog.h"
 #include "tsh-lock-dialog.h"
 
-#include "tsh-delete.h"
+#include "tsh-lock.h"
 
 struct thread_args {
 	svn_client_ctx_t *ctx;

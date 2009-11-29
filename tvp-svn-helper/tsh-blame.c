@@ -73,7 +73,7 @@ static gpointer blame_thread (gpointer user_data)
 		tsh_blame_dialog_done (dialog);
 
     error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Blame failed"));
-    gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), error_str);
+    gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(error), FALSE);
 		gdk_threads_leave();
     g_free(error_str);

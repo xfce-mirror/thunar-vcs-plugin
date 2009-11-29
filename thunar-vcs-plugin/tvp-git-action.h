@@ -42,6 +42,8 @@ GtkAction *tvp_git_action_new           (const gchar*,
                                          const gchar*,
                                          GList *,
                                          GtkWidget *,
+                                         gboolean,
+                                         gboolean,
                                          gboolean) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
 G_END_DECLS;

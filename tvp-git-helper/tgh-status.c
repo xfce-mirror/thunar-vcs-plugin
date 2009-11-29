@@ -37,14 +37,7 @@
 
 static gchar *argv[] = {"git", "status", NULL};
 
-struct proc_args
-{
-    GtkWidget *dialog;
-    gchar *error;
-    gchar **files;
-};
-
-gboolean status_spawn (TghStatusDialog *dialog, GPid *pid)
+static gboolean status_spawn (TghStatusDialog *dialog, GPid *pid)
 {
   GError *error = NULL;
   gint fd_out;
@@ -90,7 +83,8 @@ gboolean tgh_status (gchar **files, GPid *pid)
   g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_status_child), NULL);
 
   if (files)
-      chdir(files[0]);
+    if (chdir(files[0]))
+      return FALSE;
 
   return status_spawn(TGH_STATUS_DIALOG(dialog), pid);
 }

@@ -176,10 +176,12 @@ tvp_svn_action_new (const gchar *name,
                     gboolean file_version_control,
                     gboolean file_no_version_control)
 {
+  GtkAction *action;
+
   g_return_val_if_fail(name, NULL);
   g_return_val_if_fail(label, NULL);
 
-  GtkAction *action = g_object_new (TVP_TYPE_SVN_ACTION,
+  action = g_object_new (TVP_TYPE_SVN_ACTION,
             "hide-if-empty", FALSE,
             "name", name,
             "label", label,
@@ -276,8 +278,9 @@ add_subaction_u (GtkMenuShell *menu, const gchar *name, const gchar *text, const
     subitem = gtk_action_create_menu_item (subaction);
     g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
     gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (menu, subitem);
-    gtk_widget_show(subitem);
+    //gtk_menu_shell_append (menu, subitem);
+    //gtk_widget_show(subitem);
+    gtk_widget_unref (subitem);
 }
 
 

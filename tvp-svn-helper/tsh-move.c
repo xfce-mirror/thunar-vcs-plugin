@@ -111,11 +111,13 @@ GThread *tsh_move (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   GtkWidget *dialog;
   gchar *from;
   gchar *to;
+  gboolean isdir = TRUE;
+  gchar *absolute = NULL;
+  DIR *dir;
+  FILE *fp;
 
 	from = files?files[0]:"";
 
-  gboolean isdir = TRUE;
-  gchar *absolute = NULL;
   if(!g_path_is_absolute (from))
   {
     //TODO: ".."
@@ -123,8 +125,7 @@ GThread *tsh_move (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
     absolute = g_build_filename(currdir, (from[0] == '.' && (!from[1] || from[1] == G_DIR_SEPARATOR || from[1] == '/'))?&from[1]:from, NULL);
     g_free (currdir);
   }
-  DIR *dir = opendir(absolute?absolute:from);
-  FILE *fp;
+  dir = opendir(absolute?absolute:from);
   if(dir)
     closedir(dir);
   else if((fp = fopen(absolute?absolute:from, "r")))

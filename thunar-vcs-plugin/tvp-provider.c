@@ -56,10 +56,8 @@
 
 
 
-static void   tvp_provider_class_init           (TvpProviderClass         *klass);
 static void   tvp_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
 static void   tvp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
-static void   tvp_provider_init                 (TvpProvider              *tvp_provider);
 static void   tvp_provider_finalize             (GObject                  *object);
 static GList *tvp_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
                                                  GtkWidget                *window,
@@ -305,9 +303,13 @@ tvp_get_parent_status (ThunarxFileInfo *file_info)
 
 
 
-gint
+#ifdef HAVE_SUBVERSION
+static gint
 tvp_compare_filename (const gchar *uri1, const gchar *uri2)
 {
+  gchar *path1, *path2;
+  gint result;
+
   /* strip the "file://" part of the uri */
   if (strncmp (uri1, "file://", 7) == 0)
   {
@@ -320,8 +322,8 @@ tvp_compare_filename (const gchar *uri1, const gchar *uri2)
     uri2 += 7;
   }
 
-  gchar *path1 = g_strdup (uri1);
-  gchar *path2 = g_strdup (uri2);
+  path1 = g_strdup (uri1);
+  path2 = g_strdup (uri2);
 
   /* remove trailing '/' */
   if (path1[strlen (path1) - 1] == '/')
@@ -335,13 +337,14 @@ tvp_compare_filename (const gchar *uri1, const gchar *uri2)
     path2[strlen (path2) - 1] = '\0';
   }
   
-  gint result = strcmp (path1, path2);
+  result = strcmp (path1, path2);
 
   g_free (path1);
   g_free (path2);
 
   return result;
 }
+#endif
 
 
 
@@ -392,11 +395,15 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   gboolean            directory_is_not_wc = FALSE;
   gboolean            file_is_vc = FALSE;
   gboolean            file_is_not_vc = FALSE;
-  GList              *lp;
-  gint                n_files = 0;
   GSList             *file_status;
   GSList             *iter;
+#endif
+#ifdef HAVE_GIT
+  gboolean            directory = FALSE;
+  gboolean            file = FALSE;
+#endif
 
+#ifdef HAVE_SUBVERSION
   file_status = tvp_get_parent_status (files->data);
 
   /* check all supplied files */
@@ -459,8 +466,30 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 #endif
 
 #ifdef HAVE_GIT
+  /* check all supplied files */
+  for (lp = files; lp != NULL; lp = lp->next, ++n_files)
+  {
+    /* check if the file is a local file */
+    info = thunarx_file_info_get_vfs_info (lp->data);
+    scheme = thunar_vfs_path_get_scheme (info->path);
+    thunar_vfs_info_unref (info);
+
+    /* unable to handle non-local files */
+    if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+      return NULL;
+
+    if (thunarx_file_info_is_directory (lp->data))
+    {
+      directory = TRUE;
+    }
+    else
+    {
+      file = TRUE;
+    }
+  }
+
   /* append the git submenu action */
-  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE);
+  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE, directory, file);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   actions = g_list_append (actions, action);
 #endif
@@ -502,7 +531,7 @@ tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 #endif
 
 #ifdef HAVE_GIT
-  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, TRUE);
+  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, TRUE, TRUE, FALSE);
   g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
   /* append the git submenu action */
   actions = g_list_append (actions, action);
@@ -579,12 +608,13 @@ tvp_child_watch (GPid pid, gint status, gpointer data)
 {
   /*
   gchar *watch_path = data;
+  ThunarVfsPath *path;
 
   if (G_LIKELY (data))
   {
     GDK_THREADS_ENTER ();
 
-    ThunarVfsPath *path = thunar_vfs_path_new (watch_path, NULL);
+    path = thunar_vfs_path_new (watch_path, NULL);
 
     if (G_LIKELY (path))
     {
