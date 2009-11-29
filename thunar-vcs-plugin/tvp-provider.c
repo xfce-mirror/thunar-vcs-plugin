@@ -388,6 +388,8 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
 {
   GList              *actions = NULL;
   GtkAction          *action;
+  GList              *lp;
+  gint               n_files = 0;
 #ifdef HAVE_SUBVERSION
   gchar              *scheme;
   gboolean            parent_wc = FALSE;
@@ -470,13 +472,15 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   for (lp = files; lp != NULL; lp = lp->next, ++n_files)
   {
     /* check if the file is a local file */
-    info = thunarx_file_info_get_vfs_info (lp->data);
-    scheme = thunar_vfs_path_get_scheme (info->path);
-    thunar_vfs_info_unref (info);
+    scheme = thunarx_file_info_get_uri_scheme (lp->data);
 
     /* unable to handle non-local files */
-    if (G_UNLIKELY (scheme != THUNAR_VFS_PATH_SCHEME_FILE))
+    if (G_UNLIKELY (strcmp (scheme, "file")))
+    {
+      g_free (scheme);
       return NULL;
+    }
+    g_free (scheme);
 
     if (thunarx_file_info_is_directory (lp->data))
     {
