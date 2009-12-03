@@ -3,6 +3,7 @@
 # Copyright (C) 2007 THE xfce-i'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the xfce-i package.
 # Mike Massonnet <mmassonnet@gmail.com>, 2007.
+# Patrick Douart <patrick.2@laposte.net>, 2009.
 #
 msgid ""
 msgstr ""
