@@ -1,3 +1,17 @@
+2009-12-07	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/Makefile.am
+	 tvp-git-helper/tgh-cell-renderer-graph.[ch]
+	 tvp-git-helper/tgh-common.c tvp-git-helper/tgh-log-dialog.[ch]
+	 tvp-git-helper/tgh-log.c: Show revision graph in log dialog.
+
+2009-12-06	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-{add,blame,branch,clean,clone}.c
+	  tvp-git-helper/tgh-file-selection-dialog.c
+	  tvp-git-helper/tgh-{log,move,reset,stash,status}.c: Supply
+	  --no-pager to git commands.
+
 2009-11-08	Peter de Ridder <peter@xfce.org>
 
 	* === Released 0.1.2 ===
