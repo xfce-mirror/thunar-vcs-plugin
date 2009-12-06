@@ -33,7 +33,7 @@
 
 #include "tgh-status.h"
 
-static gchar *argv[] = {"git", "status", NULL};
+static gchar *argv[] = {"git", "--no-pager", "status", NULL};
 
 static gboolean status_spawn (TghStatusDialog *dialog, GPid *pid)
 {

@@ -54,7 +54,7 @@ struct _TghFileSelectionDialogClass
 
 G_DEFINE_TYPE (TghFileSelectionDialog, tgh_file_selection_dialog, GTK_TYPE_DIALOG)
 
-static gchar *argv[] = {"git", "status", NULL};
+static gchar *argv[] = {"git", "--no-pager", "status", NULL};
 
 static void
 tgh_file_selection_dialog_class_init (TghFileSelectionDialogClass *klass)

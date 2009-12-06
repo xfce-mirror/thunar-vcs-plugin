@@ -55,8 +55,8 @@ static void child_exit (GPid pid, gint status, gpointer user_data)
   g_free (args);
 }
 
-static gchar *argv_list[] = {"git", "stash", "list", NULL};
-static gchar *argv_clear[] = {"git", "stash", "clear", NULL};
+static gchar *argv_list[] = {"git", "--no-pager", "stash", "list", NULL};
+static gchar *argv_clear[] = {"git", "--no-pager", "stash", "clear", NULL};
 
 static gboolean stash_list_spawn (TghStashDialog *dialog, GPid *pid)
 {
@@ -90,14 +90,15 @@ static gboolean stash_show_spawn (TghStashDialog *dialog, const gchar *name, GPi
   TghOutputParser *parser;
   gchar **argv;
 
-  argv = g_new (gchar*, 6);
+  argv = g_new (gchar*, 7);
 
   argv[0] = "git";
-  argv[1] = "stash";
-  argv[2] = "show";
-  argv[3] = "--numstat";
-  argv[4] = (gchar*)name;
-  argv[5] = NULL;
+  argv[1] = "--no-pager";
+  argv[2] = "stash";
+  argv[3] = "show";
+  argv[4] = "--numstat";
+  argv[5] = (gchar*)name;
+  argv[6] = NULL;
 
   if (!g_spawn_async_with_pipes (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, &fd_out, &fd_err, &error))
   {
@@ -127,14 +128,15 @@ static gboolean stash_save_spawn (TghStashDialog *dialog, const gchar *name, GPi
   gchar **argv;
   struct exit_args *args;
 
-  argv = g_new (gchar*, 6);
+  argv = g_new (gchar*, 7);
 
   argv[0] = "git";
-  argv[1] = "stash";
-  argv[2] = "save";
-  argv[3] = "-q";
-  argv[4] = (gchar*)name;
-  argv[5] = NULL;
+  argv[1] = "--no-pager";
+  argv[2] = "stash";
+  argv[3] = "save";
+  argv[4] = "-q";
+  argv[5] = (gchar*)name;
+  argv[6] = NULL;
 
   if (!g_spawn_async_with_pipes (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {
@@ -166,14 +168,15 @@ static gboolean stash_apply_spawn (TghStashDialog *dialog, const gchar *name, GP
   gchar **argv;
   struct exit_args *args;
 
-  argv = g_new (gchar*, 6);
+  argv = g_new (gchar*, 7);
 
   argv[0] = "git";
-  argv[1] = "stash";
-  argv[2] = "apply";
-  argv[3] = "-q";
-  argv[4] = (gchar*)name;
-  argv[5] = NULL;
+  argv[1] = "--no-pager";
+  argv[2] = "stash";
+  argv[3] = "apply";
+  argv[4] = "-q";
+  argv[5] = (gchar*)name;
+  argv[6] = NULL;
 
   if (!g_spawn_async_with_pipes (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {
@@ -205,14 +208,15 @@ static gboolean stash_pop_spawn (TghStashDialog *dialog, const gchar *name, GPid
   gchar **argv;
   struct exit_args *args;
 
-  argv = g_new (gchar*, 6);
+  argv = g_new (gchar*, 7);
 
   argv[0] = "git";
-  argv[1] = "stash";
-  argv[2] = "pop";
-  argv[3] = "-q";
-  argv[4] = (gchar*)name;
-  argv[5] = NULL;
+  argv[1] = "--no-pager";
+  argv[2] = "stash";
+  argv[3] = "pop";
+  argv[4] = "-q";
+  argv[5] = (gchar*)name;
+  argv[6] = NULL;
 
   if (!g_spawn_async_with_pipes (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {
@@ -244,14 +248,15 @@ static gboolean stash_drop_spawn (TghStashDialog *dialog, const gchar *name, GPi
   gchar **argv;
   struct exit_args *args;
 
-  argv = g_new (gchar*, 6);
+  argv = g_new (gchar*, 7);
 
   argv[0] = "git";
-  argv[1] = "stash";
-  argv[2] = "drop";
-  argv[3] = "-q";
-  argv[4] = (gchar*)name;
-  argv[5] = NULL;
+  argv[1] = "--no-pager";
+  argv[2] = "stash";
+  argv[3] = "drop";
+  argv[4] = "-q";
+  argv[5] = (gchar*)name;
+  argv[6] = NULL;
 
   if (!g_spawn_async_with_pipes (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {

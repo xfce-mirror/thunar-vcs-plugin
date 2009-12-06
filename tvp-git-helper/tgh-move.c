@@ -75,16 +75,17 @@ static gboolean move_spawn (GtkWidget *dialog, gchar **files, gchar *dest, GPid 
   gchar **argv;
   struct exit_args *args;
 
-  length = 4;
+  length = 5;
   length += g_strv_length (files);
 
   argv = g_new (gchar*, length);
 
   argv[0] = "git";
-  argv[1] = "mv";
+  argv[1] = "--no-pager";
+  argv[2] = "mv";
   argv[length-1] = NULL;
 
-  i = 2;
+  i = 3;
   while (*files)
     argv[i++] = *files++;
 

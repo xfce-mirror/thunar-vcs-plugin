@@ -44,18 +44,19 @@ static gboolean add_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
   gint i;
   gchar **argv;
 
-  length = 5;
+  length = 6;
   length += g_strv_length(files);
 
   argv = g_new(gchar*, length);
 
   argv[0] = "git";
-  argv[1] = "add";
-  argv[2] = "-v";
-  argv[3] = "--";
+  argv[1] = "--no-pager";
+  argv[2] = "add";
+  argv[3] = "-v";
+  argv[4] = "--";
   argv[length-1] = NULL;
 
-  i = 4;
+  i = 5;
   while(*files)
     argv[i++] = *files++;
 

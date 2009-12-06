@@ -73,14 +73,15 @@ static gboolean clone_spawn (GtkWidget *dialog, gchar *repository, gchar *path, 
   gchar **argv;
   struct exit_args *args;
 
-  argv = g_new(gchar*, 6);
+  argv = g_new(gchar*, 7);
 
   argv[0] = "git";
-  argv[1] = "clone";
-  argv[2] = "--";
-  argv[3] = repository;
-  argv[4] = path;
-  argv[5] = NULL;
+  argv[1] = "--no-pager";
+  argv[2] = "clone";
+  argv[3] = "--";
+  argv[4] = repository;
+  argv[5] = path;
+  argv[6] = NULL;
 
   if(!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, NULL, &fd_err, &error))
   {

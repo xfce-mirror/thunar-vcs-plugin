@@ -75,18 +75,19 @@ static gboolean reset_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
   gchar **argv;
   struct exit_args *args;
 
-  length = 5;
+  length = 6;
   length += g_strv_length(files);
 
   argv = g_new(gchar*, length);
 
   argv[0] = "git";
-  argv[1] = "reset";
-  argv[2] = "-q";
-  argv[3] = "--";
+  argv[1] = "--no-pager";
+  argv[2] = "reset";
+  argv[3] = "-q";
+  argv[4] = "--";
   argv[length-1] = NULL;
 
-  i = 4;
+  i = 5;
   while(*files)
     argv[i++] = *files++;
 

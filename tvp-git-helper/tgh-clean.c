@@ -52,7 +52,7 @@ static gboolean clean_spawn (GtkWidget *dialog, gchar **files, gboolean direcotr
   gint i;
   gchar **argv;
 
-  length = 4;
+  length = 5;
   if (direcotries)
     length++;
   if (ignore != TGH_CLEAN_IGNORE_EXCLUDE)
@@ -64,10 +64,11 @@ static gboolean clean_spawn (GtkWidget *dialog, gchar **files, gboolean direcotr
   argv = g_new (gchar*, length);
 
   argv[0] = "git";
-  argv[1] = "clean";
+  argv[1] = "--no-pager";
+  argv[2] = "clean";
   argv[length-1] = NULL;
 
-  i = 2;
+  i = 3;
   if (direcotries)
     argv[i++] = "-d";
   switch (ignore)

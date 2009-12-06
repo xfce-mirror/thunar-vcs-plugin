@@ -33,7 +33,7 @@
 
 #include "tgh-branch.h"
 
-static gchar *argv[] = {"git", "branch", NULL};
+static gchar *argv[] = {"git", "--no-pager", "branch", NULL};
 
 static gboolean branch_spawn (TghBranchDialog *dialog, GPid *pid)
 {

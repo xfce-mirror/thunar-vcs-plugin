@@ -43,21 +43,22 @@ static gboolean log_spawn (TghLogDialog *dialog, gchar **files, GPid *pid)
   gint i;
   gchar **argv;
 
-  length = 7;
+  length = 8;
   if(files)
     length += g_strv_length(files);
 
   argv = g_new(gchar*, length);
 
   argv[0] = "git";
-  argv[1] = "log";
-  argv[2] = "--numstat";
-  argv[3] = "--pretty=fuller";
-  argv[4] = "--boundary";
-  argv[5] = "--";
+  argv[1] = "--no-pager";
+  argv[2] = "log";
+  argv[3] = "--numstat";
+  argv[4] = "--parents";
+  argv[5] = "--pretty=fuller";
+  argv[6] = "--";
   argv[length-1] = NULL;
 
-  i = 6;
+  i = 7;
   if(files)
     while(*files)
       argv[i++] = *files++;

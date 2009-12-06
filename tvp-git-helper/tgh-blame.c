@@ -41,13 +41,14 @@ static gboolean blame_spawn (GtkWidget *dialog, gchar *file, GPid *pid)
   TghOutputParser *parser;
   gchar **argv;
 
-  argv = g_new (gchar*, 5);
+  argv = g_new (gchar*, 6);
 
   argv[0] = "git";
-  argv[1] = "blame";
-  argv[2] = "--";
-  argv[3] = file;
-  argv[4] = NULL;
+  argv[1] = "--no-pager";
+  argv[2] = "blame";
+  argv[3] = "--";
+  argv[4] = file;
+  argv[5] = NULL;
 
   if (!g_spawn_async_with_pipes (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, pid, NULL, &fd_out, &fd_err, &error))
   {
