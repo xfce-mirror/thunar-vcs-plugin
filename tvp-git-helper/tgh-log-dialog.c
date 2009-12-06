@@ -25,6 +25,7 @@
 #include <gtk/gtk.h>
 
 #include "tgh-common.h"
+#include "tgh-cell-renderer-graph.h"
 #include "tgh-log-dialog.h"
 
 static void selection_changed (GtkTreeView*, gpointer);
@@ -34,6 +35,8 @@ static void refresh_clicked (GtkButton*, gpointer);
 struct _TghLogDialog
 {
   GtkDialog dialog;
+
+  GList *graph;
 
   GtkWidget *tree_view;
   GtkWidget *text_view;
@@ -84,6 +87,7 @@ enum {
   COLUMN_MESSAGE,
   COLUMN_FULL_MESSAGE,
   COLUMN_FILE_LIST,
+  COLUMN_GRAPH,
   COLUMN_COUNT
 };
 
@@ -114,6 +118,13 @@ tgh_log_dialog_init (TghLogDialog *dialog)
 
   dialog->tree_view = tree_view = gtk_tree_view_new ();
 
+  renderer = tgh_cell_renderer_graph_new ();
+  g_object_set (G_OBJECT (renderer), "xalign", 0.5f, NULL);
+  gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
+      -1, "", renderer,
+      "graph-iter", COLUMN_GRAPH,
+      NULL);
+
   renderer = gtk_cell_renderer_text_new ();
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
       -1, _("Revision"),
@@ -132,6 +143,7 @@ tgh_log_dialog_init (TghLogDialog *dialog)
       renderer, "text",
       COLUMN_AUTHOR_DATE, NULL);
 
+#if 0
   renderer = gtk_cell_renderer_text_new ();
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
       -1, _("Commit"),
@@ -143,6 +155,7 @@ tgh_log_dialog_init (TghLogDialog *dialog)
       -1, _("CommitDate"),
       renderer, "text",
       COLUMN_COMMIT_DATE, NULL);
+#endif
 
   renderer = gtk_cell_renderer_text_new ();
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
@@ -150,7 +163,7 @@ tgh_log_dialog_init (TghLogDialog *dialog)
       renderer, "text",
       COLUMN_MESSAGE, NULL);
 
-  model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER));
+  model = GTK_TREE_MODEL (gtk_list_store_new (COLUMN_COUNT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_POINTER, G_TYPE_POINTER));
 
   gtk_tree_view_set_model (GTK_TREE_VIEW (tree_view), model);
 
@@ -255,18 +268,118 @@ tgh_log_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags)
   return GTK_WIDGET(dialog);
 }
 
+static void
+tgh_graph_node_free (TghGraphNode *node)
+{
+  TghGraphNode *next;
+
+  while (node)
+  {
+    g_free (node->name);
+    g_strfreev (node->junction);
+
+    next = node->next;
+    g_free (node);
+    node = next;
+  }
+}
+
+static TghGraphNode*
+tgh_graph_node_add (TghGraphNode *prev)
+{
+  TghGraphNode *node = g_new0 (TghGraphNode, 1);
+  if (prev)
+    prev->next = node;
+  return node;
+}
+
+static TghGraphNode*
+add_n_check_node (TghGraphNode *node_iter, TghGraphNode **node_list, const gchar *name, const gchar *revision, gchar **parents, gboolean *found)
+{
+  TghGraphNode *iter;
+
+  for (iter = *node_list; iter; iter = iter->next)
+  {
+    if (G_UNLIKELY(0 == strcmp (iter->name, name)))
+      return node_iter;
+  }
+
+  node_iter = tgh_graph_node_add (node_iter);
+
+  if (G_UNLIKELY (!*node_list))
+    *node_list = node_iter;
+
+  node_iter->name = g_strdup (name);
+
+  if (G_UNLIKELY (0 == strcmp (revision, name)))
+  {
+    *found = TRUE;
+    node_iter->type = TGH_GRAPH_JUNCTION;
+    node_iter->junction = g_strdupv (parents);
+  }
+
+  return node_iter;
+}
+
 void     
-tgh_log_dialog_add (TghLogDialog *dialog, GSList *files, const gchar *revision, const gchar *author, const gchar *author_date, const gchar *commit, const gchar *commit_date, const gchar *message)
+tgh_log_dialog_add (TghLogDialog *dialog, GSList *files, const gchar *revision, gchar **parents, const gchar *author, const gchar *author_date, const gchar *commit, const gchar *commit_date, const gchar *message)
 {
   GtkTreeModel *model;
   GtkTreeIter iter;
   gchar **lines = NULL;
   gchar **line_iter;
   gchar *first_line = NULL;
+  GList *graph;
+  TghGraphNode *next_node_list;
+  TghGraphNode *next_node_iter;
+  TghGraphNode *node_list = NULL;
+  TghGraphNode *node_iter = NULL;
+  gchar **junction_iter;
+  gboolean found = FALSE;
 
   g_return_if_fail (TGH_IS_LOG_DIALOG (dialog));
 
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+
+  graph = dialog->graph;
+
+  if (graph)
+  {
+    next_node_list = graph->data;
+
+    for (next_node_iter = next_node_list; next_node_iter; next_node_iter = next_node_iter->next)
+    {
+      switch (next_node_iter->type)
+      {
+        case TGH_GRAPH_LINE:
+          node_iter = add_n_check_node (node_iter, &node_list, next_node_iter->name, revision, parents, &found);
+          break;
+        case TGH_GRAPH_JUNCTION:
+          if (G_LIKELY (next_node_iter->junction))
+          {
+            for (junction_iter = next_node_iter->junction; *junction_iter; junction_iter++)
+            {
+              node_iter = add_n_check_node (node_iter, &node_list, *junction_iter, revision, parents, &found);
+            }
+          }
+          break;
+      }
+    }
+  }
+
+  if (!found)
+  {
+    node_iter = g_new0 (TghGraphNode, 1);
+    node_iter->next = node_list;
+    node_iter->name = g_strdup (revision);
+    node_iter->type = TGH_GRAPH_JUNCTION;
+    node_iter->junction = g_strdupv (parents);
+    node_list = node_iter;
+  }
+
+  graph = g_list_prepend (graph, node_list);
+
+  dialog->graph = graph;
 
   if(message)
   {
@@ -293,6 +406,7 @@ tgh_log_dialog_add (TghLogDialog *dialog, GSList *files, const gchar *revision, 
       COLUMN_MESSAGE, first_line,
       COLUMN_FULL_MESSAGE, message,
       COLUMN_FILE_LIST, files,
+      COLUMN_GRAPH, graph,
       -1);
 
   g_strfreev (lines);
@@ -371,6 +485,10 @@ refresh_clicked (GtkButton *button, gpointer user_data)
 
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
+
+  g_list_foreach(dialog->graph, (GFunc)tgh_graph_node_free, NULL);
+  g_list_free (dialog->graph);
+  dialog->graph = NULL;
 
   gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), "", -1);
 

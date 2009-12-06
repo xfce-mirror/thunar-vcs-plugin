@@ -55,7 +55,9 @@ tvp_git_helper_SOURCES =						\
 	tgh-status-dialog.h						\
 	tgh-status-dialog.c						\
 	tgh-transfer-dialog.h						\
-	tgh-transfer-dialog.c
+	tgh-transfer-dialog.c						\
+	tgh-cell-renderer-graph.h					\
+	tgh-cell-renderer-graph.c
 
 tvp_git_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tvp-git-helper\"				\

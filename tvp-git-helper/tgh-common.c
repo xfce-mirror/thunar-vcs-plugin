@@ -242,6 +242,7 @@ typedef struct {
   TghOutputParser parent;
   GtkWidget *dialog;
   gchar *revision;
+  gchar **parents;
   gchar *author;
   gchar *author_date;
   gchar *commit;
@@ -256,6 +257,7 @@ log_parser_add_entry(TghLogParser *parser, TghLogDialog *dialog)
   tgh_log_dialog_add(dialog,
       g_slist_reverse(parser->files),
       parser->revision,
+      parser->parents,
       parser->author,
       parser->author_date,
       parser->commit,
@@ -265,6 +267,8 @@ log_parser_add_entry(TghLogParser *parser, TghLogDialog *dialog)
   parser->files = NULL;
   g_free(parser->revision);
   parser->revision = NULL;
+  g_strfreev(parser->parents);
+  parser->parents = NULL;
   parser->author = NULL;
   g_free(parser->author_date);
   parser->author_date = NULL;
@@ -284,14 +288,39 @@ log_parser_func(TghLogParser *parser, gchar *line)
   {
     if(strncmp(line, "commit ", 7) == 0)
     {
-      gchar *revision;
+      gchar *revision, *parent;
+      GSList *parent_list = NULL;
+      guint parent_count = 0;
 
       if(parser->revision)
         log_parser_add_entry(parser, dialog);
 
+      revision = g_strstrip (line+6);
+      parent  = revision;
+
+      while ((parent = strchr (parent, ' ')))
+      {
+        *parent++ = '\0';
+        parent = g_strchug (parent);
+        parent_list = g_slist_prepend (parent_list, parent);
+        parent_count++;
+      }
+
       // read first 6 chars of hash?
-      revision = g_strstrip(line+6);
       parser->revision = g_strndup(revision, revision[0]=='-'?7:6);
+
+      if (parent_count)
+      {
+        gchar **parents = g_new (char*, parent_count+1);
+        parents[parent_count] = NULL;
+        while (parent_list)
+        {
+          // read first 6 chars of hash?
+          parents[--parent_count] = g_strndup (parent_list->data, 6);;
+          parent_list = g_slist_delete_link (parent_list, parent_list);
+        }
+        parser->parents = parents;
+      }
     }
     else if(strncmp(line, "Author:", 7) == 0)
     {

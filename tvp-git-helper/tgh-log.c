@@ -43,7 +43,7 @@ static gboolean log_spawn (TghLogDialog *dialog, gchar **files, GPid *pid)
   gint i;
   gchar **argv;
 
-  length = 8;
+  length = 10;
   if(files)
     length += g_strv_length(files);
 
@@ -55,10 +55,12 @@ static gboolean log_spawn (TghLogDialog *dialog, gchar **files, GPid *pid)
   argv[3] = "--numstat";
   argv[4] = "--parents";
   argv[5] = "--pretty=fuller";
-  argv[6] = "--";
+  argv[6] = "--boundary";
+  argv[7] = "--date-order";
+  argv[8] = "--";
   argv[length-1] = NULL;
 
-  i = 7;
+  i = 9;
   if(files)
     while(*files)
       argv[i++] = *files++;
