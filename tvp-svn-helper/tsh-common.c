@@ -157,6 +157,7 @@ gboolean tsh_create_context (svn_client_ctx_t **pctx, apr_pool_t *pool, svn_erro
 	/* Set cancel funvtion */
 	ctx->cancel_func = tsh_check_cancel;
 
+#if CHECK_SVN_VERSION(1,5)
 	/* Create an array to hold the providers */
 	providers = apr_array_make (pool, 12, sizeof (svn_auth_provider_object_t *));
 
@@ -169,6 +170,12 @@ gboolean tsh_create_context (svn_client_ctx_t **pctx, apr_pool_t *pool, svn_erro
 	svn_auth_get_keychain_simple_provider (&provider, pool);
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
 #endif
+#else /* CHECK_SVN_VERSION(1,6)*/
+  /* Create an array to hold the providers */
+  svn_auth_get_platform_specific_client_providers (&providers, cfg, pool);
+#endif
+
+  /* Disk caching auth providers */
 #if CHECK_SVN_VERSION(1,5)
 	svn_auth_get_simple_provider (&provider, pool);
 #else /* CHECK_SVN_VERSION(1,6)*/
@@ -179,6 +186,16 @@ gboolean tsh_create_context (svn_client_ctx_t **pctx, apr_pool_t *pool, svn_erro
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
 
 	/* Cert auth providers */
+#if CHECK_SVN_VERSION(1,5)
+#ifdef G_OS_WIN32
+  svn_auth_get_windows_ssl_server_trust_provider (&provider, pool);
+  APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
+#endif
+#else /* CHECK_SVN_VERSION(1,6)*/
+  svn_auth_get_platform_specific_provider (&provider, "windows", "ssl_server_trust", pool);
+  if (provider)
+    APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
+#endif
 	svn_auth_get_ssl_server_trust_file_provider (&provider, pool);
 	APR_ARRAY_PUSH (providers, svn_auth_provider_object_t *) = provider;
 	svn_auth_get_ssl_client_cert_file_provider (&provider, pool);
