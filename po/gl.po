@@ -1,8 +1,8 @@
 # Galician translation of thunar-svn-plugin
-# Copyright (C) 2008-2009 Leandro Regueiro
+# Copyright (C) 2008, 2009, 2010 Leandro Regueiro
 # This file is distributed under the same license as the Xfce package.
 #
-# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008, 2009.
+# Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008, 2009, 2010.
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en <http://trasno.net>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-08 16:59+0100\n"
-"PO-Revision-Date: 2009-12-18 15:27+0100\n"
+"PO-Revision-Date: 2010-02-10 15:27+0100\n"
 "Last-Translator: Leandro Regueiro <leandro.regueiro@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "MIME-Version: 1.0\n"
@@ -34,9 +34,8 @@ msgid "Add"
 msgstr "Engadir"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
-#, fuzzy
 msgid "Menu|Bisect"
-msgstr "Disposición do menú"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Bisect"
@@ -56,9 +55,8 @@ msgid "Blame"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
-#, fuzzy
 msgid "Menu|Branch"
-msgstr "Ramificación"
+msgstr "Ramificar"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269 ../tvp-git-helper/main.c:159
 #: ../tvp-git-helper/tgh-branch-dialog.c:119
