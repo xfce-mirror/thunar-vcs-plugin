@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-08 16:59+0100\n"
-"PO-Revision-Date: 2010-02-11 09:14+0100\n"
+"PO-Revision-Date: 2010-02-11 23:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -588,20 +588,20 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-blame-dialog.c:100
 #: ../tvp-svn-helper/tsh-log-dialog.c:124
 msgid "Revision"
-msgstr ""
+msgstr "Berrikuspena"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:103
 #: ../tvp-git-helper/tgh-log-dialog.c:125
 #: ../tvp-svn-helper/tsh-blame-dialog.c:106
 #: ../tvp-svn-helper/tsh-log-dialog.c:130
 msgid "Author"
-msgstr ""
+msgstr "Egilea"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:109
 #: ../tvp-svn-helper/tsh-blame-dialog.c:112
 #: ../tvp-svn-helper/tsh-log-dialog.c:136
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:104
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:94
@@ -613,27 +613,27 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-notify-dialog.c:94
 #: ../tvp-svn-helper/tsh-status-dialog.c:118
 msgid "Path"
-msgstr ""
+msgstr "Bidea"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:57
 msgid "Remove directories."
-msgstr ""
+msgstr "Kendu direktorioak."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:69
 msgid "Excldue ignored files"
-msgstr ""
+msgstr "Alde batetara utzitako direktorioak kenduta"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:77
 msgid "Include ignored files"
-msgstr ""
+msgstr "Alde batetara utzitako direktorioak barne"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:83
 msgid "Only ignored files"
-msgstr ""
+msgstr "Bakarrik alde batetara utzitako fitxategiak"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:93
 msgid "Force clean."
-msgstr ""
+msgstr "Behartu garbitzea."
 
 #: ../tvp-git-helper/tgh-clone.c:58
 msgid "Clone finished"
@@ -654,7 +654,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-switch.c:71 ../tvp-svn-helper/tsh-unlock.c:86
 #: ../tvp-svn-helper/tsh-update.c:88
 msgid "Failed"
-msgstr ""
+msgstr "Huts egin du"
 
 #: ../tvp-git-helper/tgh-common.c:199
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
@@ -664,11 +664,11 @@ msgstr ""
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
 msgid "Select/Unselect all"
-msgstr ""
+msgstr "Hautatu/desautatu guztiak"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:131
 msgid "AuthorDate"
-msgstr ""
+msgstr "AutoreData"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:143
 msgid "CommitDate"
@@ -677,39 +677,39 @@ msgstr ""
 #: ../tvp-git-helper/tgh-log-dialog.c:149
 #: ../tvp-svn-helper/tsh-log-dialog.c:142
 msgid "Message"
-msgstr ""
+msgstr "Mezua"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:187
 #: ../tvp-git-helper/tgh-stash-dialog.c:198
 msgid "Changes"
-msgstr ""
+msgstr "Aldaketak"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:194
 #: ../tvp-git-helper/tgh-stash-dialog.c:205
 msgid "File"
-msgstr ""
+msgstr "Fitxategia"
 
 #: ../tvp-git-helper/tgh-move.c:58
 msgid "Move finished"
-msgstr ""
+msgstr "Mugitzea amaiturik"
 
 #: ../tvp-git-helper/tgh-move.c:135 ../tvp-svn-helper/tsh-move.c:137
 msgid "Move To"
-msgstr ""
+msgstr "Mugitu hona"
 
 #: ../tvp-git-helper/tgh-move.c:151
 msgid "Move ..."
-msgstr ""
+msgstr "Mugitu ..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:87
 #: ../tvp-svn-helper/tsh-log-dialog.c:180
 #: ../tvp-svn-helper/tsh-notify-dialog.c:88
 msgid "Action"
-msgstr ""
+msgstr "Ekintza"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:108
 msgid "Notify"
-msgstr ""
+msgstr "Berri eman"
 
 #: ../tvp-git-helper/tgh-reset.c:58
 msgid "Reset finished"
@@ -722,11 +722,11 @@ msgstr ""
 #: ../tvp-git-helper/tgh-stash-dialog.c:162
 #: ../tvp-svn-helper/tsh-properties-dialog.c:126
 msgid "Name"
-msgstr ""
+msgstr "Izena"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:174
 msgid "Description"
-msgstr ""
+msgstr "Azalpena"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:438
 msgid "Stash description:"
@@ -757,22 +757,22 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:98
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:144
 msgid "Select a folder"
-msgstr ""
+msgstr "Hautatu karpeta bat"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:104
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:198
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:137
 msgid "_Directory:"
-msgstr ""
+msgstr "_Direktorioa:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:123
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:156
 msgid "Transfer"
-msgstr ""
+msgstr "Transferitu"
 
 #: ../tvp-svn-helper/main.c:124
 msgid "Execute changelist action"
-msgstr ""
+msgstr "Exekutatu aldaketa-zerrenda ekintza"
 
 #: ../tvp-svn-helper/main.c:130
 msgid "Execute checkout action"
@@ -780,7 +780,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:136
 msgid "Execute cleanup action"
-msgstr ""
+msgstr "Exekutatu garbiketa ekintza"
 
 #: ../tvp-svn-helper/main.c:142
 msgid "Execute commit action"
@@ -788,31 +788,31 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:148
 msgid "Execute copy action"
-msgstr ""
+msgstr "Exekutatu kopiatze ekintza"
 
 #: ../tvp-svn-helper/main.c:154
 msgid "Execute delete action"
-msgstr ""
+msgstr "Exekutatu ezabatze ekintza"
 
 #: ../tvp-svn-helper/main.c:160
 msgid "Execute export action"
-msgstr ""
+msgstr "Exekutatu esportatze ekintza"
 
 #: ../tvp-svn-helper/main.c:166
 msgid "Execute import action"
-msgstr ""
+msgstr "Exekutatu inportatze ekintza"
 
 #: ../tvp-svn-helper/main.c:172
 msgid "Execute lock action"
-msgstr ""
+msgstr "Exekutatu blokeo ekintza"
 
 #: ../tvp-svn-helper/main.c:190
 msgid "Execute properties action"
-msgstr ""
+msgstr "Exekutatu propietateak ekintza"
 
 #: ../tvp-svn-helper/main.c:196
 msgid "Execute resolved action"
-msgstr ""
+msgstr "Exekutatu ebatzitako ekintza"
 
 #: ../tvp-svn-helper/main.c:202
 msgid "Execute relocate action"
@@ -828,15 +828,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:226
 msgid "Execute unlock action"
-msgstr ""
+msgstr "Exekutatu desblokeo ekintza"
 
 #: ../tvp-svn-helper/main.c:232
 msgid "Execute update action"
-msgstr ""
+msgstr "Exekutatu eguneratu ekintza"
 
 #: ../tvp-svn-helper/main.c:257
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Aldaketa-zerrenda inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:261
 msgid "Checkout Related Options:"
@@ -844,7 +844,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Garbiketa inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Commit Related Options:"
@@ -852,37 +852,37 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Kopiatze inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Ezabatze inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Esportatu inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Inportatu inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Blokeo inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Properties Related Options:"
-msgstr ""
+msgstr "Propietate inguruko aukerak:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
 msgid "Properties"
-msgstr ""
+msgstr "Propietateak"
 
 #: ../tvp-svn-helper/main.c:305
 msgid "Resolved Related Options:"
-msgstr ""
+msgstr "Ebazte inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:309
 msgid "Relocate Related Options:"
@@ -898,15 +898,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Desblokeo inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:329
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Eguneratze inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:372
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Ez dira behar bezainbeste argumentu eman"
 
 #: ../tvp-svn-helper/tsh-blame.c:75
 msgid "Blame failed"
@@ -914,33 +914,33 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-cleanup.c:66
 msgid "Cleanup failed"
-msgstr ""
+msgstr "Garbiketak huts egin du"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:81
 msgid "Cleanup finished"
-msgstr ""
+msgstr "Garbiketa amaitu egin da"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:95
 msgid "Cleaning up ..."
-msgstr ""
+msgstr "Garbitzen ..."
 
 #: ../tvp-svn-helper/tsh-commit.c:196 ../tvp-svn-helper/tsh-common.c:742
 #: ../tvp-svn-helper/tsh-copy.c:99 ../tvp-svn-helper/tsh-delete.c:103
 #: ../tvp-svn-helper/tsh-import.c:82 ../tvp-svn-helper/tsh-move.c:89
 #, c-format
 msgid "At revision: %ld"
-msgstr ""
+msgstr "Berrikuspena: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:201
 msgid "Nothing to do"
-msgstr ""
+msgstr "Zereginik ez"
 
 #: ../tvp-svn-helper/tsh-commit.c:209 ../tvp-svn-helper/tsh-common.c:526
 #: ../tvp-svn-helper/tsh-common.c:528 ../tvp-svn-helper/tsh-copy.c:110
 #: ../tvp-svn-helper/tsh-delete.c:114 ../tvp-svn-helper/tsh-import.c:87
 #: ../tvp-svn-helper/tsh-move.c:100
 msgid "Completed"
-msgstr ""
+msgstr "Burutua"
 
 #: ../tvp-svn-helper/tsh-commit.c:241
 msgid "Commit Message"
@@ -948,78 +948,78 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:271
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Gorde pasahitza tesu-lauean?"
 
 #: ../tvp-svn-helper/tsh-common.c:515 ../tvp-svn-helper/tsh-common.c:524
 #: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:653
 #: ../tvp-svn-helper/tsh-common.c:700 ../tvp-svn-helper/tsh-common.c:791
 msgid "Added"
-msgstr ""
+msgstr "Gehituta"
 
 #: ../tvp-svn-helper/tsh-common.c:516 ../tvp-svn-helper/tsh-common.c:800
 msgid "Copied"
-msgstr ""
+msgstr "Kopiatuta"
 
 #: ../tvp-svn-helper/tsh-common.c:517 ../tvp-svn-helper/tsh-common.c:523
 #: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:655
 #: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:793
 msgid "Deleted"
-msgstr ""
+msgstr "Ezabatuta"
 
 #: ../tvp-svn-helper/tsh-common.c:518
 msgid "Restored"
-msgstr ""
+msgstr "Berrezarria"
 
 #: ../tvp-svn-helper/tsh-common.c:519
 msgid "Reverted"
-msgstr ""
+msgstr "Leheneratua"
 
 #: ../tvp-svn-helper/tsh-common.c:520
 msgid "Revert failed"
-msgstr ""
+msgstr "Leheneratzeak huts egin du"
 
 #: ../tvp-svn-helper/tsh-common.c:522
 msgid "Skipped"
-msgstr ""
+msgstr "Saltatua"
 
 #: ../tvp-svn-helper/tsh-common.c:525
 msgid "Updated"
-msgstr ""
+msgstr "Eguneratua"
 
 #: ../tvp-svn-helper/tsh-common.c:527 ../tvp-svn-helper/tsh-common.c:529
 #: ../tvp-svn-helper/tsh-common.c:662
 msgid "External"
-msgstr ""
+msgstr "Kanpokoa"
 
 #: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:657
 #: ../tvp-svn-helper/tsh-common.c:706 ../tvp-svn-helper/tsh-common.c:796
 msgid "Modified"
-msgstr ""
+msgstr "Aldatua"
 
 #: ../tvp-svn-helper/tsh-common.c:533 ../tvp-svn-helper/tsh-common.c:656
 #: ../tvp-svn-helper/tsh-common.c:709 ../tvp-svn-helper/tsh-common.c:789
 msgid "Replaced"
-msgstr ""
+msgstr "Ordeztuta"
 
 #: ../tvp-svn-helper/tsh-common.c:534
 msgid "Transmitting"
-msgstr ""
+msgstr "Transmititzen"
 
 #: ../tvp-svn-helper/tsh-common.c:536
 msgid "Locked"
-msgstr ""
+msgstr "Blokeatuta"
 
 #: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:802
 msgid "Unlocked"
-msgstr ""
+msgstr "Desblokeatua"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Lock failed"
-msgstr ""
+msgstr "Blokeoak huts egin du"
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Unlock failed"
-msgstr ""
+msgstr "Desblokeoak huts egin du"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Exists"
@@ -1027,19 +1027,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:541
 msgid "Changelist set"
-msgstr ""
+msgstr "Aldaketa-zerrenda ezarria"
 
 #: ../tvp-svn-helper/tsh-common.c:542
 msgid "Changelist cleared"
-msgstr ""
+msgstr "Aldaketa-zerrenda garbitua"
 
 #: ../tvp-svn-helper/tsh-common.c:543
 msgid "Changelist moved"
-msgstr ""
+msgstr "Aldaketa-zerrenda mugitua"
 
 #: ../tvp-svn-helper/tsh-common.c:544
 msgid "Merge begin"
-msgstr ""
+msgstr "Batzea hasi da"
 
 #: ../tvp-svn-helper/tsh-common.c:545
 msgid "Foreign merge begin"
@@ -1195,16 +1195,16 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:100
 msgid "Mime type"
-msgstr ""
+msgstr "Mime mota"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:115
 msgid "Notification"
-msgstr ""
+msgstr "Berri-ematea"
 
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:81
 msgid "Set property failed"
-msgstr ""
+msgstr "Propietate ezartzeak huts egin du"
 
 #: ../tvp-svn-helper/tsh-properties.c:104
 msgid "Properties failed"
