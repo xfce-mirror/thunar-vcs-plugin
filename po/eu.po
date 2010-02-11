@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-08 16:59+0100\n"
-"PO-Revision-Date: 2010-02-11 09:04+0100\n"
+"PO-Revision-Date: 2010-02-11 09:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -1047,19 +1047,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:546
 msgid "Replace"
-msgstr ""
+msgstr "Ordeztu"
 
 #: ../tvp-svn-helper/tsh-common.c:548
 msgid "Property added"
-msgstr ""
+msgstr "Propietatea gehitua"
 
 #: ../tvp-svn-helper/tsh-common.c:549
 msgid "Property modified"
-msgstr ""
+msgstr "Propietatea aldatuta"
 
 #: ../tvp-svn-helper/tsh-common.c:550
 msgid "Property deleted"
-msgstr ""
+msgstr "Propietatea ezabatua"
 
 #: ../tvp-svn-helper/tsh-common.c:551
 msgid "Property nonexisting"
@@ -1067,15 +1067,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:552
 msgid "Revision property set"
-msgstr ""
+msgstr "Errebisio propietatea ezarria"
 
 #: ../tvp-svn-helper/tsh-common.c:553
 msgid "Revision property deleted"
-msgstr ""
+msgstr "Errebisio propietatea ezabatua"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Merge completed"
-msgstr ""
+msgstr "Batzea osatua"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Tree conflict"
@@ -1087,15 +1087,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "Inapplicable"
-msgstr ""
+msgstr "Ezarri ezina"
 
 #: ../tvp-svn-helper/tsh-common.c:619
 msgid "Unchanged"
-msgstr ""
+msgstr "Aldatu gabe"
 
 #: ../tvp-svn-helper/tsh-common.c:620 ../tvp-svn-helper/tsh-common.c:654
 msgid "Missing"
-msgstr ""
+msgstr "Falta da"
 
 #: ../tvp-svn-helper/tsh-common.c:621 ../tvp-svn-helper/tsh-common.c:661
 msgid "Obstructed"
@@ -1103,11 +1103,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Changed"
-msgstr ""
+msgstr "Aldatuta"
 
 #: ../tvp-svn-helper/tsh-common.c:623 ../tvp-svn-helper/tsh-common.c:658
 msgid "Merged"
-msgstr ""
+msgstr "Batuta"
 
 #: ../tvp-svn-helper/tsh-common.c:624 ../tvp-svn-helper/tsh-common.c:659
 msgid "Conflicted"
@@ -1117,23 +1117,23 @@ msgstr ""
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:652
 msgid "Normal"
-msgstr ""
+msgstr "Normala"
 
 #: ../tvp-svn-helper/tsh-common.c:660
 msgid "Ignored"
-msgstr ""
+msgstr "Ez ikusia"
 
 #: ../tvp-svn-helper/tsh-common.c:663
 msgid "Incomplete"
-msgstr ""
+msgstr "Osatugabea"
 
 #: ../tvp-svn-helper/tsh-copy.c:104
 msgid "Local copy"
-msgstr ""
+msgstr "Kopia lokala"
 
 #: ../tvp-svn-helper/tsh-copy.c:148
 msgid "Copy To"
-msgstr ""
+msgstr "Kopiatu hona"
 
 #: ../tvp-svn-helper/tsh-delete.c:108
 msgid "Local delete"
@@ -1141,29 +1141,29 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-delete.c:145
 msgid "Delete Message"
-msgstr ""
+msgstr "Ezabatu mezua"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
-msgstr ""
+msgstr "_Ziurtagiria:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:67
 msgid "Select a file"
-msgstr ""
+msgstr "Hautatu fitxategi bat"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:78
 #: ../tvp-svn-helper/tsh-login-dialog.c:98
 #: ../tvp-svn-helper/tsh-trust-dialog.c:73
 msgid "Remember"
-msgstr ""
+msgstr "Gogoratu"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:86
 msgid "Certificate"
-msgstr ""
+msgstr "Ziurtagiria"
 
 #: ../tvp-svn-helper/tsh-import.c:125
 msgid "Import Message"
-msgstr ""
+msgstr "Inportatu mezua"
 
 #: ../tvp-svn-helper/tsh-log.c:113
 msgid "Log failed"
@@ -1171,19 +1171,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
-msgstr ""
+msgstr "_Erabiltzaile-izena:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:81
 msgid "_Password:"
-msgstr ""
+msgstr "_Pasahitza:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:106
 msgid "Login"
-msgstr ""
+msgstr "Saio-hasiera"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:93
 msgid "State"
-msgstr ""
+msgstr "Egoera"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:118
 msgid "Log Message"
@@ -1212,7 +1212,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:132
 msgid "Value"
-msgstr ""
+msgstr "Balioa"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
@@ -1245,7 +1245,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
-msgstr ""
+msgstr "Errekurtsiboa"
 
 #: ../tvp-svn-helper/tsh-relocate.c:71
 msgid "Relocate failed"
@@ -1261,11 +1261,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr ""
+msgstr "_Nondik:"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:143
 msgid "_To:"
-msgstr ""
+msgstr "N_ora:"
 
 #: ../tvp-svn-helper/tsh-status.c:86
 msgid "Status failed"
