@@ -31,9 +31,8 @@ msgid "Add"
 msgstr "Hinzufügen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
-#, fuzzy
 msgid "Menu|Bisect"
-msgstr "Beschuldigen"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Bisect"
@@ -58,7 +57,6 @@ msgstr "Zweig"
 #: ../thunar-vcs-plugin/tvp-git-action.c:269 ../tvp-git-helper/main.c:159
 #: ../tvp-git-helper/tgh-branch-dialog.c:119
 #: ../tvp-git-helper/tgh-stash-dialog.c:168
-#, fuzzy
 msgid "Branch"
 msgstr "Zweig"
 
@@ -74,13 +72,11 @@ msgid "Checkout"
 msgstr "Auschecken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271
-#, fuzzy
 msgid "Menu|Clean"
 msgstr "Aufräumen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271 ../tvp-git-helper/main.c:163
 #: ../tvp-git-helper/tgh-clean.c:141 ../tvp-git-helper/tgh-clean-dialog.c:97
-#, fuzzy
 msgid "Clean"
 msgstr "Aufräumen"
 
@@ -116,9 +112,8 @@ msgid "Diff"
 msgstr "Unterschiede"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
-#, fuzzy
 msgid "Menu|Fetch"
-msgstr "Umschalten"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Fetch"
@@ -135,7 +130,6 @@ msgid "Grep"
 msgstr "Suchen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
-#, fuzzy
 msgid "Menu|Init"
 msgstr "Initialisieren"
 
@@ -156,12 +150,10 @@ msgid "Log"
 msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
-#, fuzzy
 msgid "Menu|Merge"
 msgstr "Zusammenführen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
-#, fuzzy
 msgid "Merge"
 msgstr "Zusammenführen"
 
@@ -177,22 +169,18 @@ msgid "Move"
 msgstr "Verschieben"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
-#, fuzzy
 msgid "Menu|Pull"
 msgstr "Ziehen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
-#, fuzzy
 msgid "Pull"
 msgstr "Ziehen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
-#, fuzzy
 msgid "Menu|Push"
 msgstr "Schieben"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
-#, fuzzy
 msgid "Push"
 msgstr "Schieben"
 
