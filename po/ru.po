@@ -32,11 +32,11 @@ msgstr "Добавить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Menu|Bisect"
-msgstr ""
+msgstr "Меню|Разделить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Bisect"
-msgstr ""
+msgstr "Разделить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:267
 #: ../thunar-vcs-plugin/tvp-svn-action.c:306
@@ -52,13 +52,13 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 msgid "Menu|Branch"
-msgstr ""
+msgstr "Меню|Отделить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269 ../tvp-git-helper/main.c:159
 #: ../tvp-git-helper/tgh-branch-dialog.c:119
 #: ../tvp-git-helper/tgh-stash-dialog.c:168
 msgid "Branch"
-msgstr ""
+msgstr "Отделить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323
@@ -104,7 +104,7 @@ msgstr "Фиксировать"
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
 msgid "Menu|Diff"
-msgstr ""
+msgstr "Меню|Сравнить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
@@ -149,11 +149,11 @@ msgstr "Журнал"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
 msgid "Menu|Merge"
-msgstr ""
+msgstr "Меню|Объединить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
 msgid "Merge"
-msgstr ""
+msgstr "Объединить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393
