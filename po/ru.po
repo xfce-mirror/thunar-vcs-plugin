@@ -109,7 +109,7 @@ msgstr "Меню|Сравнить"
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
 msgid "Diff"
-msgstr "Разница"
+msgstr "Сравнить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Fetch"
@@ -158,13 +158,13 @@ msgstr "Объединить"
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393
 msgid "Menu|Move"
-msgstr ""
+msgstr "Меню|Переместить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393 ../tvp-git-helper/main.c:175
 #: ../tvp-svn-helper/main.c:297 ../tvp-svn-helper/tsh-move.c:157
 msgid "Move"
-msgstr ""
+msgstr "Переместить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Pull"
@@ -201,19 +201,19 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Remove"
-msgstr ""
+msgstr "Меню|Удалить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Remove"
-msgstr ""
+msgstr "Удалить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Menu|Show"
-msgstr ""
+msgstr "Меню|Показать"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Show"
-msgstr ""
+msgstr "Показать"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:290
 msgid "Menu|Stash"
@@ -253,7 +253,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr ""
+msgstr "Действие %s невыполнимо"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
@@ -270,11 +270,11 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
 msgid "Menu|Changelist"
-msgstr ""
+msgstr "Меню|Список изменений"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
 msgid "Changelist"
-msgstr ""
+msgstr "Список изменений"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328
 msgid "Menu|Cleanup"
