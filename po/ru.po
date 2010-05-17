@@ -304,46 +304,46 @@ msgstr "Удалить"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353
 msgid "Menu|Export"
-msgstr ""
+msgstr "Меню|Экспорт"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-export.c:107 ../tvp-svn-helper/tsh-export.c:125
 msgid "Export"
-msgstr ""
+msgstr "Экспорт"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358
 msgid "Menu|Import"
-msgstr ""
+msgstr "Меню|Импорт"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-import.c:102 ../tvp-svn-helper/tsh-import.c:120
 msgid "Import"
-msgstr ""
+msgstr "Импорт"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Menu|Info"
-msgstr ""
+msgstr "Меню|Информация"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Info"
-msgstr ""
+msgstr "Информация"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373
 msgid "Menu|Lock"
-msgstr ""
+msgstr "Меню|Заблокировать"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-lock.c:130 ../tvp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
-msgstr ""
+msgstr "Заблокировать"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Menu|Edit Properties"
-msgstr ""
+msgstr "Меню|Редактировать параметры"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Edit Properties"
-msgstr ""
+msgstr "Редактировать параметры"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409
 msgid "Menu|Relocate"
