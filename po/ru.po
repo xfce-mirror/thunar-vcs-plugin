@@ -168,19 +168,19 @@ msgstr "Переместить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Pull"
-msgstr ""
+msgstr "Меню|Получить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Pull"
-msgstr ""
+msgstr "Получить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Push"
-msgstr ""
+msgstr "Меню|Получить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Push"
-msgstr ""
+msgstr "Отправить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Rebase"
@@ -230,7 +230,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
 msgid "Menu|Status"
-msgstr ""
+msgstr "Меню|Статус"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430 ../tvp-git-helper/main.c:187
@@ -239,7 +239,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Menu|Tag"
@@ -286,21 +286,21 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338
 msgid "Menu|Copy"
-msgstr ""
+msgstr "Меню|Копировать"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338 ../tvp-svn-helper/main.c:273
 #: ../tvp-svn-helper/tsh-copy.c:166
 msgid "Copy"
-msgstr ""
+msgstr "Копировать"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343
 msgid "Menu|Delete"
-msgstr ""
+msgstr "Меню|Удалить"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-delete.c:127 ../tvp-svn-helper/tsh-delete.c:140
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353
 msgid "Menu|Export"
