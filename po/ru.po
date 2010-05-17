@@ -402,12 +402,12 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:445
 msgid "Menu|Update"
-msgstr ""
+msgstr "Меню|Обновить"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:445 ../tvp-svn-helper/main.c:329
 #: ../tvp-svn-helper/tsh-update.c:113
 msgid "Update"
-msgstr ""
+msgstr "Обновить"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:118
 msgid "URL:"
@@ -442,7 +442,7 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:173
 msgid "Modified date:"
-msgstr ""
+msgstr "Дата изменения:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:186
 msgid "Author:"
@@ -505,7 +505,7 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:78 ../tvp-svn-helper/main.c:105
 msgid "Print version information"
-msgstr ""
+msgstr "Печать информации о версии"
 
 #: ../tvp-git-helper/main.c:85 ../tvp-svn-helper/main.c:112
 msgid "Execute add action"
