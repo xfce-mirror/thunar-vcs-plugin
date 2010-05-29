@@ -219,8 +219,9 @@ msgid "Menu|Show"
 msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
+#, fuzzy
 msgid "Show"
-msgstr ""
+msgstr "Anzeigen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:290
 #, fuzzy
@@ -256,8 +257,9 @@ msgid "Menu|Tag"
 msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
+#, fuzzy
 msgid "Tag"
-msgstr ""
+msgstr "Markierung"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:302
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
@@ -734,8 +736,9 @@ msgid "Action"
 msgstr "Aktion"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:108
+#, fuzzy
 msgid "Notify"
-msgstr ""
+msgstr "Benachrichtigen"
 
 #: ../tvp-git-helper/tgh-reset.c:58
 #, fuzzy
