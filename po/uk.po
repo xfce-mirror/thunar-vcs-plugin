@@ -1,7 +1,7 @@
 # Ukrainian translation of thunar-vcs-plugin.
 # Copyright (C) 2010 Dmitry Nikitin
 # This file is distributed under the same license as the thunar-vcs-plugin package.
-#
+# 
 # Dmitry Nikitin <luckas_fb@mail.ru>, 2010.
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
@@ -192,12 +192,12 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Menu|Reset"
-msgstr ""
+msgstr "Скидання"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
 msgid "Reset"
-msgstr ""
+msgstr "Скидання"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Remove"
@@ -219,7 +219,8 @@ msgstr "Показати"
 msgid "Menu|Stash"
 msgstr ""
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:290 ../tvp-git-helper/main.c:183
 #: ../tvp-git-helper/tgh-stash-dialog.c:264
@@ -242,11 +243,11 @@ msgstr "Стан"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Menu|Tag"
-msgstr ""
+msgstr "Мітка"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Tag"
-msgstr ""
+msgstr "Мітка"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:302
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
@@ -277,11 +278,11 @@ msgstr "Список змін"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328
 msgid "Menu|Cleanup"
-msgstr ""
+msgstr "Очищення"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328 ../tvp-svn-helper/main.c:265
 msgid "Cleanup"
-msgstr ""
+msgstr "Очищення"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338
 msgid "Menu|Copy"
@@ -458,34 +459,36 @@ msgstr "Глибина:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:306
 msgid "Exclude"
 msgstr "Виключити"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:312
 msgid "Empty"
 msgstr "Пусто"
 
 #. Translators: svn recursion depth infotmation
-#. * Files depth means this file/direcotry and all of it's files are checked out
-#.
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:318
 msgid "Files"
 msgstr "Файли"
 
 #. Translators: svn recursion depth infotmation
-#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
-#.
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:324
 #: ../tvp-svn-helper/tsh-properties-dialog.c:227
 #: ../tvp-svn-helper/tsh-status-dialog.c:200
@@ -493,8 +496,9 @@ msgid "Immediates"
 msgstr "Найближчі"
 
 #. Translators: svn recursion depth infotmation
-#. * Infinity depth means this file/direcotry is checked out with full recursion
-#.
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
 msgid "Infinity"
 msgstr "Необмежено"
@@ -660,7 +664,7 @@ msgstr "Невдача"
 #: ../tvp-git-helper/tgh-common.c:199
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
-msgstr ""
+msgstr "невідслідковане"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
@@ -718,7 +722,7 @@ msgstr "Завершено Reset"
 
 #: ../tvp-git-helper/tgh-reset.c:143
 msgid "Reset ..."
-msgstr ""
+msgstr "Скидання..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:162
 #: ../tvp-svn-helper/tsh-properties-dialog.c:126
@@ -875,7 +879,8 @@ msgstr "Опції пов'язані з Lock:"
 msgid "Properties Related Options:"
 msgstr "Опції пов'язані з Properties:"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
 msgid "Properties"
@@ -1028,19 +1033,19 @@ msgstr "Присутні"
 
 #: ../tvp-svn-helper/tsh-common.c:541
 msgid "Changelist set"
-msgstr ""
+msgstr "Встановлення списку змін"
 
 #: ../tvp-svn-helper/tsh-common.c:542
 msgid "Changelist cleared"
-msgstr ""
+msgstr "Чистий список змін"
 
 #: ../tvp-svn-helper/tsh-common.c:543
 msgid "Changelist moved"
-msgstr ""
+msgstr "Переміщений список змін"
 
 #: ../tvp-svn-helper/tsh-common.c:544
 msgid "Merge begin"
-msgstr ""
+msgstr "Початок злиття"
 
 #: ../tvp-svn-helper/tsh-common.c:545
 msgid "Foreign merge begin"
@@ -1076,11 +1081,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Merge completed"
-msgstr ""
+msgstr "Злиття завершено"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Tree conflict"
-msgstr ""
+msgstr "Конфлікт дерева"
 
 #: ../tvp-svn-helper/tsh-common.c:556
 msgid "External failed"
@@ -1088,11 +1093,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "Inapplicable"
-msgstr ""
+msgstr "Незастосовний"
 
 #: ../tvp-svn-helper/tsh-common.c:619
 msgid "Unchanged"
-msgstr ""
+msgstr "Не змінений"
 
 #: ../tvp-svn-helper/tsh-common.c:620 ../tvp-svn-helper/tsh-common.c:654
 msgid "Missing"
@@ -1100,7 +1105,7 @@ msgstr "Відсутній"
 
 #: ../tvp-svn-helper/tsh-common.c:621 ../tvp-svn-helper/tsh-common.c:661
 msgid "Obstructed"
-msgstr ""
+msgstr "Засмічений"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Changed"
@@ -1108,7 +1113,7 @@ msgstr "Змінений"
 
 #: ../tvp-svn-helper/tsh-common.c:623 ../tvp-svn-helper/tsh-common.c:658
 msgid "Merged"
-msgstr ""
+msgstr "Об’днаний"
 
 #: ../tvp-svn-helper/tsh-common.c:624 ../tvp-svn-helper/tsh-common.c:659
 msgid "Conflicted"
@@ -1217,21 +1222,23 @@ msgstr "Значення"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:207
 #: ../tvp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
 msgstr "Самостійно"
 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are updated
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are shown
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:218
 #: ../tvp-svn-helper/tsh-status-dialog.c:191
 msgid "Immediate files"
@@ -1239,10 +1246,10 @@ msgstr "Термінові файли"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
@@ -1315,4 +1322,3 @@ msgstr "Інша помилка."
 #: ../tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
 msgstr "Довірений"
-
