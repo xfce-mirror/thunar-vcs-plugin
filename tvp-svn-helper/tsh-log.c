@@ -59,8 +59,15 @@ static gpointer log_thread (gpointer user_data)
 	apr_array_header_t *ranges;
 	apr_array_header_t *revprops;
 	gint size, i;
+  gboolean strict_history;
+  gboolean merged_revisions;
   GtkWidget *error;
   gchar *error_str;
+
+  gdk_threads_enter ();
+  strict_history = tsh_log_dialog_get_hide_copied (dialog);
+  merged_revisions = tsh_log_dialog_get_show_merged (dialog);
+  gdk_threads_leave ();
 
   if(!paths)
   {
@@ -99,9 +106,9 @@ static gpointer log_thread (gpointer user_data)
   ranges = apr_array_make (subpool, 1, sizeof (svn_opt_revision_range_t *));
   APR_ARRAY_PUSH (ranges, svn_opt_revision_range_t *) = &range;
 #if CHECK_SVN_VERSION(1,5)
-	if ((err = svn_client_log4(paths, &revision, &range.start, &range.end, 0, TRUE, FALSE, TRUE, revprops, tsh_log_func, dialog, ctx, subpool)))
+	if ((err = svn_client_log4(paths, &revision, &range.start, &range.end, 0, TRUE, strict_history, merged_revisions, revprops, tsh_log_func, dialog, ctx, subpool)))
 #else /* CHECK_SVN_VERSION(1,6) */
-	if ((err = svn_client_log5(paths, &revision, ranges, 0, TRUE, FALSE, TRUE, revprops, tsh_log_func, dialog, ctx, subpool)))
+	if ((err = svn_client_log5(paths, &revision, ranges, 0, TRUE, strict_history, merged_revisions, revprops, tsh_log_func, dialog, ctx, subpool)))
 #endif
 	{
     svn_pool_destroy (subpool);

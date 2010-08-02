@@ -43,6 +43,8 @@ struct _TshLogDialog
 	GtkWidget *tree_view;
   GtkWidget *text_view;
   GtkWidget *file_view;
+  GtkWidget *strict_history;
+  GtkWidget *merged_revisions;
 	GtkWidget *close;
 	GtkWidget *cancel;
 	GtkWidget *refresh;
@@ -108,6 +110,9 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	GtkWidget *scroll_window;
   GtkWidget *pane;
   GtkWidget *vpane;
+  GtkWidget *strict_history;
+  GtkWidget *merged_revisions;
+  GtkWidget *table;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
   gint n_columns;
@@ -204,6 +209,19 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 
 	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), pane, TRUE, TRUE, 0);
   gtk_widget_show (pane);
+
+  table = gtk_table_new (3, 2, FALSE);
+
+  dialog->strict_history = strict_history = gtk_check_button_new_with_label (_("Stop On Copy"));
+  gtk_table_attach (GTK_TABLE (table), strict_history, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (strict_history);
+
+  dialog->merged_revisions = merged_revisions = gtk_check_button_new_with_label (_("Show Merged Revisions"));
+  gtk_table_attach (GTK_TABLE (table), merged_revisions, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (merged_revisions);
+
+  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), table, FALSE, FALSE, 0);
+  gtk_widget_show (table);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Log"));
 
@@ -336,6 +354,22 @@ tsh_log_dialog_done (TshLogDialog *dialog)
 
   gtk_widget_hide (dialog->cancel);
   gtk_widget_show (dialog->refresh);
+}
+
+gboolean
+tsh_log_dialog_get_hide_copied (TshLogDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_LOG_DIALOG (dialog), FALSE);
+
+  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->strict_history));
+}
+
+gboolean
+tsh_log_dialog_get_show_merged (TshLogDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_LOG_DIALOG (dialog), FALSE);
+
+  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->merged_revisions));
 }
 
 static void

@@ -61,6 +61,9 @@ const gchar* tsh_log_dialog_top      (TshLogDialog *dialog);
 void         tsh_log_dialog_pop      (TshLogDialog *dialog);
 void         tsh_log_dialog_done     (TshLogDialog *dialog);
 
+gboolean tsh_log_dialog_get_hide_copied (TshLogDialog *dialog);
+gboolean tsh_log_dialog_get_show_merged (TshLogDialog *dialog);
+
 G_END_DECLS;
 
 #endif /* !__TSH_LOG_DIALOG_H__ */
