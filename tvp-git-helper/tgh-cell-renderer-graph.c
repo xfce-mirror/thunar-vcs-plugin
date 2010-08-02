@@ -281,11 +281,16 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
       state = GTK_STATE_NORMAL;
 
     x_offset += cell_area->x + cell->xpad;
+    x2_offset = x_offset + width - cell->xpad * 2;
     y_offset = background_area->y;
     height = background_area->height;
 
     if (rtl)
-      x_offset += width - cell->xpad * 2;
+    {
+      gint swap = x_offset;
+      x_offset = x2_offset;
+      x2_offset = swap;
+    }
 
     cr = gdk_cairo_create (window);
     cairo_set_line_width (cr, 1);
@@ -305,7 +310,6 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
 
       x2_offset = tgh_graph_node_length (graph_iter->data);
       x2_offset = renderer->spacing + renderer->spacing * x2_offset + x2_offset;
-      x2_offset = x2_offset;
       x2_offset = ((rtl ?  (1.0 - cell->xalign) : cell->xalign) * (cell_area->width - x2_offset)) + (rtl ? x2_offset : 0);
       if (x2_offset < 0)
         x2_offset = 0;
@@ -341,7 +345,6 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
 
       x2_offset = tgh_graph_node_length (graph_iter->data);
       x2_offset = renderer->spacing + renderer->spacing * x2_offset + x2_offset;
-      x2_offset = x2_offset;
       x2_offset = ((rtl ?  (1.0 - cell->xalign) : cell->xalign) * (cell_area->width - x2_offset)) + (rtl ? x2_offset : 0);
       if (x2_offset < 0)
         x2_offset = 0;

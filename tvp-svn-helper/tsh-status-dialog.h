@@ -48,12 +48,12 @@ void       tsh_status_dialog_add      (TshStatusDialog *dialog,
                                        const char *repo_prop);
 void       tsh_status_dialog_done     (TshStatusDialog *dialog);
 
-gboolean   tsh_status_dialog_get_depth            (TshStatusDialog *dialog);
-gboolean   tsh_status_dialog_get_show_unmodified  (TshStatusDialog *dialog);
-gboolean   tsh_status_dialog_get_show_unversioned (TshStatusDialog *dialog);
-gboolean   tsh_status_dialog_get_check_reposetory (TshStatusDialog *dialog);
-gboolean   tsh_status_dialog_get_show_ignore      (TshStatusDialog *dialog);
-gboolean   tsh_status_dialog_get_hide_externals   (TshStatusDialog *dialog);
+svn_depth_t tsh_status_dialog_get_depth            (TshStatusDialog *dialog);
+gboolean    tsh_status_dialog_get_show_unmodified  (TshStatusDialog *dialog);
+gboolean    tsh_status_dialog_get_show_unversioned (TshStatusDialog *dialog);
+gboolean    tsh_status_dialog_get_check_reposetory (TshStatusDialog *dialog);
+gboolean    tsh_status_dialog_get_show_ignore      (TshStatusDialog *dialog);
+gboolean    tsh_status_dialog_get_hide_externals   (TshStatusDialog *dialog);
 
 G_END_DECLS;
 
