@@ -150,7 +150,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	g_object_unref (model);
 
 	gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 5);
 	gtk_widget_show (tree_view);
 	gtk_widget_show (scroll_window);
 
