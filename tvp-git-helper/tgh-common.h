@@ -23,6 +23,9 @@ void tgh_replace_child  (gboolean, GPid);
 void tgh_cancel         (void);
 void tgh_child_exit     (GPid, gint, gpointer);
 
+gchar* tgh_common_prefix (gchar **files);
+gchar** tgh_strip_prefix (gchar **files, const gchar *prefix);
+
 #define TGH_OUTPUT_PARSER(x) ((TghOutputParser*)(x))
 #define TGH_OUTPUT_PARSER_FUNC(x) ((TghOutputParserFunc)(x))
 

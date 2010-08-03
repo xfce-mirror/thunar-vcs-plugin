@@ -115,18 +115,26 @@ static gboolean reset_spawn (GtkWidget *dialog, gchar **files, GPid *pid)
 gboolean tgh_reset (gchar **files, GPid *pid)
 {
   GtkWidget *dialog;
+  gchar *prefix;
 
-  if (files)
-    if (chdir(files[0]))
+  prefix = tgh_common_prefix (files);
+
+  if (prefix)
+  {
+    if (chdir(prefix))
     {
-      gchar *dirname = g_path_get_dirname (files[0]);
+      gchar *dirname = g_path_get_dirname (prefix);
       if (chdir(dirname))
       {
         g_free (dirname);
         return FALSE;
       }
-      g_free (dirname);
+      g_free (prefix);
+      prefix = dirname;
     }
+    files = tgh_strip_prefix (files, prefix);
+    g_free (prefix);
+  }
 
   dialog = tgh_file_selection_dialog_new (_("Reset"), NULL, 0, TGH_FILE_SELECTION_FLAG_ADDED);
   if (gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)

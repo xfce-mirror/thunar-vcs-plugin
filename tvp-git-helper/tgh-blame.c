@@ -72,19 +72,28 @@ static gboolean blame_spawn (GtkWidget *dialog, gchar *file, GPid *pid)
 gboolean tgh_blame (gchar **files, GPid *pid)
 {
   GtkWidget *dialog;
+  gchar *prefix;
 
   if (!files)
     return FALSE;
 
-  if (chdir(files[0]))
+  prefix = tgh_common_prefix (files);
+
+  if (prefix)
   {
-    gchar *dirname = g_path_get_dirname (files[0]);
-    if (chdir(dirname))
+    if (chdir(prefix))
     {
-      g_free (dirname);
-      return FALSE;
+      gchar *dirname = g_path_get_dirname (prefix);
+      if (chdir(dirname))
+      {
+        g_free (dirname);
+        return FALSE;
+      }
+      g_free (prefix);
+      prefix = dirname;
     }
-    g_free (dirname);
+    files = tgh_strip_prefix (files, prefix);
+    g_free (prefix);
   }
 
   dialog = tgh_blame_dialog_new (NULL, NULL, 0);

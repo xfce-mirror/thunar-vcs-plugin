@@ -113,18 +113,26 @@ gboolean tgh_clean (gchar **files, GPid *pid)
   GtkWidget *dialog;
   gboolean direcotries, force;
   TghCleanIgnore ignore;
+  gchar *prefix;
 
-  if (files)
-    if (chdir(files[0]))
+  prefix = tgh_common_prefix (files);
+
+  if (prefix)
+  {
+    if (chdir(prefix))
     {
-      gchar *dirname = g_path_get_dirname (files[0]);
+      gchar *dirname = g_path_get_dirname (prefix);
       if (chdir(dirname))
       {
         g_free (dirname);
         return FALSE;
       }
-      g_free (dirname);
+      g_free (prefix);
+      prefix = dirname;
     }
+    files = tgh_strip_prefix (files, prefix);
+    g_free (prefix);
+  }
 
   dialog = tgh_clean_dialog_new (NULL, NULL, 0);
   if (gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)

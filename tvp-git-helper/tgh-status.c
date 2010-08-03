@@ -74,15 +74,15 @@ gboolean tgh_status (gchar **files, GPid *pid)
 {
   GtkWidget *dialog;
 
+  if (files)
+    if (chdir(files[0]))
+      return FALSE;
+
   dialog = tgh_status_dialog_new (NULL, NULL, 0);
   g_signal_connect(dialog, "cancel-clicked", tgh_cancel, NULL);
   tgh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
   g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_status_child), NULL);
-
-  if (files)
-    if (chdir(files[0]))
-      return FALSE;
 
   return status_spawn(TGH_STATUS_DIALOG(dialog), pid);
 }

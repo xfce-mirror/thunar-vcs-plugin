@@ -88,6 +88,100 @@ tgh_cancel(void)
 {
 }
 
+static guint
+path_compare (const gchar *path1, const gchar *path2)
+{
+  const gchar *i1, *i2;
+  gchar c1, c2;
+  gint count = 0;
+  gint depth = 0;
+  i1 = path1;
+  i2 = path2;
+  while ((c1 = *i1++))
+  {
+    c2 = *i2++;
+
+    if (c1 != c2)
+    {
+      if (c1 == '/'&& !c2)
+        depth = count;
+
+      return depth;
+    }
+
+    if (c1 == '/')
+      depth = count;
+
+    count++;
+  }
+
+  if (*i2 == '/')
+      depth = count;
+
+  return depth;
+}
+
+gchar*
+tgh_common_prefix (gchar **files)
+{
+  gchar **iter;
+  gchar *prefix;
+  guint prefix_len, match;
+
+  if (files == NULL || files[0] == NULL)
+    return NULL;
+
+  prefix = g_strdup (files[0]);
+  prefix_len = strlen (prefix);
+
+  for (iter = &files[1]; *iter; iter++)
+  {
+    match = path_compare (prefix, *iter);
+    prefix[match] = '\0';
+    if (match == 0)
+      break;
+    prefix_len = match;
+  }
+
+  return prefix;
+}
+
+gchar**
+tgh_strip_prefix (gchar **files, const gchar *prefix)
+{
+  gchar **stripped;
+  guint len, i;
+  guint prefix_len, start;
+
+  if (files == NULL)
+    return NULL;
+
+  len = g_strv_length (files);
+  stripped = g_new (gchar*, len + 1);
+  stripped[len] = NULL;
+
+  prefix_len = strlen (prefix);
+
+  for (i = 0; i < len; i++)
+  {
+    if (G_LIKELY (g_str_has_prefix (files[i], prefix)))
+    {
+      start = prefix_len;
+      while (files[i][start] == '/')
+	start++;
+      /* prefix is support to be a directory, so if the file fully matches is the current directory */
+      if (G_UNLIKELY (files[i][start] == '\0'))
+	stripped[i] = g_strdup (".");
+      else
+	stripped[i] = g_strdup (files[i] + start);
+    }
+    else
+      stripped[i] = g_strdup (files[i]);
+  }
+
+  return stripped;
+}
+
 typedef struct {
   TghOutputParser parent;
   gchar *error;

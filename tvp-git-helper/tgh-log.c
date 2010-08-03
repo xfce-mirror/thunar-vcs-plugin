@@ -96,24 +96,32 @@ static void create_log_child(TghLogDialog *dialog, gpointer user_data)
 gboolean tgh_log (gchar **files, GPid *pid)
 {
   GtkWidget *dialog;
+  gchar *prefix;
+
+  prefix = tgh_common_prefix (files);
+
+  if (prefix)
+  {
+    if (chdir(prefix))
+    {
+      gchar *dirname = g_path_get_dirname (prefix);
+      if (chdir(dirname))
+      {
+        g_free (dirname);
+        return FALSE;
+      }
+      g_free (prefix);
+      prefix = dirname;
+    }
+    files = tgh_strip_prefix (files, prefix);
+    g_free (prefix);
+  }
 
   dialog = tgh_log_dialog_new (NULL, NULL, 0);
   g_signal_connect(dialog, "cancel-clicked", tgh_cancel, NULL);
   tgh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
   g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_log_child), files);
-
-  if (files)
-    if (chdir(files[0]))
-    {
-      gchar *dirname = g_path_get_dirname (files[0]);
-      if (chdir(dirname))
-      {
-        g_free (dirname);
-        return FALSE;
-      }
-      g_free (dirname);
-    }
 
   return log_spawn(TGH_LOG_DIALOG(dialog), files, pid);
 }

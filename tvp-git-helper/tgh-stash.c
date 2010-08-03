@@ -362,13 +362,13 @@ gboolean tgh_stash (gchar **files, GPid *pid)
 {
   GtkWidget *dialog;
 
-  dialog = tgh_stash_dialog_new (NULL, NULL, 0);
-  g_signal_connect(dialog, "cancel-clicked", tgh_cancel, NULL);
-  tgh_dialog_start (GTK_DIALOG (dialog), TRUE);
-
   if (files)
     if (chdir(files[0]))
       return FALSE;
+
+  dialog = tgh_stash_dialog_new (NULL, NULL, 0);
+  g_signal_connect(dialog, "cancel-clicked", tgh_cancel, NULL);
+  tgh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
   g_signal_connect(dialog, "selection-changed", G_CALLBACK (show_stash), NULL);
   g_signal_connect(dialog, "save-clicked", G_CALLBACK (save_stash), NULL);
