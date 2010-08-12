@@ -39,6 +39,7 @@ struct _TghLogDialog
   GList *graph;
 
   GtkWidget *tree_view;
+  GtkWidget *revision_label;
   GtkWidget *text_view;
   GtkWidget *file_view;
   GtkWidget *close;
@@ -102,12 +103,14 @@ static void
 tgh_log_dialog_init (TghLogDialog *dialog)
 {
   GtkWidget *button;
+  GtkWidget *label;
   GtkWidget *tree_view;
   GtkWidget *text_view;
   GtkWidget *file_view;
   GtkWidget *scroll_window;
   GtkWidget *pane;
   GtkWidget *vpane;
+  GtkWidget *box;
   GtkCellRenderer *renderer;
   GtkTreeModel *model;
 
@@ -126,6 +129,8 @@ tgh_log_dialog_init (TghLogDialog *dialog)
       NULL);
 
   renderer = gtk_cell_renderer_text_new ();
+  g_object_set (G_OBJECT (renderer), "width-chars", 9, NULL);
+  g_object_set (G_OBJECT (renderer), "ellipsize", PANGO_ELLIPSIZE_END, NULL);
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
       -1, _("Revision"),
       renderer, "text",
@@ -176,19 +181,30 @@ tgh_log_dialog_init (TghLogDialog *dialog)
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
+  vpane = gtk_vpaned_new ();
+
+  box = gtk_vbox_new (FALSE, 0);
+
+  dialog->revision_label = label = gtk_label_new (_("Revision"));
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_selectable (GTK_LABEL (label), TRUE);
+  gtk_box_pack_start (GTK_BOX (box), label, FALSE, TRUE, 0);
+  gtk_widget_show (label);
+
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
-
-  vpane = gtk_vpaned_new ();
 
   dialog->text_view = text_view = gtk_text_view_new ();
   gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (text_view), GTK_WRAP_WORD_CHAR);
   gtk_text_view_set_editable (GTK_TEXT_VIEW (text_view), FALSE);
 
   gtk_container_add (GTK_CONTAINER (scroll_window), text_view);
-  gtk_paned_pack1 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
+  gtk_box_pack_end (GTK_BOX (box), scroll_window, TRUE, TRUE, 0);
   gtk_widget_show (text_view);
   gtk_widget_show (scroll_window);
+
+  gtk_paned_pack1 (GTK_PANED(vpane), box, TRUE, FALSE);
+  gtk_widget_show (box);
 
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -427,6 +443,7 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
   GtkTreeIter iter;
   GtkTreeSelection *selection;
   GtkTreeModel *model;
+  gchar *revision;
   gchar *message;
   GSList *files;
 
@@ -436,7 +453,11 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
 
   if (gtk_tree_selection_get_selected (selection, &model, &iter))
   {
-    gtk_tree_model_get (model, &iter, COLUMN_FULL_MESSAGE, &message, COLUMN_FILE_LIST, &files, -1);
+    gtk_tree_model_get (model, &iter, COLUMN_REVISION, &revision, COLUMN_FULL_MESSAGE, &message, COLUMN_FILE_LIST, &files, -1);
+
+    gtk_label_set_text (GTK_LABEL (dialog->revision_label), revision);
+    g_free (revision);
+
     gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), message?message:"", -1);
     g_free (message);
 

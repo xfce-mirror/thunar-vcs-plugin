@@ -400,8 +400,7 @@ log_parser_func(TghLogParser *parser, gchar *line)
         parent_count++;
       }
 
-      // read first 6 chars of hash?
-      parser->revision = g_strndup(revision, revision[0]=='-'?7:6);
+      parser->revision = g_strdup(revision);
 
       if (parent_count)
       {
@@ -409,8 +408,7 @@ log_parser_func(TghLogParser *parser, gchar *line)
         parents[parent_count] = NULL;
         while (parent_list)
         {
-          // read first 6 chars of hash?
-          parents[--parent_count] = g_strndup (parent_list->data, 6);;
+          parents[--parent_count] = g_strdup (parent_list->data);
           parent_list = g_slist_delete_link (parent_list, parent_list);
         }
         parser->parents = parents;
