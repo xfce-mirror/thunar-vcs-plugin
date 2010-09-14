@@ -32,11 +32,11 @@ msgstr "Hinzufügen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Menu|Bisect"
-msgstr ""
+msgstr "Teilen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Bisect"
-msgstr ""
+msgstr "Teilen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:267
 #: ../thunar-vcs-plugin/tvp-svn-action.c:306
@@ -113,21 +113,19 @@ msgstr "Unterschiede"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Fetch"
-msgstr ""
+msgstr "Holen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Fetch"
-msgstr ""
+msgstr "Holen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
-#, fuzzy
 msgid "Menu|Grep"
-msgstr "Suchen"
+msgstr "Durchsuchen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
-#, fuzzy
 msgid "Grep"
-msgstr "Suchen"
+msgstr "Durchsuchen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 msgid "Menu|Init"
@@ -185,25 +183,21 @@ msgid "Push"
 msgstr "Schieben"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
-#, fuzzy
 msgid "Menu|Rebase"
-msgstr "Auflösen"
+msgstr "Rebasieren"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
-#, fuzzy
 msgid "Rebase"
-msgstr "Rückgängig"
+msgstr "Rebasieren"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
-#, fuzzy
 msgid "Menu|Reset"
-msgstr "Rückgängig"
+msgstr "Zurücksetzen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
-#, fuzzy
 msgid "Reset"
-msgstr "Rückgängig"
+msgstr "Zurücksetzen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Remove"
@@ -214,28 +208,24 @@ msgid "Remove"
 msgstr "Entfernen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
-#, fuzzy
 msgid "Menu|Show"
-msgstr "Log"
+msgstr "Zeigen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
-#, fuzzy
 msgid "Show"
-msgstr "Anzeigen"
+msgstr "Zeigen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:290
-#, fuzzy
 msgid "Menu|Stash"
-msgstr "Status"
+msgstr "Lagern"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:290 ../tvp-git-helper/main.c:183
 #: ../tvp-git-helper/tgh-stash-dialog.c:264
-#, fuzzy
 msgid "Stash"
-msgstr "Status"
+msgstr "Lagern"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
@@ -252,14 +242,12 @@ msgid "Status"
 msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
-#, fuzzy
 msgid "Menu|Tag"
-msgstr "Log"
+msgstr "Auszeichnen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
-#, fuzzy
 msgid "Tag"
-msgstr "Markierung"
+msgstr "Auszeichnen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:302
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
@@ -548,14 +536,12 @@ msgid "Execute move action"
 msgstr "Aktion »Verschieben« ausführen"
 
 #: ../tvp-git-helper/main.c:127
-#, fuzzy
 msgid "Execute reset action"
-msgstr "Aktion »Rückgängig« ausführen"
+msgstr "Aktion »Zurücksetzen» ausführen"
 
 #: ../tvp-git-helper/main.c:133
-#, fuzzy
 msgid "Execute stash action"
-msgstr "Aktion »Status« ausführen"
+msgstr "Aktion »Lagern« ausführen"
 
 #: ../tvp-git-helper/main.c:139 ../tvp-svn-helper/main.c:214
 msgid "Execute status action"
@@ -586,14 +572,12 @@ msgid "Move Related Options:"
 msgstr "Optionen fürs Verschieben:"
 
 #: ../tvp-git-helper/main.c:179
-#, fuzzy
 msgid "Reset Related Options:"
-msgstr "Optionen fürs Rückängigmachen:"
+msgstr "Optionen fürs Zurücksetzen:"
 
 #: ../tvp-git-helper/main.c:183
-#, fuzzy
 msgid "Stash Related Options:"
-msgstr "Optionen für den Zustand:"
+msgstr "Optionen fürs Lagern:"
 
 #: ../tvp-git-helper/main.c:187 ../tvp-svn-helper/main.c:317
 msgid "Status Related Options:"
@@ -641,28 +625,24 @@ msgid "Remove directories."
 msgstr "Verzeichnis entfernen"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:69
-#, fuzzy
 msgid "Excldue ignored files"
-msgstr "Ignorierte Dateien zeigen"
+msgstr "Ignorierte Dateien ausschließen"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:77
-#, fuzzy
 msgid "Include ignored files"
-msgstr "Ignorierte Dateien zeigen"
+msgstr "Ignorierte Dateien einschließen"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:83
-#, fuzzy
 msgid "Only ignored files"
-msgstr "Ignorierte Dateien zeigen"
+msgstr "Nur ignorierte Dateien"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:93
 msgid "Force clean."
 msgstr "Aufräumen erzwingen"
 
 #: ../tvp-git-helper/tgh-clone.c:58
-#, fuzzy
 msgid "Clone finished"
-msgstr "Aufräumen vollständig"
+msgstr "Klonen abgeschlossen"
 
 #: ../tvp-git-helper/tgh-clone.c:123
 msgid "Cloning ..."
@@ -684,7 +664,7 @@ msgstr "Fehlgeschlagen"
 #: ../tvp-git-helper/tgh-common.c:199
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
-msgstr ""
+msgstr "nicht getracked"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
@@ -692,14 +672,12 @@ msgid "Select/Unselect all"
 msgstr "Alle auswählen/abwählen"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:131
-#, fuzzy
 msgid "AuthorDate"
-msgstr "Autor"
+msgstr "Autor-Datum"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:143
-#, fuzzy
 msgid "CommitDate"
-msgstr "Einchecken"
+msgstr "Eincheck-Datum"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:149
 #: ../tvp-svn-helper/tsh-log-dialog.c:142
@@ -708,7 +686,6 @@ msgstr "Nachricht"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:187
 #: ../tvp-git-helper/tgh-stash-dialog.c:198
-#, fuzzy
 msgid "Changes"
 msgstr "Veränderungen"
 
@@ -736,19 +713,16 @@ msgid "Action"
 msgstr "Aktion"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:108
-#, fuzzy
 msgid "Notify"
 msgstr "Benachrichtigen"
 
 #: ../tvp-git-helper/tgh-reset.c:58
-#, fuzzy
 msgid "Reset finished"
-msgstr "Umplatzieren vollendet"
+msgstr "Zurücksetzen abgeschlossen"
 
 #: ../tvp-git-helper/tgh-reset.c:143
-#, fuzzy
 msgid "Reset ..."
-msgstr "Rückgängig"
+msgstr "Zurücksetzen ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:162
 #: ../tvp-svn-helper/tsh-properties-dialog.c:126
@@ -761,16 +735,16 @@ msgstr "Beschreibung"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:438
 msgid "Stash description:"
-msgstr ""
+msgstr "Lagerbeschreibung"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:574
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr ""
+msgstr "Möchten Sie »%s« wirklich vergessen?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:602
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "Möchten Sie wirklich alles aus dem Lager räumen?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:67
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
@@ -1098,28 +1072,24 @@ msgid "Property nonexisting"
 msgstr "Eigenschaft existiert nicht"
 
 #: ../tvp-svn-helper/tsh-common.c:552
-#, fuzzy
 msgid "Revision property set"
-msgstr "Das Setzen der Eigenschaften ist fehlgeschlagen"
+msgstr "Versionierungseigenschaft gesetzt"
 
 #: ../tvp-svn-helper/tsh-common.c:553
-#, fuzzy
 msgid "Revision property deleted"
-msgstr "Das Setzen der Eigenschaften ist fehlgeschlagen"
+msgstr "Versionierungseigenschaft gelöscht"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Merge completed"
 msgstr "Vollständig zusammengeführt"
 
 #: ../tvp-svn-helper/tsh-common.c:555
-#, fuzzy
 msgid "Tree conflict"
-msgstr "Konfliktbehaftet"
+msgstr "Baumkonflikt"
 
 #: ../tvp-svn-helper/tsh-common.c:556
-#, fuzzy
 msgid "External failed"
-msgstr "Extern"
+msgstr "»External« fehlgeschlagen"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "Inapplicable"
