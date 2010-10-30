@@ -662,7 +662,7 @@ msgstr "Afficher les Fichiers ignorés"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:93
 msgid "Force clean."
-msgstr ""
+msgstr "Forcer un nettoyage."
 
 #: ../tvp-git-helper/tgh-clone.c:58
 #, fuzzy
@@ -747,7 +747,7 @@ msgstr "Action"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:108
 msgid "Notify"
-msgstr ""
+msgstr "Notifier"
 
 #: ../tvp-git-helper/tgh-reset.c:58
 #, fuzzy
@@ -767,20 +767,20 @@ msgstr "Différences détaillées"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:174
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:438
 msgid "Stash description:"
-msgstr ""
+msgstr "Description du stash:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:574
-#, c-format
+#, c-format, fuzzy
 msgid "Are you sure you want to drop %s?"
-msgstr ""
+msgstr "Etes-vous sûr de vouloir supprimer %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:602
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "Etes-vous sûr de vouloir supprimer tous les stash?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:67
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
