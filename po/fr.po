@@ -645,17 +645,15 @@ msgstr "Chemin"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:57
 msgid "Remove directories."
-msgstr ""
+msgstr "Effacer les répertoires."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:69
-#, fuzzy
 msgid "Excldue ignored files"
-msgstr "Afficher les Fichiers ignorés"
+msgstr "Exclure les fichiers ignorés"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:77
-#, fuzzy
 msgid "Include ignored files"
-msgstr "Afficher les Fichiers ignorés"
+msgstr "Inclure les fichiers ignorés"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:83
 #, fuzzy
