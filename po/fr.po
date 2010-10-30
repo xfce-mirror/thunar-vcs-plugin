@@ -408,9 +408,8 @@ msgid "Unlock"
 msgstr "Débloquer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:445
-#, fuzzy
 msgid "Menu|Update"
-msgstr "Mettre à jour"
+msgstr "Menu|Mettre à jour"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:445 ../tvp-svn-helper/main.c:329
 #: ../tvp-svn-helper/tsh-update.c:113
@@ -437,14 +436,12 @@ msgid "Unknown"
 msgstr "Inconnu"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:131
-#, fuzzy
 msgid "Revision:"
-msgstr "À la révision : %li"
+msgstr "Révision:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:143
-#, fuzzy
 msgid "Repository:"
-msgstr "Fixer comme résolu"
+msgstr "Dépôt:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:161
 msgid "Modified revision:"
@@ -459,9 +456,8 @@ msgid "Author:"
 msgstr "Auteur:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:203
-#, fuzzy
 msgid "Changelist:"
-msgstr "Changelist:"
+msgstr "Liste de changements:"
 
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:216
@@ -511,7 +507,6 @@ msgstr "Immédiates"
 #. recursion
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
-#, fuzzy
 msgid "Infinity"
 msgstr "Infini"
 
@@ -522,52 +517,52 @@ msgstr "Afficher l'information sur la version"
 #: ../tvp-git-helper/main.c:85 ../tvp-svn-helper/main.c:112
 #, fuzzy
 msgid "Execute add action"
-msgstr "Exécuter une mise à jour"
+msgstr "Exécuter une action"
 
 #: ../tvp-git-helper/main.c:91 ../tvp-svn-helper/main.c:118
 #, fuzzy
 msgid "Execute blame action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter un blâme"
 
 #: ../tvp-git-helper/main.c:97
 #, fuzzy
 msgid "Execute branch action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter un branch"
 
 #: ../tvp-git-helper/main.c:103
 #, fuzzy
 msgid "Execute clean action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter un nettoyage"
 
 #: ../tvp-git-helper/main.c:109
 #, fuzzy
 msgid "Execute clone action"
-msgstr "Exécuter une mise à jour"
+msgstr "Exécuter un clonage"
 
 #: ../tvp-git-helper/main.c:115 ../tvp-svn-helper/main.c:178
 #, fuzzy
 msgid "Execute log action"
-msgstr "Exécuter une mise à jour"
+msgstr "Exécuter une journalisation"
 
 #: ../tvp-git-helper/main.c:121 ../tvp-svn-helper/main.c:184
 #, fuzzy
 msgid "Execute move action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter un déplacement"
 
 #: ../tvp-git-helper/main.c:127
 #, fuzzy
 msgid "Execute reset action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter un reset"
 
 #: ../tvp-git-helper/main.c:133
 #, fuzzy
 msgid "Execute stash action"
-msgstr "Exécuter une mise à jour"
+msgstr "Exécuter un stash"
 
 #: ../tvp-git-helper/main.c:139 ../tvp-svn-helper/main.c:214
 #, fuzzy
 msgid "Execute status action"
-msgstr "Exécuter une mise à jour"
+msgstr "Exécuter un statut"
 
 #: ../tvp-git-helper/main.c:151 ../tvp-svn-helper/main.c:249
 msgid "Add Related Options:"
@@ -576,22 +571,22 @@ msgstr "Ajouter des options:"
 #: ../tvp-git-helper/main.c:155 ../tvp-svn-helper/main.c:253
 #, fuzzy
 msgid "Blame Related Options:"
-msgstr "Exécuter une mise à jour"
+msgstr "Options liées à blame:"
 
 #: ../tvp-git-helper/main.c:159
 #, fuzzy
 msgid "Branch Related Options:"
-msgstr "Exécuter une mise à jour"
+msgstr "Options liées à la branche:"
 
 #: ../tvp-git-helper/main.c:163 ../tvp-git-helper/main.c:167
 #, fuzzy
 msgid "Clone Related Options:"
-msgstr "Copier les options connexes:"
+msgstr "Options liées au clonage:"
 
 #: ../tvp-git-helper/main.c:171 ../tvp-svn-helper/main.c:293
 #, fuzzy
 msgid "Log Related Options:"
-msgstr "Journaliser les options connexes:"
+msgstr "Options liées à la journalisation:"
 
 #: ../tvp-git-helper/main.c:175 ../tvp-svn-helper/main.c:297
 msgid "Move Related Options:"
