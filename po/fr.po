@@ -214,27 +214,24 @@ msgstr "Menu|Show"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Show"
-msgstr ""
+msgstr "Afficher"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:290
-#, fuzzy
 msgid "Menu|Stash"
-msgstr "État"
+msgstr "Menu|Stash"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:290 ../tvp-git-helper/main.c:183
 #: ../tvp-git-helper/tgh-stash-dialog.c:264
-#, fuzzy
 msgid "Stash"
-msgstr "État"
+msgstr "Stash"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
-#, fuzzy
 msgid "Menu|Status"
-msgstr "État"
+msgstr "Menu|Etat"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430 ../tvp-git-helper/main.c:187
@@ -246,13 +243,12 @@ msgid "Status"
 msgstr "État"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
-#, fuzzy
 msgid "Menu|Tag"
-msgstr "Menu|Log"
+msgstr "Menu|Tag"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Tag"
-msgstr ""
+msgstr "Tag"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:302
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
@@ -274,39 +270,33 @@ msgid "GIT"
 msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
-#, fuzzy
 msgid "Menu|Changelist"
-msgstr "Extraction"
+msgstr "Menu|Liste des changements"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
-#, fuzzy
 msgid "Changelist"
-msgstr "Changelist"
+msgstr "Liste des changements"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328
-#, fuzzy
 msgid "Menu|Cleanup"
-msgstr "Nettoyer les verrous"
+msgstr "Menu|Nettoyage"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328 ../tvp-svn-helper/main.c:265
 msgid "Cleanup"
 msgstr "Nettoyer les verrous"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338
-#, fuzzy
 msgid "Menu|Copy"
-msgstr "Complété"
+msgstr "Menu|Copier"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338 ../tvp-svn-helper/main.c:273
 #: ../tvp-svn-helper/tsh-copy.c:166
-#, fuzzy
 msgid "Copy"
-msgstr "Complété"
+msgstr "Copier"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343
-#, fuzzy
 msgid "Menu|Delete"
-msgstr "Effacer"
+msgstr "Menu|Effacer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-delete.c:127 ../tvp-svn-helper/tsh-delete.c:140
@@ -314,9 +304,8 @@ msgid "Delete"
 msgstr "Effacer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353
-#, fuzzy
 msgid "Menu|Export"
-msgstr "Exporter"
+msgstr "Menu|Exporter"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-export.c:107 ../tvp-svn-helper/tsh-export.c:125
@@ -324,29 +313,25 @@ msgid "Export"
 msgstr "Exporter"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358
-#, fuzzy
 msgid "Menu|Import"
-msgstr "SVN _Importer"
+msgstr "Menu|Importer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-import.c:102 ../tvp-svn-helper/tsh-import.c:120
-#, fuzzy
 msgid "Import"
-msgstr "SVN _Importer"
+msgstr "Importer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
-#, fuzzy
 msgid "Menu|Info"
-msgstr "Information"
+msgstr "Menu|Information"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Info"
 msgstr "Information"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373
-#, fuzzy
 msgid "Menu|Lock"
-msgstr "Bloquer"
+msgstr "Menu|Verrouiller"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-lock.c:130 ../tvp-svn-helper/tsh-lock-dialog.c:72
@@ -354,9 +339,8 @@ msgid "Lock"
 msgstr "Bloquer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
-#, fuzzy
 msgid "Menu|Edit Properties"
-msgstr "Éditer les propriétés"
+msgstr "Menu|Editer les propriétés"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Edit Properties"
@@ -365,31 +349,30 @@ msgstr "Éditer les propriétés"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409
 #, fuzzy
 msgid "Menu|Relocate"
-msgstr "Effacer"
+msgstr "Menu|Transférer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-svn-helper/main.c:309
 #: ../tvp-svn-helper/tsh-relocate.c:114
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:217
 #, fuzzy
 msgid "Relocate"
-msgstr "Déménager"
+msgstr "Transférer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415
 #, fuzzy
 msgid "Menu|Resolved"
-msgstr "Fixer comme résolu"
+msgstr "Menu|Résolu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-common.c:521 ../tvp-svn-helper/tsh-resolved.c:113
 #: ../tvp-svn-helper/tsh-resolved.c:126
 #, fuzzy
 msgid "Resolved"
-msgstr "Fixer comme résolu"
+msgstr "Résolu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
-#, fuzzy
 msgid "Menu|Resolve"
-msgstr "Fixer comme résolu"
+msgstr "Menu|Résoudre"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
 msgid "Resolve"
@@ -398,7 +381,7 @@ msgstr "Fixer comme résolu"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:425
 #, fuzzy
 msgid "Menu|Revert"
-msgstr "Restaurer"
+msgstr "Menu|Retour"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:425 ../tvp-svn-helper/main.c:313
 #: ../tvp-svn-helper/tsh-revert.c:112 ../tvp-svn-helper/tsh-revert.c:125
@@ -406,9 +389,8 @@ msgid "Revert"
 msgstr "Restaurer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:435
-#, fuzzy
 msgid "Menu|Switch"
-msgstr "Modifier l'adresse du dépôt"
+msgstr "Menu|Modifier l'adresse du dépôt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:435 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-switch.c:109 ../tvp-svn-helper/tsh-switch.c:122
