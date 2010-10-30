@@ -595,12 +595,12 @@ msgstr "Déplacer des options connexes:"
 #: ../tvp-git-helper/main.c:179
 #, fuzzy
 msgid "Reset Related Options:"
-msgstr "Exécuter une mise à jour"
+msgstr "Options liées à la réinitialisation:"
 
 #: ../tvp-git-helper/main.c:183
 #, fuzzy
 msgid "Stash Related Options:"
-msgstr "Situation des options connexes:"
+msgstr "Options liées à un stash:"
 
 #: ../tvp-git-helper/main.c:187 ../tvp-svn-helper/main.c:317
 msgid "Status Related Options:"
@@ -608,17 +608,15 @@ msgstr "Situation des options connexes:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:91
 #: ../tvp-svn-helper/tsh-blame-dialog.c:94
-#, fuzzy
 msgid "Line"
-msgstr "Se connecter"
+msgstr "Ligne"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:97
 #: ../tvp-git-helper/tgh-log-dialog.c:119
 #: ../tvp-svn-helper/tsh-blame-dialog.c:100
 #: ../tvp-svn-helper/tsh-log-dialog.c:124
-#, fuzzy
 msgid "Revision"
-msgstr "À la révision : %li"
+msgstr "Révision"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:103
 #: ../tvp-git-helper/tgh-log-dialog.c:125
@@ -630,9 +628,8 @@ msgstr "Auteur"
 #: ../tvp-git-helper/tgh-blame-dialog.c:109
 #: ../tvp-svn-helper/tsh-blame-dialog.c:112
 #: ../tvp-svn-helper/tsh-log-dialog.c:136
-#, fuzzy
 msgid "Date"
-msgstr "État"
+msgstr "Date"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:104
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:94
