@@ -78,24 +78,20 @@ msgstr "Menu|Clean"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271 ../tvp-git-helper/main.c:163
 #: ../tvp-git-helper/tgh-clean.c:141 ../tvp-git-helper/tgh-clean-dialog.c:97
-#, fuzzy
 msgid "Clean"
 msgstr "Clean"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
-#, fuzzy
 msgid "Menu|Clone"
 msgstr "Menu|Clone"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273 ../tvp-git-helper/main.c:167
 #: ../tvp-git-helper/tgh-clone.c:112
-#, fuzzy
 msgid "Clone"
 msgstr "Clone"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:333
-#, fuzzy
 msgid "Menu|Commit"
 msgstr "Menu|Commit"
 
@@ -108,7 +104,6 @@ msgstr "Envoyer"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
-#, fuzzy
 msgid "Menu|Diff"
 msgstr "Menu|Diff"
 
@@ -118,38 +113,31 @@ msgid "Diff"
 msgstr "Différences"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
-#, fuzzy
 msgid "Menu|Fetch"
 msgstr "Menu|Fetch"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
-#, fuzzy
 msgid "Fetch"
 msgstr "Fetch"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
-#, fuzzy
 msgid "Menu|Grep"
 msgstr "Menu|Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
-#, fuzzy
 msgid "Grep"
 msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
-#, fuzzy
 msgid "Menu|Init"
 msgstr "Menu|Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
-#, fuzzy
 msgid "Init"
 msgstr "Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 #: ../thunar-vcs-plugin/tvp-svn-action.c:378
-#, fuzzy
 msgid "Menu|Log"
 msgstr "Menu|Log"
 
@@ -161,12 +149,10 @@ msgid "Log"
 msgstr "Journal"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
-#, fuzzy
 msgid "Menu|Merge"
 msgstr "Menu|Merge"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
-#, fuzzy
 msgid "Merge"
 msgstr "Merge"
 
@@ -182,60 +168,49 @@ msgid "Move"
 msgstr "Déplacer"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
-#, fuzzy
 msgid "Menu|Pull"
 msgstr "Menu|Pull"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
-#, fuzzy
 msgid "Pull"
 msgstr "Pull"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
-#, fuzzy
 msgid "Menu|Push"
 msgstr "Menu|Push"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
-#, fuzzy
 msgid "Push"
 msgstr "Push"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
-#, fuzzy
 msgid "Menu|Rebase"
-msgstr "Fixer comme résolu"
+msgstr "Menu|Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
-#, fuzzy
 msgid "Rebase"
-msgstr "Restaurer"
+msgstr "Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
-#, fuzzy
 msgid "Menu|Reset"
-msgstr "Restaurer"
+msgstr "Menu|Reset"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
-#, fuzzy
 msgid "Reset"
-msgstr "Restaurer"
+msgstr "Reset"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
-#, fuzzy
 msgid "Menu|Remove"
-msgstr "Fixer comme résolu"
+msgstr "Menu|Remove"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
-#, fuzzy
 msgid "Remove"
-msgstr "Fixer comme résolu"
+msgstr "Remove"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
-#, fuzzy
 msgid "Menu|Show"
-msgstr "Menu|Log"
+msgstr "Menu|Show"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Show"
