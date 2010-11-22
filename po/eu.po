@@ -1,7 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # 
-#, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -252,7 +251,7 @@ msgstr "Etiketa"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr ""
+msgstr "%s ekintza ez dago inplementaturik"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
@@ -277,11 +276,11 @@ msgstr "Aldaketa-zerrenda"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328
 msgid "Menu|Cleanup"
-msgstr ""
+msgstr "Menua|Garbitu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328 ../tvp-svn-helper/main.c:265
 msgid "Cleanup"
-msgstr ""
+msgstr "Garbitu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338
 msgid "Menu|Copy"
@@ -321,11 +320,11 @@ msgstr "Inportatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Menu|Info"
-msgstr ""
+msgstr "Menu|Info"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373
 msgid "Menu|Lock"
