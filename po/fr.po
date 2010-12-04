@@ -1334,14 +1334,12 @@ msgid "Relocate failed"
 msgstr "Restaurer"
 
 #: ../tvp-svn-helper/tsh-relocate.c:86
-#, fuzzy
 msgid "Relocate finished"
-msgstr "Nettoyer les verrous"
+msgstr "Transfert terminé"
 
 #: ../tvp-svn-helper/tsh-relocate.c:128
-#, fuzzy
 msgid "Relocating ..."
-msgstr "Nettoyer les verrous"
+msgstr "Transfert..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
@@ -1352,9 +1350,8 @@ msgid "_To:"
 msgstr "_à:"
 
 #: ../tvp-svn-helper/tsh-status.c:86
-#, fuzzy
 msgid "Status failed"
-msgstr "État"
+msgstr "Echec de l'obtention du status"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
@@ -1369,9 +1366,8 @@ msgid "Show Ignored Files"
 msgstr "Afficher les Fichiers ignorés"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:236
-#, fuzzy
 msgid "Hide Externals"
-msgstr "Externe"
+msgstr "Cacher les externals"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
