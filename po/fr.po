@@ -517,7 +517,6 @@ msgid "Execute blame action"
 msgstr "Exécuter un blâme"
 
 #: ../tvp-git-helper/main.c:97
-#, fuzzy
 msgid "Execute branch action"
 msgstr "Effectuer un branch"
 
@@ -530,28 +529,24 @@ msgid "Execute clone action"
 msgstr "Exécuter un clonage"
 
 #: ../tvp-git-helper/main.c:115 ../tvp-svn-helper/main.c:178
-#, fuzzy
 msgid "Execute log action"
-msgstr "Exécuter une journalisation"
+msgstr "Effectuer une journalisation"
 
 #: ../tvp-git-helper/main.c:121 ../tvp-svn-helper/main.c:184
 msgid "Execute move action"
 msgstr "Effectuer un déplacement"
 
 #: ../tvp-git-helper/main.c:127
-#, fuzzy
 msgid "Execute reset action"
-msgstr "Exécuter un reset"
+msgstr "Effectuer une réinitialisation"
 
 #: ../tvp-git-helper/main.c:133
-#, fuzzy
 msgid "Execute stash action"
-msgstr "Exécuter un stash"
+msgstr "Effectuer un stash"
 
 #: ../tvp-git-helper/main.c:139 ../tvp-svn-helper/main.c:214
-#, fuzzy
 msgid "Execute status action"
-msgstr "Exécuter un statut"
+msgstr "Obtenir le statut"
 
 #: ../tvp-git-helper/main.c:151 ../tvp-svn-helper/main.c:249
 msgid "Add Related Options:"
@@ -669,7 +664,6 @@ msgstr "A échoué"
 
 #: ../tvp-git-helper/tgh-common.c:199
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
-#, fuzzy
 msgid "untracked"
 msgstr "non suivie"
 
@@ -679,26 +673,22 @@ msgid "Select/Unselect all"
 msgstr "Sélectionner / Désélectionner tout"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:131
-#, fuzzy
 msgid "AuthorDate"
-msgstr "Auteur"
+msgstr "AuthorDate"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:143
-#, fuzzy
 msgid "CommitDate"
-msgstr "Envoyer"
+msgstr "CommitDate"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:149
 #: ../tvp-svn-helper/tsh-log-dialog.c:142
-#, fuzzy
 msgid "Message"
-msgstr "Envoyer"
+msgstr "Message"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:187
 #: ../tvp-git-helper/tgh-stash-dialog.c:198
-#, fuzzy
 msgid "Changes"
-msgstr "Changé"
+msgstr "Changements"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:194
 #: ../tvp-git-helper/tgh-stash-dialog.c:205
@@ -706,18 +696,16 @@ msgid "File"
 msgstr "Fichier"
 
 #: ../tvp-git-helper/tgh-move.c:58
-#, fuzzy
 msgid "Move finished"
-msgstr "Nettoyer les verrous"
+msgstr "Déplacement terminé"
 
 #: ../tvp-git-helper/tgh-move.c:135 ../tvp-svn-helper/tsh-move.c:137
 msgid "Move To"
 msgstr "Déplacer vers "
 
 #: ../tvp-git-helper/tgh-move.c:151
-#, fuzzy
 msgid "Move ..."
-msgstr "Déplacer"
+msgstr "Déplacement ..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:87
 #: ../tvp-svn-helper/tsh-log-dialog.c:180
@@ -730,20 +718,17 @@ msgid "Notify"
 msgstr "Notifier"
 
 #: ../tvp-git-helper/tgh-reset.c:58
-#, fuzzy
 msgid "Reset finished"
-msgstr "Nettoyer les verrous"
+msgstr "Réinitialisation terminée"
 
 #: ../tvp-git-helper/tgh-reset.c:143
-#, fuzzy
 msgid "Reset ..."
-msgstr "Restaurer"
+msgstr "Réinitialiser ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:162
 #: ../tvp-svn-helper/tsh-properties-dialog.c:126
-#, fuzzy
 msgid "Name"
-msgstr "Différences détaillées"
+msgstr "Nom"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:174
 msgid "Description"
@@ -754,7 +739,7 @@ msgid "Stash description:"
 msgstr "Description du stash:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:574
-#, c-format, fuzzy
+#, c-format
 msgid "Are you sure you want to drop %s?"
 msgstr "Etes-vous sûr de vouloir supprimer %s?"
 
@@ -792,48 +777,40 @@ msgid "Transfer"
 msgstr "Transfert"
 
 #: ../tvp-svn-helper/main.c:124
-#, fuzzy
 msgid "Execute changelist action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter un changelist"
 
 #: ../tvp-svn-helper/main.c:130
 msgid "Execute checkout action"
 msgstr "Exécuter une extraction"
 
 #: ../tvp-svn-helper/main.c:136
-#, fuzzy
 msgid "Execute cleanup action"
-msgstr "Exécuter une extraction"
+msgstr "Effectuer un nettoyage"
 
 #: ../tvp-svn-helper/main.c:142
-#, fuzzy
 msgid "Execute commit action"
-msgstr "Exécuter une extraction"
+msgstr "Effectuer un commit"
 
 #: ../tvp-svn-helper/main.c:148
-#, fuzzy
 msgid "Execute copy action"
-msgstr "Exécuter une extraction"
+msgstr "Effectuer une copie"
 
 #: ../tvp-svn-helper/main.c:154
-#, fuzzy
 msgid "Execute delete action"
-msgstr "Exécuter une mise à jour"
+msgstr "Effectuer une suppression"
 
 #: ../tvp-svn-helper/main.c:160
-#, fuzzy
 msgid "Execute export action"
-msgstr "Exécuter une extraction"
+msgstr "Effectuer une exportation"
 
 #: ../tvp-svn-helper/main.c:166
-#, fuzzy
 msgid "Execute import action"
-msgstr "Exécuter une extraction"
+msgstr "Effectuer une importation"
 
 #: ../tvp-svn-helper/main.c:172
-#, fuzzy
 msgid "Execute lock action"
-msgstr "Exécuter une mise à jour"
+msgstr "Exécuter un verrouillage"
 
 #: ../tvp-svn-helper/main.c:190
 #, fuzzy
