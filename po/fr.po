@@ -846,9 +846,8 @@ msgid "Execute resolved action"
 msgstr "Exécuter une extraction"
 
 #: ../tvp-svn-helper/main.c:202
-#, fuzzy
 msgid "Execute relocate action"
-msgstr "Exécuter une mise à jour"
+msgstr "Effectuer un transfert"
 
 #: ../tvp-svn-helper/main.c:208
 #, fuzzy
@@ -856,37 +855,32 @@ msgid "Execute revert action"
 msgstr "Exécuter une extraction"
 
 #: ../tvp-svn-helper/main.c:220
-#, fuzzy
 msgid "Execute switch action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter un switch"
 
 #: ../tvp-svn-helper/main.c:226
-#, fuzzy
 msgid "Execute unlock action"
-msgstr "Exécuter une extraction"
+msgstr "Effectuer un déverrouillage"
 
 #: ../tvp-svn-helper/main.c:232
 msgid "Execute update action"
 msgstr "Exécuter une mise à jour"
 
 #: ../tvp-svn-helper/main.c:257
-#, fuzzy
 msgid "Changelist Related Options:"
-msgstr "Exécuter une mise à jour"
+msgstr "Options liées au changelist:"
 
 #: ../tvp-svn-helper/main.c:261
-#, fuzzy
 msgid "Checkout Related Options:"
-msgstr "Exécuter une mise à jour"
+msgstr "Options liées au checkout:"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Cleanup Related Options:"
 msgstr "Nettoyage des options connexes:"
 
 #: ../tvp-svn-helper/main.c:269
-#, fuzzy
 msgid "Commit Related Options:"
-msgstr "Valider les options connexes:"
+msgstr "Options liées au commit:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Copy Related Options:"
@@ -909,17 +903,15 @@ msgid "Lock Related Options:"
 msgstr "Vérrouiller les options connexes:"
 
 #: ../tvp-svn-helper/main.c:301
-#, fuzzy
 msgid "Properties Related Options:"
-msgstr "Éditer les propriétés"
+msgstr "Options liées aux propriétés:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
-#, fuzzy
 msgid "Properties"
-msgstr "Éditer les propriétés"
+msgstr "Propriétés"
 
 #: ../tvp-svn-helper/main.c:305
 msgid "Resolved Related Options:"
@@ -936,9 +928,8 @@ msgid "Revert Related Options:"
 msgstr "Revenir à une version antérieure:"
 
 #: ../tvp-svn-helper/main.c:321
-#, fuzzy
 msgid "Switch Related Options:"
-msgstr "Exécuter une mise à jour"
+msgstr "Options liées au switch"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Unlock Related Options:"
@@ -953,31 +944,27 @@ msgid "Not enough arguments provided"
 msgstr "Pas assez d'arguments fournis"
 
 #: ../tvp-svn-helper/tsh-blame.c:75
-#, fuzzy
 msgid "Blame failed"
-msgstr "Restaurer"
+msgstr "Echec du blame"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:66
-#, fuzzy
 msgid "Cleanup failed"
-msgstr "Nettoyer les verrous"
+msgstr "Echec du nettoyage"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:81
-#, fuzzy
 msgid "Cleanup finished"
-msgstr "Nettoyer les verrous"
+msgstr "Nettoyage terminé"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:95
-#, fuzzy
 msgid "Cleaning up ..."
-msgstr "Nettoyer les verrous"
+msgstr "Nettoyage..."
 
 #: ../tvp-svn-helper/tsh-commit.c:196 ../tvp-svn-helper/tsh-common.c:742
 #: ../tvp-svn-helper/tsh-copy.c:99 ../tvp-svn-helper/tsh-delete.c:103
 #: ../tvp-svn-helper/tsh-import.c:82 ../tvp-svn-helper/tsh-move.c:89
-#, fuzzy, c-format
+#, c-format
 msgid "At revision: %ld"
-msgstr "À la révision : %li"
+msgstr "À la révision : %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:201
 msgid "Nothing to do"
@@ -991,9 +978,8 @@ msgid "Completed"
 msgstr "Complété"
 
 #: ../tvp-svn-helper/tsh-commit.c:241
-#, fuzzy
 msgid "Commit Message"
-msgstr "Envoyer"
+msgstr "Commit Message"
 
 #: ../tvp-svn-helper/tsh-common.c:271
 msgid "Store password a plaintext?"
@@ -1006,9 +992,8 @@ msgid "Added"
 msgstr "Ajouté"
 
 #: ../tvp-svn-helper/tsh-common.c:516 ../tvp-svn-helper/tsh-common.c:800
-#, fuzzy
 msgid "Copied"
-msgstr "Complété"
+msgstr "Copié"
 
 #: ../tvp-svn-helper/tsh-common.c:517 ../tvp-svn-helper/tsh-common.c:523
 #: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:655
@@ -1017,19 +1002,18 @@ msgid "Deleted"
 msgstr "Effacé"
 
 #: ../tvp-svn-helper/tsh-common.c:518
-#, fuzzy
 msgid "Restored"
-msgstr "Fixer comme résolu"
+msgstr "Restauré"
 
 #: ../tvp-svn-helper/tsh-common.c:519
 #, fuzzy
 msgid "Reverted"
-msgstr "Restaurer"
+msgstr "Restauration"
 
 #: ../tvp-svn-helper/tsh-common.c:520
 #, fuzzy
 msgid "Revert failed"
-msgstr "Restaurer"
+msgstr "Echec de la restauration"
 
 #: ../tvp-svn-helper/tsh-common.c:522
 msgid "Skipped"
@@ -1059,14 +1043,12 @@ msgid "Transmitting"
 msgstr "Transmission"
 
 #: ../tvp-svn-helper/tsh-common.c:536
-#, fuzzy
 msgid "Locked"
-msgstr "Bloquer"
+msgstr "Verrouiller"
 
 #: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:802
-#, fuzzy
 msgid "Unlocked"
-msgstr "Débloquer"
+msgstr "Déverrouiller"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Lock failed"
