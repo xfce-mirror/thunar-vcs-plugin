@@ -347,26 +347,22 @@ msgid "Edit Properties"
 msgstr "Éditer les propriétés"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409
-#, fuzzy
 msgid "Menu|Relocate"
 msgstr "Menu|Transférer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-svn-helper/main.c:309
 #: ../tvp-svn-helper/tsh-relocate.c:114
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:217
-#, fuzzy
 msgid "Relocate"
 msgstr "Transférer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415
-#, fuzzy
 msgid "Menu|Resolved"
 msgstr "Menu|Résolu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-common.c:521 ../tvp-svn-helper/tsh-resolved.c:113
 #: ../tvp-svn-helper/tsh-resolved.c:126
-#, fuzzy
 msgid "Resolved"
 msgstr "Résolu"
 
@@ -379,9 +375,8 @@ msgid "Resolve"
 msgstr "Fixer comme résolu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:425
-#, fuzzy
 msgid "Menu|Revert"
-msgstr "Menu|Retour"
+msgstr "Menu|Revert"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:425 ../tvp-svn-helper/main.c:313
 #: ../tvp-svn-helper/tsh-revert.c:112 ../tvp-svn-helper/tsh-revert.c:125
@@ -398,9 +393,8 @@ msgid "Switch"
 msgstr "Modifier l'adresse du dépôt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:440
-#, fuzzy
 msgid "Menu|Unlock"
-msgstr "Débloquer"
+msgstr "Menu|Débloquer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:440 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-unlock.c:111
@@ -515,27 +509,23 @@ msgid "Print version information"
 msgstr "Afficher l'information sur la version"
 
 #: ../tvp-git-helper/main.c:85 ../tvp-svn-helper/main.c:112
-#, fuzzy
 msgid "Execute add action"
-msgstr "Exécuter une action"
+msgstr "Exécuter ajouter une action"
 
 #: ../tvp-git-helper/main.c:91 ../tvp-svn-helper/main.c:118
-#, fuzzy
 msgid "Execute blame action"
 msgstr "Exécuter un blâme"
 
 #: ../tvp-git-helper/main.c:97
 #, fuzzy
 msgid "Execute branch action"
-msgstr "Exécuter un branch"
+msgstr "Effectuer un branch"
 
 #: ../tvp-git-helper/main.c:103
-#, fuzzy
 msgid "Execute clean action"
 msgstr "Exécuter un nettoyage"
 
 #: ../tvp-git-helper/main.c:109
-#, fuzzy
 msgid "Execute clone action"
 msgstr "Exécuter un clonage"
 
@@ -545,9 +535,8 @@ msgid "Execute log action"
 msgstr "Exécuter une journalisation"
 
 #: ../tvp-git-helper/main.c:121 ../tvp-svn-helper/main.c:184
-#, fuzzy
 msgid "Execute move action"
-msgstr "Exécuter un déplacement"
+msgstr "Effectuer un déplacement"
 
 #: ../tvp-git-helper/main.c:127
 #, fuzzy
@@ -569,22 +558,18 @@ msgid "Add Related Options:"
 msgstr "Ajouter des options:"
 
 #: ../tvp-git-helper/main.c:155 ../tvp-svn-helper/main.c:253
-#, fuzzy
 msgid "Blame Related Options:"
 msgstr "Options liées à blame:"
 
 #: ../tvp-git-helper/main.c:159
-#, fuzzy
 msgid "Branch Related Options:"
-msgstr "Options liées à la branche:"
+msgstr "Options liées au branch:"
 
 #: ../tvp-git-helper/main.c:163 ../tvp-git-helper/main.c:167
-#, fuzzy
 msgid "Clone Related Options:"
 msgstr "Options liées au clonage:"
 
 #: ../tvp-git-helper/main.c:171 ../tvp-svn-helper/main.c:293
-#, fuzzy
 msgid "Log Related Options:"
 msgstr "Options liées à la journalisation:"
 
@@ -593,12 +578,10 @@ msgid "Move Related Options:"
 msgstr "Déplacer des options connexes:"
 
 #: ../tvp-git-helper/main.c:179
-#, fuzzy
 msgid "Reset Related Options:"
 msgstr "Options liées à la réinitialisation:"
 
 #: ../tvp-git-helper/main.c:183
-#, fuzzy
 msgid "Stash Related Options:"
 msgstr "Options liées à un stash:"
 
@@ -656,23 +639,20 @@ msgid "Include ignored files"
 msgstr "Inclure les fichiers ignorés"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:83
-#, fuzzy
 msgid "Only ignored files"
-msgstr "Afficher les Fichiers ignorés"
+msgstr "Uniquement les fichiers ignorés"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:93
 msgid "Force clean."
 msgstr "Forcer un nettoyage."
 
 #: ../tvp-git-helper/tgh-clone.c:58
-#, fuzzy
 msgid "Clone finished"
-msgstr "Nettoyer les verrous"
+msgstr "Clonage terminé"
 
 #: ../tvp-git-helper/tgh-clone.c:123
-#, fuzzy
 msgid "Cloning ..."
-msgstr "Nettoyer les verrous"
+msgstr "Clonage..."
 
 #: ../tvp-git-helper/tgh-common.c:80 ../tvp-svn-helper/tsh-add.c:73
 #: ../tvp-svn-helper/tsh-add.c:91 ../tvp-svn-helper/tsh-checkout.c:71
