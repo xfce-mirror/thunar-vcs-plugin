@@ -1073,28 +1073,24 @@ msgid "Lock failed"
 msgstr "Le verrouillage à échoué"
 
 #: ../tvp-svn-helper/tsh-common.c:539
-#, fuzzy
 msgid "Unlock failed"
-msgstr "Débloquer"
+msgstr "Echec du déblocage"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Exists"
 msgstr "Existe"
 
 #: ../tvp-svn-helper/tsh-common.c:541
-#, fuzzy
 msgid "Changelist set"
-msgstr "Pistes choisies"
+msgstr "Changelist appliquée"
 
 #: ../tvp-svn-helper/tsh-common.c:542
-#, fuzzy
 msgid "Changelist cleared"
-msgstr "Pistes autorisées"
+msgstr "Changelist effacée"
 
 #: ../tvp-svn-helper/tsh-common.c:543
-#, fuzzy
 msgid "Changelist moved"
-msgstr "Pistes déplacées"
+msgstr "Changelist déplacée"
 
 #: ../tvp-svn-helper/tsh-common.c:544
 msgid "Merge begin"
@@ -1109,24 +1105,20 @@ msgid "Replace"
 msgstr "Remplacer"
 
 #: ../tvp-svn-helper/tsh-common.c:548
-#, fuzzy
 msgid "Property added"
-msgstr "Éditer les propriétés"
+msgstr "Propriété ajoutée"
 
 #: ../tvp-svn-helper/tsh-common.c:549
-#, fuzzy
 msgid "Property modified"
-msgstr "Éditer les propriétés"
+msgstr "Propriété modifiée"
 
 #: ../tvp-svn-helper/tsh-common.c:550
-#, fuzzy
 msgid "Property deleted"
-msgstr "Éditer les propriétés"
+msgstr "Propriété effacée"
 
 #: ../tvp-svn-helper/tsh-common.c:551
-#, fuzzy
 msgid "Property nonexisting"
-msgstr "Éditer les propriétés"
+msgstr "Propriété non existante"
 
 #: ../tvp-svn-helper/tsh-common.c:552
 #, fuzzy
@@ -1139,19 +1131,16 @@ msgid "Revision property deleted"
 msgstr "Restaurer"
 
 #: ../tvp-svn-helper/tsh-common.c:554
-#, fuzzy
 msgid "Merge completed"
-msgstr "Complété"
+msgstr "Merge complété"
 
 #: ../tvp-svn-helper/tsh-common.c:555
-#, fuzzy
 msgid "Tree conflict"
-msgstr "Complété"
+msgstr "Conflict dans l'arbre"
 
 #: ../tvp-svn-helper/tsh-common.c:556
-#, fuzzy
 msgid "External failed"
-msgstr "Externe"
+msgstr "Echec dans l'external"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "Inapplicable"
@@ -1178,9 +1167,8 @@ msgid "Merged"
 msgstr "Fusionné"
 
 #: ../tvp-svn-helper/tsh-common.c:624 ../tvp-svn-helper/tsh-common.c:659
-#, fuzzy
 msgid "Conflicted"
-msgstr "Complété"
+msgstr "Conflictuel"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1193,9 +1181,8 @@ msgid "Ignored"
 msgstr "Ignoré"
 
 #: ../tvp-svn-helper/tsh-common.c:663
-#, fuzzy
 msgid "Incomplete"
-msgstr "Complété"
+msgstr "Incomplet"
 
 #: ../tvp-svn-helper/tsh-copy.c:104
 msgid "Local copy"
@@ -1210,9 +1197,8 @@ msgid "Local delete"
 msgstr "Suppression locale"
 
 #: ../tvp-svn-helper/tsh-delete.c:145
-#, fuzzy
 msgid "Delete Message"
-msgstr "Envoyer"
+msgstr "Effacer message"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
@@ -1229,19 +1215,16 @@ msgid "Remember"
 msgstr "Se souvenir"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:86
-#, fuzzy
 msgid "Certificate"
-msgstr "Notification"
+msgstr "Certificat"
 
 #: ../tvp-svn-helper/tsh-import.c:125
-#, fuzzy
 msgid "Import Message"
-msgstr "Envoyer"
+msgstr "Importer Message"
 
 #: ../tvp-svn-helper/tsh-log.c:113
-#, fuzzy
 msgid "Log failed"
-msgstr "Débloquer"
+msgstr "Echec de la journalisation"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
@@ -1256,9 +1239,8 @@ msgid "Login"
 msgstr "Se connecter"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:93
-#, fuzzy
 msgid "State"
-msgstr "État"
+msgstr "Etat"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:118
 msgid "Log Message"
@@ -1283,9 +1265,8 @@ msgid "Set property failed"
 msgstr "Restaurer"
 
 #: ../tvp-svn-helper/tsh-properties.c:104
-#, fuzzy
 msgid "Properties failed"
-msgstr "Éditer les propriétés"
+msgstr "Echec des propriétés"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:132
 msgid "Value"
@@ -1312,9 +1293,8 @@ msgstr "Soi-même"
 #. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:218
 #: ../tvp-svn-helper/tsh-status-dialog.c:191
-#, fuzzy
 msgid "Immediate files"
-msgstr "Restaurer"
+msgstr "Fichiers immédiats"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
@@ -1324,14 +1304,12 @@ msgstr "Restaurer"
 #. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:209
-#, fuzzy
 msgid "Recursive"
-msgstr "Fixer comme résolu"
+msgstr "Récursif"
 
 #: ../tvp-svn-helper/tsh-relocate.c:71
-#, fuzzy
 msgid "Relocate failed"
-msgstr "Restaurer"
+msgstr "Echec du transfert"
 
 #: ../tvp-svn-helper/tsh-relocate.c:86
 msgid "Relocate finished"
