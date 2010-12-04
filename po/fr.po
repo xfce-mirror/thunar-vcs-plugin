@@ -813,9 +813,8 @@ msgid "Execute lock action"
 msgstr "Exécuter un verrouillage"
 
 #: ../tvp-svn-helper/main.c:190
-#, fuzzy
 msgid "Execute properties action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter une propriété"
 
 #: ../tvp-svn-helper/main.c:196
 #, fuzzy
@@ -827,9 +826,8 @@ msgid "Execute relocate action"
 msgstr "Effectuer un transfert"
 
 #: ../tvp-svn-helper/main.c:208
-#, fuzzy
 msgid "Execute revert action"
-msgstr "Exécuter une extraction"
+msgstr "Exécuter une restauration"
 
 #: ../tvp-svn-helper/main.c:220
 msgid "Execute switch action"
@@ -895,14 +893,12 @@ msgid "Resolved Related Options:"
 msgstr "Options connexes résolues:"
 
 #: ../tvp-svn-helper/main.c:309
-#, fuzzy
 msgid "Relocate Related Options:"
-msgstr "Exécuter une mise à jour"
+msgstr "Options liées au transfert:"
 
 #: ../tvp-svn-helper/main.c:313
-#, fuzzy
 msgid "Revert Related Options:"
-msgstr "Revenir à une version antérieure:"
+msgstr "Options liées à la restauration:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Switch Related Options:"
@@ -983,12 +979,10 @@ msgid "Restored"
 msgstr "Restauré"
 
 #: ../tvp-svn-helper/tsh-common.c:519
-#, fuzzy
 msgid "Reverted"
 msgstr "Restauration"
 
 #: ../tvp-svn-helper/tsh-common.c:520
-#, fuzzy
 msgid "Revert failed"
 msgstr "Echec de la restauration"
 
@@ -1080,14 +1074,12 @@ msgid "Property nonexisting"
 msgstr "Propriété non existante"
 
 #: ../tvp-svn-helper/tsh-common.c:552
-#, fuzzy
 msgid "Revision property set"
-msgstr "Restaurer"
+msgstr "Propriété de la révision ajoutée"
 
 #: ../tvp-svn-helper/tsh-common.c:553
-#, fuzzy
 msgid "Revision property deleted"
-msgstr "Restaurer"
+msgstr "Propriété de la révision supprimée"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Merge completed"
@@ -1219,9 +1211,8 @@ msgstr "Notification"
 
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:81
-#, fuzzy
 msgid "Set property failed"
-msgstr "Restaurer"
+msgstr "Echec de l'ajout de la propriété"
 
 #: ../tvp-svn-helper/tsh-properties.c:104
 msgid "Properties failed"
