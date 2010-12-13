@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Jeff Bailes <thepizzaking@gamil.com>, 2009.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunart-svn-plugin\n"
@@ -31,13 +31,12 @@ msgid "Add"
 msgstr "Add"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
-#, fuzzy
 msgid "Menu|Bisect"
-msgstr "Blame"
+msgstr "Bisect"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Bisect"
-msgstr ""
+msgstr "Bisect"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:267
 #: ../thunar-vcs-plugin/tvp-svn-action.c:306
@@ -52,7 +51,6 @@ msgid "Blame"
 msgstr "Blame"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
-#, fuzzy
 msgid "Menu|Branch"
 msgstr "Branch"
 
@@ -74,25 +72,22 @@ msgid "Checkout"
 msgstr "Checkout"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271
-#, fuzzy
 msgid "Menu|Clean"
-msgstr "Cleanup"
+msgstr "Clean"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271 ../tvp-git-helper/main.c:163
 #: ../tvp-git-helper/tgh-clean.c:141 ../tvp-git-helper/tgh-clean-dialog.c:97
-#, fuzzy
 msgid "Clean"
-msgstr "Cleanup"
+msgstr "Clean"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
-#, fuzzy
 msgid "Menu|Clone"
-msgstr "Copy"
+msgstr "Clone"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273 ../tvp-git-helper/main.c:167
 #: ../tvp-git-helper/tgh-clone.c:112
 msgid "Clone"
-msgstr ""
+msgstr "Clone"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:333
@@ -117,32 +112,28 @@ msgid "Diff"
 msgstr "Diff"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
-#, fuzzy
 msgid "Menu|Fetch"
-msgstr "Switch"
+msgstr "Fetch"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Fetch"
-msgstr ""
+msgstr "Fetch"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
-#, fuzzy
 msgid "Menu|Grep"
-msgstr "Cleanup"
+msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Grep"
-msgstr ""
+msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
-#, fuzzy
 msgid "Menu|Init"
-msgstr "Info"
+msgstr "Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
-#, fuzzy
 msgid "Init"
-msgstr "Infinity"
+msgstr "Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 #: ../thunar-vcs-plugin/tvp-svn-action.c:378
@@ -157,14 +148,12 @@ msgid "Log"
 msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
-#, fuzzy
 msgid "Menu|Merge"
-msgstr "Move"
+msgstr "Merge"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
-#, fuzzy
 msgid "Merge"
-msgstr "Merged"
+msgstr "Merge"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393
@@ -178,37 +167,32 @@ msgid "Move"
 msgstr "Move"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
-#, fuzzy
 msgid "Menu|Pull"
-msgstr "Blame"
+msgstr "Pull"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Pull"
-msgstr ""
+msgstr "Pull"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
-#, fuzzy
 msgid "Menu|Push"
-msgstr "Status"
+msgstr "Push"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Push"
-msgstr ""
+msgstr "Push"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
-#, fuzzy
 msgid "Menu|Rebase"
-msgstr "Resolve"
+msgstr "Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
-#, fuzzy
 msgid "Rebase"
-msgstr "Reset"
+msgstr "Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
-#, fuzzy
 msgid "Menu|Reset"
-msgstr "Revert"
+msgstr "Reset"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
@@ -216,36 +200,32 @@ msgid "Reset"
 msgstr "Reset"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
-#, fuzzy
 msgid "Menu|Remove"
-msgstr "Resolve"
+msgstr "Remove"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
-#, fuzzy
 msgid "Remove"
-msgstr "Resolve"
+msgstr "Remove"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
-#, fuzzy
 msgid "Menu|Show"
-msgstr "Log"
+msgstr "Show"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Show"
-msgstr ""
+msgstr "Show"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:290
-#, fuzzy
 msgid "Menu|Stash"
-msgstr "Status"
+msgstr "Stash"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:290 ../tvp-git-helper/main.c:183
 #: ../tvp-git-helper/tgh-stash-dialog.c:264
-#, fuzzy
 msgid "Stash"
-msgstr "Status"
+msgstr "Stash"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
@@ -262,13 +242,12 @@ msgid "Status"
 msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
-#, fuzzy
 msgid "Menu|Tag"
-msgstr "Log"
+msgstr "Tag"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Tag"
-msgstr ""
+msgstr "Tag"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:302
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
@@ -480,34 +459,36 @@ msgstr "Depth:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:306
 msgid "Exclude"
 msgstr "Exclude"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:312
 msgid "Empty"
 msgstr "Empty"
 
 #. Translators: svn recursion depth infotmation
-#. * Files depth means this file/direcotry and all of it's files are checked out
-#.
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:318
 msgid "Files"
 msgstr "Files"
 
 #. Translators: svn recursion depth infotmation
-#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
-#.
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:324
 #: ../tvp-svn-helper/tsh-properties-dialog.c:227
 #: ../tvp-svn-helper/tsh-status-dialog.c:200
@@ -515,8 +496,9 @@ msgid "Immediates"
 msgstr "Immediates"
 
 #. Translators: svn recursion depth infotmation
-#. * Infinity depth means this file/direcotry is checked out with full recursion
-#.
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
 msgid "Infinity"
 msgstr "Infinity"
@@ -538,14 +520,12 @@ msgid "Execute branch action"
 msgstr "Execute branch action"
 
 #: ../tvp-git-helper/main.c:103
-#, fuzzy
 msgid "Execute clean action"
-msgstr "Execute cleanup action"
+msgstr "Execute clean action"
 
 #: ../tvp-git-helper/main.c:109
-#, fuzzy
 msgid "Execute clone action"
-msgstr "Execute log action"
+msgstr "Execute clone action"
 
 #: ../tvp-git-helper/main.c:115 ../tvp-svn-helper/main.c:178
 msgid "Execute log action"
@@ -560,9 +540,8 @@ msgid "Execute reset action"
 msgstr "Execute reset action"
 
 #: ../tvp-git-helper/main.c:133
-#, fuzzy
 msgid "Execute stash action"
-msgstr "Execute status action"
+msgstr "Execute stash action"
 
 #: ../tvp-git-helper/main.c:139 ../tvp-svn-helper/main.c:214
 msgid "Execute status action"
@@ -581,9 +560,8 @@ msgid "Branch Related Options:"
 msgstr "Branch Related Options:"
 
 #: ../tvp-git-helper/main.c:163 ../tvp-git-helper/main.c:167
-#, fuzzy
 msgid "Clone Related Options:"
-msgstr "Copy Related Options:"
+msgstr "Clone Related Options:"
 
 #: ../tvp-git-helper/main.c:171 ../tvp-svn-helper/main.c:293
 msgid "Log Related Options:"
@@ -598,9 +576,8 @@ msgid "Reset Related Options:"
 msgstr "Reset Related Options:"
 
 #: ../tvp-git-helper/main.c:183
-#, fuzzy
 msgid "Stash Related Options:"
-msgstr "Status Related Options:"
+msgstr "Stash Related Options:"
 
 #: ../tvp-git-helper/main.c:187 ../tvp-svn-helper/main.c:317
 msgid "Status Related Options:"
@@ -645,36 +622,31 @@ msgstr "Path"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:57
 msgid "Remove directories."
-msgstr ""
+msgstr "Remove directories."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:69
-#, fuzzy
 msgid "Excldue ignored files"
-msgstr "Show Ignored Files"
+msgstr "Excldue ignored files"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:77
-#, fuzzy
 msgid "Include ignored files"
-msgstr "Show Ignored Files"
+msgstr "Include ignored files"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:83
-#, fuzzy
 msgid "Only ignored files"
-msgstr "Show Ignored Files"
+msgstr "Only ignored files"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:93
 msgid "Force clean."
-msgstr ""
+msgstr "Force clean."
 
 #: ../tvp-git-helper/tgh-clone.c:58
-#, fuzzy
 msgid "Clone finished"
-msgstr "Cleanup finished"
+msgstr "Clone finished"
 
 #: ../tvp-git-helper/tgh-clone.c:123
-#, fuzzy
 msgid "Cloning ..."
-msgstr "Cleaning up ..."
+msgstr "Cloning ..."
 
 #: ../tvp-git-helper/tgh-common.c:80 ../tvp-svn-helper/tsh-add.c:73
 #: ../tvp-svn-helper/tsh-add.c:91 ../tvp-svn-helper/tsh-checkout.c:71
@@ -700,14 +672,12 @@ msgid "Select/Unselect all"
 msgstr "Select/Unselect all"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:131
-#, fuzzy
 msgid "AuthorDate"
-msgstr "Author"
+msgstr "AuthorDate"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:143
-#, fuzzy
 msgid "CommitDate"
-msgstr "Commit"
+msgstr "CommitDate"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:149
 #: ../tvp-svn-helper/tsh-log-dialog.c:142
@@ -716,9 +686,8 @@ msgstr "Message"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:187
 #: ../tvp-git-helper/tgh-stash-dialog.c:198
-#, fuzzy
 msgid "Changes"
-msgstr "Changed"
+msgstr "Changes"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:194
 #: ../tvp-git-helper/tgh-stash-dialog.c:205
@@ -726,18 +695,16 @@ msgid "File"
 msgstr "File"
 
 #: ../tvp-git-helper/tgh-move.c:58
-#, fuzzy
 msgid "Move finished"
-msgstr "Cleanup finished"
+msgstr "Move finished"
 
 #: ../tvp-git-helper/tgh-move.c:135 ../tvp-svn-helper/tsh-move.c:137
 msgid "Move To"
 msgstr "Move To"
 
 #: ../tvp-git-helper/tgh-move.c:151
-#, fuzzy
 msgid "Move ..."
-msgstr "Move"
+msgstr "Move ..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:87
 #: ../tvp-svn-helper/tsh-log-dialog.c:180
@@ -747,17 +714,15 @@ msgstr "Action"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:108
 msgid "Notify"
-msgstr ""
+msgstr "Notify"
 
 #: ../tvp-git-helper/tgh-reset.c:58
-#, fuzzy
 msgid "Reset finished"
-msgstr "Relocate finished"
+msgstr "Reset finished"
 
 #: ../tvp-git-helper/tgh-reset.c:143
-#, fuzzy
 msgid "Reset ..."
-msgstr "Reset"
+msgstr "Reset ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:162
 #: ../tvp-svn-helper/tsh-properties-dialog.c:126
@@ -766,20 +731,20 @@ msgstr "Name"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:174
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:438
 msgid "Stash description:"
-msgstr ""
+msgstr "Stash description:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:574
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr ""
+msgstr "Are you sure you want to drop %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:602
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "Are you sure you want to clear all stash?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:67
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
@@ -914,7 +879,8 @@ msgstr "Lock Related Options:"
 msgid "Properties Related Options:"
 msgstr "Properties Related Options:"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
 msgid "Properties"
@@ -1256,21 +1222,23 @@ msgstr "Value"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:207
 #: ../tvp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
 msgstr "Self"
 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are updated
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are shown
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:218
 #: ../tvp-svn-helper/tsh-status-dialog.c:191
 msgid "Immediate files"
@@ -1278,10 +1246,10 @@ msgstr "Immediate files"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
@@ -1355,11 +1323,9 @@ msgstr "Other failure."
 msgid "Trust"
 msgstr "Trust"
 
-#, fuzzy
 #~ msgid "Execute remove action"
 #~ msgstr "Execute move action"
 
-#, fuzzy
 #~ msgid "Remove Related Options:"
 #~ msgstr "Resolved Related Options:"
 
