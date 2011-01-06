@@ -263,112 +263,114 @@ msgstr "SVN"
 #: ../thunar-vcs-plugin/tvp-provider.c:493
 #: ../thunar-vcs-plugin/tvp-provider.c:534
 msgid "GIT"
-msgstr ""
+msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
+#, fuzzy
 msgid "Menu|Changelist"
-msgstr ""
+msgstr "Μενού|Changelist"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
+#, fuzzy
 msgid "Changelist"
-msgstr ""
+msgstr "Changelist"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328
 msgid "Menu|Cleanup"
-msgstr ""
+msgstr "Μενού|Εκκαθάριση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328 ../tvp-svn-helper/main.c:265
 msgid "Cleanup"
-msgstr ""
+msgstr "Εκκαθάριση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338
 msgid "Menu|Copy"
-msgstr ""
+msgstr "Μενού|Αντιγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338 ../tvp-svn-helper/main.c:273
 #: ../tvp-svn-helper/tsh-copy.c:166
 msgid "Copy"
-msgstr ""
+msgstr "Αντιγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343
 msgid "Menu|Delete"
-msgstr ""
+msgstr "Μενού|Διαγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-delete.c:127 ../tvp-svn-helper/tsh-delete.c:140
 msgid "Delete"
-msgstr ""
+msgstr "Διαγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353
 msgid "Menu|Export"
-msgstr ""
+msgstr "Μενού|Εξαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-export.c:107 ../tvp-svn-helper/tsh-export.c:125
 msgid "Export"
-msgstr ""
+msgstr "Εξαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358
 msgid "Menu|Import"
-msgstr ""
+msgstr "Μενού|Εισαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-import.c:102 ../tvp-svn-helper/tsh-import.c:120
 msgid "Import"
-msgstr ""
+msgstr "Εισαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Menu|Info"
-msgstr ""
+msgstr "Μενού|Πληροφορίες"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Info"
-msgstr ""
+msgstr "Πληροφορίες"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373
 msgid "Menu|Lock"
-msgstr ""
+msgstr "Μενού|Κλείδωμα"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-lock.c:130 ../tvp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
-msgstr ""
+msgstr "Κλείδωμα"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Menu|Edit Properties"
-msgstr ""
+msgstr "Μενού|Επεξεργασία ιδιοτήτων"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Edit Properties"
-msgstr ""
+msgstr "Επεξεργασία ιδιοτήτων"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409
 msgid "Menu|Relocate"
-msgstr ""
+msgstr "Μενού|Επανατοποθέτηση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-svn-helper/main.c:309
 #: ../tvp-svn-helper/tsh-relocate.c:114
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:217
 msgid "Relocate"
-msgstr ""
+msgstr "Επανατοποθέτηση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415
 msgid "Menu|Resolved"
-msgstr ""
+msgstr "Μενού|Επιλύσιμο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-common.c:521 ../tvp-svn-helper/tsh-resolved.c:113
 #: ../tvp-svn-helper/tsh-resolved.c:126
 msgid "Resolved"
-msgstr ""
+msgstr "Επιλύσιμο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
 msgid "Menu|Resolve"
-msgstr ""
+msgstr "Μενού|Επίλυση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
 msgid "Resolve"
-msgstr ""
+msgstr "Επίλυση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:425
 msgid "Menu|Revert"
