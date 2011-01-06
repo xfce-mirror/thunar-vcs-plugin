@@ -511,79 +511,79 @@ msgstr "Εμφάνιση πληροφοριών έκδοσης"
 
 #: ../tvp-git-helper/main.c:85 ../tvp-svn-helper/main.c:112
 msgid "Execute add action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής προσθήκης"
 
 #: ../tvp-git-helper/main.c:91 ../tvp-svn-helper/main.c:118
 msgid "Execute blame action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής συσχέτισης"
 
 #: ../tvp-git-helper/main.c:97
 msgid "Execute branch action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής διακλάδωσης"
 
 #: ../tvp-git-helper/main.c:103
 msgid "Execute clean action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής καθαρισμού"
 
 #: ../tvp-git-helper/main.c:109
 msgid "Execute clone action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής κλωνοποίησης"
 
 #: ../tvp-git-helper/main.c:115 ../tvp-svn-helper/main.c:178
 msgid "Execute log action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής καταγραφής"
 
 #: ../tvp-git-helper/main.c:121 ../tvp-svn-helper/main.c:184
 msgid "Execute move action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής μετακίνησης"
 
 #: ../tvp-git-helper/main.c:127
 msgid "Execute reset action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής επαναφοράς"
 
 #: ../tvp-git-helper/main.c:133
 msgid "Execute stash action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής παραμέρισης"
 
 #: ../tvp-git-helper/main.c:139 ../tvp-svn-helper/main.c:214
 msgid "Execute status action"
-msgstr ""
+msgstr "Εκτέλεση της εντολής κατάστασης"
 
 #: ../tvp-git-helper/main.c:151 ../tvp-svn-helper/main.c:249
 msgid "Add Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την προσθήκη:"
 
 #: ../tvp-git-helper/main.c:155 ../tvp-svn-helper/main.c:253
 msgid "Blame Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με τη συσχέτιση:"
 
 #: ../tvp-git-helper/main.c:159
 msgid "Branch Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με τη διακλάδωση:"
 
 #: ../tvp-git-helper/main.c:163 ../tvp-git-helper/main.c:167
 msgid "Clone Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την κλωνοποίηση:"
 
 #: ../tvp-git-helper/main.c:171 ../tvp-svn-helper/main.c:293
 msgid "Log Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την καταγραφή:"
 
 #: ../tvp-git-helper/main.c:175 ../tvp-svn-helper/main.c:297
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με τη μετακίνηση:"
 
 #: ../tvp-git-helper/main.c:179
 msgid "Reset Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την επαναφορά:"
 
 #: ../tvp-git-helper/main.c:183
 msgid "Stash Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την παραμέριση:"
 
 #: ../tvp-git-helper/main.c:187 ../tvp-svn-helper/main.c:317
 msgid "Status Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την κατάσταση:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:91
 #: ../tvp-svn-helper/tsh-blame-dialog.c:94
