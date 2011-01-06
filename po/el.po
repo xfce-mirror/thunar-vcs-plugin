@@ -10,9 +10,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: GREECE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Greek\n"
-"X-Poedit-Country: GREECE\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
@@ -59,12 +59,14 @@ msgstr "Διακλάδωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323
+#, fuzzy
 msgid "Menu|Checkout"
 msgstr "Μενού|Έλεγχος εξόδου"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/tsh-checkout.c:98 ../tvp-svn-helper/tsh-checkout.c:110
+#, fuzzy
 msgid "Checkout"
 msgstr "Έλεγχος εξόδου"
 
@@ -117,10 +119,12 @@ msgid "Fetch"
 msgstr "Λήψη"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
+#, fuzzy
 msgid "Menu|Grep"
 msgstr "Μενού|Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
+#, fuzzy
 msgid "Grep"
 msgstr "Grep"
 
@@ -188,11 +192,13 @@ msgid "Rebase"
 msgstr "Αναθεμελίωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
+#, fuzzy
 msgid "Menu|Reset"
 msgstr "Μενού|Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
+#, fuzzy
 msgid "Reset"
 msgstr "Επαναφορά"
 
@@ -355,20 +361,24 @@ msgid "Relocate"
 msgstr "Επανατοποθέτηση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415
+#, fuzzy
 msgid "Menu|Resolved"
 msgstr "Μενού|Επιλύσιμο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-common.c:521 ../tvp-svn-helper/tsh-resolved.c:113
 #: ../tvp-svn-helper/tsh-resolved.c:126
+#, fuzzy
 msgid "Resolved"
 msgstr "Επιλύσιμο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
+#, fuzzy
 msgid "Menu|Resolve"
 msgstr "Μενού|Επίλυση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
+#, fuzzy
 msgid "Resolve"
 msgstr "Επίλυση"
 
@@ -538,6 +548,7 @@ msgid "Execute move action"
 msgstr "Εκτέλεση της εντολής μετακίνησης"
 
 #: ../tvp-git-helper/main.c:127
+#, fuzzy
 msgid "Execute reset action"
 msgstr "Εκτέλεση της εντολής επαναφοράς"
 
@@ -574,6 +585,7 @@ msgid "Move Related Options:"
 msgstr "Επιλογές σχετικά με τη μετακίνηση:"
 
 #: ../tvp-git-helper/main.c:179
+#, fuzzy
 msgid "Reset Related Options:"
 msgstr "Επιλογές σχετικά με την επαναφορά:"
 
@@ -719,10 +731,12 @@ msgid "Notify"
 msgstr "Ειδοποίηση"
 
 #: ../tvp-git-helper/tgh-reset.c:58
+#, fuzzy
 msgid "Reset finished"
 msgstr "Η επαναφορά ολοκληρώθηκε"
 
 #: ../tvp-git-helper/tgh-reset.c:143
+#, fuzzy
 msgid "Reset ..."
 msgstr "Επαναφορά ..."
 
@@ -778,10 +792,12 @@ msgid "Transfer"
 msgstr "Μεταφορά"
 
 #: ../tvp-svn-helper/main.c:124
+#, fuzzy
 msgid "Execute changelist action"
 msgstr "Εκτέλεση ενέργειας changelist"
 
 #: ../tvp-svn-helper/main.c:130
+#, fuzzy
 msgid "Execute checkout action"
 msgstr "Εκτέλεση ενέργειας ελέγχου εξόδου"
 
@@ -818,6 +834,7 @@ msgid "Execute properties action"
 msgstr "Εκτέλεση ενέργειας προτιμήσεων"
 
 #: ../tvp-svn-helper/main.c:196
+#, fuzzy
 msgid "Execute resolved action"
 msgstr "Εκτέλεση ενέργειας επίλυσης"
 
@@ -843,74 +860,75 @@ msgstr "Εκτέλεση ενέργειας ανανέωσης"
 
 #: ../tvp-svn-helper/main.c:257
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με το changelist "
 
 #: ../tvp-svn-helper/main.c:261
+#, fuzzy
 msgid "Checkout Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με τον έλεγχο εξόδου"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με τη εκκαθάριση"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Commit Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την υποβολή"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την αντιγραφή"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με τη διαγραφή"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την εξαγωγή"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την εισαγωγή"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με το κλείδωμα"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Properties Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με τις ιδιότητες"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
 msgid "Properties"
-msgstr ""
+msgstr "Ιδιότητες"
 
 #: ../tvp-svn-helper/main.c:305
 msgid "Resolved Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την επίλυση"
 
 #: ../tvp-svn-helper/main.c:309
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την επανατοποθέτηση"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την επαναφορά"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την αλλαγή"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με το ξεκλείδωμα"
 
 #: ../tvp-svn-helper/main.c:329
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Επιλογές σχετικά με την ανανέωση"
 
 #: ../tvp-svn-helper/main.c:372
 msgid "Not enough arguments provided"
