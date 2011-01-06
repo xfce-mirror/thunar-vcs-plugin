@@ -142,79 +142,79 @@ msgstr "Μενού|Καταγραφή"
 #: ../tvp-git-helper/tgh-log-dialog.c:215 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-log-dialog.c:208
 msgid "Log"
-msgstr ""
+msgstr "Καταγραφή"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
 msgid "Menu|Merge"
-msgstr ""
+msgstr "Μενού|Συγχώνευση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
 msgid "Merge"
-msgstr ""
+msgstr "Συγχώνευση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393
 msgid "Menu|Move"
-msgstr ""
+msgstr "Μενού|Μεταφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393 ../tvp-git-helper/main.c:175
 #: ../tvp-svn-helper/main.c:297 ../tvp-svn-helper/tsh-move.c:157
 msgid "Move"
-msgstr ""
+msgstr "Μεταφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Pull"
-msgstr ""
+msgstr "Μενού|Τράβηγμα"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Pull"
-msgstr ""
+msgstr "Τράβηγμα"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Push"
-msgstr ""
+msgstr "Μενού|Σπρώξιμο"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Push"
-msgstr ""
+msgstr "Σπρώξιμο"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Rebase"
-msgstr ""
+msgstr "Μενού|Αναθεμελίωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Rebase"
-msgstr ""
+msgstr "Αναθεμελίωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Menu|Reset"
-msgstr ""
+msgstr "Μενού|Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
 msgid "Reset"
-msgstr ""
+msgstr "Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Remove"
-msgstr ""
+msgstr "Μενού|Αφαίρεση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Remove"
-msgstr ""
+msgstr "Αφαίρεση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Menu|Show"
-msgstr ""
+msgstr "Μενού|Εμφάνιση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Show"
-msgstr ""
+msgstr "Εμφάνιση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:290
 msgid "Menu|Stash"
-msgstr ""
+msgstr "Μενού|Παραμέριση"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
@@ -222,12 +222,12 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:290 ../tvp-git-helper/main.c:183
 #: ../tvp-git-helper/tgh-stash-dialog.c:264
 msgid "Stash"
-msgstr ""
+msgstr "Παραμέριση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
 msgid "Menu|Status"
-msgstr ""
+msgstr "Μενού|Κατάσταση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430 ../tvp-git-helper/main.c:187
@@ -236,28 +236,28 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
-msgstr ""
+msgstr "Κατάσταση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Menu|Tag"
-msgstr ""
+msgstr "Μενού|Επισήμανση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Tag"
-msgstr ""
+msgstr "Επισήμανση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:302
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr ""
+msgstr "Η ενέργεια %s δεν έχει υλοποιηθεί"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
 #: ../thunar-vcs-plugin/tvp-provider.c:464
 #: ../thunar-vcs-plugin/tvp-provider.c:527
 msgid "SVN"
-msgstr ""
+msgstr "SVN"
 
 #. append the git submenu action
 #: ../thunar-vcs-plugin/tvp-provider.c:493
