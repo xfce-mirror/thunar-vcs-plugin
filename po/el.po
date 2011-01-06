@@ -932,124 +932,127 @@ msgstr "Επιλογές σχετικά με την ανανέωση"
 
 #: ../tvp-svn-helper/main.c:372
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Δε δόθηκαν αρκετά ορίσματα"
 
 #: ../tvp-svn-helper/tsh-blame.c:75
 msgid "Blame failed"
-msgstr ""
+msgstr "Η συσχέτιση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:66
 msgid "Cleanup failed"
-msgstr ""
+msgstr "Η εκκαθάριση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:81
 msgid "Cleanup finished"
-msgstr ""
+msgstr "Η εκκαθάριση ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:95
 msgid "Cleaning up ..."
-msgstr ""
+msgstr "Εκκαθάριση ..."
 
 #: ../tvp-svn-helper/tsh-commit.c:196 ../tvp-svn-helper/tsh-common.c:742
 #: ../tvp-svn-helper/tsh-copy.c:99 ../tvp-svn-helper/tsh-delete.c:103
 #: ../tvp-svn-helper/tsh-import.c:82 ../tvp-svn-helper/tsh-move.c:89
 #, c-format
 msgid "At revision: %ld"
-msgstr ""
+msgstr "Στην αναθεώρηση: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:201
 msgid "Nothing to do"
-msgstr ""
+msgstr "Δεν έχει τίποτα να γίνει"
 
 #: ../tvp-svn-helper/tsh-commit.c:209 ../tvp-svn-helper/tsh-common.c:526
 #: ../tvp-svn-helper/tsh-common.c:528 ../tvp-svn-helper/tsh-copy.c:110
 #: ../tvp-svn-helper/tsh-delete.c:114 ../tvp-svn-helper/tsh-import.c:87
 #: ../tvp-svn-helper/tsh-move.c:100
 msgid "Completed"
-msgstr ""
+msgstr "Ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-commit.c:241
 msgid "Commit Message"
-msgstr ""
+msgstr "Μήνυμα υποβολής"
 
 #: ../tvp-svn-helper/tsh-common.c:271
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Αποθήκευση του κωδικού σε απλό αρχείο κειμένου;"
 
 #: ../tvp-svn-helper/tsh-common.c:515 ../tvp-svn-helper/tsh-common.c:524
 #: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:653
 #: ../tvp-svn-helper/tsh-common.c:700 ../tvp-svn-helper/tsh-common.c:791
 msgid "Added"
-msgstr ""
+msgstr "Προστέθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:516 ../tvp-svn-helper/tsh-common.c:800
 msgid "Copied"
-msgstr ""
+msgstr "Αντιγράφτηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:517 ../tvp-svn-helper/tsh-common.c:523
 #: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:655
 #: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:793
 msgid "Deleted"
-msgstr ""
+msgstr "Διαγράφηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:518
+#, fuzzy
 msgid "Restored"
-msgstr ""
+msgstr "Επαναφέρθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:519
+#, fuzzy
 msgid "Reverted"
-msgstr ""
+msgstr "Ανακλήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:520
+#, fuzzy
 msgid "Revert failed"
-msgstr ""
+msgstr "Η ανάκληση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-common.c:522
 msgid "Skipped"
-msgstr ""
+msgstr "Προσπεράστηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:525
 msgid "Updated"
-msgstr ""
+msgstr "Ενημερώθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:527 ../tvp-svn-helper/tsh-common.c:529
 #: ../tvp-svn-helper/tsh-common.c:662
 msgid "External"
-msgstr ""
+msgstr "Εξωτερικό"
 
 #: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:657
 #: ../tvp-svn-helper/tsh-common.c:706 ../tvp-svn-helper/tsh-common.c:796
 msgid "Modified"
-msgstr ""
+msgstr "Τροποποιήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:533 ../tvp-svn-helper/tsh-common.c:656
 #: ../tvp-svn-helper/tsh-common.c:709 ../tvp-svn-helper/tsh-common.c:789
 msgid "Replaced"
-msgstr ""
+msgstr "Αντικαταστάθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:534
 msgid "Transmitting"
-msgstr ""
+msgstr "Μεταφορά"
 
 #: ../tvp-svn-helper/tsh-common.c:536
 msgid "Locked"
-msgstr ""
+msgstr "Κλειδωμένο"
 
 #: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:802
 msgid "Unlocked"
-msgstr ""
+msgstr "Ξεκλειδώθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Lock failed"
-msgstr ""
+msgstr "Το κλείδωμα απέτυχε"
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Unlock failed"
-msgstr ""
+msgstr "Το ξεκλείδωμα απέτυχε"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Exists"
-msgstr ""
+msgstr "Υπάρχει"
 
 #: ../tvp-svn-helper/tsh-common.c:541
 msgid "Changelist set"
@@ -1065,7 +1068,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:544
 msgid "Merge begin"
-msgstr ""
+msgstr "Η συγχώνευση ξεκίνησε"
 
 #: ../tvp-svn-helper/tsh-common.c:545
 msgid "Foreign merge begin"
@@ -1073,151 +1076,154 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:546
 msgid "Replace"
-msgstr ""
+msgstr "Αντικατάσταση"
 
 #: ../tvp-svn-helper/tsh-common.c:548
 msgid "Property added"
-msgstr ""
+msgstr "Η ιδιότητα προστέθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:549
 msgid "Property modified"
-msgstr ""
+msgstr "Η ιδιότητα τροποποιήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:550
 msgid "Property deleted"
-msgstr ""
+msgstr "Η ιδιότητα διαγράφηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:551
 msgid "Property nonexisting"
-msgstr ""
+msgstr "Ανύπαρκτη ιδιότητα"
 
 #: ../tvp-svn-helper/tsh-common.c:552
 msgid "Revision property set"
-msgstr ""
+msgstr "Ρυθμίστηκε η ιδιότητα αναθεώρησης"
 
 #: ../tvp-svn-helper/tsh-common.c:553
 msgid "Revision property deleted"
-msgstr ""
+msgstr "Η ιδιότητα αναθεώρησης διαγράφηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Merge completed"
-msgstr ""
+msgstr "Η συγχώνευση ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Tree conflict"
-msgstr ""
+msgstr "Σύγκρουση δέντρου"
 
 #: ../tvp-svn-helper/tsh-common.c:556
+#, fuzzy
 msgid "External failed"
-msgstr ""
+msgstr "Εξωτερική αποτυχία"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "Inapplicable"
-msgstr ""
+msgstr "Ανεφάρμοστο"
 
 #: ../tvp-svn-helper/tsh-common.c:619
 msgid "Unchanged"
-msgstr ""
+msgstr "Αμετάβλητο"
 
 #: ../tvp-svn-helper/tsh-common.c:620 ../tvp-svn-helper/tsh-common.c:654
 msgid "Missing"
-msgstr ""
+msgstr "Λείπει"
 
 #: ../tvp-svn-helper/tsh-common.c:621 ../tvp-svn-helper/tsh-common.c:661
 msgid "Obstructed"
-msgstr ""
+msgstr "Παρεμποδίζεται"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Changed"
-msgstr ""
+msgstr "Άλλαξε"
 
 #: ../tvp-svn-helper/tsh-common.c:623 ../tvp-svn-helper/tsh-common.c:658
 msgid "Merged"
-msgstr ""
+msgstr "Συγχωνεύτηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:624 ../tvp-svn-helper/tsh-common.c:659
 msgid "Conflicted"
-msgstr ""
+msgstr "Συγκρουόμενο"
 
 #. N_("None"),
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:652
 msgid "Normal"
-msgstr ""
+msgstr "Κανονικο"
 
 #: ../tvp-svn-helper/tsh-common.c:660
 msgid "Ignored"
-msgstr ""
+msgstr "Αγνοήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:663
 msgid "Incomplete"
-msgstr ""
+msgstr "Ατελές"
 
 #: ../tvp-svn-helper/tsh-copy.c:104
 msgid "Local copy"
-msgstr ""
+msgstr "Τοπικό αντίγραφο"
 
 #: ../tvp-svn-helper/tsh-copy.c:148
 msgid "Copy To"
-msgstr ""
+msgstr "Αντιγραφή στο"
 
 #: ../tvp-svn-helper/tsh-delete.c:108
 msgid "Local delete"
-msgstr ""
+msgstr "Τοπική διαγραφή"
 
 #: ../tvp-svn-helper/tsh-delete.c:145
 msgid "Delete Message"
-msgstr ""
+msgstr "Μήνυμα διαγραφής"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
-msgstr ""
+msgstr "_Πιστοποιητικό:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:67
 msgid "Select a file"
-msgstr ""
+msgstr "Επιλέξτε ένα αρχείο"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:78
 #: ../tvp-svn-helper/tsh-login-dialog.c:98
 #: ../tvp-svn-helper/tsh-trust-dialog.c:73
+#, fuzzy
 msgid "Remember"
-msgstr ""
+msgstr "Να το θυμάσαι"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:86
 msgid "Certificate"
-msgstr ""
+msgstr "Πιστοποιητικό"
 
 #: ../tvp-svn-helper/tsh-import.c:125
 msgid "Import Message"
-msgstr ""
+msgstr "Μήνυμα εισαγωγής"
 
 #: ../tvp-svn-helper/tsh-log.c:113
 msgid "Log failed"
-msgstr ""
+msgstr "Η καταγραφή απέτυχε"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
-msgstr ""
+msgstr "_Όνομα χρήστη:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:81
 msgid "_Password:"
-msgstr ""
+msgstr "_Κωδικός"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:106
 msgid "Login"
-msgstr ""
+msgstr "Σύνδεση"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:93
 msgid "State"
-msgstr ""
+msgstr "Κατάσταση"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:118
 msgid "Log Message"
-msgstr ""
+msgstr "Μήνυμα καταγραφής"
 
 #: ../tvp-svn-helper/tsh-move.c:94
+#, fuzzy
 msgid "Local move"
-msgstr ""
+msgstr "Τοπική μετακίνηση"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:100
 msgid "Mime type"
@@ -1225,16 +1231,16 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:115
 msgid "Notification"
-msgstr ""
+msgstr "Ειδοποίηση"
 
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:81
 msgid "Set property failed"
-msgstr ""
+msgstr "Απέτυχε η ρύθμιση της ιδιότητας"
 
 #: ../tvp-svn-helper/tsh-properties.c:104
 msgid "Properties failed"
-msgstr ""
+msgstr "Αποτυχία ιδιοτήτων"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:132
 msgid "Value"
@@ -1273,35 +1279,35 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
-msgstr ""
+msgstr "Αναδρομικά"
 
 #: ../tvp-svn-helper/tsh-relocate.c:71
 msgid "Relocate failed"
-msgstr ""
+msgstr "Η επανατοποθέτηση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-relocate.c:86
 msgid "Relocate finished"
-msgstr ""
+msgstr "Η επανατοποθέτηση ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-relocate.c:128
 msgid "Relocating ..."
-msgstr ""
+msgstr "Επανατοποθέτηση ..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr ""
+msgstr "_Από:"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:143
 msgid "_To:"
-msgstr ""
+msgstr "_Προς:"
 
 #: ../tvp-svn-helper/tsh-status.c:86
 msgid "Status failed"
-msgstr ""
+msgstr "Η κατάσταση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr ""
+msgstr "Εμφάνιση μη τροποποιημένων αρχείων"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:228
 msgid "Show Unversioned Files"
@@ -1309,36 +1315,36 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:232
 msgid "Show Ignored Files"
-msgstr ""
+msgstr "Εμφάνιση αγνοούμενων αρχείων"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:236
 msgid "Hide Externals"
-msgstr ""
+msgstr "Απόκρυψη εξωτερικών"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
-msgstr ""
+msgstr "Έλεγχος αποθετηρίου"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:58
 msgid "Certificate is not yet valid."
-msgstr ""
+msgstr "Το πιστοποιητικό δεν είναι ακόμη έγκυρο."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:61
 msgid "Certificate has expired."
-msgstr ""
+msgstr "Το πιστοποιητικό έχει λήξει."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:64
 msgid "Certificate does not match the remote hostname."
-msgstr ""
+msgstr "Πιστοποιητικό δεν ταιριάζει με το απομακρυσμένο όνομα υπολογιστή."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:67
 msgid "Certificate authority is unknown."
-msgstr ""
+msgstr "Η πιστοποιητική αρχή είναι άγνωστη."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:70
 msgid "Other failure."
-msgstr ""
+msgstr "Άλλη αποτυχία."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
-msgstr ""
+msgstr "Εμπιστοσύνη"
