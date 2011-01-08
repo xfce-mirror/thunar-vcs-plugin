@@ -61,7 +61,7 @@ msgstr "Διακλάδωση"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323
 #, fuzzy
 msgid "Menu|Checkout"
-msgstr "Μενού|Έλεγχος εξόδου"
+msgstr "Έλεγχος εξόδου"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323 ../tvp-svn-helper/main.c:261
@@ -192,13 +192,11 @@ msgid "Rebase"
 msgstr "Αναθεμελίωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
-#, fuzzy
 msgid "Menu|Reset"
-msgstr "Μενού|Επαναφορά"
+msgstr "Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
-#, fuzzy
 msgid "Reset"
 msgstr "Επαναφορά"
 
@@ -274,12 +272,12 @@ msgstr "GIT"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
 #, fuzzy
 msgid "Menu|Changelist"
-msgstr "Μενού|Changelist"
+msgstr "Λίστα αλλαγών"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
 #, fuzzy
 msgid "Changelist"
-msgstr "Changelist"
+msgstr "Λίστα αλλαγών"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328
 msgid "Menu|Cleanup"
@@ -361,24 +359,20 @@ msgid "Relocate"
 msgstr "Επανατοποθέτηση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415
-#, fuzzy
 msgid "Menu|Resolved"
-msgstr "Μενού|Επιλύσιμο"
+msgstr "Διευθετημένο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-common.c:521 ../tvp-svn-helper/tsh-resolved.c:113
 #: ../tvp-svn-helper/tsh-resolved.c:126
-#, fuzzy
 msgid "Resolved"
-msgstr "Επιλύσιμο"
+msgstr "Διευθετημένο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
-#, fuzzy
 msgid "Menu|Resolve"
-msgstr "Μενού|Επίλυση"
+msgstr "Επίλυση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
-#, fuzzy
 msgid "Resolve"
 msgstr "Επίλυση"
 
@@ -419,7 +413,6 @@ msgid "Update"
 msgstr "Ενημέρωση"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:118
-#, fuzzy
 msgid "URL:"
 msgstr "URL:"
 
@@ -461,7 +454,7 @@ msgstr "Συγγραφέας:"
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:203
 #, fuzzy
 msgid "Changelist:"
-msgstr "Changelist:"
+msgstr "Λίστα αλλαγών:"
 
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:216
@@ -511,7 +504,6 @@ msgstr ""
 #. recursion
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
-#, fuzzy
 msgid "Infinity"
 msgstr "Άπειρο"
 
@@ -548,7 +540,6 @@ msgid "Execute move action"
 msgstr "Εκτέλεση της εντολής μετακίνησης"
 
 #: ../tvp-git-helper/main.c:127
-#, fuzzy
 msgid "Execute reset action"
 msgstr "Εκτέλεση της εντολής επαναφοράς"
 
@@ -585,7 +576,6 @@ msgid "Move Related Options:"
 msgstr "Επιλογές σχετικά με τη μετακίνηση:"
 
 #: ../tvp-git-helper/main.c:179
-#, fuzzy
 msgid "Reset Related Options:"
 msgstr "Επιλογές σχετικά με την επαναφορά:"
 
@@ -678,7 +668,7 @@ msgstr "Απέτυχε"
 #: ../tvp-git-helper/tgh-common.c:199
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
-msgstr ""
+msgstr "δεν παρακολουθείται"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
@@ -691,7 +681,7 @@ msgstr ""
 
 #: ../tvp-git-helper/tgh-log-dialog.c:143
 msgid "CommitDate"
-msgstr ""
+msgstr "Ημερομηνία υποβολής"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:149
 #: ../tvp-svn-helper/tsh-log-dialog.c:142
@@ -731,12 +721,10 @@ msgid "Notify"
 msgstr "Ειδοποίηση"
 
 #: ../tvp-git-helper/tgh-reset.c:58
-#, fuzzy
 msgid "Reset finished"
 msgstr "Η επαναφορά ολοκληρώθηκε"
 
 #: ../tvp-git-helper/tgh-reset.c:143
-#, fuzzy
 msgid "Reset ..."
 msgstr "Επαναφορά ..."
 
@@ -834,9 +822,8 @@ msgid "Execute properties action"
 msgstr "Εκτέλεση ενέργειας προτιμήσεων"
 
 #: ../tvp-svn-helper/main.c:196
-#, fuzzy
 msgid "Execute resolved action"
-msgstr "Εκτέλεση ενέργειας επίλυσης"
+msgstr "Εκτέλεση ενέργειας διευθέτησης"
 
 #: ../tvp-svn-helper/main.c:202
 msgid "Execute relocate action"
@@ -1311,7 +1298,7 @@ msgstr "Εμφάνιση μη τροποποιημένων αρχείων"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:228
 msgid "Show Unversioned Files"
-msgstr ""
+msgstr "Εμφάνιση αρχείων που δεν παρακολουθούνται"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:232
 msgid "Show Ignored Files"
