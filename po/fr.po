@@ -817,9 +817,8 @@ msgid "Execute properties action"
 msgstr "Exécuter une propriété"
 
 #: ../tvp-svn-helper/main.c:196
-#, fuzzy
 msgid "Execute resolved action"
-msgstr "Exécuter une extraction"
+msgstr "Marquer comme résolu"
 
 #: ../tvp-svn-helper/main.c:202
 msgid "Execute relocate action"
