@@ -21,7 +21,7 @@
 #include <config.h>
 #endif
 
-#include <thunar-vfs/thunar-vfs.h>
+#include <libxfce4util/libxfce4util.h>
 #include <gtk/gtk.h>
 
 #include "tsh-file-dialog.h"
