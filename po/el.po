@@ -1,26 +1,23 @@
-# German translations for thunar-svn-plugin package
-# German messages for thunar-svn-plugin.
-# Copyright (C) 2009 Peter de Ridder <peter@xfce.org>
-# This file is distributed under the same license as the thunar-svn-plugin package.
-# Fabian Nowak <timystery@arcor.de>, 2009.
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-svn-plugin\n"
+"Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-08 16:59+0100\n"
-"PO-Revision-Date: 2009-04-14 23:02+0200\n"
-"Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
-"Language-Team: German\n"
+"PO-Revision-Date: \n"
+"Last-Translator: George Vasilakos <forfolias@linuxteam.cs.teilar.gr>\n"
+"Language-Team: Greek <nls@tux.hellug.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: GREECE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Greek\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301
 msgid "Menu|Add"
-msgstr "Hinzufügen"
+msgstr "Μενού|Προσθήκη"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 #: ../thunar-vcs-plugin/tvp-svn-action.c:301 ../tvp-git-helper/main.c:151
@@ -28,196 +25,200 @@ msgstr "Hinzufügen"
 #: ../tvp-svn-helper/main.c:249 ../tvp-svn-helper/tsh-add.c:116
 #: ../tvp-svn-helper/tsh-add.c:129
 msgid "Add"
-msgstr "Hinzufügen"
+msgstr "Προσθήκη"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Menu|Bisect"
-msgstr "Teilen"
+msgstr "Μενού|Διχοτόμηση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Bisect"
-msgstr "Teilen"
+msgstr "Διχοτόμηση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:267
 #: ../thunar-vcs-plugin/tvp-svn-action.c:306
 msgid "Menu|Blame"
-msgstr "Beschuldigen"
+msgstr "Μενού|Συσχέτιση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:267
 #: ../thunar-vcs-plugin/tvp-svn-action.c:306 ../tvp-git-helper/main.c:155
 #: ../tvp-git-helper/tgh-blame-dialog.c:130 ../tvp-svn-helper/main.c:253
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-blame-dialog.c:133
 msgid "Blame"
-msgstr "Beschuldigen"
+msgstr "Συσχέτιση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 msgid "Menu|Branch"
-msgstr "Zweig"
+msgstr "Μενού|Διακλάδωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269 ../tvp-git-helper/main.c:159
 #: ../tvp-git-helper/tgh-branch-dialog.c:119
 #: ../tvp-git-helper/tgh-stash-dialog.c:168
 msgid "Branch"
-msgstr "Zweig"
+msgstr "Διακλάδωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323
+#, fuzzy
 msgid "Menu|Checkout"
-msgstr "Auschecken"
+msgstr "Έλεγχος εξόδου"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:323 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/tsh-checkout.c:98 ../tvp-svn-helper/tsh-checkout.c:110
+#, fuzzy
 msgid "Checkout"
-msgstr "Auschecken"
+msgstr "Έλεγχος εξόδου"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Menu|Clean"
-msgstr "Aufräumen"
+msgstr "Μενού|Καθάρισμα"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271 ../tvp-git-helper/main.c:163
 #: ../tvp-git-helper/tgh-clean.c:141 ../tvp-git-helper/tgh-clean-dialog.c:97
 msgid "Clean"
-msgstr "Aufräumen"
+msgstr "Καθάρισμα"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 msgid "Menu|Clone"
-msgstr "Klonen"
+msgstr "Μενού|Κλωνοποίηση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273 ../tvp-git-helper/main.c:167
 #: ../tvp-git-helper/tgh-clone.c:112
 msgid "Clone"
-msgstr "Klonen"
+msgstr "Κλωνοποίηση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:333
 msgid "Menu|Commit"
-msgstr "Einchecken"
+msgstr "Μενού|Υποβολή"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:333
 #: ../tvp-git-helper/tgh-log-dialog.c:137 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-commit.c:223 ../tvp-svn-helper/tsh-commit.c:236
 msgid "Commit"
-msgstr "Einchecken"
+msgstr "Υποβολή"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
 msgid "Menu|Diff"
-msgstr "Unterschiede"
+msgstr "Μενού|Διαφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 #: ../thunar-vcs-plugin/tvp-svn-action.c:348
 msgid "Diff"
-msgstr "Unterschiede"
+msgstr "Διαφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Fetch"
-msgstr "Holen"
+msgstr "Μενού|Λήψη"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Fetch"
-msgstr "Holen"
+msgstr "Λήψη"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
+#, fuzzy
 msgid "Menu|Grep"
-msgstr "Durchsuchen"
+msgstr "Μενού|Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
+#, fuzzy
 msgid "Grep"
-msgstr "Durchsuchen"
+msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 msgid "Menu|Init"
-msgstr "Initialisieren"
+msgstr "Μενού|Αρχικοποίηση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 msgid "Init"
-msgstr "Initialisieren"
+msgstr "Αρχικοποίηση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 #: ../thunar-vcs-plugin/tvp-svn-action.c:378
 msgid "Menu|Log"
-msgstr "Log"
+msgstr "Μενού|Καταγραφή"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 #: ../thunar-vcs-plugin/tvp-svn-action.c:378 ../tvp-git-helper/main.c:171
 #: ../tvp-git-helper/tgh-log-dialog.c:215 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-log-dialog.c:208
 msgid "Log"
-msgstr "Log"
+msgstr "Καταγραφή"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
 msgid "Menu|Merge"
-msgstr "Zusammenführen"
+msgstr "Μενού|Συγχώνευση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:280
 msgid "Merge"
-msgstr "Zusammenführen"
+msgstr "Συγχώνευση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393
 msgid "Menu|Move"
-msgstr "Verschieben"
+msgstr "Μενού|Μεταφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #: ../thunar-vcs-plugin/tvp-svn-action.c:393 ../tvp-git-helper/main.c:175
 #: ../tvp-svn-helper/main.c:297 ../tvp-svn-helper/tsh-move.c:157
 msgid "Move"
-msgstr "Verschieben"
+msgstr "Μεταφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Pull"
-msgstr "Ziehen"
+msgstr "Μενού|Τράβηγμα"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Pull"
-msgstr "Ziehen"
+msgstr "Τράβηγμα"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Push"
-msgstr "Schieben"
+msgstr "Μενού|Σπρώξιμο"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Push"
-msgstr "Schieben"
+msgstr "Σπρώξιμο"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Rebase"
-msgstr "Rebasieren"
+msgstr "Μενού|Αναθεμελίωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Rebase"
-msgstr "Rebasieren"
+msgstr "Αναθεμελίωση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Menu|Reset"
-msgstr "Zurücksetzen"
+msgstr "Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
 #: ../tvp-git-helper/tgh-reset.c:130
 msgid "Reset"
-msgstr "Zurücksetzen"
+msgstr "Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Remove"
-msgstr "Entfernen"
+msgstr "Μενού|Αφαίρεση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Remove"
-msgstr "Entfernen"
+msgstr "Αφαίρεση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Menu|Show"
-msgstr "Zeigen"
+msgstr "Μενού|Εμφάνιση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:288
 msgid "Show"
-msgstr "Zeigen"
+msgstr "Εμφάνιση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:290
 msgid "Menu|Stash"
-msgstr "Lagern"
+msgstr "Μενού|Παραμέριση"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
@@ -225,12 +226,12 @@ msgstr "Lagern"
 #: ../thunar-vcs-plugin/tvp-git-action.c:290 ../tvp-git-helper/main.c:183
 #: ../tvp-git-helper/tgh-stash-dialog.c:264
 msgid "Stash"
-msgstr "Lagern"
+msgstr "Παραμέριση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430
 msgid "Menu|Status"
-msgstr "Status"
+msgstr "Μενού|Κατάσταση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 #: ../thunar-vcs-plugin/tvp-svn-action.c:430 ../tvp-git-helper/main.c:187
@@ -239,21 +240,21 @@ msgstr "Status"
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
 #: ../tvp-svn-helper/tsh-status-dialog.c:247
 msgid "Status"
-msgstr "Status"
+msgstr "Κατάσταση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Menu|Tag"
-msgstr "Auszeichnen"
+msgstr "Μενού|Επισήμανση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:293
 msgid "Tag"
-msgstr "Auszeichnen"
+msgstr "Επισήμανση"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:302
 #: ../thunar-vcs-plugin/tvp-svn-action.c:455
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr "Aktion »%s« ist nicht implementiert"
+msgstr "Η ενέργεια %s δεν έχει υλοποιηθεί"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
@@ -269,145 +270,147 @@ msgid "GIT"
 msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
+#, fuzzy
 msgid "Menu|Changelist"
-msgstr "Änderungsliste"
+msgstr "Λίστα αλλαγών"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:318
+#, fuzzy
 msgid "Changelist"
-msgstr "Änderungsliste"
+msgstr "Λίστα αλλαγών"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328
 msgid "Menu|Cleanup"
-msgstr "Aufräumen"
+msgstr "Μενού|Εκκαθάριση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:328 ../tvp-svn-helper/main.c:265
 msgid "Cleanup"
-msgstr "Aufräumen"
+msgstr "Εκκαθάριση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338
 msgid "Menu|Copy"
-msgstr "Kopieren"
+msgstr "Μενού|Αντιγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:338 ../tvp-svn-helper/main.c:273
 #: ../tvp-svn-helper/tsh-copy.c:166
 msgid "Copy"
-msgstr "Kopieren"
+msgstr "Αντιγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343
 msgid "Menu|Delete"
-msgstr "Löschen"
+msgstr "Μενού|Διαγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:343 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-delete.c:127 ../tvp-svn-helper/tsh-delete.c:140
 msgid "Delete"
-msgstr "Löschen"
+msgstr "Διαγραφή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353
 msgid "Menu|Export"
-msgstr "Exportieren"
+msgstr "Μενού|Εξαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:353 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-export.c:107 ../tvp-svn-helper/tsh-export.c:125
 msgid "Export"
-msgstr "Exportieren"
+msgstr "Εξαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358
 msgid "Menu|Import"
-msgstr "Importieren"
+msgstr "Μενού|Εισαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:358 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-import.c:102 ../tvp-svn-helper/tsh-import.c:120
 msgid "Import"
-msgstr "Importieren"
+msgstr "Εισαγωγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Menu|Info"
-msgstr "Information"
+msgstr "Μενού|Πληροφορίες"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Info"
-msgstr "Information"
+msgstr "Πληροφορίες"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373
 msgid "Menu|Lock"
-msgstr "Sperren"
+msgstr "Μενού|Κλείδωμα"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:373 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-lock.c:130 ../tvp-svn-helper/tsh-lock-dialog.c:72
 msgid "Lock"
-msgstr "Sperren"
+msgstr "Κλείδωμα"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Menu|Edit Properties"
-msgstr "Eigenschaften ändern"
+msgstr "Μενού|Επεξεργασία ιδιοτήτων"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Edit Properties"
-msgstr "Eigenschaften ändern"
+msgstr "Επεξεργασία ιδιοτήτων"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409
 msgid "Menu|Relocate"
-msgstr "Umplatzieren"
+msgstr "Μενού|Επανατοποθέτηση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-svn-helper/main.c:309
 #: ../tvp-svn-helper/tsh-relocate.c:114
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:217
 msgid "Relocate"
-msgstr "Umplatzieren"
+msgstr "Επανατοποθέτηση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415
 msgid "Menu|Resolved"
-msgstr "Aufgelöst"
+msgstr "Διευθετημένο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:415 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-common.c:521 ../tvp-svn-helper/tsh-resolved.c:113
 #: ../tvp-svn-helper/tsh-resolved.c:126
 msgid "Resolved"
-msgstr "Aufgelöst"
+msgstr "Διευθετημένο"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
 msgid "Menu|Resolve"
-msgstr "Auflösen"
+msgstr "Επίλυση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:420
 msgid "Resolve"
-msgstr "Auflösen"
+msgstr "Επίλυση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:425
 msgid "Menu|Revert"
-msgstr "Rückgängig"
+msgstr "Μενού|Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:425 ../tvp-svn-helper/main.c:313
 #: ../tvp-svn-helper/tsh-revert.c:112 ../tvp-svn-helper/tsh-revert.c:125
 msgid "Revert"
-msgstr "Rückgängig"
+msgstr "Επαναφορά"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:435
 msgid "Menu|Switch"
-msgstr "Umschalten"
+msgstr "Μενού|Αλλαγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:435 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-switch.c:109 ../tvp-svn-helper/tsh-switch.c:122
 msgid "Switch"
-msgstr "Umschalten"
+msgstr "Αλλαγή"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:440
 msgid "Menu|Unlock"
-msgstr "Entsperren"
+msgstr "Μενού|Ξεκλείδωμα"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:440 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-unlock.c:111
 msgid "Unlock"
-msgstr "Entsperren"
+msgstr "Ξεκλείδωμα"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:445
 msgid "Menu|Update"
-msgstr "Aktualisieren"
+msgstr "Μενού|Ενημέρωση"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:445 ../tvp-svn-helper/main.c:329
 #: ../tvp-svn-helper/tsh-update.c:113
 msgid "Update"
-msgstr "Aktualisieren"
+msgstr "Ενημέρωση"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:118
 msgid "URL:"
@@ -426,50 +429,51 @@ msgstr "URL:"
 #: ../tvp-svn-helper/tsh-common.c:666 ../tvp-svn-helper/tsh-common.c:695
 #: ../tvp-svn-helper/tsh-common.c:785
 msgid "Unknown"
-msgstr "Unbekannt"
+msgstr "Άγνωστο"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:131
 msgid "Revision:"
-msgstr "Version:"
+msgstr "Αναθεώρηση:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:143
 msgid "Repository:"
-msgstr "Ablage:"
+msgstr "Αποθετήριο:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:161
 msgid "Modified revision:"
-msgstr "Geänderte Version:"
+msgstr "Τροποποιημένη αναθεώρηση:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:173
 msgid "Modified date:"
-msgstr "Datum geändert:"
+msgstr "Ημερομηνία τροποποίησης:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:186
 msgid "Author:"
-msgstr "Autor:"
+msgstr "Συγγραφέας:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:203
+#, fuzzy
 msgid "Changelist:"
-msgstr "Veränderungen:"
+msgstr "Λίστα αλλαγών:"
 
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:216
 msgid "Depth:"
-msgstr "Tiefe:"
+msgstr "Βάθος:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:306
 msgid "Exclude"
-msgstr "Ausschließen"
+msgstr "Εξαίρεση"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:312
 msgid "Empty"
-msgstr "Leer"
+msgstr "Κενό"
 
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
@@ -477,7 +481,7 @@ msgstr "Leer"
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:318
 msgid "Files"
-msgstr "Dateien"
+msgstr "Αρχεία"
 
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
@@ -493,7 +497,7 @@ msgstr "Dateien"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:227
 #: ../tvp-svn-helper/tsh-status-dialog.c:200
 msgid "Immediates"
-msgstr "Ab dieser Ebene"
+msgstr ""
 
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
@@ -501,112 +505,112 @@ msgstr "Ab dieser Ebene"
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
 msgid "Infinity"
-msgstr "Unendlich"
+msgstr "Άπειρο"
 
 #: ../tvp-git-helper/main.c:78 ../tvp-svn-helper/main.c:105
 msgid "Print version information"
-msgstr "Versionsinformationen ausgeben"
+msgstr "Εμφάνιση πληροφοριών έκδοσης"
 
 #: ../tvp-git-helper/main.c:85 ../tvp-svn-helper/main.c:112
 msgid "Execute add action"
-msgstr "Aktion »Hinzufügen« ausführen"
+msgstr "Εκτέλεση της εντολής προσθήκης"
 
 #: ../tvp-git-helper/main.c:91 ../tvp-svn-helper/main.c:118
 msgid "Execute blame action"
-msgstr "Aktion »Beschuldigen« ausführen"
+msgstr "Εκτέλεση της εντολής συσχέτισης"
 
 #: ../tvp-git-helper/main.c:97
 msgid "Execute branch action"
-msgstr "Aktion »Zweig« ausführen"
+msgstr "Εκτέλεση της εντολής διακλάδωσης"
 
 #: ../tvp-git-helper/main.c:103
 msgid "Execute clean action"
-msgstr "Aktion »Aufräumen« ausführen"
+msgstr "Εκτέλεση της εντολής καθαρισμού"
 
 #: ../tvp-git-helper/main.c:109
 msgid "Execute clone action"
-msgstr "Aktion »Klonen« ausführen"
+msgstr "Εκτέλεση της εντολής κλωνοποίησης"
 
 #: ../tvp-git-helper/main.c:115 ../tvp-svn-helper/main.c:178
 msgid "Execute log action"
-msgstr "Aktion »Log« ausführen"
+msgstr "Εκτέλεση της εντολής καταγραφής"
 
 #: ../tvp-git-helper/main.c:121 ../tvp-svn-helper/main.c:184
 msgid "Execute move action"
-msgstr "Aktion »Verschieben« ausführen"
+msgstr "Εκτέλεση της εντολής μετακίνησης"
 
 #: ../tvp-git-helper/main.c:127
 msgid "Execute reset action"
-msgstr "Aktion »Zurücksetzen» ausführen"
+msgstr "Εκτέλεση της εντολής επαναφοράς"
 
 #: ../tvp-git-helper/main.c:133
 msgid "Execute stash action"
-msgstr "Aktion »Lagern« ausführen"
+msgstr "Εκτέλεση της εντολής παραμέρισης"
 
 #: ../tvp-git-helper/main.c:139 ../tvp-svn-helper/main.c:214
 msgid "Execute status action"
-msgstr "Aktion »Status« ausführen"
+msgstr "Εκτέλεση της εντολής κατάστασης"
 
 #: ../tvp-git-helper/main.c:151 ../tvp-svn-helper/main.c:249
 msgid "Add Related Options:"
-msgstr "Optionen fürs Hinzufügen:"
+msgstr "Επιλογές σχετικά με την προσθήκη:"
 
 #: ../tvp-git-helper/main.c:155 ../tvp-svn-helper/main.c:253
 msgid "Blame Related Options:"
-msgstr "Optionen fürs Beschuldigen:"
+msgstr "Επιλογές σχετικά με τη συσχέτιση:"
 
 #: ../tvp-git-helper/main.c:159
 msgid "Branch Related Options:"
-msgstr "Optionen für Zweig:"
+msgstr "Επιλογές σχετικά με τη διακλάδωση:"
 
 #: ../tvp-git-helper/main.c:163 ../tvp-git-helper/main.c:167
 msgid "Clone Related Options:"
-msgstr "Optionen fürs Klonen:"
+msgstr "Επιλογές σχετικά με την κλωνοποίηση:"
 
 #: ../tvp-git-helper/main.c:171 ../tvp-svn-helper/main.c:293
 msgid "Log Related Options:"
-msgstr "Optionen für Logs:"
+msgstr "Επιλογές σχετικά με την καταγραφή:"
 
 #: ../tvp-git-helper/main.c:175 ../tvp-svn-helper/main.c:297
 msgid "Move Related Options:"
-msgstr "Optionen fürs Verschieben:"
+msgstr "Επιλογές σχετικά με τη μετακίνηση:"
 
 #: ../tvp-git-helper/main.c:179
 msgid "Reset Related Options:"
-msgstr "Optionen fürs Zurücksetzen:"
+msgstr "Επιλογές σχετικά με την επαναφορά:"
 
 #: ../tvp-git-helper/main.c:183
 msgid "Stash Related Options:"
-msgstr "Optionen fürs Lagern:"
+msgstr "Επιλογές σχετικά με την παραμέριση:"
 
 #: ../tvp-git-helper/main.c:187 ../tvp-svn-helper/main.c:317
 msgid "Status Related Options:"
-msgstr "Optionen für den Zustand:"
+msgstr "Επιλογές σχετικά με την κατάσταση:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:91
 #: ../tvp-svn-helper/tsh-blame-dialog.c:94
 msgid "Line"
-msgstr "Zeile"
+msgstr "Γραμμή"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:97
 #: ../tvp-git-helper/tgh-log-dialog.c:119
 #: ../tvp-svn-helper/tsh-blame-dialog.c:100
 #: ../tvp-svn-helper/tsh-log-dialog.c:124
 msgid "Revision"
-msgstr "Version"
+msgstr "Αναθεώρηση"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:103
 #: ../tvp-git-helper/tgh-log-dialog.c:125
 #: ../tvp-svn-helper/tsh-blame-dialog.c:106
 #: ../tvp-svn-helper/tsh-log-dialog.c:130
 msgid "Author"
-msgstr "Autor"
+msgstr "Συγγραφέας"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:109
 #: ../tvp-svn-helper/tsh-blame-dialog.c:112
 #: ../tvp-svn-helper/tsh-log-dialog.c:136
 msgid "Date"
-msgstr "Datum"
+msgstr "Ημερομηνία"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:104
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:94
@@ -618,35 +622,35 @@ msgstr "Datum"
 #: ../tvp-svn-helper/tsh-notify-dialog.c:94
 #: ../tvp-svn-helper/tsh-status-dialog.c:118
 msgid "Path"
-msgstr "Pfad"
+msgstr "Διαδρομή"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:57
 msgid "Remove directories."
-msgstr "Verzeichnis entfernen"
+msgstr "Διαγραφή καταλόγων."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:69
 msgid "Excldue ignored files"
-msgstr "Ignorierte Dateien ausschließen"
+msgstr "Εξαίρεση αγνοούμενων αρχείων"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:77
 msgid "Include ignored files"
-msgstr "Ignorierte Dateien einschließen"
+msgstr "Συμπεριλαμβανομένων αγνοούμενων αρχείων"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:83
 msgid "Only ignored files"
-msgstr "Nur ignorierte Dateien"
+msgstr "Μόνο αγνοούμενα αρχεία"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:93
 msgid "Force clean."
-msgstr "Aufräumen erzwingen"
+msgstr "Εξαναγκασμένος καθαρισμός"
 
 #: ../tvp-git-helper/tgh-clone.c:58
 msgid "Clone finished"
-msgstr "Klonen abgeschlossen"
+msgstr "Η κλωνοποίηση ολοκληρώθηκε"
 
 #: ../tvp-git-helper/tgh-clone.c:123
 msgid "Cloning ..."
-msgstr "Klone ..."
+msgstr "Κλωνοποίηση..."
 
 #: ../tvp-git-helper/tgh-common.c:80 ../tvp-svn-helper/tsh-add.c:73
 #: ../tvp-svn-helper/tsh-add.c:91 ../tvp-svn-helper/tsh-checkout.c:71
@@ -659,97 +663,97 @@ msgstr "Klone ..."
 #: ../tvp-svn-helper/tsh-switch.c:71 ../tvp-svn-helper/tsh-unlock.c:86
 #: ../tvp-svn-helper/tsh-update.c:88
 msgid "Failed"
-msgstr "Fehlgeschlagen"
+msgstr "Απέτυχε"
 
 #: ../tvp-git-helper/tgh-common.c:199
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:251
 msgid "untracked"
-msgstr "nicht getracked"
+msgstr "δεν παρακολουθείται"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:115
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
 msgid "Select/Unselect all"
-msgstr "Alle auswählen/abwählen"
+msgstr "Επιλογή/Αποεπιλογή όλων"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:131
 msgid "AuthorDate"
-msgstr "Autor-Datum"
+msgstr ""
 
 #: ../tvp-git-helper/tgh-log-dialog.c:143
 msgid "CommitDate"
-msgstr "Eincheck-Datum"
+msgstr "Ημερομηνία υποβολής"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:149
 #: ../tvp-svn-helper/tsh-log-dialog.c:142
 msgid "Message"
-msgstr "Nachricht"
+msgstr "Μήνυμα"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:187
 #: ../tvp-git-helper/tgh-stash-dialog.c:198
 msgid "Changes"
-msgstr "Veränderungen"
+msgstr "Αλλαγές"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:194
 #: ../tvp-git-helper/tgh-stash-dialog.c:205
 msgid "File"
-msgstr "Datei"
+msgstr "Αρχείο"
 
 #: ../tvp-git-helper/tgh-move.c:58
 msgid "Move finished"
-msgstr "Vollständig verschoben"
+msgstr "Η μετακίνηση ολοκληρώθηκε"
 
 #: ../tvp-git-helper/tgh-move.c:135 ../tvp-svn-helper/tsh-move.c:137
 msgid "Move To"
-msgstr "Verschieben nach"
+msgstr "Μετακίνηση στο"
 
 #: ../tvp-git-helper/tgh-move.c:151
 msgid "Move ..."
-msgstr "Verschieben ..."
+msgstr "Μετακίνηση ..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:87
 #: ../tvp-svn-helper/tsh-log-dialog.c:180
 #: ../tvp-svn-helper/tsh-notify-dialog.c:88
 msgid "Action"
-msgstr "Aktion"
+msgstr "Ενέργεια"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:108
 msgid "Notify"
-msgstr "Benachrichtigen"
+msgstr "Ειδοποίηση"
 
 #: ../tvp-git-helper/tgh-reset.c:58
 msgid "Reset finished"
-msgstr "Zurücksetzen abgeschlossen"
+msgstr "Η επαναφορά ολοκληρώθηκε"
 
 #: ../tvp-git-helper/tgh-reset.c:143
 msgid "Reset ..."
-msgstr "Zurücksetzen ..."
+msgstr "Επαναφορά ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:162
 #: ../tvp-svn-helper/tsh-properties-dialog.c:126
 msgid "Name"
-msgstr "Name"
+msgstr "Όνομα"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:174
 msgid "Description"
-msgstr "Beschreibung"
+msgstr "Περιγραφή"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:438
 msgid "Stash description:"
-msgstr "Lagerbeschreibung"
+msgstr "Περιγραφή παραμέρισης:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:574
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr "Möchten Sie »%s« wirklich vergessen?"
+msgstr "Είστε σίγουροι ότι θέλετε να χαθεί το %s ;"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:602
 msgid "Are you sure you want to clear all stash?"
-msgstr "Möchten Sie wirklich alles aus dem Lager räumen?"
+msgstr "Είστε σίγουροι ότι θέλετε να καθαρίσετε όλα τα παραμερισμένα;"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:67
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
 msgid "_Repository:"
-msgstr "_Ablage:"
+msgstr "_Αποθετήριο:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:76
 #: ../tvp-git-helper/tgh-transfer-dialog.c:111
@@ -762,463 +766,472 @@ msgstr "_Ablage:"
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:98
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:144
 msgid "Select a folder"
-msgstr "Wählen Sie einen Ordner"
+msgstr "Επιλέξτε ένα φάκελο"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:104
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:198
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:137
 msgid "_Directory:"
-msgstr "_Verzeichnis:"
+msgstr "_Κατάλογος:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:123
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:156
 msgid "Transfer"
-msgstr "Übertragen"
+msgstr "Μεταφορά"
 
 #: ../tvp-svn-helper/main.c:124
+#, fuzzy
 msgid "Execute changelist action"
-msgstr "Aktion »Veränderungen« ausführen"
+msgstr "Εκτέλεση ενέργειας changelist"
 
 #: ../tvp-svn-helper/main.c:130
+#, fuzzy
 msgid "Execute checkout action"
-msgstr "Aktion »Auschecken« ausführen"
+msgstr "Εκτέλεση ενέργειας ελέγχου εξόδου"
 
 #: ../tvp-svn-helper/main.c:136
 msgid "Execute cleanup action"
-msgstr "Aktion »Aufräumen« ausführen"
+msgstr "Εκτέλεση ενέργειας εκκαθάρισης"
 
 #: ../tvp-svn-helper/main.c:142
 msgid "Execute commit action"
-msgstr "Aktion »Einchecken« ausführen"
+msgstr "Εκτέλεση ενέργειας υποβολής"
 
 #: ../tvp-svn-helper/main.c:148
 msgid "Execute copy action"
-msgstr "Aktion »Kopieren« ausführen"
+msgstr "Εκτέλεση ενέργειας αντιγραφής"
 
 #: ../tvp-svn-helper/main.c:154
 msgid "Execute delete action"
-msgstr "Aktion »Löschen« ausführen"
+msgstr "Εκτέλεση ενέργειας διαγραφής"
 
 #: ../tvp-svn-helper/main.c:160
 msgid "Execute export action"
-msgstr "Aktion »Exportieren« ausführen"
+msgstr "Εκτέλεση ενέργειας εξαγωγής"
 
 #: ../tvp-svn-helper/main.c:166
 msgid "Execute import action"
-msgstr "Aktion »Importieren« ausführen"
+msgstr "Εκτέλεση ενέργειας εισαγωγής"
 
 #: ../tvp-svn-helper/main.c:172
 msgid "Execute lock action"
-msgstr "Aktion »Sperren« ausführen"
+msgstr "Εκτέλεση ενέργειας κλειδώματος"
 
 #: ../tvp-svn-helper/main.c:190
 msgid "Execute properties action"
-msgstr "Aktion »Eigenschaften« ausführen"
+msgstr "Εκτέλεση ενέργειας προτιμήσεων"
 
 #: ../tvp-svn-helper/main.c:196
 msgid "Execute resolved action"
-msgstr "Aktion »Aufgelöst« ausführen"
+msgstr "Εκτέλεση ενέργειας διευθέτησης"
 
 #: ../tvp-svn-helper/main.c:202
 msgid "Execute relocate action"
-msgstr "Aktion »Umplatzieren« ausführen"
+msgstr "Εκτέλεση ενέργειας επανατοποθέτησης"
 
 #: ../tvp-svn-helper/main.c:208
 msgid "Execute revert action"
-msgstr "Aktion »Rückgängig« ausführen"
+msgstr "Εκτέλεση ενέργειας επαναφοράς"
 
 #: ../tvp-svn-helper/main.c:220
 msgid "Execute switch action"
-msgstr "Aktion »Umschalten« ausführen"
+msgstr "Εκτέλεση ενέργειας αλλαγής"
 
 #: ../tvp-svn-helper/main.c:226
 msgid "Execute unlock action"
-msgstr "Aktion »Entsperren« ausführen"
+msgstr "Εκτέλεση ενέργειας ξεκλειδώματος"
 
 #: ../tvp-svn-helper/main.c:232
 msgid "Execute update action"
-msgstr "Aktion »Aktualisieren« ausführen"
+msgstr "Εκτέλεση ενέργειας ανανέωσης"
 
 #: ../tvp-svn-helper/main.c:257
 msgid "Changelist Related Options:"
-msgstr "Optionen für die Änderungslisten:"
+msgstr "Επιλογές σχετικά με το changelist "
 
 #: ../tvp-svn-helper/main.c:261
+#, fuzzy
 msgid "Checkout Related Options:"
-msgstr "Optionen fürs Auschecken:"
+msgstr "Επιλογές σχετικά με τον έλεγχο εξόδου"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Cleanup Related Options:"
-msgstr "Optionen fürs Aufräumen:"
+msgstr "Επιλογές σχετικά με τη εκκαθάριση"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Commit Related Options:"
-msgstr "Optionen fürs Einchecken:"
+msgstr "Επιλογές σχετικά με την υποβολή"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Copy Related Options:"
-msgstr "Optionen fürs Kopieren:"
+msgstr "Επιλογές σχετικά με την αντιγραφή"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Delete Related Options:"
-msgstr "Optionen fürs Löschen:"
+msgstr "Επιλογές σχετικά με τη διαγραφή"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Export Related Options:"
-msgstr "Optionen fürs Exportieren:"
+msgstr "Επιλογές σχετικά με την εξαγωγή"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Import Related Options:"
-msgstr "Optionen fürs Importieren:"
+msgstr "Επιλογές σχετικά με την εισαγωγή"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Lock Related Options:"
-msgstr "Optionen fürs Sperren:"
+msgstr "Επιλογές σχετικά με το κλείδωμα"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Properties Related Options:"
-msgstr "Optionen für die Eigenschaften:"
+msgstr "Επιλογές σχετικά με τις ιδιότητες"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
 msgid "Properties"
-msgstr "Eigenschaften"
+msgstr "Ιδιότητες"
 
 #: ../tvp-svn-helper/main.c:305
 msgid "Resolved Related Options:"
-msgstr "Optionen für Aufgelöst:"
+msgstr "Επιλογές σχετικά με την επίλυση"
 
 #: ../tvp-svn-helper/main.c:309
 msgid "Relocate Related Options:"
-msgstr "Optionen fürs Umplatzieren:"
+msgstr "Επιλογές σχετικά με την επανατοποθέτηση"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Revert Related Options:"
-msgstr "Optionen fürs Rückängigmachen:"
+msgstr "Επιλογές σχετικά με την επαναφορά"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Switch Related Options:"
-msgstr "Optionen f+rs Umschalten:"
+msgstr "Επιλογές σχετικά με την αλλαγή"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Unlock Related Options:"
-msgstr "Optionen fürs Entsperren:"
+msgstr "Επιλογές σχετικά με το ξεκλείδωμα"
 
 #: ../tvp-svn-helper/main.c:329
 msgid "Update Related Options:"
-msgstr "Optionen für Updates:"
+msgstr "Επιλογές σχετικά με την ανανέωση"
 
 #: ../tvp-svn-helper/main.c:372
 msgid "Not enough arguments provided"
-msgstr "Nicht genügend Argumente vorhanden"
+msgstr "Δε δόθηκαν αρκετά ορίσματα"
 
 #: ../tvp-svn-helper/tsh-blame.c:75
 msgid "Blame failed"
-msgstr "Beschuldigen fehlgeschlagen"
+msgstr "Η συσχέτιση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:66
 msgid "Cleanup failed"
-msgstr "Aufräumen fehlgeschlagen"
+msgstr "Η εκκαθάριση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:81
 msgid "Cleanup finished"
-msgstr "Aufräumen vollständig"
+msgstr "Η εκκαθάριση ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:95
 msgid "Cleaning up ..."
-msgstr "Räume auf ..."
+msgstr "Εκκαθάριση ..."
 
 #: ../tvp-svn-helper/tsh-commit.c:196 ../tvp-svn-helper/tsh-common.c:742
 #: ../tvp-svn-helper/tsh-copy.c:99 ../tvp-svn-helper/tsh-delete.c:103
 #: ../tvp-svn-helper/tsh-import.c:82 ../tvp-svn-helper/tsh-move.c:89
 #, c-format
 msgid "At revision: %ld"
-msgstr "Bei Version: %ld"
+msgstr "Στην αναθεώρηση: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:201
 msgid "Nothing to do"
-msgstr "Nichts zu tun"
+msgstr "Δεν έχει τίποτα να γίνει"
 
 #: ../tvp-svn-helper/tsh-commit.c:209 ../tvp-svn-helper/tsh-common.c:526
 #: ../tvp-svn-helper/tsh-common.c:528 ../tvp-svn-helper/tsh-copy.c:110
 #: ../tvp-svn-helper/tsh-delete.c:114 ../tvp-svn-helper/tsh-import.c:87
 #: ../tvp-svn-helper/tsh-move.c:100
 msgid "Completed"
-msgstr "Vollständig"
+msgstr "Ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-commit.c:241
 msgid "Commit Message"
-msgstr "Einchecknachricht"
+msgstr "Μήνυμα υποβολής"
 
 #: ../tvp-svn-helper/tsh-common.c:271
 msgid "Store password a plaintext?"
-msgstr "Passwort im Klartext speichern?"
+msgstr "Αποθήκευση του κωδικού σε απλό αρχείο κειμένου;"
 
 #: ../tvp-svn-helper/tsh-common.c:515 ../tvp-svn-helper/tsh-common.c:524
 #: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:653
 #: ../tvp-svn-helper/tsh-common.c:700 ../tvp-svn-helper/tsh-common.c:791
 msgid "Added"
-msgstr "Hinzugefügt"
+msgstr "Προστέθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:516 ../tvp-svn-helper/tsh-common.c:800
 msgid "Copied"
-msgstr "Kopiert"
+msgstr "Αντιγράφτηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:517 ../tvp-svn-helper/tsh-common.c:523
 #: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:655
 #: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:793
 msgid "Deleted"
-msgstr "Gelöscht"
+msgstr "Διαγράφηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:518
+#, fuzzy
 msgid "Restored"
-msgstr "Wiederhergestellt"
+msgstr "Επαναφέρθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:519
+#, fuzzy
 msgid "Reverted"
-msgstr "Rückgängig gemacht"
+msgstr "Ανακλήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:520
+#, fuzzy
 msgid "Revert failed"
-msgstr "Rpckgängigmachen fehlgeschlagen"
+msgstr "Η ανάκληση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-common.c:522
 msgid "Skipped"
-msgstr "Übersprungen"
+msgstr "Προσπεράστηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:525
 msgid "Updated"
-msgstr "Aktualisiert"
+msgstr "Ενημερώθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:527 ../tvp-svn-helper/tsh-common.c:529
 #: ../tvp-svn-helper/tsh-common.c:662
 msgid "External"
-msgstr "Extern"
+msgstr "Εξωτερικό"
 
 #: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:657
 #: ../tvp-svn-helper/tsh-common.c:706 ../tvp-svn-helper/tsh-common.c:796
 msgid "Modified"
-msgstr "Verändert"
+msgstr "Τροποποιήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:533 ../tvp-svn-helper/tsh-common.c:656
 #: ../tvp-svn-helper/tsh-common.c:709 ../tvp-svn-helper/tsh-common.c:789
 msgid "Replaced"
-msgstr "Ersetzt"
+msgstr "Αντικαταστάθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:534
 msgid "Transmitting"
-msgstr "Übertrage"
+msgstr "Μεταφορά"
 
 #: ../tvp-svn-helper/tsh-common.c:536
 msgid "Locked"
-msgstr "Gesperrt"
+msgstr "Κλειδωμένο"
 
 #: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:802
 msgid "Unlocked"
-msgstr "Entsperrt"
+msgstr "Ξεκλειδώθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Lock failed"
-msgstr "Sperren fehlgeschlagen"
+msgstr "Το κλείδωμα απέτυχε"
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Unlock failed"
-msgstr "Entsperren fehlgeschlagen"
+msgstr "Το ξεκλείδωμα απέτυχε"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Exists"
-msgstr "Vorhanden"
+msgstr "Υπάρχει"
 
 #: ../tvp-svn-helper/tsh-common.c:541
 msgid "Changelist set"
-msgstr "Änderungsliste eingestellt"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:542
 msgid "Changelist cleared"
-msgstr "Änderungsliste geleert"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:543
 msgid "Changelist moved"
-msgstr "Änderungsliste verschoben"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:544
 msgid "Merge begin"
-msgstr "Zusammenführen beginnt"
+msgstr "Η συγχώνευση ξεκίνησε"
 
 #: ../tvp-svn-helper/tsh-common.c:545
 msgid "Foreign merge begin"
-msgstr "Zusammenführen mit fremder Datei beginnt"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:546
 msgid "Replace"
-msgstr "Ersetzen"
+msgstr "Αντικατάσταση"
 
 #: ../tvp-svn-helper/tsh-common.c:548
 msgid "Property added"
-msgstr "Eigenschaft hinzugefügt"
+msgstr "Η ιδιότητα προστέθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:549
 msgid "Property modified"
-msgstr "Eigenschaft geändert"
+msgstr "Η ιδιότητα τροποποιήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:550
 msgid "Property deleted"
-msgstr "Eigenschaft gelöscht"
+msgstr "Η ιδιότητα διαγράφηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:551
 msgid "Property nonexisting"
-msgstr "Eigenschaft existiert nicht"
+msgstr "Ανύπαρκτη ιδιότητα"
 
 #: ../tvp-svn-helper/tsh-common.c:552
 msgid "Revision property set"
-msgstr "Versionierungseigenschaft gesetzt"
+msgstr "Ρυθμίστηκε η ιδιότητα αναθεώρησης"
 
 #: ../tvp-svn-helper/tsh-common.c:553
 msgid "Revision property deleted"
-msgstr "Versionierungseigenschaft gelöscht"
+msgstr "Η ιδιότητα αναθεώρησης διαγράφηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Merge completed"
-msgstr "Vollständig zusammengeführt"
+msgstr "Η συγχώνευση ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Tree conflict"
-msgstr "Baumkonflikt"
+msgstr "Σύγκρουση δέντρου"
 
 #: ../tvp-svn-helper/tsh-common.c:556
+#, fuzzy
 msgid "External failed"
-msgstr "»External« fehlgeschlagen"
+msgstr "Εξωτερική αποτυχία"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "Inapplicable"
-msgstr "Nicht anwendbar"
+msgstr "Ανεφάρμοστο"
 
 #: ../tvp-svn-helper/tsh-common.c:619
 msgid "Unchanged"
-msgstr "Unverändert"
+msgstr "Αμετάβλητο"
 
 #: ../tvp-svn-helper/tsh-common.c:620 ../tvp-svn-helper/tsh-common.c:654
 msgid "Missing"
-msgstr "Fehlende"
+msgstr "Λείπει"
 
 #: ../tvp-svn-helper/tsh-common.c:621 ../tvp-svn-helper/tsh-common.c:661
 msgid "Obstructed"
-msgstr "Zerstört"
+msgstr "Παρεμποδίζεται"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Changed"
-msgstr "Verändert"
+msgstr "Άλλαξε"
 
 #: ../tvp-svn-helper/tsh-common.c:623 ../tvp-svn-helper/tsh-common.c:658
 msgid "Merged"
-msgstr "Zusammengeführt"
+msgstr "Συγχωνεύτηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:624 ../tvp-svn-helper/tsh-common.c:659
 msgid "Conflicted"
-msgstr "Konfliktbehaftet"
+msgstr "Συγκρουόμενο"
 
 #. N_("None"),
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:652
 msgid "Normal"
-msgstr "Normal"
+msgstr "Κανονικο"
 
 #: ../tvp-svn-helper/tsh-common.c:660
 msgid "Ignored"
-msgstr "Ignoriert"
+msgstr "Αγνοήθηκε"
 
 #: ../tvp-svn-helper/tsh-common.c:663
 msgid "Incomplete"
-msgstr "Unvollständig"
+msgstr "Ατελές"
 
 #: ../tvp-svn-helper/tsh-copy.c:104
 msgid "Local copy"
-msgstr "Lokale Kopie"
+msgstr "Τοπικό αντίγραφο"
 
 #: ../tvp-svn-helper/tsh-copy.c:148
 msgid "Copy To"
-msgstr "Kopieren nach"
+msgstr "Αντιγραφή στο"
 
 #: ../tvp-svn-helper/tsh-delete.c:108
 msgid "Local delete"
-msgstr "Lokal löschen"
+msgstr "Τοπική διαγραφή"
 
 #: ../tvp-svn-helper/tsh-delete.c:145
 msgid "Delete Message"
-msgstr "Löschnachricht"
+msgstr "Μήνυμα διαγραφής"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:60
 msgid "_Certificate:"
-msgstr "_Zertifikat:"
+msgstr "_Πιστοποιητικό:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:67
 msgid "Select a file"
-msgstr "Datei auswählen"
+msgstr "Επιλέξτε ένα αρχείο"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:78
 #: ../tvp-svn-helper/tsh-login-dialog.c:98
 #: ../tvp-svn-helper/tsh-trust-dialog.c:73
+#, fuzzy
 msgid "Remember"
-msgstr "Merken"
+msgstr "Να το θυμάσαι"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:86
 msgid "Certificate"
-msgstr "Zertifikat"
+msgstr "Πιστοποιητικό"
 
 #: ../tvp-svn-helper/tsh-import.c:125
 msgid "Import Message"
-msgstr "Importiermeldung"
+msgstr "Μήνυμα εισαγωγής"
 
 #: ../tvp-svn-helper/tsh-log.c:113
 msgid "Log failed"
-msgstr "Log fehlgeschlagen"
+msgstr "Η καταγραφή απέτυχε"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:65
 msgid "_Username:"
-msgstr "_Bentuzername:"
+msgstr "_Όνομα χρήστη:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:81
 msgid "_Password:"
-msgstr "_Passwort:"
+msgstr "_Κωδικός"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:106
 msgid "Login"
-msgstr "Anmelden"
+msgstr "Σύνδεση"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:93
 msgid "State"
-msgstr "Status"
+msgstr "Κατάσταση"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:118
 msgid "Log Message"
-msgstr "Lognachricht"
+msgstr "Μήνυμα καταγραφής"
 
 #: ../tvp-svn-helper/tsh-move.c:94
+#, fuzzy
 msgid "Local move"
-msgstr "Lokal verschieben"
+msgstr "Τοπική μετακίνηση"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:100
 msgid "Mime type"
-msgstr "MIME-Typ"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:115
 msgid "Notification"
-msgstr "Benachrichtigung"
+msgstr "Ειδοποίηση"
 
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:81
 msgid "Set property failed"
-msgstr "Das Setzen der Eigenschaften ist fehlgeschlagen"
+msgstr "Απέτυχε η ρύθμιση της ιδιότητας"
 
 #: ../tvp-svn-helper/tsh-properties.c:104
 msgid "Properties failed"
-msgstr "Eigenschaften fehlgeschlagen"
+msgstr "Αποτυχία ιδιοτήτων"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:132
 msgid "Value"
-msgstr "Wert"
+msgstr "Τιμή"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
@@ -1229,7 +1242,7 @@ msgstr "Wert"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:207
 #: ../tvp-svn-helper/tsh-status-dialog.c:182
 msgid "Self"
-msgstr "Selbst"
+msgstr ""
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
@@ -1242,7 +1255,7 @@ msgstr "Selbst"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:218
 #: ../tvp-svn-helper/tsh-status-dialog.c:191
 msgid "Immediate files"
-msgstr "Alle Dateien ab dieser Ebene"
+msgstr ""
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
@@ -1253,81 +1266,72 @@ msgstr "Alle Dateien ab dieser Ebene"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:209
 msgid "Recursive"
-msgstr "Rekursiv"
+msgstr "Αναδρομικά"
 
 #: ../tvp-svn-helper/tsh-relocate.c:71
 msgid "Relocate failed"
-msgstr "Umplatzieren fehlgeschlagen"
+msgstr "Η επανατοποθέτηση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-relocate.c:86
 msgid "Relocate finished"
-msgstr "Umplatzieren vollendet"
+msgstr "Η επανατοποθέτηση ολοκληρώθηκε"
 
 #: ../tvp-svn-helper/tsh-relocate.c:128
 msgid "Relocating ..."
-msgstr "Platziere um ..."
+msgstr "Επανατοποθέτηση ..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr "_Von:"
+msgstr "_Από:"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:143
 msgid "_To:"
-msgstr "_Nach:"
+msgstr "_Προς:"
 
 #: ../tvp-svn-helper/tsh-status.c:86
 msgid "Status failed"
-msgstr "Status fehlgeschlagen"
+msgstr "Η κατάσταση απέτυχε"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr "Unveränderte Dateien zeigen"
+msgstr "Εμφάνιση μη τροποποιημένων αρχείων"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:228
 msgid "Show Unversioned Files"
-msgstr "Unversionierte Dateien zeigen"
+msgstr "Εμφάνιση αρχείων που δεν παρακολουθούνται"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:232
 msgid "Show Ignored Files"
-msgstr "Ignorierte Dateien zeigen"
+msgstr "Εμφάνιση αγνοούμενων αρχείων"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:236
 msgid "Hide Externals"
-msgstr "Externes verbergen"
+msgstr "Απόκρυψη εξωτερικών"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:240
 msgid "Check Repository"
-msgstr "Ablage überprüfen"
+msgstr "Έλεγχος αποθετηρίου"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:58
 msgid "Certificate is not yet valid."
-msgstr "Zertifikat ist noch nicht gültig."
+msgstr "Το πιστοποιητικό δεν είναι ακόμη έγκυρο."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:61
 msgid "Certificate has expired."
-msgstr "Zertifikat ist ausgelaufen."
+msgstr "Το πιστοποιητικό έχει λήξει."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:64
 msgid "Certificate does not match the remote hostname."
-msgstr "Zertifikat passt nicht zum Namen des entfernten Hosts."
+msgstr "Πιστοποιητικό δεν ταιριάζει με το απομακρυσμένο όνομα υπολογιστή."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:67
 msgid "Certificate authority is unknown."
-msgstr "Zertifikatsgeber ist unbekannt."
+msgstr "Η πιστοποιητική αρχή είναι άγνωστη."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:70
 msgid "Other failure."
-msgstr "Anderer Fehler."
+msgstr "Άλλη αποτυχία."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:77
 msgid "Trust"
-msgstr "Vertrauen"
-
-#~ msgid "Execute remove action"
-#~ msgstr "Aktion »Verschieben« ausführen"
-
-#~ msgid "Remove Related Options:"
-#~ msgstr "Optionen für Aufgelöst:"
-
-#~ msgid "Add finished"
-#~ msgstr "Aufräumen vollständig"
+msgstr "Εμπιστοσύνη"
