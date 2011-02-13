@@ -73,13 +73,13 @@ XDT_I18N([@LINGUAS@])
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([THUNARX], [thunarx-2], [1.0.1])
-XDT_CHECK_PACKAGE([EXO], [exo-0.3], [0.3.100])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.6.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.6.0])
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.6.0])
-XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.6.0])
-XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.6.0])
+XDT_CHECK_PACKAGE([THUNARX], [thunarx-2], [1.2.0])
+XDT_CHECK_PACKAGE([EXO], [exo-1], [0.6.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.8.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.14.0])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.18.0])
+XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.18.0])
+XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.18.0])
 
 dnl ***********************************
 dnl *** Check for optional packages ***
@@ -149,3 +149,21 @@ tvp-svn-helper/Makefile
 tvp-git-helper/Makefile
 ])
 
+dnl ***************************
+dnl *** Print configuration ***
+dnl ***************************
+echo
+echo "Build Configuration:"
+echo
+dnl echo "* Installation prefix:                $prefix"
+if test x"$found_subversion" = x"yes"; then
+echo "* Subversion support:                 yes"
+else
+echo "* Subversion support:                 no"
+fi
+if test x"$found_git" = x"yes"; then
+echo "* Git support:                        yes"
+else
+echo "* Git support:                        no"
+fi
+echo

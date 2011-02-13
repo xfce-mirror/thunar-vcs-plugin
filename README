@@ -26,11 +26,10 @@ Required packages
 
 The Thunar VCS Plugin depends on the following packages:
 - Thunar
-- Thunar-VFS 0.4.0 or higher
-- Thunarx 0.4.0 or higher
-- gtk 2.6.0 or higher
-- glib 2.6.0 or higher
-- gobject 2.6.0 or higher
+- Thunarx 1.2.0 or higher
+- gtk 2.14.0 or higher
+- glib 2.18.0 or higher
+- gobject 2.18.0 or higher
 
 For svn support it requires the following packages:
 - libsvn 1.5 or higher
