@@ -65,7 +65,7 @@ tgh_clean_dialog_init (TghCleanDialog *dialog)
 
   gtk_list_store_append (GTK_LIST_STORE (model), &iter);
   gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-      0, _("Excldue ignored files"),
+      0, _("Exclude ignored files"),
       1, TGH_CLEAN_IGNORE_EXCLUDE,
       -1);
 
