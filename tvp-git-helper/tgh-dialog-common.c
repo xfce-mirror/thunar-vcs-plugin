@@ -48,3 +48,51 @@ close_response (GtkDialog *dialog, gint response, gpointer user_data)
   gtk_widget_destroy (GTK_WIDGET (dialog));
 }
 
+void
+tgh_dialog_replace_action_area (GtkDialog *dialog)
+{
+  GtkWidget *box;
+
+  gtk_container_remove (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_DIALOG (dialog)->action_area);
+
+  GTK_DIALOG (dialog)->action_area = box = gtk_hbox_new (FALSE, 0);
+
+  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->vbox), box,
+      FALSE, TRUE, 0);
+  gtk_widget_show (box);
+
+  gtk_box_reorder_child (GTK_BOX (GTK_DIALOG (dialog)->vbox), box, 0);
+}
+
+void
+tgh_make_homogeneous (GtkWidget *first, ...)
+{
+  GtkWidget *iter;
+  GtkRequisition request;
+  gint max_width = 0;
+  gint max_height = 0;
+  va_list ap;
+
+  va_start (ap, first);
+  iter = first;
+  while (iter)
+  {
+    gtk_widget_size_request(iter, &request);
+    if (request.width > max_width)
+      max_width = request.width;
+    if (request.height > max_height)
+      max_height = request.height;
+    iter = va_arg (ap, GtkWidget *);
+  }
+  va_end (ap);
+
+  va_start (ap, first);
+  iter = first;
+  while (iter)
+  {
+    gtk_widget_set_size_request (iter, max_width, max_height);
+    iter = va_arg (ap, GtkWidget *);
+  }
+  va_end (ap);
+}
+

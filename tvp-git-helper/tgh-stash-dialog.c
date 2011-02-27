@@ -25,6 +25,7 @@
 #include <gtk/gtk.h>
 
 #include "tgh-common.h"
+#include "tgh-dialog-common.h"
 #include "tgh-stash-dialog.h"
 
 static void selection_changed (GtkTreeView*, gpointer);
@@ -34,7 +35,6 @@ static void apply_clicked (GtkButton*, gpointer);
 static void pop_clicked (GtkButton*, gpointer);
 static void drop_clicked (GtkButton*, gpointer);
 static void clear_clicked (GtkButton*, gpointer);
-static void tgh_make_homogeneous (GtkWidget *, ...) G_GNUC_NULL_TERMINATED;
 
 struct _TghStashDialog
 {
@@ -221,15 +221,8 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   gtk_widget_show (vpane);
 
   //gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
-  gtk_container_remove (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_DIALOG (dialog)->action_area);
-
-  GTK_DIALOG (dialog)->action_area = box = gtk_hbox_new (FALSE, 0);
-
-  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->vbox), box,
-      FALSE, TRUE, 0);
-  gtk_widget_show (box);
-
-  gtk_box_reorder_child (GTK_BOX (GTK_DIALOG (dialog)->vbox), box, 0);
+  tgh_dialog_replace_action_area (GTK_DIALOG (dialog));
+  box = GTK_DIALOG (dialog)->action_area;
 
   //box = gtk_hbox_new (FALSE, 12);
 
@@ -297,38 +290,6 @@ tgh_stash_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flag
     gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
 
   return GTK_WIDGET(dialog);
-}
-
-static void
-tgh_make_homogeneous (GtkWidget *first, ...)
-{
-  GtkWidget *iter;
-  GtkRequisition request;
-  gint max_width = 0;
-  gint max_height = 0;
-  va_list ap;
-
-  va_start (ap, first);
-  iter = first;
-  while (iter)
-  {
-    gtk_widget_size_request(iter, &request);
-    if (request.width > max_width)
-      max_width = request.width;
-    if (request.height > max_height)
-      max_height = request.height;
-    iter = va_arg (ap, GtkWidget *);
-  }
-  va_end (ap);
-
-  va_start (ap, first);
-  iter = first;
-  while (iter)
-  {
-    gtk_widget_set_size_request (iter, max_width, max_height);
-    iter = va_arg (ap, GtkWidget *);
-  }
-  va_end (ap);
 }
 
 void       
