@@ -1,9 +1,55 @@
+2011-02-27	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-clean-dialog.c: Fixed spelling in text string.
+	* po/ChangeLog po/thunar-vcs-plugin.pot: Dropped ChangeLog and pot
+	  files from po.
+	* tvp-git-helper/tgh-branch{,-dialog}.c: Added support for git branch
+	  creation and switching.
+	* tvp-git-helper/tgh-stash.c: Reduced the number of functions for in
+	  git stash.
+	* tvp-git-helper/tgh-dialog-common.[ch]
+	  tvp-git-helper/tgh-stash-dialog.c: Moved dialog button box functions
+	  to dialog common.
+
+2011-02-13	Peter de Ridder <peter@xfce.org>
+
+	* README configure.ac.in tvp-git-helper/tgh-cell-renderer-graph.c:
+	  Changed the dependencies to xfce 4.8.
+	* configure.ac.in thunar-vcs-plugin/* tvp-git-helper/*
+	  tvp-svn-helper/*: Changed to thunarx-2 and removed thunar-vfs.
+
+2010-08-12	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-common.c tvp-git-helper/tgh-log-dialog.c: Show
+	  full revision hash in log dialog.
+
+2010-08-03	Peter de Ridder <peter@xfce.org>
+
+	* tvp-git-helper/tgh-{add,blame,branch,clean}.c
+	  tvp-git-helper/tgh-common.[ch]
+	  tvp-git-helper/tgh-{log,move,reset,stash,status}.c: Change files to
+	  relative paths to git repository.
+
+2010-08-02	Peter de Ridder <peter@xfce.org>
+
+	* tvp-svn-helper/tsh-log-dialog.[ch] tvp-svn-helper/tsh-log.c: Added
+	  options to the svn log dialog.
+	* tvp-svn-helper/tsh-status-dialog.c: Added spacing on the svn status
+	  dialog.
+	* tvp-git-helper/tgh-cell-renderer-graph.c
+	  tvp-svn-helper/tsh-status-dialog.h: Fixed compiler warnings.
+	* INSTALL: Updated INSTALL file.
+
+2010-01-18	Peter de Ridder <peter@xfce.org>
+
+	* tvp-svn-helper/tsh-common.c: Updated the auth providers.
+
 2009-12-07	Peter de Ridder <peter@xfce.org>
 
 	* tvp-git-helper/Makefile.am
-	 tvp-git-helper/tgh-cell-renderer-graph.[ch]
-	 tvp-git-helper/tgh-common.c tvp-git-helper/tgh-log-dialog.[ch]
-	 tvp-git-helper/tgh-log.c: Show revision graph in log dialog.
+	  tvp-git-helper/tgh-cell-renderer-graph.[ch]
+	  tvp-git-helper/tgh-common.c tvp-git-helper/tgh-log-dialog.[ch]
+	  tvp-git-helper/tgh-log.c: Show revision graph in log dialog.
 
 2009-12-06	Peter de Ridder <peter@xfce.org>
 
