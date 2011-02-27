@@ -25,10 +25,12 @@
 #include <gtk/gtk.h>
 
 #include "tgh-common.h"
+#include "tgh-dialog-common.h"
 #include "tgh-branch-dialog.h"
 
 static void cancel_clicked (GtkButton*, gpointer);
-static void refresh_clicked (GtkButton*, gpointer);
+static void checkout_clicked (GtkButton*, gpointer);
+static void create_clicked (GtkButton*, gpointer);
 
 struct _TghBranchDialog
 {
@@ -37,7 +39,8 @@ struct _TghBranchDialog
   GtkWidget *tree_view;
   GtkWidget *close;
   GtkWidget *cancel;
-  GtkWidget *refresh;
+  GtkWidget *checkout;
+  GtkWidget *create;
 };
 
 struct _TghBranchDialogClass
@@ -49,7 +52,8 @@ G_DEFINE_TYPE (TghBranchDialog, tgh_branch_dialog, GTK_TYPE_DIALOG)
 
 enum {
   SIGNAL_CANCEL = 0,
-  SIGNAL_REFRESH,
+  SIGNAL_CHECKOUT,
+  SIGNAL_CREATE,
   SIGNAL_COUNT
 };
 
@@ -64,12 +68,20 @@ tgh_branch_dialog_class_init (TghBranchDialogClass *klass)
     0, NULL, NULL,
     g_cclosure_marshal_VOID__VOID,
     G_TYPE_NONE, 0);
-  signals[SIGNAL_REFRESH] = g_signal_new("refresh-clicked",
+
+  signals[SIGNAL_CHECKOUT] = g_signal_new("checkout-clicked",
     G_OBJECT_CLASS_TYPE (klass),
     G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
     0, NULL, NULL,
-    g_cclosure_marshal_VOID__VOID,
-    G_TYPE_NONE, 0);
+    g_cclosure_marshal_VOID__STRING,
+    G_TYPE_NONE, 1, G_TYPE_STRING);
+
+  signals[SIGNAL_CREATE] = g_signal_new("create-clicked",
+    G_OBJECT_CLASS_TYPE (klass),
+    G_SIGNAL_RUN_FIRST | G_SIGNAL_ACTION,
+    0, NULL, NULL,
+    g_cclosure_marshal_VOID__STRING,
+    G_TYPE_NONE, 1, G_TYPE_STRING);
 }
 
 enum {
@@ -86,6 +98,7 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   GtkWidget *scroll_window;
   GtkCellRenderer *renderer;
   GtkTreeModel *model;
+  GtkWidget *box;
 
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -101,7 +114,7 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
 
   renderer = gtk_cell_renderer_text_new ();
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-                                               -1, _("Path"),
+                                               -1, _("Name"),
                                                renderer, "text",
                                                COLUMN_BRANCH, NULL);
 
@@ -116,22 +129,30 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
+  tgh_dialog_replace_action_area (GTK_DIALOG (dialog));
+  box = GTK_DIALOG (dialog)->action_area;
+
+  dialog->checkout = button = gtk_button_new_from_stock(GTK_STOCK_JUMP_TO);
+  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (checkout_clicked), dialog);
+  gtk_widget_show (button);
+
+  dialog->create = button = gtk_button_new_from_stock(GTK_STOCK_NEW);
+  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (create_clicked), dialog);
+  gtk_widget_show (button);
+
   gtk_window_set_title (GTK_WINDOW (dialog), _("Branch"));
 
-  gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  gtk_widget_hide (button);
 
   dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+  gtk_box_pack_end (GTK_BOX (box), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
-  g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
-  gtk_widget_hide (button);
-
-  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
-  gtk_widget_show (button);
+  tgh_make_homogeneous (dialog->checkout, dialog->create, dialog->close, dialog->cancel, NULL);
 
   gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
 }
@@ -182,7 +203,7 @@ tgh_branch_dialog_done (TghBranchDialog *dialog)
   g_return_if_fail (TGH_IS_BRANCH_DIALOG (dialog));
 
   gtk_widget_hide (dialog->cancel);
-  gtk_widget_show (dialog->refresh);
+  gtk_widget_show (dialog->close);
 }
 
 static void
@@ -191,23 +212,109 @@ cancel_clicked (GtkButton *button, gpointer user_data)
   TghBranchDialog *dialog = TGH_BRANCH_DIALOG (user_data);
 
   gtk_widget_hide (dialog->cancel);
-  gtk_widget_show (dialog->refresh);
+  gtk_widget_show (dialog->close);
   
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
 
 static void
-refresh_clicked (GtkButton *button, gpointer user_data)
+checkout_clicked (GtkButton *button, gpointer user_data)
 {
+  GtkTreeIter iter;
+  GtkTreeSelection *selection;
   GtkTreeModel *model;
+  gchar *name;
+
   TghBranchDialog *dialog = TGH_BRANCH_DIALOG (user_data);
 
-  gtk_widget_hide (dialog->refresh);
-  gtk_widget_show (dialog->cancel);
+  selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (dialog->tree_view));
 
-  g_signal_emit (dialog, signals[SIGNAL_REFRESH], 0);
+  if (gtk_tree_selection_get_selected (selection, &model, &iter))
+  {
+    gtk_tree_model_get (model, &iter, COLUMN_BRANCH, &name, -1);
+
+    gtk_widget_hide (dialog->close);
+    gtk_widget_show (dialog->cancel);
+
+    model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
+    gtk_list_store_clear (GTK_LIST_STORE (model));
+
+    g_signal_emit (dialog, signals[SIGNAL_CHECKOUT], 0, name);
+
+    g_free (name);
+  }
+}
+
+static void
+create_clicked (GtkButton *button, gpointer user_data)
+{
+  GtkTreeModel *model;
+  GtkWidget *name_dialog;
+  GtkWidget *label, *image, *hbox, *vbox, *name_entry;
+  gchar *name;
+  gint result;
+
+  TghBranchDialog *dialog = TGH_BRANCH_DIALOG (user_data);
+
+  name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL | GTK_DIALOG_NO_SEPARATOR, GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, GTK_STOCK_NEW, GTK_RESPONSE_ACCEPT, NULL);
+  gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT, GTK_RESPONSE_CANCEL, -1);
+  gtk_window_set_resizable (GTK_WINDOW (name_dialog), FALSE);
+  gtk_window_set_skip_taskbar_hint (GTK_WINDOW (name_dialog), TRUE);
+
+  label = gtk_label_new (_("Branch name:"));
+  image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_QUESTION, GTK_ICON_SIZE_DIALOG);
+  gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
+  
+  gtk_misc_set_alignment   (GTK_MISC  (label), 0.0, 0.0);
+
+  name_entry = gtk_entry_new ();
+  
+  hbox = gtk_hbox_new (FALSE, 12);
+  vbox = gtk_vbox_new (FALSE, 12);
+
+  gtk_box_pack_start (GTK_BOX (vbox), label,
+                      FALSE, FALSE, 0);
+
+  gtk_box_pack_start (GTK_BOX (vbox), name_entry,
+                      TRUE, TRUE, 0);
+
+  gtk_box_pack_start (GTK_BOX (hbox), image,
+                      FALSE, FALSE, 0);
+
+  gtk_box_pack_start (GTK_BOX (hbox), vbox,
+                      TRUE, TRUE, 0);
+
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (name_dialog))),
+                      hbox,
+                      FALSE, FALSE, 0);
+
+  gtk_container_set_border_width (GTK_CONTAINER (name_dialog), 5);
+  gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
+  gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (name_dialog)->vbox), 14); /* 14 + 2 * 5 = 24 */
+  gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (name_dialog))), 5);
+  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (name_dialog))), 6);
+
+  gtk_widget_show_all (hbox);
+
+  result = gtk_dialog_run (GTK_DIALOG (name_dialog));
+  if (result != GTK_RESPONSE_ACCEPT)
+  {
+    gtk_widget_destroy (name_dialog);
+    return;
+  }
+
+  name = g_strdup (gtk_entry_get_text (GTK_ENTRY (name_entry)));
+
+  gtk_widget_destroy (name_dialog);
+
+  gtk_widget_hide (dialog->close);
+  gtk_widget_show (dialog->cancel);
 
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
+
+  g_signal_emit (dialog, signals[SIGNAL_CREATE], 0, name);
+
+  g_free (name);
 }
 
