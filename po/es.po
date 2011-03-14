@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-10 17:16+0000\n"
+"POT-Creation-Date: 2011-03-14 17:16+0000\n"
 "PO-Revision-Date: 2010-03-30 13:26+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish <xfce-i18n@xfce.org>\n"
@@ -616,9 +616,8 @@ msgid "Name"
 msgstr "Nombre"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:263
-#, fuzzy
 msgid "Branch name:"
-msgstr "Rama"
+msgstr "Nombre de la rama:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
@@ -1183,11 +1182,11 @@ msgstr "Registrar fallos"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "Detener al copiar"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "Mostrar revisiones combinadas"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
