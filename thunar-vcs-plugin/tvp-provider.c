@@ -390,8 +390,8 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
   GtkAction          *action;
   GList              *lp;
   gint               n_files = 0;
-#ifdef HAVE_SUBVERSION
   gchar              *scheme;
+#ifdef HAVE_SUBVERSION
   gboolean            parent_wc = FALSE;
   gboolean            directory_is_wc = FALSE;
   gboolean            directory_is_not_wc = FALSE;
