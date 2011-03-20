@@ -1,8 +1,12 @@
+0.1.4
+=====
+- Make it possible to disable subversion.
+
 0.1.3
 =====
 - Changed to thunarx-2 and depend upon xfce 4.8.
 - Draw a revision graph in git log.
-- Improved git ibranch action.
+- Improved git branch action.
 
 0.1.2
 =====
