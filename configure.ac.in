@@ -174,4 +174,8 @@ echo "* Git support:                        yes"
 else
 echo "* Git support:                        no"
 fi
+if test x"$found_subversion" != x"yes" -a x"$found_git" != x"yes"; then
+echo
+echo "WARNING: Both subversion and git are disabled. This is probably not intended."
+fi
 echo
