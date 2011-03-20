@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-14 17:16+0000\n"
+"POT-Creation-Date: 2011-03-20 12:20+0100\n"
 "PO-Revision-Date: 2010-03-30 13:26+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish <xfce-i18n@xfce.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -219,8 +220,7 @@ msgstr "Mostrar"
 msgid "Menu|Stash"
 msgstr "Ocultar"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:256
@@ -459,36 +459,34 @@ msgstr "Profundidad:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 msgid "Exclude"
 msgstr "Excluir:"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Vacío"
 
 #. Translators: svn recursion depth infotmation
-#. * Files depth means this file/direcotry and all of it's files are checked
-#. out
-#. 
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Archivos"
 
 #. Translators: svn recursion depth infotmation
-#. * Immediates depth means this file/direcotry and all of it's files and
-#. subdirectories are checked out
-#. 
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
+#.
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -496,9 +494,8 @@ msgid "Immediates"
 msgstr "Recursivos"
 
 #. Translators: svn recursion depth infotmation
-#. * Infinity depth means this file/direcotry is checked out with full
-#. recursion
-#. 
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Infinito"
@@ -884,8 +881,7 @@ msgstr "Opciones relacionadas con bloquear:"
 msgid "Properties Related Options:"
 msgstr "Opciones relacionadas con propiedades:"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:303 ../tvp-svn-helper/tsh-properties-dialog.c:280
 msgid "Properties"
@@ -1235,23 +1231,21 @@ msgstr "Valor"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
+#.
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
+#.
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "Auto"
 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. updated
-#. 
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. shown
-#. 
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1259,10 +1253,10 @@ msgstr "Archivos inmediatos"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
+#.
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
+#.
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"

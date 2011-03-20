@@ -27,6 +27,8 @@ Required packages
 The Thunar VCS Plugin depends on the following packages:
 - Thunar
 - Thunarx 1.2.0 or higher
+- exo 0.6.0 or higher
+- libxfce4util 4.8.0 or higher
 - gtk 2.14.0 or higher
 - glib 2.18.0 or higher
 - gobject 2.18.0 or higher
