@@ -512,7 +512,6 @@ msgid "Execute add action"
 msgstr "Виконати дію add"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:120
-#, fuzzy
 msgid "Execute blame action"
 msgstr "Виконати дію blame"
 
