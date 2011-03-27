@@ -32,7 +32,7 @@ msgstr "Новий"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Bisect"
-msgstr "Меню|Розділити"
+msgstr "Розділити"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Bisect"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Branch"
-msgstr "Меню|Гілка"
+msgstr "Гілка"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:144
@@ -113,7 +113,7 @@ msgstr "Різниця"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
-msgstr "Меню|Отримати"
+msgstr "Отримати"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
@@ -168,7 +168,7 @@ msgstr "Перемістити"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Menu|Pull"
-msgstr "Меню|Стягнути"
+msgstr "Стягнути"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Pull"
@@ -176,7 +176,7 @@ msgstr "Стягнути"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Push"
-msgstr "Меню|Відіслати"
+msgstr "Відіслати"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Push"
@@ -184,7 +184,7 @@ msgstr "Відіслати"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr "Меню|Перебудувати"
+msgstr "Перебудувати"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
@@ -217,7 +217,7 @@ msgstr "Показати"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:289
 msgid "Menu|Stash"
-msgstr "Меню|Припинити"
+msgstr "Припинити"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
@@ -347,7 +347,7 @@ msgstr "Редагувати параметри"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
-msgstr "Меню|Перемістити"
+msgstr "Перемістити"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
 #: ../tvp-svn-helper/tsh-relocate.c:116
@@ -357,7 +357,7 @@ msgstr "Перемістити"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
-msgstr "Меню|Вирішено"
+msgstr "Вирішено"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-common.c:540 ../tvp-svn-helper/tsh-resolved.c:115
@@ -367,7 +367,7 @@ msgstr "Вирішено"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Resolve"
-msgstr "Меню|Вирішити"
+msgstr "Вирішити"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Resolve"
@@ -375,7 +375,7 @@ msgstr "Вирішити"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
-msgstr "Меню|Повернутися"
+msgstr "Повернутися"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:315
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
@@ -509,9 +509,10 @@ msgstr "Вивести інформацію про версію"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:114
 msgid "Execute add action"
-msgstr "Виконати дію Додати"
+msgstr "Виконати дію add"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:120
+#, fuzzy
 msgid "Execute blame action"
 msgstr "Виконати дію blame"
 
@@ -740,7 +741,7 @@ msgstr "Опис"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:398
 msgid "Stash description:"
-msgstr "Опис Stash:"
+msgstr "Опис кубла:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
@@ -749,7 +750,7 @@ msgstr "Ви впевнені, що бажаєте відкинути %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
-msgstr "Ви впевнені, що бажаєте очистити всі stash?"
+msgstr "Ви впевнені, що бажаєте очистити всі кубла?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:81
@@ -925,15 +926,15 @@ msgstr "Невдача Blame"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
-msgstr "Невдача Cleanup"
+msgstr "Невдача очищення"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
-msgstr "Cleanup завершено"
+msgstr "Очищення завершено"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
 msgid "Cleaning up ..."
-msgstr "Cleaning розпочато ..."
+msgstr "Очищення розпочато ..."
 
 #: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-common.c:761
 #: ../tvp-svn-helper/tsh-copy.c:101 ../tvp-svn-helper/tsh-delete.c:105
@@ -951,11 +952,11 @@ msgstr "Нічого не робити"
 #: ../tvp-svn-helper/tsh-delete.c:116 ../tvp-svn-helper/tsh-import.c:89
 #: ../tvp-svn-helper/tsh-move.c:102
 msgid "Completed"
-msgstr "Зроблено"
+msgstr "Завершено"
 
 #: ../tvp-svn-helper/tsh-commit.c:243
 msgid "Commit Message"
-msgstr "Повідомлення для Commit"
+msgstr "Повідомлення Commit"
 
 #: ../tvp-svn-helper/tsh-common.c:290
 msgid "Store password a plaintext?"
@@ -1042,11 +1043,11 @@ msgstr "Встановлення списку змін"
 
 #: ../tvp-svn-helper/tsh-common.c:561
 msgid "Changelist cleared"
-msgstr "Чистий список змін"
+msgstr "Список змін очищено"
 
 #: ../tvp-svn-helper/tsh-common.c:562
 msgid "Changelist moved"
-msgstr "Переміщений список змін"
+msgstr "Список змін переміщено"
 
 #: ../tvp-svn-helper/tsh-common.c:563
 msgid "Merge begin"
@@ -1144,7 +1145,7 @@ msgstr "Локальна копіювати"
 
 #: ../tvp-svn-helper/tsh-copy.c:150
 msgid "Copy To"
-msgstr "Копіювати в"
+msgstr "Копіювати до"
 
 #: ../tvp-svn-helper/tsh-delete.c:110
 msgid "Local delete"
@@ -1286,7 +1287,7 @@ msgstr "_З:"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:142
 msgid "_To:"
-msgstr "_В:"
+msgstr "_До:"
 
 #: ../tvp-svn-helper/tsh-status.c:88
 msgid "Status failed"
