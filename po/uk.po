@@ -987,7 +987,7 @@ msgstr "Повернуто назад"
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Revert failed"
-msgstr ""
+msgstr "Повернення не вдалося"
 
 #: ../tvp-svn-helper/tsh-common.c:541
 msgid "Skipped"
@@ -1054,7 +1054,7 @@ msgstr "Початок злиття"
 
 #: ../tvp-svn-helper/tsh-common.c:564
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Стороннє злиття почалося"
 
 #: ../tvp-svn-helper/tsh-common.c:565
 msgid "Replace"
@@ -1078,11 +1078,11 @@ msgstr "Властивості немає"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "Revision property set"
-msgstr ""
+msgstr "Встановити властивості ревізії"
 
 #: ../tvp-svn-helper/tsh-common.c:572
 msgid "Revision property deleted"
-msgstr ""
+msgstr "Властивість ревізії видалено"
 
 #: ../tvp-svn-helper/tsh-common.c:573
 msgid "Merge completed"
@@ -1094,7 +1094,7 @@ msgstr "Конфлікт дерева"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "External failed"
-msgstr ""
+msgstr "Зовнішнє не вдалося"
 
 #: ../tvp-svn-helper/tsh-common.c:636
 msgid "Inapplicable"
