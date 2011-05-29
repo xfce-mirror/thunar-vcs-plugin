@@ -1,24 +1,23 @@
-# Croatian (hr) translation for thunar-vcs-plugin 
+# Croatian (hr) translation for thunar-vcs-plugin
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the thunar-vcs-plugin  package.
 # Ivica Kolić <ikoli@yahoo.com>, 2011.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-28 10:17+0000\n"
+"POT-Creation-Date: 2011-05-29 16:16+0000\n"
 "PO-Revision-Date: 2011-05-28 15:57+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yxahoo.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Croatian\n"
-"X-Poedit-Country: CROATIA\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: CROATIA\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -66,13 +65,13 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
 msgid "Menu|Checkout"
-msgstr ""
+msgstr "Izbornik | Provjera"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:263
 #: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
 msgid "Checkout"
-msgstr ""
+msgstr "Provjera"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 msgid "Menu|Clean"
@@ -152,11 +151,11 @@ msgstr "Zapis"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Merge"
-msgstr ""
+msgstr "Izbornik | Spoji"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Merge"
-msgstr ""
+msgstr "Spoji"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
@@ -222,7 +221,8 @@ msgstr "Pokaži"
 msgid "Menu|Stash"
 msgstr ""
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:256
@@ -245,11 +245,11 @@ msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Menu|Tag"
-msgstr ""
+msgstr "Izbornik | Oznaka"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
-msgstr ""
+msgstr "Oznaka"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:301
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
@@ -349,13 +349,13 @@ msgstr "Uredi svojstva"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
-msgstr ""
+msgstr "Izbornik | Premjestite"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
 #: ../tvp-svn-helper/tsh-relocate.c:116
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:216
 msgid "Relocate"
-msgstr ""
+msgstr "Premjestite"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
@@ -457,38 +457,40 @@ msgstr "Lista promjena"
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
 msgid "Depth:"
-msgstr ""
+msgstr "Dubina:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 msgid "Exclude"
-msgstr ""
+msgstr "Isključi"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Prazan"
 
 #. Translators: svn recursion depth infotmation
-#. * Files depth means this file/direcotry and all of it's files are checked out
-#.
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Datoteke"
 
 #. Translators: svn recursion depth infotmation
-#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
-#.
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -496,8 +498,9 @@ msgid "Immediates"
 msgstr ""
 
 #. Translators: svn recursion depth infotmation
-#. * Infinity depth means this file/direcotry is checked out with full recursion
-#.
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Beskonačno"
@@ -548,7 +551,7 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:251
 msgid "Add Related Options:"
-msgstr ""
+msgstr "Dodaj povezane mogućnosti:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:255
 msgid "Blame Related Options:"
@@ -568,7 +571,7 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:299
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Premjesti povezane mogućnosti:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
@@ -624,15 +627,15 @@ msgstr "Ukloni direktorije"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
-msgstr ""
+msgstr "Isključi zanemarene datoteke"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:76
 msgid "Include ignored files"
-msgstr ""
+msgstr "Uključi zanemarene datoteke"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:82
 msgid "Only ignored files"
-msgstr ""
+msgstr "Samo zanemarene datoteke"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
@@ -785,11 +788,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:132
 msgid "Execute checkout action"
-msgstr ""
+msgstr "Izvrši akciju provjere"
 
 #: ../tvp-svn-helper/main.c:138
 msgid "Execute cleanup action"
-msgstr ""
+msgstr "Izvrši akciju čišćenja"
 
 #: ../tvp-svn-helper/main.c:144
 msgid "Execute commit action"
@@ -797,23 +800,23 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:150
 msgid "Execute copy action"
-msgstr ""
+msgstr "Izvrši akciju kopiranja"
 
 #: ../tvp-svn-helper/main.c:156
 msgid "Execute delete action"
-msgstr ""
+msgstr "Izvrši akciju brisanja"
 
 #: ../tvp-svn-helper/main.c:162
 msgid "Execute export action"
-msgstr ""
+msgstr "Izvrši akciju izvoza"
 
 #: ../tvp-svn-helper/main.c:168
 msgid "Execute import action"
-msgstr ""
+msgstr "Izvrši akciju uvoza"
 
 #: ../tvp-svn-helper/main.c:174
 msgid "Execute lock action"
-msgstr ""
+msgstr "Izvrši akciju zaključavanja"
 
 #: ../tvp-svn-helper/main.c:192
 msgid "Execute properties action"
@@ -841,19 +844,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:234
 msgid "Execute update action"
-msgstr ""
+msgstr "Izvrši akciju dopuna"
 
 #: ../tvp-svn-helper/main.c:259
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti liste promjena:"
 
 #: ../tvp-svn-helper/main.c:263
 msgid "Checkout Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti provjere:"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti čišćenja:"
 
 #: ../tvp-svn-helper/main.c:271
 msgid "Commit Related Options:"
@@ -861,29 +864,30 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:275
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti kopiranja:"
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti  brisanja:"
 
 #: ../tvp-svn-helper/main.c:283
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti izvoza:"
 
 #: ../tvp-svn-helper/main.c:287
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti uvoza: "
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti zakjlučavanja:"
 
 #: ../tvp-svn-helper/main.c:303
 msgid "Properties Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti svojstava:"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:303 ../tvp-svn-helper/tsh-properties-dialog.c:280
 msgid "Properties"
@@ -895,7 +899,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:311
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti premještanja:"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Revert Related Options:"
@@ -907,11 +911,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti otključavanja"
 
 #: ../tvp-svn-helper/main.c:331
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Povezane mogućnosti dopuna:"
 
 #: ../tvp-svn-helper/main.c:374
 msgid "Not enough arguments provided"
@@ -931,7 +935,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
 msgid "Cleaning up ..."
-msgstr ""
+msgstr "Čistim..."
 
 #: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-common.c:761
 #: ../tvp-svn-helper/tsh-copy.c:101 ../tvp-svn-helper/tsh-delete.c:105
@@ -949,7 +953,7 @@ msgstr "Ništa za učiniti"
 #: ../tvp-svn-helper/tsh-delete.c:116 ../tvp-svn-helper/tsh-import.c:89
 #: ../tvp-svn-helper/tsh-move.c:102
 msgid "Completed"
-msgstr ""
+msgstr "Dovršen"
 
 #: ../tvp-svn-helper/tsh-commit.c:243
 msgid "Commit Message"
@@ -1048,7 +1052,7 @@ msgstr "Lista promjena premještena"
 
 #: ../tvp-svn-helper/tsh-common.c:563
 msgid "Merge begin"
-msgstr ""
+msgstr "Započni spajanje"
 
 #: ../tvp-svn-helper/tsh-common.c:564
 msgid "Foreign merge begin"
@@ -1084,7 +1088,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:573
 msgid "Merge completed"
-msgstr ""
+msgstr "Spajanje dovršeno"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Tree conflict"
@@ -1096,7 +1100,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:636
 msgid "Inapplicable"
-msgstr ""
+msgstr "Neprimjenljivo"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "Unchanged"
@@ -1116,7 +1120,7 @@ msgstr "Izmijenjeno"
 
 #: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:677
 msgid "Merged"
-msgstr ""
+msgstr "Spojeno"
 
 #: ../tvp-svn-helper/tsh-common.c:643 ../tvp-svn-helper/tsh-common.c:678
 msgid "Conflicted"
@@ -1130,7 +1134,7 @@ msgstr "Normalno"
 
 #: ../tvp-svn-helper/tsh-common.c:679
 msgid "Ignored"
-msgstr ""
+msgstr "Zanemareno"
 
 #: ../tvp-svn-helper/tsh-common.c:682
 msgid "Incomplete"
@@ -1216,7 +1220,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
-msgstr ""
+msgstr "Obavijest"
 
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:83
@@ -1233,21 +1237,23 @@ msgstr ""
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr ""
 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are updated
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are shown
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1255,10 +1261,10 @@ msgstr ""
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
@@ -1274,7 +1280,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-relocate.c:130
 msgid "Relocating ..."
-msgstr ""
+msgstr "Premještanje..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
@@ -1290,7 +1296,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
-msgstr ""
+msgstr "Pokaži nepromjenjene datoteke"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:227
 msgid "Show Unversioned Files"
@@ -1298,7 +1304,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:231
 msgid "Show Ignored Files"
-msgstr ""
+msgstr "Pokaži zanemarene datoteke"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:235
 msgid "Hide Externals"
@@ -1306,7 +1312,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Check Repository"
-msgstr ""
+msgstr "Provjeri repozitorij"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:57
 msgid "Certificate is not yet valid."
