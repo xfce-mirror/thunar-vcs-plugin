@@ -1,25 +1,26 @@
-# Dutch translation of the thunar svn plugin.
-# Copyright (C) 2007 Peter de Ridder
-# This file is distributed under the same license as the thunar-svn-plugin package.
+# Dutch translation of the thunar-vcs-plugin package.
+# Copyright (C) The Xfce development team.
+# This file is distributed under the same license as the thunar-vcs-plugin package.
 # Peter de Ridder <peter@xfce.org>, 2007.
+# Pjotr, 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-svn-plugin\n"
+"Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-20 12:20+0100\n"
+"POT-Creation-Date: 2011-05-29 10:17+0000\n"
 "PO-Revision-Date: 2008-06-12 00:44+0200\n"
-"Last-Translator: Peter de Ridder <peter@xfce.org>\n"
+"Last-Translator: Pjotr\n"
 "Language-Team: Dutch <xfce-i18n@xfce.org>\n"
-"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: nl\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
 msgid "Menu|Add"
-msgstr ""
+msgstr "Menu|Toevoegen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
@@ -31,16 +32,16 @@ msgstr "Toevoegen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Bisect"
-msgstr ""
+msgstr "Menu|In tweeën hakken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Bisect"
-msgstr ""
+msgstr "In tweeën hakken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
 msgid "Menu|Blame"
-msgstr ""
+msgstr "Menu|Beschuldigen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
@@ -51,7 +52,7 @@ msgstr "Beschuldigen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Branch"
-msgstr ""
+msgstr "Menu|Tak"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:144
@@ -62,17 +63,17 @@ msgstr "Tak"
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
 msgid "Menu|Checkout"
-msgstr ""
+msgstr "Menu|Nakijken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:263
 #: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
 msgid "Checkout"
-msgstr "Ophalen"
+msgstr "Nakijken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 msgid "Menu|Clean"
-msgstr ""
+msgstr "Menu|Schoonmaken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
@@ -81,29 +82,29 @@ msgstr "Opschonen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272
 msgid "Menu|Clone"
-msgstr ""
+msgstr "Menu|Klonen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
-msgstr "Dupliceren"
+msgstr "Klonen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Commit"
-msgstr ""
+msgstr "Menu|Aanbrengen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 #: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:271
 #: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-commit.c:238
 msgid "Commit"
-msgstr "Versturen"
+msgstr "Aanbrengen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
 msgid "Menu|Diff"
-msgstr ""
+msgstr "Menu|Verschillen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
@@ -112,7 +113,7 @@ msgstr "Verschillen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
-msgstr ""
+msgstr "Menu|Haal op"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
@@ -120,35 +121,35 @@ msgstr "Ophalen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Grep"
-msgstr ""
+msgstr "Menu|Pak"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Grep"
-msgstr ""
+msgstr "Pakken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Menu|Init"
-msgstr ""
+msgstr "Menu|Start"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Init"
-msgstr ""
+msgstr "Start"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
 msgid "Menu|Log"
-msgstr ""
+msgstr "Menu|Logboek"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-log-dialog.c:225
 msgid "Log"
-msgstr "Geschiedenis"
+msgstr "Logboek"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Merge"
-msgstr ""
+msgstr "Menu|Samenvoegen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Merge"
@@ -157,7 +158,7 @@ msgstr "Samenvoegen"
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
 msgid "Menu|Move"
-msgstr ""
+msgstr "Menu|Verplaatsen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
@@ -167,7 +168,7 @@ msgstr "Verplaatsen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Menu|Pull"
-msgstr ""
+msgstr "Menu|Binnenhalen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Pull"
@@ -175,7 +176,7 @@ msgstr "Binnenhalen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Push"
-msgstr ""
+msgstr "Menu|Opsturen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Push"
@@ -183,24 +184,24 @@ msgstr "Opsturen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr ""
+msgstr "Menu|Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
-msgstr ""
+msgstr "Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
-msgstr ""
+msgstr "Menu|Terugzetten"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
-msgstr "Terug zetten"
+msgstr "Terugzetten"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Menu|Remove"
-msgstr ""
+msgstr "Menu|Verwijderen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Remove"
@@ -208,27 +209,27 @@ msgstr "Verwijderen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Show"
-msgstr ""
+msgstr "Menu|Tonen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Show"
-msgstr "Weergeven"
+msgstr "Tonen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:289
 msgid "Menu|Stash"
-msgstr ""
+msgstr "Menu|Opslaan"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:256
 msgid "Stash"
-msgstr "Opslagplaats"
+msgstr "Opslaan"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
 msgid "Menu|Status"
-msgstr ""
+msgstr "Menu|Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
@@ -241,17 +242,17 @@ msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Menu|Tag"
-msgstr ""
+msgstr "Menu|Etiket"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
-msgstr "Label"
+msgstr "Etiket"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:301
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr "Actie %s is niet geimplementeerd"
+msgstr "Actie %s is niet ten uitvoer gelegd"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
@@ -264,11 +265,11 @@ msgstr "SVN"
 #: ../thunar-vcs-plugin/tvp-provider.c:496
 #: ../thunar-vcs-plugin/tvp-provider.c:538
 msgid "GIT"
-msgstr ""
+msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Menu|Changelist"
-msgstr ""
+msgstr "Menu|Wijzigingslijst"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Changelist"
@@ -276,7 +277,7 @@ msgstr "Wijzigingslijst"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Cleanup"
-msgstr ""
+msgstr "Menu|Opschonen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:267
 msgid "Cleanup"
@@ -284,16 +285,16 @@ msgstr "Opschonen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Copy"
-msgstr ""
+msgstr "Menu|Kopiëren"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:275
 #: ../tvp-svn-helper/tsh-copy.c:168
 msgid "Copy"
-msgstr "Kopieeren"
+msgstr "Kopiëren"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Delete"
-msgstr ""
+msgstr "Menu|Wissen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-delete.c:129 ../tvp-svn-helper/tsh-delete.c:142
@@ -302,25 +303,25 @@ msgstr "Verwijderen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Export"
-msgstr ""
+msgstr "Menu|Uitvoeren"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:283
 #: ../tvp-svn-helper/tsh-export.c:109 ../tvp-svn-helper/tsh-export.c:127
 msgid "Export"
-msgstr "Exporteren"
+msgstr "Uitvoeren"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Import"
-msgstr ""
+msgstr "Menu|Invoeren"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-import.c:104 ../tvp-svn-helper/tsh-import.c:122
 msgid "Import"
-msgstr "Importeren"
+msgstr "Invoeren"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Menu|Info"
-msgstr ""
+msgstr "Menu|Informatie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Info"
@@ -328,24 +329,24 @@ msgstr "Informatie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Lock"
-msgstr ""
+msgstr "Menu|Vastzetten"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:291
 #: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
 msgid "Lock"
-msgstr "Vast Zetten"
+msgstr "Vastzetten"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Menu|Edit Properties"
-msgstr ""
+msgstr "Menu|Bewerk Eigenschappen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Edit Properties"
-msgstr "Attributen Wijzigen"
+msgstr "Eigenschappen Wijzigen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
-msgstr ""
+msgstr "Menu|Verplaatsen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
 #: ../tvp-svn-helper/tsh-relocate.c:116
@@ -355,7 +356,7 @@ msgstr "Verplaatsen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
-msgstr ""
+msgstr "Menu|Opgelost"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-common.c:540 ../tvp-svn-helper/tsh-resolved.c:115
@@ -365,24 +366,24 @@ msgstr "Opgelost"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Resolve"
-msgstr ""
+msgstr "Menu|Oplossen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Resolve"
-msgstr "Verhelpen"
+msgstr "Oplossen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
-msgstr ""
+msgstr "Menu|Terugdraaien"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:315
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
 msgid "Revert"
-msgstr "Terug halen"
+msgstr "Terugdraaien"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
-msgstr ""
+msgstr "Menu|Overschakelen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-switch.c:111 ../tvp-svn-helper/tsh-switch.c:124
@@ -391,16 +392,16 @@ msgstr "Overschakelen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439
 msgid "Menu|Unlock"
-msgstr ""
+msgstr "Menu|Ontsluiten"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-unlock.c:113
 msgid "Unlock"
-msgstr "Vrijgeven"
+msgstr "Ontsluiten"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444
 msgid "Menu|Update"
-msgstr ""
+msgstr "Menu|Bijwerken"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:331
 #: ../tvp-svn-helper/tsh-update.c:115
@@ -409,7 +410,7 @@ msgstr "Bijwerken"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
-msgstr ""
+msgstr "URL:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
@@ -432,15 +433,15 @@ msgstr "Versie:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
 msgid "Repository:"
-msgstr ""
+msgstr "Pakketbron:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
 msgid "Modified revision:"
-msgstr "Laatst aangepaste versie:"
+msgstr "Aangepast versie:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
 msgid "Modified date:"
-msgstr "Datum van laatste aangepassing:"
+msgstr "Aangepast datum::"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
 msgid "Author:"
@@ -500,47 +501,47 @@ msgstr "Oneindig"
 
 #: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:107
 msgid "Print version information"
-msgstr "Versie informatie tonen"
+msgstr "Versie-informatie afdrukken"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:114
 msgid "Execute add action"
-msgstr "Toevoeg actie uitvoeren"
+msgstr "Toevoeg-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:120
 msgid "Execute blame action"
-msgstr "Beschuldig actie uitvoeren"
+msgstr "Beschuldig-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
-msgstr "Tak actie uitvoeren"
+msgstr "Tak-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
-msgstr "Opschoon actie uitvoeren"
+msgstr "Opschoon-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:111
 msgid "Execute clone action"
-msgstr "Dupliceren actie uitvoeren"
+msgstr "Dupliceren-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:180
 msgid "Execute log action"
-msgstr "Geschiedenis actie uitvoeren"
+msgstr "Logboek-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:186
 msgid "Execute move action"
-msgstr "Verplaats actie uitvoeren"
+msgstr "Verplaats-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
-msgstr "Terug zet actie uitvoeren"
+msgstr "Terugzet-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr "Opslagplaats actie uitvoeren"
+msgstr "Opslagplaats-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:216
 msgid "Execute status action"
-msgstr "Status actie uitvoeren"
+msgstr "Status-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:251
 msgid "Add Related Options:"
@@ -560,7 +561,7 @@ msgstr "Dupliceren gerelateerde opties:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:295
 msgid "Log Related Options:"
-msgstr "Geschiedenis gerelateerde opties:"
+msgstr "Log gerelateerde opties:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:299
 msgid "Move Related Options:"
@@ -568,11 +569,11 @@ msgstr "Verplaats gerelateerde opties:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr "Terug zet gerelateerde opties:"
+msgstr "Zet gerelateerde opties terug:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "Opslagplaats gerelateerde opties:"
+msgstr "Opslaan gerelateerde opties:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:319
 msgid "Status Related Options:"
@@ -612,7 +613,7 @@ msgstr "Naam"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:263
 msgid "Branch name:"
-msgstr "Tak naam:"
+msgstr "Taknaam:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
@@ -653,7 +654,7 @@ msgstr "Bezig met dupliceren ..."
 #: ../tvp-svn-helper/tsh-switch.c:73 ../tvp-svn-helper/tsh-unlock.c:88
 #: ../tvp-svn-helper/tsh-update.c:90
 msgid "Failed"
-msgstr "Gefaald"
+msgstr "Mislukt"
 
 #: ../tvp-git-helper/tgh-common.c:295
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:250
@@ -682,7 +683,7 @@ msgstr "AuteurDatum"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
-msgstr ""
+msgstr "AanbrengDatum"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:166
 #: ../tvp-svn-helper/tsh-log-dialog.c:146
@@ -723,11 +724,11 @@ msgstr "Verwittigen"
 
 #: ../tvp-git-helper/tgh-reset.c:60
 msgid "Reset finished"
-msgstr "Klaar met terug zetten"
+msgstr "Klaar met terugzetten"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset ..."
-msgstr "Terug zetten ..."
+msgstr "Terugzetten ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -735,21 +736,21 @@ msgstr "Omschrijving"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:398
 msgid "Stash description:"
-msgstr "Omschrijving"
+msgstr "Omschrijving opslag:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr "Weet u zeker dat u %s wilt verwijderen?"
+msgstr "Weet u zeker dat u %s wilt laten vallen?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
-msgstr "Weet u zeker dat u de opslagplaats wilt leeg maken?"
+msgstr "Weet u zeker dat u alle opslag wil leegmaken?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:81
 msgid "_Repository:"
-msgstr ""
+msgstr "_Pakketbron:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:75
 #: ../tvp-git-helper/tgh-transfer-dialog.c:110
@@ -762,7 +763,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:97
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:143
 msgid "Select a folder"
-msgstr "Selecteer een map"
+msgstr "Kies een map"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:103
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:197
@@ -773,117 +774,117 @@ msgstr "_Map:"
 #: ../tvp-git-helper/tgh-transfer-dialog.c:122
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:155
 msgid "Transfer"
-msgstr ""
+msgstr "Overbrengen"
 
 #: ../tvp-svn-helper/main.c:126
 msgid "Execute changelist action"
-msgstr "Wijzigingslijst actie uitvoeren"
+msgstr "Wijzigingslijst-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:132
 msgid "Execute checkout action"
-msgstr "Ophaal actie uitvoeren"
+msgstr "Ophaal-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:138
 msgid "Execute cleanup action"
-msgstr "Opschoon actie uitvoeren"
+msgstr "Opschoon-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:144
 msgid "Execute commit action"
-msgstr "Verstuur actie uitvoeren"
+msgstr "Verstuur-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:150
 msgid "Execute copy action"
-msgstr "Kopieer actie uitvoeren"
+msgstr "Kopieer-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:156
 msgid "Execute delete action"
-msgstr "Verwijder actie uitvoeren"
+msgstr "Verwijder-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:162
 msgid "Execute export action"
-msgstr "Exporteer actie uitvoeren"
+msgstr "Uitvoer-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:168
 msgid "Execute import action"
-msgstr "Importeer actie uitvoeren"
+msgstr "Invoer-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:174
 msgid "Execute lock action"
-msgstr "Vast zet actie uitvoeren"
+msgstr "Vastzet-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:192
 msgid "Execute properties action"
-msgstr "Attributen actie uitvoeren"
+msgstr "Eigenschappen-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:198
 msgid "Execute resolved action"
-msgstr "Verholpen actie uitvoeren"
+msgstr "Opgelost-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:204
 msgid "Execute relocate action"
-msgstr "Verplaats actie uitvoeren"
+msgstr "Verplaats-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:210
 msgid "Execute revert action"
-msgstr "Terug haal actie uitvoeren"
+msgstr "Terughaal-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:222
 msgid "Execute switch action"
-msgstr ""
+msgstr "Wissel-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:228
 msgid "Execute unlock action"
-msgstr "Vrijgeef actie uitvoeren"
+msgstr "Vrijgeef-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:234
 msgid "Execute update action"
-msgstr "Bijwerk actie uitvoeren"
+msgstr "Bijwerk-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:259
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Wijzigingslijst-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:263
 msgid "Checkout Related Options:"
-msgstr "Ophalen gerelateerde opties:"
+msgstr "Nakijken-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Cleanup Related Options:"
-msgstr "Opschonen gerelateerde opties:"
+msgstr "Opschonen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:271
 msgid "Commit Related Options:"
-msgstr "Versturen gerelateerde opties:"
+msgstr "Versturen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:275
 msgid "Copy Related Options:"
-msgstr "Kopieer gerelateerde opties:"
+msgstr "Kopiëren-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Delete Related Options:"
-msgstr "Verwijder gerelateerde opties:"
+msgstr "Verwijderen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:283
 msgid "Export Related Options:"
-msgstr "Exporteer gerelateerde opties:"
+msgstr "Uitvoeren-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:287
 msgid "Import Related Options:"
-msgstr "Importeer gerelateerde opties:"
+msgstr "Invoeren-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Lock Related Options:"
-msgstr "Vast zetten gerelateerde opties:"
+msgstr "Vastzetten-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:303
 msgid "Properties Related Options:"
-msgstr "Attributen gerelateerde opties:"
+msgstr "Eigenschappen-gerelateerde opties:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:303 ../tvp-svn-helper/tsh-properties-dialog.c:280
 msgid "Properties"
-msgstr "Attributen"
+msgstr "Eigenschappen"
 
 #: ../tvp-svn-helper/main.c:307
 msgid "Resolved Related Options:"
@@ -891,19 +892,19 @@ msgstr "Verholpen gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:311
 msgid "Relocate Related Options:"
-msgstr "Verplaats gerelateerde opties:"
+msgstr "Verplaatsen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Revert Related Options:"
-msgstr "Terug haal gerelateerde opties:"
+msgstr "Terugdraaien-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Switch Related Options:"
-msgstr "Overschakelen gerelaterde opties:"
+msgstr "Overschakelen-gerelaterde opties:"
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Unlock Related Options:"
-msgstr "Vrijgeven gerelateerde opties:"
+msgstr "Vrijgeven-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:331
 msgid "Update Related Options:"
@@ -915,11 +916,11 @@ msgstr "Onvoldoende argumenten meegegeven"
 
 #: ../tvp-svn-helper/tsh-blame.c:77
 msgid "Blame failed"
-msgstr "Beschuldigen gefaald"
+msgstr "Beschuldigen mislukt"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
-msgstr "Opschonen is gefaald"
+msgstr "Opschonen mislukt"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
@@ -953,7 +954,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:290
 msgid "Store password a plaintext?"
-msgstr "Wachtwoord in platte text opslaan?"
+msgstr "Wachtwoord in platte tekst opslaan?"
 
 #: ../tvp-svn-helper/tsh-common.c:534 ../tvp-svn-helper/tsh-common.c:543
 #: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:672
@@ -963,7 +964,7 @@ msgstr "Toegevoegd"
 
 #: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:819
 msgid "Copied"
-msgstr "Gekopieerd"
+msgstr "Gekopiëerd"
 
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:542
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:674
