@@ -8,14 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-29 10:17+0000\n"
-"PO-Revision-Date: 2008-06-12 00:44+0200\n"
+"POT-Creation-Date: 2011-06-16 10:18+0000\n"
+"PO-Revision-Date: 2011-06-16 13:44+0200\n"
 "Last-Translator: Pjotr\n"
-"Language-Team: Dutch <xfce-i18n@xfce.org>\n"
+"Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -437,11 +438,11 @@ msgstr "Pakketbron:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
 msgid "Modified revision:"
-msgstr "Aangepast versie:"
+msgstr "Aangepaste revisie:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
 msgid "Modified date:"
-msgstr "Aangepast datum::"
+msgstr "Aangepaste datum:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
 msgid "Author:"
@@ -1049,7 +1050,7 @@ msgstr "Samenvoegen begin"
 
 #: ../tvp-svn-helper/tsh-common.c:564
 msgid "Foreign merge begin"
-msgstr "Vreemd samenvoegen begin"
+msgstr "Begin van vreemd samenvoegen"
 
 #: ../tvp-svn-helper/tsh-common.c:565
 msgid "Replace"
@@ -1073,11 +1074,11 @@ msgstr "Eigenschap bestaat niet"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "Revision property set"
-msgstr "Versie eigenschap ingesteld"
+msgstr "Revisie-eigenschap ingesteld"
 
 #: ../tvp-svn-helper/tsh-common.c:572
 msgid "Revision property deleted"
-msgstr "Versie eigenschap verwijderd"
+msgstr "Revisie-eigenschap verwijderd"
 
 #: ../tvp-svn-helper/tsh-common.c:573
 msgid "Merge completed"
@@ -1085,7 +1086,7 @@ msgstr "Samenvoegen voltooid"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Tree conflict"
-msgstr "Boomstructuur conflict"
+msgstr "Boomstructuurconflict"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "External failed"
