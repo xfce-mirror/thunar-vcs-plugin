@@ -1,4 +1,4 @@
-# Dutch translation of the thunar-vcs-plugin package.
+# Dutch translation for the thunar-vcs-plugin package.
 # Copyright (C) The Xfce development team.
 # This file is distributed under the same license as the thunar-vcs-plugin package.
 # Peter de Ridder <peter@xfce.org>, 2007.
@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-16 10:18+0000\n"
+"POT-Creation-Date: 2011-06-19 10:17+0000\n"
 "PO-Revision-Date: 2011-06-16 13:44+0200\n"
 "Last-Translator: Pjotr\n"
 "Language-Team: Dutch (Flemish)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
+"Language: nl (Dutch)\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
@@ -105,12 +105,12 @@ msgstr "Aanbrengen"
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
 msgid "Menu|Diff"
-msgstr "Menu|Verschillen"
+msgstr "Menu|Verschil"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
 msgid "Diff"
-msgstr "Verschillen"
+msgstr "Verschil"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
@@ -253,7 +253,7 @@ msgstr "Etiket"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr "Actie %s is niet ten uitvoer gelegd"
+msgstr "Actie %s is niet ten uitvoer gebracht"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
@@ -384,12 +384,12 @@ msgstr "Terugdraaien"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
-msgstr "Menu|Overschakelen"
+msgstr "Menu|Schakelen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-switch.c:111 ../tvp-svn-helper/tsh-switch.c:124
 msgid "Switch"
-msgstr "Overschakelen"
+msgstr "Schakelen"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439
 msgid "Menu|Unlock"
@@ -491,7 +491,7 @@ msgstr "Bestanden"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
-msgstr "Onderliggende"
+msgstr "Huidige"
 
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full recursion
@@ -889,7 +889,7 @@ msgstr "Eigenschappen"
 
 #: ../tvp-svn-helper/main.c:307
 msgid "Resolved Related Options:"
-msgstr "Verholpen gerelateerde opties:"
+msgstr "Verholpen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:311
 msgid "Relocate Related Options:"
@@ -901,7 +901,7 @@ msgstr "Terugdraaien-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Switch Related Options:"
-msgstr "Overschakelen-gerelaterde opties:"
+msgstr "Overschakelen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Unlock Related Options:"
@@ -965,7 +965,7 @@ msgstr "Toegevoegd"
 
 #: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:819
 msgid "Copied"
-msgstr "Gekopiëerd"
+msgstr "Gekopieerd"
 
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:542
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:674
@@ -1249,7 +1249,7 @@ msgstr "Zelf"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
-msgstr "Onderliggende bestanden"
+msgstr "Huidige bestanden"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
