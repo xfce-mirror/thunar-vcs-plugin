@@ -143,7 +143,7 @@ tvp_svn_action_class_init (TvpSvnActionClass *klass)
   action_signal[SIGNAL_NEW_PROCESS] = g_signal_new("new-process", G_OBJECT_CLASS_TYPE(gobject_class), G_SIGNAL_RUN_FIRST,
     0, NULL, NULL, tsh_cclosure_marshal_VOID__POINTER_STRING, G_TYPE_NONE, 2, G_TYPE_POINTER, G_TYPE_STRING);
 
-  tvp_action_arg_quark = g_quark_from_static_string ("tvp-action-arg");
+  tvp_action_arg_quark = g_quark_from_string ("tvp-action-arg");
 }
 
 
