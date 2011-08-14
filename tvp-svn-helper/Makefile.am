@@ -112,6 +112,7 @@ tvp_svn_helper_CFLAGS =							\
 	$(LIBXFCE4UTIL_CFLAGS)						\
 	$(GTK_CFLAGS)							\
 	$(GLIB_CFLAGS)							\
+	$(GTHREAD_CFLAGS)						\
 	$(GOBJECT_CFLAGS)						\
 	$(APR_CFLAGS)
 

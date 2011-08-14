@@ -60,6 +60,9 @@ endif
 
 thunar_vcs_plugin_la_CFLAGS =						\
 	$(PLATFORM_CFLAGS)						\
+	$(GTK_CFLAGS)							\
+	$(GLIB_CFLAGS)							\
+	$(GOBJECT_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
 	$(EXO_CFLAGS)							\
 	$(LIBXFCE4UTIL_CFLAGS)
@@ -73,6 +76,9 @@ thunar_vcs_plugin_la_LDFLAGS =						\
 	-export-dynamic							\
 	-module								\
 	$(PLATFORM_LDFLAGS)						\
+	$(GTK_LIBS)							\
+	$(GLIB_LIBS)							\
+	$(GOBJECT_LIBS)							\
 	$(THUNARX_LIBS)							\
 	$(EXO_LIBS)							\
 	$(LIBXFCE4UTIL_LIBS)
