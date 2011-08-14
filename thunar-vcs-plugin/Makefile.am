@@ -73,12 +73,12 @@ thunar_vcs_plugin_la_LDFLAGS =						\
 	-export-dynamic							\
 	-module								\
 	$(PLATFORM_LDFLAGS)						\
-	$(THUNARX_LDFLAGS)						\
-	$(EXO_LDFLAGS)							\
-	$(LIBXFCE4UTIL_LDFLAGS)
+	$(THUNARX_LIBS)							\
+	$(EXO_LIBS)							\
+	$(LIBXFCE4UTIL_LIBS)
 if HAVE_SUBVERSION
 thunar_vcs_plugin_la_LDFLAGS +=						\
-	$(APR_LDFLAGS)
+	$(APR_LIBS)
 endif
 
 # vi:set ts=8 sw=8 noet ai nocindent:

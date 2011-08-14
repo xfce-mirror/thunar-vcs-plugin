@@ -116,7 +116,7 @@ tvp_svn_helper_CFLAGS =							\
 	$(APR_CFLAGS)
 
 tvp_svn_helper_LDFLAGS =						\
-	$(PLATFORM_LIBS)						\
+	$(PLATFORM_LDFLAGS)						\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(GTK_LIBS)							\
 	$(GLIB_LIBS)							\

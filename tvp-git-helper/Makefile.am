@@ -87,7 +87,7 @@ tvp_git_helper_CFLAGS =							\
 	$(GOBJECT_CFLAGS)
 
 tvp_git_helper_LDFLAGS =						\
-	$(PLATFORM_LIBS)						\
+	$(PLATFORM_LDFLAGS)						\
 	$(LIBXFCE4UTIL_LIBS)						\
 	$(GTK_LIBS)							\
 	$(GLIB_LIBS)							\
