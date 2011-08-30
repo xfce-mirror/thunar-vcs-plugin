@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-26 04:18+0000\n"
-"PO-Revision-Date: 2011-08-26 12:09+0200\n"
+"POT-Creation-Date: 2011-08-30 10:18+0000\n"
+"PO-Revision-Date: 2011-08-30 17:54+0200\n"
 "Last-Translator: Tomáš Vadina <kyberdev@gmail.com>\n"
 "Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
 msgid "Menu|Add"
-msgstr "Ponuka|Pridať (add)"
+msgstr "Pridať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
@@ -32,7 +32,7 @@ msgstr "Pridať (add)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Bisect"
-msgstr "Ponuka|Rozpoliť (bisect)"
+msgstr "Rozpoliť"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Bisect"
@@ -41,7 +41,7 @@ msgstr "Rozpoliť (bisect)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
 msgid "Menu|Blame"
-msgstr "Ponuka|Vypísať detaily (blame)"
+msgstr "Vypísať detaily"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
@@ -52,7 +52,7 @@ msgstr "Vypísať detaily (blame)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Branch"
-msgstr "Ponuka|Vetva (branch)"
+msgstr "Vetva"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:144
@@ -63,7 +63,7 @@ msgstr "Vetva (branch)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
 msgid "Menu|Checkout"
-msgstr "Ponuka|Kontrola (checkout)"
+msgstr "Kontrola"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:263
@@ -73,7 +73,7 @@ msgstr "Kontrola (checkout)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 msgid "Menu|Clean"
-msgstr "Ponuka|Vyčistiť (clean)"
+msgstr "Vyčistiť"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
@@ -82,7 +82,7 @@ msgstr "Vyčistiť (clean)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272
 msgid "Menu|Clone"
-msgstr "Ponuka|Klonovať (clone)"
+msgstr "Klonovať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -92,7 +92,7 @@ msgstr "Klonovať (clone)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Commit"
-msgstr "Ponuka|Odoslať (commit)"
+msgstr "Odoslať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
@@ -104,7 +104,7 @@ msgstr "Odoslať (commit)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
 msgid "Menu|Diff"
-msgstr "Ponuka|Rozdiel (diff)"
+msgstr "Rozdiel"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
@@ -113,7 +113,7 @@ msgstr "Rozdiel (diff)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
-msgstr "Ponuka|Vyvolať (fetch)"
+msgstr "Vyvolať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
@@ -121,7 +121,7 @@ msgstr "Vyvolať (fetch)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Grep"
-msgstr "Ponuka|Grep (grep)"
+msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Grep"
@@ -129,7 +129,7 @@ msgstr "Grep (grep)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Menu|Init"
-msgstr "Ponuka|Inicializovať (init)"
+msgstr "Inicializovať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Init"
@@ -138,7 +138,7 @@ msgstr "Inicializovať (init)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
 msgid "Menu|Log"
-msgstr "Ponuka|Záznam (log)"
+msgstr "Záznam"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
@@ -149,7 +149,7 @@ msgstr "Záznam (log)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Merge"
-msgstr "Ponuka|Zlúčiť (merge)"
+msgstr "Zlúčiť"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Merge"
@@ -158,7 +158,7 @@ msgstr "Zlúčiť (merge)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
 msgid "Menu|Move"
-msgstr "Ponuka|Presunúť (move)"
+msgstr "Presunúť"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
@@ -168,7 +168,7 @@ msgstr "Presunúť (move)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Menu|Pull"
-msgstr "Ponuka|Pull (pull)"
+msgstr "Pull"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Pull"
@@ -176,7 +176,7 @@ msgstr "Pull (pull)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Push"
-msgstr "Ponuka|Push (push)"
+msgstr "Push"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Push"
@@ -184,7 +184,7 @@ msgstr "Push (push)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr "Ponuka|Preskladať (rebase)"
+msgstr "Preskladať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
@@ -192,7 +192,7 @@ msgstr "Preskladať (rebase)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
-msgstr "Ponuka|Obnoviť (reset)"
+msgstr "Obnoviť"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
@@ -201,7 +201,7 @@ msgstr "Obnoviť (reset)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Menu|Remove"
-msgstr "Ponuka|Odobrať (remove)"
+msgstr "Odobrať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Remove"
@@ -209,7 +209,7 @@ msgstr "Odobrať (remove)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Show"
-msgstr "Ponuka|Zobraziť (show)"
+msgstr "Zobraziť"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Show"
@@ -217,7 +217,7 @@ msgstr "Zobraziť (show)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:289
 msgid "Menu|Stash"
-msgstr "Ponuka|Schovať (stash)"
+msgstr "Schovať"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
@@ -229,7 +229,7 @@ msgstr "Schovať (stash)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
 msgid "Menu|Status"
-msgstr "Ponuka|Stav (status)"
+msgstr "Stav"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
@@ -242,7 +242,7 @@ msgstr "Stav (status)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Menu|Tag"
-msgstr "Ponuka|Značka (tag)"
+msgstr "Značka"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
@@ -269,7 +269,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Menu|Changelist"
-msgstr "Ponuka|Zoznam zmien (changelist)"
+msgstr "Zoznam zmien"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Changelist"
@@ -277,7 +277,7 @@ msgstr "Zoznam zmien (changelist)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Cleanup"
-msgstr "Ponuka|Vyčistiť (cleanup)"
+msgstr "Vyčistiť"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:267
 msgid "Cleanup"
@@ -285,7 +285,7 @@ msgstr "Vyčistiť (cleanup)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Copy"
-msgstr "Ponuka|Kopírovať (copy)"
+msgstr "Kopírovať"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:275
 #: ../tvp-svn-helper/tsh-copy.c:168
@@ -294,7 +294,7 @@ msgstr "Kopírovať (copy)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Delete"
-msgstr "Ponuka|Zmazať (delete)"
+msgstr "Zmazať"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-delete.c:129 ../tvp-svn-helper/tsh-delete.c:142
@@ -303,7 +303,7 @@ msgstr "Zmazať (delete)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Export"
-msgstr "Ponuka|Exportovať (export)"
+msgstr "Exportovať"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:283
 #: ../tvp-svn-helper/tsh-export.c:109 ../tvp-svn-helper/tsh-export.c:127
@@ -312,7 +312,7 @@ msgstr "Exportovať (export)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Import"
-msgstr "Ponuka|Importovať (import)"
+msgstr "Importovať"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-import.c:104 ../tvp-svn-helper/tsh-import.c:122
@@ -321,7 +321,7 @@ msgstr "Importovať (import)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Menu|Info"
-msgstr "Ponuka|Informácie (info)"
+msgstr "Informácie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Info"
@@ -329,7 +329,7 @@ msgstr "Informácie (info)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Lock"
-msgstr "Ponuka|Zamknúť (lock)"
+msgstr "Zamknúť"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:291
 #: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
@@ -338,7 +338,7 @@ msgstr "Zamknúť (lock)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Menu|Edit Properties"
-msgstr "Ponuka|Upraviť vlastnosti (propedit)"
+msgstr "Upraviť vlastnosti"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Edit Properties"
@@ -346,7 +346,7 @@ msgstr "Upraviť vlastnosti (propedit)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
-msgstr "Ponuka|Premiestniť (relocate)"
+msgstr "Premiestniť"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
 #: ../tvp-svn-helper/tsh-relocate.c:116
@@ -356,7 +356,7 @@ msgstr "Premiestniť (relocate)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
-msgstr "Ponuka|Vyriešené (resolved)"
+msgstr "Vyriešené"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-common.c:540 ../tvp-svn-helper/tsh-resolved.c:115
@@ -366,7 +366,7 @@ msgstr "Vyriešené (resolved)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Resolve"
-msgstr "Ponuka|Vyriešiť (resolve)"
+msgstr "Vyriešiť"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Resolve"
@@ -374,7 +374,7 @@ msgstr "Vyriešiť (resolve)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
-msgstr "Ponuka|Obnoviť predchádzajúce (revert)"
+msgstr "Obnoviť predchádzajúce"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:315
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
@@ -383,7 +383,7 @@ msgstr "Obnoviť predchádzajúce (revert)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
-msgstr "Ponuka|Prepnúť (switch)"
+msgstr "Prepnúť"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-switch.c:111 ../tvp-svn-helper/tsh-switch.c:124
@@ -392,7 +392,7 @@ msgstr "Prepnúť (switch)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439
 msgid "Menu|Unlock"
-msgstr "Ponuka|Odomknúť (unlock)"
+msgstr "Odomknúť"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-unlock.c:113
@@ -401,7 +401,7 @@ msgstr "Odomknúť (unlock)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444
 msgid "Menu|Update"
-msgstr "Ponuka|Aktualizovať (update)"
+msgstr "Aktualizovať"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:331
 #: ../tvp-svn-helper/tsh-update.c:115
