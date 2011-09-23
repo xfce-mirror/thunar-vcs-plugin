@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-02 16:16+0000\n"
+"POT-Creation-Date: 2011-09-23 04:19+0000\n"
 "PO-Revision-Date: 2010-02-11 23:38+0100\n"
 "Last-Translator: \n"
 "Language-Team: Basque <kde-i18n-doc@kde.org>\n"
@@ -614,16 +614,14 @@ msgid "Name"
 msgstr "Izena"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:263
-#, fuzzy
 msgid "Branch name:"
-msgstr "Adarra"
+msgstr "Adar izena:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
 msgstr "Kendu direktorioak."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
-#, fuzzy
 msgid "Exclude ignored files"
 msgstr "Alde batetara utzitako direktorioak kenduta"
 
@@ -641,11 +639,11 @@ msgstr "Behartu garbitzea."
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
-msgstr ""
+msgstr "Klonatzea amaiturik"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning ..."
-msgstr ""
+msgstr "Kolantzen ..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:75
 #: ../tvp-svn-helper/tsh-add.c:93 ../tvp-svn-helper/tsh-checkout.c:73
