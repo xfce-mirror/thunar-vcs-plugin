@@ -7,17 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-29 16:16+0000\n"
+"POT-Creation-Date: 2011-10-03 22:09+0000\n"
 "PO-Revision-Date: 2011-05-28 15:57+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yxahoo.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: CROATIA\n"
+"Language: hr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Croatian\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Country: CROATIA\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -115,11 +116,11 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
-msgstr ""
+msgstr "Izbornik | Dohvati"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
-msgstr ""
+msgstr "Dohvati"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Grep"
@@ -535,7 +536,7 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:186
 msgid "Execute move action"
-msgstr ""
+msgstr "Izvrši akciju premještanja"
 
 #: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
@@ -820,7 +821,7 @@ msgstr "Izvrši akciju zaključavanja"
 
 #: ../tvp-svn-helper/main.c:192
 msgid "Execute properties action"
-msgstr ""
+msgstr "Izvrši akciju svojstva "
 
 #: ../tvp-svn-helper/main.c:198
 msgid "Execute resolved action"
@@ -919,7 +920,7 @@ msgstr "Povezane mogućnosti dopuna:"
 
 #: ../tvp-svn-helper/main.c:374
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Nema dovoljno argumenata"
 
 #: ../tvp-svn-helper/tsh-blame.c:77
 msgid "Blame failed"
@@ -927,11 +928,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
-msgstr ""
+msgstr "Neuspjelo čišćenje"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
-msgstr ""
+msgstr "Čišćenje završeno"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
 msgid "Cleaning up ..."
@@ -1158,7 +1159,7 @@ msgstr "Izbriši poruku"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
-msgstr ""
+msgstr "_Potvrda:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:66
 msgid "Select a file"
@@ -1172,7 +1173,7 @@ msgstr "Zapamti"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:85
 msgid "Certificate"
-msgstr ""
+msgstr "Potvrda"
 
 #: ../tvp-svn-helper/tsh-import.c:127
 msgid "Import Message"
@@ -1316,11 +1317,11 @@ msgstr "Provjeri repozitorij"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:57
 msgid "Certificate is not yet valid."
-msgstr ""
+msgstr "Potvrda još nije valjana."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:60
 msgid "Certificate has expired."
-msgstr ""
+msgstr "Potvrda je istekla."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:63
 msgid "Certificate does not match the remote hostname."
