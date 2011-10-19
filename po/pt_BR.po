@@ -520,7 +520,7 @@ msgstr "Arquivo"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
-msgstr ""
+msgstr "Excluir"
 
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
@@ -528,7 +528,7 @@ msgstr ""
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
-msgstr ""
+msgstr "Vazio"
 
 #: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:107
 msgid "Print version information"
@@ -797,7 +797,7 @@ msgstr ""
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "não rastreado"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:81
@@ -1009,7 +1009,7 @@ msgstr "Mensagem de envio"
 
 #: ../tvp-svn-helper/tsh-common.c:290
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Notificar"
 
 #: ../tvp-svn-helper/tsh-common.c:534 ../tvp-svn-helper/tsh-common.c:543
 #: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:672
@@ -1084,7 +1084,7 @@ msgstr "Falha ao destravar"
 
 #: ../tvp-svn-helper/tsh-common.c:559
 msgid "Exists"
-msgstr ""
+msgstr "Descrição"
 
 #: ../tvp-svn-helper/tsh-common.c:560
 msgid "Changelist set"
