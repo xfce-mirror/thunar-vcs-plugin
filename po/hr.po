@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-03 22:09+0000\n"
+"POT-Creation-Date: 2011-10-29 22:10+0000\n"
 "PO-Revision-Date: 2011-05-28 15:57+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yxahoo.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Country: CROATIA\n"
 "Language: hr\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Croatian\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Country: CROATIA\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -723,7 +723,7 @@ msgstr "Premjesti..."
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
 #: ../tvp-svn-helper/tsh-notify-dialog.c:87
 msgid "Action"
-msgstr ""
+msgstr "Akcija"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:107
 msgid "Notify"
@@ -1003,7 +1003,7 @@ msgstr "Nadopunjeno"
 #: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:548
 #: ../tvp-svn-helper/tsh-common.c:681
 msgid "External"
-msgstr ""
+msgstr "Vanjski"
 
 #: ../tvp-svn-helper/tsh-common.c:549 ../tvp-svn-helper/tsh-common.c:676
 #: ../tvp-svn-helper/tsh-common.c:725 ../tvp-svn-helper/tsh-common.c:815
@@ -1017,7 +1017,7 @@ msgstr "Zamijenjeno"
 
 #: ../tvp-svn-helper/tsh-common.c:553
 msgid "Transmitting"
-msgstr ""
+msgstr "Prenosim"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Locked"
@@ -1226,15 +1226,15 @@ msgstr "Obavijest"
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:83
 msgid "Set property failed"
-msgstr ""
+msgstr "Neuspjelo postavljanje svojstva"
 
 #: ../tvp-svn-helper/tsh-properties.c:106
 msgid "Properties failed"
-msgstr ""
+msgstr "Neuspjela svojstva"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:131
 msgid "Value"
-msgstr ""
+msgstr "Vrijednost"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
@@ -1269,7 +1269,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
-msgstr ""
+msgstr "Rekurzivno"
 
 #: ../tvp-svn-helper/tsh-relocate.c:73
 msgid "Relocate failed"
@@ -1325,7 +1325,7 @@ msgstr "Potvrda je istekla."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:63
 msgid "Certificate does not match the remote hostname."
-msgstr ""
+msgstr "Certifikat ne odgovara udaljenom računalu."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:66
 msgid "Certificate authority is unknown."
