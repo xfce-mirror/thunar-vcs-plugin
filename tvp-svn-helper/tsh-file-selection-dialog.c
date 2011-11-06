@@ -23,6 +23,7 @@
 #include <libxfce4util/libxfce4util.h>
 #include <gtk/gtk.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -30,8 +31,13 @@
 #include "tsh-tree-common.h"
 #include "tsh-file-selection-dialog.h"
 
+#if CHECK_SVN_VERSION(1,5)
 static void tsh_file_selection_status_func2 (void *, const char *, svn_wc_status2_t *);
+#elif CHECK_SVN_VERSION(1,6)
 static svn_error_t *tsh_file_selection_status_func3 (void *, const char *, svn_wc_status2_t *, apr_pool_t *);
+#else /* CHECK_SVN_VERSION(1,7) */
+static svn_error_t *tsh_file_selection_status_func (void *, const char *, const svn_client_status_t *, apr_pool_t *);
+#endif
 static void selection_cell_toggled (GtkCellRendererToggle *, gchar *, gpointer);
 static void selection_all_toggled (GtkToggleButton *, gpointer);
 
@@ -158,25 +164,25 @@ GtkWidget*
 tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags, gchar **files, TshFileSelectionFlags selection_flags, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
   svn_opt_revision_t revision;
-	svn_error_t *err;
+  svn_error_t *err;
   apr_pool_t *subpool;
 
-	TshFileSelectionDialog *dialog = g_object_new (TSH_TYPE_FILE_SELECTION_DIALOG, NULL);
+  TshFileSelectionDialog *dialog = g_object_new (TSH_TYPE_FILE_SELECTION_DIALOG, NULL);
 
-	if(title)
-		gtk_window_set_title (GTK_WINDOW(dialog), title);
+  if(title)
+    gtk_window_set_title (GTK_WINDOW(dialog), title);
 
-	if(parent)
-		gtk_window_set_transient_for (GTK_WINDOW(dialog), parent);
+  if(parent)
+    gtk_window_set_transient_for (GTK_WINDOW(dialog), parent);
 
-	if(flags & GTK_DIALOG_MODAL)
-		gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
+  if(flags & GTK_DIALOG_MODAL)
+    gtk_window_set_modal (GTK_WINDOW(dialog), TRUE);
 
-	if(flags & GTK_DIALOG_DESTROY_WITH_PARENT)
-		gtk_window_set_destroy_with_parent (GTK_WINDOW(dialog), TRUE);
+  if(flags & GTK_DIALOG_DESTROY_WITH_PARENT)
+    gtk_window_set_destroy_with_parent (GTK_WINDOW(dialog), TRUE);
 
-	if(flags & GTK_DIALOG_NO_SEPARATOR)
-		gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
+  if(flags & GTK_DIALOG_NO_SEPARATOR)
+    gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
 
   dialog->flags = selection_flags;
 
@@ -189,16 +195,18 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
     {
 #if CHECK_SVN_VERSION(1,5)
       if((err = svn_client_status3(NULL, *files, &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,6) */
+#elif CHECK_SVN_VERSION(1,6)
       if((err = svn_client_status4(NULL, *files, &revision, tsh_file_selection_status_func3, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+      if((err = svn_client_status5(NULL, ctx, *files, &revision, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, TRUE, NULL, tsh_file_selection_status_func, dialog, subpool)))
 #endif
       {
-        svn_pool_destroy (subpool);
+	svn_pool_destroy (subpool);
 
-        gtk_widget_unref(GTK_WIDGET(dialog));
+	gtk_widget_unref(GTK_WIDGET(dialog));
 
-        svn_error_clear(err);
-        return NULL;  //FIXME: needed ??
+	svn_error_clear(err);
+	return NULL;  //FIXME: needed ??
       }
       files++;
     }
@@ -207,8 +215,10 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   {
 #if CHECK_SVN_VERSION(1,5)
     if((err = svn_client_status3(NULL, "", &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,6) */
+#elif CHECK_SVN_VERSION(1,6)
     if((err = svn_client_status4(NULL, "", &revision, tsh_file_selection_status_func3, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+    if((err = svn_client_status5(NULL, ctx, "", &revision, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, TRUE, NULL, tsh_file_selection_status_func, dialog, subpool)))
 #endif
     {
       svn_pool_destroy (subpool);
@@ -313,13 +323,25 @@ get_parent_status(GtkTreeModel *model, GtkTreeIter *iter)
   return status;
 }
 
+#if CHECK_SVN_VERSION(1,5)
 static void
 tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t *status)
+#elif CHECK_SVN_VERSION(1,6)
+static svn_error_t*
+tsh_file_selection_status_func3(void *baton, const char *path, svn_wc_status2_t *status, apr_pool_t *pool)
+#else /* CHECK_SVN_VERSION(1,7) */
+static svn_error_t*
+tsh_file_selection_status_func (void *baton, const char *path, const svn_client_status_t *status, apr_pool_t *pool)
+#endif
 {
   TshFileSelectionDialog *dialog = TSH_FILE_SELECTION_DIALOG (baton);
   gboolean add = FALSE;
 
+#if CHECK_SVN_VERSION_S(1,6)
   if (status->entry)
+#else /* CHECK_SVN_VERSION(1,7) */
+  if (status->versioned)
+#endif
   {
     if (dialog->flags & TSH_FILE_SELECTION_FLAG_CONFLICTED)
       if (status->text_status == svn_wc_status_conflicted || status->prop_status == svn_wc_status_conflicted)
@@ -345,7 +367,11 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
     gint file_status = TSH_FILE_STATUS_OTHER;
     TshFileStatus parent_status;
 
+#if CHECK_SVN_VERSION_S(1,6)
     if (G_LIKELY (status->entry))
+#else /* CHECK_SVN_VERSION(1,7) */
+    if (G_LIKELY (status->versioned))
+#endif
     {
       if (status->text_status == svn_wc_status_added)
       {
@@ -383,7 +409,11 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
       if (parent_status == TSH_FILE_STATUS_UNCHANGED)
         enable = FALSE;
     }
+#if CHECK_SVN_VERSION_S(1,6)
     else if (status->entry && status->text_status != svn_wc_status_missing)
+#else /* CHECK_SVN_VERSION(1,7) */
+    else if (status->versioned && status->text_status != svn_wc_status_missing)
+#endif
     {
       if (parent_status != TSH_FILE_STATUS_INVALID)
         enable = FALSE;
@@ -425,13 +455,10 @@ tsh_file_selection_status_func2(void *baton, const char *path, svn_wc_status2_t 
         break;
     }
   }
-}
 
-static svn_error_t*
-tsh_file_selection_status_func3(void *baton, const char *path, svn_wc_status2_t *status, apr_pool_t *pool)
-{
-    tsh_file_selection_status_func2(baton, path, status);
-    return SVN_NO_ERROR;
+#if CHECK_SVN_VERSION_G(1,6)
+  return SVN_NO_ERROR;
+#endif
 }
 
 static void

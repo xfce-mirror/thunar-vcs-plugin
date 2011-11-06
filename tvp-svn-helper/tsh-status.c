@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -47,13 +48,13 @@ struct thread_args {
 
 static gpointer status_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
+  struct thread_args *args = user_data;
   svn_opt_revision_t revision;
-	svn_error_t *err;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
-	TshStatusDialog *dialog = args->dialog;
-	gchar **files = args->files;
+  svn_error_t *err;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
+  TshStatusDialog *dialog = args->dialog;
+  gchar **files = args->files;
   svn_depth_t depth;
   gboolean get_all;
   gboolean update;
@@ -74,36 +75,38 @@ static gpointer status_thread (gpointer user_data)
 
   revision.kind = svn_opt_revision_head;
 #if CHECK_SVN_VERSION(1,5)
-	if ((err = svn_client_status3(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,6) */
-	if ((err = svn_client_status4(NULL, files?files[0]:"", &revision, tsh_status_func3, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
+  if ((err = svn_client_status3(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
+#elif CHECK_SVN_VERSION(1,6)
+  if ((err = svn_client_status4(NULL, files?files[0]:"", &revision, tsh_status_func3, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_status5(NULL, ctx, files?files[0]:"", &revision, depth, get_all, update, no_ignore, ignore_externals, TRUE, NULL, tsh_status_func, dialog, subpool)))
 #endif
-	{
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
-		tsh_status_dialog_done (dialog);
+    gdk_threads_enter();
+    tsh_status_dialog_done (dialog);
 
     error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Status failed"));
     gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(error), FALSE);
-		gdk_threads_leave();
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
-	tsh_status_dialog_done (dialog);
-	gdk_threads_leave();
-	
+  gdk_threads_enter();
+  tsh_status_dialog_done (dialog);
+  gdk_threads_leave();
+
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 static void create_status_thread(TshStatusDialog *dialog, struct thread_args *args)

@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -52,7 +53,6 @@ static gpointer commit_thread (gpointer user_data)
   struct thread_args *args = user_data;
   gboolean result = TRUE;
   svn_error_t *err;
-  svn_commit_info_t *commit_info;
   apr_array_header_t *paths;
   svn_client_ctx_t *ctx = args->ctx;
   apr_pool_t *subpool, *pool = args->pool;
@@ -66,8 +66,11 @@ static gpointer commit_thread (gpointer user_data)
   gint size_indirect = 0;
   gboolean recursive = TRUE;
   gchar *error_str;
+#if CHECK_SVN_VERSION_S(1,6)
+  svn_commit_info_t *commit_info;
   gchar *message;
   gchar buffer[256];
+#endif
 
   g_free (args);
 
@@ -120,7 +123,11 @@ static gpointer commit_thread (gpointer user_data)
       APR_ARRAY_PUSH (paths, const char *) = info->path;
     }
 
+#if CHECK_SVN_VERSION_S(1,6)
     if ((err = svn_client_delete3(NULL, paths, FALSE, FALSE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+    if ((err = svn_client_delete4(paths, FALSE, FALSE, NULL, NULL, NULL, ctx, subpool)))
+#endif
     {
       svn_pool_destroy (subpool);
 
@@ -177,7 +184,11 @@ static gpointer commit_thread (gpointer user_data)
       APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
     }
 
+#if CHECK_SVN_VERSION_S(1,6)
     if ((err = svn_client_commit4(&commit_info, paths, recursive?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, NULL, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+    if ((err = svn_client_commit5(paths, recursive?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, FALSE, NULL, NULL, tsh_commit_func2, dialog, ctx, subpool)))
+#endif
     {
       svn_pool_destroy (subpool);
 
@@ -193,6 +204,7 @@ static gpointer commit_thread (gpointer user_data)
       return GINT_TO_POINTER (FALSE);
     }
 
+#if CHECK_SVN_VERSION_S(1,6)
     if(SVN_IS_VALID_REVNUM(commit_info->revision))
     {
       g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
@@ -202,13 +214,16 @@ static gpointer commit_thread (gpointer user_data)
     {
       message = _("Nothing to do");
     }
+#endif
 
     svn_pool_destroy (subpool);
   }
 
   gdk_threads_enter();
+#if CHECK_SVN_VERSION_S(1,6)
   if (result)
     tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
+#endif
   tsh_notify_dialog_done (dialog);
   gdk_threads_leave();
 

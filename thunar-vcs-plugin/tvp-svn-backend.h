@@ -61,6 +61,7 @@ TvpSvnInfo *tvp_svn_backend_get_info (const gchar *uri);
 void     tvp_svn_info_free (TvpSvnInfo *info);
 
 #define CHECK_SVN_VERSION(major, minor) ((major == SVN_VER_MAJOR) && (minor == SVN_VER_MINOR))
+#define CHECK_SVN_VERSION_G(major, minor) ((major < SVN_VER_MAJOR) || ((major == SVN_VER_MAJOR) && (minor <= SVN_VER_MINOR)))
 
 G_END_DECLS;
 

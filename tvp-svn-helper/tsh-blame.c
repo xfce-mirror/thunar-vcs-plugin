@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -47,14 +48,14 @@ struct thread_args {
 
 static gpointer blame_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
+  struct thread_args *args = user_data;
   svn_opt_revision_t revision, start, end;
   svn_diff_file_options_t diff_options;
-	svn_error_t *err;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
-	TshBlameDialog *dialog = args->dialog;
-	gchar *file = args->file;
+  svn_error_t *err;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
+  TshBlameDialog *dialog = args->dialog;
+  gchar *file = args->file;
   GtkWidget *error;
   gchar *error_str;
 
@@ -66,33 +67,37 @@ static gpointer blame_thread (gpointer user_data)
   start.kind = svn_opt_revision_number;
   start.value.number = 0;
   end.kind = svn_opt_revision_head;
-	if ((err = svn_client_blame4(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func2, dialog, ctx, subpool)))
-	{
+#if CHECK_SVN_VERSION_S(1,6)
+  if ((err = svn_client_blame4(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func2, dialog, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_blame5(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func3, dialog, ctx, subpool)))
+#endif
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
-		tsh_blame_dialog_done (dialog);
+    gdk_threads_enter();
+    tsh_blame_dialog_done (dialog);
 
     error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Blame failed"));
     gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(error), FALSE);
-		gdk_threads_leave();
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
-	tsh_blame_dialog_done (dialog);
-	gdk_threads_leave();
-	
+  gdk_threads_enter();
+  tsh_blame_dialog_done (dialog);
+  gdk_threads_leave();
+
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 GThread *tsh_blame (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)

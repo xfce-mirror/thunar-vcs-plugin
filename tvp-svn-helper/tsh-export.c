@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -49,46 +50,50 @@ struct thread_args {
 
 static gpointer export_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
+  struct thread_args *args = user_data;
   svn_opt_revision_t peg_revision, revision;
-	svn_error_t *err;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
-	TshNotifyDialog *dialog = args->dialog;
-	gchar *path = args->path;
-	gchar *url = args->url;
+  svn_error_t *err;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
+  TshNotifyDialog *dialog = args->dialog;
+  gchar *path = args->path;
+  gchar *url = args->url;
   gchar *error_str;
 
-	g_free (args);
+  g_free (args);
 
   subpool = svn_pool_create (pool);
 
   peg_revision.kind = svn_opt_revision_unspecified;
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_export4(NULL, url, path, &peg_revision, &revision, TRUE, FALSE, svn_depth_infinity, NULL, ctx, subpool)))
-	{
+#if CHECK_SVN_VERSION_S(1,6)
+  if ((err = svn_client_export4(NULL, url, path, &peg_revision, &revision, TRUE, FALSE, svn_depth_infinity, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_export5(NULL, url, path, &peg_revision, &revision, TRUE, FALSE, FALSE, svn_depth_infinity, NULL, ctx, subpool)))
+#endif
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
+    gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+    tsh_notify_dialog_done (dialog);
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
-	tsh_notify_dialog_done (dialog);
-	gdk_threads_leave();
-	
+  gdk_threads_enter();
+  tsh_notify_dialog_done (dialog);
+  gdk_threads_leave();
+
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 GThread *tsh_export (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)

@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -47,64 +48,68 @@ struct thread_args {
 
 static gpointer update_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
+  struct thread_args *args = user_data;
   svn_opt_revision_t revision;
-	svn_error_t *err;
-	apr_array_header_t *paths;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
-	TshNotifyDialog *dialog = args->dialog;
-	gchar **files = args->files;
-	gint size, i;
+  svn_error_t *err;
+  apr_array_header_t *paths;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
+  TshNotifyDialog *dialog = args->dialog;
+  gchar **files = args->files;
+  gint size, i;
   gchar *error_str;
 
-	g_free (args);
+  g_free (args);
 
-	size = files?g_strv_length(files):0;
+  size = files?g_strv_length(files):0;
 
   subpool = svn_pool_create (pool);
 
-	if(size)
-	{
-		paths = apr_array_make (subpool, size, sizeof (const char *));
-		
-		for (i = 0; i < size; i++)
-		{
-			APR_ARRAY_PUSH (paths, const char *) = files[i];
-		}
-	}
-	else
-	{
-		paths = apr_array_make (subpool, 1, sizeof (const char *));
-		
-		APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
-	}
+  if(size)
+  {
+    paths = apr_array_make (subpool, size, sizeof (const char *));
+
+    for (i = 0; i < size; i++)
+    {
+      APR_ARRAY_PUSH (paths, const char *) = files[i];
+    }
+  }
+  else
+  {
+    paths = apr_array_make (subpool, 1, sizeof (const char *));
+
+    APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
+  }
 
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_update3(NULL, paths, &revision, svn_depth_unknown, FALSE, FALSE, FALSE, ctx, subpool)))
-	{
+#if CHECK_SVN_VERSION_S(1,6)
+  if ((err = svn_client_update3(NULL, paths, &revision, svn_depth_unknown, FALSE, FALSE, FALSE, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_update4(NULL, paths, &revision, svn_depth_unknown, TRUE, FALSE, FALSE, FALSE, FALSE, ctx, subpool)))
+#endif
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
+    gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+    tsh_notify_dialog_done (dialog);
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
-	tsh_notify_dialog_done (dialog);
-	gdk_threads_leave();
-	
+  gdk_threads_enter();
+  tsh_notify_dialog_done (dialog);
+  gdk_threads_leave();
+
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 GThread *tsh_update (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)

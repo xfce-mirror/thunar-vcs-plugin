@@ -30,6 +30,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -49,43 +50,50 @@ struct thread_args {
 
 static gpointer move_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
-	svn_error_t *err;
-  svn_commit_info_t *commit_info;
+  struct thread_args *args = user_data;
+  svn_error_t *err;
   apr_array_header_t *paths;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
   TshNotifyDialog *dialog = args->dialog;
-	gchar *from = args->from;
-	gchar *to = args->to;
+  gchar *from = args->from;
+  gchar *to = args->to;
   gchar *error_str;
+#if CHECK_SVN_VERSION_S(1,6)
+  svn_commit_info_t *commit_info;
   gchar *message;
   gchar buffer[256];
+#endif
 
-	g_free (args);
+  g_free (args);
 
   subpool = svn_pool_create (pool);
 
-    paths = apr_array_make (subpool, 1, sizeof (const char *));
+  paths = apr_array_make (subpool, 1, sizeof (const char *));
 
-    APR_ARRAY_PUSH (paths, const char *) = from;
+  APR_ARRAY_PUSH (paths, const char *) = from;
 
-	if ((err = svn_client_move5(&commit_info, paths, to, FALSE, FALSE, FALSE, NULL, ctx, subpool)))
-	{
+#if CHECK_SVN_VERSION_S(1,6)
+  if ((err = svn_client_move5(&commit_info, paths, to, FALSE, FALSE, FALSE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_move6(paths, to, FALSE, FALSE, NULL, tsh_commit_func2, dialog, ctx, subpool)))
+#endif
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
+    gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+    tsh_notify_dialog_done (dialog);
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
+#if CHECK_SVN_VERSION_S(1,6)
   if(SVN_IS_VALID_REVNUM(commit_info->revision))
   {
     g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
@@ -95,16 +103,19 @@ static gpointer move_thread (gpointer user_data)
   {
     message = _("Local move");
   }
+#endif
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
+  gdk_threads_enter();
+#if CHECK_SVN_VERSION_S(1,6)
   tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
+#endif
   tsh_notify_dialog_done (dialog);
   gdk_threads_leave();
 
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 GThread *tsh_move (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)

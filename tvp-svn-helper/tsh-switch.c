@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -49,68 +50,76 @@ struct thread_args {
 
 static gpointer switch_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
+  struct thread_args *args = user_data;
   svn_opt_revision_t revision;
-	svn_error_t *err;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
-	TshNotifyDialog *dialog = args->dialog;
-	gchar *path = args->path;
-	gchar *url = args->url;
+  svn_error_t *err;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
+  TshNotifyDialog *dialog = args->dialog;
+  gchar *path = args->path;
+  gchar *url = args->url;
   gchar *error_str;
 
-	g_free (args);
+  g_free (args);
 
   subpool = svn_pool_create (pool);
 
   revision.kind = svn_opt_revision_head;
-	if ((err = svn_client_switch2(NULL, path, url, &revision, &revision, svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
-	{
+#if CHECK_SVN_VERSION_S(1,6)
+  if ((err = svn_client_switch2(NULL, path, url, &revision, &revision, svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_switch3(NULL, path, url, &revision, &revision, svn_depth_infinity, TRUE, FALSE, FALSE, FALSE, ctx, subpool)))
+#endif
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
+    gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+    tsh_notify_dialog_done (dialog);
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
-	tsh_notify_dialog_done (dialog);
-	gdk_threads_leave();
-	
+  gdk_threads_enter();
+  tsh_notify_dialog_done (dialog);
+  gdk_threads_leave();
+
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 GThread *tsh_switch (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 {
-	GtkWidget *dialog;
-	struct thread_args *args;
+  GtkWidget *dialog;
+  struct thread_args *args;
   const char *url = NULL;
   gchar *repository = NULL;
   gchar *path;
-	apr_pool_t *subpool;
+  apr_pool_t *subpool;
 
   path = files?files[0]:NULL;
 
   subpool = svn_pool_create(pool);
 
+#if CHECK_SVN_VERSION_S(1,6)
   svn_error_clear(svn_client_url_from_path(&url, path?path:"", subpool));
+#else /* CHECK_SVN_VERSION(1,7) */
+  svn_error_clear(svn_client_url_from_path2(&url, path?path:"", ctx, subpool, subpool));
+#endif
   repository = g_strdup(url);
 
   svn_pool_destroy(subpool);
 
-	dialog = tsh_transfer_dialog_new (_("Switch"), NULL, 0, repository, path);
+  dialog = tsh_transfer_dialog_new (_("Switch"), NULL, 0, repository, path);
   g_free(repository);
-	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
+  if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
     gtk_widget_destroy (dialog);
     return NULL;
@@ -119,22 +128,22 @@ GThread *tsh_switch (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   repository = tsh_transfer_dialog_get_reposetory(TSH_TRANSFER_DIALOG(dialog));
   path = tsh_transfer_dialog_get_directory(TSH_TRANSFER_DIALOG(dialog));
 
-	gtk_widget_destroy (dialog);
+  gtk_widget_destroy (dialog);
 
-	dialog = tsh_notify_dialog_new (_("Switch"), NULL, 0);
+  dialog = tsh_notify_dialog_new (_("Switch"), NULL, 0);
   g_signal_connect(dialog, "cancel-clicked", tsh_cancel, NULL);
-	tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
+  tsh_dialog_start (GTK_DIALOG (dialog), TRUE);
 
-	ctx->notify_func2 = tsh_notify_func2;
-	ctx->notify_baton2 = dialog;
+  ctx->notify_func2 = tsh_notify_func2;
+  ctx->notify_baton2 = dialog;
 
-	args = g_malloc (sizeof (struct thread_args));
-	args->ctx = ctx;
-	args->pool = pool;
-	args->dialog = TSH_NOTIFY_DIALOG (dialog);
-	args->path = path;
-	args->url =	repository;
+  args = g_malloc (sizeof (struct thread_args));
+  args->ctx = ctx;
+  args->pool = pool;
+  args->dialog = TSH_NOTIFY_DIALOG (dialog);
+  args->path = path;
+  args->url =	repository;
 
-	return g_thread_create (switch_thread, args, TRUE, NULL);
+  return g_thread_create (switch_thread, args, TRUE, NULL);
 }
 

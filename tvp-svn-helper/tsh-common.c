@@ -31,6 +31,7 @@
 
 #include <apr_lib.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
@@ -574,12 +575,42 @@ tsh_action_to_string(svn_wc_notify_action_t action)
     N_("Tree conflict"),
     N_("External failed"),
 #endif
+#if CHECK_SVN_VERSION_G(1,7)
+    N_("Started"),
+    N_("Skipped obstruction"),
+    N_("Skipped working only"),
+    N_("Skipped access denied"),
+    N_("External removed"),
+    N_("Shadowed add"),
+    N_("Shadowed update"),
+    N_("Shadowed delete"),
+    N_("Merge record info"),
+    N_("Upgraded path"),
+    N_("Merge record info begin"),
+    N_("Merge elide info"),
+    N_("Patch"),
+    N_("Applied hunk"),
+    N_("Rejected hunk"),
+    N_("Hunk already applied"),
+    N_("Copied"),
+    N_("Copied replaced"),
+    N_("URL redirect"),
+    N_("Path nonexistent"),
+    N_("Exclude"),
+    N_("Conflict"),
+    N_("Missing"),
+    N_("Out of date"),
+    N_("No parent"),
+    N_("Locked"),
+    N_("Forbidden by server"),
+    N_("Skipped conflicted"),
+#endif
   };
 
   const gchar *action_string = N_("Unknown");
 
-	switch(action)
-	{
+  switch(action)
+  {
     case svn_wc_notify_add:
     case svn_wc_notify_copy:
     case svn_wc_notify_delete:
@@ -623,9 +654,39 @@ tsh_action_to_string(svn_wc_notify_action_t action)
     case svn_wc_notify_tree_conflict:
     case svn_wc_notify_failed_external:
 #endif
+#if CHECK_SVN_VERSION_G(1,7)
+    case svn_wc_notify_update_started:
+    case svn_wc_notify_update_skip_obstruction:
+    case svn_wc_notify_update_skip_working_only:
+    case svn_wc_notify_update_skip_access_denied:
+    case svn_wc_notify_update_external_removed:
+    case svn_wc_notify_update_shadowed_add:
+    case svn_wc_notify_update_shadowed_update:
+    case svn_wc_notify_update_shadowed_delete:
+    case svn_wc_notify_merge_record_info:
+    case svn_wc_notify_upgraded_path:
+    case svn_wc_notify_merge_record_info_begin:
+    case svn_wc_notify_merge_elide_info:
+    case svn_wc_notify_patch:
+    case svn_wc_notify_patch_applied_hunk:
+    case svn_wc_notify_patch_rejected_hunk:
+    case svn_wc_notify_patch_hunk_already_applied:
+    case svn_wc_notify_commit_copied:
+    case svn_wc_notify_commit_copied_replaced:
+    case svn_wc_notify_url_redirect:
+    case svn_wc_notify_path_nonexistent:
+    case svn_wc_notify_exclude:
+    case svn_wc_notify_failed_conflict:
+    case svn_wc_notify_failed_missing:
+    case svn_wc_notify_failed_out_of_date:
+    case svn_wc_notify_failed_no_parent:
+    case svn_wc_notify_failed_locked:
+    case svn_wc_notify_failed_forbidden_by_server:
+    case svn_wc_notify_skip_conflicted:
+#endif
       action_string = action_table[action];
       break;
-	}
+  }
   return _(action_string);
 }
 
@@ -640,13 +701,16 @@ tsh_notify_state_to_string(enum svn_wc_notify_state_t state)
     N_("Obstructed"),
     N_("Changed"),
     N_("Merged"),
-    N_("Conflicted")
+    N_("Conflicted"),
+#if CHECK_SVN_VERSION_G(1,7)
+    N_("Source missing"),
+#endif
   };
 
   const gchar *state_string = N_("Unknown");
 
-	switch(state)
-	{
+  switch(state)
+  {
     case svn_wc_notify_state_inapplicable:
     case svn_wc_notify_state_unknown:
     case svn_wc_notify_state_unchanged:
@@ -655,9 +719,12 @@ tsh_notify_state_to_string(enum svn_wc_notify_state_t state)
     case svn_wc_notify_state_changed:
     case svn_wc_notify_state_merged:
     case svn_wc_notify_state_conflicted:
+#if CHECK_SVN_VERSION_G(1,7)
+    case svn_wc_notify_state_source_missing:
+#endif
       state_string = state_table[state];
       break;
-	}
+  }
   return _(state_string);
 }
 
@@ -785,6 +852,19 @@ tsh_status_func3(void *baton, const char *path, svn_wc_status2_t *status, apr_po
 {
     tsh_status_func2(baton, path, status);
     return SVN_NO_ERROR;
+}
+
+svn_error_t *
+tsh_status_func(void *baton, const char *path, const svn_client_status_t *status, apr_pool_t *pool)
+{
+  TshStatusDialog *dialog = TSH_STATUS_DIALOG (baton);
+
+  gdk_threads_enter();
+  if (tsh_status_dialog_get_show_unversioned (dialog) || status->versioned)
+    tsh_status_dialog_add(dialog, path, tsh_status_to_string(status->text_status), tsh_status_to_string(status->prop_status), tsh_status_to_string(status->repos_text_status), tsh_status_to_string(status->repos_prop_status));
+  gdk_threads_leave();
+
+  return SVN_NO_ERROR;
 }
 
 svn_error_t*
@@ -942,6 +1022,38 @@ tsh_blame_func2 (void *baton, apr_int64_t line_no, svn_revnum_t revision, const 
 }
 
 svn_error_t *
+tsh_blame_func3 (void *baton, svn_revnum_t start_revision, svn_revnum_t end_revision, apr_int64_t line_no, svn_revnum_t revision, apr_hash_t *revprops, svn_revnum_t merged_revision, apr_hash_t *merged_rev_props, const char *merged_path, const char *line, svn_boolean_t local_change, apr_pool_t *pool)
+{
+  apr_time_t date_val;
+  svn_string_t *value;
+  gchar *author = NULL;
+  gchar *date = NULL;
+  TshBlameDialog *dialog = TSH_BLAME_DIALOG (baton);
+
+  value = apr_hash_get(revprops, SVN_PROP_REVISION_AUTHOR, APR_HASH_KEY_STRING);
+  if(value)
+    author = g_strndup (value->data, value->len);
+
+  value = apr_hash_get(revprops, SVN_PROP_REVISION_DATE, APR_HASH_KEY_STRING);
+  if(value)
+  {
+    date = g_strndup (value->data, value->len);
+    svn_time_from_cstring(&date_val, date, pool);
+    g_free(date);
+    apr_ctime((date = g_new0(gchar, APR_CTIME_LEN)), date_val);
+  }
+
+  gdk_threads_enter();
+  tsh_blame_dialog_add(dialog, line_no, revision, author, date, line);
+  gdk_threads_leave();
+
+  g_free(author);
+  g_free(date);
+
+  return SVN_NO_ERROR;
+}
+
+svn_error_t *
 tsh_proplist_func (void *baton, const char *path, apr_hash_t *prop_hash, apr_pool_t *pool)
 {
   TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (baton);
@@ -957,6 +1069,39 @@ tsh_proplist_func (void *baton, const char *path, apr_hash_t *prop_hash, apr_poo
     tsh_properties_dialog_add (dialog, name, str_value);
     gdk_threads_leave();
     g_free (str_value);
+  }
+
+  return SVN_NO_ERROR;
+}
+
+svn_error_t *
+tsh_commit_func2  (const svn_commit_info_t *commit_info, void *baton, apr_pool_t *pool)
+{
+  TshNotifyDialog *dialog = TSH_NOTIFY_DIALOG (baton);
+  gchar buffer[256];
+  gchar *message;
+
+  if(commit_info->post_commit_err)
+  {
+    gdk_threads_enter();
+    tsh_notify_dialog_add(dialog, _("Error"), commit_info->post_commit_err, NULL);
+    gdk_threads_leave();
+  }
+  else
+  {
+    if(SVN_IS_VALID_REVNUM(commit_info->revision))
+    {
+      g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
+      message = buffer;
+    }
+    else
+    {
+      message = _("Local action");
+    }
+
+    gdk_threads_enter();
+    tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
+    gdk_threads_leave();
   }
 
   return SVN_NO_ERROR;
@@ -1018,34 +1163,45 @@ gchar *
 tsh_is_working_copy (const gchar *uri, apr_pool_t *pool)
 {
   gchar *path;
-	svn_error_t *err;
-	int wc_format;
+  svn_error_t *err;
+  int wc_format;
+#if CHECK_SVN_VERSION_G(1,7)
+  svn_wc_context_t *wc_ctx;
+#endif
 
-	/* strip the "file://" part of the uri */
-	if (strncmp (uri, "file://", 7) == 0)
-	{
-		uri += 7;
-	}
+  /* strip the "file://" part of the uri */
+  if (strncmp (uri, "file://", 7) == 0)
+  {
+    uri += 7;
+  }
 
-	path = g_strdup (uri);
+  path = g_strdup (uri);
 
-	/* remove trailing '/' cause svn_wc_check_wc can't handle that */
-	if (path[strlen (path) - 1] == '/')
-	{
-		path[strlen (path) - 1] = '\0';
-	}
+  /* remove trailing '/' cause svn_wc_check_wc can't handle that */
+  if (path[strlen (path) - 1] == '/')
+  {
+    path[strlen (path) - 1] = '\0';
+  }
 
-	/* check for the path is a working copy */
-	err = svn_wc_check_wc (path, &wc_format, pool);
+#if CHECK_SVN_VERSION_S(1,6)
+  /* check for the path is a working copy */
+  err = svn_wc_check_wc (path, &wc_format, pool);
+#else /* CHECK_SVN_VERSION(1,7) */
+  err = svn_wc_context_create (&wc_ctx, NULL, pool, pool);
+  if (!err)
+  {
+    err = svn_wc_check_wc2 (&wc_format, wc_ctx, path, pool);
+  }
+#endif
 
-	/* if an error occured or wc_format in not set it is no working copy */
-	if(err || !wc_format)
-	{
+  /* if an error occured or wc_format in not set it is no working copy */
+  if(err || !wc_format)
+  {
     g_free (path);
     svn_error_clear (err);
-		return NULL;
-	}
-	
-	return path;
+    return NULL;
+  }
+
+  return path;
 }
 

@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -50,48 +51,58 @@ struct thread_args {
 
 static gpointer import_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
-	svn_error_t *err;
-  svn_commit_info_t *commit_info;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
-	TshNotifyDialog *dialog = args->dialog;
-	gchar *path = args->path;
-	gchar *url = args->url;
+  struct thread_args *args = user_data;
+  svn_error_t *err;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
+  TshNotifyDialog *dialog = args->dialog;
+  gchar *path = args->path;
+  gchar *url = args->url;
   gchar *error_str;
+#if CHECK_SVN_VERSION_S(1,6)
+  svn_commit_info_t *commit_info;
   gchar buffer[256];
+#endif
 
-	g_free (args);
+  g_free (args);
 
   subpool = svn_pool_create (pool);
 
-	if ((err = svn_client_import3(&commit_info, path, url, svn_depth_infinity, FALSE, FALSE, NULL, ctx, subpool)))
-	{
+#if CHECK_SVN_VERSION_S(1,6)
+  if ((err = svn_client_import3(&commit_info, path, url, svn_depth_infinity, FALSE, FALSE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_import4(path, url, svn_depth_infinity, FALSE, FALSE, NULL, tsh_commit_func2, dialog, ctx, subpool)))
+#endif
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
+    gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+    tsh_notify_dialog_done (dialog);
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
+#if CHECK_SVN_VERSION_S(1,6)
   g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
+#endif
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
+  gdk_threads_enter();
+#if CHECK_SVN_VERSION_S(1,6)
   tsh_notify_dialog_add(dialog, _("Completed"), buffer, NULL);
-	tsh_notify_dialog_done (dialog);
-	gdk_threads_leave();
-	
+#endif
+  tsh_notify_dialog_done (dialog);
+  gdk_threads_leave();
+
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 GThread *tsh_import (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)

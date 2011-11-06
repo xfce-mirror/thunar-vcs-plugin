@@ -29,6 +29,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -50,19 +51,22 @@ struct thread_args {
 
 static gpointer properties_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
+  struct thread_args *args = user_data;
   svn_opt_revision_t revision;
-	svn_error_t *err;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
+  svn_error_t *err;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
   TshPropertiesDialog *dialog = args->dialog;
-	gchar *path = args->path;
+  gchar *path = args->path;
   gchar *set_key = args->set_key;
   gchar *set_value = args->set_value;
   gboolean depth = args->depth;
   svn_string_t *value;
   GtkWidget *error;
   gchar *error_str;
+#if CHECK_SVN_VERSION_G(1,7)
+  apr_array_header_t *paths;
+#endif
 
   args->set_key = NULL;
   args->set_value = NULL;
@@ -73,7 +77,14 @@ static gpointer properties_thread (gpointer user_data)
   {
     value = set_value?svn_string_create(set_value, subpool):NULL;
 
+#if CHECK_SVN_VERSION_S(1,6)
     if ((err = svn_client_propset3(NULL, set_key, value, path, depth, FALSE, SVN_INVALID_REVNUM, NULL, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+    paths = apr_array_make (subpool, 1, sizeof (const char *));
+    APR_ARRAY_PUSH (paths, const char *) = path;
+
+    if ((err = svn_client_propset_local(set_key, value, paths, depth, FALSE, NULL, ctx, subpool)))
+#endif
     {
       //svn_pool_destroy (subpool);
       error_str = tsh_strerror(err);
@@ -95,24 +106,24 @@ static gpointer properties_thread (gpointer user_data)
   g_free (set_value);
 
   revision.kind = svn_opt_revision_unspecified;
-	if ((err = svn_client_proplist3(path, &revision, &revision, svn_depth_empty, NULL, tsh_proplist_func, dialog, ctx, subpool)))
-	{
+  if ((err = svn_client_proplist3(path, &revision, &revision, svn_depth_empty, NULL, tsh_proplist_func, dialog, ctx, subpool)))
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
+    gdk_threads_enter();
     tsh_properties_dialog_done (dialog);
 
     error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Properties failed"));
     gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(error), FALSE);
-		gdk_threads_leave();
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
   svn_pool_destroy (subpool);
 
@@ -121,7 +132,7 @@ static gpointer properties_thread (gpointer user_data)
   gdk_threads_leave();
 
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 static void create_properties_thread (TshPropertiesDialog *dialog, struct thread_args *args)

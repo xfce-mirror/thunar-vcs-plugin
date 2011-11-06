@@ -128,13 +128,12 @@ tgh_common_prefix (gchar **files)
 {
   gchar **iter;
   gchar *prefix;
-  guint prefix_len, match;
+  guint match;
 
   if (files == NULL || files[0] == NULL)
     return NULL;
 
   prefix = g_strdup (files[0]);
-  prefix_len = strlen (prefix);
 
   for (iter = &files[1]; *iter; iter++)
   {
@@ -142,7 +141,6 @@ tgh_common_prefix (gchar **files)
     prefix[match] = '\0';
     if (match == 0)
       break;
-    prefix_len = match;
   }
 
   return prefix;

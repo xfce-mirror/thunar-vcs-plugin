@@ -30,6 +30,7 @@
 
 #include <libxfce4util/libxfce4util.h>
 
+#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -49,53 +50,58 @@ struct thread_args {
 
 static gpointer copy_thread (gpointer user_data)
 {
-	struct thread_args *args = user_data;
-	svn_error_t *err;
+  struct thread_args *args = user_data;
+  svn_error_t *err;
   svn_opt_revision_t revision;
-  svn_commit_info_t *commit_info;
   apr_array_header_t *paths;
   svn_client_copy_source_t copy_source;
-	svn_client_ctx_t *ctx = args->ctx;
-	apr_pool_t *subpool, *pool = args->pool;
+  svn_client_ctx_t *ctx = args->ctx;
+  apr_pool_t *subpool, *pool = args->pool;
   TshNotifyDialog *dialog = args->dialog;
-	gchar *from = args->from;
-	gchar *to = args->to;
+  gchar *from = args->from;
+  gchar *to = args->to;
   gchar *error_str;
+#if CHECK_SVN_VERSION_S(1,6)
+  svn_commit_info_t *commit_info;
   gchar *message;
   gchar buffer[256];
+#endif
 
-	g_free (args);
+  g_free (args);
 
   subpool = svn_pool_create (pool);
 
-    paths = apr_array_make (subpool, 1, sizeof (svn_client_copy_source_t *));
+  paths = apr_array_make (subpool, 1, sizeof (svn_client_copy_source_t *));
 
   revision.kind = svn_opt_revision_unspecified;
-    copy_source.path = from;
-    copy_source.revision = &revision;
-    copy_source.peg_revision = &revision;
-    APR_ARRAY_PUSH (paths, svn_client_copy_source_t *) = &copy_source;
+  copy_source.path = from;
+  copy_source.revision = &revision;
+  copy_source.peg_revision = &revision;
+  APR_ARRAY_PUSH (paths, svn_client_copy_source_t *) = &copy_source;
 
 #if CHECK_SVN_VERSION(1,5)
-	if ((err = svn_client_copy4(&commit_info, paths, to, FALSE, FALSE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,6) */
-	if ((err = svn_client_copy5(&commit_info, paths, to, FALSE, FALSE, FALSE, NULL, ctx, subpool)))
+  if ((err = svn_client_copy4(&commit_info, paths, to, FALSE, FALSE, NULL, ctx, subpool)))
+#elif CHECK_SVN_VERSION(1,6)
+  if ((err = svn_client_copy5(&commit_info, paths, to, FALSE, FALSE, FALSE, NULL, ctx, subpool)))
+#else /* CHECK_SVN_VERSION(1,7) */
+  if ((err = svn_client_copy6(paths, to, FALSE, FALSE, FALSE, NULL, tsh_commit_func2, dialog, ctx, subpool)))
 #endif
-	{
+  {
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
-		gdk_threads_enter();
+    gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
-		tsh_notify_dialog_done (dialog);
-		gdk_threads_leave();
+    tsh_notify_dialog_done (dialog);
+    gdk_threads_leave();
     g_free(error_str);
 
-		svn_error_clear(err);
+    svn_error_clear(err);
     tsh_reset_cancel();
-		return GINT_TO_POINTER (FALSE);
-	}
+    return GINT_TO_POINTER (FALSE);
+  }
 
+#if CHECK_SVN_VERSION_S(1,6)
   if(SVN_IS_VALID_REVNUM(commit_info->revision))
   {
     g_snprintf(buffer, 256, _("At revision: %ld"), commit_info->revision);
@@ -105,16 +111,19 @@ static gpointer copy_thread (gpointer user_data)
   {
     message = _("Local copy");
   }
+#endif
 
   svn_pool_destroy (subpool);
 
-	gdk_threads_enter();
+  gdk_threads_enter();
+#if CHECK_SVN_VERSION_S(1,6)
   tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
-	tsh_notify_dialog_done (dialog);
-	gdk_threads_leave();
+#endif
+  tsh_notify_dialog_done (dialog);
+  gdk_threads_leave();
 
   tsh_reset_cancel();
-	return GINT_TO_POINTER (TRUE);
+  return GINT_TO_POINTER (TRUE);
 }
 
 GThread *tsh_copy (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
