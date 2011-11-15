@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-14 11:11+0000\n"
+"POT-Creation-Date: 2011-11-15 09:56+0000\n"
 "PO-Revision-Date: 2011-05-28 15:57+0200\n"
 "Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian <ikoli@yxahoo.com>\n"
@@ -1197,7 +1197,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Forbidden by server"
-msgstr ""
+msgstr "Zabranjeno od strane poslužitelja"
 
 #: ../tvp-svn-helper/tsh-common.c:606
 msgid "Skipped conflicted"
@@ -1247,7 +1247,7 @@ msgstr "Nepotpuno"
 
 #: ../tvp-svn-helper/tsh-common.c:1087
 msgid "Error"
-msgstr ""
+msgstr "Greška"
 
 #: ../tvp-svn-helper/tsh-common.c:1099
 msgid "Local action"
