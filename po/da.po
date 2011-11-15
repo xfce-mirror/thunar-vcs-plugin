@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-11 05:12+0000\n"
+"POT-Creation-Date: 2011-11-15 14:40+0000\n"
 "PO-Revision-Date: 2010-01-04 21:48+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -1174,7 +1174,6 @@ msgid "Hunk already applied"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:596
-#, fuzzy
 msgid "Copied replaced"
 msgstr "Erstattet"
 
@@ -1183,14 +1182,12 @@ msgid "URL redirect"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:598
-#, fuzzy
 msgid "Path nonexistent"
-msgstr "Egenskab findes ikke"
+msgstr "Stien findes ikke"
 
 #: ../tvp-svn-helper/tsh-common.c:600
-#, fuzzy
 msgid "Conflict"
-msgstr "I konflikt"
+msgstr "Konflikt"
 
 #: ../tvp-svn-helper/tsh-common.c:601 ../tvp-svn-helper/tsh-common.c:700
 #: ../tvp-svn-helper/tsh-common.c:740
@@ -1261,9 +1258,8 @@ msgid "Error"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:1099
-#, fuzzy
 msgid "Local action"
-msgstr "Lokal kopi"
+msgstr "Lokal handling"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
