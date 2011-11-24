@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-06 17:12+0000\n"
+"POT-Creation-Date: 2011-11-24 21:08+0000\n"
 "PO-Revision-Date: 2010-03-18 11:56+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: uk\n"
-"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -1154,7 +1154,7 @@ msgstr "Початок злиття"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
-msgstr ""
+msgstr "Латка"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "Applied hunk"
@@ -1169,13 +1169,12 @@ msgid "Hunk already applied"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:596
-#, fuzzy
 msgid "Copied replaced"
-msgstr "Замінений"
+msgstr "Скопійовано замінено"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "URL redirect"
-msgstr ""
+msgstr "Перенаправлення посилання"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "Path nonexistent"
