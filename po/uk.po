@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-24 21:08+0000\n"
+"POT-Creation-Date: 2011-12-08 10:48+0000\n"
 "PO-Revision-Date: 2010-03-18 11:56+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -1124,15 +1124,15 @@ msgstr "Зовнішнє вилучено"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Shadowed add"
-msgstr ""
+msgstr "Додавання в тлі"
 
 #: ../tvp-svn-helper/tsh-common.c:585
 msgid "Shadowed update"
-msgstr ""
+msgstr "Оновлення в тлі"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Вилучення в тлі"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Merge record info"
@@ -1140,17 +1140,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Upgraded path"
-msgstr ""
+msgstr "Шлях оновлення"
 
 #: ../tvp-svn-helper/tsh-common.c:589
-#, fuzzy
 msgid "Merge record info begin"
-msgstr "Початок злиття"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:590
-#, fuzzy
 msgid "Merge elide info"
-msgstr "Початок злиття"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
@@ -1158,15 +1156,15 @@ msgstr "Латка"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "Applied hunk"
-msgstr ""
+msgstr "Застосований кусок"
 
 #: ../tvp-svn-helper/tsh-common.c:593
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Відкинутий кусок"
 
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Кусок вже застосований"
 
 #: ../tvp-svn-helper/tsh-common.c:596
 msgid "Copied replaced"
