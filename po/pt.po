@@ -1151,19 +1151,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
-msgstr ""
+msgstr "\"Patch\""
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "Applied hunk"
-msgstr ""
+msgstr "Bloco aplicado"
 
 #: ../tvp-svn-helper/tsh-common.c:593
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Bloco rejeitado"
 
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Bloco já aplicado"
 
 #: ../tvp-svn-helper/tsh-common.c:596
 msgid "Copied replaced"
@@ -1171,7 +1171,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "URL redirect"
-msgstr ""
+msgstr "Redireccionamento de URL"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "Path nonexistent"
@@ -1192,7 +1192,7 @@ msgstr "Desactualizado"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "No parent"
-msgstr ""
+msgstr "Sem ascendente"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Forbidden by server"
@@ -1228,7 +1228,7 @@ msgstr "Conflituoso"
 
 #: ../tvp-svn-helper/tsh-common.c:706
 msgid "Source missing"
-msgstr ""
+msgstr "Falta ficheiro fonte"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1246,12 +1246,11 @@ msgstr "Incompleto"
 
 #: ../tvp-svn-helper/tsh-common.c:1087
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #: ../tvp-svn-helper/tsh-common.c:1099
-#, fuzzy
 msgid "Local action"
-msgstr "Cópia local"
+msgstr "Acção local"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
