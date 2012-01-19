@@ -1,0 +1,1542 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-vcs-plugin master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-19 03:57+0000\n"
+"PO-Revision-Date: 2012-01-19 16:00+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+msgid "Menu|Add"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108
+#: ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:251
+#: ../tvp-svn-helper/tsh-add.c:118
+#: ../tvp-svn-helper/tsh-add.c:131
+msgid "Add"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Menu|Bisect"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Bisect"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+msgid "Menu|Blame"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+#: ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129
+#: ../tvp-svn-helper/main.c:255
+#: ../tvp-svn-helper/main.c:259
+#: ../tvp-svn-helper/tsh-blame-dialog.c:132
+msgid "Blame"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
+msgid "Menu|Branch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
+#: ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:144
+#: ../tvp-git-helper/tgh-stash-dialog.c:167
+msgid "Branch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+msgid "Menu|Checkout"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/tsh-checkout.c:100
+#: ../tvp-svn-helper/tsh-checkout.c:112
+msgid "Checkout"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+msgid "Menu|Clean"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152
+#: ../tvp-git-helper/tgh-clean-dialog.c:96
+msgid "Clean"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272
+msgid "Menu|Clone"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272
+#: ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
+msgid "Clone"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid "Menu|Commit"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/tsh-commit.c:240
+#: ../tvp-svn-helper/tsh-commit.c:253
+msgid "Commit"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+msgid "Menu|Diff"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+msgid "Diff"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Menu|Fetch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Fetch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Menu|Grep"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Grep"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Menu|Init"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Init"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+msgid "Menu|Log"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:243
+#: ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/tsh-log-dialog.c:225
+msgid "Log"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Menu|Merge"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Merge"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+msgid "Menu|Move"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:299
+#: ../tvp-svn-helper/tsh-move.c:170
+msgid "Move"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Menu|Pull"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Pull"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Menu|Push"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Push"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Menu|Rebase"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Rebase"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
+msgid "Menu|Reset"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
+#: ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
+msgid "Reset"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Menu|Remove"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Remove"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Menu|Show"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Show"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
+msgid "Menu|Stash"
+msgstr ""
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
+#: ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:256
+msgid "Stash"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+msgid "Menu|Status"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
+#: ../tvp-git-helper/tgh-status-dialog.c:124
+#: ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-status-dialog.c:246
+msgid "Status"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Menu|Tag"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Tag"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#, c-format
+msgid "Action %s is unimplemented"
+msgstr ""
+
+#. append the svn submenu action
+#. Lets see if we are dealing with a working copy
+#: ../thunar-vcs-plugin/tvp-provider.c:464
+#: ../thunar-vcs-plugin/tvp-provider.c:530
+msgid "SVN"
+msgstr ""
+
+#. append the git submenu action
+#: ../thunar-vcs-plugin/tvp-provider.c:495
+#: ../thunar-vcs-plugin/tvp-provider.c:537
+msgid "GIT"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Menu|Changelist"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Changelist"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+msgid "Menu|Cleanup"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+#: ../tvp-svn-helper/main.c:267
+msgid "Cleanup"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Menu|Copy"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+#: ../tvp-svn-helper/main.c:275
+#: ../tvp-svn-helper/tsh-copy.c:177
+msgid "Copy"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+msgid "Menu|Delete"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+#: ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/tsh-delete.c:140
+#: ../tvp-svn-helper/tsh-delete.c:153
+msgid "Delete"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Menu|Export"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+#: ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/tsh-export.c:114
+#: ../tvp-svn-helper/tsh-export.c:132
+msgid "Export"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+msgid "Menu|Import"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+#: ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/tsh-import.c:115
+#: ../tvp-svn-helper/tsh-import.c:133
+msgid "Import"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Menu|Info"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Info"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+msgid "Menu|Lock"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+#: ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/tsh-lock.c:132
+#: ../tvp-svn-helper/tsh-lock-dialog.c:71
+msgid "Lock"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Menu|Edit Properties"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Edit Properties"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+msgid "Menu|Relocate"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+#: ../tvp-svn-helper/main.c:311
+#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
+msgid "Relocate"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+msgid "Menu|Resolved"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+#: ../tvp-svn-helper/main.c:307
+#: ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-resolved.c:128
+msgid "Resolved"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Menu|Resolve"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Resolve"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+msgid "Menu|Revert"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+#: ../tvp-svn-helper/main.c:315
+#: ../tvp-svn-helper/tsh-revert.c:114
+#: ../tvp-svn-helper/tsh-revert.c:127
+msgid "Revert"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+msgid "Menu|Switch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+#: ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/tsh-switch.c:120
+#: ../tvp-svn-helper/tsh-switch.c:133
+msgid "Switch"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+msgid "Menu|Unlock"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+#: ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/tsh-unlock.c:113
+msgid "Unlock"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+msgid "Menu|Update"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+#: ../tvp-svn-helper/main.c:331
+#: ../tvp-svn-helper/tsh-update.c:120
+msgid "Update"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
+msgid "URL:"
+msgstr "網址："
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
+#: ../tvp-svn-helper/tsh-common.c:610
+#: ../tvp-svn-helper/tsh-common.c:698
+#: ../tvp-svn-helper/tsh-common.c:710
+#: ../tvp-svn-helper/tsh-common.c:735
+#: ../tvp-svn-helper/tsh-common.c:752
+#: ../tvp-svn-helper/tsh-common.c:781
+#: ../tvp-svn-helper/tsh-common.c:884
+msgid "Unknown"
+msgstr "未知"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
+msgid "Revision:"
+msgstr "修訂版本："
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
+msgid "Repository:"
+msgstr "庫："
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+msgid "Modified revision:"
+msgstr "修改的修訂版本："
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
+msgid "Modified date:"
+msgstr "修改的日期："
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
+msgid "Author:"
+msgstr "作者："
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
+msgid "Changelist:"
+msgstr "變動清單："
+
+#. Translators: Depth as in depth of recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
+msgid "Depth:"
+msgstr "深度："
+
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
+#: ../tvp-svn-helper/tsh-common.c:599
+msgid "Exclude"
+msgstr "排除"
+
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+msgid "Empty"
+msgstr "空"
+
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
+msgid "Files"
+msgstr "檔案"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
+msgid "Immediates"
+msgstr "立即"
+
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+msgid "Infinity"
+msgstr "無限"
+
+#: ../tvp-git-helper/main.c:80
+#: ../tvp-svn-helper/main.c:107
+msgid "Print version information"
+msgstr "列印版本資訊"
+
+#: ../tvp-git-helper/main.c:87
+#: ../tvp-svn-helper/main.c:114
+msgid "Execute add action"
+msgstr "執行加入動作"
+
+#: ../tvp-git-helper/main.c:93
+#: ../tvp-svn-helper/main.c:120
+msgid "Execute blame action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:99
+msgid "Execute branch action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:105
+msgid "Execute clean action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:111
+msgid "Execute clone action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:117
+#: ../tvp-svn-helper/main.c:180
+msgid "Execute log action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:123
+#: ../tvp-svn-helper/main.c:186
+msgid "Execute move action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:129
+msgid "Execute reset action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:135
+msgid "Execute stash action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:141
+#: ../tvp-svn-helper/main.c:216
+msgid "Execute status action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:153
+#: ../tvp-svn-helper/main.c:251
+msgid "Add Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:157
+#: ../tvp-svn-helper/main.c:255
+msgid "Blame Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:161
+msgid "Branch Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/main.c:169
+msgid "Clone Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:173
+#: ../tvp-svn-helper/main.c:295
+msgid "Log Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:299
+msgid "Move Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:181
+msgid "Reset Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:185
+msgid "Stash Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:189
+#: ../tvp-svn-helper/main.c:319
+msgid "Status Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
+msgid "Line"
+msgstr "列"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
+msgid "Revision"
+msgstr "修訂版本"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
+msgid "Author"
+msgstr "作者"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
+msgid "Date"
+msgstr "日期"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:116
+#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:125
+msgid "Name"
+msgstr "名稱"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:263
+msgid "Branch name:"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:56
+msgid "Remove directories."
+msgstr "移除目錄。"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:68
+msgid "Exclude ignored files"
+msgstr "排除忽略的檔案"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:76
+msgid "Include ignored files"
+msgstr "納入忽略的檔案"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:82
+msgid "Only ignored files"
+msgstr "僅有呼越的檔案"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:92
+msgid "Force clean."
+msgstr "強迫清理。"
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning ..."
+msgstr ""
+
+#: ../tvp-git-helper/tgh-common.c:82
+#: ../tvp-svn-helper/tsh-add.c:75
+#: ../tvp-svn-helper/tsh-add.c:93
+#: ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102
+#: ../tvp-svn-helper/tsh-commit.c:136
+#: ../tvp-svn-helper/tsh-commit.c:197
+#: ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-svn-helper/tsh-delete.c:100
+#: ../tvp-svn-helper/tsh-export.c:79
+#: ../tvp-svn-helper/tsh-import.c:81
+#: ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:86
+#: ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91
+#: ../tvp-svn-helper/tsh-revert.c:89
+#: ../tvp-svn-helper/tsh-switch.c:78
+#: ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:95
+msgid "Failed"
+msgstr "失敗"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+msgid "untracked"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "路徑"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+msgid "Select/Unselect all"
+msgstr "全選/全部不選"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "訊息"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-stash-dialog.c:197
+msgid "Changes"
+msgstr "變動"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-stash-dialog.c:204
+msgid "File"
+msgstr "檔案"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "移動完成"
+
+#: ../tvp-git-helper/tgh-move.c:146
+#: ../tvp-svn-helper/tsh-move.c:150
+msgid "Move To"
+msgstr "移動至"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move ..."
+msgstr "移動..."
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "動作"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr "通知"
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "重設完成"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset ..."
+msgstr "重設..."
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:173
+msgid "Description"
+msgstr "描述"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:398
+msgid "Stash description:"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:534
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:562
+msgid "Are you sure you want to clear all stash?"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
+msgid "_Repository:"
+msgstr "庫(_R)："
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:75
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
+msgid "Select a folder"
+msgstr "選取資料夾"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
+msgid "_Directory:"
+msgstr "目錄(_D)："
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:122
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
+msgid "Transfer"
+msgstr "傳輸"
+
+#: ../tvp-svn-helper/main.c:126
+msgid "Execute changelist action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:132
+msgid "Execute checkout action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:138
+msgid "Execute cleanup action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:144
+msgid "Execute commit action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:150
+msgid "Execute copy action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:156
+msgid "Execute delete action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:162
+msgid "Execute export action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:168
+msgid "Execute import action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:174
+msgid "Execute lock action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:192
+msgid "Execute properties action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:198
+msgid "Execute resolved action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:204
+msgid "Execute relocate action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:210
+msgid "Execute revert action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:222
+msgid "Execute switch action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:228
+msgid "Execute unlock action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:234
+msgid "Execute update action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:259
+msgid "Changelist Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:263
+msgid "Checkout Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:267
+msgid "Cleanup Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:271
+msgid "Commit Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:275
+msgid "Copy Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:279
+msgid "Delete Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:283
+msgid "Export Related Options:"
+msgstr "匯出相關選項："
+
+#: ../tvp-svn-helper/main.c:287
+msgid "Import Related Options:"
+msgstr "匯入相關選項："
+
+#: ../tvp-svn-helper/main.c:291
+msgid "Lock Related Options:"
+msgstr "上鎖相關選項："
+
+#: ../tvp-svn-helper/main.c:303
+msgid "Properties Related Options:"
+msgstr "屬性相關選項："
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: ../tvp-svn-helper/main.c:303
+#: ../tvp-svn-helper/tsh-properties-dialog.c:280
+msgid "Properties"
+msgstr "屬性"
+
+#: ../tvp-svn-helper/main.c:307
+msgid "Resolved Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:311
+msgid "Relocate Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:315
+msgid "Revert Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:323
+msgid "Switch Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:327
+msgid "Unlock Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:331
+msgid "Update Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:374
+msgid "Not enough arguments provided"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-blame.c:82
+msgid "Blame failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-cleanup.c:68
+msgid "Cleanup failed"
+msgstr "清理失敗"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:83
+msgid "Cleanup finished"
+msgstr "清理完成"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:97
+msgid "Cleaning up ..."
+msgstr "正在清理..."
+
+#: ../tvp-svn-helper/tsh-commit.c:210
+#: ../tvp-svn-helper/tsh-common.c:828
+#: ../tvp-svn-helper/tsh-common.c:1094
+#: ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-delete.c:113
+#: ../tvp-svn-helper/tsh-import.c:92
+#: ../tvp-svn-helper/tsh-move.c:99
+#, c-format
+msgid "At revision: %ld"
+msgstr "於修訂版本：%ld"
+
+#: ../tvp-svn-helper/tsh-commit.c:215
+msgid "Nothing to do"
+msgstr "無事可作"
+
+#: ../tvp-svn-helper/tsh-commit.c:225
+#: ../tvp-svn-helper/tsh-common.c:546
+#: ../tvp-svn-helper/tsh-common.c:548
+#: ../tvp-svn-helper/tsh-common.c:1103
+#: ../tvp-svn-helper/tsh-copy.c:120
+#: ../tvp-svn-helper/tsh-delete.c:126
+#: ../tvp-svn-helper/tsh-import.c:99
+#: ../tvp-svn-helper/tsh-move.c:112
+msgid "Completed"
+msgstr "完成"
+
+#: ../tvp-svn-helper/tsh-commit.c:258
+msgid "Commit Message"
+msgstr "提交訊息"
+
+#: ../tvp-svn-helper/tsh-common.c:291
+msgid "Store password a plaintext?"
+msgstr "要以純文字檔儲存密碼？"
+
+#: ../tvp-svn-helper/tsh-common.c:535
+#: ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:551
+#: ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:786
+#: ../tvp-svn-helper/tsh-common.c:890
+msgid "Added"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:536
+#: ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:899
+msgid "Copied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:537
+#: ../tvp-svn-helper/tsh-common.c:543
+#: ../tvp-svn-helper/tsh-common.c:552
+#: ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:789
+#: ../tvp-svn-helper/tsh-common.c:892
+msgid "Deleted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:538
+msgid "Restored"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:539
+msgid "Reverted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:540
+msgid "Revert failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:542
+msgid "Skipped"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:545
+msgid "Updated"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:547
+#: ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:748
+msgid "External"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:550
+#: ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:792
+#: ../tvp-svn-helper/tsh-common.c:895
+msgid "Modified"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:553
+#: ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:795
+#: ../tvp-svn-helper/tsh-common.c:888
+msgid "Replaced"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:554
+msgid "Transmitting"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:556
+#: ../tvp-svn-helper/tsh-common.c:604
+msgid "Locked"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:557
+#: ../tvp-svn-helper/tsh-common.c:901
+msgid "Unlocked"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:558
+msgid "Lock failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:559
+msgid "Unlock failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:560
+msgid "Exists"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:561
+msgid "Changelist set"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:562
+msgid "Changelist cleared"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:563
+msgid "Changelist moved"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:564
+msgid "Merge begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:565
+msgid "Foreign merge begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:566
+msgid "Replace"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:568
+msgid "Property added"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:569
+msgid "Property modified"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:570
+msgid "Property deleted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:571
+msgid "Property nonexisting"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:572
+msgid "Revision property set"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:573
+msgid "Revision property deleted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:574
+msgid "Merge completed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:575
+msgid "Tree conflict"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:576
+msgid "External failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Started"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Skipped obstruction"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Skipped working only"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Skipped access denied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "External removed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Shadowed add"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:585
+msgid "Shadowed update"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Shadowed delete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:587
+msgid "Merge record info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:588
+msgid "Upgraded path"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:589
+msgid "Merge record info begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:590
+msgid "Merge elide info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:591
+msgid "Patch"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:592
+msgid "Applied hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:593
+msgid "Rejected hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:594
+msgid "Hunk already applied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:596
+msgid "Copied replaced"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:597
+msgid "URL redirect"
+msgstr "網址重新導向"
+
+#: ../tvp-svn-helper/tsh-common.c:598
+msgid "Path nonexistent"
+msgstr "路徑不存在"
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Conflict"
+msgstr "衝突"
+
+#: ../tvp-svn-helper/tsh-common.c:601
+#: ../tvp-svn-helper/tsh-common.c:700
+#: ../tvp-svn-helper/tsh-common.c:740
+msgid "Missing"
+msgstr "遺失"
+
+#: ../tvp-svn-helper/tsh-common.c:602
+msgid "Out of date"
+msgstr "過期"
+
+#: ../tvp-svn-helper/tsh-common.c:603
+msgid "No parent"
+msgstr "無親代"
+
+#: ../tvp-svn-helper/tsh-common.c:605
+msgid "Forbidden by server"
+msgstr "伺服器端禁止"
+
+#: ../tvp-svn-helper/tsh-common.c:606
+#, fuzzy
+msgid "Skipped conflicted"
+msgstr "已跳過衝突的"
+
+#: ../tvp-svn-helper/tsh-common.c:697
+#, fuzzy
+msgid "Inapplicable"
+msgstr "無法套用"
+
+#: ../tvp-svn-helper/tsh-common.c:699
+#, fuzzy
+msgid "Unchanged"
+msgstr "未變動的"
+
+#: ../tvp-svn-helper/tsh-common.c:701
+#: ../tvp-svn-helper/tsh-common.c:747
+#, fuzzy
+msgid "Obstructed"
+msgstr "阻擋的"
+
+#: ../tvp-svn-helper/tsh-common.c:702
+#, fuzzy
+msgid "Changed"
+msgstr "變動的"
+
+#: ../tvp-svn-helper/tsh-common.c:703
+#: ../tvp-svn-helper/tsh-common.c:744
+#, fuzzy
+msgid "Merged"
+msgstr "合併的"
+
+#: ../tvp-svn-helper/tsh-common.c:704
+#: ../tvp-svn-helper/tsh-common.c:745
+#, fuzzy
+msgid "Conflicted"
+msgstr "衝突的"
+
+#: ../tvp-svn-helper/tsh-common.c:706
+msgid "Source missing"
+msgstr "源遺失"
+
+#. N_("None"),
+#. N_("Unversioned"),
+#: ../tvp-svn-helper/tsh-common.c:738
+msgid "Normal"
+msgstr "一般"
+
+#: ../tvp-svn-helper/tsh-common.c:746
+msgid "Ignored"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:749
+msgid "Incomplete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:1087
+msgid "Error"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:1099
+msgid "Local action"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-copy.c:112
+msgid "Local copy"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-copy.c:159
+msgid "Copy To"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-delete.c:118
+msgid "Local delete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-delete.c:158
+msgid "Delete Message"
+msgstr "刪除訊息"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:59
+msgid "_Certificate:"
+msgstr "憑證(_C)："
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:66
+msgid "Select a file"
+msgstr "選取檔案"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-login-dialog.c:97
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+msgid "Remember"
+msgstr "記住"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:85
+msgid "Certificate"
+msgstr "憑證"
+
+#: ../tvp-svn-helper/tsh-import.c:138
+msgid "Import Message"
+msgstr "匯入訊息"
+
+#: ../tvp-svn-helper/tsh-log.c:123
+msgid "Log failed"
+msgstr "紀錄失敗"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:218
+msgid "Show Merged Revisions"
+msgstr "顯示合併的修訂版本"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:64
+msgid "_Username:"
+msgstr "使用者名稱(_U)："
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:80
+msgid "_Password:"
+msgstr "密碼(_P)："
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:105
+msgid "Login"
+msgstr "登入"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+msgid "State"
+msgstr "狀態"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+msgid "Log Message"
+msgstr "紀錄訊息"
+
+#: ../tvp-svn-helper/tsh-move.c:104
+msgid "Local move"
+msgstr "本地端移動"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
+msgid "Mime type"
+msgstr "Mime 類型"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
+msgid "Notification"
+msgstr "通知"
+
+#. tsh_properties_dialog_done (dialog);
+#: ../tvp-svn-helper/tsh-properties.c:94
+msgid "Set property failed"
+msgstr "設定屬性失敗"
+
+#: ../tvp-svn-helper/tsh-properties.c:117
+msgid "Properties failed"
+msgstr "屬性失敗"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:131
+msgid "Value"
+msgstr "值"
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#.
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#.
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "遞迴"
+
+#: ../tvp-svn-helper/tsh-relocate.c:78
+msgid "Relocate failed"
+msgstr "重新定位失敗"
+
+#: ../tvp-svn-helper/tsh-relocate.c:93
+msgid "Relocate finished"
+msgstr "重新定位完成"
+
+#: ../tvp-svn-helper/tsh-relocate.c:139
+msgid "Relocating ..."
+msgstr "正在重新定位..."
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
+msgid "_From:"
+msgstr "從(_F)："
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
+msgid "_To:"
+msgstr "至(_T)："
+
+#: ../tvp-svn-helper/tsh-status.c:91
+msgid "Status failed"
+msgstr "狀態失敗"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:223
+msgid "Show Unmodified Files"
+msgstr "顯示未修改的檔案"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:227
+msgid "Show Unversioned Files"
+msgstr "顯示未有版本的檔案"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:231
+msgid "Show Ignored Files"
+msgstr "顯示忽略的檔案"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:235
+msgid "Hide Externals"
+msgstr "隱藏外部"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
+msgid "Check Repository"
+msgstr "檢查庫"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:57
+msgid "Certificate is not yet valid."
+msgstr "憑證尚未有效。"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+msgid "Certificate has expired."
+msgstr "憑證已過期。"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+msgid "Certificate does not match the remote hostname."
+msgstr "憑證不符合遠端主機名稱。"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+msgid "Certificate authority is unknown."
+msgstr "憑證認證機構未知。"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+msgid "Other failure."
+msgstr "其他失敗。"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:76
+msgid "Trust"
+msgstr "信任"
+
