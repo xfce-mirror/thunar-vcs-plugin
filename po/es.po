@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-21 13:27+0000\n"
+"POT-Creation-Date: 2012-01-24 16:42+0000\n"
 "PO-Revision-Date: 2010-03-30 13:26+0100\n"
 "Last-Translator: Abel Martín <abel.martin.ruiz@gmail.com>\n"
 "Language-Team: Spanish <xfce-i18n@xfce.org>\n"
@@ -1154,7 +1154,7 @@ msgstr "Comenzar a fusionar"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
-msgstr ""
+msgstr "Parche"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "Applied hunk"
@@ -1253,12 +1253,11 @@ msgstr "Incompleto"
 
 #: ../tvp-svn-helper/tsh-common.c:1087
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: ../tvp-svn-helper/tsh-common.c:1099
-#, fuzzy
 msgid "Local action"
-msgstr "Copia local"
+msgstr "Acción local"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
