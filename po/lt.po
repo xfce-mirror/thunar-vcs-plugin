@@ -1,0 +1,1444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vcs\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-24 10:54+0000\n"
+"PO-Revision-Date: 2012-01-25 18:43+0200\n"
+"Last-Translator: Algimantas Margevičius <margevicius.algimantas@gmail.com>\n"
+"Language-Team: Lietuvių <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+msgid "Menu|Add"
+msgstr "Meniu|Pridėti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:251 ../tvp-svn-helper/tsh-add.c:118
+#: ../tvp-svn-helper/tsh-add.c:131
+msgid "Add"
+msgstr "Pridėti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Menu|Bisect"
+msgstr "Meniu|Perskirti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Bisect"
+msgstr "Perskirti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+msgid "Menu|Blame"
+msgstr "Menu|Kaltinti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:255
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-blame-dialog.c:132
+msgid "Blame"
+msgstr "Kaltinti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
+msgid "Menu|Branch"
+msgstr "Menu|Šaka"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:144
+#: ../tvp-git-helper/tgh-stash-dialog.c:167
+msgid "Branch"
+msgstr "Šaka"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+msgid "Menu|Checkout"
+msgstr "Meniu|Vykdyti(Checkout)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
+msgid "Checkout"
+msgstr "Vykdyti(Checkout)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+msgid "Menu|Clean"
+msgstr "Menu|Valyti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
+msgid "Clean"
+msgstr "Išvalyti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272
+msgid "Menu|Clone"
+msgstr "Meniu|Klonuoti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
+msgid "Clone"
+msgstr "Klonavimas"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid "Menu|Commit"
+msgstr "Meniu|Įkelti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/tsh-commit.c:240 ../tvp-svn-helper/tsh-commit.c:253
+msgid "Commit"
+msgstr "Įkelti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+msgid "Menu|Diff"
+msgstr "Menu|Pasikeitimai"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+msgid "Diff"
+msgstr "Pasikeitimai"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Menu|Fetch"
+msgstr "Meniu|Gauti(Fetch)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Fetch"
+msgstr "Gauti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Menu|Grep"
+msgstr "Meniu|Gauti(grep)"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Grep"
+msgstr "Gauti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Menu|Init"
+msgstr "Meniu|Pradinis"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Init"
+msgstr "Pradinis"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+msgid "Menu|Log"
+msgstr "Meniu|Žurnalas"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/tsh-log-dialog.c:225
+msgid "Log"
+msgstr "Žurnalas"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Menu|Merge"
+msgstr "Menu|Sujungti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Merge"
+msgstr "Sulieti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+msgid "Menu|Move"
+msgstr "Meniu|Perkelti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:299 ../tvp-svn-helper/tsh-move.c:170
+msgid "Move"
+msgstr "Perkelti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Menu|Pull"
+msgstr "Meniu|Ištraukti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Pull"
+msgstr "Ištraukti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Menu|Push"
+msgstr "Meniu|Išsiųsti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Push"
+msgstr "Išsiųsti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Menu|Rebase"
+msgstr "Meniu|Keisti vietą"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Rebase"
+msgstr "Keisti vietą"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
+msgid "Menu|Reset"
+msgstr "Meniu|Atstatyti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
+msgid "Reset"
+msgstr "Atstatyti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Menu|Remove"
+msgstr "Meniu|Šalinti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Remove"
+msgstr "Pašalinti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Menu|Show"
+msgstr "Meniu|Rodyti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Show"
+msgstr "Rodyti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
+msgid "Menu|Stash"
+msgstr "Meniu|Skrynutė"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:256
+msgid "Stash"
+msgstr "Skrynutė"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+msgid "Menu|Status"
+msgstr "Meniu|Būsena"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-status-dialog.c:246
+msgid "Status"
+msgstr "Būsena"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Menu|Tag"
+msgstr "Meniu|Žyma"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Tag"
+msgstr "Žyma"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#, c-format
+msgid "Action %s is unimplemented"
+msgstr "Veiksmas %s neįdiegtas"
+
+#. append the svn submenu action
+#. Lets see if we are dealing with a working copy
+#: ../thunar-vcs-plugin/tvp-provider.c:464
+#: ../thunar-vcs-plugin/tvp-provider.c:530
+msgid "SVN"
+msgstr "SVN"
+
+#. append the git submenu action
+#: ../thunar-vcs-plugin/tvp-provider.c:495
+#: ../thunar-vcs-plugin/tvp-provider.c:537
+msgid "GIT"
+msgstr "GIT"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Menu|Changelist"
+msgstr "Menu|Keitimų sąrašas"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Changelist"
+msgstr "Keitimų sąrašas"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+msgid "Menu|Cleanup"
+msgstr "Meniu|Valymas"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:267
+msgid "Cleanup"
+msgstr "Išvalymas"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Menu|Copy"
+msgstr "Meniu|Kopijuoti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:275
+#: ../tvp-svn-helper/tsh-copy.c:177
+msgid "Copy"
+msgstr "Kopijuoti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+msgid "Menu|Delete"
+msgstr "Meniu|Šalinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Menu|Export"
+msgstr "Meniu|Eksportuoti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
+msgid "Export"
+msgstr "Eksportuoti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+msgid "Menu|Import"
+msgstr "Meniu|Importuoti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
+msgid "Import"
+msgstr "Importuoti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Menu|Info"
+msgstr "Meniu|Informacija"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Info"
+msgstr "Informacija"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+msgid "Menu|Lock"
+msgstr "Meniu|Užrakinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
+msgid "Lock"
+msgstr "Užrakinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Menu|Edit Properties"
+msgstr "Meniu|Keisti savybes"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Edit Properties"
+msgstr "Keisti savybes"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+msgid "Menu|Relocate"
+msgstr "Meniu|Keisti vietą"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
+#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
+msgid "Relocate"
+msgstr "Perkelti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+msgid "Menu|Resolved"
+msgstr "Meniu|Išspręsta"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:307
+#: ../tvp-svn-helper/tsh-common.c:541 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-resolved.c:128
+msgid "Resolved"
+msgstr "Išspręsta"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Menu|Resolve"
+msgstr "Meniu|Išspręsti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Resolve"
+msgstr "Išspręsti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+msgid "Menu|Revert"
+msgstr "Meniu|Atstatyti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:315
+#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
+msgid "Revert"
+msgstr "Atstatyti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+msgid "Menu|Switch"
+msgstr "Meniu|Perjungti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
+msgid "Switch"
+msgstr "Perjungti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+msgid "Menu|Unlock"
+msgstr "Meniu|Atrakinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/tsh-unlock.c:113
+msgid "Unlock"
+msgstr "Atrakinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+msgid "Menu|Update"
+msgstr "Meniu|Atnaujinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:331
+#: ../tvp-svn-helper/tsh-update.c:120
+msgid "Update"
+msgstr "Atnaujinti"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
+msgid "URL:"
+msgstr "URL:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
+#: ../tvp-svn-helper/tsh-common.c:610 ../tvp-svn-helper/tsh-common.c:698
+#: ../tvp-svn-helper/tsh-common.c:710 ../tvp-svn-helper/tsh-common.c:735
+#: ../tvp-svn-helper/tsh-common.c:752 ../tvp-svn-helper/tsh-common.c:781
+#: ../tvp-svn-helper/tsh-common.c:884
+msgid "Unknown"
+msgstr "Nežinoma"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
+msgid "Revision:"
+msgstr "Leidimas:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
+msgid "Repository:"
+msgstr "Saugykla:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+msgid "Modified revision:"
+msgstr "Leidimas keistas:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
+msgid "Modified date:"
+msgstr "Keitimo data:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
+msgid "Author:"
+msgstr "Autorius:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
+msgid "Changelist:"
+msgstr "Keitimų sąrašas:"
+
+#. Translators: Depth as in depth of recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
+msgid "Depth:"
+msgstr "Gylis:"
+
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
+#: ../tvp-svn-helper/tsh-common.c:599
+msgid "Exclude"
+msgstr "Išskyrus"
+
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+msgid "Empty"
+msgstr "Tuščia"
+
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
+msgid "Files"
+msgstr "Failai"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
+msgid "Immediates"
+msgstr "Nedelsiant"
+
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+msgid "Infinity"
+msgstr "Begalybė"
+
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:107
+msgid "Print version information"
+msgstr "Rodyti versijos informaciją"
+
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:114
+msgid "Execute add action"
+msgstr "Vykdyti pridėjimo veiksmą"
+
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:120
+msgid "Execute blame action"
+msgstr "Vykdyti kaltinimo veiksmą"
+
+#: ../tvp-git-helper/main.c:99
+msgid "Execute branch action"
+msgstr "Vykdyti šakos veiksmą"
+
+#: ../tvp-git-helper/main.c:105
+msgid "Execute clean action"
+msgstr "Vykdyti valymo veiksmą"
+
+#: ../tvp-git-helper/main.c:111
+msgid "Execute clone action"
+msgstr "Vykdyti klonavimo veiksmą"
+
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:180
+msgid "Execute log action"
+msgstr "Vykdyti žurnalo veiksmą"
+
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:186
+msgid "Execute move action"
+msgstr "Vykdyti perkėlimo veiksmą"
+
+#: ../tvp-git-helper/main.c:129
+msgid "Execute reset action"
+msgstr "Vykdyti atstatymo veiksmą"
+
+#: ../tvp-git-helper/main.c:135
+msgid "Execute stash action"
+msgstr "Vykdyti saugyklos veiksmą"
+
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:216
+msgid "Execute status action"
+msgstr "Vykdyti būsenos veiksmą"
+
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:251
+msgid "Add Related Options:"
+msgstr "Pridėjimo susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:255
+msgid "Blame Related Options:"
+msgstr "Kaltinimo susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:161
+msgid "Branch Related Options:"
+msgstr "Šakos susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
+msgid "Clone Related Options:"
+msgstr "Klonavimo susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:295
+msgid "Log Related Options:"
+msgstr "Žurnalo susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:299
+msgid "Move Related Options:"
+msgstr "Perkėlimo susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:181
+msgid "Reset Related Options:"
+msgstr "Atstatymo susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:185
+msgid "Stash Related Options:"
+msgstr "Saugyklos susijusios parinktys:"
+
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:319
+msgid "Status Related Options:"
+msgstr "Būsenos susijusios parinktys:"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
+msgid "Line"
+msgstr "Linija"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
+msgid "Revision"
+msgstr "Leidimas"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
+msgid "Author"
+msgstr "Autorius"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
+msgid "Date"
+msgstr "Data"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:116
+#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:125
+msgid "Name"
+msgstr "Vardas"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:263
+msgid "Branch name:"
+msgstr "Šakos vardas:"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:56
+msgid "Remove directories."
+msgstr "Pašalinti aplankus."
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:68
+msgid "Exclude ignored files"
+msgstr "Išskirti nepaisomus failus"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:76
+msgid "Include ignored files"
+msgstr "Įterpti nepaisomus failus"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:82
+msgid "Only ignored files"
+msgstr "Tik nepaisomi failai"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:92
+msgid "Force clean."
+msgstr "Priverstinai valyti."
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr "Klonavimas baigtas"
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning ..."
+msgstr "Klonuojama..."
+
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:75
+#: ../tvp-svn-helper/tsh-add.c:93 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:136
+#: ../tvp-svn-helper/tsh-commit.c:197 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
+#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
+#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:95
+msgid "Failed"
+msgstr "Nepavyko"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+msgid "untracked"
+msgstr "nesekamas"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "Kelias"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+msgid "Select/Unselect all"
+msgstr "Pasirinkti/Nepasirinkti visus"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr "AutoriusData"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr "ĮdėjimoData"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "Pranešimas"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-stash-dialog.c:197
+msgid "Changes"
+msgstr "Pakeitimai"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-stash-dialog.c:204
+msgid "File"
+msgstr "Failas"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "Perkelta"
+
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+msgid "Move To"
+msgstr "Perkelti į"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move ..."
+msgstr "Perkelti..."
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "Veiksmas"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr "Perspėti"
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "Atkurta"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset ..."
+msgstr "Atstatyti..."
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:173
+msgid "Description"
+msgstr "Aprašymas"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:398
+msgid "Stash description:"
+msgstr "Skrynutės aprašymas:"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:534
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr "Ar Jūs tikrai norite šalinti %s?"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:562
+msgid "Are you sure you want to clear all stash?"
+msgstr "Ar tikrai norite išvalyti visą skrynutę?"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
+msgid "_Repository:"
+msgstr "_Saugykla:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:75
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
+msgid "Select a folder"
+msgstr "Pasirinkite aplanką"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
+msgid "_Directory:"
+msgstr "_Aplankas:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:122
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
+msgid "Transfer"
+msgstr "Perkėlimas"
+
+#: ../tvp-svn-helper/main.c:126
+msgid "Execute changelist action"
+msgstr "Vykdyti keitimų sąrašo veiksmą"
+
+#: ../tvp-svn-helper/main.c:132
+msgid "Execute checkout action"
+msgstr "Vykdyti iškėlimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:138
+msgid "Execute cleanup action"
+msgstr "Vykdyti valymo veiksmą"
+
+#: ../tvp-svn-helper/main.c:144
+msgid "Execute commit action"
+msgstr "Vykdyti įkėlimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:150
+msgid "Execute copy action"
+msgstr "Vykdyti kopijavimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:156
+msgid "Execute delete action"
+msgstr "Vykdyti šalinimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:162
+msgid "Execute export action"
+msgstr "Vykdyti eksportavimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:168
+msgid "Execute import action"
+msgstr "Vykdyti importavimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:174
+msgid "Execute lock action"
+msgstr "Vykdyti rakinimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:192
+msgid "Execute properties action"
+msgstr "Vykdyti savybių veiksmą"
+
+#: ../tvp-svn-helper/main.c:198
+msgid "Execute resolved action"
+msgstr "Vykdyti išsprendimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:204
+msgid "Execute relocate action"
+msgstr "Vykdyti perkėlimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:210
+msgid "Execute revert action"
+msgstr "Vykdyti atstatymo veiksmą"
+
+#: ../tvp-svn-helper/main.c:222
+msgid "Execute switch action"
+msgstr "Vykdyti perjungimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:228
+msgid "Execute unlock action"
+msgstr "Vykdyti atrakinimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:234
+msgid "Execute update action"
+msgstr "Vykdyti atnaujinimo veiksmą"
+
+#: ../tvp-svn-helper/main.c:259
+msgid "Changelist Related Options:"
+msgstr "Keitimų sąrašo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:263
+msgid "Checkout Related Options:"
+msgstr "Iškėlimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:267
+msgid "Cleanup Related Options:"
+msgstr "Valymo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:271
+msgid "Commit Related Options:"
+msgstr "Pritaikymo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:275
+msgid "Copy Related Options:"
+msgstr "Kopijavimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:279
+msgid "Delete Related Options:"
+msgstr "Šalinimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:283
+msgid "Export Related Options:"
+msgstr "Eksportavimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:287
+msgid "Import Related Options:"
+msgstr "Importavimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:291
+msgid "Lock Related Options:"
+msgstr "Užrakinimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:303
+msgid "Properties Related Options:"
+msgstr "Savybių susijusios parinktys:"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: ../tvp-svn-helper/main.c:303 ../tvp-svn-helper/tsh-properties-dialog.c:280
+msgid "Properties"
+msgstr "Savybės"
+
+#: ../tvp-svn-helper/main.c:307
+msgid "Resolved Related Options:"
+msgstr "Išsprendimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:311
+msgid "Relocate Related Options:"
+msgstr "Perkėlimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:315
+msgid "Revert Related Options:"
+msgstr "Atstatymo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:323
+msgid "Switch Related Options:"
+msgstr "Perjungimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:327
+msgid "Unlock Related Options:"
+msgstr "Rakinimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:331
+msgid "Update Related Options:"
+msgstr "Atnaujinimo susijusios parinktys:"
+
+#: ../tvp-svn-helper/main.c:374
+msgid "Not enough arguments provided"
+msgstr "Nepakanka argumentų"
+
+#: ../tvp-svn-helper/tsh-blame.c:82
+msgid "Blame failed"
+msgstr "Kaltinimas nepavyko"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:68
+msgid "Cleanup failed"
+msgstr "Išvalymas nepavyko"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:83
+msgid "Cleanup finished"
+msgstr "Išvalymas baigtas"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:97
+msgid "Cleaning up ..."
+msgstr "Išvaloma..."
+
+#: ../tvp-svn-helper/tsh-commit.c:210 ../tvp-svn-helper/tsh-common.c:828
+#: ../tvp-svn-helper/tsh-common.c:1094 ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
+#: ../tvp-svn-helper/tsh-move.c:99
+#, c-format
+msgid "At revision: %ld"
+msgstr "Leidime: %ld"
+
+#: ../tvp-svn-helper/tsh-commit.c:215
+msgid "Nothing to do"
+msgstr "Nėra ką daryti"
+
+#: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-common.c:546
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:1103
+#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
+#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
+msgid "Completed"
+msgstr "Atlikta"
+
+#: ../tvp-svn-helper/tsh-commit.c:258
+msgid "Commit Message"
+msgstr "Pridėjimo pranešimas"
+
+#: ../tvp-svn-helper/tsh-common.c:291
+msgid "Store password a plaintext?"
+msgstr "Slaptažodžius saugoti kaip gryną tekstą?"
+
+#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:786 ../tvp-svn-helper/tsh-common.c:890
+msgid "Added"
+msgstr "Pridėtas"
+
+#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:899
+msgid "Copied"
+msgstr "Nukopijuotas"
+
+#: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:543
+#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:789 ../tvp-svn-helper/tsh-common.c:892
+msgid "Deleted"
+msgstr "Pašalintas"
+
+#: ../tvp-svn-helper/tsh-common.c:538
+msgid "Restored"
+msgstr "Atkurtas"
+
+#: ../tvp-svn-helper/tsh-common.c:539
+msgid "Reverted"
+msgstr "Atstatytas"
+
+#: ../tvp-svn-helper/tsh-common.c:540
+msgid "Revert failed"
+msgstr "Atstatyti nepavyko"
+
+#: ../tvp-svn-helper/tsh-common.c:542
+msgid "Skipped"
+msgstr "Praleista"
+
+#: ../tvp-svn-helper/tsh-common.c:545
+msgid "Updated"
+msgstr "Atnaujintas"
+
+#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:748
+msgid "External"
+msgstr "Išorinis"
+
+#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:792 ../tvp-svn-helper/tsh-common.c:895
+msgid "Modified"
+msgstr "Pakeista"
+
+#: ../tvp-svn-helper/tsh-common.c:553 ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:795 ../tvp-svn-helper/tsh-common.c:888
+msgid "Replaced"
+msgstr "Pakeista"
+
+#: ../tvp-svn-helper/tsh-common.c:554
+msgid "Transmitting"
+msgstr "Persiunčiama"
+
+#: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
+msgid "Locked"
+msgstr "Užrakinti"
+
+#: ../tvp-svn-helper/tsh-common.c:557 ../tvp-svn-helper/tsh-common.c:901
+msgid "Unlocked"
+msgstr "Atrakinta"
+
+#: ../tvp-svn-helper/tsh-common.c:558
+msgid "Lock failed"
+msgstr "Užrakinti nepavyko"
+
+#: ../tvp-svn-helper/tsh-common.c:559
+msgid "Unlock failed"
+msgstr "Atrakinti nepavyko"
+
+#: ../tvp-svn-helper/tsh-common.c:560
+msgid "Exists"
+msgstr "Egzistuoja"
+
+#: ../tvp-svn-helper/tsh-common.c:561
+msgid "Changelist set"
+msgstr "Keitimų sąrašas nustatytas"
+
+#: ../tvp-svn-helper/tsh-common.c:562
+msgid "Changelist cleared"
+msgstr "Keitimų sąrašas išvalytas"
+
+#: ../tvp-svn-helper/tsh-common.c:563
+msgid "Changelist moved"
+msgstr "Keitimų sąrašas perkeltas"
+
+#: ../tvp-svn-helper/tsh-common.c:564
+msgid "Merge begin"
+msgstr "Pradedama sujungti"
+
+#: ../tvp-svn-helper/tsh-common.c:565
+msgid "Foreign merge begin"
+msgstr "Nutolęs sujungimas pradėtas"
+
+#: ../tvp-svn-helper/tsh-common.c:566
+msgid "Replace"
+msgstr "Pakeisti"
+
+#: ../tvp-svn-helper/tsh-common.c:568
+msgid "Property added"
+msgstr "Savybė pridėta"
+
+#: ../tvp-svn-helper/tsh-common.c:569
+msgid "Property modified"
+msgstr "Savybė pakeista"
+
+#: ../tvp-svn-helper/tsh-common.c:570
+msgid "Property deleted"
+msgstr "Savybė ištrinta"
+
+#: ../tvp-svn-helper/tsh-common.c:571
+msgid "Property nonexisting"
+msgstr "Savybė neegzistuoja"
+
+#: ../tvp-svn-helper/tsh-common.c:572
+msgid "Revision property set"
+msgstr "Leidimo savybė nustatyta"
+
+#: ../tvp-svn-helper/tsh-common.c:573
+msgid "Revision property deleted"
+msgstr "Leidimo savybė ištrinta"
+
+#: ../tvp-svn-helper/tsh-common.c:574
+msgid "Merge completed"
+msgstr "Suliejimas užbaigtas"
+
+#: ../tvp-svn-helper/tsh-common.c:575
+msgid "Tree conflict"
+msgstr "Konfliktas medyje"
+
+#: ../tvp-svn-helper/tsh-common.c:576
+msgid "External failed"
+msgstr "Išorinis nepavyko"
+
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Started"
+msgstr "Pradėtas"
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Skipped obstruction"
+msgstr "Kliūtis praleista"
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Skipped working only"
+msgstr "Praleista tik darbinė"
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Skipped access denied"
+msgstr "Praleista neprieinama"
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "External removed"
+msgstr "Išorinė pašalinta"
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Shadowed add"
+msgstr "Šešėlinė pridėta"
+
+#: ../tvp-svn-helper/tsh-common.c:585
+msgid "Shadowed update"
+msgstr "Šešėlinė atnaujinta"
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Shadowed delete"
+msgstr "Šešėlinė ištrinta"
+
+#: ../tvp-svn-helper/tsh-common.c:587
+msgid "Merge record info"
+msgstr "Sujungti įrašų informaciją"
+
+#: ../tvp-svn-helper/tsh-common.c:588
+msgid "Upgraded path"
+msgstr "Kelias atnaujintas"
+
+#: ../tvp-svn-helper/tsh-common.c:589
+msgid "Merge record info begin"
+msgstr "Pradedamas įrašų informacijos sujungimas"
+
+#: ../tvp-svn-helper/tsh-common.c:590
+msgid "Merge elide info"
+msgstr "Sujungti nutylimą informaciją"
+
+#: ../tvp-svn-helper/tsh-common.c:591
+msgid "Patch"
+msgstr "Pataisymas"
+
+#: ../tvp-svn-helper/tsh-common.c:592
+msgid "Applied hunk"
+msgstr "Gabalas pritaikytas"
+
+#: ../tvp-svn-helper/tsh-common.c:593
+msgid "Rejected hunk"
+msgstr "Gabalas atmestas"
+
+#: ../tvp-svn-helper/tsh-common.c:594
+msgid "Hunk already applied"
+msgstr "Gabalas jau pritaikytas"
+
+#: ../tvp-svn-helper/tsh-common.c:596
+msgid "Copied replaced"
+msgstr "Nukopijuotas pakeistas"
+
+#: ../tvp-svn-helper/tsh-common.c:597
+msgid "URL redirect"
+msgstr "URL peradresavimas"
+
+#: ../tvp-svn-helper/tsh-common.c:598
+msgid "Path nonexistent"
+msgstr "Kelias neegzistuoja"
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Conflict"
+msgstr "Nesuderinamas"
+
+#: ../tvp-svn-helper/tsh-common.c:601 ../tvp-svn-helper/tsh-common.c:700
+#: ../tvp-svn-helper/tsh-common.c:740
+msgid "Missing"
+msgstr "Trūksta"
+
+#: ../tvp-svn-helper/tsh-common.c:602
+msgid "Out of date"
+msgstr "Pasenęs"
+
+#: ../tvp-svn-helper/tsh-common.c:603
+msgid "No parent"
+msgstr "Nėra auštesnio"
+
+#: ../tvp-svn-helper/tsh-common.c:605
+msgid "Forbidden by server"
+msgstr "Serveris uždraudė"
+
+#: ../tvp-svn-helper/tsh-common.c:606
+msgid "Skipped conflicted"
+msgstr "Konfliktuojantis praleistas"
+
+#: ../tvp-svn-helper/tsh-common.c:697
+msgid "Inapplicable"
+msgstr "Nepritaikomas"
+
+#: ../tvp-svn-helper/tsh-common.c:699
+msgid "Unchanged"
+msgstr "Nepakeista"
+
+#: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:747
+msgid "Obstructed"
+msgstr "Kliuvinys"
+
+#: ../tvp-svn-helper/tsh-common.c:702
+msgid "Changed"
+msgstr "Pakeista"
+
+#: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:744
+msgid "Merged"
+msgstr "Sujungta"
+
+#: ../tvp-svn-helper/tsh-common.c:704 ../tvp-svn-helper/tsh-common.c:745
+msgid "Conflicted"
+msgstr "Konfliktuojantis"
+
+#: ../tvp-svn-helper/tsh-common.c:706
+msgid "Source missing"
+msgstr "Trūksta šaltinio"
+
+#. N_("None"),
+#. N_("Unversioned"),
+#: ../tvp-svn-helper/tsh-common.c:738
+msgid "Normal"
+msgstr "Normalus"
+
+#: ../tvp-svn-helper/tsh-common.c:746
+msgid "Ignored"
+msgstr "Nepaisoma"
+
+#: ../tvp-svn-helper/tsh-common.c:749
+msgid "Incomplete"
+msgstr "Nebaigta"
+
+#: ../tvp-svn-helper/tsh-common.c:1087
+msgid "Error"
+msgstr "Klaida"
+
+#: ../tvp-svn-helper/tsh-common.c:1099
+msgid "Local action"
+msgstr "Vietinis veiksmas"
+
+#: ../tvp-svn-helper/tsh-copy.c:112
+msgid "Local copy"
+msgstr "Vietinė kopija"
+
+#: ../tvp-svn-helper/tsh-copy.c:159
+msgid "Copy To"
+msgstr "Kopijuoti į"
+
+#: ../tvp-svn-helper/tsh-delete.c:118
+msgid "Local delete"
+msgstr "Vietinis šalinimas"
+
+#: ../tvp-svn-helper/tsh-delete.c:158
+msgid "Delete Message"
+msgstr "Ištrinti pranešimą"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:59
+msgid "_Certificate:"
+msgstr "_Liudijimas:"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:66
+msgid "Select a file"
+msgstr "Pasirinkite failą"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-login-dialog.c:97
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+msgid "Remember"
+msgstr "Prisiminti"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:85
+msgid "Certificate"
+msgstr "Sertifikatas"
+
+#: ../tvp-svn-helper/tsh-import.c:138
+msgid "Import Message"
+msgstr "Importavimo pranešimas"
+
+#: ../tvp-svn-helper/tsh-log.c:123
+msgid "Log failed"
+msgstr "Įrašyti į žurnalą nepavyko"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr "Sustabdyti ant kopijos"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:218
+msgid "Show Merged Revisions"
+msgstr "Rodyti sujungtus leidimus"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:64
+msgid "_Username:"
+msgstr "Naudotojo _vardas:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:80
+msgid "_Password:"
+msgstr "Sla_ptažodis:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:105
+msgid "Login"
+msgstr "Prisijungti"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+msgid "State"
+msgstr "Būsena"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+msgid "Log Message"
+msgstr "Žurnalo pranešimas"
+
+#: ../tvp-svn-helper/tsh-move.c:104
+msgid "Local move"
+msgstr "Vietinis perkėlimas"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
+msgid "Mime type"
+msgstr "MIME tipas"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
+msgid "Notification"
+msgstr "Pranešimas"
+
+#. tsh_properties_dialog_done (dialog);
+#: ../tvp-svn-helper/tsh-properties.c:94
+msgid "Set property failed"
+msgstr "Nepavyko nustatyti savybės"
+
+#: ../tvp-svn-helper/tsh-properties.c:117
+msgid "Properties failed"
+msgstr "Savybės nepavyko"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:131
+msgid "Value"
+msgstr "Reikšmė"
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#.
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr "Tik šį"
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr "Šio aplanko failai"
+
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#.
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Rekursinis"
+
+#: ../tvp-svn-helper/tsh-relocate.c:78
+msgid "Relocate failed"
+msgstr "Perkelti nepavyko"
+
+#: ../tvp-svn-helper/tsh-relocate.c:93
+msgid "Relocate finished"
+msgstr "Perkelta"
+
+#: ../tvp-svn-helper/tsh-relocate.c:139
+msgid "Relocating ..."
+msgstr "Perkeliama..."
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
+msgid "_From:"
+msgstr "_Nuo:"
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
+msgid "_To:"
+msgstr "_Kam:"
+
+#: ../tvp-svn-helper/tsh-status.c:91
+msgid "Status failed"
+msgstr "Būsena nepavyko"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:223
+msgid "Show Unmodified Files"
+msgstr "Rodyti nepakeistus failus"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:227
+msgid "Show Unversioned Files"
+msgstr "Rodyti failus be versijos"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:231
+msgid "Show Ignored Files"
+msgstr "Rodyti nepaisomus failus"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:235
+msgid "Hide Externals"
+msgstr "Slėpti papildomus"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
+msgid "Check Repository"
+msgstr "Patikrinti saugyklą"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:57
+msgid "Certificate is not yet valid."
+msgstr "Sertifikatas dar negalioja."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+msgid "Certificate has expired."
+msgstr "Sertifikatas paseno."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+msgid "Certificate does not match the remote hostname."
+msgstr "Sertifikatas neatitinka nutolusio kompiuterio vardo."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+msgid "Certificate authority is unknown."
+msgstr "Sertifikato įgaliojimai nežinomi."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+msgid "Other failure."
+msgstr "Kita klaida."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:76
+msgid "Trust"
+msgstr "Pasitikėjimas"
