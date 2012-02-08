@@ -1,11 +1,12 @@
 # Mohammad Alhargan <malham1@gmail.com>, 2012.
+# Mohammad Alhargan <malham1@hotmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-07 17:06+0000\n"
-"PO-Revision-Date: 2012-02-07 21:02+0300\n"
-"Last-Translator: Mohammad Alhargan <malham1@gmail.com>\n"
+"POT-Creation-Date: 2012-02-08 04:42+0000\n"
+"PO-Revision-Date: 2012-02-08 08:47+0300\n"
+"Last-Translator: Mohammad Alhargan <malham1@hotmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/opensuse-11-4/ar/list/\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +20,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
 msgid "Menu|Add"
-msgstr ""
+msgstr "القائمة|إضافة"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
@@ -373,12 +374,12 @@ msgstr "حل"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
-msgstr "القائمة|رجوع"
+msgstr "القائمة|عكس"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:315
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
 msgid "Revert"
-msgstr "رجوع"
+msgstr "عكس"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
@@ -448,7 +449,7 @@ msgstr "المؤلف:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
 msgid "Changelist:"
-msgstr "قائمة التغييرات"
+msgstr "قائمة التغييرات:"
 
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
@@ -565,11 +566,11 @@ msgstr "تسجيل خيارات ذات الصلة:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:299
 msgid "Move Related Options:"
-msgstr "نقل الخيارات ذات الصلة"
+msgstr "نقل الخيارات ذات الصلة:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr "نقل الخيارات ذات الصلة"
+msgstr "إعادة تعيين الخيارات ذات الصلة:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
@@ -826,7 +827,7 @@ msgstr "تنفيذ إجراءات الترحيل"
 
 #: ../tvp-svn-helper/main.c:210
 msgid "Execute revert action"
-msgstr "تنفيذ إجراءات الرجوع"
+msgstr "تنفيذ إجراءات العكس"
 
 #: ../tvp-svn-helper/main.c:222
 msgid "Execute switch action"
@@ -896,39 +897,39 @@ msgstr "الخيارات المتعلقة بالنقل:"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "الخيارات المتعلقة بالعكس:"
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "الخيارات المتعلقة بالتبديل:"
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "الخيارات المتعلقة بإلغاء القفل:"
 
 #: ../tvp-svn-helper/main.c:331
 msgid "Update Related Options:"
-msgstr ""
+msgstr "الخيارات المتعلقة بالتحديث:"
 
 #: ../tvp-svn-helper/main.c:374
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "الوسائط المقدمة غير كافية"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
-msgstr ""
+msgstr "فشل اللوم"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
-msgstr ""
+msgstr "فشل التنظيف"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
-msgstr ""
+msgstr "انتهى التنظيف"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
 msgid "Cleaning up ..."
-msgstr ""
+msgstr "يتم الآن التنظيف ..."
 
 #: ../tvp-svn-helper/tsh-commit.c:210 ../tvp-svn-helper/tsh-common.c:828
 #: ../tvp-svn-helper/tsh-common.c:1094 ../tvp-svn-helper/tsh-copy.c:107
@@ -936,408 +937,408 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-move.c:99
 #, c-format
 msgid "At revision: %ld"
-msgstr ""
+msgstr "في المراجعة: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:215
 msgid "Nothing to do"
-msgstr ""
+msgstr "لا يوجد ما يمكن إجراؤه"
 
 #: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-common.c:546
 #: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:1103
 #: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
 #: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
 msgid "Completed"
-msgstr ""
+msgstr "اكتملت"
 
 #: ../tvp-svn-helper/tsh-commit.c:258
 msgid "Commit Message"
-msgstr ""
+msgstr "إيداع رسالة"
 
 #: ../tvp-svn-helper/tsh-common.c:291
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "تخزين كلمات المرور بتنسيق نص عادي؟"
 
 #: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:544
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:739
 #: ../tvp-svn-helper/tsh-common.c:786 ../tvp-svn-helper/tsh-common.c:890
 msgid "Added"
-msgstr ""
+msgstr "مضافة"
 
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:595
 #: ../tvp-svn-helper/tsh-common.c:899
 msgid "Copied"
-msgstr ""
+msgstr "تم النسخ"
 
 #: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:543
 #: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:741
 #: ../tvp-svn-helper/tsh-common.c:789 ../tvp-svn-helper/tsh-common.c:892
 msgid "Deleted"
-msgstr ""
+msgstr "محذوف"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Restored"
-msgstr ""
+msgstr "استعادة"
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Reverted"
-msgstr ""
+msgstr "معكوس"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Revert failed"
-msgstr ""
+msgstr "فشل العكس"
 
 #: ../tvp-svn-helper/tsh-common.c:542
 msgid "Skipped"
-msgstr ""
+msgstr "مُتخطى"
 
 #: ../tvp-svn-helper/tsh-common.c:545
 msgid "Updated"
-msgstr ""
+msgstr "المُحدّث"
 
 #: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:549
 #: ../tvp-svn-helper/tsh-common.c:748
 msgid "External"
-msgstr ""
+msgstr "خارجي"
 
 #: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:743
 #: ../tvp-svn-helper/tsh-common.c:792 ../tvp-svn-helper/tsh-common.c:895
 msgid "Modified"
-msgstr ""
+msgstr "معدل"
 
 #: ../tvp-svn-helper/tsh-common.c:553 ../tvp-svn-helper/tsh-common.c:742
 #: ../tvp-svn-helper/tsh-common.c:795 ../tvp-svn-helper/tsh-common.c:888
 msgid "Replaced"
-msgstr ""
+msgstr "استبدل"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Transmitting"
-msgstr ""
+msgstr "إحالة"
 
 #: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
 msgid "Locked"
-msgstr ""
+msgstr "مقفل"
 
 #: ../tvp-svn-helper/tsh-common.c:557 ../tvp-svn-helper/tsh-common.c:901
 msgid "Unlocked"
-msgstr ""
+msgstr "غير مقفل"
 
 #: ../tvp-svn-helper/tsh-common.c:558
 msgid "Lock failed"
-msgstr ""
+msgstr "فشل القفل"
 
 #: ../tvp-svn-helper/tsh-common.c:559
 msgid "Unlock failed"
-msgstr ""
+msgstr "فشل الغاء القفل"
 
 #: ../tvp-svn-helper/tsh-common.c:560
 msgid "Exists"
-msgstr ""
+msgstr "موجود"
 
 #: ../tvp-svn-helper/tsh-common.c:561
 msgid "Changelist set"
-msgstr ""
+msgstr "قائمة التغييرات"
 
 #: ../tvp-svn-helper/tsh-common.c:562
 msgid "Changelist cleared"
-msgstr ""
+msgstr "تم مسح قائمة التغييرات"
 
 #: ../tvp-svn-helper/tsh-common.c:563
 msgid "Changelist moved"
-msgstr ""
+msgstr "تم نقل قائمة التغييرات"
 
 #: ../tvp-svn-helper/tsh-common.c:564
 msgid "Merge begin"
-msgstr ""
+msgstr "البدء في الدمج"
 
 #: ../tvp-svn-helper/tsh-common.c:565
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "البدء في دمج الغريب"
 
 #: ../tvp-svn-helper/tsh-common.c:566
 msgid "Replace"
-msgstr ""
+msgstr "إستبدال"
 
 #: ../tvp-svn-helper/tsh-common.c:568
 msgid "Property added"
-msgstr ""
+msgstr "تم إضافة الخاصية"
 
 #: ../tvp-svn-helper/tsh-common.c:569
 msgid "Property modified"
-msgstr ""
+msgstr "تم تعديل الخاصية"
 
 #: ../tvp-svn-helper/tsh-common.c:570
 msgid "Property deleted"
-msgstr ""
+msgstr "تم حذف الخاصية"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "Property nonexisting"
-msgstr ""
+msgstr "الخاصية غير مدرجة"
 
 #: ../tvp-svn-helper/tsh-common.c:572
 msgid "Revision property set"
-msgstr ""
+msgstr "مراجعة تعيين الخاصية"
 
 #: ../tvp-svn-helper/tsh-common.c:573
 msgid "Revision property deleted"
-msgstr ""
+msgstr "مراجعة حذف الخاصية"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Merge completed"
-msgstr ""
+msgstr "إكتمل الدمج"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Tree conflict"
-msgstr ""
+msgstr "تعارض الشجرة"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "External failed"
-msgstr ""
+msgstr "الخارجية فشلت"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Started"
-msgstr ""
+msgstr "بُدئ"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "تم تخطي العراقيل"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Skipped working only"
-msgstr ""
+msgstr "تخطي العمل فقط"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Skipped access denied"
-msgstr ""
+msgstr "تخطي رفض الوصول"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "External removed"
-msgstr ""
+msgstr "تم إزالة الخارجية"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Shadowed add"
-msgstr ""
+msgstr "تعقب الإضافة"
 
 #: ../tvp-svn-helper/tsh-common.c:585
 msgid "Shadowed update"
-msgstr ""
+msgstr "تعقب التحديث"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Shadowed delete"
-msgstr ""
+msgstr "تعقب الحذف"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Merge record info"
-msgstr ""
+msgstr "معلومات دمج السجل"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Upgraded path"
-msgstr ""
+msgstr "مسار الترقية"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Merge record info begin"
-msgstr ""
+msgstr "البدء في تسجيل دمج معلومات"
 
 #: ../tvp-svn-helper/tsh-common.c:590
 msgid "Merge elide info"
-msgstr ""
+msgstr "اسقط دمج معلومات"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
-msgstr ""
+msgstr "ترقيع"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "Applied hunk"
-msgstr ""
+msgstr "تطابق الكتل"
 
 #: ../tvp-svn-helper/tsh-common.c:593
 msgid "Rejected hunk"
-msgstr ""
+msgstr "الكتل المرفوضة"
 
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Hunk already applied"
-msgstr ""
+msgstr "الكتل طبقت بالفعل"
 
 #: ../tvp-svn-helper/tsh-common.c:596
 msgid "Copied replaced"
-msgstr ""
+msgstr "تم استبدال النسخ"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "URL redirect"
-msgstr ""
+msgstr "إعادة توجيه المسار"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "Path nonexistent"
-msgstr ""
+msgstr "المسار غير موجود"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Conflict"
-msgstr ""
+msgstr "تعارض"
 
 #: ../tvp-svn-helper/tsh-common.c:601 ../tvp-svn-helper/tsh-common.c:700
 #: ../tvp-svn-helper/tsh-common.c:740
 msgid "Missing"
-msgstr ""
+msgstr "مفقودة"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Out of date"
-msgstr ""
+msgstr "غير محدث"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "No parent"
-msgstr ""
+msgstr "لا يوجد أصل"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Forbidden by server"
-msgstr ""
+msgstr "ممنوع من الخادم"
 
 #: ../tvp-svn-helper/tsh-common.c:606
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "تخطي التعارض"
 
 #: ../tvp-svn-helper/tsh-common.c:697
 msgid "Inapplicable"
-msgstr ""
+msgstr "غير قابل للتطبيق"
 
 #: ../tvp-svn-helper/tsh-common.c:699
 msgid "Unchanged"
-msgstr ""
+msgstr "بدون تغيير"
 
 #: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:747
 msgid "Obstructed"
-msgstr ""
+msgstr "تمت إعاقته"
 
 #: ../tvp-svn-helper/tsh-common.c:702
 msgid "Changed"
-msgstr ""
+msgstr "غُيِّر"
 
 #: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:744
 msgid "Merged"
-msgstr ""
+msgstr "دُمج"
 
 #: ../tvp-svn-helper/tsh-common.c:704 ../tvp-svn-helper/tsh-common.c:745
 msgid "Conflicted"
-msgstr ""
+msgstr "متعارض"
 
 #: ../tvp-svn-helper/tsh-common.c:706
 msgid "Source missing"
-msgstr ""
+msgstr "المصدر مفقود"
 
 #. N_("None"),
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Normal"
-msgstr ""
+msgstr "عادي"
 
 #: ../tvp-svn-helper/tsh-common.c:746
 msgid "Ignored"
-msgstr ""
+msgstr "متجاهَل"
 
 #: ../tvp-svn-helper/tsh-common.c:749
 msgid "Incomplete"
-msgstr ""
+msgstr "غير مكتمل"
 
 #: ../tvp-svn-helper/tsh-common.c:1087
 msgid "Error"
-msgstr ""
+msgstr "خطأ"
 
 #: ../tvp-svn-helper/tsh-common.c:1099
 msgid "Local action"
-msgstr ""
+msgstr "الإجراء المحلي"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
-msgstr ""
+msgstr "النسخة المحلية"
 
 #: ../tvp-svn-helper/tsh-copy.c:159
 msgid "Copy To"
-msgstr ""
+msgstr "انسخ إلى"
 
 #: ../tvp-svn-helper/tsh-delete.c:118
 msgid "Local delete"
-msgstr ""
+msgstr "حذف المحلية"
 
 #: ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete Message"
-msgstr ""
+msgstr "حذف الرسالة"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
-msgstr ""
+msgstr "_شهادة:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:66
 msgid "Select a file"
-msgstr ""
+msgstr "حدد ملف"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:77
 #: ../tvp-svn-helper/tsh-login-dialog.c:97
 #: ../tvp-svn-helper/tsh-trust-dialog.c:72
 msgid "Remember"
-msgstr ""
+msgstr "تذكّر"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:85
 msgid "Certificate"
-msgstr ""
+msgstr "شهادة"
 
 #: ../tvp-svn-helper/tsh-import.c:138
 msgid "Import Message"
-msgstr ""
+msgstr "استورد رسالة"
 
 #: ../tvp-svn-helper/tsh-log.c:123
 msgid "Log failed"
-msgstr ""
+msgstr "فشل الولوج"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "وقوف على النسخة"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "إظهار المراجعات المدمجة"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
-msgstr ""
+msgstr "_اسم المستحدم:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:80
 msgid "_Password:"
-msgstr ""
+msgstr "_كلمة المرور:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:105
 msgid "Login"
-msgstr ""
+msgstr "تسجيل الدخول"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:92
 msgid "State"
-msgstr ""
+msgstr "الحالة"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
-msgstr ""
+msgstr "رسائل السجل"
 
 #: ../tvp-svn-helper/tsh-move.c:104
 msgid "Local move"
-msgstr ""
+msgstr "نقل محلي"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "Mime type"
-msgstr ""
+msgstr "أنواع الملفات Mime"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
-msgstr ""
+msgstr "تنبيه"
 
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:94
 msgid "Set property failed"
-msgstr ""
+msgstr "تعيين خاصية الفشل"
 
 #: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
-msgstr ""
+msgstr "خصائص الفشل"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:131
 msgid "Value"
-msgstr ""
+msgstr "قيمة"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
@@ -1348,7 +1349,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
-msgstr ""
+msgstr "ذاتي"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are updated
@@ -1359,7 +1360,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
-msgstr ""
+msgstr "ملفات فورية"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
@@ -1370,72 +1371,72 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
-msgstr ""
+msgstr "تكرار"
 
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
-msgstr ""
+msgstr "فشل النقل"
 
 #: ../tvp-svn-helper/tsh-relocate.c:93
 msgid "Relocate finished"
-msgstr ""
+msgstr "تم الإنتهاء من النقل"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
 msgid "Relocating ..."
-msgstr ""
+msgstr "يتم الآن النقل ..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
-msgstr ""
+msgstr "_من:"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:142
 msgid "_To:"
-msgstr ""
+msgstr "_إلى:"
 
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
-msgstr ""
+msgstr "حالة فشل"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
-msgstr ""
+msgstr "إظهار الملفات غير المغييرة"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:227
 msgid "Show Unversioned Files"
-msgstr ""
+msgstr "اظهر الملفات بدون اصدار"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:231
 msgid "Show Ignored Files"
-msgstr ""
+msgstr "إظهار الملفات التي تم تجاهلها"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:235
 msgid "Hide Externals"
-msgstr ""
+msgstr "إخفاء الجهات الخارجية"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Check Repository"
-msgstr ""
+msgstr "تحقق من المستودع"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:57
 msgid "Certificate is not yet valid."
-msgstr ""
+msgstr "الشّهادة ليست صالحة بعد."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:60
 msgid "Certificate has expired."
-msgstr ""
+msgstr "انتهت صلاحيّة الشهادة."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:63
 msgid "Certificate does not match the remote hostname."
-msgstr ""
+msgstr "الشهادة لا تطابق اسم المضيف البعيد."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:66
 msgid "Certificate authority is unknown."
-msgstr ""
+msgstr "المرجع المصدق غير معروف."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:69
 msgid "Other failure."
-msgstr ""
+msgstr "فشل آخر."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:76
 msgid "Trust"
-msgstr ""
+msgstr "ثقة"
