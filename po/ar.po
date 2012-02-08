@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: xfce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-08 04:42+0000\n"
-"PO-Revision-Date: 2012-02-08 08:47+0300\n"
+"PO-Revision-Date: 2012-02-08 08:49+0300\n"
 "Last-Translator: Mohammad Alhargan <malham1@hotmail.com>\n"
 "Language-Team: http://www.vertaal.com.ar/files/opensuse-11-4/ar/list/\n"
 "Language: ar\n"
@@ -491,7 +491,7 @@ msgstr "الملفات"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
-msgstr ""
+msgstr "حالاً Immediates"
 
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full recursion
