@@ -949,7 +949,7 @@ msgstr "无事可做"
 #: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
 #: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
 msgid "Completed"
-msgstr "已完成"
+msgstr "已完成的"
 
 #: ../tvp-svn-helper/tsh-commit.c:258
 msgid "Commit Message"
@@ -963,38 +963,38 @@ msgstr "明文存储密码？"
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:739
 #: ../tvp-svn-helper/tsh-common.c:786 ../tvp-svn-helper/tsh-common.c:890
 msgid "Added"
-msgstr "已添加"
+msgstr "已添加的"
 
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:595
 #: ../tvp-svn-helper/tsh-common.c:899
 msgid "Copied"
-msgstr "已复制"
+msgstr "已复制的"
 
 #: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:543
 #: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:741
 #: ../tvp-svn-helper/tsh-common.c:789 ../tvp-svn-helper/tsh-common.c:892
 msgid "Deleted"
-msgstr "已删除"
+msgstr "已删除的"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Restored"
-msgstr "已恢复"
+msgstr "已恢复的"
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Reverted"
-msgstr "已恢复"
+msgstr "已恢复的"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Revert failed"
-msgstr "恢复动作失败"
+msgstr "恢复动作已失败"
 
 #: ../tvp-svn-helper/tsh-common.c:542
 msgid "Skipped"
-msgstr "已跳过"
+msgstr "已跳过的"
 
 #: ../tvp-svn-helper/tsh-common.c:545
 msgid "Updated"
-msgstr "已更新"
+msgstr "已更新的"
 
 #: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:549
 #: ../tvp-svn-helper/tsh-common.c:748
@@ -1004,12 +1004,12 @@ msgstr "外部"
 #: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:743
 #: ../tvp-svn-helper/tsh-common.c:792 ../tvp-svn-helper/tsh-common.c:895
 msgid "Modified"
-msgstr "已修改"
+msgstr "已修改的"
 
 #: ../tvp-svn-helper/tsh-common.c:553 ../tvp-svn-helper/tsh-common.c:742
 #: ../tvp-svn-helper/tsh-common.c:795 ../tvp-svn-helper/tsh-common.c:888
 msgid "Replaced"
-msgstr "已替换"
+msgstr "已替换的"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Transmitting"
@@ -1017,19 +1017,19 @@ msgstr "正在提交"
 
 #: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
 msgid "Locked"
-msgstr "已锁定"
+msgstr "已锁定的"
 
 #: ../tvp-svn-helper/tsh-common.c:557 ../tvp-svn-helper/tsh-common.c:901
 msgid "Unlocked"
-msgstr "已解锁"
+msgstr "已解锁的"
 
 #: ../tvp-svn-helper/tsh-common.c:558
 msgid "Lock failed"
-msgstr "锁定动作失败"
+msgstr "锁定动作已失败"
 
 #: ../tvp-svn-helper/tsh-common.c:559
 msgid "Unlock failed"
-msgstr "解锁动作失败"
+msgstr "解锁动作已失败"
 
 #: ../tvp-svn-helper/tsh-common.c:560
 msgid "Exists"
@@ -1097,7 +1097,7 @@ msgstr "外部失败"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Started"
-msgstr "已开始"
+msgstr "已开始的"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Skipped obstruction"
@@ -1105,7 +1105,7 @@ msgstr "已跳过的障碍"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Skipped working only"
-msgstr "仅已跳过的进行中的工作"
+msgstr "仅已跳过的正在工作中的"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Skipped access denied"
@@ -1117,15 +1117,15 @@ msgstr "外部移除"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Shadowed add"
-msgstr "已跟踪的添加"
+msgstr "已隐藏的添加"
 
 #: ../tvp-svn-helper/tsh-common.c:585
 msgid "Shadowed update"
-msgstr "已跟踪的更新"
+msgstr "已隐藏的更新"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Shadowed delete"
-msgstr "已跟踪的删除"
+msgstr "已隐藏的删除"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Merge record info"
@@ -1161,7 +1161,7 @@ msgstr "大块已经应用"
 
 #: ../tvp-svn-helper/tsh-common.c:596
 msgid "Copied replaced"
-msgstr "已替换复制"
+msgstr "已复制的替换"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "URL redirect"
@@ -1286,7 +1286,7 @@ msgstr "导入信息"
 
 #: ../tvp-svn-helper/tsh-log.c:123
 msgid "Log failed"
-msgstr "日志动作失败"
+msgstr "日志动作已失败"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
@@ -1331,11 +1331,11 @@ msgstr "通知"
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:94
 msgid "Set property failed"
-msgstr "设置属性失败"
+msgstr "设置属性已失败"
 
 #: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
-msgstr "属性动作失败"
+msgstr "属性动作已失败"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:131
 msgid "Value"
@@ -1376,7 +1376,7 @@ msgstr "递归"
 
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
-msgstr "重定位动作失败"
+msgstr "重定位动作已失败"
 
 #: ../tvp-svn-helper/tsh-relocate.c:93
 msgid "Relocate finished"
