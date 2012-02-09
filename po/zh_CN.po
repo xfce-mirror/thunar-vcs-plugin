@@ -3,15 +3,15 @@
 # This file is distributed under the same license as
 # the thunar-vcs-plugin package.
 # Hunt Xu <huntxu@live.cn>, 2009.
-# Chipong Luo <chipong_l@yahoo.com>, 2011.
+# Chipong Luo <chipong.luo@yahoo.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-07 10:24+0000\n"
+"POT-Creation-Date: 2012-02-09 03:54+0000\n"
 "PO-Revision-Date: 2009-06-22 02:22+0800\n"
-"Last-Translator: Chipong Luo <chipong_l@yahoo.com>\n"
+"Last-Translator: Chipong Luo <chipong.luo@yahoo.com>\n"
 "Language-Team: Chinese (Simplified) <xfce-i18n@xfce.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -185,11 +185,11 @@ msgstr "推走"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr "Rebase"
+msgstr "重组"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
-msgstr "Rebase"
+msgstr "重组"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
@@ -555,7 +555,7 @@ msgstr "归咎动作相关选项："
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr "归咎动作相关选项："
+msgstr "分支动作相关选项："
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
@@ -575,7 +575,7 @@ msgstr "重置动作相关选项："
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "状态动作相关选项："
+msgstr "隐藏动作相关选项："
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:319
 msgid "Status Related Options:"
@@ -623,7 +623,7 @@ msgstr "移除目录。"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
-msgstr "包括已忽略的文件"
+msgstr "排除已忽略的文件"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:76
 msgid "Include ignored files"
@@ -656,7 +656,7 @@ msgstr "正在克隆..."
 #: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
 #: ../tvp-svn-helper/tsh-update.c:95
 msgid "Failed"
-msgstr "失败"
+msgstr "已失败的"
 
 #: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:250
@@ -738,7 +738,7 @@ msgstr "描述"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:398
 msgid "Stash description:"
-msgstr "隐藏描述："
+msgstr "隐藏动作描述："
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
@@ -918,11 +918,11 @@ msgstr "没有提供足够的参数"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
-msgstr "归咎动作失败"
+msgstr "归咎动作已失败"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
-msgstr "清理动作失败"
+msgstr "清理动作已失败"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
