@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-07 17:06+0000\n"
+"POT-Creation-Date: 2012-02-16 21:42+0000\n"
 "PO-Revision-Date: 2009-04-14 23:02+0200\n"
 "Last-Translator: Fabian Nowak <timystery@arcor.de>\n"
 "Language-Team: German\n"
@@ -620,14 +620,13 @@ msgstr "Name"
 #: ../tvp-git-helper/tgh-branch-dialog.c:263
 #, fuzzy
 msgid "Branch name:"
-msgstr "Zweig"
+msgstr "Name des Zweigs:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
 msgstr "Verzeichnis entfernen"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
-#, fuzzy
 msgid "Exclude ignored files"
 msgstr "Ignorierte Dateien ausschließen"
 
@@ -1103,91 +1102,104 @@ msgid "External failed"
 msgstr "»External« fehlgeschlagen"
 
 #: ../tvp-svn-helper/tsh-common.c:579
+#, fuzzy
 msgid "Started"
-msgstr ""
+msgstr "Gestartet"
 
 #: ../tvp-svn-helper/tsh-common.c:580
+#, fuzzy
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Übersprungene Sperre"
 
 #: ../tvp-svn-helper/tsh-common.c:581
+#, fuzzy
 msgid "Skipped working only"
-msgstr ""
+msgstr "Nur Übersprungenes, das funktioniert"
 
 #: ../tvp-svn-helper/tsh-common.c:582
+#, fuzzy
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Übersprungener verbotener Zugriff"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 #, fuzzy
 msgid "External removed"
-msgstr "»External« fehlgeschlagen"
+msgstr "Externes entfernt"
 
 #: ../tvp-svn-helper/tsh-common.c:584
+#, fuzzy
 msgid "Shadowed add"
-msgstr ""
+msgstr "Schattiertes hinzufügen"
 
 #: ../tvp-svn-helper/tsh-common.c:585
+#, fuzzy
 msgid "Shadowed update"
-msgstr ""
+msgstr "Schattiertes aktualisieren"
 
 #: ../tvp-svn-helper/tsh-common.c:586
+#, fuzzy
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Schattiertes löschen"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 #, fuzzy
 msgid "Merge record info"
-msgstr "Zusammenführen beginnt"
+msgstr "Datensatzinformation zusammenführen"
 
 #: ../tvp-svn-helper/tsh-common.c:588
+#, fuzzy
 msgid "Upgraded path"
-msgstr ""
+msgstr "Pfad von dem ein Upgrad durchgeführt wurde"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 #, fuzzy
 msgid "Merge record info begin"
-msgstr "Zusammenführen beginnt"
+msgstr "Anfang der Zusammenführung von Datensatzinformationen"
 
 #: ../tvp-svn-helper/tsh-common.c:590
 #, fuzzy
 msgid "Merge elide info"
-msgstr "Zusammenführen beginnt"
+msgstr "Information über das Annullieren zusammenführen"
 
 #: ../tvp-svn-helper/tsh-common.c:591
+#, fuzzy
 msgid "Patch"
-msgstr ""
+msgstr "Patch"
 
 #: ../tvp-svn-helper/tsh-common.c:592
+#, fuzzy
 msgid "Applied hunk"
-msgstr ""
+msgstr "Großer Brocken angewandt"
 
 #: ../tvp-svn-helper/tsh-common.c:593
+#, fuzzy
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Großer Brocken verworfen"
 
 #: ../tvp-svn-helper/tsh-common.c:594
+#, fuzzy
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Großer Brocken bereits angewandt"
 
 #: ../tvp-svn-helper/tsh-common.c:596
 #, fuzzy
 msgid "Copied replaced"
-msgstr "Ersetzt"
+msgstr "Kopiertes ersetzt"
 
 #: ../tvp-svn-helper/tsh-common.c:597
+#, fuzzy
 msgid "URL redirect"
-msgstr ""
+msgstr "URL-Umleitung"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 #, fuzzy
 msgid "Path nonexistent"
-msgstr "Eigenschaft existiert nicht"
+msgstr "Pfad existiert nicht"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 #, fuzzy
 msgid "Conflict"
-msgstr "Konfliktbehaftet"
+msgstr "Konflikt"
 
 #: ../tvp-svn-helper/tsh-common.c:601 ../tvp-svn-helper/tsh-common.c:700
 #: ../tvp-svn-helper/tsh-common.c:740
@@ -1195,15 +1207,16 @@ msgid "Missing"
 msgstr "Fehlende"
 
 #: ../tvp-svn-helper/tsh-common.c:602
+#, fuzzy
 msgid "Out of date"
-msgstr ""
+msgstr "Nicht aktuell"
 
 #: ../tvp-svn-helper/tsh-common.c:603
+#, fuzzy
 msgid "No parent"
-msgstr ""
+msgstr "Kein Elternelement"
 
 #: ../tvp-svn-helper/tsh-common.c:605
-#, fuzzy
 msgid "Forbidden by server"
 msgstr "Vom Server verboten"
 
@@ -1236,8 +1249,9 @@ msgid "Conflicted"
 msgstr "Konfliktbehaftet"
 
 #: ../tvp-svn-helper/tsh-common.c:706
+#, fuzzy
 msgid "Source missing"
-msgstr ""
+msgstr "Quelle fehlt"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1260,7 +1274,7 @@ msgstr "Fehler"
 #: ../tvp-svn-helper/tsh-common.c:1099
 #, fuzzy
 msgid "Local action"
-msgstr "Lokale Kopie"
+msgstr "Lokale Aktion"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
@@ -1305,12 +1319,14 @@ msgid "Log failed"
 msgstr "Log fehlgeschlagen"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
+#, fuzzy
 msgid "Stop On Copy"
-msgstr ""
+msgstr "Beim Kopieren stoppen"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
+#, fuzzy
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "Zusammengeführte Korrektur anzeigen"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
