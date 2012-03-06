@@ -457,7 +457,7 @@ msgstr "Izmaiņu saraksts:"
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
 msgid "Depth:"
-msgstr ""
+msgstr "Dziļums:"
 ""
 
 #. Translators: svn recursion depth infotmation
