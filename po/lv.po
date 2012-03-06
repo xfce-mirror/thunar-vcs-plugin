@@ -1,24 +1,23 @@
 # rench translations for hunar-svn-plugin package
 # Copyright (C) 2007 THE thunar-svn-plugin'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the thunar-svn-plugin package.
-#
+# 
 # Rihards Prieditis <rprieditis@inbox.lv>, 2007.
 # Rihards Prieditis <rprieditis@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-20 12:20+0100\n"
+"POT-Creation-Date: 2012-03-06 09:57+0000\n"
 "PO-Revision-Date: 2010-02-20 12:55+0100\n"
 "Last-Translator: Rihards Priedītis <rprieditis@gmail.com>\n"
 "Language-Team: Latvian <translation-team-lv@lists.sourceforge.net>\n"
-"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: lv\n"
 "X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
-"2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -100,7 +99,7 @@ msgstr "Iesniegt"
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 #: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:271
-#: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-commit.c:238
+#: ../tvp-svn-helper/tsh-commit.c:240 ../tvp-svn-helper/tsh-commit.c:253
 msgid "Commit"
 msgstr "Iesniegt"
 
@@ -165,7 +164,7 @@ msgstr "Pārvietot"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
-#: ../tvp-svn-helper/main.c:299 ../tvp-svn-helper/tsh-move.c:159
+#: ../tvp-svn-helper/main.c:299 ../tvp-svn-helper/tsh-move.c:170
 msgid "Move"
 msgstr "Pārvietot"
 
@@ -222,7 +221,8 @@ msgstr "Rādīt"
 msgid "Menu|Stash"
 msgstr "Atlicināšana"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:256
@@ -238,7 +238,7 @@ msgstr "Status"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:121
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:319
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:145
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
 #: ../tvp-svn-helper/tsh-status-dialog.c:246
 msgid "Status"
 msgstr "Status"
@@ -259,14 +259,14 @@ msgstr "Darbība %s nav izstrādāta"
 
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
-#: ../thunar-vcs-plugin/tvp-provider.c:465
-#: ../thunar-vcs-plugin/tvp-provider.c:531
+#: ../thunar-vcs-plugin/tvp-provider.c:464
+#: ../thunar-vcs-plugin/tvp-provider.c:530
 msgid "SVN"
 msgstr "SVN"
 
 #. append the git submenu action
-#: ../thunar-vcs-plugin/tvp-provider.c:496
-#: ../thunar-vcs-plugin/tvp-provider.c:538
+#: ../thunar-vcs-plugin/tvp-provider.c:495
+#: ../thunar-vcs-plugin/tvp-provider.c:537
 msgid "GIT"
 msgstr "GIT"
 
@@ -291,7 +291,7 @@ msgid "Menu|Copy"
 msgstr "Kopēt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:275
-#: ../tvp-svn-helper/tsh-copy.c:168
+#: ../tvp-svn-helper/tsh-copy.c:177
 msgid "Copy"
 msgstr "Kopēt"
 
@@ -300,7 +300,7 @@ msgid "Menu|Delete"
 msgstr "Dzēst"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:279
-#: ../tvp-svn-helper/tsh-delete.c:129 ../tvp-svn-helper/tsh-delete.c:142
+#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
 msgid "Delete"
 msgstr "Dzēst"
 
@@ -309,7 +309,7 @@ msgid "Menu|Export"
 msgstr "Eksportēt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:283
-#: ../tvp-svn-helper/tsh-export.c:109 ../tvp-svn-helper/tsh-export.c:127
+#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
 msgid "Export"
 msgstr "Eksportēt"
 
@@ -318,7 +318,7 @@ msgid "Menu|Import"
 msgstr "Imports"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:287
-#: ../tvp-svn-helper/tsh-import.c:104 ../tvp-svn-helper/tsh-import.c:122
+#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
 msgid "Import"
 msgstr "Imports"
 
@@ -352,7 +352,7 @@ msgid "Menu|Relocate"
 msgstr "Atiedalīt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
-#: ../tvp-svn-helper/tsh-relocate.c:116
+#: ../tvp-svn-helper/tsh-relocate.c:125
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:216
 msgid "Relocate"
 msgstr "Atiedalīt"
@@ -362,7 +362,7 @@ msgid "Menu|Resolved"
 msgstr "Atrisināts"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:307
-#: ../tvp-svn-helper/tsh-common.c:540 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-common.c:541 ../tvp-svn-helper/tsh-resolved.c:115
 #: ../tvp-svn-helper/tsh-resolved.c:128
 msgid "Resolved"
 msgstr "Atrisināts"
@@ -389,7 +389,7 @@ msgid "Menu|Switch"
 msgstr "Pārslēgt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:323
-#: ../tvp-svn-helper/tsh-switch.c:111 ../tvp-svn-helper/tsh-switch.c:124
+#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
 msgid "Switch"
 msgstr "Pārslēgt"
 
@@ -407,7 +407,7 @@ msgid "Menu|Update"
 msgstr "Atjaunot"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:331
-#: ../tvp-svn-helper/tsh-update.c:115
+#: ../tvp-svn-helper/tsh-update.c:120
 msgid "Update"
 msgstr "Atjaunot"
 
@@ -423,10 +423,10 @@ msgstr "URL:"
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
-#: ../tvp-svn-helper/tsh-common.c:579 ../tvp-svn-helper/tsh-common.c:637
-#: ../tvp-svn-helper/tsh-common.c:646 ../tvp-svn-helper/tsh-common.c:668
-#: ../tvp-svn-helper/tsh-common.c:685 ../tvp-svn-helper/tsh-common.c:714
-#: ../tvp-svn-helper/tsh-common.c:804
+#: ../tvp-svn-helper/tsh-common.c:610 ../tvp-svn-helper/tsh-common.c:698
+#: ../tvp-svn-helper/tsh-common.c:710 ../tvp-svn-helper/tsh-common.c:735
+#: ../tvp-svn-helper/tsh-common.c:752 ../tvp-svn-helper/tsh-common.c:781
+#: ../tvp-svn-helper/tsh-common.c:884
 msgid "Unknown"
 msgstr "Nezināms"
 
@@ -457,38 +457,42 @@ msgstr "Izmaiņu saraksts:"
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
 msgid "Depth:"
-msgstr "Dziļums: "
+msgstr ""
+""
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
+#: ../tvp-svn-helper/tsh-common.c:599
 msgid "Exclude"
 msgstr "Izkļaut"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Tukšs"
 
 #. Translators: svn recursion depth infotmation
-#. * Files depth means this file/direcotry and all of it's files are checked out
-#.
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Faili"
 
 #. Translators: svn recursion depth infotmation
-#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
-#.
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#.
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -496,8 +500,9 @@ msgid "Immediates"
 msgstr "Tūlītējs"
 
 #. Translators: svn recursion depth infotmation
-#. * Infinity depth means this file/direcotry is checked out with full recursion
-#.
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Bezgalīgi"
@@ -615,16 +620,14 @@ msgid "Name"
 msgstr "Nosaukums"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:263
-#, fuzzy
 msgid "Branch name:"
-msgstr "Atzars"
+msgstr "Atzara nosaukums:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
 msgstr "Noņemt direktorijas."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
-#, fuzzy
 msgid "Exclude ignored files"
 msgstr "Neiekļaut ignorētos failus"
 
@@ -650,18 +653,18 @@ msgstr "Klonēšana..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:75
 #: ../tvp-svn-helper/tsh-add.c:93 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:99 ../tvp-svn-helper/tsh-commit.c:129
-#: ../tvp-svn-helper/tsh-commit.c:186 ../tvp-svn-helper/tsh-copy.c:89
-#: ../tvp-svn-helper/tsh-delete.c:93 ../tvp-svn-helper/tsh-export.c:74
-#: ../tvp-svn-helper/tsh-import.c:74 ../tvp-svn-helper/tsh-lock.c:93
-#: ../tvp-svn-helper/tsh-move.c:79 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:136
+#: ../tvp-svn-helper/tsh-commit.c:197 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
+#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
 #: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
-#: ../tvp-svn-helper/tsh-switch.c:73 ../tvp-svn-helper/tsh-unlock.c:88
-#: ../tvp-svn-helper/tsh-update.c:90
+#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:95
 msgid "Failed"
 msgstr "Neizdevās"
 
-#: ../tvp-git-helper/tgh-common.c:295
+#: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:250
 msgid "untracked"
 msgstr "neseko"
@@ -669,7 +672,7 @@ msgstr "neseko"
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:93
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
 #: ../tvp-git-helper/tgh-status-dialog.c:103
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:110
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
 #: ../tvp-svn-helper/tsh-log-dialog.c:190
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:98
 #: ../tvp-svn-helper/tsh-notify-dialog.c:93
@@ -678,7 +681,7 @@ msgid "Path"
 msgstr "Ceļš"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:114
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:138
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
 msgid "Select/Unselect all"
 msgstr "Atlasīt visu/Atcelt atlasi"
 
@@ -709,7 +712,7 @@ msgstr "Fails"
 msgid "Move finished"
 msgstr "Pārvietošana pabeigta"
 
-#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:139
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
 msgid "Move To"
 msgstr "Pārvietot uz"
 
@@ -885,7 +888,8 @@ msgstr "Noslēgšanas saistītās opcijas:"
 msgid "Properties Related Options:"
 msgstr "Rekvizītu saistītās opcijas:"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:303 ../tvp-svn-helper/tsh-properties-dialog.c:280
 msgid "Properties"
@@ -919,7 +923,7 @@ msgstr "Atjaunošanas saistītās opcijas:"
 msgid "Not enough arguments provided"
 msgstr "Nav norādīti pietiekams argumentu daudzums"
 
-#: ../tvp-svn-helper/tsh-blame.c:77
+#: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
 msgstr "Vainot neizdevās"
 
@@ -935,222 +939,333 @@ msgstr "Uzkopšana pabeigta"
 msgid "Cleaning up ..."
 msgstr "Uzkopšana..."
 
-#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-common.c:761
-#: ../tvp-svn-helper/tsh-copy.c:101 ../tvp-svn-helper/tsh-delete.c:105
-#: ../tvp-svn-helper/tsh-import.c:84 ../tvp-svn-helper/tsh-move.c:91
+#: ../tvp-svn-helper/tsh-commit.c:210 ../tvp-svn-helper/tsh-common.c:828
+#: ../tvp-svn-helper/tsh-common.c:1094 ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
+#: ../tvp-svn-helper/tsh-move.c:99
 #, c-format
 msgid "At revision: %ld"
 msgstr "Revīzija: %ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:203
+#: ../tvp-svn-helper/tsh-commit.c:215
 msgid "Nothing to do"
 msgstr "Nav ko darīt"
 
-#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:545
-#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-copy.c:112
-#: ../tvp-svn-helper/tsh-delete.c:116 ../tvp-svn-helper/tsh-import.c:89
-#: ../tvp-svn-helper/tsh-move.c:102
+#: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-common.c:546
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:1103
+#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
+#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
 msgid "Completed"
 msgstr "Pabeigts"
 
-#: ../tvp-svn-helper/tsh-commit.c:243
+#: ../tvp-svn-helper/tsh-commit.c:258
 msgid "Commit Message"
 msgstr "Iesniegšanas ziņa"
 
-#: ../tvp-svn-helper/tsh-common.c:290
+#: ../tvp-svn-helper/tsh-common.c:291
 msgid "Store password a plaintext?"
 msgstr "Glabāt paroli kā atklātu tekstu?"
 
-#: ../tvp-svn-helper/tsh-common.c:534 ../tvp-svn-helper/tsh-common.c:543
-#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:672
-#: ../tvp-svn-helper/tsh-common.c:719 ../tvp-svn-helper/tsh-common.c:810
+#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:786 ../tvp-svn-helper/tsh-common.c:890
 msgid "Added"
 msgstr "Pievienots"
 
-#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:819
+#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:899
 msgid "Copied"
 msgstr "Nokopēts"
 
-#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:542
-#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:674
-#: ../tvp-svn-helper/tsh-common.c:722 ../tvp-svn-helper/tsh-common.c:812
+#: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:543
+#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:789 ../tvp-svn-helper/tsh-common.c:892
 msgid "Deleted"
 msgstr "Dzēsts"
 
-#: ../tvp-svn-helper/tsh-common.c:537
+#: ../tvp-svn-helper/tsh-common.c:538
 msgid "Restored"
 msgstr "Atjaunots"
 
-#: ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:539
 msgid "Reverted"
 msgstr "Atgrieztais"
 
-#: ../tvp-svn-helper/tsh-common.c:539
+#: ../tvp-svn-helper/tsh-common.c:540
 msgid "Revert failed"
 msgstr "Atgriešana neizdevās"
 
-#: ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:542
 msgid "Skipped"
 msgstr "Izlaists"
 
-#: ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:545
 msgid "Updated"
 msgstr "Atjaunināts"
 
-#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:548
-#: ../tvp-svn-helper/tsh-common.c:681
+#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:748
 msgid "External"
 msgstr "Ārējs"
 
-#: ../tvp-svn-helper/tsh-common.c:549 ../tvp-svn-helper/tsh-common.c:676
-#: ../tvp-svn-helper/tsh-common.c:725 ../tvp-svn-helper/tsh-common.c:815
+#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:792 ../tvp-svn-helper/tsh-common.c:895
 msgid "Modified"
 msgstr "Modificēts"
 
-#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:675
-#: ../tvp-svn-helper/tsh-common.c:728 ../tvp-svn-helper/tsh-common.c:808
+#: ../tvp-svn-helper/tsh-common.c:553 ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:795 ../tvp-svn-helper/tsh-common.c:888
 msgid "Replaced"
 msgstr "Aizvietos"
 
-#: ../tvp-svn-helper/tsh-common.c:553
+#: ../tvp-svn-helper/tsh-common.c:554
 msgid "Transmitting"
 msgstr "Pārraida"
 
-#: ../tvp-svn-helper/tsh-common.c:555
+#: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
 msgid "Locked"
 msgstr "Slēgt"
 
-#: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:821
+#: ../tvp-svn-helper/tsh-common.c:557 ../tvp-svn-helper/tsh-common.c:901
 msgid "Unlocked"
 msgstr "Atslēgt"
 
-#: ../tvp-svn-helper/tsh-common.c:557
+#: ../tvp-svn-helper/tsh-common.c:558
 msgid "Lock failed"
 msgstr "Slēgšana neizdevās"
 
-#: ../tvp-svn-helper/tsh-common.c:558
+#: ../tvp-svn-helper/tsh-common.c:559
 msgid "Unlock failed"
 msgstr "Atslēgšana neizdevās"
 
-#: ../tvp-svn-helper/tsh-common.c:559
+#: ../tvp-svn-helper/tsh-common.c:560
 msgid "Exists"
 msgstr "Eksistē"
 
-#: ../tvp-svn-helper/tsh-common.c:560
+#: ../tvp-svn-helper/tsh-common.c:561
 msgid "Changelist set"
 msgstr "Izmaiņu saraksta komplekts"
 
-#: ../tvp-svn-helper/tsh-common.c:561
+#: ../tvp-svn-helper/tsh-common.c:562
 msgid "Changelist cleared"
 msgstr "Izmaiņu saraksts notīrīts"
 
-#: ../tvp-svn-helper/tsh-common.c:562
+#: ../tvp-svn-helper/tsh-common.c:563
 msgid "Changelist moved"
 msgstr "Izmaiņu saraksts pārvietots"
 
-#: ../tvp-svn-helper/tsh-common.c:563
+#: ../tvp-svn-helper/tsh-common.c:564
 msgid "Merge begin"
 msgstr "Apvienošana sākta"
 
-#: ../tvp-svn-helper/tsh-common.c:564
+#: ../tvp-svn-helper/tsh-common.c:565
 msgid "Foreign merge begin"
 msgstr "Ārzemnieka apvienošana sākta"
 
-#: ../tvp-svn-helper/tsh-common.c:565
+#: ../tvp-svn-helper/tsh-common.c:566
 msgid "Replace"
 msgstr "Aizvietot"
 
-#: ../tvp-svn-helper/tsh-common.c:567
+#: ../tvp-svn-helper/tsh-common.c:568
 msgid "Property added"
 msgstr "Rekvizīts pievienots"
 
-#: ../tvp-svn-helper/tsh-common.c:568
+#: ../tvp-svn-helper/tsh-common.c:569
 msgid "Property modified"
 msgstr "Rekvizīts modificēts"
 
-#: ../tvp-svn-helper/tsh-common.c:569
+#: ../tvp-svn-helper/tsh-common.c:570
 msgid "Property deleted"
 msgstr "Rekvizīts dzēsts"
 
-#: ../tvp-svn-helper/tsh-common.c:570
+#: ../tvp-svn-helper/tsh-common.c:571
 msgid "Property nonexisting"
 msgstr "Neeksistējošs rekvizīts"
 
-#: ../tvp-svn-helper/tsh-common.c:571
+#: ../tvp-svn-helper/tsh-common.c:572
 msgid "Revision property set"
 msgstr "Revīzijas rekvizīts uzstādīts"
 
-#: ../tvp-svn-helper/tsh-common.c:572
+#: ../tvp-svn-helper/tsh-common.c:573
 msgid "Revision property deleted"
 msgstr "Revīzijas rekvizīts dzēsts"
 
-#: ../tvp-svn-helper/tsh-common.c:573
+#: ../tvp-svn-helper/tsh-common.c:574
 msgid "Merge completed"
 msgstr "Apvienošana pabeigta"
 
-#: ../tvp-svn-helper/tsh-common.c:574
+#: ../tvp-svn-helper/tsh-common.c:575
 msgid "Tree conflict"
 msgstr "Koka konflikts"
 
-#: ../tvp-svn-helper/tsh-common.c:575
+#: ../tvp-svn-helper/tsh-common.c:576
 msgid "External failed"
 msgstr "Ārējais neizdevās"
 
-#: ../tvp-svn-helper/tsh-common.c:636
-msgid "Inapplicable"
-msgstr "Nepielietojams"
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Started"
+msgstr "Sākts"
 
-#: ../tvp-svn-helper/tsh-common.c:638
-msgid "Unchanged"
-msgstr "Nemainīts"
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Skipped obstruction"
+msgstr "Izlaists traucējums"
 
-#: ../tvp-svn-helper/tsh-common.c:639 ../tvp-svn-helper/tsh-common.c:673
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Skipped working only"
+msgstr "Izlaists tikai strādājošos"
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Skipped access denied"
+msgstr "Izlaists ar pieeja liegta"
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "External removed"
+msgstr "Ārējais noņemts"
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Shadowed add"
+msgstr "Ēnotā pievienošana"
+
+#: ../tvp-svn-helper/tsh-common.c:585
+msgid "Shadowed update"
+msgstr "Ēnotā atjaunināšana"
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Shadowed delete"
+msgstr "Ēnotā dzēšana"
+
+#: ../tvp-svn-helper/tsh-common.c:587
+msgid "Merge record info"
+msgstr "Sapludināt ieraksta informāciju"
+
+#: ../tvp-svn-helper/tsh-common.c:588
+msgid "Upgraded path"
+msgstr "Uzlabojuma ceļš"
+
+#: ../tvp-svn-helper/tsh-common.c:589
+msgid "Merge record info begin"
+msgstr "Apvienošanas ieraksta sākuma informācija"
+
+#: ../tvp-svn-helper/tsh-common.c:590
+msgid "Merge elide info"
+msgstr "Apvienošanas noklusētā informācija"
+
+#: ../tvp-svn-helper/tsh-common.c:591
+msgid "Patch"
+msgstr "Ielāps"
+
+#: ../tvp-svn-helper/tsh-common.c:592
+msgid "Applied hunk"
+msgstr "Pielietotais gabals"
+
+#: ../tvp-svn-helper/tsh-common.c:593
+msgid "Rejected hunk"
+msgstr "Noraidīties gabals"
+
+#: ../tvp-svn-helper/tsh-common.c:594
+msgid "Hunk already applied"
+msgstr "Gabals jau pielietots"
+
+#: ../tvp-svn-helper/tsh-common.c:596
+msgid "Copied replaced"
+msgstr "Kopētie aizvietoti"
+
+#: ../tvp-svn-helper/tsh-common.c:597
+msgid "URL redirect"
+msgstr "URL novirzīšana"
+
+#: ../tvp-svn-helper/tsh-common.c:598
+msgid "Path nonexistent"
+msgstr "Neeksistējošs ceļš"
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Conflict"
+msgstr "Konflikts"
+
+#: ../tvp-svn-helper/tsh-common.c:601 ../tvp-svn-helper/tsh-common.c:700
+#: ../tvp-svn-helper/tsh-common.c:740
 msgid "Missing"
 msgstr "Trūkst"
 
-#: ../tvp-svn-helper/tsh-common.c:640 ../tvp-svn-helper/tsh-common.c:680
+#: ../tvp-svn-helper/tsh-common.c:602
+msgid "Out of date"
+msgstr "Novecojis"
+
+#: ../tvp-svn-helper/tsh-common.c:603
+msgid "No parent"
+msgstr "Nav vecāka"
+
+#: ../tvp-svn-helper/tsh-common.c:605
+msgid "Forbidden by server"
+msgstr "Serveris aizliedza"
+
+#: ../tvp-svn-helper/tsh-common.c:606
+msgid "Skipped conflicted"
+msgstr "Izlaist konfliktētos"
+
+#: ../tvp-svn-helper/tsh-common.c:697
+msgid "Inapplicable"
+msgstr "Nepielietojams"
+
+#: ../tvp-svn-helper/tsh-common.c:699
+msgid "Unchanged"
+msgstr "Nemainīts"
+
+#: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:747
 msgid "Obstructed"
 msgstr "Traucēts"
 
-#: ../tvp-svn-helper/tsh-common.c:641
+#: ../tvp-svn-helper/tsh-common.c:702
 msgid "Changed"
 msgstr "Mainīts"
 
-#: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:677
+#: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:744
 msgid "Merged"
 msgstr "Apvienots"
 
-#: ../tvp-svn-helper/tsh-common.c:643 ../tvp-svn-helper/tsh-common.c:678
+#: ../tvp-svn-helper/tsh-common.c:704 ../tvp-svn-helper/tsh-common.c:745
 msgid "Conflicted"
 msgstr "Konfliktēts"
 
+#: ../tvp-svn-helper/tsh-common.c:706
+msgid "Source missing"
+msgstr "Trūkst avots"
+
 #. N_("None"),
 #. N_("Unversioned"),
-#: ../tvp-svn-helper/tsh-common.c:671
+#: ../tvp-svn-helper/tsh-common.c:738
 msgid "Normal"
 msgstr "Parasts"
 
-#: ../tvp-svn-helper/tsh-common.c:679
+#: ../tvp-svn-helper/tsh-common.c:746
 msgid "Ignored"
 msgstr "Ignorēts"
 
-#: ../tvp-svn-helper/tsh-common.c:682
+#: ../tvp-svn-helper/tsh-common.c:749
 msgid "Incomplete"
 msgstr "Nepabeigts"
 
-#: ../tvp-svn-helper/tsh-copy.c:106
+#: ../tvp-svn-helper/tsh-common.c:1087
+msgid "Error"
+msgstr "Kļūda"
+
+#: ../tvp-svn-helper/tsh-common.c:1099
+msgid "Local action"
+msgstr "Lokāla darbība"
+
+#: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
 msgstr "Lokāla kopija"
 
-#: ../tvp-svn-helper/tsh-copy.c:150
+#: ../tvp-svn-helper/tsh-copy.c:159
 msgid "Copy To"
 msgstr "Kopēt uz"
 
-#: ../tvp-svn-helper/tsh-delete.c:110
+#: ../tvp-svn-helper/tsh-delete.c:118
 msgid "Local delete"
 msgstr "Lokāli dzēst"
 
-#: ../tvp-svn-helper/tsh-delete.c:147
+#: ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete Message"
 msgstr "Dzēšanas ziņa"
 
@@ -1172,21 +1287,21 @@ msgstr "Atcerēties"
 msgid "Certificate"
 msgstr "Sertifikāts"
 
-#: ../tvp-svn-helper/tsh-import.c:127
+#: ../tvp-svn-helper/tsh-import.c:138
 msgid "Import Message"
 msgstr "Importa ziņa"
 
-#: ../tvp-svn-helper/tsh-log.c:122
+#: ../tvp-svn-helper/tsh-log.c:123
 msgid "Log failed"
 msgstr "Reģistrēšana neizdevās"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "Apturēt uz kopiju"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "Rādīt sapludināto reviziju"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
@@ -1208,7 +1323,7 @@ msgstr "Stāvoklis"
 msgid "Log Message"
 msgstr "Reģistrēšanas ziņa"
 
-#: ../tvp-svn-helper/tsh-move.c:96
+#: ../tvp-svn-helper/tsh-move.c:104
 msgid "Local move"
 msgstr "Lokāla pārvietošana"
 
@@ -1221,11 +1336,11 @@ msgid "Notification"
 msgstr "Paziņošana"
 
 #. tsh_properties_dialog_done (dialog);
-#: ../tvp-svn-helper/tsh-properties.c:83
+#: ../tvp-svn-helper/tsh-properties.c:94
 msgid "Set property failed"
 msgstr "Rekvizīta uzstādīšana neizdevās"
 
-#: ../tvp-svn-helper/tsh-properties.c:106
+#: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
 msgstr "Rekvizīts neizdevās"
 
@@ -1235,21 +1350,23 @@ msgstr "Vērtība"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "Pats"
 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are updated
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are shown
-#.
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1257,24 +1374,24 @@ msgstr "Neatliekamie faili"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#.
+#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#.
+#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "Rekursīvi"
 
-#: ../tvp-svn-helper/tsh-relocate.c:73
+#: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
 msgstr "Atiedalīšana neizdevās"
 
-#: ../tvp-svn-helper/tsh-relocate.c:88
+#: ../tvp-svn-helper/tsh-relocate.c:93
 msgid "Relocate finished"
 msgstr "Atiedalīšana pabeigta"
 
-#: ../tvp-svn-helper/tsh-relocate.c:130
+#: ../tvp-svn-helper/tsh-relocate.c:139
 msgid "Relocating ..."
 msgstr "Atiedalīšana..."
 
@@ -1286,7 +1403,7 @@ msgstr "_No:"
 msgid "_To:"
 msgstr "_Uz:"
 
-#: ../tvp-svn-helper/tsh-status.c:88
+#: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
 msgstr "Status neizdevās"
 
@@ -1334,11 +1451,9 @@ msgstr "Cita kļūme."
 msgid "Trust"
 msgstr "Uzticība"
 
-#, fuzzy
 #~ msgid "Execute remove action"
 #~ msgstr "Izpildīt pārvietošanas darbību"
 
-#, fuzzy
 #~ msgid "Remove Related Options:"
 #~ msgstr "Atrisināts saistītās opcijas:"
 
@@ -1348,11 +1463,9 @@ msgstr "Uzticība"
 #~ msgid "Adding ..."
 #~ msgstr "Pievieno ..."
 
-#, fuzzy
 #~ msgid "Modify Property Recursive"
 #~ msgstr "Rediģēt Rekvizītus"
 
-#, fuzzy
 #~ msgid "At revision: %"
 #~ msgstr "Revizija: %li"
 
@@ -1362,6 +1475,5 @@ msgstr "Uzticība"
 #~ msgid "SVN _Checkout"
 #~ msgstr "SVN _Izrakstīšana"
 
-#, fuzzy
 #~ msgid "SVN _Export"
 #~ msgstr "SVN _Imports"
