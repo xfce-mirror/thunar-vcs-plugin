@@ -523,7 +523,7 @@ msgstr "비어있음"
 #.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
-msgstr "파일들"
+msgstr "파일"
 
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
@@ -681,15 +681,15 @@ msgstr "디렉터리들을 제거합니다."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
-msgstr "무시한 파일들을 제외"
+msgstr "무시한 파일을 제외"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:76
 msgid "Include ignored files"
-msgstr "무시한 파일들을 포함"
+msgstr "무시한 파일을 포함"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:82
 msgid "Only ignored files"
-msgstr "무시한 파일들만"
+msgstr "무시한 파일만"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
@@ -1494,7 +1494,7 @@ msgstr "상태 실패"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
-msgstr "수정 취소한 파일들 보기"
+msgstr "수정 취소한 파일 보기"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:227
 msgid "Show Unversioned Files"
