@@ -677,7 +677,7 @@ msgstr "브랜치 이름:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
-msgstr "디렉터리들을 제거합니다."
+msgstr "디렉터리를 제거합니다."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
