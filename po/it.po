@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-10 09:54+0000\n"
+"POT-Creation-Date: 2012-04-11 14:39+0000\n"
 "PO-Revision-Date: 2011-11-05 11:08+0100\n"
 "Last-Translator: Cristian Marchi <cri.penta@gmail.com>\n"
 "Language-Team: Italian Translation Team <xfce-it-translators@googlegroups.com>\n"
@@ -857,7 +857,7 @@ msgstr "Rialloca"
 #: ../tvp-svn-helper/main.c:210
 #, fuzzy
 msgid "Execute revert action"
-msgstr "Ripristina (revert)"
+msgstr "Regredisci (revert)"
 
 #: ../tvp-svn-helper/main.c:222
 msgid "Execute switch action"
