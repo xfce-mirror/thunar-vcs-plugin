@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-05 09:09+0000\n"
+"POT-Creation-Date: 2012-04-20 05:39+0000\n"
 "PO-Revision-Date: 2010-03-18 11:56+0200\n"
 "Last-Translator: Dmitry Nikitin <luckas_fb@mail.ru>\n"
 "Language-Team: Ukrainian <xfce4-dev@xfce.org>\n"
@@ -41,17 +41,15 @@ msgstr "Розділити"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
-#, fuzzy
 msgid "Menu|Blame"
-msgstr "Blame"
+msgstr "Застереження"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:255
 #: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-blame-dialog.c:132
-#, fuzzy
 msgid "Blame"
-msgstr "Blame"
+msgstr "Застереження"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Branch"
@@ -1135,22 +1133,20 @@ msgid "Shadowed delete"
 msgstr "Вилучення в тлі"
 
 #: ../tvp-svn-helper/tsh-common.c:587
-#, fuzzy
 msgid "Merge record info"
-msgstr "Запис інформації про злиття"
+msgstr "Злити інформацію про запис"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Upgraded path"
 msgstr "Шлях оновлення"
 
 #: ../tvp-svn-helper/tsh-common.c:589
-#, fuzzy
 msgid "Merge record info begin"
-msgstr "Початок інформації про злиття"
+msgstr "Початок злиття інформації про запис"
 
 #: ../tvp-svn-helper/tsh-common.c:590
 msgid "Merge elide info"
-msgstr ""
+msgstr "Злити інформацію про випуск"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
@@ -1178,7 +1174,7 @@ msgstr "Перенаправлення посилання"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "Path nonexistent"
-msgstr ""
+msgstr "Неіснуючий шлях"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Conflict"
@@ -1195,7 +1191,7 @@ msgstr "Застарілий"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "No parent"
-msgstr ""
+msgstr "Немає вищої теки"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Forbidden by server"
