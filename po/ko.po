@@ -1416,7 +1416,7 @@ msgstr "로컬 이동"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "Mime type"
-msgstr "MIME 유형"
+msgstr "MIME 형식"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
