@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-19 18:09+0000\n"
-"PO-Revision-Date: 2012-04-19 17:35-0600\n"
-"Last-Translator: Sergio <oigres200@gmail.com>\n"
+"POT-Creation-Date: 2012-04-28 04:48+0000\n"
+"PO-Revision-Date: 2012-04-28 00:45-0600\n"
+"Last-Translator: Sergio García <oigres200@gmail.com>\n"
 "Language-Team: Spanish <xfce-i18n@xfce.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -1228,7 +1228,6 @@ msgid "Merge record info begin"
 msgstr "Fusión de información de registro iniciada"
 
 #: ../tvp-svn-helper/tsh-common.c:590
-#, fuzzy
 msgid "Merge elide info"
 msgstr "Fusionar información omitida"
 
@@ -1249,7 +1248,6 @@ msgid "Hunk already applied"
 msgstr "Trozo ya aplicado"
 
 #: ../tvp-svn-helper/tsh-common.c:596
-#, fuzzy
 msgid "Copied replaced"
 msgstr "Copia reemplazada"
 
