@@ -1,253 +1,254 @@
-# Uyghur translation for thunar-vcs-plugin
+# Uyghur translation for thunar-vcs-plugin.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Gheyret T.Kenji <gheyret@gmail.com>, 2010
+# Gheyret Kenji <gheyret@gmail.com>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: thunart-vcs-plugin\n"
+"Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-08 16:59+0100\n"
-"PO-Revision-Date: 2009-08-30 19:33+1000\n"
-"Last-Translator: Gheyret T.Kenji <gheyret@gmail.com>\n"
+"POT-Creation-Date: 2012-08-04 03:48+0000\n"
+"PO-Revision-Date: 2011-11-09 16:10+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-#: ../thunar-vcs-plugin/tvp-svn-action.c:301
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
 msgid "Menu|Add"
 msgstr "تىزىملىك|قوش"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-#: ../thunar-vcs-plugin/tvp-svn-action.c:301 ../tvp-git-helper/main.c:151
-#: ../tvp-git-helper/tgh-add.c:97 ../tvp-git-helper/tgh-add.c:110
-#: ../tvp-svn-helper/main.c:249 ../tvp-svn-helper/tsh-add.c:116
-#: ../tvp-svn-helper/tsh-add.c:129
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:251 ../tvp-svn-helper/tsh-add.c:118
+#: ../tvp-svn-helper/tsh-add.c:131
 msgid "Add"
 msgstr "قوش"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Bisect"
 msgstr "تىزىملىك|Bisect"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Bisect"
 msgstr "Bisect"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:267
-#: ../thunar-vcs-plugin/tvp-svn-action.c:306
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
 msgid "Menu|Blame"
 msgstr "تىزىملىك|Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:267
-#: ../thunar-vcs-plugin/tvp-svn-action.c:306 ../tvp-git-helper/main.c:155
-#: ../tvp-git-helper/tgh-blame-dialog.c:130 ../tvp-svn-helper/main.c:253
-#: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-blame-dialog.c:133
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:255
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Branch"
 msgstr "تىزىملىك|تارماق"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269 ../tvp-git-helper/main.c:159
-#: ../tvp-git-helper/tgh-branch-dialog.c:119
-#: ../tvp-git-helper/tgh-stash-dialog.c:168
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:144
+#: ../tvp-git-helper/tgh-stash-dialog.c:167
 msgid "Branch"
 msgstr "تارماق"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
-#: ../thunar-vcs-plugin/tvp-svn-action.c:323
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
 msgid "Menu|Checkout"
 msgstr "تىزىملىك|Checkout"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
-#: ../thunar-vcs-plugin/tvp-svn-action.c:323 ../tvp-svn-helper/main.c:261
-#: ../tvp-svn-helper/tsh-checkout.c:98 ../tvp-svn-helper/tsh-checkout.c:110
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
 msgid "Checkout"
 msgstr "Checkout"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
 msgid "Menu|Clean"
 msgstr "تىزىملىك|تازىلا"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271 ../tvp-git-helper/main.c:163
-#: ../tvp-git-helper/tgh-clean.c:141 ../tvp-git-helper/tgh-clean-dialog.c:97
+#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
 msgid "Clean"
 msgstr "تازىلا"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-git-action.c:272
 msgid "Menu|Clone"
 msgstr "تىزىملىك|كىلون"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:273 ../tvp-git-helper/main.c:167
-#: ../tvp-git-helper/tgh-clone.c:112
+#: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "كىلون"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:274
-#: ../thunar-vcs-plugin/tvp-svn-action.c:333
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Commit"
 msgstr "تىزىملىك|تاپشۇر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:274
-#: ../thunar-vcs-plugin/tvp-svn-action.c:333
-#: ../tvp-git-helper/tgh-log-dialog.c:137 ../tvp-svn-helper/main.c:269
-#: ../tvp-svn-helper/tsh-commit.c:223 ../tvp-svn-helper/tsh-commit.c:236
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/tsh-commit.c:240 ../tvp-svn-helper/tsh-commit.c:253
 msgid "Commit"
 msgstr "تاپشۇر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:275
-#: ../thunar-vcs-plugin/tvp-svn-action.c:348
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
 msgid "Menu|Diff"
 msgstr "تىزىملىك|پەرقى"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:275
-#: ../thunar-vcs-plugin/tvp-svn-action.c:348
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
 msgid "Diff"
 msgstr "پەرقى"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:276
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
 msgstr "تىزىملىك|ئوقۇ"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:276
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
 msgstr "ئوقۇ"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:277
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Grep"
 msgstr "تىزىملىك|Grep"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:277
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Grep"
 msgstr "Grep"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Menu|Init"
 msgstr "تىزىملىك|Init"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Init"
 msgstr "Init"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:279
-#: ../thunar-vcs-plugin/tvp-svn-action.c:378
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
 msgid "Menu|Log"
 msgstr "تىزىملىك|Log"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:279
-#: ../thunar-vcs-plugin/tvp-svn-action.c:378 ../tvp-git-helper/main.c:171
-#: ../tvp-git-helper/tgh-log-dialog.c:215 ../tvp-svn-helper/main.c:293
-#: ../tvp-svn-helper/tsh-log-dialog.c:208
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/tsh-log-dialog.c:225
 msgid "Log"
 msgstr "Log"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:280
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Merge"
 msgstr "تىزىملىك|بىرلەشتۈر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:280
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Merge"
 msgstr "بىرلەشتۈر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:282
-#: ../thunar-vcs-plugin/tvp-svn-action.c:393
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
 msgid "Menu|Move"
 msgstr "تىزىملىك|يۆتكە"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:282
-#: ../thunar-vcs-plugin/tvp-svn-action.c:393 ../tvp-git-helper/main.c:175
-#: ../tvp-svn-helper/main.c:297 ../tvp-svn-helper/tsh-move.c:157
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:299 ../tvp-svn-helper/tsh-move.c:170
 msgid "Move"
 msgstr "يۆتكە"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:283
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Menu|Pull"
 msgstr "تىزىملىك|يۇلۇپ ئال"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:283
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Pull"
 msgstr "يۇلۇپ ئال"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:284
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Push"
 msgstr "تىزىملىك|باس"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:284
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Push"
 msgstr "باس"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:285
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
 msgstr "تىزىملىك|Rebase"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:285
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
 msgstr "Rebase"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:286
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
 msgstr "تىزىملىك|ئەسلىگە قايتۇر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:286 ../tvp-git-helper/main.c:179
-#: ../tvp-git-helper/tgh-reset.c:130
+#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "ئەسلىگە قايتۇر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:287
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Menu|Remove"
 msgstr "تىزىملىك|ئۆچۈر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:287
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Remove"
 msgstr "ئۆچۈر"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:288
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Show"
 msgstr "تىزىملىك|كۆرسەت"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:288
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Show"
 msgstr "كۆرسەت"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:290
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
 msgid "Menu|Stash"
 msgstr "تىزىملىك|Stash"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: ../thunar-vcs-plugin/tvp-git-action.c:290 ../tvp-git-helper/main.c:183
-#: ../tvp-git-helper/tgh-stash-dialog.c:264
+#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:256
 msgid "Stash"
 msgstr "Stash"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:292
-#: ../thunar-vcs-plugin/tvp-svn-action.c:430
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
 msgid "Menu|Status"
 msgstr "تىزىملىك|ھالىتى"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:292
-#: ../thunar-vcs-plugin/tvp-svn-action.c:430 ../tvp-git-helper/main.c:187
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:122
-#: ../tvp-git-helper/tgh-status-dialog.c:125 ../tvp-svn-helper/main.c:317
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:146
-#: ../tvp-svn-helper/tsh-status-dialog.c:247
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-status-dialog.c:246
 msgid "Status"
 msgstr "ھالىتى"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:293
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Menu|Tag"
 msgstr "تىزىملىك|خەتكۈش"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:293
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
 msgstr "خەتكۈش"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:302
-#: ../thunar-vcs-plugin/tvp-svn-action.c:455
+#: ../thunar-vcs-plugin/tvp-git-action.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:454
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "مەشغۇلات %s ئەمەلىيلەشتۈرۈلمىگەن"
@@ -255,223 +256,224 @@ msgstr "مەشغۇلات %s ئەمەلىيلەشتۈرۈلمىگەن"
 #. append the svn submenu action
 #. Lets see if we are dealing with a working copy
 #: ../thunar-vcs-plugin/tvp-provider.c:464
-#: ../thunar-vcs-plugin/tvp-provider.c:527
+#: ../thunar-vcs-plugin/tvp-provider.c:530
 msgid "SVN"
 msgstr "SVN"
 
 #. append the git submenu action
-#: ../thunar-vcs-plugin/tvp-provider.c:493
-#: ../thunar-vcs-plugin/tvp-provider.c:534
+#: ../thunar-vcs-plugin/tvp-provider.c:495
+#: ../thunar-vcs-plugin/tvp-provider.c:537
 msgid "GIT"
 msgstr "GIT"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:318
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Menu|Changelist"
 msgstr "تىزىملىك|ئۆزگىرىشلەر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:318
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Changelist"
 msgstr "ئۆزگىرىشلەر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:328
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Cleanup"
 msgstr "تىزىملىك|تازىلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:328 ../tvp-svn-helper/main.c:265
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:267
 msgid "Cleanup"
 msgstr "تازىلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:338
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Copy"
 msgstr "تىزىملىك|كۆچۈر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:338 ../tvp-svn-helper/main.c:273
-#: ../tvp-svn-helper/tsh-copy.c:166
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:275
+#: ../tvp-svn-helper/tsh-copy.c:177
 msgid "Copy"
 msgstr "كۆچۈر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:343
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Delete"
 msgstr "تىزىملىك|ئۆچۈر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:343 ../tvp-svn-helper/main.c:277
-#: ../tvp-svn-helper/tsh-delete.c:127 ../tvp-svn-helper/tsh-delete.c:140
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
 msgid "Delete"
 msgstr "ئۆچۈر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:353
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Export"
 msgstr "تىزىملىك|ئېكسپورت قىل"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:353 ../tvp-svn-helper/main.c:281
-#: ../tvp-svn-helper/tsh-export.c:107 ../tvp-svn-helper/tsh-export.c:125
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
 msgid "Export"
 msgstr "ئېكسپورت قىل"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:358
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Import"
 msgstr "تىزىملىك|ئىمپورت قىل"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:358 ../tvp-svn-helper/main.c:285
-#: ../tvp-svn-helper/tsh-import.c:102 ../tvp-svn-helper/tsh-import.c:120
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
 msgid "Import"
 msgstr "ئىمپورت قىل"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Menu|Info"
 msgstr "تىزىملىك|ئۇچۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Info"
 msgstr "ئۇچۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:373
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Lock"
 msgstr "تىزىملىك|قۇلۇپلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:373 ../tvp-svn-helper/main.c:289
-#: ../tvp-svn-helper/tsh-lock.c:130 ../tvp-svn-helper/tsh-lock-dialog.c:72
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
 msgid "Lock"
 msgstr "قۇلۇپلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:404
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Menu|Edit Properties"
 msgstr "تىزىملىك|خاسلىق تەھرىرلە"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:404
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Edit Properties"
 msgstr "خاسلىق تەھرىرلە"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:409
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
 msgstr "تىزىملىك|قايتا ئورۇنلاشتۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-svn-helper/main.c:309
-#: ../tvp-svn-helper/tsh-relocate.c:114
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:217
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
+#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
 msgid "Relocate"
 msgstr "قايتا ئورۇنلاشتۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:415
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
 msgstr "تىزىملىك|ھەل قىلىنغان"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:415 ../tvp-svn-helper/main.c:305
-#: ../tvp-svn-helper/tsh-common.c:521 ../tvp-svn-helper/tsh-resolved.c:113
-#: ../tvp-svn-helper/tsh-resolved.c:126
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:307
+#: ../tvp-svn-helper/tsh-common.c:541 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-resolved.c:128
 msgid "Resolved"
 msgstr "ھەل قىلىنغان"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:420
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Resolve"
 msgstr "تىزىملىك|ھەل قىل"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:420
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Resolve"
 msgstr "قىل"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:425
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
 msgstr "تىزىملىك|ئەسلىگە قايتۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:425 ../tvp-svn-helper/main.c:313
-#: ../tvp-svn-helper/tsh-revert.c:112 ../tvp-svn-helper/tsh-revert.c:125
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:315
+#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
 msgid "Revert"
 msgstr "ئەسلىگە قايتۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:435
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
 msgstr "تىزىملىك|ئالماشتۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:435 ../tvp-svn-helper/main.c:321
-#: ../tvp-svn-helper/tsh-switch.c:109 ../tvp-svn-helper/tsh-switch.c:122
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
 msgid "Switch"
 msgstr "ئالماشتۇر"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:440
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439
 msgid "Menu|Unlock"
 msgstr "تىزىملىك|قۇلۇپسىزلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:440 ../tvp-svn-helper/main.c:325
-#: ../tvp-svn-helper/tsh-unlock.c:111
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/tsh-unlock.c:113
 msgid "Unlock"
 msgstr "قۇلۇپسىزلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:445
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444
 msgid "Menu|Update"
 msgstr "تىزىملىك|يېڭىلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:445 ../tvp-svn-helper/main.c:329
-#: ../tvp-svn-helper/tsh-update.c:113
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:331
+#: ../tvp-svn-helper/tsh-update.c:120
 msgid "Update"
 msgstr "يېڭىلا"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:118
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
 msgstr "URL:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:124
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:137
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:149
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:167
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:179
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:192
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:222
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:300
-#: ../tvp-svn-helper/tsh-common.c:560 ../tvp-svn-helper/tsh-common.c:618
-#: ../tvp-svn-helper/tsh-common.c:627 ../tvp-svn-helper/tsh-common.c:649
-#: ../tvp-svn-helper/tsh-common.c:666 ../tvp-svn-helper/tsh-common.c:695
-#: ../tvp-svn-helper/tsh-common.c:785
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
+#: ../tvp-svn-helper/tsh-common.c:610 ../tvp-svn-helper/tsh-common.c:698
+#: ../tvp-svn-helper/tsh-common.c:710 ../tvp-svn-helper/tsh-common.c:735
+#: ../tvp-svn-helper/tsh-common.c:752 ../tvp-svn-helper/tsh-common.c:781
+#: ../tvp-svn-helper/tsh-common.c:884
 msgid "Unknown"
 msgstr "نامەلۇم"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:131
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
 msgid "Revision:"
 msgstr "تۈزىتىلمە:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:143
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
 msgid "Repository:"
 msgstr "خەزىنە:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:161
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
 msgid "Modified revision:"
 msgstr "ئۆزگەرتىلگەن تۈزىتىلمە"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:173
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
 msgid "Modified date:"
 msgstr "ئۆزگەرتىلگەن چېسلا:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:186
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
 msgid "Author:"
 msgstr "ئاپتور:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:203
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
 msgid "Changelist:"
 msgstr "ئۆزگىرىشلەر:"
 
 #. Translators: Depth as in depth of recursion
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:216
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
 msgid "Depth:"
 msgstr "چوڭقۇرلاش:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
 #.
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:306
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
+#: ../tvp-svn-helper/tsh-common.c:599
 msgid "Exclude"
 msgstr "سىرتىدا"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
 #.
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:312
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "قۇرۇق"
 
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked out
 #.
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:318
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "ھۆججەتلەر"
 
@@ -484,732 +486,856 @@ msgstr "ھۆججەتلەر"
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #.
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:324
-#: ../tvp-svn-helper/tsh-properties-dialog.c:227
-#: ../tvp-svn-helper/tsh-status-dialog.c:200
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
 msgstr ""
 
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full recursion
 #.
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:330
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "چەكسىز"
 
-#: ../tvp-git-helper/main.c:78 ../tvp-svn-helper/main.c:105
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:107
 msgid "Print version information"
 msgstr "نەشر ئۇچۇرنى كۆرسىتىدۇ"
 
-#: ../tvp-git-helper/main.c:85 ../tvp-svn-helper/main.c:112
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:114
 msgid "Execute add action"
 msgstr "‹قوش› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:91 ../tvp-svn-helper/main.c:118
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:120
 msgid "Execute blame action"
 msgstr "‹blame› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:97
+#: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
 msgstr "‹branch› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:103
+#: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
 msgstr "‹clean› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:109
+#: ../tvp-git-helper/main.c:111
 msgid "Execute clone action"
 msgstr "‹clone› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:115 ../tvp-svn-helper/main.c:178
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:180
 msgid "Execute log action"
 msgstr "‹log› ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:121 ../tvp-svn-helper/main.c:184
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:186
 msgid "Execute move action"
 msgstr "‹move› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:127
+#: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
 msgstr "‹reset› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:133
+#: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
 msgstr "‹stash› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:139 ../tvp-svn-helper/main.c:214
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:216
 msgid "Execute status action"
 msgstr "‹status› نى ئىجرا قىلىش"
 
-#: ../tvp-git-helper/main.c:151 ../tvp-svn-helper/main.c:249
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:251
 msgid "Add Related Options:"
 msgstr "‹Add› مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:155 ../tvp-svn-helper/main.c:253
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:255
 msgid "Blame Related Options:"
 msgstr "‹Blame› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:159
+#: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
 msgstr "‹Branch› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:163 ../tvp-git-helper/main.c:167
+#: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
 msgstr "‹Clone› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:171 ../tvp-svn-helper/main.c:293
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:295
 msgid "Log Related Options:"
 msgstr "‹Log› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:175 ../tvp-svn-helper/main.c:297
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:299
 msgid "Move Related Options:"
 msgstr "‹Move› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:179
+#: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
 msgstr "‹Reset› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:183
+#: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
 msgstr "‹Stash› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/main.c:187 ../tvp-svn-helper/main.c:317
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:319
 msgid "Status Related Options:"
 msgstr "‹Status› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-git-helper/tgh-blame-dialog.c:91
-#: ../tvp-svn-helper/tsh-blame-dialog.c:94
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
 msgid "Line"
 msgstr "سىزىق"
 
-#: ../tvp-git-helper/tgh-blame-dialog.c:97
-#: ../tvp-git-helper/tgh-log-dialog.c:119
-#: ../tvp-svn-helper/tsh-blame-dialog.c:100
-#: ../tvp-svn-helper/tsh-log-dialog.c:124
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
 msgid "Revision"
 msgstr "تۈزىتىلمە"
 
-#: ../tvp-git-helper/tgh-blame-dialog.c:103
-#: ../tvp-git-helper/tgh-log-dialog.c:125
-#: ../tvp-svn-helper/tsh-blame-dialog.c:106
-#: ../tvp-svn-helper/tsh-log-dialog.c:130
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
 msgid "Author"
 msgstr "ئاپتور"
 
-#: ../tvp-git-helper/tgh-blame-dialog.c:109
-#: ../tvp-svn-helper/tsh-blame-dialog.c:112
-#: ../tvp-svn-helper/tsh-log-dialog.c:136
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
 msgid "Date"
 msgstr "چېسلا"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:104
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:94
-#: ../tvp-git-helper/tgh-notify-dialog.c:93
-#: ../tvp-git-helper/tgh-status-dialog.c:104
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:111
-#: ../tvp-svn-helper/tsh-log-dialog.c:186
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:99
-#: ../tvp-svn-helper/tsh-notify-dialog.c:94
-#: ../tvp-svn-helper/tsh-status-dialog.c:118
-msgid "Path"
-msgstr "يول"
-
-#: ../tvp-git-helper/tgh-clean-dialog.c:57
-msgid "Remove directories."
-msgstr "مۇندەرىجىلەرنى چىقىرىۋېتىدۇ."
-
-#: ../tvp-git-helper/tgh-clean-dialog.c:69
-msgid "Excldue ignored files"
-msgstr "پەرۋا قىلمىغان ھۆججەتلەرنى چىقىرىۋەتسۇن"
-
-#: ../tvp-git-helper/tgh-clean-dialog.c:77
-msgid "Include ignored files"
-msgstr "پەرۋا قىلمىغان ھۆججەتلەرنى ئۆز ئىچىگە ئالسۇن"
-
-#: ../tvp-git-helper/tgh-clean-dialog.c:83
-msgid "Only ignored files"
-msgstr "پەقەت پەرۋا قىلمىغان ھۆججەتلەر"
-
-#: ../tvp-git-helper/tgh-clean-dialog.c:93
-msgid "Force clean."
-msgstr "مەجبۇرىي تازىلايدۇ."
-
-#: ../tvp-git-helper/tgh-clone.c:58
-msgid "Clone finished"
-msgstr "كىلونلاش تاماملاندى"
-
-#: ../tvp-git-helper/tgh-clone.c:123
-msgid "Cloning ..."
-msgstr "كىلونلاۋاتىدۇ…"
-
-#: ../tvp-git-helper/tgh-common.c:80 ../tvp-svn-helper/tsh-add.c:73
-#: ../tvp-svn-helper/tsh-add.c:91 ../tvp-svn-helper/tsh-checkout.c:71
-#: ../tvp-svn-helper/tsh-commit.c:97 ../tvp-svn-helper/tsh-commit.c:127
-#: ../tvp-svn-helper/tsh-commit.c:184 ../tvp-svn-helper/tsh-copy.c:87
-#: ../tvp-svn-helper/tsh-delete.c:91 ../tvp-svn-helper/tsh-export.c:72
-#: ../tvp-svn-helper/tsh-import.c:72 ../tvp-svn-helper/tsh-lock.c:91
-#: ../tvp-svn-helper/tsh-move.c:77 ../tvp-svn-helper/tsh-resolved.c:73
-#: ../tvp-svn-helper/tsh-resolved.c:89 ../tvp-svn-helper/tsh-revert.c:87
-#: ../tvp-svn-helper/tsh-switch.c:71 ../tvp-svn-helper/tsh-unlock.c:86
-#: ../tvp-svn-helper/tsh-update.c:88
-msgid "Failed"
-msgstr "مەغلۇپ بولدى"
-
-#: ../tvp-git-helper/tgh-common.c:199
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:251
-msgid "untracked"
-msgstr "ئىزلانمىغان"
-
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:115
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:139
-msgid "Select/Unselect all"
-msgstr "تاللا/ھەممىنى تاللىما"
-
-#: ../tvp-git-helper/tgh-log-dialog.c:131
-msgid "AuthorDate"
-msgstr ""
-
-#: ../tvp-git-helper/tgh-log-dialog.c:143
-msgid "CommitDate"
-msgstr ""
-
-#: ../tvp-git-helper/tgh-log-dialog.c:149
-#: ../tvp-svn-helper/tsh-log-dialog.c:142
-msgid "Message"
-msgstr "ئۇچۇر"
-
-#: ../tvp-git-helper/tgh-log-dialog.c:187
-#: ../tvp-git-helper/tgh-stash-dialog.c:198
-msgid "Changes"
-msgstr "ئۆزگىرىشلەر"
-
-#: ../tvp-git-helper/tgh-log-dialog.c:194
-#: ../tvp-git-helper/tgh-stash-dialog.c:205
-msgid "File"
-msgstr "ھۆججەت"
-
-#: ../tvp-git-helper/tgh-move.c:58
-msgid "Move finished"
-msgstr "يۆتكەش تاماملاندى"
-
-#: ../tvp-git-helper/tgh-move.c:135 ../tvp-svn-helper/tsh-move.c:137
-msgid "Move To"
-msgstr "يۆتكەش"
-
-#: ../tvp-git-helper/tgh-move.c:151
-msgid "Move ..."
-msgstr "يۆتكە …"
-
-#: ../tvp-git-helper/tgh-notify-dialog.c:87
-#: ../tvp-svn-helper/tsh-log-dialog.c:180
-#: ../tvp-svn-helper/tsh-notify-dialog.c:88
-msgid "Action"
-msgstr "مەشغۇلات"
-
-#: ../tvp-git-helper/tgh-notify-dialog.c:108
-msgid "Notify"
-msgstr "ئۇقتۇرۇش"
-
-#: ../tvp-git-helper/tgh-reset.c:58
-msgid "Reset finished"
-msgstr "ئەسلىگە قايتۇرۇش تاماملاندى"
-
-#: ../tvp-git-helper/tgh-reset.c:143
-msgid "Reset ..."
-msgstr "ئەسلىگە قايتۇر …"
-
-#: ../tvp-git-helper/tgh-stash-dialog.c:162
-#: ../tvp-svn-helper/tsh-properties-dialog.c:126
+#: ../tvp-git-helper/tgh-branch-dialog.c:116
+#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:125
 msgid "Name"
 msgstr "ئاتى"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:174
+#: ../tvp-git-helper/tgh-branch-dialog.c:263
+msgid "Branch name:"
+msgstr "تارماقنىڭ ئاتى:"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:56
+msgid "Remove directories."
+msgstr "مۇندەرىجىلەرنى چىقىرىۋېتىدۇ."
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:68
+msgid "Exclude ignored files"
+msgstr "پەرۋا قىلمىغان ھۆججەتلەرنى چىقىرىۋەتسۇن"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:76
+msgid "Include ignored files"
+msgstr "پەرۋا قىلمىغان ھۆججەتلەرنى ئۆز ئىچىگە ئالسۇن"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:82
+msgid "Only ignored files"
+msgstr "پەقەت پەرۋا قىلمىغان ھۆججەتلەر"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:92
+msgid "Force clean."
+msgstr "مەجبۇرىي تازىلايدۇ."
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr "كىلونلاش تاماملاندى"
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning ..."
+msgstr "كىلونلاۋاتىدۇ…"
+
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:75
+#: ../tvp-svn-helper/tsh-add.c:93 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:136
+#: ../tvp-svn-helper/tsh-commit.c:197 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
+#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
+#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:95
+msgid "Failed"
+msgstr "مەغلۇپ بولدى"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+msgid "untracked"
+msgstr "ئىزلانمىغان"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "يول"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+msgid "Select/Unselect all"
+msgstr "تاللا/ھەممىنى تاللىما"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr "يېزىلغان چېسلا"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr "تاپشۇرغان چېسلا"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "ئۇچۇر"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-stash-dialog.c:197
+msgid "Changes"
+msgstr "ئۆزگىرىشلەر"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-stash-dialog.c:204
+msgid "File"
+msgstr "ھۆججەت"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "يۆتكەش تاماملاندى"
+
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+msgid "Move To"
+msgstr "يۆتكەش"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move ..."
+msgstr "يۆتكە …"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "مەشغۇلات"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr "ئۇقتۇرۇش"
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "ئەسلىگە قايتۇرۇش تاماملاندى"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset ..."
+msgstr "ئەسلىگە قايتۇر …"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
 msgstr "چۈشەندۈرۈلۈشى"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:438
+#: ../tvp-git-helper/tgh-stash-dialog.c:398
 msgid "Stash description:"
-msgstr ""
+msgstr "Stash چۈشەندۈرۈشى:"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:574
+#: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
 msgid "Are you sure you want to drop %s?"
 msgstr "راستلا %s نى تاشلىۋېتەمسىز؟"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:602
+#: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
 msgstr "راستلا بارلىق stash نى تازىلامسىز؟"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:67
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:82
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
 msgid "_Repository:"
 msgstr "خەزىنە(_R):"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:76
-#: ../tvp-git-helper/tgh-transfer-dialog.c:111
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:98
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:104
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:153
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:159
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:205
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:92
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:98
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:144
+#: ../tvp-git-helper/tgh-transfer-dialog.c:75
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
 msgid "Select a folder"
 msgstr "قىسقۇچ تاللاش"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:104
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:198
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:137
+#: ../tvp-git-helper/tgh-transfer-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
 msgid "_Directory:"
 msgstr "مۇندەرىجە(_D):"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:123
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:156
+#: ../tvp-git-helper/tgh-transfer-dialog.c:122
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
 msgid "Transfer"
 msgstr "يوللاش"
 
-#: ../tvp-svn-helper/main.c:124
+#: ../tvp-svn-helper/main.c:126
 msgid "Execute changelist action"
 msgstr "‹changelist› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:130
+#: ../tvp-svn-helper/main.c:132
 msgid "Execute checkout action"
 msgstr "‹checkout› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:136
+#: ../tvp-svn-helper/main.c:138
 msgid "Execute cleanup action"
 msgstr "‹cleanup› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:142
+#: ../tvp-svn-helper/main.c:144
 msgid "Execute commit action"
 msgstr "‹commit› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:148
+#: ../tvp-svn-helper/main.c:150
 msgid "Execute copy action"
 msgstr "‹copy› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:154
+#: ../tvp-svn-helper/main.c:156
 msgid "Execute delete action"
 msgstr "‹delete› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:160
+#: ../tvp-svn-helper/main.c:162
 msgid "Execute export action"
 msgstr "‹export› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:166
+#: ../tvp-svn-helper/main.c:168
 msgid "Execute import action"
 msgstr "‹import› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:172
+#: ../tvp-svn-helper/main.c:174
 msgid "Execute lock action"
 msgstr "‹lock› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:190
+#: ../tvp-svn-helper/main.c:192
 msgid "Execute properties action"
 msgstr "‹properties› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:196
+#: ../tvp-svn-helper/main.c:198
 msgid "Execute resolved action"
 msgstr "‹resolved› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:202
+#: ../tvp-svn-helper/main.c:204
 msgid "Execute relocate action"
 msgstr "‹relocate› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:208
+#: ../tvp-svn-helper/main.c:210
 msgid "Execute revert action"
 msgstr "‹revert› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:220
+#: ../tvp-svn-helper/main.c:222
 msgid "Execute switch action"
 msgstr "‹switch› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:226
+#: ../tvp-svn-helper/main.c:228
 msgid "Execute unlock action"
 msgstr "‹unlock› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:232
+#: ../tvp-svn-helper/main.c:234
 msgid "Execute update action"
 msgstr "‹update› نى ئىجرا قىل"
 
-#: ../tvp-svn-helper/main.c:257
+#: ../tvp-svn-helper/main.c:259
 msgid "Changelist Related Options:"
 msgstr "‹Changelist› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:261
+#: ../tvp-svn-helper/main.c:263
 msgid "Checkout Related Options:"
 msgstr "‹Checkout› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:265
+#: ../tvp-svn-helper/main.c:267
 msgid "Cleanup Related Options:"
 msgstr "‹› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:269
+#: ../tvp-svn-helper/main.c:271
 msgid "Commit Related Options:"
 msgstr "‹Commit› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:273
+#: ../tvp-svn-helper/main.c:275
 msgid "Copy Related Options:"
 msgstr "‹Copy› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:277
+#: ../tvp-svn-helper/main.c:279
 msgid "Delete Related Options:"
 msgstr "‹Delete› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:281
+#: ../tvp-svn-helper/main.c:283
 msgid "Export Related Options:"
 msgstr "‹Export› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:285
+#: ../tvp-svn-helper/main.c:287
 msgid "Import Related Options:"
 msgstr "‹Import› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:289
+#: ../tvp-svn-helper/main.c:291
 msgid "Lock Related Options:"
 msgstr "‹Lock› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:301
+#: ../tvp-svn-helper/main.c:303
 msgid "Properties Related Options:"
 msgstr "‹Properties› قا مۇناسىۋەتلىك تاللانمىلار:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
-#: ../tvp-svn-helper/main.c:301 ../tvp-svn-helper/tsh-properties-dialog.c:281
+#: ../tvp-svn-helper/main.c:303 ../tvp-svn-helper/tsh-properties-dialog.c:280
 msgid "Properties"
 msgstr "خاسلىق"
 
-#: ../tvp-svn-helper/main.c:305
+#: ../tvp-svn-helper/main.c:307
 msgid "Resolved Related Options:"
 msgstr "‹Resolved› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:309
+#: ../tvp-svn-helper/main.c:311
 msgid "Relocate Related Options:"
 msgstr "‹Relocate› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:313
+#: ../tvp-svn-helper/main.c:315
 msgid "Revert Related Options:"
 msgstr "‹Revert› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:321
+#: ../tvp-svn-helper/main.c:323
 msgid "Switch Related Options:"
 msgstr "‹Switch› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:325
+#: ../tvp-svn-helper/main.c:327
 msgid "Unlock Related Options:"
 msgstr "‹Unlock› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:329
+#: ../tvp-svn-helper/main.c:331
 msgid "Update Related Options:"
 msgstr "‹Update› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#: ../tvp-svn-helper/main.c:372
+#: ../tvp-svn-helper/main.c:374
 msgid "Not enough arguments provided"
 msgstr "پارامېتىرلار يېتەرلىك ئەمەس"
 
-#: ../tvp-svn-helper/tsh-blame.c:75
+#: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
 msgstr "‹Blame› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:66
+#: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
 msgstr "‹Cleanup› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:81
+#: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
 msgstr "‹Cleanup› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:95
+#: ../tvp-svn-helper/tsh-cleanup.c:97
 msgid "Cleaning up ..."
 msgstr "تازىلاۋاتىدۇ …"
 
-#: ../tvp-svn-helper/tsh-commit.c:196 ../tvp-svn-helper/tsh-common.c:742
-#: ../tvp-svn-helper/tsh-copy.c:99 ../tvp-svn-helper/tsh-delete.c:103
-#: ../tvp-svn-helper/tsh-import.c:82 ../tvp-svn-helper/tsh-move.c:89
+#: ../tvp-svn-helper/tsh-commit.c:210 ../tvp-svn-helper/tsh-common.c:828
+#: ../tvp-svn-helper/tsh-common.c:1094 ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
+#: ../tvp-svn-helper/tsh-move.c:99
 #, c-format
 msgid "At revision: %ld"
 msgstr "تۈزىتىلمە: %ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:201
+#: ../tvp-svn-helper/tsh-commit.c:215
 msgid "Nothing to do"
 msgstr "قىلىدىغان ئىش يوق"
 
-#: ../tvp-svn-helper/tsh-commit.c:209 ../tvp-svn-helper/tsh-common.c:526
-#: ../tvp-svn-helper/tsh-common.c:528 ../tvp-svn-helper/tsh-copy.c:110
-#: ../tvp-svn-helper/tsh-delete.c:114 ../tvp-svn-helper/tsh-import.c:87
-#: ../tvp-svn-helper/tsh-move.c:100
+#: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-common.c:546
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:1103
+#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
+#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
 msgid "Completed"
 msgstr "تاماملاندى"
 
-#: ../tvp-svn-helper/tsh-commit.c:241
+#: ../tvp-svn-helper/tsh-commit.c:258
 msgid "Commit Message"
 msgstr "تاپشۇرۇش ئۇچۇرلىرى"
 
-#: ../tvp-svn-helper/tsh-common.c:271
+#: ../tvp-svn-helper/tsh-common.c:291
 msgid "Store password a plaintext?"
 msgstr "ئىمنى ئادەتتىكى تېكىستتە ساقلىسۇنمۇ؟"
 
-#: ../tvp-svn-helper/tsh-common.c:515 ../tvp-svn-helper/tsh-common.c:524
-#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:653
-#: ../tvp-svn-helper/tsh-common.c:700 ../tvp-svn-helper/tsh-common.c:791
+#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:786 ../tvp-svn-helper/tsh-common.c:890
 msgid "Added"
 msgstr "قوشۇلغان"
 
-#: ../tvp-svn-helper/tsh-common.c:516 ../tvp-svn-helper/tsh-common.c:800
+#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:899
 msgid "Copied"
 msgstr "كۆچۈرۈلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:517 ../tvp-svn-helper/tsh-common.c:523
-#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:655
-#: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:793
+#: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:543
+#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:789 ../tvp-svn-helper/tsh-common.c:892
 msgid "Deleted"
 msgstr "ئۆچۈرۈلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:518
+#: ../tvp-svn-helper/tsh-common.c:538
 msgid "Restored"
 msgstr "ئەسلىگە كەلتۈرۈلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:519
+#: ../tvp-svn-helper/tsh-common.c:539
 msgid "Reverted"
 msgstr "ئەسلىگە قايتۇرۇلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:520
+#: ../tvp-svn-helper/tsh-common.c:540
 msgid "Revert failed"
 msgstr "‹Revert› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-common.c:522
+#: ../tvp-svn-helper/tsh-common.c:542
 msgid "Skipped"
 msgstr "ئاتلىدى"
 
-#: ../tvp-svn-helper/tsh-common.c:525
+#: ../tvp-svn-helper/tsh-common.c:545
 msgid "Updated"
 msgstr "يېڭىلاندى"
 
-#: ../tvp-svn-helper/tsh-common.c:527 ../tvp-svn-helper/tsh-common.c:529
-#: ../tvp-svn-helper/tsh-common.c:662
+#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:748
 msgid "External"
 msgstr "سىرتقى"
 
-#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:657
-#: ../tvp-svn-helper/tsh-common.c:706 ../tvp-svn-helper/tsh-common.c:796
+#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:792 ../tvp-svn-helper/tsh-common.c:895
 msgid "Modified"
 msgstr "ئۆزگەرتىلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:533 ../tvp-svn-helper/tsh-common.c:656
-#: ../tvp-svn-helper/tsh-common.c:709 ../tvp-svn-helper/tsh-common.c:789
+#: ../tvp-svn-helper/tsh-common.c:553 ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:795 ../tvp-svn-helper/tsh-common.c:888
 msgid "Replaced"
 msgstr "ئالماشتۇرۇلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:534
+#: ../tvp-svn-helper/tsh-common.c:554
 msgid "Transmitting"
 msgstr "يەتكۈزۈلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:536
+#: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
 msgid "Locked"
 msgstr "قۇلۇپلاندى"
 
-#: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:802
+#: ../tvp-svn-helper/tsh-common.c:557 ../tvp-svn-helper/tsh-common.c:901
 msgid "Unlocked"
 msgstr "قۇلۇپسىزلاندى"
 
-#: ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:558
 msgid "Lock failed"
 msgstr "‹Lock› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-common.c:539
+#: ../tvp-svn-helper/tsh-common.c:559
 msgid "Unlock failed"
 msgstr "‹Unlock› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-common.c:540
+#: ../tvp-svn-helper/tsh-common.c:560
 msgid "Exists"
 msgstr "مەۋجۇت"
 
-#: ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:561
 msgid "Changelist set"
 msgstr "ئۆزگىرىشلەر توپى"
 
-#: ../tvp-svn-helper/tsh-common.c:542
+#: ../tvp-svn-helper/tsh-common.c:562
 msgid "Changelist cleared"
 msgstr "ئۆزگىرىشلەر تازىلاندى"
 
-#: ../tvp-svn-helper/tsh-common.c:543
+#: ../tvp-svn-helper/tsh-common.c:563
 msgid "Changelist moved"
 msgstr "ئۆزگىرىشلەر يۆتكەلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:564
 msgid "Merge begin"
 msgstr "بىرلەشتۈرۈشنى باشلاش"
 
-#: ../tvp-svn-helper/tsh-common.c:545
+#: ../tvp-svn-helper/tsh-common.c:565
 msgid "Foreign merge begin"
 msgstr "سىرتقى بىرلەشتۈرۈشنى باشلاش"
 
-#: ../tvp-svn-helper/tsh-common.c:546
+#: ../tvp-svn-helper/tsh-common.c:566
 msgid "Replace"
 msgstr "ئالماشتۇر"
 
-#: ../tvp-svn-helper/tsh-common.c:548
+#: ../tvp-svn-helper/tsh-common.c:568
 msgid "Property added"
 msgstr "خاسلىق قوشۇلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:569
 msgid "Property modified"
 msgstr "خاسلىق تۈزىتىلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:550
+#: ../tvp-svn-helper/tsh-common.c:570
 msgid "Property deleted"
 msgstr "خاسلىق ئۆچۈرۈلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:551
+#: ../tvp-svn-helper/tsh-common.c:571
 msgid "Property nonexisting"
 msgstr "خاسلىق مەۋجۇت ئەمەس"
 
-#: ../tvp-svn-helper/tsh-common.c:552
+#: ../tvp-svn-helper/tsh-common.c:572
 msgid "Revision property set"
 msgstr "تۈزىتىلمە خاسلىقى توپى"
 
-#: ../tvp-svn-helper/tsh-common.c:553
+#: ../tvp-svn-helper/tsh-common.c:573
 msgid "Revision property deleted"
 msgstr "تۈزىتىلمە خاسلىقى ئۆچۈرۈلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:554
+#: ../tvp-svn-helper/tsh-common.c:574
 msgid "Merge completed"
 msgstr "بىرلەشتۈرۈش تاماملاندى"
 
-#: ../tvp-svn-helper/tsh-common.c:555
+#: ../tvp-svn-helper/tsh-common.c:575
 msgid "Tree conflict"
 msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:556
+#: ../tvp-svn-helper/tsh-common.c:576
 msgid "External failed"
 msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:617
-msgid "Inapplicable"
-msgstr "ئىشلىتىشكە بولمايدۇ"
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Started"
+msgstr "باشلاندى"
 
-#: ../tvp-svn-helper/tsh-common.c:619
-msgid "Unchanged"
-msgstr "ئۆزگەرتىلمىدى"
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Skipped obstruction"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:620 ../tvp-svn-helper/tsh-common.c:654
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Skipped working only"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Skipped access denied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "External removed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Shadowed add"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:585
+msgid "Shadowed update"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Shadowed delete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:587
+msgid "Merge record info"
+msgstr "خاتىرە ئۇچۇرلىرىنى بىرلەشتۈرۈش"
+
+#: ../tvp-svn-helper/tsh-common.c:588
+msgid "Upgraded path"
+msgstr "يۈكسەلدۈرۈلگەن يول"
+
+#: ../tvp-svn-helper/tsh-common.c:589
+msgid "Merge record info begin"
+msgstr "خاتىرە ئۇچۇرلىرىنى بىرلەشتۈرۈشنى باشلاش"
+
+#: ../tvp-svn-helper/tsh-common.c:590
+msgid "Merge elide info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:591
+msgid "Patch"
+msgstr "ياماق"
+
+#: ../tvp-svn-helper/tsh-common.c:592
+msgid "Applied hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:593
+msgid "Rejected hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:594
+msgid "Hunk already applied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:596
+msgid "Copied replaced"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:597
+msgid "URL redirect"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:598
+msgid "Path nonexistent"
+msgstr "يول مەۋجۇت ئەمەس"
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Conflict"
+msgstr "توقۇنۇش"
+
+#: ../tvp-svn-helper/tsh-common.c:601 ../tvp-svn-helper/tsh-common.c:700
+#: ../tvp-svn-helper/tsh-common.c:740
 msgid "Missing"
 msgstr "يوقالدى"
 
-#: ../tvp-svn-helper/tsh-common.c:621 ../tvp-svn-helper/tsh-common.c:661
+#: ../tvp-svn-helper/tsh-common.c:602
+msgid "Out of date"
+msgstr "ۋاقتى ئوتكەن"
+
+#: ../tvp-svn-helper/tsh-common.c:603
+msgid "No parent"
+msgstr "ئاتا-ئانىسى يوق"
+
+#: ../tvp-svn-helper/tsh-common.c:605
+msgid "Forbidden by server"
+msgstr "مۇلازىمېتىر چەكلىدى"
+
+#: ../tvp-svn-helper/tsh-common.c:606
+msgid "Skipped conflicted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:697
+msgid "Inapplicable"
+msgstr "ئىشلىتىشكە بولمايدۇ"
+
+#: ../tvp-svn-helper/tsh-common.c:699
+msgid "Unchanged"
+msgstr "ئۆزگەرتىلمىدى"
+
+#: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:747
 msgid "Obstructed"
 msgstr "توسۇۋېلىنغان"
 
-#: ../tvp-svn-helper/tsh-common.c:622
+#: ../tvp-svn-helper/tsh-common.c:702
 msgid "Changed"
 msgstr "ئۆزگەردى"
 
-#: ../tvp-svn-helper/tsh-common.c:623 ../tvp-svn-helper/tsh-common.c:658
+#: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:744
 msgid "Merged"
 msgstr "بىرلەشتۈرۈلدى"
 
-#: ../tvp-svn-helper/tsh-common.c:624 ../tvp-svn-helper/tsh-common.c:659
+#: ../tvp-svn-helper/tsh-common.c:704 ../tvp-svn-helper/tsh-common.c:745
 msgid "Conflicted"
 msgstr "توقۇنۇشتى"
 
+#: ../tvp-svn-helper/tsh-common.c:706
+msgid "Source missing"
+msgstr "مەنبە يوقالغان"
+
 #. N_("None"),
 #. N_("Unversioned"),
-#: ../tvp-svn-helper/tsh-common.c:652
+#: ../tvp-svn-helper/tsh-common.c:738
 msgid "Normal"
 msgstr "نورمال"
 
-#: ../tvp-svn-helper/tsh-common.c:660
+#: ../tvp-svn-helper/tsh-common.c:746
 msgid "Ignored"
 msgstr "پەرۋا قىلمىدى"
 
-#: ../tvp-svn-helper/tsh-common.c:663
+#: ../tvp-svn-helper/tsh-common.c:749
 msgid "Incomplete"
 msgstr "چالا"
 
-#: ../tvp-svn-helper/tsh-copy.c:104
+#: ../tvp-svn-helper/tsh-common.c:1087
+msgid "Error"
+msgstr "خاتالىق"
+
+#: ../tvp-svn-helper/tsh-common.c:1099
+msgid "Local action"
+msgstr "يەرلىك مەشغۇلات"
+
+#: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
 msgstr "يەرلىكتە كۆچۈر"
 
-#: ../tvp-svn-helper/tsh-copy.c:148
+#: ../tvp-svn-helper/tsh-copy.c:159
 msgid "Copy To"
 msgstr "كۆچۈر"
 
-#: ../tvp-svn-helper/tsh-delete.c:108
+#: ../tvp-svn-helper/tsh-delete.c:118
 msgid "Local delete"
 msgstr "يەرلىكتە ئۆچۈر"
 
-#: ../tvp-svn-helper/tsh-delete.c:145
+#: ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete Message"
 msgstr "ئۆچۈرۈش ئۇچۇرى"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:60
+#: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
 msgstr "گۇۋاھنامە(_C):"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:67
+#: ../tvp-svn-helper/tsh-file-dialog.c:66
 msgid "Select a file"
 msgstr "بىر ھۆججەت تاللاڭ"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:78
-#: ../tvp-svn-helper/tsh-login-dialog.c:98
-#: ../tvp-svn-helper/tsh-trust-dialog.c:73
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-login-dialog.c:97
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
 msgid "Remember"
 msgstr "ئەستە تۇتۇۋالسۇن"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:86
+#: ../tvp-svn-helper/tsh-file-dialog.c:85
 msgid "Certificate"
 msgstr "گۇۋاھنامە"
 
-#: ../tvp-svn-helper/tsh-import.c:125
+#: ../tvp-svn-helper/tsh-import.c:138
 msgid "Import Message"
 msgstr "ئۇچۇر ئىمپورت قىلىش"
 
-#: ../tvp-svn-helper/tsh-log.c:113
+#: ../tvp-svn-helper/tsh-log.c:123
 msgid "Log failed"
 msgstr "خاتىرە قالدۇرۇش مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:65
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:218
+msgid "Show Merged Revisions"
+msgstr "بىرلەشتۈرۈلگەن تۈزىتىلمىلەرنى كۆرسىتىش"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
 msgstr "ئىشلەتكۈچى ئاتى(_U):"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:81
+#: ../tvp-svn-helper/tsh-login-dialog.c:80
 msgid "_Password:"
 msgstr "ئىم(_P):"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:106
+#: ../tvp-svn-helper/tsh-login-dialog.c:105
 msgid "Login"
 msgstr "كىر"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:93
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
 msgid "State"
 msgstr "ھالەت"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:118
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
 msgstr "خاتىرە ئۇچۇرى"
 
-#: ../tvp-svn-helper/tsh-move.c:94
+#: ../tvp-svn-helper/tsh-move.c:104
 msgid "Local move"
 msgstr "يەرلىكتە يۆتكە"
 
-#: ../tvp-svn-helper/tsh-notify-dialog.c:100
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "Mime type"
 msgstr "مايىم(mime) تىپى"
 
-#: ../tvp-svn-helper/tsh-notify-dialog.c:115
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
 msgstr "ئۇقتۇرۇش"
 
 #. tsh_properties_dialog_done (dialog);
-#: ../tvp-svn-helper/tsh-properties.c:81
+#: ../tvp-svn-helper/tsh-properties.c:94
 msgid "Set property failed"
 msgstr "خاسلىق بەلگىلەش مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-properties.c:104
+#: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
 msgstr "‹Properties› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:132
+#: ../tvp-svn-helper/tsh-properties-dialog.c:131
 msgid "Value"
 msgstr "قىممەت"
 
@@ -1219,8 +1345,8 @@ msgstr "قىممەت"
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
 #.
-#: ../tvp-svn-helper/tsh-properties-dialog.c:207
-#: ../tvp-svn-helper/tsh-status-dialog.c:182
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "ئۆزى"
 
@@ -1230,8 +1356,8 @@ msgstr "ئۆزى"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are shown
 #.
-#: ../tvp-svn-helper/tsh-properties-dialog.c:218
-#: ../tvp-svn-helper/tsh-status-dialog.c:191
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
 msgstr ""
 
@@ -1241,129 +1367,75 @@ msgstr ""
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
 #.
-#: ../tvp-svn-helper/tsh-properties-dialog.c:236
-#: ../tvp-svn-helper/tsh-status-dialog.c:209
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "چوڭقۇرلاش"
 
-#: ../tvp-svn-helper/tsh-relocate.c:71
+#: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
 msgstr "‹Relocate› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-relocate.c:86
+#: ../tvp-svn-helper/tsh-relocate.c:93
 msgid "Relocate finished"
 msgstr "‹Relocate› تاماملاندى"
 
-#: ../tvp-svn-helper/tsh-relocate.c:128
+#: ../tvp-svn-helper/tsh-relocate.c:139
 msgid "Relocating ..."
 msgstr "قايتا ئورۇنلاشتۇرۇۋاتىدۇ …"
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:88
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
 msgstr "ئەۋەتكۈچى(_S):"
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:143
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
 msgid "_To:"
 msgstr "تاپشۇرۇۋالغۇچى(_T):"
 
-#: ../tvp-svn-helper/tsh-status.c:86
+#: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
 msgstr "‹Status› مەغلۇپ بولدى"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:224
+#: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
 msgstr "تۈزىتىلمىگەن ھۆججەتلەرنى كۆرسىتىش"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:228
+#: ../tvp-svn-helper/tsh-status-dialog.c:227
 msgid "Show Unversioned Files"
 msgstr "نەشرى يوق ھۆججەتلەرنى كۆرسىتىش"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:232
+#: ../tvp-svn-helper/tsh-status-dialog.c:231
 msgid "Show Ignored Files"
 msgstr "پەرۋا قىلىنمىغان ھۆججەتلەرنى كۆرسىتىش"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:236
+#: ../tvp-svn-helper/tsh-status-dialog.c:235
 msgid "Hide Externals"
 msgstr ""
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:240
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Check Repository"
 msgstr "خەزىنە تەكشۈرۈش"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:58
+#: ../tvp-svn-helper/tsh-trust-dialog.c:57
 msgid "Certificate is not yet valid."
 msgstr "گۇۋاھنامە تېخى ئىناۋەتلىك ئەمەس."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:61
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
 msgid "Certificate has expired."
 msgstr "گۇۋاھنامىنىڭ ۋاقتى ئۆتۈپتۇ."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:64
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
 msgid "Certificate does not match the remote hostname."
 msgstr "گۇۋاھنامە يىراقتىكى كومپيۇتېرغا ماس كەلمىدى."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:67
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
 msgid "Certificate authority is unknown."
 msgstr "گۇۋاھنامە تارقاتقۇچى نامەلۇم."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:70
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
 msgid "Other failure."
 msgstr "باشقا خاتالىق."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:77
+#: ../tvp-svn-helper/tsh-trust-dialog.c:76
 msgid "Trust"
 msgstr "ئىشەنچ"
-
-#~ msgid "Execute remove action"
-#~ msgstr "Execute move action"
-
-#~ msgid "Remove Related Options:"
-#~ msgstr "Resolved Related Options:"
-
-#~ msgid "Add finished"
-#~ msgstr "Add finished"
-
-#~ msgid "Adding ..."
-#~ msgstr "Adding ..."
-
-#~ msgid "%1$s on %2$s"
-#~ msgstr "%1$s on %2$s"
-
-#~ msgid "Select A File"
-#~ msgstr "Select A File"
-
-#~ msgid "Desktop"
-#~ msgstr "Desktop"
-
-#~ msgid "(None)"
-#~ msgstr "(None)"
-
-#~ msgid "Dialog"
-#~ msgstr "Dialogue"
-
-#~ msgid "The file chooser dialog to use."
-#~ msgstr "The file chooser dialogue to use."
-
-#~ msgid "Focus on click"
-#~ msgstr "Focus on click"
-
-#~ msgid "Whether the entry grabs focus when it is clicked with the mouse"
-#~ msgstr "Whether the entry grabs focus when it is clicked with the mouse"
-
-#~ msgid "Title"
-#~ msgstr "Title"
-
-#~ msgid "The title of the file chooser dialog."
-#~ msgstr "The title of the file chooser dialogue."
-
-#~ msgid "Width In Characters"
-#~ msgstr "Width In Characters"
-
-#~ msgid "The desired width of the entry widget, in characters."
-#~ msgstr "The desired width of the entry widget, in characters."
-
-#~ msgid "Other..."
-#~ msgstr "Other..."
-
-#~ msgid "Modify Property Recursive"
-#~ msgstr "Modify Property Recursive"
