@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.1.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-15 14:40+0000\n"
+"POT-Creation-Date: 2012-08-06 20:00+0000\n"
 "PO-Revision-Date: 2010-01-04 21:48+0100\n"
 "Last-Translator: Per Kongstad <p_kongstad@op.pl>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -1153,9 +1153,8 @@ msgid "Merge record info begin"
 msgstr "Begynd at flette dataelementinformation"
 
 #: ../tvp-svn-helper/tsh-common.c:590
-#, fuzzy
 msgid "Merge elide info"
-msgstr "Fletning begynd"
+msgstr "Flet elide-info"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
@@ -1200,16 +1199,15 @@ msgstr "Uden for datointerval"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "No parent"
-msgstr ""
+msgstr "Ingen overliggende"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Forbidden by server"
-msgstr ""
+msgstr "Forbudt af server"
 
 #: ../tvp-svn-helper/tsh-common.c:606
-#, fuzzy
 msgid "Skipped conflicted"
-msgstr "Trækonflikt"
+msgstr "Sprunger over konfliktede"
 
 #: ../tvp-svn-helper/tsh-common.c:697
 msgid "Inapplicable"
@@ -1255,7 +1253,7 @@ msgstr "Ufuldstændig"
 
 #: ../tvp-svn-helper/tsh-common.c:1087
 msgid "Error"
-msgstr ""
+msgstr "Fejl"
 
 #: ../tvp-svn-helper/tsh-common.c:1099
 msgid "Local action"
