@@ -254,7 +254,7 @@ tvp_svn_backend_get_status (const gchar *uri)
 #elif CHECK_SVN_VERSION(1,6)
   err = svn_client_status4 (NULL, path, &revision, status_callback3, &list, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL, ctx, subpool);
 #else /* CHECK_SVN_VERSION(1,7) */
-  err = svn_client_status5 (NULL, ctx, path, &revision, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, TRUE, NULL, status_callback, list, subpool);
+  err = svn_client_status5 (NULL, ctx, path, &revision, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, TRUE, NULL, status_callback, &list, subpool);
 #endif
 
   svn_pool_destroy (subpool);
