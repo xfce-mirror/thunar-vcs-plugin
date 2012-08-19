@@ -243,7 +243,10 @@ tsh_tree_get_iter_for_path (GtkTreeStore *model, const gchar *file, GtkTreeIter 
     }
   }
 
-  gtk_tree_store_append (model, iter, parent);
-  gtk_tree_store_set (model, iter, path_column, relative_file, -1);
+  if (relative_file)
+  {
+    gtk_tree_store_append (model, iter, parent);
+    gtk_tree_store_set (model, iter, path_column, relative_file, -1);
+  }
 }
 
