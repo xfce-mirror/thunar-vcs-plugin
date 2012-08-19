@@ -322,17 +322,15 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
-		gdk_threads_leave();
-
 		*cred = NULL;
 
 		gtk_widget_destroy(dialog);
 
 		tsh_cancel();
+
+		gdk_threads_leave();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
-
-	gdk_threads_leave();
 
   ret = apr_pcalloc(pool, sizeof(svn_auth_cred_simple_t));
   login_dialog = TSH_LOGIN_DIALOG(dialog);
@@ -343,6 +341,7 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 
 	gtk_widget_destroy(dialog);
 
+	gdk_threads_leave();
 	return SVN_NO_ERROR;
 }
 
@@ -363,17 +362,15 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
-		gdk_threads_leave();
-
 		*cred = NULL;
 
 		gtk_widget_destroy(dialog);
 
 		tsh_cancel();
+
+		gdk_threads_leave();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
-
-	gdk_threads_leave();
 
   ret = apr_pcalloc(pool, sizeof(svn_auth_cred_username_t));
   login_dialog = TSH_LOGIN_DIALOG(dialog);
@@ -383,6 +380,7 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
 
 	gtk_widget_destroy(dialog);
 
+	gdk_threads_leave();
 	return SVN_NO_ERROR;
 }
 
@@ -405,17 +403,15 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
-		gdk_threads_leave();
-
 		*cred = NULL;
 
 		gtk_widget_destroy(dialog);
 
 		tsh_cancel();
+
+		gdk_threads_leave();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
-
-	gdk_threads_leave();
 
   ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_server_trust_t));
   trust_dialog = TSH_TRUST_DIALOG(dialog);
@@ -425,6 +421,7 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
 
 	gtk_widget_destroy(dialog);
 
+	gdk_threads_leave();
 	return SVN_NO_ERROR;
 }
 
@@ -445,17 +442,15 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
-		gdk_threads_leave();
-
 		*cred = NULL;
 
 		gtk_widget_destroy(dialog);
 
 		tsh_cancel();
+
+		gdk_threads_leave();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
-
-	gdk_threads_leave();
 
   ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_t));
   file_dialog = TSH_FILE_DIALOG(dialog);
@@ -465,6 +460,7 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
 
 	gtk_widget_destroy(dialog);
 
+	gdk_threads_leave();
 	return SVN_NO_ERROR;
 }
 
@@ -485,17 +481,15 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 
 	if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
 	{
-		gdk_threads_leave();
-
 		*cred = NULL;
 
 		gtk_widget_destroy(dialog);
 
 		tsh_cancel();
+
+		gdk_threads_leave();
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
-
-	gdk_threads_leave();
 
   ret = apr_pcalloc(pool, sizeof(svn_auth_cred_ssl_client_cert_pw_t));
   login_dialog = TSH_LOGIN_DIALOG(dialog);
@@ -505,6 +499,7 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 
 	gtk_widget_destroy(dialog);
 
+	gdk_threads_leave();
 	return SVN_NO_ERROR;
 }
 
