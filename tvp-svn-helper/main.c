@@ -42,6 +42,7 @@
 #include "tsh-commit.h"
 #include "tsh-copy.h"
 #include "tsh-delete.h"
+#include "tsh-diff.h"
 #include "tsh-export.h"
 #include "tsh-import.h"
 #include "tsh-lock.h"
@@ -83,6 +84,7 @@ int main (int argc, char *argv[])
 	gboolean commit = FALSE;
 	gboolean copy = FALSE;
 	gboolean delete = FALSE;
+	gboolean diff = FALSE;
 	gboolean export = FALSE;
 	gboolean import = FALSE;
 	gboolean lock = FALSE;
@@ -154,6 +156,12 @@ int main (int argc, char *argv[])
 	GOptionEntry delete_options_table[] =
 	{
 		{ "delete", '\0', 0, G_OPTION_ARG_NONE, &delete, N_("Execute delete action"), NULL },
+		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
+	};
+
+	GOptionEntry diff_options_table[] =
+	{
+		{ "diff", '\0', 0, G_OPTION_ARG_NONE, &diff, N_("Execute diff action"), NULL },
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
@@ -280,6 +288,10 @@ int main (int argc, char *argv[])
 	g_option_group_add_entries(option_group, delete_options_table);
 	g_option_context_add_group(option_context, option_group);
 
+	option_group = g_option_group_new("diff", N_("Diff Related Options:"), N_("Diff"), NULL, NULL);
+	g_option_group_add_entries(option_group, diff_options_table);
+	g_option_context_add_group(option_context, option_group);
+
 	option_group = g_option_group_new("export", N_("Export Related Options:"), N_("Export"), NULL, NULL);
 	g_option_group_add_entries(option_group, export_options_table);
 	g_option_context_add_group(option_context, option_group);
@@ -367,7 +379,7 @@ int main (int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
-  if(add || blame || delete || revert || resolved || changelist)
+  if(add || blame || delete || diff || revert || resolved || changelist)
   {
     if(!g_strv_length(files))
     {
@@ -415,6 +427,11 @@ int main (int argc, char *argv[])
 	if(delete)
 	{
 		thread = tsh_delete(files, svn_ctx, pool);
+	}
+
+	if(diff)
+	{
+		thread = tsh_diff(files, svn_ctx, pool);
 	}
 
 	if(export)

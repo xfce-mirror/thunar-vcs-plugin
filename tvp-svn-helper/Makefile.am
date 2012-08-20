@@ -46,6 +46,8 @@ tvp_svn_helper_SOURCES =						\
 	tsh-copy.c							\
 	tsh-delete.h							\
 	tsh-delete.c							\
+	tsh-diff.h							\
+	tsh-diff.c							\
 	tsh-export.h							\
 	tsh-export.c							\
 	tsh-import.h							\
@@ -78,6 +80,8 @@ tvp_svn_helper_SOURCES =						\
 	tsh-dialog-common.c						\
 	tsh-blame-dialog.h						\
 	tsh-blame-dialog.c						\
+	tsh-diff-dialog.h						\
+	tsh-diff-dialog.c						\
 	tsh-file-dialog.h						\
 	tsh-file-dialog.c						\
 	tsh-file-selection-dialog.h					\

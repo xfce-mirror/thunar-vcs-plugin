@@ -341,10 +341,10 @@ tvp_svn_action_create_menu_item (GtkAction *action)
   {
     add_subaction (action, GTK_MENU_SHELL (menu), "tvp::delete", Q_("Menu|Delete"), _("Delete"), GTK_STOCK_DELETE, "--delete");
   }
-  /* Version control (file) */
-  if (tvp_action->property.file_version_control) 
+  /* Version control (all) */
+  if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction_u (GTK_MENU_SHELL (menu), "tvp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_FIND_AND_REPLACE, _("Diff"));
+    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_CONVERT, "--diff");
   }
   /* Version control and No version control (parent) */
   if (tvp_action->property.is_parent || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
