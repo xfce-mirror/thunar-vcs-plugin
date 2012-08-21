@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-08-21 07:45+0000\n"
-"PO-Revision-Date: 2012-08-21 22:00+1000\n"
+"PO-Revision-Date: 2012-08-22 00:00+1000\n"
 "Last-Translator: Alex 'AdUser' Z <ad_user@mail.ru>\n"
 "Language-Team: Russian <xfce4-dev@xfce.org>\n"
 "Language: ru\n"
@@ -45,7 +45,7 @@ msgstr "Разделить"
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
 msgid "Menu|Blame"
-msgstr "Установить авторство"
+msgstr "Меню|Установить авторство"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
@@ -128,11 +128,11 @@ msgstr "Сравнить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
-msgstr ""
+msgstr "Меню|Получить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
-msgstr ""
+msgstr "Получить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Grep"
@@ -203,11 +203,11 @@ msgstr "Отправить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr ""
+msgstr "Меню|Перенести"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
-msgstr ""
+msgstr "Перенести"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
@@ -268,8 +268,9 @@ msgid "Menu|Tag"
 msgstr "Пометить"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
+#, fuzzy
 msgid "Tag"
-msgstr ""
+msgstr "Тэг(ировать)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:301
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
@@ -389,24 +390,27 @@ msgid "Relocate"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
+#, fuzzy
 msgid "Menu|Resolved"
-msgstr ""
+msgstr "Меню|Отметить решенным"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 #: ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-common.c:541
 #: ../tvp-svn-helper/tsh-resolved.c:115
 #: ../tvp-svn-helper/tsh-resolved.c:128
+#, fuzzy
 msgid "Resolved"
-msgstr ""
+msgstr "Отметить решенным"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Resolve"
 msgstr "Разрешить конфликты"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
+#, fuzzy
 msgid "Resolve"
-msgstr ""
+msgstr "Отметить решенным"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
@@ -416,8 +420,9 @@ msgstr "Вернуть"
 #: ../tvp-svn-helper/main.c:315
 #: ../tvp-svn-helper/tsh-revert.c:114
 #: ../tvp-svn-helper/tsh-revert.c:127
+#, fuzzy
 msgid "Revert"
-msgstr ""
+msgstr "Обратить"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
@@ -428,7 +433,7 @@ msgstr "Переключить ветвь"
 #: ../tvp-svn-helper/tsh-switch.c:120
 #: ../tvp-svn-helper/tsh-switch.c:133
 msgid "Switch"
-msgstr ""
+msgstr "Переключиться"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439
 msgid "Menu|Unlock"
@@ -481,8 +486,9 @@ msgid "Repository:"
 msgstr "Репозиторий:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+#, fuzzy
 msgid "Modified revision:"
-msgstr ""
+msgstr "Измененная ревизия:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
 msgid "Modified date:"
@@ -513,8 +519,9 @@ msgstr "Исключить"
 #. * Empty depth means only this file/direcotry is checked out
 #.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+#, fuzzy
 msgid "Empty"
-msgstr ""
+msgstr "Пустой"
 
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked out
@@ -542,8 +549,9 @@ msgstr ""
 #. * Infinity depth means this file/direcotry is checked out with full recursion
 #.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+#, fuzzy
 msgid "Infinity"
-msgstr ""
+msgstr "Бесконечность"
 
 #: ../tvp-git-helper/main.c:80
 #: ../tvp-svn-helper/main.c:107
@@ -552,43 +560,52 @@ msgstr "Печать информации о версии"
 
 #: ../tvp-git-helper/main.c:87
 #: ../tvp-svn-helper/main.c:114
+#, fuzzy
 msgid "Execute add action"
-msgstr ""
+msgstr "Добавить"
 
 #: ../tvp-git-helper/main.c:93
 #: ../tvp-svn-helper/main.c:120
+#, fuzzy
 msgid "Execute blame action"
-msgstr ""
+msgstr "Установить авторство"
 
 #: ../tvp-git-helper/main.c:99
+#, fuzzy
 msgid "Execute branch action"
-msgstr ""
+msgstr "Отделить"
 
 #: ../tvp-git-helper/main.c:105
+#, fuzzy
 msgid "Execute clean action"
-msgstr ""
+msgstr "Очистить"
 
 #: ../tvp-git-helper/main.c:111
+#, fuzzy
 msgid "Execute clone action"
-msgstr ""
+msgstr "Клонировать"
 
 #: ../tvp-git-helper/main.c:117
 #: ../tvp-svn-helper/main.c:180
+#, fuzzy
 msgid "Execute log action"
-msgstr ""
+msgstr "Посмотреть историю"
 
 #: ../tvp-git-helper/main.c:123
 #: ../tvp-svn-helper/main.c:186
+#, fuzzy
 msgid "Execute move action"
-msgstr ""
+msgstr "Переместить"
 
 #: ../tvp-git-helper/main.c:129
+#, fuzzy
 msgid "Execute reset action"
-msgstr ""
+msgstr "Отменить"
 
 #: ../tvp-git-helper/main.c:135
+#, fuzzy
 msgid "Execute stash action"
-msgstr ""
+msgstr "Скрыть"
 
 #: ../tvp-git-helper/main.c:141
 #: ../tvp-svn-helper/main.c:216
@@ -690,8 +707,9 @@ msgid "Only ignored files"
 msgstr "Только игнорируемые файлы"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
+#, fuzzy
 msgid "Force clean."
-msgstr ""
+msgstr "Принудительно"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -861,52 +879,63 @@ msgid "Execute commit action"
 msgstr ""
 
 #: ../tvp-svn-helper/main.c:150
+#, fuzzy
 msgid "Execute copy action"
-msgstr ""
+msgstr "Копировать"
 
 #: ../tvp-svn-helper/main.c:156
+#, fuzzy
 msgid "Execute delete action"
-msgstr ""
+msgstr "Удалить"
 
 #: ../tvp-svn-helper/main.c:162
+#, fuzzy
 msgid "Execute export action"
-msgstr ""
+msgstr "Экспортировать"
 
 #: ../tvp-svn-helper/main.c:168
+#, fuzzy
 msgid "Execute import action"
-msgstr ""
+msgstr "Импортировать"
 
 #: ../tvp-svn-helper/main.c:174
+#, fuzzy
 msgid "Execute lock action"
-msgstr ""
+msgstr "Заблокировать"
 
 #: ../tvp-svn-helper/main.c:192
+#, fuzzy
 msgid "Execute properties action"
-msgstr ""
+msgstr "Свойства"
 
 #: ../tvp-svn-helper/main.c:198
+#, fuzzy
 msgid "Execute resolved action"
-msgstr ""
+msgstr "Отметить решённым"
 
 #: ../tvp-svn-helper/main.c:204
 msgid "Execute relocate action"
 msgstr ""
 
 #: ../tvp-svn-helper/main.c:210
+#, fuzzy
 msgid "Execute revert action"
-msgstr ""
+msgstr "Вернуть"
 
 #: ../tvp-svn-helper/main.c:222
+#, fuzzy
 msgid "Execute switch action"
-msgstr ""
+msgstr "Переключить"
 
 #: ../tvp-svn-helper/main.c:228
+#, fuzzy
 msgid "Execute unlock action"
-msgstr ""
+msgstr "Разблокировать"
 
 #: ../tvp-svn-helper/main.c:234
+#, fuzzy
 msgid "Execute update action"
-msgstr ""
+msgstr "Обновить"
 
 #: ../tvp-svn-helper/main.c:259
 msgid "Changelist Related Options:"
@@ -1062,12 +1091,14 @@ msgid "Restored"
 msgstr "Восстановлено"
 
 #: ../tvp-svn-helper/tsh-common.c:539
+#, fuzzy
 msgid "Reverted"
-msgstr ""
+msgstr "Возвращено"
 
 #: ../tvp-svn-helper/tsh-common.c:540
+#, fuzzy
 msgid "Revert failed"
-msgstr ""
+msgstr "Возврат неудачен"
 
 #: ../tvp-svn-helper/tsh-common.c:542
 msgid "Skipped"
@@ -1112,12 +1143,14 @@ msgid "Unlocked"
 msgstr "Разблокирован"
 
 #: ../tvp-svn-helper/tsh-common.c:558
+#, fuzzy
 msgid "Lock failed"
-msgstr ""
+msgstr "Блокировка неудачна"
 
 #: ../tvp-svn-helper/tsh-common.c:559
+#, fuzzy
 msgid "Unlock failed"
-msgstr ""
+msgstr "Разблокировка неудачна"
 
 #: ../tvp-svn-helper/tsh-common.c:560
 msgid "Exists"
@@ -1140,8 +1173,9 @@ msgid "Merge begin"
 msgstr "Начать объединение"
 
 #: ../tvp-svn-helper/tsh-common.c:565
+#, fuzzy
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Начать удалённое слияние"
 
 #: ../tvp-svn-helper/tsh-common.c:566
 msgid "Replace"
@@ -1220,8 +1254,9 @@ msgid "Merge record info"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:588
+#, fuzzy
 msgid "Upgraded path"
-msgstr ""
+msgstr "Обновленный путь"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Merge record info begin"
@@ -1274,8 +1309,9 @@ msgid "Out of date"
 msgstr "Устарел"
 
 #: ../tvp-svn-helper/tsh-common.c:603
+#, fuzzy
 msgid "No parent"
-msgstr ""
+msgstr "Нет родителя"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Forbidden by server"
@@ -1405,8 +1441,9 @@ msgid "State"
 msgstr "Состояние"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+#, fuzzy
 msgid "Log Message"
-msgstr ""
+msgstr "Сообщение истории"
 
 #: ../tvp-svn-helper/tsh-move.c:104
 msgid "Local move"
@@ -1508,7 +1545,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Check Repository"
-msgstr ""
+msgstr "Проверить репозиторий"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:57
 msgid "Certificate is not yet valid."
