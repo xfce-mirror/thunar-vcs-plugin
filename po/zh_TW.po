@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-26 10:48+0000\n"
+"POT-Creation-Date: 2012-08-28 05:36+0000\n"
 "PO-Revision-Date: 2012-01-19 16:00+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
@@ -814,7 +814,6 @@ msgid "Execute changelist action"
 msgstr "執行更新列表動作"
 
 #: ../tvp-svn-helper/main.c:132
-#, fuzzy
 msgid "Execute checkout action"
 msgstr "執行取出動作"
 
@@ -847,7 +846,6 @@ msgid "Execute lock action"
 msgstr "執行鎖定動作"
 
 #: ../tvp-svn-helper/main.c:192
-#, fuzzy
 msgid "Execute properties action"
 msgstr "執行屬性動作"
 
@@ -1248,17 +1246,14 @@ msgid "Obstructed"
 msgstr "阻擋的"
 
 #: ../tvp-svn-helper/tsh-common.c:702
-#, fuzzy
 msgid "Changed"
-msgstr "變動的"
+msgstr "已變動的"
 
 #: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:744
-#, fuzzy
 msgid "Merged"
-msgstr "合併的"
+msgstr "已合併的"
 
 #: ../tvp-svn-helper/tsh-common.c:704 ../tvp-svn-helper/tsh-common.c:745
-#, fuzzy
 msgid "Conflicted"
 msgstr "衝突的"
 
@@ -1274,31 +1269,31 @@ msgstr "一般"
 
 #: ../tvp-svn-helper/tsh-common.c:746
 msgid "Ignored"
-msgstr ""
+msgstr "已忽略的"
 
 #: ../tvp-svn-helper/tsh-common.c:749
 msgid "Incomplete"
-msgstr ""
+msgstr "未完成"
 
 #: ../tvp-svn-helper/tsh-common.c:1087
 msgid "Error"
-msgstr ""
+msgstr "錯誤"
 
 #: ../tvp-svn-helper/tsh-common.c:1099
 msgid "Local action"
-msgstr ""
+msgstr "本地動作"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
-msgstr ""
+msgstr "本地複製"
 
 #: ../tvp-svn-helper/tsh-copy.c:159
 msgid "Copy To"
-msgstr ""
+msgstr "複製到"
 
 #: ../tvp-svn-helper/tsh-delete.c:118
 msgid "Local delete"
-msgstr ""
+msgstr "本地刪除"
 
 #: ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete Message"
@@ -1332,7 +1327,7 @@ msgstr "紀錄失敗"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "複製時停止"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
 msgid "Show Merged Revisions"
@@ -1391,8 +1386,9 @@ msgstr "值"
 #. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
+#, fuzzy
 msgid "Self"
-msgstr ""
+msgstr "自身"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
@@ -1404,8 +1400,9 @@ msgstr ""
 #. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
+#, fuzzy
 msgid "Immediate files"
-msgstr ""
+msgstr "即時文件"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
