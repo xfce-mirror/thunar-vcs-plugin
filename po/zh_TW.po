@@ -31,12 +31,10 @@ msgid "Add"
 msgstr "增加"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
-#, fuzzy
 msgid "Menu|Bisect"
 msgstr "分為二"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
-#, fuzzy
 msgid "Bisect"
 msgstr "分為二"
 
@@ -66,14 +64,12 @@ msgstr "分支"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
-#, fuzzy
 msgid "Menu|Checkout"
 msgstr "取出"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:263
 #: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
-#, fuzzy
 msgid "Checkout"
 msgstr "取出"
 
@@ -87,13 +83,11 @@ msgid "Clean"
 msgstr "清除"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272
-#, fuzzy
 msgid "Menu|Clone"
 msgstr "克隆"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
-#, fuzzy
 msgid "Clone"
 msgstr "克隆"
 
@@ -195,12 +189,10 @@ msgid "Push"
 msgstr "推"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
-#, fuzzy
 msgid "Menu|Rebase"
 msgstr "重定基準"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
-#, fuzzy
 msgid "Rebase"
 msgstr "重定基準"
 
@@ -546,12 +538,10 @@ msgid "Execute clean action"
 msgstr "執行清理動作"
 
 #: ../tvp-git-helper/main.c:111
-#, fuzzy
 msgid "Execute clone action"
 msgstr "執行克隆動作"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:180
-#, fuzzy
 msgid "Execute log action"
 msgstr "執行登入檔動作"
 
