@@ -1004,7 +1004,7 @@ msgstr "已刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Restored"
-msgstr ""
+msgstr "已恢復"
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Reverted"
@@ -1040,7 +1040,7 @@ msgstr "已取代"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Transmitting"
-msgstr ""
+msgstr "正在傳送"
 
 #: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
 msgid "Locked"
@@ -1082,7 +1082,7 @@ msgstr "合併開始"
 
 #: ../tvp-svn-helper/tsh-common.c:565
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "外部合併開始"
 
 #: ../tvp-svn-helper/tsh-common.c:566
 msgid "Replace"
@@ -1105,12 +1105,14 @@ msgid "Property nonexisting"
 msgstr "屬性不存在"
 
 #: ../tvp-svn-helper/tsh-common.c:572
+#, fuzzy
 msgid "Revision property set"
-msgstr ""
+msgstr "校訂屬性設定"
 
 #: ../tvp-svn-helper/tsh-common.c:573
+#, fuzzy
 msgid "Revision property deleted"
-msgstr ""
+msgstr "校訂屬性已刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Merge completed"
@@ -1134,11 +1136,12 @@ msgstr "略過阻礙"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Skipped working only"
-msgstr ""
+msgstr "僅已跳過正在工作中的"
 
 #: ../tvp-svn-helper/tsh-common.c:582
+#, fuzzy
 msgid "Skipped access denied"
-msgstr ""
+msgstr "已跳過訪問拒絕"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 #, fuzzy
@@ -1146,32 +1149,36 @@ msgid "External removed"
 msgstr "外部已刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:584
+#, fuzzy
 msgid "Shadowed add"
-msgstr ""
+msgstr "已隱藏的增加"
 
 #: ../tvp-svn-helper/tsh-common.c:585
+#, fuzzy
 msgid "Shadowed update"
-msgstr ""
+msgstr "已隱藏的更新"
 
 #: ../tvp-svn-helper/tsh-common.c:586
+#, fuzzy
 msgid "Shadowed delete"
-msgstr ""
+msgstr "已隱藏的刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Merge record info"
-msgstr ""
+msgstr "合併紀錄訊息"
 
 #: ../tvp-svn-helper/tsh-common.c:588
+#, fuzzy
 msgid "Upgraded path"
-msgstr ""
+msgstr "已升級的路徑"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Merge record info begin"
-msgstr ""
+msgstr "合併紀錄訊息開始"
 
 #: ../tvp-svn-helper/tsh-common.c:590
 msgid "Merge elide info"
-msgstr ""
+msgstr "合併省略訊息"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
@@ -1179,19 +1186,21 @@ msgstr "補丁"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "Applied hunk"
-msgstr ""
+msgstr "已應用的大塊"
 
 #: ../tvp-svn-helper/tsh-common.c:593
+#, fuzzy
 msgid "Rejected hunk"
-msgstr ""
+msgstr "已拒絕的大塊"
 
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Hunk already applied"
-msgstr ""
+msgstr "大塊已經應用"
 
 #: ../tvp-svn-helper/tsh-common.c:596
+#, fuzzy
 msgid "Copied replaced"
-msgstr ""
+msgstr "已複製的替換"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "URL redirect"
@@ -1233,7 +1242,6 @@ msgid "Inapplicable"
 msgstr "無法套用"
 
 #: ../tvp-svn-helper/tsh-common.c:699
-#, fuzzy
 msgid "Unchanged"
 msgstr "未變動的"
 
@@ -1383,7 +1391,6 @@ msgstr "值"
 #. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
-#, fuzzy
 msgid "Self"
 msgstr "自身"
 
