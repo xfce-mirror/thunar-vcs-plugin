@@ -195,12 +195,14 @@ msgid "Push"
 msgstr "推"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
+#, fuzzy
 msgid "Menu|Rebase"
-msgstr ""
+msgstr "重定基準"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
+#, fuzzy
 msgid "Rebase"
-msgstr ""
+msgstr "重定基準"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
@@ -876,7 +878,7 @@ msgstr "執行更新動作"
 
 #: ../tvp-svn-helper/main.c:259
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "更新列表相關選項："
 
 #: ../tvp-svn-helper/main.c:263
 msgid "Checkout Related Options:"
@@ -1019,30 +1021,31 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Revert failed"
-msgstr ""
+msgstr "還原失敗"
 
 #: ../tvp-svn-helper/tsh-common.c:542
 msgid "Skipped"
-msgstr ""
+msgstr "已略過"
 
 #: ../tvp-svn-helper/tsh-common.c:545
 msgid "Updated"
-msgstr ""
+msgstr "已更新"
 
 #: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:549
 #: ../tvp-svn-helper/tsh-common.c:748
+#, fuzzy
 msgid "External"
-msgstr ""
+msgstr "外部"
 
 #: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:743
 #: ../tvp-svn-helper/tsh-common.c:792 ../tvp-svn-helper/tsh-common.c:895
 msgid "Modified"
-msgstr ""
+msgstr "已更改"
 
 #: ../tvp-svn-helper/tsh-common.c:553 ../tvp-svn-helper/tsh-common.c:742
 #: ../tvp-svn-helper/tsh-common.c:795 ../tvp-svn-helper/tsh-common.c:888
 msgid "Replaced"
-msgstr ""
+msgstr "已取代"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Transmitting"
@@ -1050,39 +1053,41 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
 msgid "Locked"
-msgstr ""
+msgstr "已鎖定"
 
 #: ../tvp-svn-helper/tsh-common.c:557 ../tvp-svn-helper/tsh-common.c:901
 msgid "Unlocked"
-msgstr ""
+msgstr "已解鎖"
 
 #: ../tvp-svn-helper/tsh-common.c:558
 msgid "Lock failed"
-msgstr ""
+msgstr "鎖定失敗"
 
 #: ../tvp-svn-helper/tsh-common.c:559
 msgid "Unlock failed"
-msgstr ""
+msgstr "解鎖失敗"
 
 #: ../tvp-svn-helper/tsh-common.c:560
+#, fuzzy
 msgid "Exists"
-msgstr ""
+msgstr "存在"
 
 #: ../tvp-svn-helper/tsh-common.c:561
+#, fuzzy
 msgid "Changelist set"
-msgstr ""
+msgstr "更新列表已設定"
 
 #: ../tvp-svn-helper/tsh-common.c:562
 msgid "Changelist cleared"
-msgstr ""
+msgstr "更新列表已清理"
 
 #: ../tvp-svn-helper/tsh-common.c:563
 msgid "Changelist moved"
-msgstr ""
+msgstr "更新列表已移動"
 
 #: ../tvp-svn-helper/tsh-common.c:564
 msgid "Merge begin"
-msgstr ""
+msgstr "合併開始"
 
 #: ../tvp-svn-helper/tsh-common.c:565
 msgid "Foreign merge begin"
@@ -1090,23 +1095,23 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:566
 msgid "Replace"
-msgstr ""
+msgstr "取代"
 
 #: ../tvp-svn-helper/tsh-common.c:568
 msgid "Property added"
-msgstr ""
+msgstr "屬性已增加"
 
 #: ../tvp-svn-helper/tsh-common.c:569
 msgid "Property modified"
-msgstr ""
+msgstr "屬性已修改"
 
 #: ../tvp-svn-helper/tsh-common.c:570
 msgid "Property deleted"
-msgstr ""
+msgstr "屬性已刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "Property nonexisting"
-msgstr ""
+msgstr "屬性不存在"
 
 #: ../tvp-svn-helper/tsh-common.c:572
 msgid "Revision property set"
@@ -1118,7 +1123,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Merge completed"
-msgstr ""
+msgstr "合併完成"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Tree conflict"
@@ -1145,8 +1150,9 @@ msgid "Skipped access denied"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:583
+#, fuzzy
 msgid "External removed"
-msgstr ""
+msgstr "外部已刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Shadowed add"
