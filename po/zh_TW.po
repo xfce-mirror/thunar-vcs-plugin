@@ -872,23 +872,23 @@ msgstr "更新列表相關選項："
 
 #: ../tvp-svn-helper/main.c:263
 msgid "Checkout Related Options:"
-msgstr ""
+msgstr "取出動作相關選項："
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "清理動作相關選項："
 
 #: ../tvp-svn-helper/main.c:271
 msgid "Commit Related Options:"
-msgstr ""
+msgstr "提交動作相關選項："
 
 #: ../tvp-svn-helper/main.c:275
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "複製動作相關選項："
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "刪除動作相關選項："
 
 #: ../tvp-svn-helper/main.c:283
 msgid "Export Related Options:"
@@ -919,31 +919,32 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:311
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "重新定位動作相關選項："
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "還原動作相關選項："
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "切換動作相關選項："
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "解鎖動作相關選項："
 
 #: ../tvp-svn-helper/main.c:331
 msgid "Update Related Options:"
-msgstr ""
+msgstr "更新動作相關選項："
 
 #: ../tvp-svn-helper/main.c:374
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "提供的引數不足"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
+#, fuzzy
 msgid "Blame failed"
-msgstr ""
+msgstr "歸咎失敗"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
@@ -988,18 +989,18 @@ msgstr "要以純文字檔儲存密碼？"
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:739
 #: ../tvp-svn-helper/tsh-common.c:786 ../tvp-svn-helper/tsh-common.c:890
 msgid "Added"
-msgstr ""
+msgstr "已增加"
 
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:595
 #: ../tvp-svn-helper/tsh-common.c:899
 msgid "Copied"
-msgstr ""
+msgstr "已複製"
 
 #: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:543
 #: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:741
 #: ../tvp-svn-helper/tsh-common.c:789 ../tvp-svn-helper/tsh-common.c:892
 msgid "Deleted"
-msgstr ""
+msgstr "已刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:538
 msgid "Restored"
@@ -1007,7 +1008,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:539
 msgid "Reverted"
-msgstr ""
+msgstr "已還原"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Revert failed"
