@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-28 05:36+0000\n"
+"POT-Creation-Date: 2012-08-31 08:30+0000\n"
 "PO-Revision-Date: 2012-01-19 16:00+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
@@ -1122,19 +1122,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Tree conflict"
-msgstr ""
+msgstr "樹衝突"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "External failed"
-msgstr ""
+msgstr "外部失敗"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Started"
-msgstr ""
+msgstr "已開始"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "略過阻礙"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Skipped working only"
@@ -1178,7 +1178,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
-msgstr ""
+msgstr "補丁"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "Applied hunk"
