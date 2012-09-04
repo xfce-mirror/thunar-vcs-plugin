@@ -543,7 +543,7 @@ msgstr "Terugzet-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr "Opslagplaats-actie uitvoeren"
+msgstr "Opslag-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
 msgid "Execute status action"
@@ -551,39 +551,39 @@ msgstr "Status-actie uitvoeren"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
 msgid "Add Related Options:"
-msgstr "Toevoegen gerelateerde opties:"
+msgstr "Gerelateerde opties toevoegen:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
 msgid "Blame Related Options:"
-msgstr "Bechuldigen gerelateerde opties:"
+msgstr "Gerelateerde opties beschuldigen:"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr "Tak gerelateerde opties:"
+msgstr "Gerelateerde opties aftakken:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr "Dupliceren gerelateerde opties:"
+msgstr "Gerelateerde opties dupliceren:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
 msgid "Log Related Options:"
-msgstr "Log gerelateerde opties:"
+msgstr "Gerelateerde opties loggen:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
-msgstr "Verplaats gerelateerde opties:"
+msgstr "Gerelateerde opties verplaatsen:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr "Zet gerelateerde opties terug:"
+msgstr "Gerelateerde opties terugzetten op standaard:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "Opslaan gerelateerde opties:"
+msgstr "Gerelateerde opties opslaan:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
-msgstr "Status gerelateerde opties:"
+msgstr "Statusgerelateerde opties:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -639,7 +639,7 @@ msgstr "Alleen genegeerde bestanden"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
-msgstr "Verplicht opschonen."
+msgstr "Schoonmaak afdwingen."
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -788,7 +788,7 @@ msgstr "Wijzigingslijst-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:134
 msgid "Execute checkout action"
-msgstr "Ophaal-actie uitvoeren"
+msgstr "Controle-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:140
 msgid "Execute cleanup action"
@@ -796,7 +796,7 @@ msgstr "Opschoon-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:146
 msgid "Execute commit action"
-msgstr "Verstuur-actie uitvoeren"
+msgstr "Toepas-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:152
 msgid "Execute copy action"
@@ -808,7 +808,7 @@ msgstr "Verwijder-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:164
 msgid "Execute diff action"
-msgstr "Diff-actie uitvoeren"
+msgstr "Verschil-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
@@ -820,7 +820,7 @@ msgstr "Invoer-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:182
 msgid "Execute lock action"
-msgstr "Vastzet-actie uitvoeren"
+msgstr "Vergrendel-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:200
 msgid "Execute properties action"
@@ -844,7 +844,7 @@ msgstr "Wissel-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:236
 msgid "Execute unlock action"
-msgstr "Vrijgeef-actie uitvoeren"
+msgstr "Ontgrendel-actie uitvoeren"
 
 #: ../tvp-svn-helper/main.c:242
 msgid "Execute update action"
@@ -864,7 +864,7 @@ msgstr "Opschonen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Commit Related Options:"
-msgstr "Versturen-gerelateerde opties:"
+msgstr "Toepassen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:283
 msgid "Copy Related Options:"
@@ -876,19 +876,19 @@ msgstr "Verwijderen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Diff Related Options:"
-msgstr "Diff-gerelateerde opties:"
+msgstr "Verschil-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
-msgstr "Uitvoeren-gerelateerde opties:"
+msgstr "Uitvoer-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:299
 msgid "Import Related Options:"
-msgstr "Invoeren-gerelateerde opties:"
+msgstr "Invoer-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:303
 msgid "Lock Related Options:"
-msgstr "Vastzetten-gerelateerde opties:"
+msgstr "Vergrendelen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Properties Related Options:"
@@ -919,11 +919,11 @@ msgstr "Overschakelen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
-msgstr "Vrijgeven-gerelateerde opties:"
+msgstr "Ontgrendelen-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
-msgstr "Bijwerken gerelateerde opties:"
+msgstr "Bijwerken-gerelateerde opties:"
 
 #: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
@@ -1030,19 +1030,19 @@ msgstr "Versturen"
 
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
 msgid "Locked"
-msgstr "Vastgezet"
+msgstr "Vergrendeld"
 
 #: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
 msgid "Unlocked"
-msgstr "Vrijgegeven"
+msgstr "Ontgrendeld"
 
 #: ../tvp-svn-helper/tsh-common.c:553
 msgid "Lock failed"
-msgstr "Vastzetten mislukt"
+msgstr "Vergrendeling mislukt"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Unlock failed"
-msgstr "Vrijgeven mislukt"
+msgstr "Ontgrendeling mislukt"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Exists"
@@ -1431,7 +1431,7 @@ msgstr "Externe verbergen"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Check Repository"
-msgstr "Controleer Pakketbron"
+msgstr "Controleer pakketbron"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:57
 msgid "Certificate is not yet valid."
