@@ -59,6 +59,7 @@ static gpointer diff_thread (gpointer user_data)
   svn_client_ctx_t *ctx = args->ctx;
   apr_pool_t *subpool, *pool = args->pool;
   TshDiffDialog *dialog = args->dialog;
+  svn_depth_t depth = tsh_diff_dialog_get_depth(dialog);
   gchar **files = args->files;
   gint size, i;
   GtkWidget *error;
@@ -114,12 +115,12 @@ static gpointer diff_thread (gpointer user_data)
 
 #if CHECK_SVN_VERSION_S(1,6)
     if ((err = svn_client_diff4(NULL, path, &revision1, path, &revision2,
-                                NULL, svn_depth_infinity, FALSE,
+                                NULL, depth, FALSE,
                                 FALSE, FALSE, APR_LOCALE_CHARSET,
                                 outfile, errfile, NULL, ctx, subpool))) 
 #else /* CHECK_SVN_VERSION(1,7) */
     if ((err = svn_client_diff5(NULL, path, &revision1, path, &revision2,
-                                NULL, svn_depth_infinity, FALSE, FALSE,
+                                NULL, depth, FALSE, FALSE,
                                 FALSE, FALSE, FALSE, APR_LOCALE_CHARSET,
                                 outfile, errfile, NULL, ctx, subpool))) 
 #endif

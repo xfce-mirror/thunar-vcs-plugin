@@ -45,6 +45,8 @@ void       tsh_diff_dialog_add       (TshDiffDialog *dialog,
                                        gint len);
 void       tsh_diff_dialog_done      (TshDiffDialog *dialog);
 
+svn_depth_t tsh_diff_dialog_get_depth (TshDiffDialog *dialog);
+
 G_END_DECLS;
 
 #endif /* !__TSH_DIFF_DIALOG_H__ */

@@ -45,6 +45,7 @@ struct _TshDiffDialog
   GtkWidget *cancel;
   GtkWidget *refresh;
   gint current_line;
+  GtkWidget *depth;
 };
 
 struct _TshDiffDialogClass
@@ -87,6 +88,11 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   GtkWidget *scroll_window;
   GtkWidget *button;
   PangoFontDescription *font_desc;
+  GtkWidget *table;
+  GtkTreeModel *model;
+  GtkWidget *depth;
+  GtkCellRenderer *renderer;
+  GtkTreeIter iter;
 
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -131,6 +137,60 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
+
+  table = gtk_table_new (1, 1, FALSE);
+  model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
+  dialog->depth = depth = gtk_combo_box_new_with_model (model);
+
+  gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+  gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Self means only this file/direcotry is shown
+                         */
+                      0, _("Self"),
+                      1, svn_depth_empty,
+                      -1);
+
+  gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+  gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Immediate files means this file/direcotry and the files it contains are shown
+                         */
+                      0, _("Immediate files"),
+                      1, svn_depth_files,
+                      -1);
+
+  gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+  gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Immediates means this file/direcotry and the subdirectories are shown
+                         */
+                      0, _("Immediates"),
+                      1, svn_depth_immediates,
+                      -1);
+
+  gtk_list_store_append (GTK_LIST_STORE (model), &iter);
+  gtk_list_store_set (GTK_LIST_STORE (model), &iter,
+                        /* Translators: svn recursion selection
+                         * Recursive means the list is full recursive
+                         */
+                      0, _("Recursive"),
+                      1, svn_depth_infinity,
+                      -1);
+
+  gtk_combo_box_set_active_iter (GTK_COMBO_BOX (depth), &iter);
+
+  g_object_unref (model);
+
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_cell_layout_pack_start(GTK_CELL_LAYOUT (depth), renderer, TRUE);
+  gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (depth), renderer, "text", 0);
+
+  gtk_table_attach (GTK_TABLE (table), depth, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (depth);
+
+  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), table, FALSE, FALSE, 0);
+  gtk_widget_show (table);
 
   gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
 }
@@ -225,4 +285,28 @@ refresh_clicked(GtkButton *button, gpointer user_data)
   gtk_text_buffer_set_text(text_buffer, "", -1);
 
   g_signal_emit(dialog, signals[SIGNAL_REFRESH], 0);
+}
+
+svn_depth_t
+tsh_diff_dialog_get_depth (TshDiffDialog *dialog)
+{
+  GtkTreeModel *model;
+  GtkTreeIter iter;
+  svn_depth_t depth;
+  GValue value;
+
+  memset(&value, 0, sizeof(GValue));
+
+  g_return_val_if_fail (TSH_IS_DIFF_DIALOG (dialog), svn_depth_unknown);
+
+  g_return_val_if_fail (gtk_combo_box_get_active_iter (GTK_COMBO_BOX (dialog->depth), &iter), svn_depth_unknown);
+
+  model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->depth));
+  gtk_tree_model_get_value (model, &iter, 1, &value);
+
+  depth = g_value_get_int (&value);
+
+  g_value_unset(&value);
+
+  return depth;
 }
