@@ -47,6 +47,7 @@ struct _TshDiffDialog
   GtkWidget *refresh;
   gint current_line;
   GtkWidget *depth;
+  GtkWidget *no_diff_deleted;
 #if CHECK_SVN_VERSION_S(1,7)
   GtkWidget *show_copies_as_adds;
 #endif
@@ -95,6 +96,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   GtkWidget *table;
   GtkTreeModel *model;
   GtkWidget *depth;
+  GtkWidget *no_diff_deleted;
 #if CHECK_SVN_VERSION_S(1,7)
   GtkWidget *show_copies_as_adds;
 #endif
@@ -145,7 +147,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
 
-  table = gtk_table_new (2, 1, FALSE);
+  table = gtk_table_new (2, 2, FALSE);
   model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
   dialog->depth = depth = gtk_combo_box_new_with_model (model);
 
@@ -196,9 +198,13 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   gtk_table_attach (GTK_TABLE (table), depth, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (depth);
 
+  dialog->no_diff_deleted = no_diff_deleted = gtk_check_button_new_with_label (_("Do not show differences for deleted files"));
+  gtk_table_attach (GTK_TABLE (table), no_diff_deleted, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (no_diff_deleted);
+
 #if CHECK_SVN_VERSION_S(1,7)
   dialog->show_copies_as_adds = show_copies_as_adds = gtk_check_button_new_with_label (_("Show copies as additions"));
-  gtk_table_attach (GTK_TABLE (table), show_copies_as_adds, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_table_attach (GTK_TABLE (table), show_copies_as_adds, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (show_copies_as_adds);
 #endif
 
@@ -334,4 +340,12 @@ tsh_diff_dialog_get_show_copies_as_adds (TshDiffDialog *dialog)
 #else /* 1.6 or earlier */
   return FALSE;
 #endif
+}
+
+gboolean
+tsh_diff_dialog_get_no_diff_deleted (TshDiffDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_DIFF_DIALOG (dialog), FALSE);
+
+  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->no_diff_deleted));
 }
