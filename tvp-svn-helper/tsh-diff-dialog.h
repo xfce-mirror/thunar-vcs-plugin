@@ -48,6 +48,7 @@ void       tsh_diff_dialog_done      (TshDiffDialog *dialog);
 svn_depth_t tsh_diff_dialog_get_depth (TshDiffDialog *dialog);
 gboolean   tsh_diff_dialog_get_show_copies_as_adds (TshDiffDialog *dialog);
 gboolean   tsh_diff_dialog_get_no_diff_deleted (TshDiffDialog *dialog);
+gboolean   tsh_diff_dialog_get_notice_ancestry (TshDiffDialog *dialog);
 
 G_END_DECLS;
 

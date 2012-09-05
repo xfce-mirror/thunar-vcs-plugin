@@ -47,6 +47,7 @@ struct _TshDiffDialog
   GtkWidget *refresh;
   gint current_line;
   GtkWidget *depth;
+  GtkWidget *notice_ancestry;
   GtkWidget *no_diff_deleted;
 #if CHECK_SVN_VERSION_S(1,7)
   GtkWidget *show_copies_as_adds;
@@ -96,6 +97,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   GtkWidget *table;
   GtkTreeModel *model;
   GtkWidget *depth;
+  GtkWidget *notice_ancestry;
   GtkWidget *no_diff_deleted;
 #if CHECK_SVN_VERSION_S(1,7)
   GtkWidget *show_copies_as_adds;
@@ -197,6 +199,10 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
 
   gtk_table_attach (GTK_TABLE (table), depth, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (depth);
+
+  dialog->notice_ancestry = notice_ancestry = gtk_check_button_new_with_label (_("Notice ancestry"));
+  gtk_table_attach (GTK_TABLE (table), notice_ancestry, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_show (notice_ancestry);
 
   dialog->no_diff_deleted = no_diff_deleted = gtk_check_button_new_with_label (_("Do not show differences for deleted files"));
   gtk_table_attach (GTK_TABLE (table), no_diff_deleted, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
@@ -348,4 +354,12 @@ tsh_diff_dialog_get_no_diff_deleted (TshDiffDialog *dialog)
   g_return_val_if_fail (TSH_IS_DIFF_DIALOG (dialog), FALSE);
 
   return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->no_diff_deleted));
+}
+
+gboolean
+tsh_diff_dialog_get_notice_ancestry (TshDiffDialog *dialog)
+{
+  g_return_val_if_fail (TSH_IS_DIFF_DIALOG (dialog), FALSE);
+
+  return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->notice_ancestry));
 }

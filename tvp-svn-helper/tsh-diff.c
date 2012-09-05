@@ -60,8 +60,9 @@ static gpointer diff_thread (gpointer user_data)
   apr_pool_t *subpool, *pool = args->pool;
   TshDiffDialog *dialog = args->dialog;
   svn_depth_t depth = tsh_diff_dialog_get_depth(dialog);
-  svn_boolean_t show_copies_as_adds = tsh_diff_dialog_get_show_copies_as_adds(dialog);
+  svn_boolean_t notice_ancestry = tsh_diff_dialog_get_notice_ancestry(dialog);
   svn_boolean_t no_diff_deleted = tsh_diff_dialog_get_no_diff_deleted(dialog);
+  svn_boolean_t show_copies_as_adds = tsh_diff_dialog_get_show_copies_as_adds(dialog);
   gchar **files = args->files;
   gint size, i;
   GtkWidget *error;
@@ -117,12 +118,12 @@ static gpointer diff_thread (gpointer user_data)
 
 #if CHECK_SVN_VERSION_S(1,6)
     if ((err = svn_client_diff4(NULL, path, &revision1, path, &revision2,
-                                NULL, depth, FALSE,
+                                NULL, depth, !notice_ancestry,
                                 no_diff_deleted, FALSE, APR_LOCALE_CHARSET,
                                 outfile, errfile, NULL, ctx, subpool))) 
 #else /* CHECK_SVN_VERSION(1,7) */
     if ((err = svn_client_diff5(NULL, path, &revision1, path, &revision2,
-                                NULL, depth, FALSE, no_diff_deleted,
+                                NULL, depth, !notice_ancestry, no_diff_deleted,
                                 show_copies_as_adds, FALSE, FALSE, APR_LOCALE_CHARSET,
                                 outfile, errfile, NULL, ctx, subpool))) 
 #endif
