@@ -201,7 +201,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   gtk_widget_show (depth);
 
   dialog->notice_ancestry = notice_ancestry = gtk_check_button_new_with_label (_("Notice ancestry"));
-  gtk_table_attach (GTK_TABLE (table), notice_ancestry, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_table_attach (GTK_TABLE (table), notice_ancestry, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (notice_ancestry);
 
   dialog->no_diff_deleted = no_diff_deleted = gtk_check_button_new_with_label (_("Do not show differences for deleted files"));
@@ -210,7 +210,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
 
 #if CHECK_SVN_VERSION_S(1,7)
   dialog->show_copies_as_adds = show_copies_as_adds = gtk_check_button_new_with_label (_("Show copies as additions"));
-  gtk_table_attach (GTK_TABLE (table), show_copies_as_adds, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_table_attach (GTK_TABLE (table), show_copies_as_adds, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
   gtk_widget_show (show_copies_as_adds);
 #endif
 
