@@ -193,6 +193,7 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   {
     while (*files)
     {
+      svn_pool_clear(subpool);
 #if CHECK_SVN_VERSION(1,5)
       if((err = svn_client_status3(NULL, *files, &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
 #elif CHECK_SVN_VERSION(1,6)
