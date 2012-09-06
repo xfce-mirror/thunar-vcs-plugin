@@ -68,6 +68,7 @@ static gpointer add_thread (gpointer user_data)
       TshFileInfo *info = files->data;
       if (!(info->flags & TSH_FILE_INFO_INDIRECT))
       {
+        svn_pool_clear(subpool);
         if ((err = svn_client_add4(info->path, (info->flags&TSH_FILE_INFO_RECURSIVE)?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, FALSE, ctx, subpool)))
         {
           error_str = tsh_strerror(err);
