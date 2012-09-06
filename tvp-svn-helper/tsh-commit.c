@@ -106,6 +106,7 @@ static gpointer commit_thread (gpointer user_data)
             svn_error_clear(err);
             result = FALSE;//FIXME: needed ??
           }
+          svn_pool_clear(subpool);
           break;
         default:
           break;
