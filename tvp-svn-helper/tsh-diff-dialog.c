@@ -363,3 +363,12 @@ tsh_diff_dialog_get_notice_ancestry (TshDiffDialog *dialog)
 
   return gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (dialog->notice_ancestry));
 }
+
+void
+tsh_diff_dialog_start (TshDiffDialog *dialog)
+{
+  GtkTextBuffer *text_buffer;
+
+  text_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(dialog->text_view));
+  gtk_text_buffer_set_text(text_buffer, _("Loading..."), -1);
+}

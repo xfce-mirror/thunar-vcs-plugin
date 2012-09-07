@@ -40,6 +40,8 @@ GtkWidget* tsh_diff_dialog_new       (const gchar *title,
                                        GtkWindow *parent,
                                        GtkDialogFlags flags) G_GNUC_MALLOC G_GNUC_INTERNAL;
 
+void       tsh_diff_dialog_start     (TshDiffDialog *dialog);
+
 void       tsh_diff_dialog_add       (TshDiffDialog *dialog,
                                        const char *line,
                                        gint len);

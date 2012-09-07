@@ -71,6 +71,8 @@ static gpointer diff_thread (gpointer user_data)
 
   size = files?g_strv_length(files):0;
 
+  tsh_diff_dialog_start(dialog);
+
   subpool = svn_pool_create (pool);
 
   if(size)
