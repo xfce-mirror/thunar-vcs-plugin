@@ -259,8 +259,6 @@ tsh_diff_dialog_add (TshDiffDialog *dialog, const char *line, gint len)
   else if (strncmp(line, "Index", 5) == 0)
     tag = dialog->tag_bold;
 
-  gdk_threads_enter();
-
   text_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(dialog->text_view));
   gtk_text_buffer_get_iter_at_line(text_buffer, &line_start,
                                    dialog->current_line);
@@ -269,8 +267,6 @@ tsh_diff_dialog_add (TshDiffDialog *dialog, const char *line, gint len)
                                      tag, NULL);
   else
     gtk_text_buffer_insert(text_buffer, &line_start, line, len);
-
-  gdk_threads_leave();
 
   dialog->current_line++;
 }

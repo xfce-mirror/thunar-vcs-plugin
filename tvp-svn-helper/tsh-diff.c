@@ -160,7 +160,9 @@ static gpointer diff_thread (gpointer user_data)
         break;
 
       svn_stringbuf_appendcstr(buf, APR_EOL_STR);
+      gdk_threads_enter();
       tsh_diff_dialog_add(dialog, buf->data, buf->len);
+      gdk_threads_leave();
     }
     svn_pool_destroy(iterpool);
     err = svn_stream_close(stream);
