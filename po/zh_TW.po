@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-05 22:15+0000\n"
+"POT-Creation-Date: 2012-09-15 01:36+0000\n"
 "PO-Revision-Date: 2012-01-19 16:00+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
@@ -25,8 +25,8 @@ msgstr "增加"
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
-#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:118
-#: ../tvp-svn-helper/tsh-add.c:131
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
+#: ../tvp-svn-helper/tsh-add.c:132
 msgid "Add"
 msgstr "增加"
 
@@ -99,7 +99,7 @@ msgstr "提交"
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 #: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
-#: ../tvp-svn-helper/tsh-commit.c:240 ../tvp-svn-helper/tsh-commit.c:253
+#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "提交"
 
@@ -222,18 +222,16 @@ msgid "Show"
 msgstr "顯示"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:289
-#, fuzzy
 msgid "Menu|Stash"
-msgstr "貯藏"
+msgstr "暫存"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:256
-#, fuzzy
 msgid "Stash"
-msgstr "貯藏"
+msgstr "暫存"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
@@ -329,12 +327,10 @@ msgid "Import"
 msgstr "匯入"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
-#, fuzzy
 msgid "Menu|Info"
 msgstr "信息"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
-#, fuzzy
 msgid "Info"
 msgstr "信息"
 
@@ -661,14 +657,13 @@ msgid "Clone finished"
 msgstr "克隆動作完成"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-#, fuzzy
 msgid "Cloning ..."
 msgstr "正在克隆..."
 
-#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:75
-#: ../tvp-svn-helper/tsh-add.c:93 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:136
-#: ../tvp-svn-helper/tsh-commit.c:197 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
+#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
+#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
 #: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
 #: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
 #: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
@@ -968,7 +963,7 @@ msgstr "清理完成"
 msgid "Cleaning up ..."
 msgstr "正在清理..."
 
-#: ../tvp-svn-helper/tsh-commit.c:210 ../tvp-svn-helper/tsh-common.c:823
+#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
 #: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
 #: ../tvp-svn-helper/tsh-move.c:99
@@ -976,18 +971,18 @@ msgstr "正在清理..."
 msgid "At revision: %ld"
 msgstr "於修訂版本：%ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:215
+#: ../tvp-svn-helper/tsh-commit.c:216
 msgid "Nothing to do"
 msgstr "無事可作"
 
-#: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
 #: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
 #: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
 #: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
 msgid "Completed"
 msgstr "完成"
 
-#: ../tvp-svn-helper/tsh-commit.c:258
+#: ../tvp-svn-helper/tsh-commit.c:259
 msgid "Commit Message"
 msgstr "提交訊息"
 
