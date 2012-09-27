@@ -17,8 +17,9 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#, fuzzy
 msgid "Menu|Add"
-msgstr ""
+msgstr "Menü|Hozzáadás"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
@@ -31,11 +32,12 @@ msgstr "Hozzáad"
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 #, fuzzy
 msgid "Menu|Bisect"
-msgstr "SVN _Checkout"
+msgstr "Menü|Bisect"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
+#, fuzzy
 msgid "Bisect"
-msgstr ""
+msgstr "Bisect"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
@@ -50,61 +52,61 @@ msgid "Blame"
 msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
-#, fuzzy
 msgid "Menu|Branch"
-msgstr "Vált"
+msgstr "Menü|Ág"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:144
 #: ../tvp-git-helper/tgh-stash-dialog.c:167
 msgid "Branch"
-msgstr ""
+msgstr "Ág"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
 #, fuzzy
 msgid "Menu|Checkout"
-msgstr "SVN _Checkout"
+msgstr "Menü|Checkout"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:271
 #: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
 #, fuzzy
 msgid "Checkout"
-msgstr "SVN _Checkout"
+msgstr "Checkout"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
-#, fuzzy
 msgid "Menu|Clean"
-msgstr "Tisztít"
+msgstr "Menü|Tisztítás"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
-#, fuzzy
 msgid "Clean"
-msgstr "Tisztít"
+msgstr "Tisztítás"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272
 #, fuzzy
 msgid "Menu|Clone"
-msgstr "Kész"
+msgstr "Menü|Klónozás"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
+#, fuzzy
 msgid "Clone"
-msgstr ""
+msgstr "Klónozás"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#, fuzzy
 msgid "Menu|Commit"
-msgstr ""
+msgstr "Menü|Commit"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 #: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
+#, fuzzy
 msgid "Commit"
-msgstr ""
+msgstr "Commit"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
@@ -118,9 +120,8 @@ msgid "Diff"
 msgstr "Különbség"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
-#, fuzzy
 msgid "Menu|Fetch"
-msgstr "Vált"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
@@ -129,25 +130,27 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 #, fuzzy
 msgid "Menu|Grep"
-msgstr "Tisztít"
+msgstr "Menü|Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
+#, fuzzy
 msgid "Grep"
-msgstr ""
+msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 #, fuzzy
 msgid "Menu|Init"
-msgstr "Adatok"
+msgstr "Menü|Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
+#, fuzzy
 msgid "Init"
-msgstr ""
+msgstr "Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
 msgid "Menu|Log"
-msgstr ""
+msgstr "Menü|Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
@@ -157,14 +160,12 @@ msgid "Log"
 msgstr "Napló"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
-#, fuzzy
 msgid "Menu|Merge"
-msgstr "Töröl"
+msgstr "Menü|Egyesítés"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
-#, fuzzy
 msgid "Merge"
-msgstr "Töröl"
+msgstr "Egyesítés"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
