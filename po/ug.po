@@ -2,19 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Gheyret Kenji <gheyret@gmail.com>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-10 19:57+0000\n"
+"POT-Creation-Date: 2012-10-24 01:51+0000\n"
 "PO-Revision-Date: 2011-11-09 16:10+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -218,8 +218,7 @@ msgstr "كۆرسەت"
 msgid "Menu|Stash"
 msgstr "تىزىملىك|Stash"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:256
@@ -281,7 +280,7 @@ msgstr "تىزىملىك|تازىلا"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
 msgid "Cleanup"
-msgstr "تازىلا"
+msgstr "تازىلاش"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Copy"
@@ -308,7 +307,7 @@ msgstr "تىزىملىك|ئېكسپورت قىل"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
 msgid "Export"
-msgstr "ئېكسپورت قىل"
+msgstr "چىقار"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Import"
@@ -317,7 +316,7 @@ msgstr "تىزىملىك|ئىمپورت قىل"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
 #: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
 msgid "Import"
-msgstr "ئىمپورت قىل"
+msgstr "ئەكىر"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Menu|Info"
@@ -458,7 +457,7 @@ msgstr "چوڭقۇرلاش:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -466,29 +465,27 @@ msgstr "سىرتىدا"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "قۇرۇق"
 
 #. Translators: svn recursion depth infotmation
-#. * Files depth means this file/direcotry and all of it's files are checked
-#. out
-#. 
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "ھۆججەتلەر"
 
 #. Translators: svn recursion depth infotmation
-#. * Immediates depth means this file/direcotry and all of it's files and
-#. subdirectories are checked out
-#. 
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
+#.
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -496,9 +493,8 @@ msgid "Immediates"
 msgstr ""
 
 #. Translators: svn recursion depth infotmation
-#. * Infinity depth means this file/direcotry is checked out with full
-#. recursion
-#. 
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "چەكسىز"
@@ -892,8 +888,7 @@ msgstr "‹Lock› قا مۇناسىۋەتلىك تاللانمىلار:"
 msgid "Properties Related Options:"
 msgstr "‹Properties› قا مۇناسىۋەتلىك تاللانمىلار:"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
 #. gtk_widget_show (box);
 #: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:280
 msgid "Properties"
@@ -1068,7 +1063,7 @@ msgstr "سىرتقى بىرلەشتۈرۈشنى باشلاش"
 
 #: ../tvp-svn-helper/tsh-common.c:561
 msgid "Replace"
-msgstr "ئالماشتۇر"
+msgstr "ئالماشتۇرۇش"
 
 #: ../tvp-svn-helper/tsh-common.c:563
 msgid "Property added"
@@ -1354,23 +1349,21 @@ msgstr "قىممەت"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
+#.
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
+#.
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "ئۆزى"
 
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. updated
-#. 
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
 #. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. shown
-#. 
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1378,10 +1371,10 @@ msgstr ""
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
+#.
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
+#.
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
