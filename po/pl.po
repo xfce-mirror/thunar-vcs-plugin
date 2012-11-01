@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-01 13:09+0000\n"
+"POT-Creation-Date: 2012-11-01 23:51+0000\n"
 "PO-Revision-Date: 2009-04-06 11:57+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
@@ -88,7 +88,7 @@ msgstr "Menu|Klonowanie"
 #: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
-msgstr ""
+msgstr "Klonowanie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
@@ -588,7 +588,7 @@ msgstr ""
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
 msgid "Line"
-msgstr ""
+msgstr "Wiersz"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:96
 #: ../tvp-git-helper/tgh-log-dialog.c:134
@@ -619,11 +619,11 @@ msgstr "Nazwa"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:263
 msgid "Branch name:"
-msgstr ""
+msgstr "Nazwa ogałęzienia"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
-msgstr ""
+msgstr "Usuwa położenia"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
@@ -639,7 +639,7 @@ msgstr "Tylko pominięte pliki"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
-msgstr ""
+msgstr "Wymusza czyszczenie"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -665,7 +665,7 @@ msgstr "Nieudane"
 #: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:250
 msgid "untracked"
-msgstr ""
+msgstr "nieśledzone"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:93
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
@@ -712,7 +712,7 @@ msgstr "Przenoszenie ukończone"
 
 #: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
 msgid "Move To"
-msgstr ""
+msgstr "Przenosi do "
 
 #: ../tvp-git-helper/tgh-move.c:162
 msgid "Move ..."
@@ -726,7 +726,7 @@ msgstr "Akcja"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:107
 msgid "Notify"
-msgstr ""
+msgstr "Powiadamia"
 
 #: ../tvp-git-helper/tgh-reset.c:60
 msgid "Reset finished"
@@ -738,7 +738,7 @@ msgstr "Przywracanie ustawień..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:398
 msgid "Stash description:"
@@ -800,11 +800,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:152
 msgid "Execute copy action"
-msgstr ""
+msgstr "Wykonuje kopiowanie"
 
 #: ../tvp-svn-helper/main.c:158
 msgid "Execute delete action"
-msgstr ""
+msgstr "Wykonuje usuwanie"
 
 #: ../tvp-svn-helper/main.c:164
 msgid "Execute diff action"
@@ -1012,7 +1012,7 @@ msgstr "Zaktualizowany"
 #: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "External"
-msgstr ""
+msgstr "Zewnętrzne"
 
 #: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
 #: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
@@ -1046,7 +1046,7 @@ msgstr "Nie udało się odblokować"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Exists"
-msgstr ""
+msgstr "Istnieje"
 
 #: ../tvp-svn-helper/tsh-common.c:556
 msgid "Changelist set"
@@ -1070,7 +1070,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:561
 msgid "Replace"
-msgstr ""
+msgstr "Zamienia"
 
 #: ../tvp-svn-helper/tsh-common.c:563
 msgid "Property added"
@@ -1110,7 +1110,7 @@ msgstr "Zewnętrzne niepowodzenie"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
-msgstr ""
+msgstr "Rozpoczęte"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
@@ -1191,11 +1191,11 @@ msgstr "W konflikcie"
 #: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
 #: ../tvp-svn-helper/tsh-common.c:735
 msgid "Missing"
-msgstr ""
+msgstr "Brakujące"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "Out of date"
-msgstr ""
+msgstr "Przestarzałe"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "No parent"
@@ -1235,7 +1235,7 @@ msgstr "Niezgodność"
 
 #: ../tvp-svn-helper/tsh-common.c:701
 msgid "Source missing"
-msgstr ""
+msgstr "Brak źródła"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1253,7 +1253,7 @@ msgstr "Niekompletny"
 
 #: ../tvp-svn-helper/tsh-common.c:1082
 msgid "Error"
-msgstr ""
+msgstr "Błąd"
 
 #: ../tvp-svn-helper/tsh-common.c:1094
 msgid "Local action"
@@ -1265,11 +1265,11 @@ msgstr "Miejscowa kopia"
 
 #: ../tvp-svn-helper/tsh-copy.c:159
 msgid "Copy To"
-msgstr ""
+msgstr "Kopiowanie do"
 
 #: ../tvp-svn-helper/tsh-delete.c:118
 msgid "Local delete"
-msgstr ""
+msgstr "Usuwanie miejscowe"
 
 #: ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete Message"
@@ -1281,17 +1281,17 @@ msgstr "_Certyfikat:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:66
 msgid "Select a file"
-msgstr ""
+msgstr "Wybór pliku"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:77
 #: ../tvp-svn-helper/tsh-login-dialog.c:97
 #: ../tvp-svn-helper/tsh-trust-dialog.c:72
 msgid "Remember"
-msgstr ""
+msgstr "Zapamiętanie"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:85
 msgid "Certificate"
-msgstr ""
+msgstr "Certyfikat"
 
 #: ../tvp-svn-helper/tsh-import.c:138
 msgid "Import Message"
@@ -1319,7 +1319,7 @@ msgstr "_Hasło:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:105
 msgid "Login"
-msgstr ""
+msgstr "Logowanie"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:92
 msgid "State"
@@ -1363,7 +1363,7 @@ msgstr "Wartość"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
-msgstr ""
+msgstr "Samodzielnie"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
@@ -1403,11 +1403,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
-msgstr ""
+msgstr "_Z"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:142
 msgid "_To:"
-msgstr ""
+msgstr "_Do"
 
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
@@ -1427,7 +1427,7 @@ msgstr "Pliki ignorowane"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:235
 msgid "Hide Externals"
-msgstr ""
+msgstr "Ukrywa Zewnętrzne"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Check Repository"
@@ -1451,11 +1451,11 @@ msgstr "Nieznane upoważnienie certyfikatu."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:69
 msgid "Other failure."
-msgstr ""
+msgstr "Inne niepowodzenie."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:76
 msgid "Trust"
-msgstr ""
+msgstr "Zaufane"
 
 #~ msgid "Add finished"
 #~ msgstr "Zakończono porządkowanie"
