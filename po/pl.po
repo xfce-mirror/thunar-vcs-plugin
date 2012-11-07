@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-06 05:30+0000\n"
+"POT-Creation-Date: 2012-11-07 08:15+0000\n"
 "PO-Revision-Date: 2009-04-06 11:57+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
@@ -126,7 +126,7 @@ msgstr "Menu|Wyszukiwanie wyrażeń regularnych"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Grep"
-msgstr ""
+msgstr "Wyszukiwanie wyrażeń regularnych"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Menu|Init"
@@ -134,7 +134,7 @@ msgstr "Menu|Rozruch"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Init"
-msgstr ""
+msgstr "Inicjalizuj"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
@@ -173,7 +173,7 @@ msgstr "Menu|Przyciąganie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Pull"
-msgstr ""
+msgstr "Przyciąganie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Push"
@@ -181,7 +181,7 @@ msgstr "Menu|Popychanie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Push"
-msgstr ""
+msgstr "Popychanie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
@@ -344,17 +344,17 @@ msgstr "Edytuj właściwości..."
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Edit Properties"
-msgstr "Zmian właściwości"
+msgstr "Zmień właściwości"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
-msgstr ""
+msgstr "Menu | Przenieś"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:125
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:216
 msgid "Relocate"
-msgstr ""
+msgstr "Przenieś"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
@@ -385,12 +385,12 @@ msgstr "Cofanie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
-msgstr ""
+msgstr "Menu | Zamień"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
 #: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
 msgid "Switch"
-msgstr "Zmień"
+msgstr "Zamień"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439
 msgid "Menu|Unlock"
@@ -1181,7 +1181,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
-msgstr ""
+msgstr "Przekierowano URL"
 
 #: ../tvp-svn-helper/tsh-common.c:593
 msgid "Path nonexistent"
