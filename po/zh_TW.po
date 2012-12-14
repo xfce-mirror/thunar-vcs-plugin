@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-vcs-plugin master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-15 01:36+0000\n"
+"POT-Creation-Date: 2012-12-14 13:42+0000\n"
 "PO-Revision-Date: 2012-01-19 16:00+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
@@ -40,9 +40,8 @@ msgstr "分為二"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
-#, fuzzy
 msgid "Menu|Blame"
-msgstr "歸咎"
+msgstr "選單|歸咎"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
@@ -169,9 +168,8 @@ msgid "Move"
 msgstr "移動"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
-#, fuzzy
 msgid "Menu|Pull"
-msgstr "拉"
+msgstr "選單|拉"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 #, fuzzy
@@ -179,9 +177,8 @@ msgid "Pull"
 msgstr "拉"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
-#, fuzzy
 msgid "Menu|Push"
-msgstr "推"
+msgstr "選單|推"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 #, fuzzy
@@ -352,9 +349,8 @@ msgid "Edit Properties"
 msgstr "編輯屬性"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
-#, fuzzy
 msgid "Menu|Relocate"
-msgstr "重新定位"
+msgstr "選單|重新定位"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:125
