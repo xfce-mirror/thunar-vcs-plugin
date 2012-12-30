@@ -553,7 +553,7 @@ msgstr "Obtenir le statut"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
 msgid "Add Related Options:"
-msgstr "Ajouter des options :"
+msgstr "Ajouter des options liées :"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
 msgid "Blame Related Options:"
@@ -573,7 +573,7 @@ msgstr "Options liées à la journalisation :"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
-msgstr "Déplacer des options connexes :"
+msgstr "Déplacer des options liées :"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
@@ -585,7 +585,7 @@ msgstr "Options liées à un stash :"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
-msgstr "Situation des options connexes :"
+msgstr "Situation des options liées :"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -862,7 +862,7 @@ msgstr "Options liées au checkout :"
 
 #: ../tvp-svn-helper/main.c:275
 msgid "Cleanup Related Options:"
-msgstr "Nettoyage des options connexes :"
+msgstr "Nettoyage des options liées :"
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Commit Related Options:"
@@ -870,28 +870,27 @@ msgstr "Options liées au commit :"
 
 #: ../tvp-svn-helper/main.c:283
 msgid "Copy Related Options:"
-msgstr "Copier les options connexes :"
+msgstr "Copier les options liées :"
 
 #: ../tvp-svn-helper/main.c:287
 msgid "Delete Related Options:"
-msgstr "Supprimer des options connexes :"
+msgstr "Supprimer des options liées :"
 
 #: ../tvp-svn-helper/main.c:291
-#, fuzzy
 msgid "Diff Related Options:"
-msgstr "Options diff parent :"
+msgstr "Diff options liées :"
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
-msgstr "Exporter les options"
+msgstr "Exporter les options liées :"
 
 #: ../tvp-svn-helper/main.c:299
 msgid "Import Related Options:"
-msgstr "Importer les options :"
+msgstr "Importer les options liées :"
 
 #: ../tvp-svn-helper/main.c:303
 msgid "Lock Related Options:"
-msgstr "Vérrouiller les options connexes :"
+msgstr "Verrouiller les options liées :"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Properties Related Options:"
@@ -906,7 +905,7 @@ msgstr "Propriétés"
 
 #: ../tvp-svn-helper/main.c:319
 msgid "Resolved Related Options:"
-msgstr "Options connexes résolues :"
+msgstr "Options liées résolues :"
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Relocate Related Options:"
@@ -922,11 +921,11 @@ msgstr "Options liées au switch"
 
 #: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
-msgstr "Débloquer des options connexes :"
+msgstr "Déverrouiller des options liées :"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
-msgstr "Mise à jour des options connexes :"
+msgstr "Mise à jour des options liées :"
 
 #: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
