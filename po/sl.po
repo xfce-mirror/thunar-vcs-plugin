@@ -1,0 +1,1452 @@
+# Slovenian translation for thunar-vcs-plugin.
+# Copyright (C) 2013 The Xfce Development Team.
+# This file is distributed under the same license as the thunar-vcs-plugin package.
+#
+# Klemen Košir <klemen913@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: thunar-vcs-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-12 13:24+0000\n"
+"PO-Revision-Date: 2013-05-14 00:24+0100\n"
+"Last-Translator: Klemen Košir <klemen913@gmail.com>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+msgid "Menu|Add"
+msgstr "Dodaj"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
+#: ../tvp-svn-helper/tsh-add.c:132
+msgid "Add"
+msgstr "Dodaj datoteke"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Menu|Bisect"
+msgstr "Razpolovi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Bisect"
+msgstr "Razpolovi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+msgid "Menu|Blame"
+msgstr "Podrobnosti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
+msgid "Blame"
+msgstr "Podrobnosti sprememb"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
+msgid "Menu|Branch"
+msgstr "Razvejitev"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:144
+#: ../tvp-git-helper/tgh-stash-dialog.c:167
+msgid "Branch"
+msgstr "Razvejitev"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+msgid "Menu|Checkout"
+msgstr "Prevzemi skladišče"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
+msgid "Checkout"
+msgstr "Prevzemi skladišče"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+msgid "Menu|Clean"
+msgstr "Počisti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
+msgid "Clean"
+msgstr "Počisti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272
+msgid "Menu|Clone"
+msgstr "Kloniraj"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
+msgid "Clone"
+msgstr "Kloniraj skladišče"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid "Menu|Commit"
+msgstr "Uveljavi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
+msgid "Commit"
+msgstr "Uveljavi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+msgid "Menu|Diff"
+msgstr "Spremembe"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+msgid "Diff"
+msgstr "Spremembe"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Menu|Fetch"
+msgstr "Pridobi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Fetch"
+msgstr "Pridobi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Menu|Grep"
+msgstr "Najdi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Grep"
+msgstr "Najdi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Menu|Init"
+msgstr "Ustvari skladišče"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Init"
+msgstr "Ustvari skladišče"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+msgid "Menu|Log"
+msgstr "Dnevnik"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
+#: ../tvp-svn-helper/tsh-log-dialog.c:225
+msgid "Log"
+msgstr "Dnevnik"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Menu|Merge"
+msgstr "Združi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Merge"
+msgstr "Združi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+msgid "Menu|Move"
+msgstr "Premakni"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
+msgid "Move"
+msgstr "Premakni skladišče"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Menu|Pull"
+msgstr "Prejmi spremembe"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Pull"
+msgstr "Prejmi spremembe"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Menu|Push"
+msgstr "Objavi spremembe"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Push"
+msgstr "Objavi spremembe"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Menu|Rebase"
+msgstr "Ponovna izgradnja"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Rebase"
+msgstr "Ponovna izgradnja"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
+msgid "Menu|Reset"
+msgstr "Ponastavi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
+msgid "Reset"
+msgstr "Ponastavi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Menu|Remove"
+msgstr "Odstrani"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Remove"
+msgstr "Odstrani"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Menu|Show"
+msgstr "Pokaži"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Show"
+msgstr "Pokaži"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
+msgid "Menu|Stash"
+msgstr "Zaloge"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:256
+msgid "Stash"
+msgstr "Zaloge"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+msgid "Menu|Status"
+msgstr "Stanje"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-status-dialog.c:246
+msgid "Status"
+msgstr "Stanje"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Menu|Tag"
+msgstr "Oznake"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Tag"
+msgstr "Oznake"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#, c-format
+msgid "Action %s is unimplemented"
+msgstr "Dejanje %s ni podprto"
+
+#. append the svn submenu action
+#. Lets see if we are dealing with a working copy
+#: ../thunar-vcs-plugin/tvp-provider.c:464
+#: ../thunar-vcs-plugin/tvp-provider.c:530
+msgid "SVN"
+msgstr "SVN"
+
+#. append the git submenu action
+#: ../thunar-vcs-plugin/tvp-provider.c:495
+#: ../thunar-vcs-plugin/tvp-provider.c:537
+msgid "GIT"
+msgstr "GIT"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Menu|Changelist"
+msgstr "Seznam sprememb"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Changelist"
+msgstr "Seznam sprememb"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+msgid "Menu|Cleanup"
+msgstr "Počisti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
+msgid "Cleanup"
+msgstr "Počisti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Menu|Copy"
+msgstr "Kopiraj"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/tsh-copy.c:177
+msgid "Copy"
+msgstr "Kopiraj"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+msgid "Menu|Delete"
+msgstr "Izbriši"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
+msgid "Delete"
+msgstr "Izbriši"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Menu|Export"
+msgstr "Izvozi"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
+msgid "Export"
+msgstr "Izvoz"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+msgid "Menu|Import"
+msgstr "Uvozi"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
+#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
+msgid "Import"
+msgstr "Uvoz"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Menu|Info"
+msgstr "Podatki"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Info"
+msgstr "Podatki"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+msgid "Menu|Lock"
+msgstr "Zakleni"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:303
+#: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
+msgid "Lock"
+msgstr "Zakleni"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Menu|Edit Properties"
+msgstr "Lastnosti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Edit Properties"
+msgstr "Lastnosti"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+msgid "Menu|Relocate"
+msgstr "Preseli"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
+msgid "Relocate"
+msgstr "Preseli"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+msgid "Menu|Resolved"
+msgstr "Razrešeno"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-resolved.c:128
+msgid "Resolved"
+msgstr "Razrešeno"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Menu|Resolve"
+msgstr "Razreši"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Resolve"
+msgstr "Razreši"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+msgid "Menu|Revert"
+msgstr "Povrni"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
+msgid "Revert"
+msgstr "Povrni"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+msgid "Menu|Switch"
+msgstr "Spremeni vejo"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
+#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
+msgid "Switch"
+msgstr "Spremeni vejo"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+msgid "Menu|Unlock"
+msgstr "Odkleni"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:339
+#: ../tvp-svn-helper/tsh-unlock.c:113
+msgid "Unlock"
+msgstr "Odkleni"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+msgid "Menu|Update"
+msgstr "Posodobi"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
+#: ../tvp-svn-helper/tsh-update.c:120
+msgid "Update"
+msgstr "Posodobi skladišče"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
+msgid "URL:"
+msgstr "URL:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
+#: ../tvp-svn-helper/tsh-common.c:605 ../tvp-svn-helper/tsh-common.c:693
+#: ../tvp-svn-helper/tsh-common.c:705 ../tvp-svn-helper/tsh-common.c:730
+#: ../tvp-svn-helper/tsh-common.c:747 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:879
+msgid "Unknown"
+msgstr "Neznano"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
+msgid "Revision:"
+msgstr "Različica:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
+msgid "Repository:"
+msgstr "Skladišče:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+msgid "Modified revision:"
+msgstr "Različica spremembe:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
+msgid "Modified date:"
+msgstr "Datum spremembe:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
+msgid "Author:"
+msgstr "Avtor:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
+msgid "Changelist:"
+msgstr "Seznam sprememb:"
+
+#. Translators: Depth as in depth of recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
+msgid "Depth:"
+msgstr "Globina:"
+
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
+#: ../tvp-svn-helper/tsh-common.c:594
+msgid "Exclude"
+msgstr "Izloči"
+
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+msgid "Empty"
+msgstr "Prazno"
+
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked out
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
+msgid "Files"
+msgstr "Datoteke"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and subdirectories are checked out
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
+msgid "Immediates"
+msgstr "Neposredne datoteke"
+
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full recursion
+#.
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+msgid "Infinity"
+msgstr "Neskončno"
+
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
+msgid "Print version information"
+msgstr "Podatki o različici"
+
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
+msgid "Execute add action"
+msgstr "Dodaj datoteke v skladišče"
+
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
+msgid "Execute blame action"
+msgstr "Prikaži podrobnosti o spremembah med različicami"
+
+#: ../tvp-git-helper/main.c:99
+msgid "Execute branch action"
+msgstr "Razveji skladišče"
+
+#: ../tvp-git-helper/main.c:105
+msgid "Execute clean action"
+msgstr "Počisti skladišče"
+
+#: ../tvp-git-helper/main.c:111
+msgid "Execute clone action"
+msgstr "Kloniraj oddaljeno skladišče"
+
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
+msgid "Execute log action"
+msgstr "Prikaži dnevnik sprememb"
+
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
+msgid "Execute move action"
+msgstr "Premakni skladišče"
+
+#: ../tvp-git-helper/main.c:129
+msgid "Execute reset action"
+msgstr "Ponastavi skladišče"
+
+#: ../tvp-git-helper/main.c:135
+msgid "Execute stash action"
+msgstr "Ustvari ali spremeni zalogo"
+
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
+msgid "Execute status action"
+msgstr "Prikaži stanje skladišča"
+
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
+msgid "Add Related Options:"
+msgstr "Možnosti za dodajanje datotek:"
+
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
+msgid "Blame Related Options:"
+msgstr "Možnosti za prikaz podrobnosti sprememb v datotekah:"
+
+#: ../tvp-git-helper/main.c:161
+msgid "Branch Related Options:"
+msgstr "Možnosti za razvejitev skladišča:"
+
+#: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
+msgid "Clone Related Options:"
+msgstr "Možnosti za kloniranje skladišča:"
+
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
+msgid "Log Related Options:"
+msgstr "Možnosti za prikaz dnevnika:"
+
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
+msgid "Move Related Options:"
+msgstr "Možnosti za premikanje datotek:"
+
+#: ../tvp-git-helper/main.c:181
+msgid "Reset Related Options:"
+msgstr "Možnosti za ponastavitev datotek:"
+
+#: ../tvp-git-helper/main.c:185
+msgid "Stash Related Options:"
+msgstr "Možnosti za ustvaritev zaloge:"
+
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
+msgid "Status Related Options:"
+msgstr "Možnosti za preverjanje stanja:"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
+msgid "Line"
+msgstr "Vrstica"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
+msgid "Revision"
+msgstr "Različica"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
+msgid "Author"
+msgstr "Avtor"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
+msgid "Date"
+msgstr "Datum"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:116
+#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:125
+msgid "Name"
+msgstr "Ime"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:263
+msgid "Branch name:"
+msgstr "Ime veje:"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:56
+msgid "Remove directories."
+msgstr "Odstrani mape"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:68
+msgid "Exclude ignored files"
+msgstr "Izloči prezrte datoteke"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:76
+msgid "Include ignored files"
+msgstr "Vključi prezrte datoteke"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:82
+msgid "Only ignored files"
+msgstr "Samo prezrte datoteke"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:92
+msgid "Force clean."
+msgstr "Vsili čiščenje"
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr "Kloniranje skladišča je končano"
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning ..."
+msgstr "Kloniranje skladišča ..."
+
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
+#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
+#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
+#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
+#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:95
+msgid "Failed"
+msgstr "Napaka"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+msgid "untracked"
+msgstr "Nedodano"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "Pot"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+msgid "Select/Unselect all"
+msgstr "Izberi vse"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr "Datum"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr "Datum"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "Sporočilo"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-stash-dialog.c:197
+msgid "Changes"
+msgstr "Spremembe"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-stash-dialog.c:204
+msgid "File"
+msgstr "Datoteka"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "Premikanje je končano"
+
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+msgid "Move To"
+msgstr "Premakni v"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move ..."
+msgstr "Premakni ..."
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "Dejanje"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr "Obvestilo"
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "Ponastavitev je končana"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset ..."
+msgstr "Ponastavi ..."
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:173
+msgid "Description"
+msgstr "Opis"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:398
+msgid "Stash description:"
+msgstr "Opis zaloge:"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:534
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr "Ali ste prepričani, da želite odstraniti zalogo \"%s\"?"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:562
+msgid "Are you sure you want to clear all stash?"
+msgstr "Ali ste prepričani, da želite odstraniti vse zaloge?"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
+msgid "_Repository:"
+msgstr "_Skladišče:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:75
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
+msgid "Select a folder"
+msgstr "Izberite mapo"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
+msgid "_Directory:"
+msgstr "_Mapa:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:122
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
+msgid "Transfer"
+msgstr "Prenos"
+
+#: ../tvp-svn-helper/main.c:128
+msgid "Execute changelist action"
+msgstr "Prikaži seznam sprememb skladišča"
+
+#: ../tvp-svn-helper/main.c:134
+msgid "Execute checkout action"
+msgstr "Prevzemi skladišče"
+
+#: ../tvp-svn-helper/main.c:140
+msgid "Execute cleanup action"
+msgstr "Počisti krajevno skladišče"
+
+#: ../tvp-svn-helper/main.c:146
+msgid "Execute commit action"
+msgstr "Uveljavi kodo na skladišču"
+
+#: ../tvp-svn-helper/main.c:152
+msgid "Execute copy action"
+msgstr "Kopiraj datoteke"
+
+#: ../tvp-svn-helper/main.c:158
+msgid "Execute delete action"
+msgstr "Izbriše datoteke"
+
+#: ../tvp-svn-helper/main.c:164
+msgid "Execute diff action"
+msgstr "Prikaži spremembe v datotekah med posameznimi različicami"
+
+#: ../tvp-svn-helper/main.c:170
+msgid "Execute export action"
+msgstr "Izvozi datoteke iz skladišča"
+
+#: ../tvp-svn-helper/main.c:176
+msgid "Execute import action"
+msgstr "Uvozi datoteke v skladišče"
+
+#: ../tvp-svn-helper/main.c:182
+msgid "Execute lock action"
+msgstr "Zakleni datoteke"
+
+#: ../tvp-svn-helper/main.c:200
+msgid "Execute properties action"
+msgstr "Spremeni lastnosti skladišča in datotek"
+
+#: ../tvp-svn-helper/main.c:206
+msgid "Execute resolved action"
+msgstr "Razreši spore v datotekah"
+
+#: ../tvp-svn-helper/main.c:212
+msgid "Execute relocate action"
+msgstr "Preseli skladišče"
+
+#: ../tvp-svn-helper/main.c:218
+msgid "Execute revert action"
+msgstr "Povrni stanje datoteke ali skladišča"
+
+#: ../tvp-svn-helper/main.c:230
+msgid "Execute switch action"
+msgstr "Spremeni trenutno vejo"
+
+#: ../tvp-svn-helper/main.c:236
+msgid "Execute unlock action"
+msgstr "Odkleni datoteke"
+
+#: ../tvp-svn-helper/main.c:242
+msgid "Execute update action"
+msgstr "Posodobi krajevno skladišče"
+
+#: ../tvp-svn-helper/main.c:267
+msgid "Changelist Related Options:"
+msgstr "Možnosti za prikaz dnevnika sprememb:"
+
+#: ../tvp-svn-helper/main.c:271
+msgid "Checkout Related Options:"
+msgstr "Možnosti za prevzem skladišča:"
+
+#: ../tvp-svn-helper/main.c:275
+msgid "Cleanup Related Options:"
+msgstr "Možnosti za čiščenje skladišča:"
+
+#: ../tvp-svn-helper/main.c:279
+msgid "Commit Related Options:"
+msgstr "Možnosti za uveljavljanje sprememb:"
+
+#: ../tvp-svn-helper/main.c:283
+msgid "Copy Related Options:"
+msgstr "Možnosti za kopiranje datotek:"
+
+#: ../tvp-svn-helper/main.c:287
+msgid "Delete Related Options:"
+msgstr "Možnosti za brisanje datotek:"
+
+#: ../tvp-svn-helper/main.c:291
+msgid "Diff Related Options:"
+msgstr "Možnosti za primerjanje sprememb v datotekah:"
+
+#: ../tvp-svn-helper/main.c:295
+msgid "Export Related Options:"
+msgstr "Možnosti za izvoz datotek:"
+
+#: ../tvp-svn-helper/main.c:299
+msgid "Import Related Options:"
+msgstr "Možnosti za uvoz datotek:"
+
+#: ../tvp-svn-helper/main.c:303
+msgid "Lock Related Options:"
+msgstr "Možnosti za zaklepanje datotek:"
+
+#: ../tvp-svn-helper/main.c:315
+msgid "Properties Related Options:"
+msgstr "Možnosti za spreminjanje lastnosti:"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
+#. gtk_widget_show (box);
+#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:280
+msgid "Properties"
+msgstr "Lastnosti"
+
+#: ../tvp-svn-helper/main.c:319
+msgid "Resolved Related Options:"
+msgstr "Možnosti za razreševanje sporov:"
+
+#: ../tvp-svn-helper/main.c:323
+msgid "Relocate Related Options:"
+msgstr "Možnosti za preselitev skladišča:"
+
+#: ../tvp-svn-helper/main.c:327
+msgid "Revert Related Options:"
+msgstr "Možnosti za povrnitev datotek:"
+
+#: ../tvp-svn-helper/main.c:335
+msgid "Switch Related Options:"
+msgstr "Možnosti za spreminjanje veje:"
+
+#: ../tvp-svn-helper/main.c:339
+msgid "Unlock Related Options:"
+msgstr "Možnosti za odklepanje datotek:"
+
+#: ../tvp-svn-helper/main.c:343
+msgid "Update Related Options:"
+msgstr "Možnosti za posodabljanje skladišča:"
+
+#: ../tvp-svn-helper/main.c:386
+msgid "Not enough arguments provided"
+msgstr "Podanih je premalo argumentov"
+
+#: ../tvp-svn-helper/tsh-blame.c:82
+msgid "Blame failed"
+msgstr "Podrobnosti sprememb ni mogoče odpreti"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:68
+msgid "Cleanup failed"
+msgstr "Čiščenje je spodletelo"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:83
+msgid "Cleanup finished"
+msgstr "Čiščenje je končano"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:97
+msgid "Cleaning up ..."
+msgstr "Čiščenje ..."
+
+#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
+#: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
+#: ../tvp-svn-helper/tsh-move.c:99
+#, c-format
+msgid "At revision: %ld"
+msgstr "Trenutna različica: %ld"
+
+#: ../tvp-svn-helper/tsh-commit.c:216
+msgid "Nothing to do"
+msgstr "Ni sprememb"
+
+#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
+#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
+#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
+msgid "Completed"
+msgstr "Končano"
+
+#: ../tvp-svn-helper/tsh-commit.c:259
+msgid "Commit Message"
+msgstr "Sporočilo"
+
+#: ../tvp-svn-helper/tsh-common.c:291
+msgid "Store password a plaintext?"
+msgstr "Ali želite geslo shraniti v besedilni datoteki?"
+
+#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
+#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
+#: ../tvp-svn-helper/tsh-common.c:781 ../tvp-svn-helper/tsh-common.c:885
+msgid "Added"
+msgstr "Dodano"
+
+#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:894
+msgid "Copied"
+msgstr "Kopirano"
+
+#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:736
+#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:887
+msgid "Deleted"
+msgstr "Izbrisano"
+
+#: ../tvp-svn-helper/tsh-common.c:533
+msgid "Restored"
+msgstr "Obnovljeno"
+
+#: ../tvp-svn-helper/tsh-common.c:534
+msgid "Reverted"
+msgstr "Povrnjeno"
+
+#: ../tvp-svn-helper/tsh-common.c:535
+msgid "Revert failed"
+msgstr "Povrnitev je spodletela"
+
+#: ../tvp-svn-helper/tsh-common.c:537
+msgid "Skipped"
+msgstr "Prezrto"
+
+#: ../tvp-svn-helper/tsh-common.c:540
+msgid "Updated"
+msgstr "Posodobljeno"
+
+#: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:743
+msgid "External"
+msgstr "Zunanja datoteka"
+
+#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
+#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
+msgid "Modified"
+msgstr "Spremenjeno"
+
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:737
+#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:883
+msgid "Replaced"
+msgstr "Zamenjano"
+
+#: ../tvp-svn-helper/tsh-common.c:549
+msgid "Transmitting"
+msgstr "Pošiljanje"
+
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
+msgid "Locked"
+msgstr "Zaklenjeno"
+
+#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
+msgid "Unlocked"
+msgstr "Odklenjeno"
+
+#: ../tvp-svn-helper/tsh-common.c:553
+msgid "Lock failed"
+msgstr "Datoteke ni mogoče zakleniti"
+
+#: ../tvp-svn-helper/tsh-common.c:554
+msgid "Unlock failed"
+msgstr "Datoteke ni mogoče odkleniti"
+
+#: ../tvp-svn-helper/tsh-common.c:555
+msgid "Exists"
+msgstr "Že obstaja"
+
+#: ../tvp-svn-helper/tsh-common.c:556
+msgid "Changelist set"
+msgstr "Dnevnik sprememb je bil nastavljen"
+
+#: ../tvp-svn-helper/tsh-common.c:557
+msgid "Changelist cleared"
+msgstr "Seznam sprememb je bil počiščen"
+
+#: ../tvp-svn-helper/tsh-common.c:558
+msgid "Changelist moved"
+msgstr "Seznam sprememb je bil premaknjen"
+
+#: ../tvp-svn-helper/tsh-common.c:559
+msgid "Merge begin"
+msgstr "Združevanje se je začelo"
+
+#: ../tvp-svn-helper/tsh-common.c:560
+msgid "Foreign merge begin"
+msgstr "Združevanje s tujim skladiščem se je začelo"
+
+#: ../tvp-svn-helper/tsh-common.c:561
+msgid "Replace"
+msgstr "Zamenjaj"
+
+#: ../tvp-svn-helper/tsh-common.c:563
+msgid "Property added"
+msgstr "Lastnost je bila dodana"
+
+#: ../tvp-svn-helper/tsh-common.c:564
+msgid "Property modified"
+msgstr "Lastnost je bila spremenjena"
+
+#: ../tvp-svn-helper/tsh-common.c:565
+msgid "Property deleted"
+msgstr "Lastnost je bila izbrisana"
+
+#: ../tvp-svn-helper/tsh-common.c:566
+msgid "Property nonexisting"
+msgstr "Lastnost ne obstaja"
+
+#: ../tvp-svn-helper/tsh-common.c:567
+msgid "Revision property set"
+msgstr "Lastnost različice je bila nastavljena"
+
+#: ../tvp-svn-helper/tsh-common.c:568
+msgid "Revision property deleted"
+msgstr "Lastnost različice je bila izbrisana"
+
+#: ../tvp-svn-helper/tsh-common.c:569
+msgid "Merge completed"
+msgstr "Združitev je končana"
+
+#: ../tvp-svn-helper/tsh-common.c:570
+msgid "Tree conflict"
+msgstr "Spor v drevesu"
+
+#: ../tvp-svn-helper/tsh-common.c:571
+msgid "External failed"
+msgstr "Zunanjih datotek ni mogoče odstraniti"
+
+#: ../tvp-svn-helper/tsh-common.c:574
+msgid "Started"
+msgstr "Začetek"
+
+#: ../tvp-svn-helper/tsh-common.c:575
+msgid "Skipped obstruction"
+msgstr "Ovirane datoteke so bile preskočene"
+
+#: ../tvp-svn-helper/tsh-common.c:576
+msgid "Skipped working only"
+msgstr "Trenutno dejavne datoteke so bile preskočene"
+
+#: ../tvp-svn-helper/tsh-common.c:577
+msgid "Skipped access denied"
+msgstr "Datoteke, do katerih ni mogoče dostopati, so bile preskočene"
+
+#: ../tvp-svn-helper/tsh-common.c:578
+msgid "External removed"
+msgstr "Zunanje datoteke so bile odstranjene"
+
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Shadowed add"
+msgstr "Skrito dodajanje je bilo uspešno izvedeno"
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Shadowed update"
+msgstr "Skrita posodobitev je bila uspešno izvedena"
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Shadowed delete"
+msgstr "Skriti izbris je bil uspešno izveden"
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Merge record info"
+msgstr "Združi zapise"
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "Upgraded path"
+msgstr "Pot je bila posodobljena"
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Merge record info begin"
+msgstr "Združevanje zapisov se je začelo"
+
+#: ../tvp-svn-helper/tsh-common.c:585
+msgid "Merge elide info"
+msgstr "Združi podatke"
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Patch"
+msgstr "Popravek"
+
+#: ../tvp-svn-helper/tsh-common.c:587
+msgid "Applied hunk"
+msgstr "Kos je bil uveljavljen"
+
+#: ../tvp-svn-helper/tsh-common.c:588
+msgid "Rejected hunk"
+msgstr "Kos je bil zavrnjen"
+
+#: ../tvp-svn-helper/tsh-common.c:589
+msgid "Hunk already applied"
+msgstr "Kos je bil že uveljavljen"
+
+#: ../tvp-svn-helper/tsh-common.c:591
+msgid "Copied replaced"
+msgstr "Zamenjane datoteke so bile kopirane"
+
+#: ../tvp-svn-helper/tsh-common.c:592
+msgid "URL redirect"
+msgstr "Preusmeritev naslova URL"
+
+#: ../tvp-svn-helper/tsh-common.c:593
+msgid "Path nonexistent"
+msgstr "Pot ne obstaja"
+
+#: ../tvp-svn-helper/tsh-common.c:595
+msgid "Conflict"
+msgstr "Sporno"
+
+#: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
+#: ../tvp-svn-helper/tsh-common.c:735
+msgid "Missing"
+msgstr "Manjkajoče"
+
+#: ../tvp-svn-helper/tsh-common.c:597
+msgid "Out of date"
+msgstr "Zastarelo"
+
+#: ../tvp-svn-helper/tsh-common.c:598
+msgid "No parent"
+msgstr "Datoteka nima nadrejene mape"
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Forbidden by server"
+msgstr "Strežnik prepoveduje dejanje"
+
+#: ../tvp-svn-helper/tsh-common.c:601
+msgid "Skipped conflicted"
+msgstr "Sporne datoteke so bile preskočene"
+
+#: ../tvp-svn-helper/tsh-common.c:692
+msgid "Inapplicable"
+msgstr "Neustrezno"
+
+#: ../tvp-svn-helper/tsh-common.c:694
+msgid "Unchanged"
+msgstr "Nespremenjeno"
+
+#: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
+msgid "Obstructed"
+msgstr "Ovirano"
+
+#: ../tvp-svn-helper/tsh-common.c:697
+msgid "Changed"
+msgstr "Spremenjeno"
+
+#: ../tvp-svn-helper/tsh-common.c:698 ../tvp-svn-helper/tsh-common.c:739
+msgid "Merged"
+msgstr "Združeno"
+
+#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
+msgid "Conflicted"
+msgstr "Sporno"
+
+#: ../tvp-svn-helper/tsh-common.c:701
+msgid "Source missing"
+msgstr "Manjka vir"
+
+#. N_("None"),
+#. N_("Unversioned"),
+#: ../tvp-svn-helper/tsh-common.c:733
+msgid "Normal"
+msgstr "Običajno"
+
+#: ../tvp-svn-helper/tsh-common.c:741
+msgid "Ignored"
+msgstr "Prezrto"
+
+#: ../tvp-svn-helper/tsh-common.c:744
+msgid "Incomplete"
+msgstr "Nepopolno"
+
+#: ../tvp-svn-helper/tsh-common.c:1082
+msgid "Error"
+msgstr "Napaka"
+
+#: ../tvp-svn-helper/tsh-common.c:1094
+msgid "Local action"
+msgstr "Krajevno dejanje"
+
+#: ../tvp-svn-helper/tsh-copy.c:112
+msgid "Local copy"
+msgstr "Krajevna kopija"
+
+#: ../tvp-svn-helper/tsh-copy.c:159
+msgid "Copy To"
+msgstr "Kopiraj v"
+
+#: ../tvp-svn-helper/tsh-delete.c:118
+msgid "Local delete"
+msgstr "Krajevni izbris"
+
+#: ../tvp-svn-helper/tsh-delete.c:158
+msgid "Delete Message"
+msgstr "Izbriši sporočilo"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:59
+msgid "_Certificate:"
+msgstr "_Potrdilo:"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:66
+msgid "Select a file"
+msgstr "Izberite datoteko"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-login-dialog.c:97
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+msgid "Remember"
+msgstr "Zapomni si podatke"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:85
+msgid "Certificate"
+msgstr "Potrdilo"
+
+#: ../tvp-svn-helper/tsh-import.c:138
+msgid "Import Message"
+msgstr "Uvozi sporočilo"
+
+#: ../tvp-svn-helper/tsh-log.c:123
+msgid "Log failed"
+msgstr "Dnevnika ni mogoče odpreti"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr "Zaustavi ob kopiji"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:218
+msgid "Show Merged Revisions"
+msgstr "Pokaži združene različice"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:64
+msgid "_Username:"
+msgstr "_Uporabniško ime:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:80
+msgid "_Password:"
+msgstr "_Geslo:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:105
+msgid "Login"
+msgstr "Prijava"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+msgid "State"
+msgstr "Stanje"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+msgid "Log Message"
+msgstr "Sporočilo"
+
+#: ../tvp-svn-helper/tsh-move.c:104
+msgid "Local move"
+msgstr "Krajevni premik"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
+msgid "Mime type"
+msgstr "Vrsta MIME"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
+msgid "Notification"
+msgstr "Obvestilo"
+
+#. tsh_properties_dialog_done (dialog);
+#: ../tvp-svn-helper/tsh-properties.c:94
+msgid "Set property failed"
+msgstr "Lastnosti ni mogoče nastaviti"
+
+#: ../tvp-svn-helper/tsh-properties.c:117
+msgid "Properties failed"
+msgstr "Lastnosti ni mogoče prikazati"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:131
+msgid "Value"
+msgstr "Vrednost"
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#.
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr "Trenutna datoteka/mapa"
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are updated
+#.
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are shown
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr "Neposredne datoteke"
+
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#.
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#.
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Rekurzivno"
+
+#: ../tvp-svn-helper/tsh-relocate.c:78
+msgid "Relocate failed"
+msgstr "Skladišča ni mogoče preseliti"
+
+#: ../tvp-svn-helper/tsh-relocate.c:93
+msgid "Relocate finished"
+msgstr "Skladišče je bilo uspešno prestavljeno"
+
+#: ../tvp-svn-helper/tsh-relocate.c:139
+msgid "Relocating ..."
+msgstr "Preseljevanje ..."
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
+msgid "_From:"
+msgstr "_Iz:"
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
+msgid "_To:"
+msgstr "_V:"
+
+#: ../tvp-svn-helper/tsh-status.c:91
+msgid "Status failed"
+msgstr "Stanja ni mogoče prikazati"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:223
+msgid "Show Unmodified Files"
+msgstr "Pokaži nespremenjene datoteke"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:227
+msgid "Show Unversioned Files"
+msgstr "Pokaži nedodane datoteke"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:231
+msgid "Show Ignored Files"
+msgstr "Pokaži prezrte datoteke"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:235
+msgid "Hide Externals"
+msgstr "Skrij zunanje datoteke"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
+msgid "Check Repository"
+msgstr "Preveri skladišče"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:57
+msgid "Certificate is not yet valid."
+msgstr "Potrdilo še ni veljavno."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+msgid "Certificate has expired."
+msgstr "Potrdilo je preteklo."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+msgid "Certificate does not match the remote hostname."
+msgstr "Potrdilo se ne ujema z imenom oddaljenega strežnika."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+msgid "Certificate authority is unknown."
+msgstr "Overitelj potrdil je neznan."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+msgid "Other failure."
+msgstr "Prišlo je do napake."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:76
+msgid "Trust"
+msgstr "Potrdila"
