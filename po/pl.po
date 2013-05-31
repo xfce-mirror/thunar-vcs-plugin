@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: thunar-svn-plugin 0.0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-07 08:15+0000\n"
+"POT-Creation-Date: 2013-05-31 16:24+0000\n"
 "PO-Revision-Date: 2009-04-06 11:57+0100\n"
 "Last-Translator: Piotr Sokół <piotr.sokol@10g.pl>\n"
 "Language-Team: Polish\n"
@@ -781,7 +781,6 @@ msgstr "_Katalog:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:122
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:155
-#, fuzzy
 msgid "Transfer"
 msgstr "Transfer"
 
@@ -972,8 +971,9 @@ msgid "Commit Message"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:291
+#, fuzzy
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Zapisać hasło w formie niezaszyfrowanej?"
 
 #: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
 #: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
@@ -1029,7 +1029,7 @@ msgstr "Zamieniono"
 
 #: ../tvp-svn-helper/tsh-common.c:549
 msgid "Transmitting"
-msgstr ""
+msgstr "Wysyłanie"
 
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
 msgid "Locked"
@@ -1161,7 +1161,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
-msgstr ""
+msgstr "Ścieżka"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
