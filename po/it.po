@@ -7,13 +7,14 @@
 # Carmine Diego Principe <cdprincipe@gmail.com>, 2013
 # cri <cri.penta@gmail.com>, 2011
 # edmael <edoardo.elidoro@gmail.com>, 2013
+# winebar <vs.winebar@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-07-11 10:29+0000\n"
-"Last-Translator: andreazube <andreazuben@gmail.com>\n"
+"PO-Revision-Date: 2013-07-11 12:25+0000\n"
+"Last-Translator: winebar <vs.winebar@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/xfce/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -442,7 +443,7 @@ msgstr "Repository:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
 msgid "Modified revision:"
-msgstr ""
+msgstr "Revisione modificata:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
 msgid "Modified date:"
@@ -998,11 +999,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:534
 msgid "Reverted"
-msgstr ""
+msgstr "Repristinato"
 
 #: ../tvp-svn-helper/tsh-common.c:535
 msgid "Revert failed"
-msgstr ""
+msgstr "Ripristino fallito"
 
 #: ../tvp-svn-helper/tsh-common.c:537
 msgid "Skipped"
@@ -1149,7 +1150,7 @@ msgstr "Informazioni sull'unione"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Upgraded path"
-msgstr ""
+msgstr "Percorso aggiornato"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
@@ -1272,7 +1273,7 @@ msgstr "Copia in"
 
 #: ../tvp-svn-helper/tsh-delete.c:118
 msgid "Local delete"
-msgstr ""
+msgstr "Elimina localmente"
 
 #: ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete Message"
