@@ -1,20 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Walter Cheuk <wwycheuk@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-vcs-plugin master\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-14 13:42+0000\n"
-"PO-Revision-Date: 2012-01-19 16:00+0800\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
-"Language-Team: chinese-l10n <chinese-l10n@googlegroups.com>\n"
+"POT-Creation-Date: 2013-07-03 20:11+0200\n"
+"PO-Revision-Date: 2013-10-12 14:19+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/xfce/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
+"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
@@ -47,9 +48,8 @@ msgstr "選單|歸咎"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
 #: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
-#, fuzzy
 msgid "Blame"
-msgstr "歸咎"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Branch"
@@ -172,7 +172,6 @@ msgid "Menu|Pull"
 msgstr "選單|拉"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
-#, fuzzy
 msgid "Pull"
 msgstr "拉"
 
@@ -181,7 +180,6 @@ msgid "Menu|Push"
 msgstr "選單|推"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
-#, fuzzy
 msgid "Push"
 msgstr "推"
 
@@ -355,9 +353,8 @@ msgstr "選單|重新定位"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:125
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:216
-#, fuzzy
 msgid "Relocate"
-msgstr "重新定位"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
@@ -517,9 +514,8 @@ msgid "Execute add action"
 msgstr "執行加入動作"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
-#, fuzzy
 msgid "Execute blame action"
-msgstr "執行歸咎動作"
+msgstr ""
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
@@ -546,9 +542,8 @@ msgid "Execute reset action"
 msgstr "執行重設動作"
 
 #: ../tvp-git-helper/main.c:135
-#, fuzzy
 msgid "Execute stash action"
-msgstr "執行貯藏動作"
+msgstr ""
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
 msgid "Execute status action"
@@ -583,9 +578,8 @@ msgid "Reset Related Options:"
 msgstr "重設動作相關選項："
 
 #: ../tvp-git-helper/main.c:185
-#, fuzzy
 msgid "Stash Related Options:"
-msgstr "貯藏動作相關選項："
+msgstr ""
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
@@ -648,9 +642,8 @@ msgid "Force clean."
 msgstr "強迫清理。"
 
 #: ../tvp-git-helper/tgh-clone.c:60
-#, fuzzy
 msgid "Clone finished"
-msgstr "克隆動作完成"
+msgstr ""
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning ..."
@@ -691,9 +684,8 @@ msgid "Select/Unselect all"
 msgstr "全選/全部不選"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:146
-#, fuzzy
 msgid "AuthorDate"
-msgstr "編寫日期"
+msgstr ""
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
@@ -749,9 +741,8 @@ msgid "Description"
 msgstr "描述"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:398
-#, fuzzy
 msgid "Stash description:"
-msgstr "貯藏描述："
+msgstr ""
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
@@ -759,9 +750,8 @@ msgid "Are you sure you want to drop %s?"
 msgstr "您確定要放棄 %s 嗎？"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
-#, fuzzy
 msgid "Are you sure you want to clear all stash?"
-msgstr "您確定要清除所有貯藏嗎？"
+msgstr ""
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:81
@@ -817,9 +807,8 @@ msgid "Execute delete action"
 msgstr "執行刪除動作"
 
 #: ../tvp-svn-helper/main.c:164
-#, fuzzy
 msgid "Execute diff action"
-msgstr "執行加入動作"
+msgstr ""
 
 #: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
@@ -838,9 +827,8 @@ msgid "Execute properties action"
 msgstr "執行屬性動作"
 
 #: ../tvp-svn-helper/main.c:206
-#, fuzzy
 msgid "Execute resolved action"
-msgstr "執行已解決的動作"
+msgstr ""
 
 #: ../tvp-svn-helper/main.c:212
 msgid "Execute relocate action"
@@ -887,9 +875,8 @@ msgid "Delete Related Options:"
 msgstr "刪除動作相關選項："
 
 #: ../tvp-svn-helper/main.c:291
-#, fuzzy
 msgid "Diff Related Options:"
-msgstr "添加動作相關選項："
+msgstr ""
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
@@ -943,9 +930,8 @@ msgid "Not enough arguments provided"
 msgstr "提供的引數不足"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
-#, fuzzy
 msgid "Blame failed"
-msgstr "歸咎失敗"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
@@ -1063,9 +1049,8 @@ msgid "Exists"
 msgstr "存在"
 
 #: ../tvp-svn-helper/tsh-common.c:556
-#, fuzzy
 msgid "Changelist set"
-msgstr "更新列表已設定"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:557
 msgid "Changelist cleared"
@@ -1104,9 +1089,8 @@ msgid "Property nonexisting"
 msgstr "屬性不存在"
 
 #: ../tvp-svn-helper/tsh-common.c:567
-#, fuzzy
 msgid "Revision property set"
-msgstr "校訂屬性設定"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:568
 msgid "Revision property deleted"
@@ -1137,38 +1121,32 @@ msgid "Skipped working only"
 msgstr "僅已跳過正在工作中的"
 
 #: ../tvp-svn-helper/tsh-common.c:577
-#, fuzzy
 msgid "Skipped access denied"
-msgstr "已跳過訪問拒絕"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:578
-#, fuzzy
 msgid "External removed"
-msgstr "外部已刪除"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:579
-#, fuzzy
 msgid "Shadowed add"
-msgstr "已隱藏的增加"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:580
-#, fuzzy
 msgid "Shadowed update"
-msgstr "已隱藏的更新"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:581
-#, fuzzy
 msgid "Shadowed delete"
-msgstr "已隱藏的刪除"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
 msgstr "合併紀錄訊息"
 
 #: ../tvp-svn-helper/tsh-common.c:583
-#, fuzzy
 msgid "Upgraded path"
-msgstr "已升級的路徑"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
@@ -1187,18 +1165,16 @@ msgid "Applied hunk"
 msgstr "已應用的大塊"
 
 #: ../tvp-svn-helper/tsh-common.c:588
-#, fuzzy
 msgid "Rejected hunk"
-msgstr "已拒絕的大塊"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
 msgstr "大塊已經應用"
 
 #: ../tvp-svn-helper/tsh-common.c:591
-#, fuzzy
 msgid "Copied replaced"
-msgstr "已複製的替換"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
@@ -1230,23 +1206,20 @@ msgid "Forbidden by server"
 msgstr "伺服器端禁止"
 
 #: ../tvp-svn-helper/tsh-common.c:601
-#, fuzzy
 msgid "Skipped conflicted"
-msgstr "已跳過衝突的"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:692
-#, fuzzy
 msgid "Inapplicable"
-msgstr "無法套用"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:694
 msgid "Unchanged"
 msgstr "未變動的"
 
 #: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
-#, fuzzy
 msgid "Obstructed"
-msgstr "阻擋的"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:697
 msgid "Changed"
