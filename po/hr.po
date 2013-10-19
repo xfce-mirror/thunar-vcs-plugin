@@ -1,24 +1,23 @@
-# Croatian (hr) translation for thunar-vcs-plugin
+# SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the thunar-vcs-plugin  package.
-# Ivica Kolić <ikoli@yahoo.com>, 2011.
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Ivica  Kolić <ikoli@yahoo.com>, 2013
+# Ivica  Kolić <ikoli@yahoo.com>, 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-vcs-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-04 19:30+0000\n"
-"PO-Revision-Date: 2011-05-28 15:57+0200\n"
-"Last-Translator: Ivica Kolić <ikoli@yahoo.com>\n"
-"Language-Team: Croatian <ikoli@yxahoo.com>\n"
+"POT-Creation-Date: 2013-07-03 20:11+0200\n"
+"PO-Revision-Date: 2013-10-19 20:30+0000\n"
+"Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
+"Language-Team: Croatian (http://www.transifex.com/projects/p/xfce/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hr\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Poedit-Language: Croatian\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Country: CROATIA\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -28,8 +27,8 @@ msgstr "Izbornik|dodaj"
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
-#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:118
-#: ../tvp-svn-helper/tsh-add.c:131
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
+#: ../tvp-svn-helper/tsh-add.c:132
 msgid "Add"
 msgstr "Dodaj"
 
@@ -100,7 +99,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 #: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
-#: ../tvp-svn-helper/tsh-commit.c:240 ../tvp-svn-helper/tsh-commit.c:253
+#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr ""
 
@@ -132,11 +131,11 @@ msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Menu|Init"
-msgstr ""
+msgstr "Izbornik|Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Init"
-msgstr ""
+msgstr "Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
@@ -405,12 +404,12 @@ msgstr "Otključaj"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444
 msgid "Menu|Update"
-msgstr "Izbornik|nadopune"
+msgstr "Izbornik|dopune"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
 #: ../tvp-svn-helper/tsh-update.c:120
 msgid "Update"
-msgstr "Nadopune"
+msgstr "Dopune"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -513,7 +512,7 @@ msgstr "Ispis informacije o verziji"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
 msgid "Execute add action"
-msgstr ""
+msgstr "Izvrši radnju dodavanja"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
 msgid "Execute blame action"
@@ -525,11 +524,11 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
-msgstr ""
+msgstr "Izvrši radnju čišćenja"
 
 #: ../tvp-git-helper/main.c:111
 msgid "Execute clone action"
-msgstr ""
+msgstr "Izvrši radnju kloniranja"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
 msgid "Execute log action"
@@ -625,7 +624,7 @@ msgstr ""
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
-msgstr "Ukloni direktorije"
+msgstr "Ukloni direktorije."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
@@ -641,7 +640,7 @@ msgstr "Samo zanemarene datoteke"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
-msgstr ""
+msgstr "Prisili čišćenje."
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -649,12 +648,12 @@ msgstr ""
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning ..."
-msgstr ""
+msgstr "Kloniram..."
 
-#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:75
-#: ../tvp-svn-helper/tsh-add.c:93 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:136
-#: ../tvp-svn-helper/tsh-commit.c:197 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
+#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
+#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
 #: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
 #: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
 #: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
@@ -724,7 +723,7 @@ msgstr "Premjesti..."
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
 #: ../tvp-svn-helper/tsh-notify-dialog.c:87
 msgid "Action"
-msgstr "Akcija"
+msgstr "Radnja"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:107
 msgid "Notify"
@@ -790,11 +789,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:134
 msgid "Execute checkout action"
-msgstr "Izvrši akciju provjere"
+msgstr "Izvrši radnju provjere"
 
 #: ../tvp-svn-helper/main.c:140
 msgid "Execute cleanup action"
-msgstr "Izvrši akciju čišćenja"
+msgstr "Izvrši radnju čišćenja"
 
 #: ../tvp-svn-helper/main.c:146
 msgid "Execute commit action"
@@ -802,11 +801,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:152
 msgid "Execute copy action"
-msgstr "Izvrši akciju kopiranja"
+msgstr "Izvrši radnju kopiranja"
 
 #: ../tvp-svn-helper/main.c:158
 msgid "Execute delete action"
-msgstr "Izvrši akciju brisanja"
+msgstr "Izvrši radnju brisanja"
 
 #: ../tvp-svn-helper/main.c:164
 msgid "Execute diff action"
@@ -814,19 +813,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
-msgstr "Izvrši akciju izvoza"
+msgstr "Izvrši radnju izvoza"
 
 #: ../tvp-svn-helper/main.c:176
 msgid "Execute import action"
-msgstr "Izvrši akciju uvoza"
+msgstr "Izvrši radnju uvoza"
 
 #: ../tvp-svn-helper/main.c:182
 msgid "Execute lock action"
-msgstr "Izvrši akciju zaključavanja"
+msgstr "Izvrši radnju zaključavanja"
 
 #: ../tvp-svn-helper/main.c:200
 msgid "Execute properties action"
-msgstr "Izvrši akciju svojstva "
+msgstr "Izvrši radnju svojstva "
 
 #: ../tvp-svn-helper/main.c:206
 msgid "Execute resolved action"
@@ -846,11 +845,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:236
 msgid "Execute unlock action"
-msgstr ""
+msgstr "Izvrši radnju otključavanja"
 
 #: ../tvp-svn-helper/main.c:242
 msgid "Execute update action"
-msgstr "Izvrši akciju dopuna"
+msgstr "Izvrši radnju dopuna"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Changelist Related Options:"
@@ -921,7 +920,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
-msgstr "Povezane mogućnosti otključavanja"
+msgstr "Povezane mogućnosti otključavanja:"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
@@ -947,7 +946,7 @@ msgstr "Čišćenje završeno"
 msgid "Cleaning up ..."
 msgstr "Čistim..."
 
-#: ../tvp-svn-helper/tsh-commit.c:210 ../tvp-svn-helper/tsh-common.c:823
+#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
 #: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
 #: ../tvp-svn-helper/tsh-move.c:99
@@ -955,18 +954,18 @@ msgstr "Čistim..."
 msgid "At revision: %ld"
 msgstr ""
 
-#: ../tvp-svn-helper/tsh-commit.c:215
+#: ../tvp-svn-helper/tsh-commit.c:216
 msgid "Nothing to do"
 msgstr "Ništa za učiniti"
 
-#: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
 #: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
 #: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
 #: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
 msgid "Completed"
 msgstr "Dovršen"
 
-#: ../tvp-svn-helper/tsh-commit.c:258
+#: ../tvp-svn-helper/tsh-commit.c:259
 msgid "Commit Message"
 msgstr ""
 
@@ -1009,7 +1008,7 @@ msgstr "Preskočeno"
 
 #: ../tvp-svn-helper/tsh-common.c:540
 msgid "Updated"
-msgstr "Nadopunjeno"
+msgstr "Dopunjeno"
 
 #: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
 #: ../tvp-svn-helper/tsh-common.c:743
@@ -1237,7 +1236,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:701
 msgid "Source missing"
-msgstr ""
+msgstr "Nedostaje izvor"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1259,7 +1258,7 @@ msgstr "Greška"
 
 #: ../tvp-svn-helper/tsh-common.c:1094
 msgid "Local action"
-msgstr "Lokalna akcija"
+msgstr "Lokalna radnja"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
