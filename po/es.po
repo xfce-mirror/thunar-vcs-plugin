@@ -1,22 +1,21 @@
-# Spanish translation of thunar-svn-plugin
-# Copyright (C) 2007 THE thunar-svn-plugin'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the thunar-svn-plugin package.
-# Abel Martín <abel.martin.ruiz@gmail.com>, 2008-2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-svn-plugin 0.0.3\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-07 08:15+0000\n"
-"PO-Revision-Date: 2012-04-28 00:45-0600\n"
-"Last-Translator: Sergio García <oigres200@gmail.com>\n"
-"Language-Team: Spanish <xfce-i18n@xfce.org>\n"
+"POT-Creation-Date: 2013-07-03 20:11+0200\n"
+"PO-Revision-Date: 2013-11-19 16:28+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/xfce/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"X-Poedit-Language: Spanish\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Poedit-Country: SPAIN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -1456,51 +1455,3 @@ msgstr "Otros fallos."
 #: ../tvp-svn-helper/tsh-trust-dialog.c:76
 msgid "Trust"
 msgstr "Confianza"
-
-#~ msgid "Add finished"
-#~ msgstr "Añadir finalizado"
-
-#~ msgid "Adding ..."
-#~ msgstr "Añadiendo ..."
-
-#~ msgid "%1$s on %2$s"
-#~ msgstr "%1$s de %2$s"
-
-#~ msgid "Select A File"
-#~ msgstr "Seleccione un archivo"
-
-#~ msgid "Desktop"
-#~ msgstr "Escritorio"
-
-#~ msgid "(None)"
-#~ msgstr "(Ninguno)"
-
-#~ msgid "Dialog"
-#~ msgstr "Diálogo"
-
-#~ msgid "The file chooser dialog to use."
-#~ msgstr "El diálogo de selección de ficheros a usar."
-
-#~ msgid "Focus on click"
-#~ msgstr "Obtener foco al hacer clic"
-
-#~ msgid "Whether the entry grabs focus when it is clicked with the mouse"
-#~ msgstr "Si la entrada obtiene el foco cuando se hace clic con el ratón"
-
-#~ msgid "Title"
-#~ msgstr "Título"
-
-#~ msgid "The title of the file chooser dialog."
-#~ msgstr "El título del diálogo de selección de archivo."
-
-#~ msgid "Width In Characters"
-#~ msgstr "Anchura en caracteres"
-
-#~ msgid "The desired width of the entry widget, in characters."
-#~ msgstr "La anchura deseada en caracteres del control de entrada"
-
-#~ msgid "Other..."
-#~ msgstr "Otro..."
-
-#~ msgid "Modify Property Recursive"
-#~ msgstr "Modificar propiedades recursivamente"
