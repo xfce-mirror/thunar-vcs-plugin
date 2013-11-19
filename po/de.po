@@ -1,25 +1,23 @@
-# German translations for thunar-svn-plugin package
-# German messages for thunar-svn-plugin.
-# Copyright (C) 2009 Peter de Ridder <peter@xfce.org>
-# This file is distributed under the same license as the thunar-svn-plugin package.
-# Fabian Nowak <timystery@arcor.de>, 2009.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2012.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # 
+# Translators:
+# Fabian Nowak <timystery@arcor.de>, 2009
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2012
 msgid ""
 msgstr ""
-"Project-Id-Version: thunar-svn-plugin\n"
+"Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-31 18:57+0000\n"
-"PO-Revision-Date: 2012-03-28 20:19+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
-"Language-Team: German <<xfce-i18n@xfce.org>>\n"
+"POT-Creation-Date: 2013-07-03 20:11+0200\n"
+"PO-Revision-Date: 2013-11-19 16:28+0000\n"
+"Last-Translator: Nick <nick@xfce.org>\n"
+"Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
+"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Language: German\n"
-"X-Poedit-Country: GERMANY\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
@@ -29,8 +27,8 @@ msgstr "Hinzufügen"
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
-#: ../tvp-svn-helper/main.c:251 ../tvp-svn-helper/tsh-add.c:118
-#: ../tvp-svn-helper/tsh-add.c:131
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
+#: ../tvp-svn-helper/tsh-add.c:132
 msgid "Add"
 msgstr "Hinzufügen"
 
@@ -49,8 +47,8 @@ msgstr "Beschuldigen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
-#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:255
-#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-blame-dialog.c:132
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Beschuldigen"
 
@@ -70,7 +68,7 @@ msgid "Menu|Checkout"
 msgstr "Auschecken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:271
 #: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
 msgid "Checkout"
 msgstr "Auschecken"
@@ -100,8 +98,8 @@ msgstr "Einchecken"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
-#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:271
-#: ../tvp-svn-helper/tsh-commit.c:240 ../tvp-svn-helper/tsh-commit.c:253
+#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "Einchecken"
 
@@ -111,7 +109,7 @@ msgid "Menu|Diff"
 msgstr "Unterschiede"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
-#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
 msgid "Diff"
 msgstr "Unterschiede"
 
@@ -141,17 +139,15 @@ msgstr "Initialisieren"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
-#, fuzzy
 msgid "Menu|Log"
-msgstr "Protokoll"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
-#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:295
+#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-log-dialog.c:225
-#, fuzzy
 msgid "Log"
-msgstr "Protokoll"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Merge"
@@ -168,7 +164,7 @@ msgstr "Verschieben"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
-#: ../tvp-svn-helper/main.c:299 ../tvp-svn-helper/tsh-move.c:170
+#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
 msgid "Move"
 msgstr "Verschieben"
 
@@ -241,21 +237,19 @@ msgstr "Status"
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:121
-#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:319
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
 #: ../tvp-svn-helper/tsh-status-dialog.c:246
 msgid "Status"
 msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
-#, fuzzy
 msgid "Menu|Tag"
-msgstr "Kennzeichnen"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
-#, fuzzy
 msgid "Tag"
-msgstr "Kennzeichnen"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:301
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
@@ -288,7 +282,7 @@ msgstr "Änderungsliste"
 msgid "Menu|Cleanup"
 msgstr "Aufräumen"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:267
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
 msgid "Cleanup"
 msgstr "Aufräumen"
 
@@ -296,7 +290,7 @@ msgstr "Aufräumen"
 msgid "Menu|Copy"
 msgstr "Kopieren"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:275
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:283
 #: ../tvp-svn-helper/tsh-copy.c:177
 msgid "Copy"
 msgstr "Kopieren"
@@ -305,7 +299,7 @@ msgstr "Kopieren"
 msgid "Menu|Delete"
 msgstr "Löschen"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:279
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
 msgid "Delete"
 msgstr "Löschen"
@@ -314,7 +308,7 @@ msgstr "Löschen"
 msgid "Menu|Export"
 msgstr "Exportieren"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:283
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
 msgid "Export"
 msgstr "Exportieren"
@@ -323,7 +317,7 @@ msgstr "Exportieren"
 msgid "Menu|Import"
 msgstr "Importieren"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:287
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
 #: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
 msgid "Import"
 msgstr "Importieren"
@@ -340,7 +334,7 @@ msgstr "Information"
 msgid "Menu|Lock"
 msgstr "Sperren"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:303
 #: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
 msgid "Lock"
 msgstr "Sperren"
@@ -357,7 +351,7 @@ msgstr "Eigenschaften ändern"
 msgid "Menu|Relocate"
 msgstr "Umplatzieren"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:311
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:125
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:216
 msgid "Relocate"
@@ -367,8 +361,8 @@ msgstr "Umplatzieren"
 msgid "Menu|Resolved"
 msgstr "Aufgelöst"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:307
-#: ../tvp-svn-helper/tsh-common.c:541 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
 #: ../tvp-svn-helper/tsh-resolved.c:128
 msgid "Resolved"
 msgstr "Aufgelöst"
@@ -385,7 +379,7 @@ msgstr "Auflösen"
 msgid "Menu|Revert"
 msgstr "Rückgängig"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:315
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
 msgid "Revert"
 msgstr "Rückgängig"
@@ -394,7 +388,7 @@ msgstr "Rückgängig"
 msgid "Menu|Switch"
 msgstr "Umschalten"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:323
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
 #: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
 msgid "Switch"
 msgstr "Umschalten"
@@ -403,7 +397,7 @@ msgstr "Umschalten"
 msgid "Menu|Unlock"
 msgstr "Entsperren"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:327
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:339
 #: ../tvp-svn-helper/tsh-unlock.c:113
 msgid "Unlock"
 msgstr "Entsperren"
@@ -412,7 +406,7 @@ msgstr "Entsperren"
 msgid "Menu|Update"
 msgstr "Aktualisieren"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:331
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
 #: ../tvp-svn-helper/tsh-update.c:120
 msgid "Update"
 msgstr "Aktualisieren"
@@ -429,10 +423,10 @@ msgstr "URL:"
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
-#: ../tvp-svn-helper/tsh-common.c:610 ../tvp-svn-helper/tsh-common.c:698
-#: ../tvp-svn-helper/tsh-common.c:710 ../tvp-svn-helper/tsh-common.c:735
-#: ../tvp-svn-helper/tsh-common.c:752 ../tvp-svn-helper/tsh-common.c:781
-#: ../tvp-svn-helper/tsh-common.c:884
+#: ../tvp-svn-helper/tsh-common.c:605 ../tvp-svn-helper/tsh-common.c:693
+#: ../tvp-svn-helper/tsh-common.c:705 ../tvp-svn-helper/tsh-common.c:730
+#: ../tvp-svn-helper/tsh-common.c:747 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:879
 msgid "Unknown"
 msgstr "Unbekannt"
 
@@ -469,7 +463,7 @@ msgstr "Tiefe:"
 #. * Exclude should not apear client side
 #. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
-#: ../tvp-svn-helper/tsh-common.c:599
+#: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
 msgstr "Ausschließen"
 
@@ -512,15 +506,15 @@ msgstr "Ab dieser Ebene"
 msgid "Infinity"
 msgstr "Unendlich"
 
-#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:107
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
 msgid "Print version information"
 msgstr "Versionsinformationen ausgeben"
 
-#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:114
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
 msgid "Execute add action"
 msgstr "Aktion »Hinzufügen« ausführen"
 
-#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:120
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
 msgid "Execute blame action"
 msgstr "Aktion »Beschuldigen« ausführen"
 
@@ -536,12 +530,11 @@ msgstr "Aktion »Aufräumen« ausführen"
 msgid "Execute clone action"
 msgstr "Aktion »Klonen« ausführen"
 
-#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:180
-#, fuzzy
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
 msgid "Execute log action"
-msgstr "Aktion »Protokollieren« ausführen"
+msgstr ""
 
-#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:186
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
 msgid "Execute move action"
 msgstr "Aktion »Verschieben« ausführen"
 
@@ -553,15 +546,15 @@ msgstr "Aktion »Zurücksetzen» ausführen"
 msgid "Execute stash action"
 msgstr "Aktion »Lagern« ausführen"
 
-#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:216
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
 msgid "Execute status action"
 msgstr "Aktion »Status« ausführen"
 
-#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:251
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
 msgid "Add Related Options:"
 msgstr "Optionen fürs Hinzufügen:"
 
-#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:255
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
 msgid "Blame Related Options:"
 msgstr "Optionen fürs Beschuldigen:"
 
@@ -573,11 +566,11 @@ msgstr "Optionen für Zweig:"
 msgid "Clone Related Options:"
 msgstr "Optionen fürs Klonen:"
 
-#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:295
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
 msgid "Log Related Options:"
 msgstr "Optionen für Logs:"
 
-#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:299
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
 msgstr "Optionen fürs Verschieben:"
 
@@ -589,7 +582,7 @@ msgstr "Optionen fürs Zurücksetzen:"
 msgid "Stash Related Options:"
 msgstr "Optionen fürs Lagern:"
 
-#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:319
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
 msgstr "Optionen für den Zustand:"
 
@@ -657,10 +650,10 @@ msgstr "Klonen abgeschlossen"
 msgid "Cloning ..."
 msgstr "Klonen läuft …"
 
-#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:75
-#: ../tvp-svn-helper/tsh-add.c:93 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:136
-#: ../tvp-svn-helper/tsh-commit.c:197 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
+#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
+#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
 #: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
 #: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
 #: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
@@ -790,142 +783,150 @@ msgstr "Or_dner:"
 msgid "Transfer"
 msgstr "Übertragen"
 
-#: ../tvp-svn-helper/main.c:126
+#: ../tvp-svn-helper/main.c:128
 msgid "Execute changelist action"
 msgstr "Aktion »Veränderungen« ausführen"
 
-#: ../tvp-svn-helper/main.c:132
+#: ../tvp-svn-helper/main.c:134
 msgid "Execute checkout action"
 msgstr "Aktion »Auschecken« ausführen"
 
-#: ../tvp-svn-helper/main.c:138
+#: ../tvp-svn-helper/main.c:140
 msgid "Execute cleanup action"
 msgstr "Aktion »Aufräumen« ausführen"
 
-#: ../tvp-svn-helper/main.c:144
+#: ../tvp-svn-helper/main.c:146
 msgid "Execute commit action"
 msgstr "Aktion »Einchecken« ausführen"
 
-#: ../tvp-svn-helper/main.c:150
+#: ../tvp-svn-helper/main.c:152
 msgid "Execute copy action"
 msgstr "Aktion »Kopieren« ausführen"
 
-#: ../tvp-svn-helper/main.c:156
+#: ../tvp-svn-helper/main.c:158
 msgid "Execute delete action"
 msgstr "Aktion »Löschen« ausführen"
 
-#: ../tvp-svn-helper/main.c:162
+#: ../tvp-svn-helper/main.c:164
+msgid "Execute diff action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
 msgstr "Aktion »Exportieren« ausführen"
 
-#: ../tvp-svn-helper/main.c:168
+#: ../tvp-svn-helper/main.c:176
 msgid "Execute import action"
 msgstr "Aktion »Importieren« ausführen"
 
-#: ../tvp-svn-helper/main.c:174
+#: ../tvp-svn-helper/main.c:182
 msgid "Execute lock action"
 msgstr "Aktion »Sperren« ausführen"
 
-#: ../tvp-svn-helper/main.c:192
+#: ../tvp-svn-helper/main.c:200
 msgid "Execute properties action"
 msgstr "Aktion »Eigenschaften« ausführen"
 
-#: ../tvp-svn-helper/main.c:198
+#: ../tvp-svn-helper/main.c:206
 msgid "Execute resolved action"
 msgstr "Aktion »Aufgelöst« ausführen"
 
-#: ../tvp-svn-helper/main.c:204
+#: ../tvp-svn-helper/main.c:212
 msgid "Execute relocate action"
 msgstr "Aktion »Umplatzieren« ausführen"
 
-#: ../tvp-svn-helper/main.c:210
+#: ../tvp-svn-helper/main.c:218
 msgid "Execute revert action"
 msgstr "Aktion »Rückgängig« ausführen"
 
-#: ../tvp-svn-helper/main.c:222
+#: ../tvp-svn-helper/main.c:230
 msgid "Execute switch action"
 msgstr "Aktion »Umschalten« ausführen"
 
-#: ../tvp-svn-helper/main.c:228
+#: ../tvp-svn-helper/main.c:236
 msgid "Execute unlock action"
 msgstr "Aktion »Entsperren« ausführen"
 
-#: ../tvp-svn-helper/main.c:234
+#: ../tvp-svn-helper/main.c:242
 msgid "Execute update action"
 msgstr "Aktion »Aktualisieren« ausführen"
 
-#: ../tvp-svn-helper/main.c:259
+#: ../tvp-svn-helper/main.c:267
 msgid "Changelist Related Options:"
 msgstr "Optionen für die Änderungslisten:"
 
-#: ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/main.c:271
 msgid "Checkout Related Options:"
 msgstr "Optionen fürs Auschecken:"
 
-#: ../tvp-svn-helper/main.c:267
+#: ../tvp-svn-helper/main.c:275
 msgid "Cleanup Related Options:"
 msgstr "Optionen fürs Aufräumen:"
 
-#: ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/main.c:279
 msgid "Commit Related Options:"
 msgstr "Optionen fürs Einchecken:"
 
-#: ../tvp-svn-helper/main.c:275
+#: ../tvp-svn-helper/main.c:283
 msgid "Copy Related Options:"
 msgstr "Optionen fürs Kopieren:"
 
-#: ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/main.c:287
 msgid "Delete Related Options:"
 msgstr "Optionen fürs Löschen:"
 
-#: ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/main.c:291
+msgid "Diff Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
 msgstr "Optionen fürs Exportieren:"
 
-#: ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/main.c:299
 msgid "Import Related Options:"
 msgstr "Optionen fürs Importieren:"
 
-#: ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/main.c:303
 msgid "Lock Related Options:"
 msgstr "Optionen fürs Sperren:"
 
-#: ../tvp-svn-helper/main.c:303
+#: ../tvp-svn-helper/main.c:315
 msgid "Properties Related Options:"
 msgstr "Optionen für die Eigenschaften:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
 #. gtk_widget_show (box);
-#: ../tvp-svn-helper/main.c:303 ../tvp-svn-helper/tsh-properties-dialog.c:280
+#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:280
 msgid "Properties"
 msgstr "Eigenschaften"
 
-#: ../tvp-svn-helper/main.c:307
+#: ../tvp-svn-helper/main.c:319
 msgid "Resolved Related Options:"
 msgstr "Optionen für Aufgelöst:"
 
-#: ../tvp-svn-helper/main.c:311
+#: ../tvp-svn-helper/main.c:323
 msgid "Relocate Related Options:"
 msgstr "Optionen fürs Umplatzieren:"
 
-#: ../tvp-svn-helper/main.c:315
+#: ../tvp-svn-helper/main.c:327
 msgid "Revert Related Options:"
 msgstr "Optionen fürs Rückängigmachen:"
 
-#: ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/main.c:335
 msgid "Switch Related Options:"
 msgstr "Optionen fürs Umschalten:"
 
-#: ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
 msgstr "Optionen fürs Entsperren:"
 
-#: ../tvp-svn-helper/main.c:331
+#: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
 msgstr "Optionen für Updates:"
 
-#: ../tvp-svn-helper/main.c:374
+#: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
 msgstr "Nicht genügend Argumente vorhanden"
 
@@ -945,26 +946,26 @@ msgstr "Aufräumen vollständig"
 msgid "Cleaning up ..."
 msgstr "Aufräumen läuft …"
 
-#: ../tvp-svn-helper/tsh-commit.c:210 ../tvp-svn-helper/tsh-common.c:828
-#: ../tvp-svn-helper/tsh-common.c:1094 ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
+#: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
 #: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
 #: ../tvp-svn-helper/tsh-move.c:99
 #, c-format
 msgid "At revision: %ld"
 msgstr "Bei Version: %ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:215
+#: ../tvp-svn-helper/tsh-commit.c:216
 msgid "Nothing to do"
 msgstr "Nichts zu tun"
 
-#: ../tvp-svn-helper/tsh-commit.c:225 ../tvp-svn-helper/tsh-common.c:546
-#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:1103
+#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
 #: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
 #: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
 msgid "Completed"
 msgstr "Vollständig"
 
-#: ../tvp-svn-helper/tsh-commit.c:258
+#: ../tvp-svn-helper/tsh-commit.c:259
 msgid "Commit Message"
 msgstr "Einchecknachricht"
 
@@ -972,304 +973,290 @@ msgstr "Einchecknachricht"
 msgid "Store password a plaintext?"
 msgstr "Passwort im Klartext speichern?"
 
-#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:544
-#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:739
-#: ../tvp-svn-helper/tsh-common.c:786 ../tvp-svn-helper/tsh-common.c:890
+#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
+#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
+#: ../tvp-svn-helper/tsh-common.c:781 ../tvp-svn-helper/tsh-common.c:885
 msgid "Added"
 msgstr "Hinzugefügt"
 
-#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-common.c:595
-#: ../tvp-svn-helper/tsh-common.c:899
+#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:894
 msgid "Copied"
 msgstr "Kopiert"
 
-#: ../tvp-svn-helper/tsh-common.c:537 ../tvp-svn-helper/tsh-common.c:543
-#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:741
-#: ../tvp-svn-helper/tsh-common.c:789 ../tvp-svn-helper/tsh-common.c:892
+#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:736
+#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:887
 msgid "Deleted"
 msgstr "Gelöscht"
 
-#: ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:533
 msgid "Restored"
 msgstr "Wiederhergestellt"
 
-#: ../tvp-svn-helper/tsh-common.c:539
+#: ../tvp-svn-helper/tsh-common.c:534
 msgid "Reverted"
 msgstr "Rückgängig gemacht"
 
-#: ../tvp-svn-helper/tsh-common.c:540
+#: ../tvp-svn-helper/tsh-common.c:535
 msgid "Revert failed"
 msgstr "Rückgängigmachen fehlgeschlagen"
 
-#: ../tvp-svn-helper/tsh-common.c:542
+#: ../tvp-svn-helper/tsh-common.c:537
 msgid "Skipped"
 msgstr "Übersprungen"
 
-#: ../tvp-svn-helper/tsh-common.c:545
+#: ../tvp-svn-helper/tsh-common.c:540
 msgid "Updated"
 msgstr "Aktualisiert"
 
-#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:549
-#: ../tvp-svn-helper/tsh-common.c:748
+#: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:743
 msgid "External"
 msgstr "Extern"
 
-#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:743
-#: ../tvp-svn-helper/tsh-common.c:792 ../tvp-svn-helper/tsh-common.c:895
+#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
+#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
 msgid "Modified"
 msgstr "Verändert"
 
-#: ../tvp-svn-helper/tsh-common.c:553 ../tvp-svn-helper/tsh-common.c:742
-#: ../tvp-svn-helper/tsh-common.c:795 ../tvp-svn-helper/tsh-common.c:888
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:737
+#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:883
 msgid "Replaced"
 msgstr "Ersetzt"
 
-#: ../tvp-svn-helper/tsh-common.c:554
+#: ../tvp-svn-helper/tsh-common.c:549
 msgid "Transmitting"
 msgstr "Übertragen läuft"
 
-#: ../tvp-svn-helper/tsh-common.c:556 ../tvp-svn-helper/tsh-common.c:604
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
 msgid "Locked"
 msgstr "Gesperrt"
 
-#: ../tvp-svn-helper/tsh-common.c:557 ../tvp-svn-helper/tsh-common.c:901
+#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
 msgid "Unlocked"
 msgstr "Entsperrt"
 
-#: ../tvp-svn-helper/tsh-common.c:558
+#: ../tvp-svn-helper/tsh-common.c:553
 msgid "Lock failed"
 msgstr "Sperren fehlgeschlagen"
 
-#: ../tvp-svn-helper/tsh-common.c:559
+#: ../tvp-svn-helper/tsh-common.c:554
 msgid "Unlock failed"
 msgstr "Entsperren fehlgeschlagen"
 
-#: ../tvp-svn-helper/tsh-common.c:560
+#: ../tvp-svn-helper/tsh-common.c:555
 msgid "Exists"
 msgstr "Vorhanden"
 
-#: ../tvp-svn-helper/tsh-common.c:561
+#: ../tvp-svn-helper/tsh-common.c:556
 msgid "Changelist set"
 msgstr "Änderungsliste eingestellt"
 
-#: ../tvp-svn-helper/tsh-common.c:562
+#: ../tvp-svn-helper/tsh-common.c:557
 msgid "Changelist cleared"
 msgstr "Änderungsliste geleert"
 
-#: ../tvp-svn-helper/tsh-common.c:563
+#: ../tvp-svn-helper/tsh-common.c:558
 msgid "Changelist moved"
 msgstr "Änderungsliste verschoben"
 
-#: ../tvp-svn-helper/tsh-common.c:564
+#: ../tvp-svn-helper/tsh-common.c:559
 msgid "Merge begin"
 msgstr "Zusammenführen beginnt"
 
-#: ../tvp-svn-helper/tsh-common.c:565
+#: ../tvp-svn-helper/tsh-common.c:560
 msgid "Foreign merge begin"
 msgstr "Zusammenführen mit fremder Datei beginnt"
 
-#: ../tvp-svn-helper/tsh-common.c:566
+#: ../tvp-svn-helper/tsh-common.c:561
 msgid "Replace"
 msgstr "Ersetzen"
 
-#: ../tvp-svn-helper/tsh-common.c:568
+#: ../tvp-svn-helper/tsh-common.c:563
 msgid "Property added"
 msgstr "Eigenschaft hinzugefügt"
 
-#: ../tvp-svn-helper/tsh-common.c:569
+#: ../tvp-svn-helper/tsh-common.c:564
 msgid "Property modified"
 msgstr "Eigenschaft geändert"
 
-#: ../tvp-svn-helper/tsh-common.c:570
+#: ../tvp-svn-helper/tsh-common.c:565
 msgid "Property deleted"
 msgstr "Eigenschaft gelöscht"
 
-#: ../tvp-svn-helper/tsh-common.c:571
+#: ../tvp-svn-helper/tsh-common.c:566
 msgid "Property nonexisting"
 msgstr "Eigenschaft existiert nicht"
 
-#: ../tvp-svn-helper/tsh-common.c:572
+#: ../tvp-svn-helper/tsh-common.c:567
 msgid "Revision property set"
 msgstr "Versionierungseigenschaft gesetzt"
 
-#: ../tvp-svn-helper/tsh-common.c:573
+#: ../tvp-svn-helper/tsh-common.c:568
 msgid "Revision property deleted"
 msgstr "Versionierungseigenschaft gelöscht"
 
-#: ../tvp-svn-helper/tsh-common.c:574
+#: ../tvp-svn-helper/tsh-common.c:569
 msgid "Merge completed"
 msgstr "Vollständig zusammengeführt"
 
-#: ../tvp-svn-helper/tsh-common.c:575
+#: ../tvp-svn-helper/tsh-common.c:570
 msgid "Tree conflict"
 msgstr "Baumkonflikt"
 
-#: ../tvp-svn-helper/tsh-common.c:576
+#: ../tvp-svn-helper/tsh-common.c:571
 msgid "External failed"
 msgstr "»External« fehlgeschlagen"
 
-#: ../tvp-svn-helper/tsh-common.c:579
+#: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
 msgstr "Gestartet"
 
-#: ../tvp-svn-helper/tsh-common.c:580
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
-msgstr "Übersprungene Sperre"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:581
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
-msgstr "Nur Funktionierendes übersprungen"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:582
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr "Übersprungener verbotener Zugriff"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:583
+#: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
 msgstr "Externes entfernt"
 
-#: ../tvp-svn-helper/tsh-common.c:584
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
-msgstr "Schattiertes Hinzufügen"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Shadowed update"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Shadowed delete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Merge record info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "Upgraded path"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Merge record info begin"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:585
-#, fuzzy
-msgid "Shadowed update"
-msgstr "Schattiertes Aktualisieren"
+msgid "Merge elide info"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:586
-#, fuzzy
-msgid "Shadowed delete"
-msgstr "Schattiertes Löschen"
-
-#: ../tvp-svn-helper/tsh-common.c:587
-#, fuzzy
-msgid "Merge record info"
-msgstr "Datensatzinformation zusammenführen"
-
-#: ../tvp-svn-helper/tsh-common.c:588
-#, fuzzy
-msgid "Upgraded path"
-msgstr "Aktualisierter Pfad"
-
-#: ../tvp-svn-helper/tsh-common.c:589
-#, fuzzy
-msgid "Merge record info begin"
-msgstr "Anfang der Zusammenführung von Datensatzinformationen"
-
-#: ../tvp-svn-helper/tsh-common.c:590
-#, fuzzy
-msgid "Merge elide info"
-msgstr "Information über das Annullieren zusammenführen"
-
-#: ../tvp-svn-helper/tsh-common.c:591
 msgid "Patch"
 msgstr "Patch"
 
-#: ../tvp-svn-helper/tsh-common.c:592
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
-msgstr "Großer Brocken wurde angewandt"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:593
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:588
 msgid "Rejected hunk"
-msgstr "Großer Brocken wurde verworfen"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:594
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
-msgstr "Großer Brocken wurde bereits angewandt"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:596
+#: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
 msgstr "Kopiertes ersetzt"
 
-#: ../tvp-svn-helper/tsh-common.c:597
+#: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
 msgstr "URL-Umleitung"
 
-#: ../tvp-svn-helper/tsh-common.c:598
+#: ../tvp-svn-helper/tsh-common.c:593
 msgid "Path nonexistent"
 msgstr "Pfad existiert nicht"
 
-#: ../tvp-svn-helper/tsh-common.c:600
+#: ../tvp-svn-helper/tsh-common.c:595
 msgid "Conflict"
 msgstr "Konflikt"
 
-#: ../tvp-svn-helper/tsh-common.c:601 ../tvp-svn-helper/tsh-common.c:700
-#: ../tvp-svn-helper/tsh-common.c:740
-#, fuzzy
+#: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
+#: ../tvp-svn-helper/tsh-common.c:735
 msgid "Missing"
-msgstr "Fehlt"
+msgstr ""
 
-#: ../tvp-svn-helper/tsh-common.c:602
+#: ../tvp-svn-helper/tsh-common.c:597
 msgid "Out of date"
 msgstr "Nicht aktuell"
 
-#: ../tvp-svn-helper/tsh-common.c:603
+#: ../tvp-svn-helper/tsh-common.c:598
 msgid "No parent"
 msgstr "Kein Elternelement"
 
-#: ../tvp-svn-helper/tsh-common.c:605
+#: ../tvp-svn-helper/tsh-common.c:600
 msgid "Forbidden by server"
 msgstr "Vom Server verboten"
 
-#: ../tvp-svn-helper/tsh-common.c:606
+#: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
 msgstr "Konflikte übersprungen"
 
-#: ../tvp-svn-helper/tsh-common.c:697
+#: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
 msgstr "Nicht anwendbar"
 
-#: ../tvp-svn-helper/tsh-common.c:699
+#: ../tvp-svn-helper/tsh-common.c:694
 msgid "Unchanged"
 msgstr "Unverändert"
 
-#: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:747
+#: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
 msgid "Obstructed"
 msgstr "Zerstört"
 
-#: ../tvp-svn-helper/tsh-common.c:702
+#: ../tvp-svn-helper/tsh-common.c:697
 msgid "Changed"
 msgstr "Verändert"
 
-#: ../tvp-svn-helper/tsh-common.c:703 ../tvp-svn-helper/tsh-common.c:744
+#: ../tvp-svn-helper/tsh-common.c:698 ../tvp-svn-helper/tsh-common.c:739
 msgid "Merged"
 msgstr "Zusammengeführt"
 
-#: ../tvp-svn-helper/tsh-common.c:704 ../tvp-svn-helper/tsh-common.c:745
+#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
 msgid "Conflicted"
 msgstr "Konfliktbehaftet"
 
-#: ../tvp-svn-helper/tsh-common.c:706
+#: ../tvp-svn-helper/tsh-common.c:701
 msgid "Source missing"
 msgstr "Quelle fehlt"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: ../tvp-svn-helper/tsh-common.c:738
+#: ../tvp-svn-helper/tsh-common.c:733
 msgid "Normal"
 msgstr "Normal"
 
-#: ../tvp-svn-helper/tsh-common.c:746
+#: ../tvp-svn-helper/tsh-common.c:741
 msgid "Ignored"
 msgstr "Ignoriert"
 
-#: ../tvp-svn-helper/tsh-common.c:749
+#: ../tvp-svn-helper/tsh-common.c:744
 msgid "Incomplete"
 msgstr "Unvollständig"
 
-#: ../tvp-svn-helper/tsh-common.c:1087
+#: ../tvp-svn-helper/tsh-common.c:1082
 msgid "Error"
 msgstr "Fehler"
 
-#: ../tvp-svn-helper/tsh-common.c:1099
+#: ../tvp-svn-helper/tsh-common.c:1094
 msgid "Local action"
 msgstr "Lokale Aktion"
 
@@ -1312,19 +1299,16 @@ msgid "Import Message"
 msgstr "Importiermeldung"
 
 #: ../tvp-svn-helper/tsh-log.c:123
-#, fuzzy
 msgid "Log failed"
-msgstr "Protokollierung fehlgeschlagen"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
-#, fuzzy
 msgid "Stop On Copy"
-msgstr "Beim Kopieren stoppen"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
-#, fuzzy
 msgid "Show Merged Revisions"
-msgstr "Zusammengeführte Versionen anzeigen"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
@@ -1473,12 +1457,3 @@ msgstr "Anderer Fehler."
 #: ../tvp-svn-helper/tsh-trust-dialog.c:76
 msgid "Trust"
 msgstr "Vertrauen"
-
-#~ msgid "Execute remove action"
-#~ msgstr "Aktion »Verschieben« ausführen"
-
-#~ msgid "Remove Related Options:"
-#~ msgstr "Optionen für Aufgelöst:"
-
-#~ msgid "Add finished"
-#~ msgstr "Aufräumen vollständig"
