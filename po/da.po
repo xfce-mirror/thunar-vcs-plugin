@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-11-18 15:04+0000\n"
+"PO-Revision-Date: 2013-11-20 17:20+0000\n"
 "Last-Translator: cedeel <chris@cedeel.com>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/xfce/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -1115,15 +1115,15 @@ msgstr "Startet"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Sprang over forhindring"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
-msgstr ""
+msgstr "Sprang over kun arbejde"
 
 #: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Sprang over ingen adgang"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
@@ -1159,19 +1159,19 @@ msgstr "Flet elide-info"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
-msgstr ""
+msgstr "Lap"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
-msgstr ""
+msgstr "Anvendt del"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Afvist del"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Del allerede anvendt"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
