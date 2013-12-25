@@ -5,7 +5,7 @@
 # Translators:
 # andreazube <andreazuben@gmail.com>, 2013
 # Carmine Diego Principe <cdprincipe@gmail.com>, 2013
-# cri <cri.penta@gmail.com>, 2011
+# cri <cri.penta@gmail.com>, 2011,2013
 # edmael <edoardo.elidoro@gmail.com>, 2013
 # winebar <vs.winebar@gmail.com>, 2013
 msgid ""
@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-07-12 07:14+0000\n"
-"Last-Translator: edmael <edoardo.elidoro@gmail.com>\n"
+"PO-Revision-Date: 2013-12-25 19:28+0000\n"
+"Last-Translator: cri <cri.penta@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/xfce/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
 msgid "Menu|Add"
-msgstr "Aggiungi"
+msgstr "Add"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
@@ -33,7 +33,7 @@ msgstr "Aggiungi"
 #: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
 #: ../tvp-svn-helper/tsh-add.c:132
 msgid "Add"
-msgstr "Aggiungi"
+msgstr "Add"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Bisect"
@@ -455,7 +455,7 @@ msgstr "Autore:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
 msgid "Changelist:"
-msgstr "Changelist:"
+msgstr "Elenco modifiche:"
 
 #. Translators: Depth as in depth of recursion
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
@@ -515,43 +515,43 @@ msgstr "Stampa le informazioni di versione"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
 msgid "Execute add action"
-msgstr "Aggiungi"
+msgstr "Esegue l'operazione add"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
 msgid "Execute blame action"
-msgstr ""
+msgstr "Esegue l'operazione blame"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
-msgstr "Esegue l'operazione di branch"
+msgstr "Esegue l'operazione branch"
 
 #: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
-msgstr "Pulisci"
+msgstr "Esegue l'operazione clean"
 
 #: ../tvp-git-helper/main.c:111
 msgid "Execute clone action"
-msgstr "Clona"
+msgstr "Esegue l'operazione clone"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
 msgid "Execute log action"
-msgstr ""
+msgstr "Esegue l'operazione log"
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
 msgid "Execute move action"
-msgstr "Esegue l'azione di spostamento"
+msgstr "Esegue l'operazione move"
 
 #: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
-msgstr "Ripristina (reset)"
+msgstr "Esegue l'operazione di reset"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr ""
+msgstr "Esegue l'operazione stash"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
 msgid "Execute status action"
-msgstr "Stato"
+msgstr "StatoEsegue l'operazione status"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
 msgid "Add Related Options:"
@@ -738,7 +738,7 @@ msgstr "Ripristino terminato"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset ..."
-msgstr "Ripristino..."
+msgstr "Ripristino in corso..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -751,11 +751,11 @@ msgstr "Descrizione stash:"
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr "Sei sicuro di voler rimuovere %s?"
+msgstr "Rimuovere %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "Eseguire la pulitura di tutti gli stash?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:81
@@ -773,7 +773,7 @@ msgstr "_Repository:"
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:97
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:143
 msgid "Select a folder"
-msgstr "Selezionare una cartella"
+msgstr "Selezione cartella"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:103
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:197
@@ -939,7 +939,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
-msgstr "Pulizia fallita"
+msgstr "Pulizia non riuscita"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
@@ -995,7 +995,7 @@ msgstr "Eliminato"
 
 #: ../tvp-svn-helper/tsh-common.c:533
 msgid "Restored"
-msgstr ""
+msgstr "Ripristinato"
 
 #: ../tvp-svn-helper/tsh-common.c:534
 msgid "Reverted"
