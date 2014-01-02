@@ -5,13 +5,14 @@
 # Translators:
 # Fabian Nowak <timystery@arcor.de>, 2009
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2012
+# to_ba, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-11-19 16:28+0000\n"
-"Last-Translator: Nick <nick@xfce.org>\n"
+"PO-Revision-Date: 2014-01-02 22:37+0000\n"
+"Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -140,14 +141,14 @@ msgstr "Initialisieren"
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
 msgid "Menu|Log"
-msgstr ""
+msgstr "Menü|Protokoll"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-log-dialog.c:225
 msgid "Log"
-msgstr ""
+msgstr "Protokoll"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Merge"
@@ -245,11 +246,11 @@ msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Menu|Tag"
-msgstr ""
+msgstr "Menü|Schlagwort"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
-msgstr ""
+msgstr "Schlagwort"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:301
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
@@ -532,7 +533,7 @@ msgstr "Aktion »Klonen« ausführen"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
 msgid "Execute log action"
-msgstr ""
+msgstr "Protokollaktion starten"
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
 msgid "Execute move action"
@@ -568,7 +569,7 @@ msgstr "Optionen fürs Klonen:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
 msgid "Log Related Options:"
-msgstr "Optionen für Logs:"
+msgstr "Weitere Protokolloptionen:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
@@ -1300,7 +1301,7 @@ msgstr "Importiermeldung"
 
 #: ../tvp-svn-helper/tsh-log.c:123
 msgid "Log failed"
-msgstr ""
+msgstr "Protokoll fehlgeschlagen"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
@@ -1328,7 +1329,7 @@ msgstr "Status"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
-msgstr "Lognachricht"
+msgstr "Protokollnachricht"
 
 #: ../tvp-svn-helper/tsh-move.c:104
 msgid "Local move"
