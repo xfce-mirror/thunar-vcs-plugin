@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-01-02 22:37+0000\n"
+"PO-Revision-Date: 2014-01-10 14:05+0000\n"
 "Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr "Teilen"
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
 msgid "Menu|Blame"
-msgstr "Beschuldigen"
+msgstr "Menü|Beschuldigen"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
@@ -810,7 +810,7 @@ msgstr "Aktion »Löschen« ausführen"
 
 #: ../tvp-svn-helper/main.c:164
 msgid "Execute diff action"
-msgstr ""
+msgstr "Diff-Aktion ausführen"
 
 #: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
@@ -878,7 +878,7 @@ msgstr "Optionen fürs Löschen:"
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Diff Related Options:"
-msgstr ""
+msgstr "Diff ähnliche Optionen:"
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
@@ -1116,7 +1116,7 @@ msgstr "Gestartet"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Sperre übersprungen"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
