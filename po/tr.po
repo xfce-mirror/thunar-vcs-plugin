@@ -4,6 +4,7 @@
 # 
 # Translators:
 # atekinalp <alper.tekinalp@gmail.com>, 2011
+# askar05, 2014
 # aybuke <aybuke.147@gmail.com>, 2013
 # Necdet Yücel <necdetyucel@gmail.com>, 2013
 msgid ""
@@ -11,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-11-18 12:28+0000\n"
-"Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
+"PO-Revision-Date: 2014-01-30 15:45+0000\n"
+"Last-Translator: askar05\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/xfce/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -462,7 +463,6 @@ msgstr "Derinlik:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -470,7 +470,6 @@ msgstr "Hariç tut"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Hariç"
@@ -478,7 +477,6 @@ msgstr "Hariç"
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Dosyalar"
@@ -486,13 +484,10 @@ msgstr "Dosyalar"
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -502,7 +497,6 @@ msgstr "Anlık değerler"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Sonsuz"
@@ -545,7 +539,7 @@ msgstr "Sıfırla eylemini çalıştır"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr ""
+msgstr "Gizli eylemi çalıştır"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
 msgid "Execute status action"
@@ -557,35 +551,35 @@ msgstr "İlgili Seçenekleri Ekle:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
 msgid "Blame Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri Sorgula:"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri kollara ayır:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri klonla:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
 msgid "Log Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri yazdir:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri taşı:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri yenile:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri gizle:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
-msgstr ""
+msgstr "İlgili Seçenekleri durumla:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -629,7 +623,7 @@ msgstr "Dizinleri sil."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
-msgstr ""
+msgstr "Gözardı edilen dosyaları dışla"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:76
 msgid "Include ignored files"
@@ -687,7 +681,7 @@ msgstr "Tümünü seç/bırak"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:146
 msgid "AuthorDate"
-msgstr ""
+msgstr "YazarTarihi"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
@@ -1358,10 +1352,8 @@ msgstr "Değer"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
@@ -1370,11 +1362,9 @@ msgstr ""
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1382,10 +1372,8 @@ msgstr ""
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
