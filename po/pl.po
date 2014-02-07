@@ -4,13 +4,14 @@
 # 
 # Translators:
 #  <piotr.sokol@10g.pl>, 2009
+# Piotr Strębski <strebski@o2.pl>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-11-19 16:28+0000\n"
-"Last-Translator: Nick <nick@xfce.org>\n"
+"PO-Revision-Date: 2014-02-07 16:56+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/xfce/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +38,7 @@ msgstr "Menu|Dzielenia na połowę"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Bisect"
-msgstr ""
+msgstr "Podziel na połowę"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
@@ -59,7 +60,7 @@ msgstr "Menu|Odgałęzienie"
 #: ../tvp-git-helper/tgh-branch-dialog.c:144
 #: ../tvp-git-helper/tgh-stash-dialog.c:167
 msgid "Branch"
-msgstr ""
+msgstr "Odgałęzienie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:269
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
@@ -118,7 +119,7 @@ msgstr "Menu|Otrzymywanie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
-msgstr ""
+msgstr "Otrzymaj"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Grep"
@@ -460,7 +461,6 @@ msgstr ""
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -468,7 +468,6 @@ msgstr ""
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Puste"
@@ -476,7 +475,6 @@ msgstr "Puste"
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Pliki"
@@ -484,13 +482,10 @@ msgstr "Pliki"
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -500,7 +495,6 @@ msgstr ""
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr ""
@@ -966,11 +960,11 @@ msgstr "Ukończono"
 
 #: ../tvp-svn-helper/tsh-commit.c:259
 msgid "Commit Message"
-msgstr ""
+msgstr "Przekaż wiadomość"
 
 #: ../tvp-svn-helper/tsh-common.c:291
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Przechowywać hasło w formie niezaszyfrowanej?"
 
 #: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
 #: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
@@ -1050,11 +1044,11 @@ msgstr "Istnieje"
 
 #: ../tvp-svn-helper/tsh-common.c:556
 msgid "Changelist set"
-msgstr ""
+msgstr "Lista zmian ustawiona"
 
 #: ../tvp-svn-helper/tsh-common.c:557
 msgid "Changelist cleared"
-msgstr ""
+msgstr "Lista zmian wyczyszczona"
 
 #: ../tvp-svn-helper/tsh-common.c:558
 msgid "Changelist moved"
@@ -1146,7 +1140,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Upgraded path"
-msgstr ""
+msgstr "Zaktualizowana ścieżka"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
@@ -1199,11 +1193,11 @@ msgstr "Przestarzałe"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "No parent"
-msgstr ""
+msgstr "Brak rodzica"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Forbidden by server"
-msgstr ""
+msgstr "Zabroniony przez serwer"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
@@ -1327,7 +1321,7 @@ msgstr "Stan"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
-msgstr ""
+msgstr "Wiadomość dziennika"
 
 #: ../tvp-svn-helper/tsh-move.c:104
 msgid "Local move"
@@ -1356,10 +1350,8 @@ msgstr "Wartość"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
@@ -1368,11 +1360,9 @@ msgstr "Samodzielnie"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1380,10 +1370,8 @@ msgstr ""
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
