@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-02-14 08:10+0000\n"
+"PO-Revision-Date: 2014-02-18 09:05+0000\n"
 "Last-Translator: cybercop <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/xfce/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -903,27 +903,27 @@ msgstr "Опции за Избрано:"
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "Настройки, свързани с промяна на местоположение:"
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Настройки свързани с възстановяване:"
 
 #: ../tvp-svn-helper/main.c:335
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Настройки, свързани със смяна:"
 
 #: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Настройки, свързани с отключване:"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Настройки, свързани с актуализиране:"
 
 #: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Не са представени достатъчно аргументи"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
