@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-01-10 14:05+0000\n"
+"PO-Revision-Date: 2014-03-09 22:37+0000\n"
 "Last-Translator: to_ba\n"
 "Language-Team: German (http://www.transifex.com/projects/p/xfce/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -462,7 +462,6 @@ msgstr "Tiefe:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -470,7 +469,6 @@ msgstr "Ausschließen"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Leer"
@@ -478,7 +476,6 @@ msgstr "Leer"
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Dateien"
@@ -486,13 +483,10 @@ msgstr "Dateien"
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -502,7 +496,6 @@ msgstr "Ab dieser Ebene"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Unendlich"
@@ -1120,11 +1113,11 @@ msgstr "Sperre übersprungen"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
-msgstr ""
+msgstr "Übersprungen, nur funktionierende"
 
 #: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Übersprungen, Zugriff verweigert"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
@@ -1132,15 +1125,15 @@ msgstr "Externes entfernt"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
-msgstr ""
+msgstr "Schattierte hinzufügen"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Shadowed update"
-msgstr ""
+msgstr "Schattierte aktualisieren"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Schattierte löschen"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
@@ -1148,7 +1141,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Upgraded path"
-msgstr ""
+msgstr "Aktualisierter Pfad"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
@@ -1193,7 +1186,7 @@ msgstr "Konflikt"
 #: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
 #: ../tvp-svn-helper/tsh-common.c:735
 msgid "Missing"
-msgstr ""
+msgstr "Fehlt"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "Out of date"
@@ -1305,11 +1298,11 @@ msgstr "Protokoll fehlgeschlagen"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "Beim Kopieren stoppen"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "Zusammengeführte Versionen anzeigen"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
@@ -1358,10 +1351,8 @@ msgstr "Wert"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
@@ -1370,11 +1361,9 @@ msgstr "Selbst"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1382,10 +1371,8 @@ msgstr "Alle Dateien ab dieser Ebene"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
