@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-04-17 14:03+0000\n"
+"PO-Revision-Date: 2014-04-20 13:38+0000\n"
 "Last-Translator: 柏諺 黃 <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/xfce/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -925,7 +925,7 @@ msgstr "提供的引數不足"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
-msgstr ""
+msgstr "歸咎失敗"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
@@ -1044,7 +1044,7 @@ msgstr "存在"
 
 #: ../tvp-svn-helper/tsh-common.c:556
 msgid "Changelist set"
-msgstr ""
+msgstr "更新列表已設定"
 
 #: ../tvp-svn-helper/tsh-common.c:557
 msgid "Changelist cleared"
@@ -1084,7 +1084,7 @@ msgstr "屬性不存在"
 
 #: ../tvp-svn-helper/tsh-common.c:567
 msgid "Revision property set"
-msgstr ""
+msgstr "校訂屬性設定"
 
 #: ../tvp-svn-helper/tsh-common.c:568
 msgid "Revision property deleted"
@@ -1116,23 +1116,23 @@ msgstr "僅已跳過正在工作中的"
 
 #: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr ""
+msgstr "已跳過的訪問拒絕"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
-msgstr ""
+msgstr "外部已刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
-msgstr ""
+msgstr "已隱藏的新增"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Shadowed update"
-msgstr ""
+msgstr "已隱藏的更新"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Shadowed delete"
-msgstr ""
+msgstr "已隱藏的刪除"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
@@ -1140,7 +1140,7 @@ msgstr "合併紀錄訊息"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Upgraded path"
-msgstr ""
+msgstr "已升級的路徑"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
@@ -1160,7 +1160,7 @@ msgstr "已應用的大塊"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Rejected hunk"
-msgstr ""
+msgstr "已拒絕的大型提交"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
@@ -1168,7 +1168,7 @@ msgstr "大塊已經應用"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
-msgstr ""
+msgstr "已複製的取代"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
@@ -1201,11 +1201,11 @@ msgstr "伺服器端禁止"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "已跳過的衝突"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
-msgstr ""
+msgstr "無法套用"
 
 #: ../tvp-svn-helper/tsh-common.c:694
 msgid "Unchanged"
@@ -1213,7 +1213,7 @@ msgstr "未變動的"
 
 #: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
 msgid "Obstructed"
-msgstr ""
+msgstr "被阻止的"
 
 #: ../tvp-svn-helper/tsh-common.c:697
 msgid "Changed"
