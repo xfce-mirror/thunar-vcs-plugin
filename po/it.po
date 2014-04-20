@@ -8,14 +8,15 @@
 # cri <cri.penta@gmail.com>, 2011,2013
 # edmael <edoardo.elidoro@gmail.com>, 2013
 # crazyaxe <angerangel@gmail.com>, 2014
+# amigamagic <debianmaverick@gmail.com>, 2014
 # winebar <vs.winebar@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-01-12 17:09+0000\n"
-"Last-Translator: crazyaxe <angerangel@gmail.com>\n"
+"PO-Revision-Date: 2014-04-20 15:49+0000\n"
+"Last-Translator: amigamagic <debianmaverick@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/xfce/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -465,7 +466,6 @@ msgstr "Profondità:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -473,7 +473,6 @@ msgstr "Escludi"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Vuoto"
@@ -481,7 +480,6 @@ msgstr "Vuoto"
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "File"
@@ -489,13 +487,10 @@ msgstr "File"
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -505,7 +500,6 @@ msgstr "Immediata"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Infinita"
@@ -845,7 +839,7 @@ msgstr "Esegue l'azione di regressione (revert)"
 
 #: ../tvp-svn-helper/main.c:230
 msgid "Execute switch action"
-msgstr ""
+msgstr "Esegui azione Switch"
 
 #: ../tvp-svn-helper/main.c:236
 msgid "Execute unlock action"
@@ -857,7 +851,7 @@ msgstr "Aggiorna"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Opzioni relative a Changelist:"
 
 #: ../tvp-svn-helper/main.c:271
 msgid "Checkout Related Options:"
@@ -897,7 +891,7 @@ msgstr "Opzioni relative a Blocca:"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Properties Related Options:"
-msgstr ""
+msgstr "Opzioni relative a Proprietà:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
@@ -908,19 +902,19 @@ msgstr "Proprietà"
 
 #: ../tvp-svn-helper/main.c:319
 msgid "Resolved Related Options:"
-msgstr ""
+msgstr "Opzioni relative a Resolved:"
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "Opzioni relative a Relocate:"
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Opzioni relative a Revert:"
 
 #: ../tvp-svn-helper/main.c:335
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Opzioni relative a Switch:"
 
 #: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
@@ -928,7 +922,7 @@ msgstr "Opzioni relative a Sblocca:"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Opzioni relative a Update:"
 
 #: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
@@ -936,7 +930,7 @@ msgstr "Non sono stati forniti abbastanza argomenti"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
-msgstr ""
+msgstr "Operazione Blame non riuscita"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
@@ -1017,7 +1011,7 @@ msgstr "Aggiornato"
 #: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "External"
-msgstr ""
+msgstr "External"
 
 #: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
 #: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
@@ -1031,7 +1025,7 @@ msgstr "Sostituito"
 
 #: ../tvp-svn-helper/tsh-common.c:549
 msgid "Transmitting"
-msgstr ""
+msgstr "Trasmissione"
 
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
 msgid "Locked"
@@ -1055,11 +1049,11 @@ msgstr "Esiste"
 
 #: ../tvp-svn-helper/tsh-common.c:556
 msgid "Changelist set"
-msgstr ""
+msgstr "Impostata Changelist"
 
 #: ../tvp-svn-helper/tsh-common.c:557
 msgid "Changelist cleared"
-msgstr ""
+msgstr "La Changelist è stata pulita"
 
 #: ../tvp-svn-helper/tsh-common.c:558
 msgid "Changelist moved"
@@ -1067,11 +1061,11 @@ msgstr "Changelist spostata"
 
 #: ../tvp-svn-helper/tsh-common.c:559
 msgid "Merge begin"
-msgstr ""
+msgstr "Inizio Merge"
 
 #: ../tvp-svn-helper/tsh-common.c:560
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Inizio Foreign merge"
 
 #: ../tvp-svn-helper/tsh-common.c:561
 msgid "Replace"
@@ -1095,11 +1089,11 @@ msgstr "Proprietà inesistente"
 
 #: ../tvp-svn-helper/tsh-common.c:567
 msgid "Revision property set"
-msgstr ""
+msgstr "Impostata proprietà Revision"
 
 #: ../tvp-svn-helper/tsh-common.c:568
 msgid "Revision property deleted"
-msgstr ""
+msgstr "Cancellata proprietà Revision"
 
 #: ../tvp-svn-helper/tsh-common.c:569
 msgid "Merge completed"
@@ -1107,11 +1101,11 @@ msgstr "Unione completata"
 
 #: ../tvp-svn-helper/tsh-common.c:570
 msgid "Tree conflict"
-msgstr ""
+msgstr "Conflitto nella gerarchia"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "External failed"
-msgstr ""
+msgstr "External non riuscita"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
@@ -1119,31 +1113,31 @@ msgstr "Iniziato"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Ignorata ostruzione"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
-msgstr ""
+msgstr "Ignorata solo la working"
 
 #: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Ignorato accesso negato"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
-msgstr ""
+msgstr "Rimossa External"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
-msgstr ""
+msgstr "Aggiunta Shadowed"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Shadowed update"
-msgstr ""
+msgstr "Aggiornamento Shadowed"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Cancellazione Shadowed"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
@@ -1155,11 +1149,11 @@ msgstr "Percorso aggiornato"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Inizio record informativo del Merge"
 
 #: ../tvp-svn-helper/tsh-common.c:585
 msgid "Merge elide info"
-msgstr ""
+msgstr "Merge informazioni di elisione"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
@@ -1167,19 +1161,19 @@ msgstr "Patch"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
-msgstr ""
+msgstr "Pezzo applicato"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Pezzo rifiutato"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Pezzo già applicato"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
-msgstr ""
+msgstr "Sostituito il copiato"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
@@ -1204,7 +1198,7 @@ msgstr "Non aggiornato"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "No parent"
-msgstr ""
+msgstr "Nessun padre"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Forbidden by server"
@@ -1212,7 +1206,7 @@ msgstr "Operazione non permessa dal server"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "Ignorati elementi in conflitto"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
@@ -1224,7 +1218,7 @@ msgstr "Non modificato"
 
 #: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
 msgid "Obstructed"
-msgstr ""
+msgstr "Ostruito"
 
 #: ../tvp-svn-helper/tsh-common.c:697
 msgid "Changed"
@@ -1236,7 +1230,7 @@ msgstr "Unito"
 
 #: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
 msgid "Conflicted"
-msgstr ""
+msgstr "In conflitto"
 
 #: ../tvp-svn-helper/tsh-common.c:701
 msgid "Source missing"
@@ -1312,7 +1306,7 @@ msgstr "Ferma alla copia"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "Mostra le revisioni unite"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:64
 msgid "_Username:"
@@ -1349,7 +1343,7 @@ msgstr "Notifica"
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:94
 msgid "Set property failed"
-msgstr ""
+msgstr "Impostazione proprietà fallita"
 
 #: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
@@ -1361,23 +1355,19 @@ msgstr "Valore"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
-msgstr ""
+msgstr "Se stesso"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1385,10 +1375,8 @@ msgstr "File immediati"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
@@ -1396,15 +1384,15 @@ msgstr "Ricorsivo"
 
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
-msgstr ""
+msgstr "Operazione Relocate fallita"
 
 #: ../tvp-svn-helper/tsh-relocate.c:93
 msgid "Relocate finished"
-msgstr ""
+msgstr "Operazione Relocate terminata"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
 msgid "Relocating ..."
-msgstr ""
+msgstr "Trasferimento ..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
@@ -1416,7 +1404,7 @@ msgstr "_A:"
 
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
-msgstr ""
+msgstr "Operazione Status fallita"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
@@ -1432,7 +1420,7 @@ msgstr "Mostra i file ignorati"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:235
 msgid "Hide Externals"
-msgstr ""
+msgstr "Nascondi elementi External"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Check Repository"
@@ -1460,4 +1448,4 @@ msgstr "Altro problema."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:76
 msgid "Trust"
-msgstr ""
+msgstr "Trust"
