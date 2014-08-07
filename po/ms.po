@@ -1,0 +1,1445 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# abuyop <abuyop@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-03 20:11+0200\n"
+"PO-Revision-Date: 2014-08-07 16:26+0000\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
+"Language-Team: Malay (http://www.transifex.com/projects/p/thunar-plugins/language/ms/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ms\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+msgid "Menu|Add"
+msgstr "Menu|Tambah"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
+#: ../tvp-svn-helper/tsh-add.c:132
+msgid "Add"
+msgstr "Tambah"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Menu|Bisect"
+msgstr "Menu|Pisah"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Bisect"
+msgstr "Pisah"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+msgid "Menu|Blame"
+msgstr "Menu|Salah"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
+msgid "Blame"
+msgstr "Salah"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
+msgid "Menu|Branch"
+msgstr "Menu|Cabang"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:144
+#: ../tvp-git-helper/tgh-stash-dialog.c:167
+msgid "Branch"
+msgstr "Cabang"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+msgid "Menu|Checkout"
+msgstr "Menu|Daftar Keluar"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
+msgid "Checkout"
+msgstr "Daftar Keluar"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+msgid "Menu|Clean"
+msgstr "Menu|Hapus"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
+msgid "Clean"
+msgstr "Hapus"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272
+msgid "Menu|Clone"
+msgstr "Menu|Klon"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
+msgid "Clone"
+msgstr "Klon"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid "Menu|Commit"
+msgstr "Menu|Buat"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
+msgid "Commit"
+msgstr "Buat"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+msgid "Menu|Diff"
+msgstr "Menu|Beza"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+msgid "Diff"
+msgstr "Bezq"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Menu|Fetch"
+msgstr "Menu|Dapat"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Fetch"
+msgstr "Dapat"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Menu|Grep"
+msgstr "Menu|Grep"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Grep"
+msgstr "Grep"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Menu|Init"
+msgstr "Menu|Init"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Init"
+msgstr "Init"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+msgid "Menu|Log"
+msgstr "Menu|Log"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
+#: ../tvp-svn-helper/tsh-log-dialog.c:225
+msgid "Log"
+msgstr "Log"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Menu|Merge"
+msgstr "Menu|Gabung"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Merge"
+msgstr "Gabung"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+msgid "Menu|Move"
+msgstr "Menu|Alih"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
+msgid "Move"
+msgstr "Alih"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Menu|Pull"
+msgstr "Menu|Tarik"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Pull"
+msgstr "Tarik"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Menu|Push"
+msgstr "Menu|Tolak"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Push"
+msgstr "Tolak"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Menu|Rebase"
+msgstr "Menu|Landas Semula"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Rebase"
+msgstr "Landas semula"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
+msgid "Menu|Reset"
+msgstr "Menu|Tetap Semula"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
+msgid "Reset"
+msgstr "Tetap semula"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Menu|Remove"
+msgstr "Menu|Buang"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Remove"
+msgstr "Buang"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Menu|Show"
+msgstr "Menu|Tunjuk"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Show"
+msgstr "Tunjuk"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
+msgid "Menu|Stash"
+msgstr "Menu|Sorok"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
+#. gtk_widget_show (box);
+#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:256
+msgid "Stash"
+msgstr "Sorok"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+msgid "Menu|Status"
+msgstr "Menu|Status"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-status-dialog.c:246
+msgid "Status"
+msgstr "Status"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Menu|Tag"
+msgstr "Menu|Tag"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Tag"
+msgstr "Tag"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#, c-format
+msgid "Action %s is unimplemented"
+msgstr "Tindakan %s tidak dilaksana"
+
+#. append the svn submenu action
+#. Lets see if we are dealing with a working copy
+#: ../thunar-vcs-plugin/tvp-provider.c:464
+#: ../thunar-vcs-plugin/tvp-provider.c:530
+msgid "SVN"
+msgstr "SVN"
+
+#. append the git submenu action
+#: ../thunar-vcs-plugin/tvp-provider.c:495
+#: ../thunar-vcs-plugin/tvp-provider.c:537
+msgid "GIT"
+msgstr "GIT"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Menu|Changelist"
+msgstr "Menu|Senaraiperubahan"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Changelist"
+msgstr "Senarai perubahan"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+msgid "Menu|Cleanup"
+msgstr "Menu|Bersih"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
+msgid "Cleanup"
+msgstr "Bersih"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Menu|Copy"
+msgstr "Menu|Salin"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/tsh-copy.c:177
+msgid "Copy"
+msgstr "Salin"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+msgid "Menu|Delete"
+msgstr "Menu|Padam"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
+msgid "Delete"
+msgstr "Padam"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Menu|Export"
+msgstr "Menu|Eksport"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
+msgid "Export"
+msgstr "Eksport"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+msgid "Menu|Import"
+msgstr "Menu|Import"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
+#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
+msgid "Import"
+msgstr "Import"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Menu|Info"
+msgstr "Menu|Info"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Info"
+msgstr "Info"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+msgid "Menu|Lock"
+msgstr "Menu|Kunci"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:303
+#: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
+msgid "Lock"
+msgstr "Kunci"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Menu|Edit Properties"
+msgstr "Menu|Sunting Sifat"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Edit Properties"
+msgstr "Sunting Sifat"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+msgid "Menu|Relocate"
+msgstr "Menu|Tempat Semula"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
+msgid "Relocate"
+msgstr "Tempat semula"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+msgid "Menu|Resolved"
+msgstr "Menu|Dilerai Semula"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-resolved.c:128
+msgid "Resolved"
+msgstr "Dilerai semula"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Menu|Resolve"
+msgstr "Menu|Lerai Semula"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Resolve"
+msgstr "Lerai semula"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+msgid "Menu|Revert"
+msgstr "Menu|Kembali"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
+msgid "Revert"
+msgstr "Kembali"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+msgid "Menu|Switch"
+msgstr "Menu|Tukar"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
+#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
+msgid "Switch"
+msgstr "Tukar"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+msgid "Menu|Unlock"
+msgstr "Menu|Nyahkunci"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:339
+#: ../tvp-svn-helper/tsh-unlock.c:113
+msgid "Unlock"
+msgstr "Nyahkunci"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+msgid "Menu|Update"
+msgstr "Menu|Kemaskini"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
+#: ../tvp-svn-helper/tsh-update.c:120
+msgid "Update"
+msgstr "Kemaskini"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
+msgid "URL:"
+msgstr "URL:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
+#: ../tvp-svn-helper/tsh-common.c:605 ../tvp-svn-helper/tsh-common.c:693
+#: ../tvp-svn-helper/tsh-common.c:705 ../tvp-svn-helper/tsh-common.c:730
+#: ../tvp-svn-helper/tsh-common.c:747 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:879
+msgid "Unknown"
+msgstr "Tidak Diketahui"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
+msgid "Revision:"
+msgstr "Revisi:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
+msgid "Repository:"
+msgstr "Repositori:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+msgid "Modified revision:"
+msgstr "Revisi diubahsuai:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
+msgid "Modified date:"
+msgstr "Tarikh ubahsuai:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
+msgid "Author:"
+msgstr "Pengarang:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
+msgid "Changelist:"
+msgstr "Senarai Ubah:"
+
+#. Translators: Depth as in depth of recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
+msgid "Depth:"
+msgstr "Kedalaman:"
+
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
+#: ../tvp-svn-helper/tsh-common.c:594
+msgid "Exclude"
+msgstr "Asingkan"
+
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+msgid "Empty"
+msgstr "Kosong"
+
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
+msgid "Files"
+msgstr "Fail"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
+msgid "Immediates"
+msgstr "Immediate"
+
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+msgid "Infinity"
+msgstr "Tak Terhingga"
+
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
+msgid "Print version information"
+msgstr "Cetak maklumat versi"
+
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
+msgid "Execute add action"
+msgstr "Lakukan tindakan tambah"
+
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
+msgid "Execute blame action"
+msgstr "Lakukan tindakan salah"
+
+#: ../tvp-git-helper/main.c:99
+msgid "Execute branch action"
+msgstr "Lakukan tindakan cabang"
+
+#: ../tvp-git-helper/main.c:105
+msgid "Execute clean action"
+msgstr "Lakukan tindakan bersih"
+
+#: ../tvp-git-helper/main.c:111
+msgid "Execute clone action"
+msgstr "Lakukan tindakan klon"
+
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
+msgid "Execute log action"
+msgstr "Lakukan tindakan log"
+
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
+msgid "Execute move action"
+msgstr "Lakukan tindakan alih"
+
+#: ../tvp-git-helper/main.c:129
+msgid "Execute reset action"
+msgstr "Lakukan tindakan tetap semula"
+
+#: ../tvp-git-helper/main.c:135
+msgid "Execute stash action"
+msgstr "Lakukan tindakan sorok"
+
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
+msgid "Execute status action"
+msgstr "Lakukan tindakan status"
+
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
+msgid "Add Related Options:"
+msgstr "Pilihan Berkaitan Tambah:"
+
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
+msgid "Blame Related Options:"
+msgstr "Pilihan Berkaitan Salah:"
+
+#: ../tvp-git-helper/main.c:161
+msgid "Branch Related Options:"
+msgstr "Pilihan Berkaitan Cabang:"
+
+#: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
+msgid "Clone Related Options:"
+msgstr "Pilihan Berkaitan Klon:"
+
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
+msgid "Log Related Options:"
+msgstr "Pilihan Berkaitan Log:"
+
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
+msgid "Move Related Options:"
+msgstr "Pilihan Berkaitan Alih:"
+
+#: ../tvp-git-helper/main.c:181
+msgid "Reset Related Options:"
+msgstr "Pilihan Berkaitan Tetap Semula:"
+
+#: ../tvp-git-helper/main.c:185
+msgid "Stash Related Options:"
+msgstr "Pilihan Berkaitan Sorok:"
+
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
+msgid "Status Related Options:"
+msgstr "Pilihan Berkaitan Status:"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
+msgid "Line"
+msgstr "Baris"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
+msgid "Revision"
+msgstr "Revisi"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
+msgid "Author"
+msgstr "Pengarang"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
+msgid "Date"
+msgstr "Tarikh"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:116
+#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:125
+msgid "Name"
+msgstr "Nama"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:263
+msgid "Branch name:"
+msgstr "Nama cabang:"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:56
+msgid "Remove directories."
+msgstr "Buang direktori."
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:68
+msgid "Exclude ignored files"
+msgstr "Asingkan fail diabaikan"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:76
+msgid "Include ignored files"
+msgstr "Sertakan fail diabaikan"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:82
+msgid "Only ignored files"
+msgstr "Hanya fail diabaikan"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:92
+msgid "Force clean."
+msgstr "Paksa bersih."
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr "Klon selesai"
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning ..."
+msgstr "Mengklon ..."
+
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
+#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
+#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
+#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
+#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:95
+msgid "Failed"
+msgstr "Gagal"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+msgid "untracked"
+msgstr "tidak dijejak"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "Laluan"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+msgid "Select/Unselect all"
+msgstr "Pilih/Jangan pilih semua"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr "TarikhPengarang"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr "TarikhBuat"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "Mesej"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-stash-dialog.c:197
+msgid "Changes"
+msgstr "Perubahan"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-stash-dialog.c:204
+msgid "File"
+msgstr "Fail"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "Alih selesai"
+
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+msgid "Move To"
+msgstr "Alih Ke"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move ..."
+msgstr "Alih ..."
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "Tindakan"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr "Maklum"
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "Tetap semula selesai"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset ..."
+msgstr "Tetap semula ..."
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:173
+msgid "Description"
+msgstr "Keterangan"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:398
+msgid "Stash description:"
+msgstr "Keterangan sorok:"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:534
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr "Anda pasti mahu lepas %s?"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:562
+msgid "Are you sure you want to clear all stash?"
+msgstr "Anda pasti mahu kosongkan semua sorok?"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
+msgid "_Repository:"
+msgstr "_Repositori:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:75
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
+msgid "Select a folder"
+msgstr "Pilih satu folder"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
+msgid "_Directory:"
+msgstr "_Direktori:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:122
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
+msgid "Transfer"
+msgstr "Pemindahan"
+
+#: ../tvp-svn-helper/main.c:128
+msgid "Execute changelist action"
+msgstr "Lakukan tindakan senarai ubah"
+
+#: ../tvp-svn-helper/main.c:134
+msgid "Execute checkout action"
+msgstr "Lakukan tindakan daftar keluar"
+
+#: ../tvp-svn-helper/main.c:140
+msgid "Execute cleanup action"
+msgstr "Lakukan tindakan bersih"
+
+#: ../tvp-svn-helper/main.c:146
+msgid "Execute commit action"
+msgstr "Lakukan tindakan buat"
+
+#: ../tvp-svn-helper/main.c:152
+msgid "Execute copy action"
+msgstr "Lakukan tindakan salin"
+
+#: ../tvp-svn-helper/main.c:158
+msgid "Execute delete action"
+msgstr "Lakukan tindakan padam"
+
+#: ../tvp-svn-helper/main.c:164
+msgid "Execute diff action"
+msgstr "Lakukan tindakan beza"
+
+#: ../tvp-svn-helper/main.c:170
+msgid "Execute export action"
+msgstr "Lakukan tindakan eksport"
+
+#: ../tvp-svn-helper/main.c:176
+msgid "Execute import action"
+msgstr "Lakukan tindakan import"
+
+#: ../tvp-svn-helper/main.c:182
+msgid "Execute lock action"
+msgstr "Lakukan tindakan kunci"
+
+#: ../tvp-svn-helper/main.c:200
+msgid "Execute properties action"
+msgstr "Lakukan tindakan sifat"
+
+#: ../tvp-svn-helper/main.c:206
+msgid "Execute resolved action"
+msgstr "Lakukan tindakan dilerai semula"
+
+#: ../tvp-svn-helper/main.c:212
+msgid "Execute relocate action"
+msgstr "Lakukan tindakan tempat semula"
+
+#: ../tvp-svn-helper/main.c:218
+msgid "Execute revert action"
+msgstr "Lakukan tindakan kembali"
+
+#: ../tvp-svn-helper/main.c:230
+msgid "Execute switch action"
+msgstr "Lakukan tindakan tukar"
+
+#: ../tvp-svn-helper/main.c:236
+msgid "Execute unlock action"
+msgstr "Lakukan tindakan nyahkunci"
+
+#: ../tvp-svn-helper/main.c:242
+msgid "Execute update action"
+msgstr "Lakukan tindakan kemaskini"
+
+#: ../tvp-svn-helper/main.c:267
+msgid "Changelist Related Options:"
+msgstr "Pilihan Berkaitan Senarai Ubah:"
+
+#: ../tvp-svn-helper/main.c:271
+msgid "Checkout Related Options:"
+msgstr "Pilihan Berkaitan Daftar Keluar:"
+
+#: ../tvp-svn-helper/main.c:275
+msgid "Cleanup Related Options:"
+msgstr "Pilihan Berkaitan Bersih:"
+
+#: ../tvp-svn-helper/main.c:279
+msgid "Commit Related Options:"
+msgstr "Pilihan Berkaitan Buat:"
+
+#: ../tvp-svn-helper/main.c:283
+msgid "Copy Related Options:"
+msgstr "Pilihan Berkaitan Salin:"
+
+#: ../tvp-svn-helper/main.c:287
+msgid "Delete Related Options:"
+msgstr "Pilihan Berkaitan Padam:"
+
+#: ../tvp-svn-helper/main.c:291
+msgid "Diff Related Options:"
+msgstr "Pilihan Berkaitan Beza:"
+
+#: ../tvp-svn-helper/main.c:295
+msgid "Export Related Options:"
+msgstr "Pilihan Berkaitan Eksport:"
+
+#: ../tvp-svn-helper/main.c:299
+msgid "Import Related Options:"
+msgstr "Pilihan Berkaitan Import:"
+
+#: ../tvp-svn-helper/main.c:303
+msgid "Lock Related Options:"
+msgstr "Pilihan Berkaitan Kunci:"
+
+#: ../tvp-svn-helper/main.c:315
+msgid "Properties Related Options:"
+msgstr "Pilihan Berkaitan Sifat:"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
+#. gtk_widget_show (box);
+#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:280
+msgid "Properties"
+msgstr "Sifat"
+
+#: ../tvp-svn-helper/main.c:319
+msgid "Resolved Related Options:"
+msgstr "Pilihan Berkaitan Dilerai Semula:"
+
+#: ../tvp-svn-helper/main.c:323
+msgid "Relocate Related Options:"
+msgstr "Pilihan Berkaitan Tempat Semula:"
+
+#: ../tvp-svn-helper/main.c:327
+msgid "Revert Related Options:"
+msgstr "Pilihan Berkaitan Kembali:"
+
+#: ../tvp-svn-helper/main.c:335
+msgid "Switch Related Options:"
+msgstr "Pilihan Berkaitan Tukar:"
+
+#: ../tvp-svn-helper/main.c:339
+msgid "Unlock Related Options:"
+msgstr "Pilihan Berkaitan Nyahkunci:"
+
+#: ../tvp-svn-helper/main.c:343
+msgid "Update Related Options:"
+msgstr "Pilihan Berkaitan Kemaskini:"
+
+#: ../tvp-svn-helper/main.c:386
+msgid "Not enough arguments provided"
+msgstr "Argumen tidak mencukupi disediakan"
+
+#: ../tvp-svn-helper/tsh-blame.c:82
+msgid "Blame failed"
+msgstr "Salah gagal"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:68
+msgid "Cleanup failed"
+msgstr "Bersih gagal"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:83
+msgid "Cleanup finished"
+msgstr "Bersih selesai"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:97
+msgid "Cleaning up ..."
+msgstr "Membersihkan ..."
+
+#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
+#: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
+#: ../tvp-svn-helper/tsh-move.c:99
+#, c-format
+msgid "At revision: %ld"
+msgstr "Pada revisi: %ld"
+
+#: ../tvp-svn-helper/tsh-commit.c:216
+msgid "Nothing to do"
+msgstr "Tidak buat apa-apa"
+
+#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
+#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
+#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
+msgid "Completed"
+msgstr "Selesai"
+
+#: ../tvp-svn-helper/tsh-commit.c:259
+msgid "Commit Message"
+msgstr "Mesej Buat"
+
+#: ../tvp-svn-helper/tsh-common.c:291
+msgid "Store password a plaintext?"
+msgstr "Kata laluan simpan adalah teks biasa?"
+
+#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
+#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
+#: ../tvp-svn-helper/tsh-common.c:781 ../tvp-svn-helper/tsh-common.c:885
+msgid "Added"
+msgstr "Ditambah"
+
+#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:894
+msgid "Copied"
+msgstr "Disalin"
+
+#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:736
+#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:887
+msgid "Deleted"
+msgstr "Dipadam"
+
+#: ../tvp-svn-helper/tsh-common.c:533
+msgid "Restored"
+msgstr "Dipulihkan"
+
+#: ../tvp-svn-helper/tsh-common.c:534
+msgid "Reverted"
+msgstr "Dikembalikan"
+
+#: ../tvp-svn-helper/tsh-common.c:535
+msgid "Revert failed"
+msgstr "Kembali gagal"
+
+#: ../tvp-svn-helper/tsh-common.c:537
+msgid "Skipped"
+msgstr "Dilangkau"
+
+#: ../tvp-svn-helper/tsh-common.c:540
+msgid "Updated"
+msgstr "Dikemaskini"
+
+#: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:743
+msgid "External"
+msgstr "Luaran"
+
+#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
+#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
+msgid "Modified"
+msgstr "Diubahsuai"
+
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:737
+#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:883
+msgid "Replaced"
+msgstr "Diganti"
+
+#: ../tvp-svn-helper/tsh-common.c:549
+msgid "Transmitting"
+msgstr "Memindahkan"
+
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
+msgid "Locked"
+msgstr "Dikunci"
+
+#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
+msgid "Unlocked"
+msgstr "Dinyahkunci"
+
+#: ../tvp-svn-helper/tsh-common.c:553
+msgid "Lock failed"
+msgstr "Kunci gagal"
+
+#: ../tvp-svn-helper/tsh-common.c:554
+msgid "Unlock failed"
+msgstr "Nyahkunci gagal"
+
+#: ../tvp-svn-helper/tsh-common.c:555
+msgid "Exists"
+msgstr "Wujud"
+
+#: ../tvp-svn-helper/tsh-common.c:556
+msgid "Changelist set"
+msgstr "Senarai ubah ditetapkan"
+
+#: ../tvp-svn-helper/tsh-common.c:557
+msgid "Changelist cleared"
+msgstr "Senarai ubah dikosongkan"
+
+#: ../tvp-svn-helper/tsh-common.c:558
+msgid "Changelist moved"
+msgstr "Senarai ubah dialih"
+
+#: ../tvp-svn-helper/tsh-common.c:559
+msgid "Merge begin"
+msgstr "Gabung bermula"
+
+#: ../tvp-svn-helper/tsh-common.c:560
+msgid "Foreign merge begin"
+msgstr "Gabung asing bermula"
+
+#: ../tvp-svn-helper/tsh-common.c:561
+msgid "Replace"
+msgstr "Ganti"
+
+#: ../tvp-svn-helper/tsh-common.c:563
+msgid "Property added"
+msgstr "Sifat ditambah"
+
+#: ../tvp-svn-helper/tsh-common.c:564
+msgid "Property modified"
+msgstr "Sifat diubahsuai"
+
+#: ../tvp-svn-helper/tsh-common.c:565
+msgid "Property deleted"
+msgstr "Sifat dipadam"
+
+#: ../tvp-svn-helper/tsh-common.c:566
+msgid "Property nonexisting"
+msgstr "Sifat tidak-wujud"
+
+#: ../tvp-svn-helper/tsh-common.c:567
+msgid "Revision property set"
+msgstr "Sifat revisi ditetapkan"
+
+#: ../tvp-svn-helper/tsh-common.c:568
+msgid "Revision property deleted"
+msgstr "Sifat revisi dipadam"
+
+#: ../tvp-svn-helper/tsh-common.c:569
+msgid "Merge completed"
+msgstr "Gabung selesai"
+
+#: ../tvp-svn-helper/tsh-common.c:570
+msgid "Tree conflict"
+msgstr "Konflik pepohon"
+
+#: ../tvp-svn-helper/tsh-common.c:571
+msgid "External failed"
+msgstr "Luaran gagal"
+
+#: ../tvp-svn-helper/tsh-common.c:574
+msgid "Started"
+msgstr "Dimulakan"
+
+#: ../tvp-svn-helper/tsh-common.c:575
+msgid "Skipped obstruction"
+msgstr "Halangan dilangkau"
+
+#: ../tvp-svn-helper/tsh-common.c:576
+msgid "Skipped working only"
+msgstr "Berfungsi dilangkau sahaja"
+
+#: ../tvp-svn-helper/tsh-common.c:577
+msgid "Skipped access denied"
+msgstr "Capaian dilangkau dinafikan"
+
+#: ../tvp-svn-helper/tsh-common.c:578
+msgid "External removed"
+msgstr "Luaran dialih"
+
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Shadowed add"
+msgstr "Tambah berbayang"
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Shadowed update"
+msgstr "Kemaskini berbayang"
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Shadowed delete"
+msgstr "Padam berbayang"
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Merge record info"
+msgstr "Gabung maklumat rekod"
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "Upgraded path"
+msgstr "Laluan ditatar"
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Merge record info begin"
+msgstr "Gabung maklumat rekod bermula"
+
+#: ../tvp-svn-helper/tsh-common.c:585
+msgid "Merge elide info"
+msgstr "Gabung maklumat elide"
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Patch"
+msgstr "Tampal"
+
+#: ../tvp-svn-helper/tsh-common.c:587
+msgid "Applied hunk"
+msgstr "Ketulan besar dilaksana"
+
+#: ../tvp-svn-helper/tsh-common.c:588
+msgid "Rejected hunk"
+msgstr "Ketulan besar ditolak"
+
+#: ../tvp-svn-helper/tsh-common.c:589
+msgid "Hunk already applied"
+msgstr "Ketulan besar sudah dilaksana"
+
+#: ../tvp-svn-helper/tsh-common.c:591
+msgid "Copied replaced"
+msgstr "Salinan diganti"
+
+#: ../tvp-svn-helper/tsh-common.c:592
+msgid "URL redirect"
+msgstr "URL diarah semula"
+
+#: ../tvp-svn-helper/tsh-common.c:593
+msgid "Path nonexistent"
+msgstr "Laluan tidak wujud"
+
+#: ../tvp-svn-helper/tsh-common.c:595
+msgid "Conflict"
+msgstr "Konflik"
+
+#: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
+#: ../tvp-svn-helper/tsh-common.c:735
+msgid "Missing"
+msgstr "Hilang"
+
+#: ../tvp-svn-helper/tsh-common.c:597
+msgid "Out of date"
+msgstr "Luput"
+
+#: ../tvp-svn-helper/tsh-common.c:598
+msgid "No parent"
+msgstr "Tiada induk"
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Forbidden by server"
+msgstr "Dilarang oleh pelayan"
+
+#: ../tvp-svn-helper/tsh-common.c:601
+msgid "Skipped conflicted"
+msgstr "Konflik dilangkau"
+
+#: ../tvp-svn-helper/tsh-common.c:692
+msgid "Inapplicable"
+msgstr "Tidak boleh dilaksana"
+
+#: ../tvp-svn-helper/tsh-common.c:694
+msgid "Unchanged"
+msgstr "Tidak berubah"
+
+#: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
+msgid "Obstructed"
+msgstr "Dihalang"
+
+#: ../tvp-svn-helper/tsh-common.c:697
+msgid "Changed"
+msgstr "Berubah"
+
+#: ../tvp-svn-helper/tsh-common.c:698 ../tvp-svn-helper/tsh-common.c:739
+msgid "Merged"
+msgstr "Digabung"
+
+#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
+msgid "Conflicted"
+msgstr "Berkonflik"
+
+#: ../tvp-svn-helper/tsh-common.c:701
+msgid "Source missing"
+msgstr "Sumber hilang"
+
+#. N_("None"),
+#. N_("Unversioned"),
+#: ../tvp-svn-helper/tsh-common.c:733
+msgid "Normal"
+msgstr "Biasa"
+
+#: ../tvp-svn-helper/tsh-common.c:741
+msgid "Ignored"
+msgstr "Diabaikan"
+
+#: ../tvp-svn-helper/tsh-common.c:744
+msgid "Incomplete"
+msgstr "Tidak lengkap"
+
+#: ../tvp-svn-helper/tsh-common.c:1082
+msgid "Error"
+msgstr "Ralat"
+
+#: ../tvp-svn-helper/tsh-common.c:1094
+msgid "Local action"
+msgstr "Tindakan setempat"
+
+#: ../tvp-svn-helper/tsh-copy.c:112
+msgid "Local copy"
+msgstr "Salin setempat"
+
+#: ../tvp-svn-helper/tsh-copy.c:159
+msgid "Copy To"
+msgstr "Salin Ke"
+
+#: ../tvp-svn-helper/tsh-delete.c:118
+msgid "Local delete"
+msgstr "Padam setempat"
+
+#: ../tvp-svn-helper/tsh-delete.c:158
+msgid "Delete Message"
+msgstr "Padam Mesej"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:59
+msgid "_Certificate:"
+msgstr "_Sijil:"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:66
+msgid "Select a file"
+msgstr "Pilih satu fail"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-login-dialog.c:97
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+msgid "Remember"
+msgstr "Ingat"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:85
+msgid "Certificate"
+msgstr "Sijil"
+
+#: ../tvp-svn-helper/tsh-import.c:138
+msgid "Import Message"
+msgstr "Import Mesej"
+
+#: ../tvp-svn-helper/tsh-log.c:123
+msgid "Log failed"
+msgstr "Log gagal"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr "Henti Bila Menyalin"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:218
+msgid "Show Merged Revisions"
+msgstr "Tunjuk Revisi Tergabung"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:64
+msgid "_Username:"
+msgstr "_Nama Pengguna:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:80
+msgid "_Password:"
+msgstr "Kata _Laluan:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:105
+msgid "Login"
+msgstr "Daftar Masuk"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+msgid "State"
+msgstr "Keadaan"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+msgid "Log Message"
+msgstr "Mesej Log"
+
+#: ../tvp-svn-helper/tsh-move.c:104
+msgid "Local move"
+msgstr "Alih setempat"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
+msgid "Mime type"
+msgstr "Jenis mime"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
+msgid "Notification"
+msgstr "Pemberitahuan"
+
+#. tsh_properties_dialog_done (dialog);
+#: ../tvp-svn-helper/tsh-properties.c:94
+msgid "Set property failed"
+msgstr "Tetap sifat gagal"
+
+#: ../tvp-svn-helper/tsh-properties.c:117
+msgid "Properties failed"
+msgstr "Sifat gagal"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:131
+msgid "Value"
+msgstr "Nilai "
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr "Diri"
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr "Fail immediate"
+
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Rekursif"
+
+#: ../tvp-svn-helper/tsh-relocate.c:78
+msgid "Relocate failed"
+msgstr "Lokasi semula gagal"
+
+#: ../tvp-svn-helper/tsh-relocate.c:93
+msgid "Relocate finished"
+msgstr "Lokasi semula selesai"
+
+#: ../tvp-svn-helper/tsh-relocate.c:139
+msgid "Relocating ..."
+msgstr "Melokasi semula..."
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
+msgid "_From:"
+msgstr "_Dari:"
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
+msgid "_To:"
+msgstr "_Ke:"
+
+#: ../tvp-svn-helper/tsh-status.c:91
+msgid "Status failed"
+msgstr "Status gagal"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:223
+msgid "Show Unmodified Files"
+msgstr "Tunjuk Fail Tidak Diubahsuai"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:227
+msgid "Show Unversioned Files"
+msgstr "Tunjuk Fail Tiada Versi"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:231
+msgid "Show Ignored Files"
+msgstr "Tunjuk Fail Diabai"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:235
+msgid "Hide Externals"
+msgstr "Sembunyi Luaran"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
+msgid "Check Repository"
+msgstr "Semak Repositori"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:57
+msgid "Certificate is not yet valid."
+msgstr "Sijil belum lagi sah."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+msgid "Certificate has expired."
+msgstr "Sijil telah luput."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+msgid "Certificate does not match the remote hostname."
+msgstr "Sijil tidak sepadan dengan nama hos jauh."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+msgid "Certificate authority is unknown."
+msgstr "Autoriti sijil tidak diketahui."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+msgid "Other failure."
+msgstr "Kegagalan lain."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:76
+msgid "Trust"
+msgstr "Kepercayaan"
