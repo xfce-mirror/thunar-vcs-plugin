@@ -1,0 +1,1445 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Pasi Lallinaho <pasi@shimmerproject.org>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-03 20:11+0200\n"
+"PO-Revision-Date: 2014-08-23 08:39+0000\n"
+"Last-Translator: Pasi Lallinaho <pasi@shimmerproject.org>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/thunar-plugins/language/fi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+msgid "Menu|Add"
+msgstr "Valikko|Lisää"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
+#: ../tvp-svn-helper/tsh-add.c:132
+msgid "Add"
+msgstr "Lisää"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Menu|Bisect"
+msgstr "Valikko|Selvitä muutoksen lähde"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgid "Bisect"
+msgstr "Selvitä muutoksen lähde"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+msgid "Menu|Blame"
+msgstr "Valikko|Näytä muutoksen tiedot"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
+#: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
+msgid "Blame"
+msgstr "Näytä muutoksen tiedot"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
+msgid "Menu|Branch"
+msgstr "Valikko|Haarauta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:144
+#: ../tvp-git-helper/tgh-stash-dialog.c:167
+msgid "Branch"
+msgstr "Haarauta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+msgid "Menu|Checkout"
+msgstr "Valikko|Hae"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:269
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
+msgid "Checkout"
+msgstr "Hae"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+msgid "Menu|Clean"
+msgstr "Valikko|Siisti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
+msgid "Clean"
+msgstr "Siisti"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272
+msgid "Menu|Clone"
+msgstr "Valikko|Kloonaa"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
+msgid "Clone"
+msgstr "Kloonaa"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid "Menu|Commit"
+msgstr "Valikko|Toteuta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
+msgid "Commit"
+msgstr "Toteuta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+msgid "Menu|Diff"
+msgstr "Valikko|Ero"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:274
+#: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+msgid "Diff"
+msgstr "Ero"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Menu|Fetch"
+msgstr "Valikko|Hae muualta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:275
+msgid "Fetch"
+msgstr "Hae muualta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Menu|Grep"
+msgstr "Valikko|Etsi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:276
+msgid "Grep"
+msgstr "Etsi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Menu|Init"
+msgstr "Valikko|Luo uusi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:277
+msgid "Init"
+msgstr "Luo uusi"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+msgid "Menu|Log"
+msgstr "Valikko|Loki"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:278
+#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
+#: ../tvp-svn-helper/tsh-log-dialog.c:225
+msgid "Log"
+msgstr "Loki"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Menu|Merge"
+msgstr "Valikko|Yhdistä"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:279
+msgid "Merge"
+msgstr "Yhdistä"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+msgid "Menu|Move"
+msgstr "Valikko|Siirrä"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
+msgid "Move"
+msgstr "Siirrä"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Menu|Pull"
+msgstr "Valikko|Hae muutokset"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:282
+msgid "Pull"
+msgstr "Hae muutokset"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Menu|Push"
+msgstr "Valikko|Lähetä muutokset"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:283
+msgid "Push"
+msgstr "Lähetä muutokset"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Menu|Rebase"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:284
+msgid "Rebase"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285
+msgid "Menu|Reset"
+msgstr "Valikko|Alusta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
+msgid "Reset"
+msgstr "Alusta"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Menu|Remove"
+msgstr "Valikko|Poista"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:286
+msgid "Remove"
+msgstr "Poista"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Menu|Show"
+msgstr "Valikko|Näytä"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:287
+msgid "Show"
+msgstr "Näytä"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:289
+msgid "Menu|Stash"
+msgstr ""
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
+#. gtk_widget_show (box);
+#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:256
+msgid "Stash"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+msgid "Menu|Status"
+msgstr "Valikko|Tila"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:291
+#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-status-dialog.c:246
+msgid "Status"
+msgstr "Tila"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Menu|Tag"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:292
+msgid "Tag"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#, c-format
+msgid "Action %s is unimplemented"
+msgstr "Toimintoa %s ei ole vielä toteutettu"
+
+#. append the svn submenu action
+#. Lets see if we are dealing with a working copy
+#: ../thunar-vcs-plugin/tvp-provider.c:464
+#: ../thunar-vcs-plugin/tvp-provider.c:530
+msgid "SVN"
+msgstr "SVN"
+
+#. append the git submenu action
+#: ../thunar-vcs-plugin/tvp-provider.c:495
+#: ../thunar-vcs-plugin/tvp-provider.c:537
+msgid "GIT"
+msgstr "GIT"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Menu|Changelist"
+msgstr "Valikko|Muutoslista"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Changelist"
+msgstr "Muutoslista"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+msgid "Menu|Cleanup"
+msgstr "Valikko|Puhdistus"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
+msgid "Cleanup"
+msgstr "Puhdistus"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Menu|Copy"
+msgstr "Valikko|Kopioi"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/tsh-copy.c:177
+msgid "Copy"
+msgstr "Kopioi"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+msgid "Menu|Delete"
+msgstr "Valikko|Poista"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
+msgid "Delete"
+msgstr "Poista"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Menu|Export"
+msgstr "Valikko|Vie"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
+msgid "Export"
+msgstr "Vie"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+msgid "Menu|Import"
+msgstr "Valikko|Tuo"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
+#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
+msgid "Import"
+msgstr "Tuo"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Menu|Info"
+msgstr "Valikko|Tiedot"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+msgid "Info"
+msgstr "Tiedot"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+msgid "Menu|Lock"
+msgstr "Valikko|Lukitse"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:303
+#: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
+msgid "Lock"
+msgstr "Lukitse"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Menu|Edit Properties"
+msgstr "Valikko|Muokkaa asetuksia"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+msgid "Edit Properties"
+msgstr "Muokkaa asetuksia"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+msgid "Menu|Relocate"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
+msgid "Relocate"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+msgid "Menu|Resolved"
+msgstr "Valikko|Selvitetty"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-resolved.c:128
+msgid "Resolved"
+msgstr "Selvitetty"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Menu|Resolve"
+msgstr "Valikko|Selvitä"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+msgid "Resolve"
+msgstr "Selvitä"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+msgid "Menu|Revert"
+msgstr "Valikko|Palauta"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
+msgid "Revert"
+msgstr "Palauta"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+msgid "Menu|Switch"
+msgstr "Valikko|Vaihda"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
+#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
+msgid "Switch"
+msgstr "Vaihda"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+msgid "Menu|Unlock"
+msgstr "Valikko|Avaa lukitus"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:339
+#: ../tvp-svn-helper/tsh-unlock.c:113
+msgid "Unlock"
+msgstr "Avaa lukitus"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+msgid "Menu|Update"
+msgstr "Valikko|Päivitä"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
+#: ../tvp-svn-helper/tsh-update.c:120
+msgid "Update"
+msgstr "Päivit"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
+msgid "URL:"
+msgstr "Osoite:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
+#: ../tvp-svn-helper/tsh-common.c:605 ../tvp-svn-helper/tsh-common.c:693
+#: ../tvp-svn-helper/tsh-common.c:705 ../tvp-svn-helper/tsh-common.c:730
+#: ../tvp-svn-helper/tsh-common.c:747 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:879
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
+msgid "Revision:"
+msgstr "Versio:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
+msgid "Repository:"
+msgstr "Lähde:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+msgid "Modified revision:"
+msgstr "Muokkausversio:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
+msgid "Modified date:"
+msgstr "Muokkauspäivämäärä:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
+msgid "Author:"
+msgstr "Tekijä:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
+msgid "Changelist:"
+msgstr "Muutoslista:"
+
+#. Translators: Depth as in depth of recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
+msgid "Depth:"
+msgstr "Syvyys:"
+
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
+#: ../tvp-svn-helper/tsh-common.c:594
+msgid "Exclude"
+msgstr ""
+
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+msgid "Empty"
+msgstr "Tyhjä"
+
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
+msgid "Files"
+msgstr "Tiedostot"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
+msgid "Immediates"
+msgstr ""
+
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+msgid "Infinity"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
+msgid "Print version information"
+msgstr "Tulosta versiotiedot"
+
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
+msgid "Execute add action"
+msgstr "Suorita lisäämistoiminto"
+
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
+msgid "Execute blame action"
+msgstr "Suorita muutoksen tietojen haku"
+
+#: ../tvp-git-helper/main.c:99
+msgid "Execute branch action"
+msgstr "Suorita haarautustoiminto"
+
+#: ../tvp-git-helper/main.c:105
+msgid "Execute clean action"
+msgstr "Suorita siistimistoiminto"
+
+#: ../tvp-git-helper/main.c:111
+msgid "Execute clone action"
+msgstr "Suorita kloonaustoiminto"
+
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
+msgid "Execute log action"
+msgstr "Suorita lokitoiminto"
+
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
+msgid "Execute move action"
+msgstr "Suorita siirtotoiminto"
+
+#: ../tvp-git-helper/main.c:129
+msgid "Execute reset action"
+msgstr "Suorita alustustoiminto"
+
+#: ../tvp-git-helper/main.c:135
+msgid "Execute stash action"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
+msgid "Execute status action"
+msgstr "Suorita tilatoiminto"
+
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
+msgid "Add Related Options:"
+msgstr "Lisäämiseen liittyvät asetukset:"
+
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
+msgid "Blame Related Options:"
+msgstr "Muutoksen tietojen hakemiseen liittyvät asetukset:"
+
+#: ../tvp-git-helper/main.c:161
+msgid "Branch Related Options:"
+msgstr "Haarauttamiseen liittyvät asetukset:"
+
+#: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
+msgid "Clone Related Options:"
+msgstr "Kloonaamiseen liittyvät asetukset:"
+
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
+msgid "Log Related Options:"
+msgstr "Lokiin liittyvät asetukset:"
+
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
+msgid "Move Related Options:"
+msgstr "Siirtämiseen liittyvät asetukset:"
+
+#: ../tvp-git-helper/main.c:181
+msgid "Reset Related Options:"
+msgstr "Alustamiseen liittyvät asetukset:"
+
+#: ../tvp-git-helper/main.c:185
+msgid "Stash Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
+msgid "Status Related Options:"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
+msgid "Line"
+msgstr "Rivi"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
+msgid "Revision"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
+msgid "Author"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
+msgid "Date"
+msgstr "Päiväys"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:116
+#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:125
+msgid "Name"
+msgstr "Nimi"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:263
+msgid "Branch name:"
+msgstr "Haaran nimi:"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:56
+msgid "Remove directories."
+msgstr "Poista hakemistot."
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:68
+msgid "Exclude ignored files"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:76
+msgid "Include ignored files"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:82
+msgid "Only ignored files"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:92
+msgid "Force clean."
+msgstr "Pakota siistiminen."
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr "Kloonaus suoritettu"
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning ..."
+msgstr "Kloonataan ..."
+
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
+#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
+#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
+#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
+#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
+#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:95
+msgid "Failed"
+msgstr "Epäonnistui"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+msgid "untracked"
+msgstr "seuraamaton"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "Polku"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+msgid "Select/Unselect all"
+msgstr "Valitse kaikki/poista koko valinta"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "Viesti"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-stash-dialog.c:197
+msgid "Changes"
+msgstr "Muutokset"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-stash-dialog.c:204
+msgid "File"
+msgstr "Tiedosto"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "Siirto suoritettu"
+
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+msgid "Move To"
+msgstr "Siirrä sijaintiin"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move ..."
+msgstr "Siirrä ..."
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "Toiminto"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "Alustus suoritettu"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset ..."
+msgstr "Alustus ..."
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:173
+msgid "Description"
+msgstr "Kuvaus:"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:398
+msgid "Stash description:"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:534
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:562
+msgid "Are you sure you want to clear all stash?"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
+msgid "_Repository:"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:75
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
+msgid "Select a folder"
+msgstr "Valitse hakemisto:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:103
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
+msgid "_Directory:"
+msgstr "_Hakemisto:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:122
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
+msgid "Transfer"
+msgstr "Siirrä"
+
+#: ../tvp-svn-helper/main.c:128
+msgid "Execute changelist action"
+msgstr "Suorita muutoslistatoiminto"
+
+#: ../tvp-svn-helper/main.c:134
+msgid "Execute checkout action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:140
+msgid "Execute cleanup action"
+msgstr "Suorita puhdistustoiminto"
+
+#: ../tvp-svn-helper/main.c:146
+msgid "Execute commit action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:152
+msgid "Execute copy action"
+msgstr "Suorita kopiointitoiminto"
+
+#: ../tvp-svn-helper/main.c:158
+msgid "Execute delete action"
+msgstr "Suorita poistatoiminto"
+
+#: ../tvp-svn-helper/main.c:164
+msgid "Execute diff action"
+msgstr "Suorita erotoiminto"
+
+#: ../tvp-svn-helper/main.c:170
+msgid "Execute export action"
+msgstr "Suorita viemistoiminto"
+
+#: ../tvp-svn-helper/main.c:176
+msgid "Execute import action"
+msgstr "Suorita tuomistoiminto"
+
+#: ../tvp-svn-helper/main.c:182
+msgid "Execute lock action"
+msgstr "Suorita lukitsemistoiminto"
+
+#: ../tvp-svn-helper/main.c:200
+msgid "Execute properties action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:206
+msgid "Execute resolved action"
+msgstr "Suorita selvitystoiminto"
+
+#: ../tvp-svn-helper/main.c:212
+msgid "Execute relocate action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:218
+msgid "Execute revert action"
+msgstr "Suorita palautustoiminto"
+
+#: ../tvp-svn-helper/main.c:230
+msgid "Execute switch action"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:236
+msgid "Execute unlock action"
+msgstr "Suorita lukituksen avaus"
+
+#: ../tvp-svn-helper/main.c:242
+msgid "Execute update action"
+msgstr "Suorita päivitystoiminto"
+
+#: ../tvp-svn-helper/main.c:267
+msgid "Changelist Related Options:"
+msgstr "Muutoslistaan liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:271
+msgid "Checkout Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:275
+msgid "Cleanup Related Options:"
+msgstr "Puhdistamiseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:279
+msgid "Commit Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:283
+msgid "Copy Related Options:"
+msgstr "Kopiointiin liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:287
+msgid "Delete Related Options:"
+msgstr "Poistamiseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:291
+msgid "Diff Related Options:"
+msgstr "Eroon liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:295
+msgid "Export Related Options:"
+msgstr "Viemiseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:299
+msgid "Import Related Options:"
+msgstr "Tuomiseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:303
+msgid "Lock Related Options:"
+msgstr "Lukitsemiseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:315
+msgid "Properties Related Options:"
+msgstr "Asetuksiin liittyvät asetukset:"
+
+#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
+#. TRUE, 0);
+#. gtk_widget_show (box);
+#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:280
+msgid "Properties"
+msgstr "Asetukset:"
+
+#: ../tvp-svn-helper/main.c:319
+msgid "Resolved Related Options:"
+msgstr "Selvitykseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:323
+msgid "Relocate Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:327
+msgid "Revert Related Options:"
+msgstr "Palautukseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:335
+msgid "Switch Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:339
+msgid "Unlock Related Options:"
+msgstr "Lukituksen poistoon liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:343
+msgid "Update Related Options:"
+msgstr "Päivitykseen liittyvät asetukset:"
+
+#: ../tvp-svn-helper/main.c:386
+msgid "Not enough arguments provided"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-blame.c:82
+msgid "Blame failed"
+msgstr "Muutoksen tietojen hakeminen epäonnistui"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:68
+msgid "Cleanup failed"
+msgstr "Puhdistaminen epäonnistui"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:83
+msgid "Cleanup finished"
+msgstr "Puhdistaminen suoritettu"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:97
+msgid "Cleaning up ..."
+msgstr "Puhdistetaan ..."
+
+#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
+#: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
+#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
+#: ../tvp-svn-helper/tsh-move.c:99
+#, c-format
+msgid "At revision: %ld"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-commit.c:216
+msgid "Nothing to do"
+msgstr "Mitään ei tarvitse tehdä"
+
+#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
+#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
+#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
+msgid "Completed"
+msgstr "Suoritettu"
+
+#: ../tvp-svn-helper/tsh-commit.c:259
+msgid "Commit Message"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:291
+msgid "Store password a plaintext?"
+msgstr "Tallenna salasana pelkkänä tekstinä?"
+
+#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
+#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
+#: ../tvp-svn-helper/tsh-common.c:781 ../tvp-svn-helper/tsh-common.c:885
+msgid "Added"
+msgstr "Lisätty"
+
+#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:894
+msgid "Copied"
+msgstr "Kopioitu"
+
+#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:736
+#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:887
+msgid "Deleted"
+msgstr "Poistettu"
+
+#: ../tvp-svn-helper/tsh-common.c:533
+msgid "Restored"
+msgstr "Palautettu"
+
+#: ../tvp-svn-helper/tsh-common.c:534
+msgid "Reverted"
+msgstr "Palautettu"
+
+#: ../tvp-svn-helper/tsh-common.c:535
+msgid "Revert failed"
+msgstr "Palauttaminen epäonnistui"
+
+#: ../tvp-svn-helper/tsh-common.c:537
+msgid "Skipped"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:540
+msgid "Updated"
+msgstr "Päivitetty"
+
+#: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:743
+msgid "External"
+msgstr "Ulkoinen"
+
+#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
+#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
+msgid "Modified"
+msgstr "Muutettu"
+
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:737
+#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:883
+msgid "Replaced"
+msgstr "Korvattu"
+
+#: ../tvp-svn-helper/tsh-common.c:549
+msgid "Transmitting"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
+msgid "Locked"
+msgstr "Lukittu"
+
+#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
+msgid "Unlocked"
+msgstr "Lukitus avattu"
+
+#: ../tvp-svn-helper/tsh-common.c:553
+msgid "Lock failed"
+msgstr "Lukitseminen epäonnistui"
+
+#: ../tvp-svn-helper/tsh-common.c:554
+msgid "Unlock failed"
+msgstr "Lukituksen avaaminen epäonnistui"
+
+#: ../tvp-svn-helper/tsh-common.c:555
+msgid "Exists"
+msgstr "Olemassa"
+
+#: ../tvp-svn-helper/tsh-common.c:556
+msgid "Changelist set"
+msgstr "Muutoslista asetettu"
+
+#: ../tvp-svn-helper/tsh-common.c:557
+msgid "Changelist cleared"
+msgstr "Muutoslista tyhjennetty"
+
+#: ../tvp-svn-helper/tsh-common.c:558
+msgid "Changelist moved"
+msgstr "Muutoslista siirretty"
+
+#: ../tvp-svn-helper/tsh-common.c:559
+msgid "Merge begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:560
+msgid "Foreign merge begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:561
+msgid "Replace"
+msgstr "Korvaa"
+
+#: ../tvp-svn-helper/tsh-common.c:563
+msgid "Property added"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:564
+msgid "Property modified"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:565
+msgid "Property deleted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:566
+msgid "Property nonexisting"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:567
+msgid "Revision property set"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:568
+msgid "Revision property deleted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:569
+msgid "Merge completed"
+msgstr "Yhdistäminen suoritettu"
+
+#: ../tvp-svn-helper/tsh-common.c:570
+msgid "Tree conflict"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:571
+msgid "External failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:574
+msgid "Started"
+msgstr "Aloitettu"
+
+#: ../tvp-svn-helper/tsh-common.c:575
+msgid "Skipped obstruction"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:576
+msgid "Skipped working only"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:577
+msgid "Skipped access denied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:578
+msgid "External removed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Shadowed add"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Shadowed update"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Shadowed delete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:582
+msgid "Merge record info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "Upgraded path"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:584
+msgid "Merge record info begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:585
+msgid "Merge elide info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Patch"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:587
+msgid "Applied hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:588
+msgid "Rejected hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:589
+msgid "Hunk already applied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:591
+msgid "Copied replaced"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:592
+msgid "URL redirect"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:593
+msgid "Path nonexistent"
+msgstr "Polkua ei olemassa"
+
+#: ../tvp-svn-helper/tsh-common.c:595
+msgid "Conflict"
+msgstr "Konflikti"
+
+#: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
+#: ../tvp-svn-helper/tsh-common.c:735
+msgid "Missing"
+msgstr "Puuttuu"
+
+#: ../tvp-svn-helper/tsh-common.c:597
+msgid "Out of date"
+msgstr "Vanhentunut"
+
+#: ../tvp-svn-helper/tsh-common.c:598
+msgid "No parent"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Forbidden by server"
+msgstr "Kielletty palvelimen toimesta"
+
+#: ../tvp-svn-helper/tsh-common.c:601
+msgid "Skipped conflicted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:692
+msgid "Inapplicable"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:694
+msgid "Unchanged"
+msgstr "Muuttamaton"
+
+#: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
+msgid "Obstructed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:697
+msgid "Changed"
+msgstr "Muutettu"
+
+#: ../tvp-svn-helper/tsh-common.c:698 ../tvp-svn-helper/tsh-common.c:739
+msgid "Merged"
+msgstr "Yhdistetty"
+
+#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
+msgid "Conflicted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:701
+msgid "Source missing"
+msgstr ""
+
+#. N_("None"),
+#. N_("Unversioned"),
+#: ../tvp-svn-helper/tsh-common.c:733
+msgid "Normal"
+msgstr "Normaali"
+
+#: ../tvp-svn-helper/tsh-common.c:741
+msgid "Ignored"
+msgstr "Jätetty huomioimatta"
+
+#: ../tvp-svn-helper/tsh-common.c:744
+msgid "Incomplete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:1082
+msgid "Error"
+msgstr "Virhe"
+
+#: ../tvp-svn-helper/tsh-common.c:1094
+msgid "Local action"
+msgstr "Paikallinen toiminto"
+
+#: ../tvp-svn-helper/tsh-copy.c:112
+msgid "Local copy"
+msgstr "Paikallinen kopio"
+
+#: ../tvp-svn-helper/tsh-copy.c:159
+msgid "Copy To"
+msgstr "Kopioi sijaintiin"
+
+#: ../tvp-svn-helper/tsh-delete.c:118
+msgid "Local delete"
+msgstr "Paikallinen poisto"
+
+#: ../tvp-svn-helper/tsh-delete.c:158
+msgid "Delete Message"
+msgstr "Poistamisviesti"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:59
+msgid "_Certificate:"
+msgstr "_Sertifikaatti:"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:66
+msgid "Select a file"
+msgstr "Valitse tiedosto"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-login-dialog.c:97
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+msgid "Remember"
+msgstr "Muista"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:85
+msgid "Certificate"
+msgstr "Sertifikaatti"
+
+#: ../tvp-svn-helper/tsh-import.c:138
+msgid "Import Message"
+msgstr "Tuomisviesti"
+
+#: ../tvp-svn-helper/tsh-log.c:123
+msgid "Log failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:218
+msgid "Show Merged Revisions"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:64
+msgid "_Username:"
+msgstr "_Käyttäjänimi:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:80
+msgid "_Password:"
+msgstr "_Salasana:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:105
+msgid "Login"
+msgstr "Kirjaudu"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+msgid "State"
+msgstr "Tila"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+msgid "Log Message"
+msgstr "Lokiviesti"
+
+#: ../tvp-svn-helper/tsh-move.c:104
+msgid "Local move"
+msgstr "Paikallinen siirto"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
+msgid "Mime type"
+msgstr "Mime-tyyppi"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
+msgid "Notification"
+msgstr "Ilmoitus"
+
+#. tsh_properties_dialog_done (dialog);
+#: ../tvp-svn-helper/tsh-properties.c:94
+msgid "Set property failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-properties.c:117
+msgid "Properties failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:131
+msgid "Value"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Rekursiivinen"
+
+#: ../tvp-svn-helper/tsh-relocate.c:78
+msgid "Relocate failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate.c:93
+msgid "Relocate finished"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate.c:139
+msgid "Relocating ..."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
+msgid "_From:"
+msgstr "_Lähettäjä:"
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
+msgid "_To:"
+msgstr "_Vastaanottaja:"
+
+#: ../tvp-svn-helper/tsh-status.c:91
+msgid "Status failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:223
+msgid "Show Unmodified Files"
+msgstr "Näytä muokkaamattomat tiedostot"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:227
+msgid "Show Unversioned Files"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:231
+msgid "Show Ignored Files"
+msgstr "Näytä huomioimatta jätetyt tiedostot"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:235
+msgid "Hide Externals"
+msgstr "Piilota ulkoiset"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
+msgid "Check Repository"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:57
+msgid "Certificate is not yet valid."
+msgstr "Sertifikaatti ei ole vielä pätevä."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+msgid "Certificate has expired."
+msgstr "Sertifikaatti on vanhentunut."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+msgid "Certificate does not match the remote hostname."
+msgstr "Sertifikaatti ei vastaa etäpalvelimen osoitetta."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+msgid "Certificate authority is unknown."
+msgstr "Sertifikaatin myöntäjä on tuntematon."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+msgid "Other failure."
+msgstr "Muu virhe."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:76
+msgid "Trust"
+msgstr ""
