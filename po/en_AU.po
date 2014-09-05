@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# k3lt01 <keltoiboy@gmail.com>, 2013
+# Michael Findlay <keltoiboy@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-07-29 05:42+0000\n"
-"Last-Translator: k3lt01 <keltoiboy@gmail.com>\n"
-"Language-Team: English (Australia) (http://www.transifex.com/projects/p/xfce/language/en_AU/)\n"
+"PO-Revision-Date: 2014-09-05 03:45+0000\n"
+"Last-Translator: Michael Findlay <keltoiboy@gmail.com>\n"
+"Language-Team: English (Australia) (http://www.transifex.com/projects/p/thunar-plugins/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -93,7 +93,7 @@ msgstr "Clone"
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Commit"
-msgstr "Commit"
+msgstr "Menu|Commit"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
@@ -105,7 +105,7 @@ msgstr "Commit"
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
 msgid "Menu|Diff"
-msgstr "Diff"
+msgstr "Menu|Diff"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
@@ -114,7 +114,7 @@ msgstr "Diff"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Menu|Fetch"
-msgstr "Fetch"
+msgstr "Menu|Fetch"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:275
 msgid "Fetch"
@@ -122,7 +122,7 @@ msgstr "Fetch"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Menu|Grep"
-msgstr "Grep"
+msgstr "Menu|Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:276
 msgid "Grep"
@@ -130,7 +130,7 @@ msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Menu|Init"
-msgstr "Init"
+msgstr "Menu|Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:277
 msgid "Init"
@@ -139,7 +139,7 @@ msgstr "Init"
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377
 msgid "Menu|Log"
-msgstr "Log"
+msgstr "Menu|Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:278
 #: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
@@ -150,7 +150,7 @@ msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Menu|Merge"
-msgstr "Merge"
+msgstr "Menu|Merge"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:279
 msgid "Merge"
@@ -159,7 +159,7 @@ msgstr "Merge"
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392
 msgid "Menu|Move"
-msgstr "Move"
+msgstr "Menu|Move"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:281
 #: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
@@ -169,7 +169,7 @@ msgstr "Move"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Menu|Pull"
-msgstr "Pull"
+msgstr "Menu|Pull"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:282
 msgid "Pull"
@@ -177,7 +177,7 @@ msgstr "Pull"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Menu|Push"
-msgstr "Push"
+msgstr "Menu|Push"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:283
 msgid "Push"
@@ -185,7 +185,7 @@ msgstr "Push"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr "Rebase"
+msgstr "Menu|Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
@@ -193,7 +193,7 @@ msgstr "Rebase"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
-msgstr "Reset"
+msgstr "Menu|Reset"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
@@ -202,7 +202,7 @@ msgstr "Reset"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Menu|Remove"
-msgstr "Remove"
+msgstr "Menu|Remove"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:286
 msgid "Remove"
@@ -210,7 +210,7 @@ msgstr "Remove"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Menu|Show"
-msgstr "Show"
+msgstr "Menu|Show"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:287
 msgid "Show"
@@ -218,7 +218,7 @@ msgstr "Show"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:289
 msgid "Menu|Stash"
-msgstr "Stash"
+msgstr "Menu|Stash"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
@@ -231,7 +231,7 @@ msgstr "Stash"
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
 msgid "Menu|Status"
-msgstr "Status"
+msgstr "Menu|Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
@@ -244,7 +244,7 @@ msgstr "Status"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Menu|Tag"
-msgstr "Tag"
+msgstr "Menu|Tag"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
@@ -271,7 +271,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Menu|Changelist"
-msgstr "Changelist"
+msgstr "Menu|Changelist"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Changelist"
@@ -279,7 +279,7 @@ msgstr "Changelist"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Cleanup"
-msgstr "Cleanup"
+msgstr "Menu|Cleanup"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
 msgid "Cleanup"
@@ -287,7 +287,7 @@ msgstr "Cleanup"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Copy"
-msgstr "Copy"
+msgstr "Menu|Copy"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:283
 #: ../tvp-svn-helper/tsh-copy.c:177
@@ -296,7 +296,7 @@ msgstr "Copy"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Delete"
-msgstr "Delete"
+msgstr "Menu|Delete"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
@@ -305,7 +305,7 @@ msgstr "Delete"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Export"
-msgstr "Export"
+msgstr "Menu|Export"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
@@ -314,7 +314,7 @@ msgstr "Export"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Import"
-msgstr "Import"
+msgstr "Menu|Import"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
 #: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
@@ -323,7 +323,7 @@ msgstr "Import"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Menu|Info"
-msgstr "Info"
+msgstr "Menu|Info"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Info"
@@ -331,7 +331,7 @@ msgstr "Info"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Lock"
-msgstr "Lock"
+msgstr "Menu|Lock"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:303
 #: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
@@ -340,7 +340,7 @@ msgstr "Lock"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Menu|Edit Properties"
-msgstr "Edit Properties"
+msgstr "Menu|Edit Properties"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Edit Properties"
@@ -348,7 +348,7 @@ msgstr "Edit Properties"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
-msgstr "Relocate"
+msgstr "Menu|Relocate"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:125
@@ -358,7 +358,7 @@ msgstr "Relocate"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Resolved"
-msgstr "Resolved"
+msgstr "Menu|Resolved"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:319
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
@@ -368,7 +368,7 @@ msgstr "Resolved"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Resolve"
-msgstr "Resolve"
+msgstr "Menu|Resolve"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Resolve"
@@ -376,7 +376,7 @@ msgstr "Resolve"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
-msgstr "Revert"
+msgstr "Menu|Revert"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
@@ -385,7 +385,7 @@ msgstr "Revert"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
-msgstr "Switch"
+msgstr "Menu|Switch"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
 #: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
@@ -394,7 +394,7 @@ msgstr "Switch"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439
 msgid "Menu|Unlock"
-msgstr "Unlock"
+msgstr "Menu|Unlock"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:339
 #: ../tvp-svn-helper/tsh-unlock.c:113
@@ -403,7 +403,7 @@ msgstr "Unlock"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444
 msgid "Menu|Update"
-msgstr "Update"
+msgstr "Menu|Update"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
 #: ../tvp-svn-helper/tsh-update.c:120
@@ -460,7 +460,6 @@ msgstr "Depth:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -468,7 +467,6 @@ msgstr "Exclude"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Empty"
@@ -476,7 +474,6 @@ msgstr "Empty"
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Files"
@@ -484,13 +481,10 @@ msgstr "Files"
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -500,7 +494,6 @@ msgstr "Immediates"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Infinity"
@@ -1356,10 +1349,8 @@ msgstr "Value"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
@@ -1368,11 +1359,9 @@ msgstr "Self"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1380,10 +1369,8 @@ msgstr "Immediate files"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
