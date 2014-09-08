@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-06-08 05:20+0000\n"
+"PO-Revision-Date: 2014-09-08 16:26+0000\n"
 "Last-Translator: Pablo Roberto Francisco Lezaeta Reyes <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/projects/p/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -412,7 +412,7 @@ msgstr "Actualizar"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
-msgstr "URL:"
+msgstr "Dirección URL:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
@@ -443,7 +443,7 @@ msgstr "Revisión modificada:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
 msgid "Modified date:"
-msgstr "Fecha modificada:"
+msgstr "Fecha de modificación:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
 msgid "Author:"
@@ -500,7 +500,7 @@ msgstr "Infinito"
 
 #: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
 msgid "Print version information"
-msgstr "Imprimir información de versión"
+msgstr "Muestra información sobre la versión"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
 msgid "Execute add action"
@@ -628,7 +628,7 @@ msgstr "Incluir archivos ignorados"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:82
 msgid "Only ignored files"
-msgstr "Sólo archivos ignorados"
+msgstr "Solamente archivos ignorados"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
@@ -636,7 +636,7 @@ msgstr "Forzar eliminación de bloqueos."
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
-msgstr "Clonar finalizados"
+msgstr "Clonación finalizada"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning ..."
@@ -773,7 +773,7 @@ msgstr "_Directorio:"
 #: ../tvp-git-helper/tgh-transfer-dialog.c:122
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:155
 msgid "Transfer"
-msgstr "Transferencia"
+msgstr "Trasferencia"
 
 #: ../tvp-svn-helper/main.c:128
 msgid "Execute changelist action"
@@ -924,11 +924,11 @@ msgstr "No se proporcionaron argumentos suficientes"
 
 #: ../tvp-svn-helper/tsh-blame.c:82
 msgid "Blame failed"
-msgstr "Fallo al hacer la revisión detallada"
+msgstr "No se pudo hacer la revisión detallada"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:68
 msgid "Cleanup failed"
-msgstr "Fallo al eliminar bloqueos"
+msgstr "No se pudieron eliminar bloqueos"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:83
 msgid "Cleanup finished"
@@ -948,7 +948,7 @@ msgstr "En la revisión: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:216
 msgid "Nothing to do"
-msgstr "Nada que hacer"
+msgstr "No hay nada que hacer"
 
 #: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
 #: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
@@ -992,7 +992,7 @@ msgstr "Revertido"
 
 #: ../tvp-svn-helper/tsh-common.c:535
 msgid "Revert failed"
-msgstr "Fallo al revertir"
+msgstr "No se pudo revertir"
 
 #: ../tvp-svn-helper/tsh-common.c:537
 msgid "Skipped"
@@ -1019,7 +1019,7 @@ msgstr "Sustituido"
 
 #: ../tvp-svn-helper/tsh-common.c:549
 msgid "Transmitting"
-msgstr "Transmitiendo"
+msgstr "Trasmitiendo"
 
 #: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
 msgid "Locked"
@@ -1031,11 +1031,11 @@ msgstr "Desbloqueado"
 
 #: ../tvp-svn-helper/tsh-common.c:553
 msgid "Lock failed"
-msgstr "Fallo al bloquear"
+msgstr "No se pudo bloquear"
 
 #: ../tvp-svn-helper/tsh-common.c:554
 msgid "Unlock failed"
-msgstr "Fallo al desbloquear"
+msgstr "No se pudo desbloquear"
 
 #: ../tvp-svn-helper/tsh-common.c:555
 msgid "Exists"
@@ -1131,7 +1131,7 @@ msgstr "Sombra actualizada"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Shadowed delete"
-msgstr "So,bra removida"
+msgstr "Sombra removida"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
@@ -1171,7 +1171,7 @@ msgstr "Copia reemplazada"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
-msgstr "URL de redireccionamiento"
+msgstr "Dirección URL de redireccionamiento"
 
 #: ../tvp-svn-helper/tsh-common.c:593
 msgid "Path nonexistent"
@@ -1337,11 +1337,11 @@ msgstr "Notificación"
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:94
 msgid "Set property failed"
-msgstr "Fallo al establecer propiedad"
+msgstr "No se pudo establecer la propiedad"
 
 #: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
-msgstr "Fallo en las propiedades"
+msgstr "No se pudieron las propiedades"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:131
 msgid "Value"
@@ -1398,7 +1398,7 @@ msgstr "_A:"
 
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
-msgstr "Fallo al obtener el estado"
+msgstr "No se pudieron obtener el estado"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
