@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-10-13 18:31+0000\n"
+"PO-Revision-Date: 2014-10-16 21:15+0000\n"
 "Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/thunar-plugins/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -187,7 +187,7 @@ msgstr "Gurni"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr "Izbornik | Prebaci"
+msgstr "Izbornik|Prebaci"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
