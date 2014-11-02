@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-09-22 20:06+0000\n"
+"PO-Revision-Date: 2014-11-02 13:02+0000\n"
 "Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/thunar-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -1199,19 +1199,19 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Forbidden by server"
-msgstr ""
+msgstr "Забранено от сървъра"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "Пропускане на конфликта"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
-msgstr ""
+msgstr "Неприложимо"
 
 #: ../tvp-svn-helper/tsh-common.c:694
 msgid "Unchanged"
-msgstr ""
+msgstr "Непроменено"
 
 #: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
 msgid "Obstructed"
@@ -1227,17 +1227,17 @@ msgstr "Слято"
 
 #: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
 msgid "Conflicted"
-msgstr ""
+msgstr "Конфликт"
 
 #: ../tvp-svn-helper/tsh-common.c:701
 msgid "Source missing"
-msgstr ""
+msgstr "Липсващ източник"
 
 #. N_("None"),
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:733
 msgid "Normal"
-msgstr ""
+msgstr "Нормално"
 
 #: ../tvp-svn-helper/tsh-common.c:741
 msgid "Ignored"
@@ -1253,53 +1253,53 @@ msgstr "Грешка"
 
 #: ../tvp-svn-helper/tsh-common.c:1094
 msgid "Local action"
-msgstr ""
+msgstr "Локално действие"
 
 #: ../tvp-svn-helper/tsh-copy.c:112
 msgid "Local copy"
-msgstr ""
+msgstr "Локално копиране"
 
 #: ../tvp-svn-helper/tsh-copy.c:159
 msgid "Copy To"
-msgstr ""
+msgstr "Копиране в"
 
 #: ../tvp-svn-helper/tsh-delete.c:118
 msgid "Local delete"
-msgstr ""
+msgstr "Локално изтриване"
 
 #: ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete Message"
-msgstr ""
+msgstr "Изтриване на Съобщение"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
-msgstr ""
+msgstr "Сертификат:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:66
 msgid "Select a file"
-msgstr ""
+msgstr "Избор на файл"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:77
 #: ../tvp-svn-helper/tsh-login-dialog.c:97
 #: ../tvp-svn-helper/tsh-trust-dialog.c:72
 msgid "Remember"
-msgstr ""
+msgstr "Запомняне"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:85
 msgid "Certificate"
-msgstr ""
+msgstr "Сертификат"
 
 #: ../tvp-svn-helper/tsh-import.c:138
 msgid "Import Message"
-msgstr ""
+msgstr "Внасяне на съобщение"
 
 #: ../tvp-svn-helper/tsh-log.c:123
 msgid "Log failed"
-msgstr ""
+msgstr "Неуспешно вписване"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "Спиране на копирането"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:218
 msgid "Show Merged Revisions"
@@ -1445,4 +1445,4 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:76
 msgid "Trust"
-msgstr ""
+msgstr "Удостоверяване"
