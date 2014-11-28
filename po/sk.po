@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Tomáš Vadina <tomasvadina+transifex@myopera.com>, 2011
+# Slavko <linux@slavino.sk>, 2014
+# Tomáš Vadina <tomasvadina+transifex@cryptolab.net>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-11-19 16:28+0000\n"
-"Last-Translator: Nick <nick@xfce.org>\n"
-"Language-Team: Slovak (http://www.transifex.com/projects/p/xfce/language/sk/)\n"
+"PO-Revision-Date: 2014-11-28 17:01+0000\n"
+"Last-Translator: Slavko <linux@slavino.sk>\n"
+"Language-Team: Slovak (http://www.transifex.com/projects/p/thunar-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -460,7 +461,6 @@ msgstr "Hĺbka:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -468,7 +468,6 @@ msgstr "Nezahrnúť"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "Prázdna"
@@ -476,7 +475,6 @@ msgstr "Prázdna"
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "Súbory"
@@ -484,13 +482,10 @@ msgstr "Súbory"
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
@@ -500,7 +495,6 @@ msgstr "Tento súbor alebo adresár a v ňom obsiahnuté súbory a adresáre"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "Nekonečná"
@@ -1158,7 +1152,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
-msgstr ""
+msgstr "Záplata"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
@@ -1182,11 +1176,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:593
 msgid "Path nonexistent"
-msgstr ""
+msgstr "Neexistujúca cesta"
 
 #: ../tvp-svn-helper/tsh-common.c:595
 msgid "Conflict"
-msgstr ""
+msgstr "Konflikt"
 
 #: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
 #: ../tvp-svn-helper/tsh-common.c:735
@@ -1195,11 +1189,11 @@ msgstr "Chýba"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "Out of date"
-msgstr ""
+msgstr "Neaktuálne"
 
 #: ../tvp-svn-helper/tsh-common.c:598
 msgid "No parent"
-msgstr ""
+msgstr " Žiadny rodič"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Forbidden by server"
@@ -1235,7 +1229,7 @@ msgstr "V konflikte"
 
 #: ../tvp-svn-helper/tsh-common.c:701
 msgid "Source missing"
-msgstr ""
+msgstr "Chýba zdroj"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1356,10 +1350,8 @@ msgstr "Hodnota"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is updated
-#. 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
@@ -1368,11 +1360,9 @@ msgstr "Len táto položka"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:217
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1380,10 +1370,8 @@ msgstr "Tento súbor alebo adresár a súbory v ňom obsiahnuté"
 
 #. Translators: svn recursion selection
 #. * Recursive means the update is full recursive
-#. 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#. 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:235
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
