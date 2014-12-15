@@ -7,14 +7,14 @@
 # Aşır <asirkaraman@yahoo.de>, 2014
 # aybuke <aybuke.147@gmail.com>, 2013
 # Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2014
-# Necdet Yücel <necdetyucel@gmail.com>, 2013
+# Necdet Yücel <necdetyucel@gmail.com>, 2013-2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-12-13 22:57+0000\n"
-"Last-Translator: Natavan Mirzayeva <mirzayevanatavan@gmail.com>\n"
+"PO-Revision-Date: 2014-12-15 00:54+0000\n"
+"Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/projects/p/thunar-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1103,7 +1103,7 @@ msgstr "Ağaç çakışması"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "External failed"
-msgstr ""
+msgstr "Harici hata"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
@@ -1123,7 +1123,7 @@ msgstr "Erişime izin verilmeyenler atlandı"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
-msgstr ""
+msgstr "Harici çıkartıldı"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
@@ -1171,7 +1171,7 @@ msgstr "İri parça önceden uygulamalı "
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
-msgstr ""
+msgstr "Kopyalanan yenilendi"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
@@ -1341,7 +1341,7 @@ msgstr "Uyarı"
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:94
 msgid "Set property failed"
-msgstr ""
+msgstr "Özellik atama başarısız oldu"
 
 #: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
