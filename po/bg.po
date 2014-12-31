@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-12-31 11:28+0000\n"
+"PO-Revision-Date: 2014-12-31 11:46+0000\n"
 "Last-Translator: Georgi Georgiev <georgiev_1994@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/thunar-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -1154,23 +1154,23 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
-msgstr ""
+msgstr "Пач"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
-msgstr ""
+msgstr "Промяната е приложена"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Промяната е отхвърлена"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Промяната вече е приложена"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
-msgstr ""
+msgstr "Копирането е заместено"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
