@@ -96,7 +96,7 @@ tgh_file_selection_dialog_init (TghFileSelectionDialog *dialog)
   
   renderer = gtk_cell_renderer_text_new ();
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-                                               -1, ("State"), renderer,
+                                               -1, _("State"), renderer,
                                                "text", COLUMN_STAT,
                                                NULL);
 

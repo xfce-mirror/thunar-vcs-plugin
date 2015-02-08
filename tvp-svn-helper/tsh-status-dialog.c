@@ -120,25 +120,25 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("State"),
+	                                             -1, _("State"),
 	                                             renderer, "text",
 	                                             COLUMN_TEXT_STAT, NULL);
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("Prop state"),
+	                                             -1, _("Prop state"),
 	                                             renderer, "text",
 	                                             COLUMN_PROP_STAT, NULL);
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("Repo state"),
+	                                             -1, _("Repo state"),
 	                                             renderer, "text",
 	                                             COLUMN_REPO_TEXT_STAT, NULL);
 	
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-	                                             -1, ("Repo prop state"),
+	                                             -1, _("Repo prop state"),
 	                                             renderer, "text",
 	                                             COLUMN_REPO_PROP_STAT, NULL);
 

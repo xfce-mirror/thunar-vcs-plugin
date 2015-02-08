@@ -107,7 +107,7 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   renderer = gtk_cell_renderer_toggle_new ();
   gtk_cell_renderer_toggle_set_radio (GTK_CELL_RENDERER_TOGGLE(renderer), TRUE);
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
-                                               -1, ("Active"),
+                                               -1, _("Active"),
                                                renderer, "active",
                                                COLUMN_ACTIVE, NULL);
 
