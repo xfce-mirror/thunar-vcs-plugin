@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Georgi Georgiev <georgiev_1994@abv.bg>, 2014
+# Georgi Georgiev <georgiev_1994@abv.bg>, 2014-2015
 # Kiril Kirilov <cybercop_montana@abv.bg>, 2014
 # Lyubomir Vasilev, 2013
 # Ventsislav Venkov <gazarrr@gmail.com>, 2013
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-12-31 11:46+0000\n"
+"PO-Revision-Date: 2015-02-13 16:21+0000\n"
 "Last-Translator: Georgi Georgiev <georgiev_1994@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/projects/p/thunar-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -1086,11 +1086,11 @@ msgstr "Свойството не съществува"
 
 #: ../tvp-svn-helper/tsh-common.c:567
 msgid "Revision property set"
-msgstr ""
+msgstr "Ревизия на задаване на свойство"
 
 #: ../tvp-svn-helper/tsh-common.c:568
 msgid "Revision property deleted"
-msgstr ""
+msgstr "Ревизията на свойството е изтрита"
 
 #: ../tvp-svn-helper/tsh-common.c:569
 msgid "Merge completed"
@@ -1098,11 +1098,11 @@ msgstr "Сливането завърши"
 
 #: ../tvp-svn-helper/tsh-common.c:570
 msgid "Tree conflict"
-msgstr ""
+msgstr "Конфликт в йерархията"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "External failed"
-msgstr ""
+msgstr "Външен неуспех"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
@@ -1110,47 +1110,47 @@ msgstr "Започна"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Пропускане на пречки"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
-msgstr ""
+msgstr "Пропускане на заети"
 
 #: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Пропускане на недостъпни"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
-msgstr ""
+msgstr "Външен премахнат"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
-msgstr ""
+msgstr "Засенчено добавяне"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Shadowed update"
-msgstr ""
+msgstr "Засенчено обновяване"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Засенчено изтриване"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
-msgstr ""
+msgstr "Сливане на записана информация"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Upgraded path"
-msgstr ""
+msgstr "Подобрен път"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Сливането на записана информация започва"
 
 #: ../tvp-svn-helper/tsh-common.c:585
 msgid "Merge elide info"
-msgstr ""
+msgstr "Сливане на съкратена информация"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
