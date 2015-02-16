@@ -325,13 +325,13 @@ tvp_compare_filename (const gchar *uri1, const gchar *uri2)
   path2 = g_strdup (uri2);
 
   /* remove trailing '/' */
-  if (path1[strlen (path1) - 1] == '/')
+  if (strlen (path1) > 1 && path1[strlen (path1) - 1] == '/')
   {
     path1[strlen (path1) - 1] = '\0';
   }
 
   /* remove trailing '/'*/
-  if (path2[strlen (path2) - 1] == '/')
+  if (strlen (path2) > 1 && path2[strlen (path2) - 1] == '/')
   {
     path2[strlen (path2) - 1] = '\0';
   }

@@ -1173,7 +1173,7 @@ tsh_is_working_copy (const gchar *uri, apr_pool_t *pool)
   path = g_strdup (uri);
 
   /* remove trailing '/' cause svn_wc_check_wc can't handle that */
-  if (path[strlen (path) - 1] == '/')
+  if (strlen (path) > 1 && path[strlen (path) - 1] == '/')
   {
     path[strlen (path) - 1] = '\0';
   }

@@ -517,7 +517,7 @@ static void tvp_action_exec (GtkAction *item, TvpSvnAction *tvp_action)
         file = g_strdup (file);
 
         /* remove trailing '/' cause svn can't handle that */
-        if (file[strlen (file) - 1] == '/')
+        if (strlen (file) > 1 && file[strlen (file) - 1] == '/')
         {
           file[strlen (file) - 1] = '\0';
         }

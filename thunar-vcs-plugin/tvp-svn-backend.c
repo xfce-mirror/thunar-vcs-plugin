@@ -147,7 +147,7 @@ tvp_svn_backend_is_working_copy (const gchar *uri)
   path = g_strdup (uri);
 
   /* remove trailing '/' cause svn_wc_check_wc can't handle that */
-  if (path[strlen (path) - 1] == '/')
+  if (strlen (path) > 1 && path[strlen (path) - 1] == '/')
   {
     path[strlen (path) - 1] = '\0';
   }
@@ -241,7 +241,7 @@ tvp_svn_backend_get_status (const gchar *uri)
   path = g_strdup (uri);
 
   /* remove trailing '/' cause svn_client_status2 can't handle that */
-  if (path[strlen (path) - 1] == '/')
+  if (strlen (path) > 1 && path[strlen (path) - 1] == '/')
   {
     path[strlen (path) - 1] = '\0';
   }
@@ -339,7 +339,7 @@ tvp_svn_backend_get_info (const gchar *uri)
   path = g_strdup (uri);
 
   /* remove trailing '/' cause svn_client_info can't handle that */
-  if (path[strlen (path) - 1] == '/')
+  if (strlen (path) > 1 && path[strlen (path) - 1] == '/')
   {
     path[strlen (path) - 1] = '\0';
   }

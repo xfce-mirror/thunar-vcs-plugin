@@ -364,7 +364,7 @@ static void tvp_action_exec (GtkAction *item, TvpGitAction *tvp_action)
                 file = g_strdup (file);
 
                 /* remove trailing '/' cause git can't handle that */
-                if (file[strlen (file) - 1] == '/')
+                if (strlen (file) > 1 && file[strlen (file) - 1] == '/')
                 {
                     file[strlen (file) - 1] = '\0';
                 }
