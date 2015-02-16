@@ -37,6 +37,8 @@ tvp-svn-helper/tsh-common.c
 tvp-svn-helper/tsh-copy.c
 tvp-svn-helper/tsh-delete.c
 tvp-svn-helper/tsh-dialog-common.c
+tvp-svn-helper/tsh-diff.c
+tvp-svn-helper/tsh-diff-dialog.c
 tvp-svn-helper/tsh-export.c
 tvp-svn-helper/tsh-file-dialog.c
 tvp-svn-helper/tsh-file-selection-dialog.c
