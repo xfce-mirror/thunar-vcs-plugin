@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-02-17 18:15+0000\n"
+"PO-Revision-Date: 2015-02-18 18:13+0000\n"
 "Last-Translator: Urien Desterres <urien.desterres@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1333,15 +1333,15 @@ msgstr "Récursif"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:203
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Prendre en compte les ancêtres"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Ne pas afficher les différences pour les fichiers supprimés"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:212
 msgid "Show copies as additions"
-msgstr ""
+msgstr "Afficher les copies comme ajouts"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:369
 msgid "Loading..."
