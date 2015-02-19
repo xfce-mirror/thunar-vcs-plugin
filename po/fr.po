@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-02-18 18:13+0000\n"
+"PO-Revision-Date: 2015-02-19 19:03+0000\n"
 "Last-Translator: Urien Desterres <urien.desterres@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -615,7 +615,7 @@ msgstr "Date"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:110
 msgid "Active"
-msgstr ""
+msgstr "Active"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
@@ -1448,15 +1448,15 @@ msgstr "Échec de l'obtention du statut"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "État des propriétés"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "État du dépôt"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "État des propriétés et dépôt"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
@@ -1480,7 +1480,7 @@ msgstr "Vérifiez le dépot"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:57
 msgid "Certificate is not yet valid."
-msgstr "Le certificat n'est plus valide."
+msgstr "Le certificat n’est pas encore valide."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:60
 msgid "Certificate has expired."
