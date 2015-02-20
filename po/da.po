@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-02-19 03:19+0000\n"
+"PO-Revision-Date: 2015-02-20 07:51+0000\n"
 "Last-Translator: Aputsiaĸ Niels Janussen <aj@isit.gl>\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -1446,15 +1446,15 @@ msgstr "Status fejlede"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Prop-tilstand"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Repo-tilstand"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Repo prop-tilstand"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
