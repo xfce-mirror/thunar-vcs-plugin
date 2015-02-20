@@ -5,15 +5,16 @@
 # Translators:
 # Chipong Luo <chipong.luo@yahoo.com>, 2011-2012
 # Hunt Xu <huntxu@live.cn>, 2009
-# 潇波 周 <zhouxiaobo.500@gmail.com>, 2013
+# 周潇波 <zhouxiaobo.500@gmail.com>, 2013
+# 白铭骢 <jeffbaichina@members.fsf.org>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2013-07-09 07:23+0000\n"
-"Last-Translator: 潇波 周 <zhouxiaobo.500@gmail.com>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/xfce/language/zh_CN/)\n"
+"POT-Creation-Date: 2015-02-17 00:30+0100\n"
+"PO-Revision-Date: 2015-02-20 23:17+0000\n"
+"Last-Translator: 白铭骢 <jeffbaichina@members.fsf.org>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/thunar-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,7 +100,8 @@ msgstr "提交"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
-#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "提交"
@@ -111,6 +113,7 @@ msgstr "比对"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
 msgid "Diff"
 msgstr "比对"
 
@@ -462,7 +465,6 @@ msgstr "深度："
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
 #: ../tvp-svn-helper/tsh-common.c:594
 msgid "Exclude"
@@ -470,7 +472,6 @@ msgstr "排除"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
 msgid "Empty"
 msgstr "空"
@@ -478,7 +479,6 @@ msgstr "空"
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
 msgid "Files"
 msgstr "文件"
@@ -486,14 +486,14 @@ msgstr "文件"
 #. Translators: svn recursion depth infotmation
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
-#. 
-#. Translators: svn recursion selection
-#. * Immediates means this file/direcotry and the subdirectories are updated
-#. 
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#. 
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-diff-dialog.c:179
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
@@ -502,7 +502,6 @@ msgstr "立即"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#. 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
 msgid "Infinity"
 msgstr "无穷"
@@ -613,6 +612,10 @@ msgstr "作者"
 msgid "Date"
 msgstr "日期"
 
+#: ../tvp-git-helper/tgh-branch-dialog.c:110
+msgid "Active"
+msgstr "活跃"
+
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
 #: ../tvp-svn-helper/tsh-properties-dialog.c:125
@@ -679,6 +682,13 @@ msgstr "未追踪的"
 #: ../tvp-svn-helper/tsh-status-dialog.c:117
 msgid "Path"
 msgstr "路径"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:99
+#: ../tvp-git-helper/tgh-status-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+#: ../tvp-svn-helper/tsh-status-dialog.c:123
+msgid "State"
+msgstr "状态"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:114
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
@@ -1277,6 +1287,65 @@ msgstr "本地删除"
 msgid "Delete Message"
 msgstr "删除信息"
 
+#: ../tvp-svn-helper/tsh-diff.c:190
+msgid "Diff failed"
+msgstr "差分失败"
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr "自身"
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:170
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr "即时文件"
+
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-diff-dialog.c:188
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "递归"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:203
+msgid "Notice ancestry"
+msgstr "通知父级"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+msgid "Do not show differences for deleted files"
+msgstr "不要显示已删除文件的差异信息"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:212
+msgid "Show copies as additions"
+msgstr "将副本显示为附加项"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:369
+msgid "Loading..."
+msgstr "载入中……"
+
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
 msgstr "证书(_C)："
@@ -1323,10 +1392,6 @@ msgstr "密码(_P)："
 msgid "Login"
 msgstr "登录"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
-msgid "State"
-msgstr "状态"
-
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
 msgstr "日志信息"
@@ -1356,41 +1421,6 @@ msgstr "属性动作已失败"
 msgid "Value"
 msgstr "值"
 
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is updated
-#. 
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is shown
-#. 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:206
-#: ../tvp-svn-helper/tsh-status-dialog.c:181
-msgid "Self"
-msgstr "自身"
-
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. updated
-#. 
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. shown
-#. 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:217
-#: ../tvp-svn-helper/tsh-status-dialog.c:190
-msgid "Immediate files"
-msgstr "即时文件"
-
-#. Translators: svn recursion selection
-#. * Recursive means the update is full recursive
-#. 
-#. Translators: svn recursion selection
-#. * Recursive means the list is full recursive
-#. 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:235
-#: ../tvp-svn-helper/tsh-status-dialog.c:208
-msgid "Recursive"
-msgstr "递归"
-
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
 msgstr "重定位动作已失败"
@@ -1414,6 +1444,18 @@ msgstr "至(_T)："
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
 msgstr "状态动作已失败"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:129
+msgid "Prop state"
+msgstr "道具状态"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:135
+msgid "Repo state"
+msgstr "仓库状态"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:141
+msgid "Repo prop state"
+msgstr "仓库道具状态"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
