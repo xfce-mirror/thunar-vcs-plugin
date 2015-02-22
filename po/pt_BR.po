@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-02-18 01:25+0000\n"
+"PO-Revision-Date: 2015-02-22 21:03+0000\n"
 "Last-Translator: André Miranda <andreldm1989@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/thunar-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -1331,7 +1331,7 @@ msgstr "Recursivo"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:203
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Aviso de ascendência"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
@@ -1446,15 +1446,15 @@ msgstr "Falha de status"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Estato prop"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Estado repo"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Estado repo prop"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
