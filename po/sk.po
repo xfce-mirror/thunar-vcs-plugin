@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Slavko <linux@slavino.sk>, 2014
+# Slavko <linux@slavino.sk>, 2014-2015
 # Tomáš Vadina <tomasvadina+transifex@cryptolab.net>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-11-28 17:01+0000\n"
+"POT-Creation-Date: 2015-02-17 00:30+0100\n"
+"PO-Revision-Date: 2015-02-26 11:27+0000\n"
 "Last-Translator: Slavko <linux@slavino.sk>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/thunar-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,8 @@ msgstr "Odoslať"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
-#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "Odoslať (commit)"
@@ -110,6 +111,7 @@ msgstr "Rozdiel"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
 msgid "Diff"
 msgstr "Rozdiel (diff)"
 
@@ -483,10 +485,13 @@ msgstr "Súbory"
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
 #. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-diff-dialog.c:179
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
@@ -605,6 +610,10 @@ msgstr "Autor"
 msgid "Date"
 msgstr "Dátum"
 
+#: ../tvp-git-helper/tgh-branch-dialog.c:110
+msgid "Active"
+msgstr "Aktívne"
+
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
 #: ../tvp-svn-helper/tsh-properties-dialog.c:125
@@ -671,6 +680,13 @@ msgstr "nesledovaný"
 #: ../tvp-svn-helper/tsh-status-dialog.c:117
 msgid "Path"
 msgstr "Cesta"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:99
+#: ../tvp-git-helper/tgh-status-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+#: ../tvp-svn-helper/tsh-status-dialog.c:123
+msgid "State"
+msgstr "Stav"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:114
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
@@ -802,7 +818,7 @@ msgstr "Spustiť akciu vymazanie (delete)"
 
 #: ../tvp-svn-helper/main.c:164
 msgid "Execute diff action"
-msgstr ""
+msgstr "Zobraziť rozdiely"
 
 #: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
@@ -870,7 +886,7 @@ msgstr "Možnosti týkajúce sa mazania (delete):"
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Diff Related Options:"
-msgstr ""
+msgstr "Voľby zobr. rozdielov:"
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
@@ -1104,51 +1120,51 @@ msgstr "Externý zlyhal"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
-msgstr ""
+msgstr "Spustené"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Vynechané zabránenie"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
-msgstr ""
+msgstr "Vynechané len pracovné"
 
 #: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Vynechané odopretý prístup"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
-msgstr ""
+msgstr "Externé odstránené"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
-msgstr ""
+msgstr "Tieňové pridanie"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Shadowed update"
-msgstr ""
+msgstr "Tieňová aktualizácia"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Tieňové odstránenie"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
-msgstr ""
+msgstr "Zlúčenie info záznamov"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Upgraded path"
-msgstr ""
+msgstr "Aktualizovaná cesta"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Zlúčenie info záznamov spustené"
 
 #: ../tvp-svn-helper/tsh-common.c:585
 msgid "Merge elide info"
-msgstr ""
+msgstr "Zlúčenie info o škrtoch"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
@@ -1156,23 +1172,23 @@ msgstr "Záplata"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
-msgstr ""
+msgstr "Použitá časť"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Odmietnutá časť"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Časť už bola použitá"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
-msgstr ""
+msgstr "Kopírovaním nahradené"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
-msgstr ""
+msgstr "URL presmerovaná"
 
 #: ../tvp-svn-helper/tsh-common.c:593
 msgid "Path nonexistent"
@@ -1197,11 +1213,11 @@ msgstr " Žiadny rodič"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Forbidden by server"
-msgstr ""
+msgstr "Odmietnuté serverom"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "Preskočené konfliktné"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
@@ -1269,6 +1285,65 @@ msgstr "Mieste zmazanie"
 msgid "Delete Message"
 msgstr "Zmazať správu"
 
+#: ../tvp-svn-helper/tsh-diff.c:190
+msgid "Diff failed"
+msgstr "Zobrazenie rozdielov zlyhalo"
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr "Len táto položka"
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:170
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr "Tento súbor alebo adresár a súbory v ňom obsiahnuté"
+
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-diff-dialog.c:188
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Rekurzívne"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:203
+msgid "Notice ancestry"
+msgstr "Všímať si rozdiely"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+msgid "Do not show differences for deleted files"
+msgstr "Nezobrazovať rozdiely zmazaných súborov"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:212
+msgid "Show copies as additions"
+msgstr "Zobraziť kópie ako pridania"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:369
+msgid "Loading..."
+msgstr "Načítanie..."
+
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
 msgstr "_Certifikát:"
@@ -1315,10 +1390,6 @@ msgstr "_Heslo:"
 msgid "Login"
 msgstr "Prihlásiť sa"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
-msgid "State"
-msgstr "Stav"
-
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
 msgstr "Správa záznamu"
@@ -1348,35 +1419,6 @@ msgstr "Vlastnosti zlyhaly"
 msgid "Value"
 msgstr "Hodnota"
 
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is updated
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is shown
-#: ../tvp-svn-helper/tsh-properties-dialog.c:206
-#: ../tvp-svn-helper/tsh-status-dialog.c:181
-msgid "Self"
-msgstr "Len táto položka"
-
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. updated
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. shown
-#: ../tvp-svn-helper/tsh-properties-dialog.c:217
-#: ../tvp-svn-helper/tsh-status-dialog.c:190
-msgid "Immediate files"
-msgstr "Tento súbor alebo adresár a súbory v ňom obsiahnuté"
-
-#. Translators: svn recursion selection
-#. * Recursive means the update is full recursive
-#. Translators: svn recursion selection
-#. * Recursive means the list is full recursive
-#: ../tvp-svn-helper/tsh-properties-dialog.c:235
-#: ../tvp-svn-helper/tsh-status-dialog.c:208
-msgid "Recursive"
-msgstr "Rekurzívne"
-
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
 msgstr "Premiestňovanie zlyhalo"
@@ -1400,6 +1442,18 @@ msgstr "_Do:"
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
 msgstr "Stav zlyhal"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:129
+msgid "Prop state"
+msgstr "Stav vlastností"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:135
+msgid "Repo state"
+msgstr "Stav úložiska"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:141
+msgid "Repo prop state"
+msgstr "Stav vlastností úložiska"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
