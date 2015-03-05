@@ -8,14 +8,14 @@
 # Dawid <hoek@hoek.pl>, 2014
 # Paweł Klimek <pawelklimek102@gmail.com>, 2014
 #  <piotr.sokol@10g.pl>, 2009
-# Piotr Strębski <strebski@o2.pl>, 2014
+# Piotr Strębski <strebski@o2.pl>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2015-01-15 12:02+0000\n"
-"Last-Translator: Adam Stachowicz <saibamenppl@gmail.com>\n"
+"POT-Creation-Date: 2015-02-17 00:30+0100\n"
+"PO-Revision-Date: 2015-03-05 08:17+0000\n"
+"Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/thunar-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,7 +102,8 @@ msgstr "Menu|Zatwierdzanie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
-#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "Zatwierdzanie"
@@ -114,6 +115,7 @@ msgstr "Różnice..."
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
 msgid "Diff"
 msgstr "Różnice"
 
@@ -487,10 +489,13 @@ msgstr "Pliki"
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
 #. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-diff-dialog.c:179
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
@@ -609,6 +614,10 @@ msgstr "Autor"
 msgid "Date"
 msgstr "Data"
 
+#: ../tvp-git-helper/tgh-branch-dialog.c:110
+msgid "Active"
+msgstr ""
+
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
 #: ../tvp-svn-helper/tsh-properties-dialog.c:125
@@ -675,6 +684,13 @@ msgstr "nieśledzone"
 #: ../tvp-svn-helper/tsh-status-dialog.c:117
 msgid "Path"
 msgstr "Ścieżka"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:99
+#: ../tvp-git-helper/tgh-status-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+#: ../tvp-svn-helper/tsh-status-dialog.c:123
+msgid "State"
+msgstr "Stan"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:114
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
@@ -1273,6 +1289,65 @@ msgstr "Usuwanie miejscowe"
 msgid "Delete Message"
 msgstr "Usuń komentarz"
 
+#: ../tvp-svn-helper/tsh-diff.c:190
+msgid "Diff failed"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr "Samodzielnie"
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:170
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-diff-dialog.c:188
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Samoodwołaczo"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:203
+msgid "Notice ancestry"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+msgid "Do not show differences for deleted files"
+msgstr "Nie pokazuj różnic dla usuniętych plików"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:212
+msgid "Show copies as additions"
+msgstr "Pokaż kopie jako dodatki"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:369
+msgid "Loading..."
+msgstr "Wczytywanie..."
+
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
 msgstr "_Certyfikat:"
@@ -1319,10 +1394,6 @@ msgstr "_Hasło:"
 msgid "Login"
 msgstr "Logowanie"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
-msgid "State"
-msgstr "Stan"
-
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
 msgstr "Wiadomość dziennika"
@@ -1346,40 +1417,11 @@ msgstr "Błąd zmiany ustawień"
 
 #: ../tvp-svn-helper/tsh-properties.c:117
 msgid "Properties failed"
-msgstr ""
+msgstr "Błąd właściwości"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:131
 msgid "Value"
 msgstr "Wartość"
-
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is updated
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is shown
-#: ../tvp-svn-helper/tsh-properties-dialog.c:206
-#: ../tvp-svn-helper/tsh-status-dialog.c:181
-msgid "Self"
-msgstr "Samodzielnie"
-
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. updated
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. shown
-#: ../tvp-svn-helper/tsh-properties-dialog.c:217
-#: ../tvp-svn-helper/tsh-status-dialog.c:190
-msgid "Immediate files"
-msgstr ""
-
-#. Translators: svn recursion selection
-#. * Recursive means the update is full recursive
-#. Translators: svn recursion selection
-#. * Recursive means the list is full recursive
-#: ../tvp-svn-helper/tsh-properties-dialog.c:235
-#: ../tvp-svn-helper/tsh-status-dialog.c:208
-msgid "Recursive"
-msgstr "Samoodwołaczo"
 
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
@@ -1404,6 +1446,18 @@ msgstr "_Do"
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
 msgstr "Status: niepowodzenie"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:129
+msgid "Prop state"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:135
+msgid "Repo state"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:141
+msgid "Repo prop state"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
