@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Edin Veskovic <edin.veskovic@openmailbox.org>, 2014
-# Ivica  Kolić <ikoli@yahoo.com>, 2013-2014
+# Ivica  Kolić <ikoli@yahoo.com>, 2013-2015
 # Ivica  Kolić <ikoli@yahoo.com>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-03-06 11:30+0000\n"
+"PO-Revision-Date: 2015-03-06 11:35+0000\n"
 "Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/thunar-plugins/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -613,7 +613,7 @@ msgstr "Datum"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:110
 msgid "Active"
-msgstr ""
+msgstr "Aktivno"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
@@ -1157,7 +1157,7 @@ msgstr "Spoji info o zapisu"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Upgraded path"
-msgstr "Putanja nadograđena"
+msgstr "Nadograđena putanja"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
@@ -1343,7 +1343,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:369
 msgid "Loading..."
-msgstr ""
+msgstr "Učitavam..."
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
