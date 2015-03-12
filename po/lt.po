@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-03-11 19:34+0000\n"
+"PO-Revision-Date: 2015-03-12 09:53+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/projects/p/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -1338,7 +1338,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:212
 msgid "Show copies as additions"
-msgstr ""
+msgstr "Rodyti kopijas kaip papildymus"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:369
 msgid "Loading..."
