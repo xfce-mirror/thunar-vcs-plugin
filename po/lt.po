@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-03-12 09:53+0000\n"
+"PO-Revision-Date: 2015-03-23 21:22+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/projects/p/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -1334,7 +1334,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Nerodyti skirtumų ištrintiems failams"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:212
 msgid "Show copies as additions"
