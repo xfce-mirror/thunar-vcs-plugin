@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-03-05 08:17+0000\n"
+"PO-Revision-Date: 2015-03-25 09:29+0000\n"
 "Last-Translator: Piotr Strębski <strebski@o2.pl>\n"
 "Language-Team: Polish (http://www.transifex.com/projects/p/thunar-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -238,7 +238,7 @@ msgstr "Odkładanie"
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
 msgid "Menu|Status"
-msgstr "Stan..."
+msgstr "Menu|Stan"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
@@ -255,7 +255,7 @@ msgstr "Menu|Oznaczanie"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:292
 msgid "Tag"
-msgstr "Tagowanie"
+msgstr "Znacznik"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:301
 #: ../thunar-vcs-plugin/tvp-svn-action.c:454
@@ -303,7 +303,7 @@ msgstr "Kopiowanie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Delete"
-msgstr "Usuń..."
+msgstr "Menu|Usuń"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
@@ -312,7 +312,7 @@ msgstr "Usuwanie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Export"
-msgstr "Eksportuj..."
+msgstr "Menu|Eksport"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
@@ -321,7 +321,7 @@ msgstr "Eksportowanie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Import"
-msgstr "Importuj..."
+msgstr "Menu|Import"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
 #: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
@@ -330,7 +330,7 @@ msgstr "Importowanie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Menu|Info"
-msgstr "Informacja..."
+msgstr "Menu|Informacja"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Info"
@@ -554,7 +554,7 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
 msgid "Add Related Options:"
-msgstr ""
+msgstr "Opcje związane z dodawaniem:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
 msgid "Blame Related Options:"
@@ -566,19 +566,19 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr ""
+msgstr "Opcje związane z klonowaniem:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
 msgid "Log Related Options:"
-msgstr ""
+msgstr "Opcje związane z dziennikiem:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Opcje związane z przenoszeniem:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr ""
+msgstr "Opcje związane z resetowaniem:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
@@ -586,7 +586,7 @@ msgstr ""
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
-msgstr ""
+msgstr "Opcje związane ze stanem:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -616,7 +616,7 @@ msgstr "Data"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:110
 msgid "Active"
-msgstr ""
+msgstr "Aktywny"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
@@ -761,7 +761,7 @@ msgstr "Opis przechowalni:"
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr ""
+msgstr "Czy na pewno chcesz porzucić %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
@@ -866,15 +866,15 @@ msgstr "Aktualizacja"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Opcje związane z listą zmian:"
 
 #: ../tvp-svn-helper/main.c:271
 msgid "Checkout Related Options:"
-msgstr ""
+msgstr "Opcje związane ze sprawdzaniem:"
 
 #: ../tvp-svn-helper/main.c:275
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Opcje związane z czyszczeniem:"
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Commit Related Options:"
@@ -882,11 +882,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:283
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Opcje związane z kopiowaniem:"
 
 #: ../tvp-svn-helper/main.c:287
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Opcje związane z usuwaniem:"
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Diff Related Options:"
@@ -894,15 +894,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Opcje związane z eksportowaniem:"
 
 #: ../tvp-svn-helper/main.c:299
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Opcje związane z importowaniem:"
 
 #: ../tvp-svn-helper/main.c:303
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Opcje związane z blokadą:"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Properties Related Options:"
@@ -929,15 +929,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/main.c:335
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Opcje związane z przełączaniem:"
 
 #: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Opcje związane z odblokowaniem:"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Opcje związane z aktualizacją:"
 
 #: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
