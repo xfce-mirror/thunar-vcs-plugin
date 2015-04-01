@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-03-23 21:22+0000\n"
+"PO-Revision-Date: 2015-04-01 22:21+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/projects/p/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -612,7 +612,7 @@ msgstr "Data"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:110
 msgid "Active"
-msgstr ""
+msgstr "Aktyvi"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
@@ -818,7 +818,7 @@ msgstr "Vykdyti šalinimo veiksmą"
 
 #: ../tvp-svn-helper/main.c:164
 msgid "Execute diff action"
-msgstr ""
+msgstr "Vykdyti diff veiksmą"
 
 #: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
@@ -886,7 +886,7 @@ msgstr "Šalinimo susijusios parinktys:"
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Diff Related Options:"
-msgstr ""
+msgstr "Su Diff Susijusios Parinktys:"
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
@@ -1287,7 +1287,7 @@ msgstr "Ištrinti pranešimą"
 
 #: ../tvp-svn-helper/tsh-diff.c:190
 msgid "Diff failed"
-msgstr ""
+msgstr "Nepavyko palyginti"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1330,7 +1330,7 @@ msgstr "Rekursinis"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:203
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Pranešimo kilmė"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
@@ -1445,15 +1445,15 @@ msgstr "Būsena nepavyko"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Savybių būsena"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Saugyklos būsena"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Saugyklos savybių būsena"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
