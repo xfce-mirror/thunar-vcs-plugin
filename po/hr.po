@@ -11,9 +11,9 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-03-06 11:35+0000\n"
+"PO-Revision-Date: 2015-11-09 16:11+0000\n"
 "Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
-"Language-Team: Croatian (http://www.transifex.com/projects/p/thunar-plugins/language/hr/)\n"
+"Language-Team: Croatian (http://www.transifex.com/xfce/thunar-plugins/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,11 +35,11 @@ msgstr "Dodaj"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Bisect"
-msgstr "Izbornik | Seciranje"
+msgstr "Izbornik|Prepolovi"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Bisect"
-msgstr "Seciranje"
+msgstr "Prepolovi"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
@@ -95,7 +95,7 @@ msgstr "Kloniraj"
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Commit"
-msgstr "Izbornik | Pridruži"
+msgstr "Izbornik|Učini"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
@@ -103,7 +103,7 @@ msgstr "Izbornik | Pridruži"
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
-msgstr "Pridruži"
+msgstr "Učini"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347
@@ -189,11 +189,11 @@ msgstr "Gurni"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr "Izbornik|Prebaci"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
-msgstr "Prebaci"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
@@ -222,7 +222,7 @@ msgstr "Pokaži"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:289
 msgid "Menu|Stash"
-msgstr "Izbornik | Zaliha"
+msgstr "Izbornik|Sakriti"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
@@ -230,7 +230,7 @@ msgstr "Izbornik | Zaliha"
 #: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:256
 msgid "Stash"
-msgstr "Zaliha"
+msgstr "Sakriti"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:291
 #: ../thunar-vcs-plugin/tvp-svn-action.c:429
@@ -543,7 +543,7 @@ msgstr "Izvrši radnju resetiranja"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr "Izvrši radnju spremanja zalihe"
+msgstr "Izvrši radnju skrivanja"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
 msgid "Execute status action"
@@ -753,7 +753,7 @@ msgstr "Opis"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:398
 msgid "Stash description:"
-msgstr "Opis zalihe:"
+msgstr "Opis skrivanja:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
@@ -762,7 +762,7 @@ msgstr "Jeste li sigurni da želite izbaciti %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
-msgstr "Jeste li sigurni da želite očistiti svu zalihu?"
+msgstr "Jeste li sigurni da želite očistiti sve skriveno?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:81
@@ -1113,11 +1113,11 @@ msgstr "Spajanje dovršeno"
 
 #: ../tvp-svn-helper/tsh-common.c:570
 msgid "Tree conflict"
-msgstr "Konflikt u stablu"
+msgstr "Konflikt stabla"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "External failed"
-msgstr "Vanjski neuspio"
+msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
@@ -1339,7 +1339,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:212
 msgid "Show copies as additions"
-msgstr ""
+msgstr "Pokaži kopije kao dodatke"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:369
 msgid "Loading..."
