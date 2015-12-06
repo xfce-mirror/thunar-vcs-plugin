@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-11-09 16:11+0000\n"
+"PO-Revision-Date: 2015-12-06 09:11+0000\n"
 "Last-Translator: Ivica  Kolić <ikoli@yahoo.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/xfce/thunar-plugins/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -1335,7 +1335,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Ne prikazuj razlike za izbrisane datoteke"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:212
 msgid "Show copies as additions"
