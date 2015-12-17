@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2014
+# Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-03 20:11+0200\n"
-"PO-Revision-Date: 2014-12-16 20:39+0000\n"
+"POT-Creation-Date: 2015-02-17 00:30+0100\n"
+"PO-Revision-Date: 2015-12-17 20:39+0000\n"
 "Last-Translator: Asier Iturralde Sarasola <asier.iturralde@gmail.com>\n"
-"Language-Team: Basque (http://www.transifex.com/projects/p/thunar-plugins/language/eu/)\n"
+"Language-Team: Basque (http://www.transifex.com/xfce/thunar-plugins/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300
 msgid "Menu|Add"
-msgstr "Menua|Gehitu"
+msgstr "Gehitu"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 #: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
@@ -42,14 +42,14 @@ msgstr "Banatu"
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305
 msgid "Menu|Blame"
-msgstr "Zehazturiko errebisioa"
+msgstr "Egotzi errua"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 #: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
 #: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
-msgstr "Zehazturiko errebisioa"
+msgstr "Egotzi errua"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Branch"
@@ -97,7 +97,8 @@ msgstr "Bidali aldaketak"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:273
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
-#: ../tvp-git-helper/tgh-log-dialog.c:153 ../tvp-svn-helper/main.c:279
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "Bidali aldaketak"
@@ -109,6 +110,7 @@ msgstr "Ezberdintasunak"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:274
 #: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
 msgid "Diff"
 msgstr "Ezberdintasunak"
 
@@ -189,7 +191,7 @@ msgstr "Berreraiki oinarria"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
-msgstr "Oinarria berreraiki"
+msgstr "Berreraiki oinarria"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
@@ -279,7 +281,7 @@ msgstr "Aldaketa-zerrenda"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Cleanup"
-msgstr "Menua|Garbitu"
+msgstr "Garbitu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
 msgid "Cleanup"
@@ -323,11 +325,11 @@ msgstr "Inportatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Menu|Info"
-msgstr "Menu|Info"
+msgstr "Informazioa"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:362
 msgid "Info"
-msgstr "Info"
+msgstr "Informazioa"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Lock"
@@ -435,15 +437,15 @@ msgstr "Berrikuspena:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
 msgid "Repository:"
-msgstr "Errepositorioa:"
+msgstr "Gordailua:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
 msgid "Modified revision:"
-msgstr "Aldatutako errebisioa:"
+msgstr "Aldatutako berrikuspena:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
 msgid "Modified date:"
-msgstr "Aldatze data:"
+msgstr "Aldatze-data:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
 msgid "Author:"
@@ -482,10 +484,13 @@ msgstr "Fitxategiak"
 #. * Immediates depth means this file/direcotry and all of it's files and
 #. subdirectories are checked out
 #. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are updated
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
+#: ../tvp-svn-helper/tsh-diff-dialog.c:179
 #: ../tvp-svn-helper/tsh-properties-dialog.c:226
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
@@ -500,7 +505,7 @@ msgstr "Infinitua"
 
 #: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
 msgid "Print version information"
-msgstr "Bertsio argibideak inprimatu"
+msgstr "Inprimatu bertsio argibideak"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
 msgid "Execute add action"
@@ -508,7 +513,7 @@ msgstr "Exekutatu ekintza bat"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
 msgid "Execute blame action"
-msgstr "Exekutatu zehazturiko ezberdintasun ekintza"
+msgstr "Exekutatu errua egozteko ekintza"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
@@ -544,44 +549,44 @@ msgstr "Exekutatu egoera ekintza"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
 msgid "Add Related Options:"
-msgstr "Gehitzearekin erlazionaturiko aukerak:"
+msgstr "Gehitu erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
 msgid "Blame Related Options:"
-msgstr ""
+msgstr "Errua egoztearekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr ""
+msgstr "Adarrarekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr ""
+msgstr "Klonatzearekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
 msgid "Log Related Options:"
-msgstr ""
+msgstr "Erregistroarekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Mugitzearekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr ""
+msgstr "Berrezartzearekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr ""
+msgstr "Ezkutatzearekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
-msgstr ""
+msgstr "Egoerarekin erlazionaturiko aukerak:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
 msgid "Line"
-msgstr ""
+msgstr "Lerroa"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:96
 #: ../tvp-git-helper/tgh-log-dialog.c:134
@@ -604,6 +609,10 @@ msgstr "Egilea"
 msgid "Date"
 msgstr "Data"
 
+#: ../tvp-git-helper/tgh-branch-dialog.c:110
+msgid "Active"
+msgstr "Aktiboa"
+
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
 #: ../tvp-svn-helper/tsh-properties-dialog.c:125
@@ -612,7 +621,7 @@ msgstr "Izena"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:263
 msgid "Branch name:"
-msgstr "Adar izena:"
+msgstr "Adar-izena:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
@@ -620,15 +629,15 @@ msgstr "Kendu direktorioak."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
-msgstr "Alde batetara utzitako direktorioak kenduta"
+msgstr "Baztertu ez ikusia egindako fitxategiak"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:76
 msgid "Include ignored files"
-msgstr "Alde batetara utzitako direktorioak barne"
+msgstr "Ez ikusia egindako fitxategiak barne"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:82
 msgid "Only ignored files"
-msgstr "Bakarrik alde batetara utzitako fitxategiak"
+msgstr "Soilik ez ikusia egindako fitxategiak"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
@@ -640,7 +649,7 @@ msgstr "Klonatzea amaiturik"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning ..."
-msgstr "Kolantzen ..."
+msgstr "Klonatzen ..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
 #: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
@@ -658,7 +667,7 @@ msgstr "Huts egin du"
 #: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:250
 msgid "untracked"
-msgstr ""
+msgstr "jarraitu gabea"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:93
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
@@ -671,6 +680,13 @@ msgstr ""
 msgid "Path"
 msgstr "Bidea"
 
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:99
+#: ../tvp-git-helper/tgh-status-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+#: ../tvp-svn-helper/tsh-status-dialog.c:123
+msgid "State"
+msgstr "Egoera"
+
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:114
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
 msgid "Select/Unselect all"
@@ -682,7 +698,7 @@ msgstr "AutoreData"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
-msgstr ""
+msgstr "CommitData"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:166
 #: ../tvp-svn-helper/tsh-log-dialog.c:146
@@ -719,37 +735,37 @@ msgstr "Ekintza"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:107
 msgid "Notify"
-msgstr "Berri eman"
+msgstr "Jakinarazi"
 
 #: ../tvp-git-helper/tgh-reset.c:60
 msgid "Reset finished"
-msgstr ""
+msgstr "Berrezartzea amaituta"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset ..."
-msgstr ""
+msgstr "Berrezarri ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
-msgstr "Azalpena"
+msgstr "Deskribapena"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:398
 msgid "Stash description:"
-msgstr ""
+msgstr "Ezkutatzearen deskribapena:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:534
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr ""
+msgstr "Ziur zaude %s jaregin nahi duzula?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:562
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "Ziur zaude ezkutatze guztiak garbitu nahi dituzula?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:81
 msgid "_Repository:"
-msgstr ""
+msgstr "_Gordailua:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:75
 #: ../tvp-git-helper/tgh-transfer-dialog.c:110
@@ -781,7 +797,7 @@ msgstr "Exekutatu aldaketa-zerrenda ekintza"
 
 #: ../tvp-svn-helper/main.c:134
 msgid "Execute checkout action"
-msgstr ""
+msgstr "Exekutatu eskuratze ekintza"
 
 #: ../tvp-svn-helper/main.c:140
 msgid "Execute cleanup action"
@@ -789,7 +805,7 @@ msgstr "Exekutatu garbiketa ekintza"
 
 #: ../tvp-svn-helper/main.c:146
 msgid "Execute commit action"
-msgstr ""
+msgstr "Exekutatu aldaketak bidaltzeko ekintza"
 
 #: ../tvp-svn-helper/main.c:152
 msgid "Execute copy action"
@@ -801,7 +817,7 @@ msgstr "Exekutatu ezabatze ekintza"
 
 #: ../tvp-svn-helper/main.c:164
 msgid "Execute diff action"
-msgstr ""
+msgstr "Exekutatu diferentzia ekintza"
 
 #: ../tvp-svn-helper/main.c:170
 msgid "Execute export action"
@@ -825,35 +841,35 @@ msgstr "Exekutatu ebatzitako ekintza"
 
 #: ../tvp-svn-helper/main.c:212
 msgid "Execute relocate action"
-msgstr ""
+msgstr "Exekutatu birkokatze ekintza"
 
 #: ../tvp-svn-helper/main.c:218
 msgid "Execute revert action"
-msgstr ""
+msgstr "Exekutatu leheneratze ekintza"
 
 #: ../tvp-svn-helper/main.c:230
 msgid "Execute switch action"
-msgstr ""
+msgstr "Exekutatu aldatze ekintza"
 
 #: ../tvp-svn-helper/main.c:236
 msgid "Execute unlock action"
-msgstr "Exekutatu desblokeo ekintza"
+msgstr "Exekutatu desblokeatze ekintza"
 
 #: ../tvp-svn-helper/main.c:242
 msgid "Execute update action"
-msgstr "Exekutatu eguneratu ekintza"
+msgstr "Exekutatu eguneratze ekintza"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Changelist Related Options:"
-msgstr "Aldaketa-zerrenda inguruko aukerak:"
+msgstr "Aldaketa-zerrendarekin erlazionaturiko aukerak:"
 
 #: ../tvp-svn-helper/main.c:271
 msgid "Checkout Related Options:"
-msgstr ""
+msgstr "Eskuratzearekin erlazionaturiko aukerak:"
 
 #: ../tvp-svn-helper/main.c:275
 msgid "Cleanup Related Options:"
-msgstr "Garbiketa inguruko aukerak:"
+msgstr "Garbiketarekin erlazionaturiko aukerak:"
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Commit Related Options:"
@@ -1268,6 +1284,65 @@ msgstr ""
 msgid "Delete Message"
 msgstr "Ezabatu mezua"
 
+#: ../tvp-svn-helper/tsh-diff.c:190
+msgid "Diff failed"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:161
+#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:170
+#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-diff-dialog.c:188
+#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Errekurtsiboa"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:203
+msgid "Notice ancestry"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+msgid "Do not show differences for deleted files"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:212
+msgid "Show copies as additions"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:369
+msgid "Loading..."
+msgstr ""
+
 #: ../tvp-svn-helper/tsh-file-dialog.c:59
 msgid "_Certificate:"
 msgstr "_Ziurtagiria:"
@@ -1314,10 +1389,6 @@ msgstr "_Pasahitza:"
 msgid "Login"
 msgstr "Saio-hasiera"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
-msgid "State"
-msgstr "Egoera"
-
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
 msgstr ""
@@ -1347,35 +1418,6 @@ msgstr ""
 msgid "Value"
 msgstr "Balioa"
 
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is updated
-#. Translators: svn recursion selection
-#. * Self means only this file/direcotry is shown
-#: ../tvp-svn-helper/tsh-properties-dialog.c:206
-#: ../tvp-svn-helper/tsh-status-dialog.c:181
-msgid "Self"
-msgstr ""
-
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. updated
-#. Translators: svn recursion selection
-#. * Immediate files means this file/direcotry and the files it contains are
-#. shown
-#: ../tvp-svn-helper/tsh-properties-dialog.c:217
-#: ../tvp-svn-helper/tsh-status-dialog.c:190
-msgid "Immediate files"
-msgstr ""
-
-#. Translators: svn recursion selection
-#. * Recursive means the update is full recursive
-#. Translators: svn recursion selection
-#. * Recursive means the list is full recursive
-#: ../tvp-svn-helper/tsh-properties-dialog.c:235
-#: ../tvp-svn-helper/tsh-status-dialog.c:208
-msgid "Recursive"
-msgstr "Errekurtsiboa"
-
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
 msgstr ""
@@ -1398,6 +1440,18 @@ msgstr "N_ora:"
 
 #: ../tvp-svn-helper/tsh-status.c:91
 msgid "Status failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:129
+msgid "Prop state"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:135
+msgid "Repo state"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:141
+msgid "Repo prop state"
 msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
