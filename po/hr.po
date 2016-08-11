@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2016-08-09 08:44+0000\n"
+"PO-Revision-Date: 2016-08-11 10:22+0000\n"
 "Last-Translator: Lovro Kudelić <lovro.kudelic@outlook.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/xfce/thunar-plugins/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -190,11 +190,11 @@ msgstr "Gurni"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Menu|Rebase"
-msgstr ""
+msgstr "Izbornik|Prebaci"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:284
 msgid "Rebase"
-msgstr ""
+msgstr "Prebaci"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:285
 msgid "Menu|Reset"
@@ -1118,7 +1118,7 @@ msgstr "Konflikt stabla"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "External failed"
-msgstr ""
+msgstr "Vanjski neuspio"
 
 #: ../tvp-svn-helper/tsh-common.c:574
 msgid "Started"
@@ -1142,15 +1142,15 @@ msgstr "Vanjski odstranjen"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Shadowed add"
-msgstr ""
+msgstr "Shadowed dodaj"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Shadowed update"
-msgstr ""
+msgstr "Shadowed ažuriraj"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Shadowed izbriši"
 
 #: ../tvp-svn-helper/tsh-common.c:582
 msgid "Merge record info"
@@ -1162,31 +1162,31 @@ msgstr "Nadograđena putanja"
 
 #: ../tvp-svn-helper/tsh-common.c:584
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Spoji zapis info begin"
 
 #: ../tvp-svn-helper/tsh-common.c:585
 msgid "Merge elide info"
-msgstr ""
+msgstr "Spoji elide info"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
-msgstr ""
+msgstr "Zakrpa"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
-msgstr ""
+msgstr "Primijenjen hunk"
 
 #: ../tvp-svn-helper/tsh-common.c:588
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Odbijen hunk"
 
 #: ../tvp-svn-helper/tsh-common.c:589
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Hunk je već primijenjen"
 
 #: ../tvp-svn-helper/tsh-common.c:591
 msgid "Copied replaced"
-msgstr ""
+msgstr "Kopirano zamijenjeno"
 
 #: ../tvp-svn-helper/tsh-common.c:592
 msgid "URL redirect"
@@ -1219,7 +1219,7 @@ msgstr "Zabranjeno od strane poslužitelja"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "Konfliktno preskočeno"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
@@ -1289,7 +1289,7 @@ msgstr "Izbriši poruku"
 
 #: ../tvp-svn-helper/tsh-diff.c:190
 msgid "Diff failed"
-msgstr ""
+msgstr "Neuspjela razlika"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1332,7 +1332,7 @@ msgstr "Rekurzivno"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:203
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Obavijest o podrijetlu"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
@@ -1447,15 +1447,15 @@ msgstr "Neuspjeo status"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Stanje svojstva"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Stanje repozitorija"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Stanje svojstva repozitorija"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
