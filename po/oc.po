@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Cédric Valmary <cvalmary@yahoo.fr>, 2015
+# Cédric Valmary <cvalmary@yahoo.fr>, 2015-2016
 # Cédric Valmary <cvalmary@yahoo.fr>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-11-07 15:49+0000\n"
+"PO-Revision-Date: 2016-11-07 09:16+0000\n"
 "Last-Translator: Cédric Valmary <cvalmary@yahoo.fr>\n"
 "Language-Team: Occitan (post 1500) (http://www.transifex.com/xfce/thunar-plugins/language/oc/)\n"
 "MIME-Version: 1.0\n"
@@ -612,7 +612,7 @@ msgstr "Data"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:110
 msgid "Active"
-msgstr ""
+msgstr "Activa"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:116
 #: ../tvp-git-helper/tgh-stash-dialog.c:161
@@ -1287,7 +1287,7 @@ msgstr "Escafar messatge"
 
 #: ../tvp-svn-helper/tsh-diff.c:190
 msgid "Diff failed"
-msgstr ""
+msgstr "Fracàs de diff"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1330,15 +1330,15 @@ msgstr "Recursiu"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:203
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Prene en compte los ancèstres"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Afichar pas las diferéncias pels fichièrs suprimits"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:212
 msgid "Show copies as additions"
-msgstr ""
+msgstr "Afichar las còpias coma apondons"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:369
 msgid "Loading..."
@@ -1445,15 +1445,15 @@ msgstr "Fracàs de l'obtencion de l'estatut"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Estat de las proprietats"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Estat del depaus"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Estat de las proprietats e depaus"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:223
 msgid "Show Unmodified Files"
