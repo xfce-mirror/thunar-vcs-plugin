@@ -3,17 +3,18 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Aputsiaĸ Niels Janussen <aj@isit.gl>, 2015
+# Aputsiak Niels Janussen <aj@isit.gl>, 2015
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
+# scootergrisen, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-02-20 07:51+0000\n"
-"Last-Translator: Aputsiaĸ Niels Janussen <aj@isit.gl>\n"
-"Language-Team: Danish (http://www.transifex.com/projects/p/thunar-plugins/language/da/)\n"
+"PO-Revision-Date: 2017-01-16 10:39+0000\n"
+"Last-Translator: scootergrisen\n"
+"Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1389,7 +1390,7 @@ msgstr "_Adgangskode:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:105
 msgid "Login"
-msgstr "Logind"
+msgstr "Log ind"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:117
 msgid "Log Message"
