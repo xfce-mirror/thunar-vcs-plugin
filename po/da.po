@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-01-16 10:39+0000\n"
+"PO-Revision-Date: 2017-01-21 18:24+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -381,12 +381,12 @@ msgstr "Løs"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Revert"
-msgstr "Forkast"
+msgstr "Tilbagefør"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
 msgid "Revert"
-msgstr "Forkast"
+msgstr "Tilbagefør"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:434
 msgid "Menu|Switch"
@@ -848,7 +848,7 @@ msgstr "Kør adresseskifthandling"
 
 #: ../tvp-svn-helper/main.c:218
 msgid "Execute revert action"
-msgstr "Kør forkastehandling"
+msgstr "Kør tilbagefør-handling"
 
 #: ../tvp-svn-helper/main.c:230
 msgid "Execute switch action"
@@ -923,7 +923,7 @@ msgstr "Adresseskift-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Revert Related Options:"
-msgstr "Forkast-relaterede tilvalg:"
+msgstr "Tilbagefør-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:335
 msgid "Switch Related Options:"
@@ -1007,11 +1007,11 @@ msgstr "Genoprettet"
 
 #: ../tvp-svn-helper/tsh-common.c:534
 msgid "Reverted"
-msgstr "Forkastet"
+msgstr "Tilbageført"
 
 #: ../tvp-svn-helper/tsh-common.c:535
 msgid "Revert failed"
-msgstr "Forkastning fejlede"
+msgstr "Tilbageføring fejlede"
 
 #: ../tvp-svn-helper/tsh-common.c:537
 msgid "Skipped"
