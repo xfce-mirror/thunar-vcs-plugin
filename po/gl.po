@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008-2010
-# Xosé <xosecalvo@gmail.com>, 2015
+# Xosé <xosecalvo@gmail.com>, 2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-09-21 20:11+0000\n"
+"PO-Revision-Date: 2017-03-20 21:41+0000\n"
 "Last-Translator: Xosé <xosecalvo@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/thunar-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -1168,7 +1168,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Patch"
-msgstr ""
+msgstr "Parche"
 
 #: ../tvp-svn-helper/tsh-common.c:587
 msgid "Applied hunk"
@@ -1201,7 +1201,7 @@ msgstr "Conflito"
 #: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
 #: ../tvp-svn-helper/tsh-common.c:735
 msgid "Missing"
-msgstr ""
+msgstr "Falta"
 
 #: ../tvp-svn-helper/tsh-common.c:597
 msgid "Out of date"
@@ -1334,7 +1334,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Non mostrar as diferenzas dos ficheiros eliminados"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:212
 msgid "Show copies as additions"
@@ -1356,7 +1356,7 @@ msgstr "Seleccione un ficheiro"
 #: ../tvp-svn-helper/tsh-login-dialog.c:97
 #: ../tvp-svn-helper/tsh-trust-dialog.c:72
 msgid "Remember"
-msgstr ""
+msgstr "Lembrar"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:85
 msgid "Certificate"
