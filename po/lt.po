@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015
+# Moo, 2015,2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2015-09-20 19:49+0000\n"
+"PO-Revision-Date: 2017-04-13 13:49+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -550,39 +550,39 @@ msgstr "Vykdyti būsenos veiksmą"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
 msgid "Add Related Options:"
-msgstr "Su pridėjimu susijusios parinktys:"
+msgstr "Su pridėjimu susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
 msgid "Blame Related Options:"
-msgstr "Su kaltinimu susijusios parinktys:"
+msgstr "Su kaltinimu susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr "Su šaka susijusios parinktys:"
+msgstr "Su šaka susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr "Su klonavimu susijusios parinktys:"
+msgstr "Su klonavimu susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
 msgid "Log Related Options:"
-msgstr "Su žurnalu susijusios parinktys:"
+msgstr "Su žurnalu susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
 msgid "Move Related Options:"
-msgstr "Su perkėlimu susijusios parinktys:"
+msgstr "Su perkėlimu susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr "Su atstatymu susijusios parinktys:"
+msgstr "Su atstatymu susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "Su saugykla susijusios parinktys:"
+msgstr "Su saugykla susiję parametrai:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
 msgid "Status Related Options:"
-msgstr "Su būsena susijusios parinktys:"
+msgstr "Su būsena susiję parametrai:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -862,47 +862,47 @@ msgstr "Vykdyti atnaujinimo veiksmą"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Changelist Related Options:"
-msgstr "Su keitimų sąrašu susijusios parinktys:"
+msgstr "Su keitimų sąrašu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:271
 msgid "Checkout Related Options:"
-msgstr "Su iškėlimu susijusios parinktys:"
+msgstr "Su iškėlimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:275
 msgid "Cleanup Related Options:"
-msgstr "Su valymu susijusios parinktys:"
+msgstr "Su valymu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:279
 msgid "Commit Related Options:"
-msgstr "Su pritaikymu susijusios parinktys:"
+msgstr "Su pritaikymu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:283
 msgid "Copy Related Options:"
-msgstr "Su kopijavimu susijusios parinktys:"
+msgstr "Su kopijavimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:287
 msgid "Delete Related Options:"
-msgstr "Su šalinimu susijusios parinktys:"
+msgstr "Su ištrynimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:291
 msgid "Diff Related Options:"
-msgstr "Su Diff susijusios parinktys:"
+msgstr "Su Diff susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:295
 msgid "Export Related Options:"
-msgstr "Su eksportavimu susijusios parinktys:"
+msgstr "Su eksportavimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:299
 msgid "Import Related Options:"
-msgstr "Su importavimu susijusios parinktys:"
+msgstr "Su importavimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:303
 msgid "Lock Related Options:"
-msgstr "Su užrakinimu susijusios parinktys:"
+msgstr "Su užrakinimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:315
 msgid "Properties Related Options:"
-msgstr "Su savybėmis susijusios parinktys:"
+msgstr "Su savybėmis susiję parametrai:"
 
 #. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
 #. TRUE, 0);
@@ -913,27 +913,27 @@ msgstr "Savybės"
 
 #: ../tvp-svn-helper/main.c:319
 msgid "Resolved Related Options:"
-msgstr "Su išsprendimu susijusios parinktys:"
+msgstr "Su išsprendimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:323
 msgid "Relocate Related Options:"
-msgstr "Su perkėlimu susijusios parinktys:"
+msgstr "Su perkėlimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:327
 msgid "Revert Related Options:"
-msgstr "Su atstatymu susijusios parinktys:"
+msgstr "Su atstatymu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:335
 msgid "Switch Related Options:"
-msgstr "Su perjungimu susijusios parinktys:"
+msgstr "Su perjungimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:339
 msgid "Unlock Related Options:"
-msgstr "Su rakinimu susijusios parinktys:"
+msgstr "Su rakinimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
-msgstr "Su atnaujinimu susijusios parinktys:"
+msgstr "Su atnaujinimu susiję parametrai:"
 
 #: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
