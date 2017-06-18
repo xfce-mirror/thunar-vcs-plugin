@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-04-13 13:49+0000\n"
+"PO-Revision-Date: 2017-06-17 23:12+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -626,7 +626,7 @@ msgstr "Šakos vardas:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:56
 msgid "Remove directories."
-msgstr "Pašalinti aplankus."
+msgstr "Šalinti katalogus."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
@@ -785,7 +785,7 @@ msgstr "Pasirinkite aplanką"
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:197
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:136
 msgid "_Directory:"
-msgstr "_Aplankas:"
+msgstr "_Katalogas:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:122
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:155
