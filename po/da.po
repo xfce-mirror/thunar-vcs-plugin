@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Aputsiak Niels Janussen <aj@isit.gl>, 2015
+# Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2015
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
 # scootergrisen, 2017
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-01-22 18:03+0000\n"
+"PO-Revision-Date: 2017-09-13 16:00+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -738,7 +738,7 @@ msgstr "Handling"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:107
 msgid "Notify"
-msgstr "Informér"
+msgstr "Notificér"
 
 #: ../tvp-git-helper/tgh-reset.c:60
 msgid "Reset finished"
@@ -1406,7 +1406,7 @@ msgstr "Mime-type"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
-msgstr "Påmindelse"
+msgstr "Notifikation"
 
 #. tsh_properties_dialog_done (dialog);
 #: ../tvp-svn-helper/tsh-properties.c:94
