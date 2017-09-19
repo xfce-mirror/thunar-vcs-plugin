@@ -4,7 +4,7 @@
 # 
 # Translators:
 # andreazube <andreazuben@gmail.com>, 2013
-# Diego Principe <cdprincipe@gmail.com>, 2013
+# Carmine Diego Principe <cdprincipe@gmail.com>, 2013
 # Cristian Marchi <cri.penta@gmail.com>, 2011,2013,2015
 # Edoardo Maria Elidoro <edoardo.elidoro@gmail.com>, 2013
 # Enrico B. <enricobe@hotmail.com>, 2016
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-04-24 19:17+0000\n"
+"PO-Revision-Date: 2017-09-19 18:04+0000\n"
 "Last-Translator: Enrico B. <enricobe@hotmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/thunar-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
