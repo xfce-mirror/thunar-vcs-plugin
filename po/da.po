@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"PO-Revision-Date: 2017-09-30 20:03+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -1126,15 +1126,15 @@ msgstr "Startet"
 
 #: ../tvp-svn-helper/tsh-common.c:575
 msgid "Skipped obstruction"
-msgstr "Sprang over forhindring"
+msgstr "Udeladt forhindring"
 
 #: ../tvp-svn-helper/tsh-common.c:576
 msgid "Skipped working only"
-msgstr "Sprang over kun arbejde"
+msgstr "Udeladt kun arbejde"
 
 #: ../tvp-svn-helper/tsh-common.c:577
 msgid "Skipped access denied"
-msgstr "Sprang over ingen adgang"
+msgstr "Udeladt ingen adgang"
 
 #: ../tvp-svn-helper/tsh-common.c:578
 msgid "External removed"
@@ -1219,7 +1219,7 @@ msgstr "Forbudt af server"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr "Sprunger over konfliktede"
+msgstr "Udeladt konfliktede"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
@@ -1463,7 +1463,7 @@ msgstr "Vis uændrede filer"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:227
 msgid "Show Unversioned Files"
-msgstr "Vis ikkeversionerede filer"
+msgstr "Vis versionsløse filer"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:231
 msgid "Show Ignored Files"
