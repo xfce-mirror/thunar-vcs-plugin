@@ -54,13 +54,13 @@ tgh_clean_dialog_init (TghCleanDialog *dialog)
   GtkCellRenderer *renderer;
 
   dialog->directories = gtk_check_button_new_with_label (_("Remove directories."));
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->directories, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), dialog->directories, FALSE, TRUE, 0);
   gtk_widget_show(dialog->directories);
 
   model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
 
   dialog->ignore = gtk_combo_box_new_with_model (model);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->ignore, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), dialog->ignore, FALSE, TRUE, 0);
   gtk_widget_show(dialog->ignore);
 
   gtk_list_store_append (GTK_LIST_STORE (model), &iter);
@@ -90,7 +90,7 @@ tgh_clean_dialog_init (TghCleanDialog *dialog)
   gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (dialog->ignore), renderer, "text", 0);
 
   dialog->force = gtk_check_button_new_with_label (_("Force clean."));
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->force, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), dialog->force, FALSE, TRUE, 0);
   gtk_widget_show(dialog->force);
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Clean"));

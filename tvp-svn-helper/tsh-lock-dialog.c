@@ -61,11 +61,11 @@ tsh_lock_dialog_init (TshLockDialog *dialog)
 	gtk_container_add (GTK_CONTAINER (scroll_window), text_view);
 	gtk_widget_show (text_view);
 
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), scroll_window, TRUE, TRUE, 0);
 	gtk_widget_show (scroll_window);
 
   dialog->steal = steal = gtk_check_button_new_with_label("Steal Lock");
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), steal, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), steal, FALSE, FALSE, 0);
 	gtk_widget_show (steal);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Lock"));

@@ -100,7 +100,7 @@ tgh_notify_dialog_init (TghNotifyDialog *dialog)
   g_object_unref (model);
 
   gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), scroll_window, TRUE, TRUE, 0);
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
@@ -110,7 +110,7 @@ tgh_notify_dialog_init (TghNotifyDialog *dialog)
   gtk_widget_hide (button);
 
   dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+  gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 

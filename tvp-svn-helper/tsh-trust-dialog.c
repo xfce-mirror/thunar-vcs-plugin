@@ -54,23 +54,26 @@ tsh_trust_dialog_class_init (TshTrustDialogClass *klass)
 static void
 tsh_trust_dialog_init (TshTrustDialog *dialog)
 {
+	GtkBox *content_area;
+	content_area = GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog)));
+
 	dialog->notyetvalid = gtk_check_button_new_with_label (_("Certificate is not yet valid."));
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->notyetvalid, FALSE, TRUE, 0);
+	gtk_box_pack_start (content_area, dialog->notyetvalid, FALSE, TRUE, 0);
 
 	dialog->expired = gtk_check_button_new_with_label (_("Certificate has expired."));
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->expired, FALSE, TRUE, 0);
+	gtk_box_pack_start (content_area, dialog->expired, FALSE, TRUE, 0);
 
 	dialog->cnmismatch = gtk_check_button_new_with_label (_("Certificate does not match the remote hostname."));
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->cnmismatch, FALSE, TRUE, 0);
+	gtk_box_pack_start (content_area, dialog->cnmismatch, FALSE, TRUE, 0);
 
 	dialog->unknownca = gtk_check_button_new_with_label (_("Certificate authority is unknown."));
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->unknownca, FALSE, TRUE, 0);
+	gtk_box_pack_start (content_area, dialog->unknownca, FALSE, TRUE, 0);
 
 	dialog->other = gtk_check_button_new_with_label (_("Other failure."));
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->other, FALSE, TRUE, 0);
+	gtk_box_pack_start (content_area, dialog->other, FALSE, TRUE, 0);
 
 	dialog->may_save = gtk_check_button_new_with_label(_("Remember"));
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), dialog->may_save, FALSE, TRUE, 0);
+	gtk_box_pack_start (content_area, dialog->may_save, FALSE, TRUE, 0);
 	gtk_widget_show(dialog->may_save);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Trust"));

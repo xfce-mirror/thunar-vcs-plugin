@@ -50,22 +50,6 @@ close_response (GtkDialog *dialog, gint response, gpointer user_data)
 }
 
 void
-tgh_dialog_replace_action_area (GtkDialog *dialog)
-{
-  GtkWidget *box;
-
-  gtk_container_remove (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_DIALOG (dialog)->action_area);
-
-  GTK_DIALOG (dialog)->action_area = box = gtk_hbox_new (FALSE, 0);
-
-  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->vbox), box,
-      FALSE, TRUE, 0);
-  gtk_widget_show (box);
-
-  gtk_box_reorder_child (GTK_BOX (GTK_DIALOG (dialog)->vbox), box, 0);
-}
-
-void
 tgh_make_homogeneous (GtkWidget *first, ...)
 {
   GtkWidget *iter;

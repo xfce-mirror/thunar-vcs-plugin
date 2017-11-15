@@ -97,7 +97,6 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   GtkWidget *scroll_window;
   GtkCellRenderer *renderer;
   GtkTreeModel *model;
-  GtkWidget *box;
 
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -124,20 +123,17 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   g_object_unref (model);
 
   gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), scroll_window, TRUE, TRUE, 0);
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
-  tgh_dialog_replace_action_area (GTK_DIALOG (dialog));
-  box = GTK_DIALOG (dialog)->action_area;
-
   dialog->checkout = button = gtk_button_new_from_stock(GTK_STOCK_JUMP_TO);
-  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (checkout_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->create = button = gtk_button_new_from_stock(GTK_STOCK_NEW);
-  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (create_clicked), dialog);
   gtk_widget_show (button);
 
@@ -147,7 +143,7 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   gtk_widget_hide (button);
 
   dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-  gtk_box_pack_end (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
@@ -289,7 +285,7 @@ create_clicked (GtkButton *button, gpointer user_data)
 
   gtk_container_set_border_width (GTK_CONTAINER (name_dialog), 5);
   gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
-  gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (name_dialog)->vbox), 14); /* 14 + 2 * 5 = 24 */
+  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (name_dialog))), 14); /* 14 + 2 * 5 = 24 */
   gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (name_dialog))), 5);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (name_dialog))), 6);
 

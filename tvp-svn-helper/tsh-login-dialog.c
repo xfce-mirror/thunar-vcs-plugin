@@ -58,7 +58,7 @@ tsh_login_dialog_init (TshLoginDialog *dialog)
 
 	table = gtk_table_new (2, 3, FALSE);
 
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), table, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, TRUE, 0);
 	gtk_widget_show (table);
 
 	dialog->user_lbl = gtk_label_new_with_mnemonic (_("_Username:"));

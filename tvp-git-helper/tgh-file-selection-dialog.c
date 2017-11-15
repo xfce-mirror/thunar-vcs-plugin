@@ -107,7 +107,7 @@ tgh_file_selection_dialog_init (TghFileSelectionDialog *dialog)
   g_object_unref (model);
 
   gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), scroll_window, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), scroll_window, TRUE, TRUE, 0);
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
@@ -115,7 +115,7 @@ tgh_file_selection_dialog_init (TghFileSelectionDialog *dialog)
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (all), TRUE);
   gtk_toggle_button_set_inconsistent (GTK_TOGGLE_BUTTON (all), TRUE);
   g_signal_connect (all, "toggled", G_CALLBACK (selection_all_toggled), dialog);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), all, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), all, FALSE, FALSE, 0);
   gtk_widget_show (all);
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Status"));

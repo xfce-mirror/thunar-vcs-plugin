@@ -53,7 +53,7 @@ tsh_file_dialog_init (TshFileDialog *dialog)
 
 	table = gtk_table_new (2, 2, FALSE);
 
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), table, FALSE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, TRUE, 0);
 	gtk_widget_show (table);
 
 	label = gtk_label_new_with_mnemonic (_("_Certificate:"));

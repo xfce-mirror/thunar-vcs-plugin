@@ -248,34 +248,18 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
   gtk_paned_pack2 (GTK_PANED(vpane), box, TRUE, FALSE);
   gtk_widget_show (box);
 
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), vpane, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), vpane, TRUE, TRUE, 0);
   gtk_widget_show (vpane);
 
-  //gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
-  gtk_container_remove (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), GTK_DIALOG (dialog)->action_area);
-
-  GTK_DIALOG (dialog)->action_area = box = gtk_hbox_new (FALSE, 0);
-
-  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->vbox), box,
-                    FALSE, TRUE, 0);
-  gtk_widget_show (box);
-
-  gtk_box_reorder_child (GTK_BOX (GTK_DIALOG (dialog)->vbox), box, 0);
-
-  //box = gtk_hbox_new (FALSE, 12);
-
 	dialog->set = button = gtk_button_new_from_stock(GTK_STOCK_ADD);
-	gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (set_clicked), dialog);
 	gtk_widget_show (button);
 
 	dialog->delete = button = gtk_button_new_from_stock(GTK_STOCK_REMOVE);
-	gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (delete_clicked), dialog);
 	gtk_widget_show (button);
-
-  //gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
-	//gtk_widget_show (box);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Properties"));
 
@@ -283,7 +267,7 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_widget_hide (button);
 
 	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-	gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+	gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
 

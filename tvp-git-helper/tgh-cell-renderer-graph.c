@@ -47,8 +47,8 @@ enum {
 static void tgh_cell_renderer_graph_get_property (GObject*, guint, GValue*, GParamSpec*);
 static void tgh_cell_renderer_graph_set_property (GObject*, guint, const GValue*, GParamSpec*);
 
-static void tgh_cell_renderer_graph_get_size (GtkCellRenderer*, GtkWidget*, GdkRectangle*, gint*, gint*, gint*, gint*);
 static void tgh_cell_renderer_graph_render (GtkCellRenderer*, GdkDrawable*, GtkWidget*, GdkRectangle*, GdkRectangle*, GdkRectangle*, GtkCellRendererState);
+static void tgh_cell_renderer_graph_get_size (GtkCellRenderer*, GtkWidget*, const GdkRectangle*, gint*, gint*, gint*, gint*);
 
 G_DEFINE_TYPE (TghCellRendererGraph, tgh_cell_renderer_graph, GTK_TYPE_CELL_RENDERER)
 
@@ -120,13 +120,15 @@ tgh_cell_renderer_graph_set_property (GObject *object, guint property_id, const 
 }
 
 static void
-tgh_cell_renderer_graph_get_size (GtkCellRenderer *cell, GtkWidget *widget, GdkRectangle *cell_area, gint *x_offset, gint *y_offset, gint *width, gint *height)
+tgh_cell_renderer_graph_get_size (GtkCellRenderer *cell, GtkWidget *widget, const GdkRectangle *cell_area, gint *x_offset, gint *y_offset, gint *width, gint *height)
 {
   TghCellRendererGraph *renderer = TGH_CELL_RENDERER_GRAPH (cell);
   gint graph_width  = 0;
   gint graph_height = 0;
   gint calc_width;
   gint calc_height;
+  gint xpad, ypad;
+  gfloat xalign, yalign;
 
   if (renderer->graph_iter)
   {
@@ -151,21 +153,24 @@ tgh_cell_renderer_graph_get_size (GtkCellRenderer *cell, GtkWidget *widget, GdkR
     }
   }
 
-  calc_width  = (gint) cell->xpad * 2 + graph_width;
-  calc_height = (gint) cell->ypad * 2 + graph_height;
+  gtk_cell_renderer_get_padding (cell, &xpad, &ypad);
+  gtk_cell_renderer_get_alignment (cell, &xalign, &yalign);
+
+  calc_width  = (gint) xpad * 2 + graph_width;
+  calc_height = (gint) ypad * 2 + graph_height;
 
   if (cell_area && graph_width > 0 && graph_height > 0)
   {
     if (x_offset)
     {
       *x_offset = (((gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL) ?
-            (1.0 - cell->xalign) : cell->xalign) * (cell_area->width - calc_width));
+            (1.0 - xalign) : xalign) * (cell_area->width - calc_width));
       if (*x_offset < 0)
         *x_offset = 0;
     }
     if (y_offset)
     {
-      *y_offset = (cell->yalign * (cell_area->height - calc_height));
+      *y_offset = (yalign * (cell_area->height - calc_height));
       if (*y_offset < 0)
         *y_offset = 0;
     }
@@ -269,6 +274,8 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
     gint x;
     gboolean rtl = (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL);
     GtkStateType state;
+    gint xpad;
+    gfloat xalign;
 
     if (flags & GTK_CELL_RENDERER_INSENSITIVE)
       state = GTK_STATE_INSENSITIVE;
@@ -279,8 +286,11 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
     else
       state = GTK_STATE_NORMAL;
 
-    x_offset += cell_area->x + cell->xpad;
-    x2_offset = x_offset + width - cell->xpad * 2;
+    gtk_cell_renderer_get_padding (cell, &xpad, NULL);
+    gtk_cell_renderer_get_alignment (cell, &xalign, NULL);
+
+    x_offset += cell_area->x + xpad;
+    x2_offset = x_offset + width - xpad * 2;
     y_offset = background_area->y;
     height = background_area->height;
 
@@ -309,7 +319,7 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
 
       x2_offset = tgh_graph_node_length (graph_iter->data);
       x2_offset = renderer->spacing + renderer->spacing * x2_offset + x2_offset;
-      x2_offset = ((rtl ?  (1.0 - cell->xalign) : cell->xalign) * (cell_area->width - x2_offset)) + (rtl ? x2_offset : 0);
+      x2_offset = ((rtl ?  (1.0 - xalign) : xalign) * (cell_area->width - x2_offset)) + (rtl ? x2_offset : 0);
       if (x2_offset < 0)
         x2_offset = 0;
       x2_offset += cell_area->x;
@@ -344,7 +354,7 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
 
       x2_offset = tgh_graph_node_length (graph_iter->data);
       x2_offset = renderer->spacing + renderer->spacing * x2_offset + x2_offset;
-      x2_offset = ((rtl ?  (1.0 - cell->xalign) : cell->xalign) * (cell_area->width - x2_offset)) + (rtl ? x2_offset : 0);
+      x2_offset = ((rtl ?  (1.0 - xalign) : xalign) * (cell_area->width - x2_offset)) + (rtl ? x2_offset : 0);
       if (x2_offset < 0)
         x2_offset = 0;
       x2_offset += cell_area->x;

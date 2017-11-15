@@ -237,20 +237,20 @@ tgh_log_dialog_init (TghLogDialog *dialog)
   gtk_paned_pack2 (GTK_PANED(pane), vpane, TRUE, FALSE);
   gtk_widget_show (vpane);
 
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), pane, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), pane, TRUE, TRUE, 0);
   gtk_widget_show (pane);
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Log"));
 
-  gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
+  gtk_button_box_set_layout(GTK_BUTTON_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
 
   dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
 

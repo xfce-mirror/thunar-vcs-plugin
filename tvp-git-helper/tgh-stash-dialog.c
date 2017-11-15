@@ -145,7 +145,6 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   GtkWidget *file_view;
   GtkWidget *scroll_window;
   GtkWidget *vpane;
-  GtkWidget *box;
   GtkCellRenderer *renderer;
   GtkTreeModel *model;
 
@@ -216,42 +215,33 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   gtk_widget_show (file_view);
   gtk_widget_show (scroll_window);
 
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), vpane, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), vpane, TRUE, TRUE, 0);
   gtk_widget_show (vpane);
 
-  //gtk_button_box_set_layout(GTK_BUTTON_BOX (GTK_DIALOG (dialog)->action_area), GTK_BUTTONBOX_EDGE);
-  tgh_dialog_replace_action_area (GTK_DIALOG (dialog));
-  box = GTK_DIALOG (dialog)->action_area;
-
-  //box = gtk_hbox_new (FALSE, 12);
-
   dialog->save = button = gtk_button_new_from_stock(GTK_STOCK_SAVE);
-  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (save_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->apply = button = gtk_button_new_from_stock(GTK_STOCK_APPLY);
-  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (apply_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->pop = button = gtk_button_new_from_stock(GTK_STOCK_OK);
-  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (pop_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->drop = button = gtk_button_new_from_stock(GTK_STOCK_DELETE);
-  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (drop_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->clear = button = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
-  gtk_box_pack_start (GTK_BOX (box), button, FALSE, TRUE, 0);
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (clear_clicked), dialog);
   gtk_widget_show (button);
-
-  //gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE, TRUE, 0);
-  //gtk_widget_show (box);
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Stash"));
 
@@ -259,7 +249,7 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   gtk_widget_hide (button);
 
   dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
-  gtk_box_pack_end (GTK_BOX (GTK_DIALOG (dialog)->action_area), button, FALSE, TRUE, 0);
+  gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
@@ -424,7 +414,7 @@ save_clicked (GtkButton *button, gpointer user_data)
 
   gtk_container_set_border_width (GTK_CONTAINER (name_dialog), 5);
   gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
-  gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (name_dialog)->vbox), 14); /* 14 + 2 * 5 = 24 */
+  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (name_dialog))), 14); /* 14 + 2 * 5 = 24 */
   gtk_container_set_border_width (GTK_CONTAINER (gtk_dialog_get_action_area (GTK_DIALOG (name_dialog))), 5);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (name_dialog))), 6);
 

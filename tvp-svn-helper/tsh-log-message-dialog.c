@@ -111,7 +111,7 @@ tsh_log_message_dialog_init (TshLogMessageDialog *dialog)
 	gtk_widget_show (tree_view);
 	gtk_widget_show (scroll_window);
 
-	gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), vpane, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), vpane, TRUE, TRUE, 0);
 	gtk_widget_show (vpane);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Log Message"));
