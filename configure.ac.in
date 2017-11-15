@@ -35,7 +35,7 @@ dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2006-2011 Peter de Ridder <peter@xfce.org>.])
 AC_INIT([thunar-vcs-plugin], [tvp_version], [thunar-dev@xfce.org])
-AC_PREFIX_DEFAULT([$(pkg-config --variable prefix thunarx-2 || echo /usr/local)])
+AC_PREFIX_DEFAULT([$(pkg-config --variable prefix thunarx-3 || echo /usr/local)])
 AC_PREREQ([2.50])
 AC_CANONICAL_TARGET()
 
@@ -81,10 +81,10 @@ XDT_I18N([@LINGUAS@])
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([THUNARX], [thunarx-2], [1.2.0])
-XDT_CHECK_PACKAGE([EXO], [exo-1], [0.6.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.8.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.14.0])
+XDT_CHECK_PACKAGE([THUNARX], [thunarx-3], [1.2.0])
+XDT_CHECK_PACKAGE([EXO], [exo-2], [0.10.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.12.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.20.0])
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.18.0])
 XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.18.0])
 XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.18.0])
