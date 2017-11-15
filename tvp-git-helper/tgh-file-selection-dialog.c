@@ -164,9 +164,6 @@ tgh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   if(flags & GTK_DIALOG_DESTROY_WITH_PARENT)
     gtk_window_set_destroy_with_parent (GTK_WINDOW(dialog), TRUE);
 
-  if(flags & GTK_DIALOG_NO_SEPARATOR)
-    gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
-
   dialog->flags = selection_flags;
 
   if(!g_spawn_async_with_pipes(NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD | G_SPAWN_SEARCH_PATH, NULL, NULL, &pid, NULL, &fd_out, &fd_err, &error))

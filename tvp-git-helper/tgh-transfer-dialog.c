@@ -148,9 +148,6 @@ tgh_transfer_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags f
     if(flags & GTK_DIALOG_DESTROY_WITH_PARENT)
         gtk_window_set_destroy_with_parent (GTK_WINDOW(dialog), TRUE);
 
-    if(flags & GTK_DIALOG_NO_SEPARATOR)
-        gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
-
     if(repo_dir)
     {
       gchar *absolute = NULL;

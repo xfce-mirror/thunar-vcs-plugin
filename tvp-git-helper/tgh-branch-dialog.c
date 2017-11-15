@@ -169,9 +169,6 @@ tgh_branch_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
   if(flags & GTK_DIALOG_DESTROY_WITH_PARENT)
     gtk_window_set_destroy_with_parent (GTK_WINDOW(dialog), TRUE);
 
-  if(flags & GTK_DIALOG_NO_SEPARATOR)
-    gtk_dialog_set_has_separator (GTK_DIALOG(dialog), FALSE);
-
   return GTK_WIDGET(dialog);
 }
 
@@ -251,7 +248,7 @@ create_clicked (GtkButton *button, gpointer user_data)
 
   TghBranchDialog *dialog = TGH_BRANCH_DIALOG (user_data);
 
-  name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL | GTK_DIALOG_NO_SEPARATOR, GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, GTK_STOCK_NEW, GTK_RESPONSE_ACCEPT, NULL);
+  name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, GTK_STOCK_NEW, GTK_RESPONSE_ACCEPT, NULL);
   gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT, GTK_RESPONSE_CANCEL, -1);
   gtk_window_set_resizable (GTK_WINDOW (name_dialog), FALSE);
   gtk_window_set_skip_taskbar_hint (GTK_WINDOW (name_dialog), TRUE);
