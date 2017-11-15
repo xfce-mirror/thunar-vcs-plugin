@@ -91,19 +91,7 @@ struct _TvpProvider
   GObject __parent__;
 
   TvpChildWatch *child_watch;
-
-#if !GTK_CHECK_VERSION(2,9,0)
-  /* GTK+ 2.9.0 and above provide an icon-name property
-   * for GtkActions, so we don't need the icon factory.
-   */
-  GtkIconFactory *icon_factory;
-#endif
 };
-
-
-
-//static GQuark tvp_action_files_quark;
-//static GQuark tvp_action_provider_quark;
 
 
 
@@ -120,10 +108,6 @@ static void
 tvp_provider_class_init (TvpProviderClass *klass)
 {
   GObjectClass *gobject_class;
-
-  /* determine the "tvp-action-files", "tvp-action-folder" and "tvp-action-provider" quarks */
-  //tvp_action_files_quark = g_quark_from_string ("tvp-action-files");
-  //tvp_action_provider_quark = g_quark_from_string ("tvp-action-provider");
 
   gobject_class = G_OBJECT_CLASS (klass);
   gobject_class->finalize = tvp_provider_finalize;
@@ -151,24 +135,6 @@ tvp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *ifac
 static void
 tvp_provider_init (TvpProvider *tvp_provider)
 {
-#if !GTK_CHECK_VERSION(2,9,0)
-  GtkIconSource *icon_source;
-  GtkIconSet *icon_set;
-
-  /* setup our icon factory */
-  tvp_provider->icon_factory = gtk_icon_factory_new ();
-  gtk_icon_factory_add_default (tvp_provider->icon_factory);
-
-  /* add the "subversion" stock icon */
-  icon_set = gtk_icon_set_new ();
-  icon_source = gtk_icon_source_new ();
-  gtk_icon_source_set_icon_name (icon_source, "subversion");
-  gtk_icon_set_add_source (icon_set, icon_source);
-  gtk_icon_factory_add (tvp_provider->icon_factory, "subversion", icon_set);
-  gtk_icon_source_free (icon_source);
-  gtk_icon_set_unref (icon_set);
-#endif /* !GTK_CHECK_VERSION(2,9,0) */
-
 #ifdef HAVE_SUBVERSION
   tvp_svn_backend_init();
 #endif
@@ -187,16 +153,9 @@ tvp_provider_finalize (GObject *object)
     g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
   }
 
-#if !GTK_CHECK_VERSION(2,9,0)
-  /* release our icon factory */
-  gtk_icon_factory_remove_default (tvp_provider->icon_factory);
-  g_object_unref (G_OBJECT (tvp_provider->icon_factory));
-#endif
-
 #ifdef HAVE_SUBVERSION
   tvp_svn_backend_free();
 #endif
-
 
   (*G_OBJECT_CLASS (tvp_provider_parent_class)->finalize) (object);
 }
@@ -430,12 +389,10 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
       if (tvp_is_working_copy (lp->data))
       {
         directory_is_wc = TRUE;
-        //g_object_set_data(lp->data, TVP_SVN_WORKING_COPY, GINT_TO_POINTER(TRUE));
       }
       else
       {
         directory_is_not_wc = TRUE;
-        //g_object_set_data(lp->data, TVP_SVN_WORKING_COPY, GINT_TO_POINTER(FALSE));
       }
     }
     else
@@ -609,30 +566,6 @@ tvp_provider_get_pages (ThunarxPropertyPageProvider *page_provider, GList *files
 static void
 tvp_child_watch (GPid pid, gint status, gpointer data)
 {
-  /*
-  gchar *watch_path = data;
-  ThunarVfsPath *path;
-
-  if (G_LIKELY (data))
-  {
-    GDK_THREADS_ENTER ();
-
-    path = thunar_vfs_path_new (watch_path, NULL);
-
-    if (G_LIKELY (path))
-    {
-      ThunarVfsMonitor *monitor = thunar_vfs_monitor_get_default ();
-      thunar_vfs_monitor_feed (monitor, THUNAR_VFS_MONITOR_EVENT_CHANGED, path);
-      g_object_unref (G_OBJECT (monitor));
-      thunar_vfs_path_unref (path);
-    }
-
-    GDK_THREADS_LEAVE ();
-
-    //this is done by destroy callback
-    //g_free (watch_path);
-  }
-  */
   g_spawn_close_pid (pid);
 }
 
