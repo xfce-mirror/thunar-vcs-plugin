@@ -47,8 +47,8 @@ enum {
 static void tgh_cell_renderer_graph_get_property (GObject*, guint, GValue*, GParamSpec*);
 static void tgh_cell_renderer_graph_set_property (GObject*, guint, const GValue*, GParamSpec*);
 
-static void tgh_cell_renderer_graph_render (GtkCellRenderer*, GdkDrawable*, GtkWidget*, GdkRectangle*, GdkRectangle*, GdkRectangle*, GtkCellRendererState);
 static void tgh_cell_renderer_graph_get_size (GtkCellRenderer*, GtkWidget*, const GdkRectangle*, gint*, gint*, gint*, gint*);
+static void tgh_cell_renderer_graph_render (GtkCellRenderer*, cairo_t *, GtkWidget*, const GdkRectangle*, const GdkRectangle*, GtkCellRendererState);
 
 G_DEFINE_TYPE (TghCellRendererGraph, tgh_cell_renderer_graph, GTK_TYPE_CELL_RENDERER)
 
@@ -228,13 +228,13 @@ draw_node (gint index1, TghGraphNode *node_list, const gchar *name, gint x1_offs
     double x1, x2;
     if (rtl)
     {
-      x1 = x1_offset - (spacing + spacing * index1 + index1) + 0.5;
-      x2 = x2_offset - (spacing + spacing * index2 + index2) + 0.5;
+      x1 = x1_offset - (spacing + spacing * index1 + index1);
+      x2 = x2_offset - (spacing + spacing * index2 + index2);
     }
     else
     {
-      x1 = x1_offset + spacing + spacing * index1 + index1 + 0.5;
-      x2 = x2_offset + spacing + spacing * index2 + index2 + 0.5;
+      x1 = x1_offset + spacing + spacing * index1 + index1;
+      x2 = x2_offset + spacing + spacing * index2 + index2;
     }
 
     if (bottom)
@@ -248,7 +248,7 @@ draw_node (gint index1, TghGraphNode *node_list, const gchar *name, gint x1_offs
 }
 
 static void
-tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkWidget *widget, GdkRectangle *background_area, GdkRectangle *cell_area, GdkRectangle *expose_area, GtkCellRendererState flags)
+tgh_cell_renderer_graph_render (GtkCellRenderer *cell, cairo_t *cr, GtkWidget *widget, const GdkRectangle *background_area, const GdkRectangle *cell_area, GtkCellRendererState flags)
 {
   TghCellRendererGraph *renderer = TGH_CELL_RENDERER_GRAPH (cell);
   gint x_offset;
@@ -258,8 +258,6 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
 
   if (renderer->graph_iter)
   {
-    cairo_t *cr;
-    GdkGC *gc;
     GList *graph_iter;
     TghGraphNode *node_iter;
     TghGraphNode *node_list;
@@ -276,6 +274,7 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
     GtkStateType state;
     gint xpad;
     gfloat xalign;
+    GdkRGBA fg;
 
     if (flags & GTK_CELL_RENDERER_INSENSITIVE)
       state = GTK_STATE_INSENSITIVE;
@@ -301,14 +300,9 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
       x2_offset = swap;
     }
 
-    cr = gdk_cairo_create (window);
     cairo_set_line_width (cr, 1);
-    gdk_cairo_set_source_color (cr, &widget->style->fg[state]);
-
-    gc = widget->style->fg_gc[state];
-
-    if (expose_area)
-      gdk_gc_set_clip_rectangle (gc, expose_area);
+    gtk_style_context_get_color (gtk_widget_get_style_context (widget), gtk_widget_get_state_flags (widget), &fg);
+    gdk_cairo_set_source_rgba (cr, &fg);
 
     node_list = renderer->graph_iter->data;
     graph_iter = g_list_next (renderer->graph_iter);
@@ -375,7 +369,11 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
             x = x_offset - (spacing + spacing * index1 + index1);
           else
             x = x_offset + spacing + spacing * index1 + index1;
-          gdk_draw_line (window, gc, x, y_offset + line_height, x, line_offset);
+
+          cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
+          cairo_move_to (cr, x, y_offset + line_height);
+          cairo_line_to (cr, x, line_offset);
+          cairo_stroke (cr);
 
           draw_node (index1, node_list, node_iter->name, x_offset, x2_offset, line_offset, line_height, spacing, TRUE, rtl, cr);
           index1++;
@@ -385,14 +383,12 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
             x = x_offset - (spacing + spacing * index1 + index1);
           else
             x = x_offset + spacing + spacing * index1 + index1;
-          gdk_draw_rectangle (window, widget->style->bg_gc[state], TRUE, 
-              x - (junction_size/2),
-              y_offset + line_height,
-              junction_size, junction_size);
-          gdk_draw_rectangle (window, gc, FALSE, 
-              x - (junction_size/2),
-              y_offset + line_height,
-              junction_size - 1, junction_size - 1);
+
+          cairo_rectangle (cr,
+                           x - (junction_size/2),
+                           y_offset + line_height,
+                           junction_size - 1, junction_size - 1);
+          cairo_stroke (cr);
 
           if (node_iter->junction)
           {
@@ -406,11 +402,7 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, GdkDrawable *window, GtkW
       }
     }
 
-    if (expose_area)
-      gdk_gc_set_clip_rectangle (gc, NULL);
-
     cairo_stroke (cr);
-    cairo_destroy (cr);
   }
 }
 
