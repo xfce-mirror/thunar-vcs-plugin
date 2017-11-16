@@ -43,14 +43,14 @@ static void tsh_cclosure_marshal_VOID__POINTER_STRING (GClosure     *closure,
 
 struct _TvpGitActionClass
 {
-    GtkActionClass __parent__;
+    ThunarxMenuItemClass __parent__;
 };
 
 
 
 struct _TvpGitAction
 {
-    GtkAction __parent__;
+    ThunarxMenuItem __parent__;
 
     struct {
         unsigned is_parent : 1;
@@ -83,7 +83,7 @@ static guint action_signal[SIGNAL_COUNT];
 
 
 
-static GtkWidget *tvp_git_action_create_menu_item (GtkAction *action);
+static GtkWidget *tvp_git_action_create_menu_item (ThunarxMenuItem *item);
 
 
 
@@ -95,13 +95,13 @@ static void tvp_git_action_set_property (GObject*, guint, const GValue*, GParamS
 static GQuark tvp_action_arg_quark = 0;
 
 
-static void tvp_action_exec (GtkAction *item, TvpGitAction *tvp_action);
+static void tvp_action_exec (ThunarxMenuItem *item, TvpGitAction *tvp_action);
 
-static void tvp_action_unimplemented (GtkAction *, const gchar *);
+static void tvp_action_unimplemented (ThunarxMenuItem *, const gchar *);
 
 
 
-THUNARX_DEFINE_TYPE (TvpGitAction, tvp_git_action, GTK_TYPE_ACTION)
+THUNARX_DEFINE_TYPE (TvpGitAction, tvp_git_action, THUNARX_TYPE_MENU_ITEM)
 
 
 
@@ -109,12 +109,9 @@ static void
 tvp_git_action_class_init (TvpGitActionClass *klass)
 {
     GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-    GtkActionClass *gtkaction_class = GTK_ACTION_CLASS (klass);
 
     gobject_class->finalize = tvp_git_action_finalize;
     gobject_class->set_property = tvp_git_action_set_property;
-
-    gtkaction_class->create_menu_item = tvp_git_action_create_menu_item;
 
     g_object_class_install_property (gobject_class, PROPERTY_IS_PARENT,
             g_param_spec_boolean ("is-parent", "", "", FALSE, G_PARAM_CONSTRUCT_ONLY | G_PARAM_WRITABLE));
@@ -143,7 +140,7 @@ tvp_git_action_init (TvpGitAction *self)
 
 
 
-GtkAction *
+ThunarxMenuItem *
 tvp_git_action_new (const gchar *name,
         const gchar *label,
         GList *files,
@@ -152,28 +149,25 @@ tvp_git_action_new (const gchar *name,
         gboolean is_direcotry,
         gboolean is_file)
 {
-  GtkAction *action;
+    ThunarxMenuItem *item;
 
     g_return_val_if_fail(name, NULL);
     g_return_val_if_fail(label, NULL);
 
-    action = g_object_new (TVP_TYPE_GIT_ACTION,
-            "hide-if-empty", FALSE,
+    item = g_object_new (TVP_TYPE_GIT_ACTION,
             "name", name,
             "label", label,
             "is-parent", is_parent,
             "is-directory", is_direcotry,
             "is-file", is_file,
-#if !GTK_CHECK_VERSION(2,9,0)
-            "stock-id", "git",
-#else
-            "icon-name", "git",
-#endif
+            "icon", "git",
             NULL);
-    TVP_GIT_ACTION (action)->files = thunarx_file_info_list_copy (files);
-    //  TVP_GIT_ACTION (action)->window = gtk_widget_ref (window);
-    TVP_GIT_ACTION (action)->window = window;
-    return action;
+    TVP_GIT_ACTION (item)->files = thunarx_file_info_list_copy (files);
+    TVP_GIT_ACTION (item)->window = window;
+
+    tvp_git_action_create_menu_item (item);
+
+    return item;
 }
 
 
@@ -183,7 +177,6 @@ tvp_git_action_finalize (GObject *object)
 {
     thunarx_file_info_list_free (TVP_GIT_ACTION (object)->files);
     TVP_GIT_ACTION (object)->files = NULL;
-    //  gtk_widget_unref (TVP_GIT_ACTION (object)->window);
     TVP_GIT_ACTION (object)->window = NULL;
 
     G_OBJECT_CLASS (tvp_git_action_parent_class)->finalize (object);
@@ -213,99 +206,91 @@ tvp_git_action_set_property (GObject *object, guint property_id, const GValue *v
 
 
 static void
-add_subaction(GtkAction *action, GtkMenuShell *menu, const gchar *name, const gchar *text, const gchar *tooltip, const gchar *stock, gchar *arg)
+add_subaction(ThunarxMenuItem *item, ThunarxMenu *menu, const gchar *name, const gchar *text, const gchar *tooltip, const gchar *icon, gchar *arg)
 {
-    GtkAction *subaction;
-    GtkWidget *subitem;
-
-    subaction = gtk_action_new (name, text, tooltip, stock);
-    g_object_set_qdata (G_OBJECT (subaction), tvp_action_arg_quark, arg);
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tvp_action_exec), action);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    gtk_menu_shell_append (menu, subitem);
-    gtk_widget_show(subitem);
+    ThunarxMenuItem *subitem;
+    subitem = thunarx_menu_item_new (name, text, tooltip, icon);
+    thunarx_menu_append_item (menu, subitem);
+    g_object_set_qdata (G_OBJECT (subitem), tvp_action_arg_quark, arg);
+    g_signal_connect_after (subitem, "activate", G_CALLBACK (tvp_action_exec), item);
+    g_object_unref (subitem);
 }
 
 
 static void
-add_subaction_u (GtkMenuShell *menu, const gchar *name, const gchar *text, const gchar *tooltip, const gchar *stock, gchar *arg)
+add_subaction_u (ThunarxMenu *menu, const gchar *name, const gchar *text, const gchar *tooltip, const gchar *icon, gchar *arg)
 {
-    GtkAction *subaction;
-    GtkWidget *subitem;
-
-    subaction = gtk_action_new (name, text, tooltip, stock);
-    g_signal_connect_after (subaction, "activate", G_CALLBACK (tvp_action_unimplemented), arg);
-
-    subitem = gtk_action_create_menu_item (subaction);
-    g_object_get (G_OBJECT (subaction), "tooltip", &tooltip, NULL);
-    gtk_widget_set_tooltip_text(subitem, tooltip);
-    //gtk_menu_shell_append (menu, subitem);
-    //gtk_widget_show(subitem);
-    gtk_widget_unref (subitem);
+    /* keep the current behavior, only show menu items if they are implemented  */
+    /*ThunarxMenuItem *subitem;
+    subitem = thunarx_menu_item_new (name, text, tooltip, icon);
+    thunarx_menu_append_item (menu, subitem);
+    g_object_set_qdata (G_OBJECT (subitem), tvp_action_arg_quark, arg);
+    g_signal_connect_after (subitem, "activate", G_CALLBACK (tvp_action_unimplemented), arg);
+    g_object_unref (subitem);*/
 }
 
 
 static GtkWidget *
-tvp_git_action_create_menu_item (GtkAction *action)
+tvp_git_action_create_menu_item (ThunarxMenuItem *item)
 {
-    GtkWidget *item;
-    GtkWidget *menu;
-    TvpGitAction *tvp_action = TVP_GIT_ACTION (action);
+    ThunarxMenu *menu;
+    TvpGitAction *tvp_action = TVP_GIT_ACTION (item);
 
-    item = GTK_ACTION_CLASS(tvp_git_action_parent_class)->create_menu_item (action);
+    menu = thunarx_menu_new ();
+    thunarx_menu_item_set_menu (item, menu);
 
-    menu = gtk_menu_new ();
-    gtk_menu_item_set_submenu (GTK_MENU_ITEM (item), menu);
-
-    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::add", Q_("Menu|Add"), _("Add"), GTK_STOCK_ADD, "--add");
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::bisect", Q_("Menu|Bisect"), _("Bisect"), NULL, _("Bisect"));
-  if (tvp_action->property.is_file)
-    add_subaction (action, GTK_MENU_SHELL (menu), "tvp::blame", Q_("Menu|Blame"), _("Blame"), GTK_STOCK_INDEX, "--blame");
-  if(tvp_action->property.is_parent)
-    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::branch", Q_("Menu|Branch"), _("Branch"), NULL, "--branch");
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), GTK_STOCK_CONNECT, _("Checkout"));
-  add_subaction (action, GTK_MENU_SHELL(menu), "tvp::clean", Q_("Menu|Clean"), _("Clean"), GTK_STOCK_CLEAR, "--clean");
-  if(tvp_action->property.is_parent)
-    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::clone", Q_("Menu|Clone"), _("Clone"), GTK_STOCK_COPY, "--clone");
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::commit", Q_("Menu|Commit"), _("Commit"), GTK_STOCK_APPLY, _("Commit"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::diff", Q_("Menu|Diff"), _("Diff"), GTK_STOCK_FIND_AND_REPLACE, _("Diff"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::fetch", Q_("Menu|Fetch"), _("Fetch"), NULL, _("Fetch"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::grep", Q_("Menu|Grep"), _("Grep"), NULL, _("Grep"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::init", Q_("Menu|Init"), _("Init"), NULL, _("Init"));
-  add_subaction (action, GTK_MENU_SHELL(menu), "tvp::log", Q_("Menu|Log"), _("Log"), GTK_STOCK_INDEX, "--log");
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::merge", Q_("Menu|Merge"), _("Merge"), NULL, _("Merge"));
-  if(!tvp_action->property.is_parent)
-    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::move", Q_("Menu|Move"), _("Move"), GTK_STOCK_DND_MULTIPLE, "--move");
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::pull", Q_("Menu|Pull"), _("Pull"), NULL, _("Pull"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::push", Q_("Menu|Push"), _("Push"), NULL, _("Push"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::rebase", Q_("Menu|Rebase"), _("Rebase"), NULL, _("Rebase"));
-    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::reset", Q_("Menu|Reset"), _("Reset"), GTK_STOCK_UNDO, "--reset");
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::remove", Q_("Menu|Remove"), _("Remove"), GTK_STOCK_DELETE, _("Remove"));
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::show", Q_("Menu|Show"), _("Show"), NULL, _("Show"));
-  if(tvp_action->property.is_parent)
-    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::stash", Q_("Menu|Stash"), _("Stash"), GTK_STOCK_SAVE, "--stash");
-  if(tvp_action->property.is_parent)
-    add_subaction (action, GTK_MENU_SHELL(menu), "tvp::status", Q_("Menu|Status"), _("Status"), GTK_STOCK_DIALOG_INFO, "--status");
-    add_subaction_u(GTK_MENU_SHELL(menu), "tvp::tag", Q_("Menu|Tag"), _("Tag"), NULL, _("Tag"));
+    add_subaction (item, menu, "tvp::git::add", Q_("Menu|Add"), _("Add"), "list-add", "--add");
+    add_subaction_u(menu, "tvp::bisect", Q_("Menu|Bisect"), _("Bisect"), NULL, _("Bisect"));
+    if (tvp_action->property.is_file)
+        add_subaction (item, menu, "tvp::blame", Q_("Menu|Blame"), _("Blame"), "gtk-index", "--blame");
+    if (tvp_action->property.is_parent)
+        add_subaction (item, menu, "tvp::branch", Q_("Menu|Branch"), _("Branch"), NULL, "--branch");
+    add_subaction_u(menu, "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
+    add_subaction (item, menu, "tvp::clean", Q_("Menu|Clean"), _("Clean"), "edit-clear", "--clean");
+    if (tvp_action->property.is_parent)
+        add_subaction (item, menu, "tvp::clone", Q_("Menu|Clone"), _("Clone"), "edit-copy", "--clone");
+    add_subaction_u(menu, "tvp::commit", Q_("Menu|Commit"), _("Commit"), "gtk-apply", _("Commit"));
+    add_subaction_u(menu, "tvp::diff", Q_("Menu|Diff"), _("Diff"), "edit-find-replace", _("Diff"));
+    add_subaction_u(menu, "tvp::fetch", Q_("Menu|Fetch"), _("Fetch"), NULL, _("Fetch"));
+    add_subaction_u(menu, "tvp::grep", Q_("Menu|Grep"), _("Grep"), NULL, _("Grep"));
+    add_subaction_u(menu, "tvp::init", Q_("Menu|Init"), _("Init"), NULL, _("Init"));
+    add_subaction (item, menu, "tvp::git::log", Q_("Menu|Log"), _("Log"), "gtk-index", "--log");
+    add_subaction_u(menu, "tvp::merge", Q_("Menu|Merge"), _("Merge"), NULL, _("Merge"));
+    if (!tvp_action->property.is_parent)
+        add_subaction (item, menu, "tvp::move", Q_("Menu|Move"), _("Move"), "gtk-dnd-multiple", "--move");
+    add_subaction_u(menu, "tvp::pull", Q_("Menu|Pull"), _("Pull"), NULL, _("Pull"));
+    add_subaction_u(menu, "tvp::push", Q_("Menu|Push"), _("Push"), NULL, _("Push"));
+    add_subaction_u(menu, "tvp::rebase", Q_("Menu|Rebase"), _("Rebase"), NULL, _("Rebase"));
+    add_subaction (item, menu, "tvp::reset", Q_("Menu|Reset"), _("Reset"), "edit-undo", "--reset");
+    add_subaction_u(menu, "tvp::remove", Q_("Menu|Remove"), _("Remove"), "edit-delete", _("Remove"));
+    add_subaction_u(menu, "tvp::show", Q_("Menu|Show"), _("Show"), NULL, _("Show"));
+    if (tvp_action->property.is_parent)
+        add_subaction (item, menu, "tvp::stash", Q_("Menu|Stash"), _("Stash"), "document-save", "--stash");
+    if (tvp_action->property.is_parent)
+        add_subaction (item, menu, "tvp::git::status", Q_("Menu|Status"), _("Status"), "dialog-information", "--status");
+    add_subaction_u(menu, "tvp::tag", Q_("Menu|Tag"), _("Tag"), NULL, _("Tag"));
 
     return item;
 }
 
 
 
-static void tvp_action_unimplemented (GtkAction *item, const gchar *tvp_action)
+static void tvp_action_unimplemented (ThunarxMenuItem *item, const gchar *action)
 {
-    GtkWidget *dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, _("Action %s is unimplemented"), tvp_action);
+    GtkWidget *dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, _("Action %s is unimplemented"), action);
     gtk_dialog_run (GTK_DIALOG (dialog));
     gtk_widget_destroy(dialog);
 }
 
 
+static void
+tvp_setup_display_cb (gpointer data)
+{
+    g_setenv ("DISPLAY", (char *) data, TRUE);
+}
 
-static void tvp_action_exec (GtkAction *item, TvpGitAction *tvp_action)
+
+static void tvp_action_exec (ThunarxMenuItem *item, TvpGitAction *tvp_action)
 {
     guint size, i;
     gchar **argv;
@@ -316,6 +301,7 @@ static void tvp_action_exec (GtkAction *item, TvpGitAction *tvp_action)
     gchar *watch_path = NULL;
     gint pid;
     GError *error = NULL;
+    char *display = NULL;
     GdkScreen *screen = gtk_window_get_screen (GTK_WINDOW (tvp_action->window));
 
     iter = tvp_action->files;
@@ -381,8 +367,12 @@ static void tvp_action_exec (GtkAction *item, TvpGitAction *tvp_action)
 
         iter = g_list_next (iter);
     }
+
     pid = 0;
-    if (!gdk_spawn_on_screen (screen, NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, NULL, NULL, &pid, &error))
+    if (screen != NULL)
+        display = gdk_screen_make_display_name (screen);
+
+    if (!g_spawn_async (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, tvp_setup_display_cb, display, &pid, &error))
     {
         GtkWidget *dialog = gtk_message_dialog_new (GTK_WINDOW (tvp_action->window), GTK_DIALOG_DESTROY_WITH_PARENT|GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, "Could not spawn \'" TVP_GIT_HELPER "\'");
         gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
@@ -394,6 +384,8 @@ static void tvp_action_exec (GtkAction *item, TvpGitAction *tvp_action)
     {
         g_signal_emit(tvp_action, action_signal[SIGNAL_NEW_PROCESS], 0, &pid, watch_path);
     }
+
+    g_free (display);
     g_free (watch_path);
     g_strfreev (argv);
 }

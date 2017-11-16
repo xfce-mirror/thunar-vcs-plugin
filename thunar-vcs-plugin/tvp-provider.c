@@ -55,21 +55,21 @@
 
 
 
-static void   tvp_provider_menu_provider_init   (ThunarxMenuProviderIface *iface);
+static void   tvp_provider_menu_provider_init          (ThunarxMenuProviderIface *iface);
 static void   tvp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
-static void   tvp_provider_finalize             (GObject                  *object);
-static GList *tvp_provider_get_file_actions     (ThunarxMenuProvider      *menu_provider,
-                                                 GtkWidget                *window,
-                                                 GList                    *files);
-static GList *tvp_provider_get_folder_actions   (ThunarxMenuProvider      *menu_provider,
-                                                 GtkWidget                *window,
-                                                 ThunarxFileInfo          *folder);
-static GList *tvp_provider_get_pages            (ThunarxPropertyPageProvider *menu_provider,
-                                                 GList                    *files);
-static void   tvp_new_process                   (GtkAction                *action,
-                                                 const GPid               *pid,
-                                                 const gchar              *path,
-                                                 TvpProvider              *tvp_provider);
+static void   tvp_provider_finalize                    (GObject                  *object);
+static GList *tvp_provider_get_file_menu_items         (ThunarxMenuProvider      *menu_provider,
+                                                        GtkWidget                *window,
+                                                        GList                    *files);
+static GList *tvp_provider_get_folder_menu_items       (ThunarxMenuProvider      *menu_provider,
+                                                        GtkWidget                *window,
+                                                        ThunarxFileInfo          *folder);
+static GList *tvp_provider_get_pages                   (ThunarxPropertyPageProvider *menu_provider,
+                                                        GList                    *files);
+static void   tvp_new_process                          (ThunarxMenuItem          *item,
+                                                        const GPid               *pid,
+                                                        const gchar              *path,
+                                                        TvpProvider              *tvp_provider);
 
 
 
@@ -118,8 +118,8 @@ tvp_provider_class_init (TvpProviderClass *klass)
 static void
 tvp_provider_menu_provider_init (ThunarxMenuProviderIface *iface)
 {
-  iface->get_file_actions = tvp_provider_get_file_actions;
-  iface->get_folder_actions = tvp_provider_get_folder_actions;
+  iface->get_file_menu_items = tvp_provider_get_file_menu_items;
+  iface->get_folder_menu_items = tvp_provider_get_folder_menu_items;
 }
 
 
@@ -340,12 +340,12 @@ tvp_compare_path (TvpSvnFileStatus *file_status, ThunarxFileInfo *file_info)
 
 
 static GList*
-tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
-                               GtkWidget           *window,
-                               GList               *files)
+tvp_provider_get_file_menu_items (ThunarxMenuProvider *menu_provider,
+                                  GtkWidget           *window,
+                                  GList               *files)
 {
-  GList              *actions = NULL;
-  GtkAction          *action;
+  GList              *items = NULL;
+  ThunarxMenuItem    *item;
   GList              *lp;
   gint               n_files = 0;
   gchar              *scheme;
@@ -417,10 +417,10 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
     }
   }
 
-  /* append the svn submenu action */
-  action = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
-  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
-  actions = g_list_append (actions, action);
+  /* append the svn submenu item */
+  item = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, FALSE, parent_wc, directory_is_wc, directory_is_not_wc, file_is_vc, file_is_not_vc);
+  g_signal_connect(item, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
+  items = g_list_append (items, item);
 #endif
 
 #ifdef HAVE_GIT
@@ -448,24 +448,24 @@ tvp_provider_get_file_actions (ThunarxMenuProvider *menu_provider,
     }
   }
 
-  /* append the git submenu action */
-  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE, directory, file);
-  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
-  actions = g_list_append (actions, action);
+  /* append the git submenu item */
+  item = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, FALSE, directory, file);
+  g_signal_connect(item, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
+  items = g_list_append (items, item);
 #endif
 
-  return actions;
+  return items;
 }
 
 
 
 static GList*
-tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
-                                 GtkWidget           *window,
-                                 ThunarxFileInfo     *folder)
+tvp_provider_get_folder_menu_items (ThunarxMenuProvider *menu_provider,
+                                    GtkWidget           *window,
+                                    ThunarxFileInfo     *folder)
 {
-  GtkAction          *action;
-  GList              *actions = NULL;
+  ThunarxMenuItem    *item;
+  GList              *items = NULL;
   gchar              *scheme;
   GList              *files;
 
@@ -484,22 +484,22 @@ tvp_provider_get_folder_actions (ThunarxMenuProvider *menu_provider,
 
 #ifdef HAVE_SUBVERSION
   /* Lets see if we are dealing with a working copy */
-  action = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, TRUE, tvp_is_working_copy (folder), FALSE, FALSE, FALSE, FALSE);
-  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
-  /* append the svn submenu action */
-  actions = g_list_append (actions, action);
+  item = tvp_svn_action_new ("Tvp::svn", _("SVN"), files, window, TRUE, tvp_is_working_copy (folder), FALSE, FALSE, FALSE, FALSE);
+  g_signal_connect(item, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
+  /* append the svn submenu item */
+  items = g_list_append (items, item);
 #endif
 
 #ifdef HAVE_GIT
-  action = tvp_git_action_new ("Tvp::git", _("GIT"), files, window, TRUE, TRUE, FALSE);
-  g_signal_connect(action, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
-  /* append the git submenu action */
-  actions = g_list_append (actions, action);
+  item = tvp_git_action_new ("Tvp::git-folder", _("GIT"), files, window, TRUE, TRUE, FALSE);
+  g_signal_connect(item, "new-process", G_CALLBACK(tvp_new_process), menu_provider);
+  /* append the git submenu item */
+  items = g_list_append (items, item);
 #endif
 
   g_list_free (files);
 
-  return actions;
+  return items;
 }
 
 
@@ -583,7 +583,7 @@ tvp_child_watch_free (TvpChildWatch *watch)
 
 
 static void
-tvp_new_process (GtkAction *action, const GPid *pid, const gchar *path, TvpProvider *tvp_provider)
+tvp_new_process (ThunarxMenuItem *item, const GPid *pid, const gchar *path, TvpProvider *tvp_provider)
 {
   TvpChildWatch *watch;
   if (tvp_provider->child_watch)

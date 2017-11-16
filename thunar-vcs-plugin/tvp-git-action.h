@@ -37,7 +37,7 @@ typedef struct _TvpGitAction      TvpGitAction;
 GType      tvp_git_action_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
 void       tvp_git_action_register_type (ThunarxProviderPlugin *) G_GNUC_INTERNAL;
 
-GtkAction *tvp_git_action_new           (const gchar*,
+ThunarxMenuItem *tvp_git_action_new     (const gchar*,
                                          const gchar*,
                                          GList *,
                                          GtkWidget *,
