@@ -150,21 +150,21 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 
   box = gtk_vbox_new (FALSE, 0);
 
-  dialog->combo_box = combo_box = gtk_combo_box_entry_new_text ();
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_EOL_STYLE);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_EXECUTABLE);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_EXTERNALS);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_IGNORE);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_KEYWORDS);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_MERGEINFO);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_MIME_TYPE);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_NEEDS_LOCK);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (combo_box), SVN_PROP_SPECIAL);
+  dialog->combo_box = combo_box = gtk_combo_box_text_new ();
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_EOL_STYLE);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_EXECUTABLE);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_EXTERNALS);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_IGNORE);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_KEYWORDS);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_MERGEINFO);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_MIME_TYPE);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_NEEDS_LOCK);
+  gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_SPECIAL);
 
   completion = gtk_entry_completion_new();
   model = gtk_combo_box_get_model (GTK_COMBO_BOX (combo_box));
   gtk_entry_completion_set_model(completion, model);
-  gtk_entry_completion_set_text_column(completion, gtk_combo_box_entry_get_text_column (GTK_COMBO_BOX_ENTRY (combo_box)));
+  gtk_entry_completion_set_text_column(completion, gtk_combo_box_get_entry_text_column (GTK_COMBO_BOX (combo_box)));
   gtk_entry_completion_set_inline_completion(completion, TRUE);
   gtk_entry_set_completion(GTK_ENTRY (gtk_bin_get_child (GTK_BIN (combo_box))), completion);
   g_object_unref(completion);
@@ -183,20 +183,6 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
 
 	dialog->depth = depth = gtk_combo_box_new_with_model (model);
-
-    /*
-	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
-	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-	                    0, _("Unknown"),
-	                    1, svn_depth_unknown,
-	                    -1);
-
-	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
-	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
-	                    0, _("Exclude"),
-	                    1, svn_depth_exclude,
-	                    -1);
-    */
 
 	gtk_list_store_append (GTK_LIST_STORE (model), &iter);
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
@@ -354,7 +340,7 @@ tsh_properties_dialog_add (TshPropertiesDialog *dialog, const char *name, const 
 
   g_free (line);
 
-  column = gtk_combo_box_entry_get_text_column (GTK_COMBO_BOX_ENTRY (dialog->combo_box));
+  column = gtk_combo_box_get_entry_text_column (GTK_COMBO_BOX (dialog->combo_box));
   model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->combo_box));
   if (gtk_tree_model_get_iter_first (model, &iter))
   {
@@ -375,7 +361,7 @@ tsh_properties_dialog_add (TshPropertiesDialog *dialog, const char *name, const 
 
     if (!found)
     {
-      gtk_combo_box_append_text (GTK_COMBO_BOX (dialog->combo_box), name);
+      gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (dialog->combo_box), NULL, name);
     }
   }
 }
@@ -394,7 +380,7 @@ tsh_properties_dialog_get_key (TshPropertiesDialog *dialog)
 {
   g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), NULL);
 
-  return gtk_combo_box_get_active_text (GTK_COMBO_BOX (dialog->combo_box));
+  return gtk_combo_box_text_get_active_text (GTK_COMBO_BOX_TEXT (dialog->combo_box));
 }
 
 gchar *
@@ -473,7 +459,7 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
     gint column;
     gtk_tree_model_get (model, &iter, COLUMN_NAME, &name, COLUMN_FULL_VALUE, &value, -1);
 
-    column = gtk_combo_box_entry_get_text_column (GTK_COMBO_BOX_ENTRY (dialog->combo_box));
+    column = gtk_combo_box_get_entry_text_column (GTK_COMBO_BOX (dialog->combo_box));
     model = gtk_combo_box_get_model (GTK_COMBO_BOX (dialog->combo_box));
     if (gtk_tree_model_get_iter_first (model, &iter))
     {
@@ -496,7 +482,7 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
 
       if (!found)
       {
-        gtk_combo_box_append_text (GTK_COMBO_BOX (dialog->combo_box), name);
+        gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (dialog->combo_box), NULL, name);
         g_assert (gtk_tree_model_iter_next (model, &iter));
 
         gtk_combo_box_set_active_iter (GTK_COMBO_BOX (dialog->combo_box), &iter);
