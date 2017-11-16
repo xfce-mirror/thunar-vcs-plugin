@@ -201,7 +201,7 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
       {
 	svn_pool_destroy (subpool);
 
-	gtk_widget_unref(GTK_WIDGET(dialog));
+	g_object_unref(GTK_WIDGET(dialog));
 
 	svn_error_clear(err);
 	return NULL;  //FIXME: needed ??
@@ -221,7 +221,7 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
     {
       svn_pool_destroy (subpool);
 
-      gtk_widget_unref(GTK_WIDGET(dialog));
+      g_object_unref(GTK_WIDGET(dialog));
 
       svn_error_clear(err);
       return NULL;
