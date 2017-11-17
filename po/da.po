@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-30 20:03+0000\n"
+"PO-Revision-Date: 2017-11-17 14:56+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -345,11 +345,11 @@ msgstr "Lås"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Menu|Edit Properties"
-msgstr "Redigér egenskaber"
+msgstr "Rediger egenskaber"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Edit Properties"
-msgstr "Redigér egenskaber"
+msgstr "Rediger egenskaber"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:408
 msgid "Menu|Relocate"
@@ -860,7 +860,7 @@ msgstr "Kør låsophandling"
 
 #: ../tvp-svn-helper/main.c:242
 msgid "Execute update action"
-msgstr "Udfør opdatérhandling"
+msgstr "Udfør opdaterhandling"
 
 #: ../tvp-svn-helper/main.c:267
 msgid "Changelist Related Options:"
@@ -935,7 +935,7 @@ msgstr "Låsop-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:343
 msgid "Update Related Options:"
-msgstr "Opdatér-relaterede tilvalg:"
+msgstr "Opdater-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:386
 msgid "Not enough arguments provided"
