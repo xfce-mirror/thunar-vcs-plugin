@@ -240,35 +240,35 @@ tvp_git_action_create_menu_item (ThunarxMenuItem *item)
     thunarx_menu_item_set_menu (item, menu);
 
     add_subaction (item, menu, "tvp::git::add", Q_("Menu|Add"), _("Add"), "list-add", "--add");
-    add_subaction_u(menu, "tvp::bisect", Q_("Menu|Bisect"), _("Bisect"), NULL, _("Bisect"));
+    add_subaction_u(menu, "tvp::git::bisect", Q_("Menu|Bisect"), _("Bisect"), NULL, _("Bisect"));
     if (tvp_action->property.is_file)
-        add_subaction (item, menu, "tvp::blame", Q_("Menu|Blame"), _("Blame"), "gtk-index", "--blame");
+        add_subaction (item, menu, "tvp::git::blame", Q_("Menu|Blame"), _("Blame"), "gtk-index", "--blame");
     if (tvp_action->property.is_parent)
-        add_subaction (item, menu, "tvp::branch", Q_("Menu|Branch"), _("Branch"), NULL, "--branch");
-    add_subaction_u(menu, "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
-    add_subaction (item, menu, "tvp::clean", Q_("Menu|Clean"), _("Clean"), "edit-clear", "--clean");
+        add_subaction (item, menu, "tvp::git::branch", Q_("Menu|Branch"), _("Branch"), NULL, "--branch");
+    add_subaction_u(menu, "tvp::git::checkout", Q_("Menu|Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
+    add_subaction (item, menu, "tvp::git::clean", Q_("Menu|Clean"), _("Clean"), "edit-clear", "--clean");
     if (tvp_action->property.is_parent)
-        add_subaction (item, menu, "tvp::clone", Q_("Menu|Clone"), _("Clone"), "edit-copy", "--clone");
-    add_subaction_u(menu, "tvp::commit", Q_("Menu|Commit"), _("Commit"), "gtk-apply", _("Commit"));
-    add_subaction_u(menu, "tvp::diff", Q_("Menu|Diff"), _("Diff"), "edit-find-replace", _("Diff"));
-    add_subaction_u(menu, "tvp::fetch", Q_("Menu|Fetch"), _("Fetch"), NULL, _("Fetch"));
-    add_subaction_u(menu, "tvp::grep", Q_("Menu|Grep"), _("Grep"), NULL, _("Grep"));
-    add_subaction_u(menu, "tvp::init", Q_("Menu|Init"), _("Init"), NULL, _("Init"));
+        add_subaction (item, menu, "tvp::git::clone", Q_("Menu|Clone"), _("Clone"), "edit-copy", "--clone");
+    add_subaction_u(menu, "tvp::git::commit", Q_("Menu|Commit"), _("Commit"), "gtk-apply", _("Commit"));
+    add_subaction_u(menu, "tvp::git::diff", Q_("Menu|Diff"), _("Diff"), "edit-find-replace", _("Diff"));
+    add_subaction_u(menu, "tvp::git::fetch", Q_("Menu|Fetch"), _("Fetch"), NULL, _("Fetch"));
+    add_subaction_u(menu, "tvp::git::grep", Q_("Menu|Grep"), _("Grep"), NULL, _("Grep"));
+    add_subaction_u(menu, "tvp::git::init", Q_("Menu|Init"), _("Init"), NULL, _("Init"));
     add_subaction (item, menu, "tvp::git::log", Q_("Menu|Log"), _("Log"), "gtk-index", "--log");
-    add_subaction_u(menu, "tvp::merge", Q_("Menu|Merge"), _("Merge"), NULL, _("Merge"));
+    add_subaction_u(menu, "tvp::git::merge", Q_("Menu|Merge"), _("Merge"), NULL, _("Merge"));
     if (!tvp_action->property.is_parent)
-        add_subaction (item, menu, "tvp::move", Q_("Menu|Move"), _("Move"), "gtk-dnd-multiple", "--move");
-    add_subaction_u(menu, "tvp::pull", Q_("Menu|Pull"), _("Pull"), NULL, _("Pull"));
-    add_subaction_u(menu, "tvp::push", Q_("Menu|Push"), _("Push"), NULL, _("Push"));
-    add_subaction_u(menu, "tvp::rebase", Q_("Menu|Rebase"), _("Rebase"), NULL, _("Rebase"));
-    add_subaction (item, menu, "tvp::reset", Q_("Menu|Reset"), _("Reset"), "edit-undo", "--reset");
-    add_subaction_u(menu, "tvp::remove", Q_("Menu|Remove"), _("Remove"), "edit-delete", _("Remove"));
-    add_subaction_u(menu, "tvp::show", Q_("Menu|Show"), _("Show"), NULL, _("Show"));
+        add_subaction (item, menu, "tvp::git::move", Q_("Menu|Move"), _("Move"), "gtk-dnd-multiple", "--move");
+    add_subaction_u(menu, "tvp::git::pull", Q_("Menu|Pull"), _("Pull"), NULL, _("Pull"));
+    add_subaction_u(menu, "tvp::git::push", Q_("Menu|Push"), _("Push"), NULL, _("Push"));
+    add_subaction_u(menu, "tvp::git::rebase", Q_("Menu|Rebase"), _("Rebase"), NULL, _("Rebase"));
+    add_subaction (item, menu, "tvp::git::reset", Q_("Menu|Reset"), _("Reset"), "edit-undo", "--reset");
+    add_subaction_u(menu, "tvp::git::remove", Q_("Menu|Remove"), _("Remove"), "edit-delete", _("Remove"));
+    add_subaction_u(menu, "tvp::git::show", Q_("Menu|Show"), _("Show"), NULL, _("Show"));
     if (tvp_action->property.is_parent)
-        add_subaction (item, menu, "tvp::stash", Q_("Menu|Stash"), _("Stash"), "document-save", "--stash");
+        add_subaction (item, menu, "tvp::git::stash", Q_("Menu|Stash"), _("Stash"), "document-save", "--stash");
     if (tvp_action->property.is_parent)
         add_subaction (item, menu, "tvp::git::status", Q_("Menu|Status"), _("Status"), "dialog-information", "--status");
-    add_subaction_u(menu, "tvp::tag", Q_("Menu|Tag"), _("Tag"), NULL, _("Tag"));
+    add_subaction_u(menu, "tvp::git::tag", Q_("Menu|Tag"), _("Tag"), NULL, _("Tag"));
 
     return item;
 }
