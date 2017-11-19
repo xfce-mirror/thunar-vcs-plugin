@@ -9,6 +9,7 @@ config.status
 config.sub
 configure
 configure.ac
+INSTALL
 intltool-extract.in
 intltool-merge.in
 intltool-update.in
