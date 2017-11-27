@@ -4,15 +4,17 @@
 # 
 # Translators:
 # Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2015
+# Aputsiak Niels Janussen (Skjalden) <aj@isit.gl>, 2015
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
+# scootergrisen, 2017
 # scootergrisen, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-11-17 14:56+0000\n"
+"PO-Revision-Date: 2017-11-27 21:28+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -408,12 +410,12 @@ msgstr "Lås op"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444
 msgid "Menu|Update"
-msgstr "Opdatér"
+msgstr "Opdater"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
 #: ../tvp-svn-helper/tsh-update.c:120
 msgid "Update"
-msgstr "Opdatér"
+msgstr "Opdater"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -632,15 +634,15 @@ msgstr "Fjern kataloger."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:68
 msgid "Exclude ignored files"
-msgstr "Udelad ignorede filer"
+msgstr "Udelad ignorerede filer"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:76
 msgid "Include ignored files"
-msgstr "Inkludér ignorede filer"
+msgstr "Inkludér ignorerede filer"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:82
 msgid "Only ignored files"
-msgstr "Kun ignorede filer"
+msgstr "Kun ignorerede filer"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:92
 msgid "Force clean."
@@ -848,7 +850,7 @@ msgstr "Kør adresseskifthandling"
 
 #: ../tvp-svn-helper/main.c:218
 msgid "Execute revert action"
-msgstr "Kør tilbagefør-handling"
+msgstr "Kør tilbageførhandling"
 
 #: ../tvp-svn-helper/main.c:230
 msgid "Execute switch action"
@@ -1219,7 +1221,7 @@ msgstr "Forbudt af server"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr "Udeladt konfliktede"
+msgstr "Udeladt i konflikt"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
@@ -1467,7 +1469,7 @@ msgstr "Vis versionsløse filer"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:231
 msgid "Show Ignored Files"
-msgstr "Vis ignorede filer"
+msgstr "Vis ignorerede filer"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:235
 msgid "Hide Externals"
