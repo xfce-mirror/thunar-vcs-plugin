@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-12-30 11:30+0000\n"
+"PO-Revision-Date: 2017-12-31 05:02+0000\n"
 "Last-Translator: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/xfce/thunar-plugins/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -742,11 +742,11 @@ msgstr "Notifica"
 
 #: ../tvp-git-helper/tgh-reset.c:60
 msgid "Reset finished"
-msgstr "La reinicialització ha finalitzat"
+msgstr "El restabliment ha finalitzat"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset ..."
-msgstr "S'està reinicialitzant..."
+msgstr "S'està restablint..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
