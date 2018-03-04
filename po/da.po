@@ -8,13 +8,13 @@
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
 # scootergrisen, 2017
-# scootergrisen, 2017
+# scootergrisen, 2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-11-27 21:28+0000\n"
+"PO-Revision-Date: 2018-03-04 17:14+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -1303,7 +1303,7 @@ msgstr "Diff fejlede"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:206
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
-msgstr "Aktuelle"
+msgstr "Egen"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
