@@ -159,7 +159,7 @@ gboolean tgh_move (gchar **files, GPid *pid)
 
   gtk_widget_destroy (dialog);
 
-  dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Move ..."));
+  dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Move..."));
   g_signal_connect (G_OBJECT (dialog), "response", G_CALLBACK (tgh_cancel), NULL);
   tgh_dialog_start (GTK_DIALOG (dialog), TRUE);
 

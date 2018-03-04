@@ -123,7 +123,7 @@ gboolean tgh_clone (gchar **files, GPid *pid)
   path = tgh_transfer_dialog_get_directory(TGH_TRANSFER_DIALOG(dialog));
   gtk_widget_destroy (dialog);
 
-  dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cloning ..."));
+  dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cloning..."));
   g_signal_connect (dialog, "response", tgh_cancel, NULL);
   tgh_dialog_start (GTK_DIALOG(dialog), TRUE);
 

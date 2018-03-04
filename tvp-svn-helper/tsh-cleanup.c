@@ -94,7 +94,7 @@ GThread *tsh_cleanup (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   GtkWidget *dialog;
   gchar *path;
 
-  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cleaning up ..."));
+  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CANCEL, _("Cleaning up..."));
 	g_signal_connect (G_OBJECT (dialog), "response", G_CALLBACK (tsh_cancel), NULL);
   tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
 
