@@ -4,15 +4,15 @@
 # 
 # Translators:
 # Georgi Georgiev <georgiev_1994@abv.bg>, 2014-2015
-# Kiril Kirilov <cybercop_montana@abv.bg>, 2014-2015
+# Kiril Kirilov <cybercop_montana@abv.bg>, 2014-2015,2018
 # Любомир Василев, 2013
 # Ventsislav Venkov <gazarrr@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:03+0000\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-05 13:45+0000\n"
 "Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/xfce/thunar-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -651,8 +651,8 @@ msgid "Clone finished"
 msgstr "Клонирането е завършено"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
-msgstr "Клониране ..."
+msgid "Cloning..."
+msgstr "Клониране..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
 #: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
@@ -727,8 +727,8 @@ msgid "Move To"
 msgstr "Премести в"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
-msgstr "Премести ..."
+msgid "Move..."
+msgstr "Преместване..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -745,8 +745,8 @@ msgid "Reset finished"
 msgstr "Нулирането завърши"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
-msgstr "Нулиране ..."
+msgid "Reset..."
+msgstr "Нулиране..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -954,8 +954,8 @@ msgid "Cleanup finished"
 msgstr "Изчистването приключи"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
-msgstr "Изчистване ..."
+msgid "Cleaning up..."
+msgstr "Почистване..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
@@ -1430,8 +1430,8 @@ msgid "Relocate finished"
 msgstr "Смяната на местоположението завърши"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
-msgstr "Смяна на местоположението ..."
+msgid "Relocating..."
+msgstr "Прелокализиране..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
