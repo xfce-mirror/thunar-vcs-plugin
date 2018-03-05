@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015,2017
+# Moo, 2015,2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-05 09:45+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -649,7 +649,7 @@ msgid "Clone finished"
 msgstr "Klonavimas baigtas"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
+msgid "Cloning..."
 msgstr "Klonuojama..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
@@ -725,7 +725,7 @@ msgid "Move To"
 msgstr "Perkelti į"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
+msgid "Move..."
 msgstr "Perkelti..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
@@ -743,7 +743,7 @@ msgid "Reset finished"
 msgstr "Atkurta"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
+msgid "Reset..."
 msgstr "Atstatyti..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
@@ -952,7 +952,7 @@ msgid "Cleanup finished"
 msgstr "Išvalymas baigtas"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
+msgid "Cleaning up..."
 msgstr "Išvaloma..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
@@ -1428,7 +1428,7 @@ msgid "Relocate finished"
 msgstr "Perkelta"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
+msgid "Relocating..."
 msgstr "Perkeliama..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
