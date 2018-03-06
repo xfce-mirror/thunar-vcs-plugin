@@ -7,12 +7,13 @@
 # Georg Eckert <eckert.georg@gmx.de>, 2015
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2012
 # Tobias Bannert <tobannert@gmail.com>, 2014-2015
+# Vinzenz Vietzke <vinz@vinzv.de>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-12-16 19:05+0000\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-06 10:08+0000\n"
 "Last-Translator: Vinzenz Vietzke <vinz@vinzv.de>\n"
 "Language-Team: German (http://www.transifex.com/xfce/thunar-plugins/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -651,8 +652,8 @@ msgid "Clone finished"
 msgstr "Klonen abgeschlossen"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
-msgstr "Klonen läuft …"
+msgid "Cloning..."
+msgstr "Klone..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
 #: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
@@ -727,8 +728,8 @@ msgid "Move To"
 msgstr "Verschieben nach"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
-msgstr "Verschieben …"
+msgid "Move..."
+msgstr "Verschiebe..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -745,8 +746,8 @@ msgid "Reset finished"
 msgstr "Zurücksetzen abgeschlossen"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
-msgstr "Zurücksetzen …"
+msgid "Reset..."
+msgstr "Setze zurück..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -954,8 +955,8 @@ msgid "Cleanup finished"
 msgstr "Aufräumen vollständig"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
-msgstr "Aufräumen läuft …"
+msgid "Cleaning up..."
+msgstr "Räume auf..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
@@ -1430,8 +1431,8 @@ msgid "Relocate finished"
 msgstr "Umplatzieren vollendet"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
-msgstr "Umplatzieren läuft …"
+msgid "Relocating..."
+msgstr "Ziehe um..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
