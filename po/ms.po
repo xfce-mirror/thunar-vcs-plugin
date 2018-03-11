@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# abuyop <abuyop@gmail.com>, 2014-2015
+# abuyop <abuyop@gmail.com>, 2014-2015,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 21:11+0000\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-11 07:11+0000\n"
 "Last-Translator: abuyop <abuyop@gmail.com>\n"
 "Language-Team: Malay (http://www.transifex.com/xfce/thunar-plugins/language/ms/)\n"
 "MIME-Version: 1.0\n"
@@ -648,8 +648,8 @@ msgid "Clone finished"
 msgstr "Klon selesai"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
-msgstr "Mengklon ..."
+msgid "Cloning..."
+msgstr "Mengklon..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
 #: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
@@ -724,8 +724,8 @@ msgid "Move To"
 msgstr "Alih Ke"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
-msgstr "Alih ..."
+msgid "Move..."
+msgstr "Alih..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -742,8 +742,8 @@ msgid "Reset finished"
 msgstr "Tetap semula selesai"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
-msgstr "Tetap semula ..."
+msgid "Reset..."
+msgstr "Tetap Semula..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -951,8 +951,8 @@ msgid "Cleanup finished"
 msgstr "Bersih selesai"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
-msgstr "Membersihkan ..."
+msgid "Cleaning up..."
+msgstr "Membersihkan..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
@@ -1427,8 +1427,8 @@ msgid "Relocate finished"
 msgstr "Lokasi semula selesai"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
-msgstr "Melokasi semula..."
+msgid "Relocating..."
+msgstr "Melokasi Semula..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
