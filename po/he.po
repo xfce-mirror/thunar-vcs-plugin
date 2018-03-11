@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Elishai Eliyahu <e1907@mm.st>, 2016
+# Elishai Eliyahu <e1907@mm.st>, 2016,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-11 15:31+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/thunar-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -648,8 +648,8 @@ msgid "Clone finished"
 msgstr "שכפול הסתיים"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
-msgstr "משכפל ..."
+msgid "Cloning..."
+msgstr "שיבוט..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
 #: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
@@ -724,8 +724,8 @@ msgid "Move To"
 msgstr "העבר אל"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
-msgstr "העבר ..."
+msgid "Move..."
+msgstr "תזוזה..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -742,8 +742,8 @@ msgid "Reset finished"
 msgstr "אתחול הסתיים"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
-msgstr "אתחול ..."
+msgid "Reset..."
+msgstr "אתחול..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -951,8 +951,8 @@ msgid "Cleanup finished"
 msgstr "ניקוי הסתיים"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
-msgstr "מנקה ..."
+msgid "Cleaning up..."
+msgstr "ניקוי..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
@@ -1427,8 +1427,8 @@ msgid "Relocate finished"
 msgstr "הסתיים מעבר"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
-msgstr "מעביר ..."
+msgid "Relocating..."
+msgstr "שינוי מקום..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
