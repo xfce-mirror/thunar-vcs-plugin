@@ -6,14 +6,15 @@
 # Chipong Luo <chipong.luo@yahoo.com>, 2011-2012
 # Hunt Xu <huntxu@live.cn>, 2009
 # Xiaobo Zhou <zhouxiaobo.500@gmail.com>, 2013
+# 玉堂白鹤 <yjwork@qq.com>, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:04+0000\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-13 01:28+0000\n"
+"Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/thunar-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -651,7 +652,7 @@ msgid "Clone finished"
 msgstr "克隆动作已完成"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
+msgid "Cloning..."
 msgstr "正在克隆..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
@@ -727,7 +728,7 @@ msgid "Move To"
 msgstr "移至"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
+msgid "Move..."
 msgstr "移动..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
@@ -745,7 +746,7 @@ msgid "Reset finished"
 msgstr "重置动作已完成"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
+msgid "Reset..."
 msgstr "重置..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
@@ -954,7 +955,7 @@ msgid "Cleanup finished"
 msgstr "清理动作已完成"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
+msgid "Cleaning up..."
 msgstr "正在清理..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
@@ -1430,7 +1431,7 @@ msgid "Relocate finished"
 msgstr "重定位动作已完成"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
+msgid "Relocating..."
 msgstr "正在重定位..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
