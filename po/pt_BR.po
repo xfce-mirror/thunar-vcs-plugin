@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Andre Miranda <andre42m@gmail.com>, 2018
 # Andre Miranda <andre42m@gmail.com>, 2015
 # Fábio Nogueira <deb-user-ba@ubuntu.com>, 2007
 # Michael Martins <michaelfm21@gmail.com>, 2017
@@ -11,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-23 19:02+0000\n"
-"Last-Translator: Michael Martins <michaelfm21@gmail.com>\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-19 22:53+0000\n"
+"Last-Translator: Andre Miranda <andre42m@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/thunar-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -651,7 +652,7 @@ msgid "Clone finished"
 msgstr "Clonagem concluída"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
+msgid "Cloning..."
 msgstr "Clonando..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
@@ -727,7 +728,7 @@ msgid "Move To"
 msgstr "Mover para"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
+msgid "Move..."
 msgstr "Mover..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
@@ -745,7 +746,7 @@ msgid "Reset finished"
 msgstr "Redefinição concluída"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
+msgid "Reset..."
 msgstr "Redefinir..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
@@ -954,7 +955,7 @@ msgid "Cleanup finished"
 msgstr "Limpeza concluída"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
+msgid "Cleaning up..."
 msgstr "Limpando..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
@@ -1430,7 +1431,7 @@ msgid "Relocate finished"
 msgstr "Realocação concluída"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
+msgid "Relocating..."
 msgstr "Realocando..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
