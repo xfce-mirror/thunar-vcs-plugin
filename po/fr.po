@@ -9,13 +9,14 @@
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # Mike Massonnet <mmassonnet@gmail.com>, 2007
 # patrick.2 <patrick.2@laposte.net>, 2009
+# patrick.2 <patrick.2@laposte.net>, 2009
 # Urien Desterres <urien.desterres@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-05 00:30+0100\n"
-"PO-Revision-Date: 2018-03-05 10:38+0000\n"
+"PO-Revision-Date: 2018-03-20 12:18+0000\n"
 "Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
 "Language-Team: French (http://www.transifex.com/xfce/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -348,7 +349,7 @@ msgstr "Verrouiller"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Menu|Edit Properties"
-msgstr "Menu|Editer les propriétés"
+msgstr "Menu|Éditer les propriétés"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:403
 msgid "Edit Properties"
@@ -1117,7 +1118,7 @@ msgstr "Merge terminé"
 
 #: ../tvp-svn-helper/tsh-common.c:570
 msgid "Tree conflict"
-msgstr "Conflict dans l’arbre"
+msgstr "Conflit dans l’arbre"
 
 #: ../tvp-svn-helper/tsh-common.c:571
 msgid "External failed"
@@ -1222,7 +1223,7 @@ msgstr "Interdit par le serveur"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Skipped conflicted"
-msgstr "Conflict dans l’arbre"
+msgstr "Conflit dans l’arbre"
 
 #: ../tvp-svn-helper/tsh-common.c:692
 msgid "Inapplicable"
