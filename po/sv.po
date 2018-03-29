@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-29 13:27+0000\n"
 "Last-Translator: Påvel Nicklasson <pavel2@frimix.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/xfce/thunar-plugins/language/sv/)\n"
 "MIME-Version: 1.0\n"
@@ -650,7 +650,7 @@ msgid "Clone finished"
 msgstr "Klon klar"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
+msgid "Cloning..."
 msgstr "Klonar..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
@@ -726,8 +726,8 @@ msgid "Move To"
 msgstr "Flytta till"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
-msgstr "Flytta ..."
+msgid "Move..."
+msgstr "Flyttar..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -744,8 +744,8 @@ msgid "Reset finished"
 msgstr "Äterställ klart"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
-msgstr "Återställ ..."
+msgid "Reset..."
+msgstr "Återställer..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -953,8 +953,8 @@ msgid "Cleanup finished"
 msgstr "Upprensning färdig"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
-msgstr "Rensar upp..."
+msgid "Cleaning up..."
+msgstr "Städar upp..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
@@ -1429,8 +1429,8 @@ msgid "Relocate finished"
 msgstr "Flytta färdigt"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
-msgstr "Flyttar..."
+msgid "Relocating..."
+msgstr "Förflyttar..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
