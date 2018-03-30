@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2018
 # Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2017-09-19 18:04+0000\n"
+"POT-Creation-Date: 2018-03-05 00:30+0100\n"
+"PO-Revision-Date: 2018-03-30 08:31+0000\n"
 "Last-Translator: Pablo Lezaeta Reyes [pˈaβ̞lo lˌe̞θaˈeta rˈejɛ] <prflr88@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -648,7 +649,7 @@ msgid "Clone finished"
 msgstr "Clonación finalizada"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
+msgid "Cloning..."
 msgstr "Clonando..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
@@ -724,7 +725,7 @@ msgid "Move To"
 msgstr "Mover a"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
+msgid "Move..."
 msgstr "Mover..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
@@ -742,8 +743,8 @@ msgid "Reset finished"
 msgstr "Restablecimiento finalizado"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
-msgstr "Restablecer..."
+msgid "Reset..."
+msgstr "Reiniciar..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:173
 msgid "Description"
@@ -951,8 +952,8 @@ msgid "Cleanup finished"
 msgstr "Eliminación de bloqueos finalizada"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
-msgstr "Eliminando bloqueos..."
+msgid "Cleaning up..."
+msgstr "Limpiando..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
@@ -1427,7 +1428,7 @@ msgid "Relocate finished"
 msgstr "Finalizó la reubicación"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
+msgid "Relocating..."
 msgstr "Reubicando..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
