@@ -121,8 +121,8 @@ tgh_file_selection_dialog_init (TghFileSelectionDialog *dialog)
   gtk_window_set_title (GTK_WINDOW (dialog), _("Status"));
 
   gtk_dialog_add_buttons (GTK_DIALOG (dialog),
-                          GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-                          GTK_STOCK_OK, GTK_RESPONSE_OK,
+                          _("_Cancel"), GTK_RESPONSE_CANCEL,
+                          _("OK"), GTK_RESPONSE_OK,
                           NULL);
   gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1);
   gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);

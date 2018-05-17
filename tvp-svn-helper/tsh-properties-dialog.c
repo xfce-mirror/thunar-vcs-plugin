@@ -119,13 +119,13 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
 	dialog->tree_view = tree_view = gtk_tree_view_new ();
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Name"),
 	                                             renderer, "text",
 	                                             COLUMN_NAME, NULL);
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Value"),
@@ -138,7 +138,7 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 
 	g_object_unref (model);
 
-  g_signal_connect (G_OBJECT (tree_view), "cursor-changed", G_CALLBACK (selection_changed), dialog); 
+  g_signal_connect (G_OBJECT (tree_view), "cursor-changed", G_CALLBACK (selection_changed), dialog);
 
 	gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
   gtk_paned_pack1 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
@@ -237,22 +237,22 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), vpane, TRUE, TRUE, 0);
   gtk_widget_show (vpane);
 
-	dialog->set = button = gtk_button_new_from_stock(GTK_STOCK_ADD);
+	dialog->set = button = gtk_button_new_with_mnemonic (_("_Add"));
 	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (set_clicked), dialog);
 	gtk_widget_show (button);
 
-	dialog->delete = button = gtk_button_new_from_stock(GTK_STOCK_REMOVE);
+	dialog->delete = button = gtk_button_new_with_mnemonic (_("_Remove"));
 	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (delete_clicked), dialog);
 	gtk_widget_show (button);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Properties"));
 
-	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
 	gtk_widget_hide (button);
 
-	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+	dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
 	gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
@@ -314,7 +314,7 @@ tsh_make_homogeneous (GtkWidget *first, ...)
   va_end (ap);
 }
 
-void       
+void
 tsh_properties_dialog_add (TshPropertiesDialog *dialog, const char *name, const char *value)
 {
 	GtkTreeModel *model;
@@ -394,7 +394,7 @@ tsh_properties_dialog_get_selected_key (TshPropertiesDialog *dialog)
   g_return_val_if_fail (TSH_IS_PROPERTIES_DIALOG (dialog), NULL);
 
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (dialog->tree_view));
-  
+
   if (gtk_tree_selection_get_selected (selection, &model, &iter))
   {
     gtk_tree_model_get (model, &iter, COLUMN_NAME, &name, -1);
@@ -453,7 +453,7 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
 	TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (user_data);
 
   selection = gtk_tree_view_get_selection (tree_view);
-  
+
   if (gtk_tree_selection_get_selected (selection, &model, &iter))
   {
     gint column;
@@ -473,7 +473,7 @@ selection_changed (GtkTreeView *tree_view, gpointer user_data)
         g_free (text);
         if (cmp)
           continue;
-        
+
         gtk_combo_box_set_active_iter (GTK_COMBO_BOX (dialog->combo_box), &iter);
 
         found = TRUE;
@@ -500,10 +500,10 @@ static void
 cancel_clicked (GtkButton *button, gpointer user_data)
 {
 	TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (user_data);
-	
+
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->close);
-	
+
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
 
@@ -512,10 +512,10 @@ set_clicked (GtkButton *button, gpointer user_data)
 {
 	GtkTreeModel *model;
 	TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (user_data);
-	
+
 	gtk_widget_hide (dialog->close);
 	gtk_widget_show (dialog->cancel);
-  
+
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
 
@@ -527,13 +527,12 @@ delete_clicked (GtkButton *button, gpointer user_data)
 {
 	GtkTreeModel *model;
 	TshPropertiesDialog *dialog = TSH_PROPERTIES_DIALOG (user_data);
-	
+
 	gtk_widget_hide (dialog->close);
 	gtk_widget_show (dialog->cancel);
-  
+
 	model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
 
   g_signal_emit (dialog, signals[SIGNAL_DELETE], 0);
 }
-

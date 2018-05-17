@@ -117,25 +117,25 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	                                             -1, _("Path"),
 	                                             renderer, "text",
 	                                             COLUMN_PATH, NULL);
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("State"),
 	                                             renderer, "text",
 	                                             COLUMN_TEXT_STAT, NULL);
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Prop state"),
 	                                             renderer, "text",
 	                                             COLUMN_PROP_STAT, NULL);
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Repo state"),
 	                                             renderer, "text",
 	                                             COLUMN_REPO_TEXT_STAT, NULL);
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Repo prop state"),
@@ -247,17 +247,17 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 
   gtk_button_box_set_layout(GTK_BUTTON_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
 
-	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+	dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
 	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
 
-	dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
+	dialog->refresh = button = gtk_button_new_with_mnemonic (_("_Refresh"));
 	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
 	gtk_widget_hide (button);
 
-	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
 	gtk_widget_show (button);
 
 	gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
@@ -283,7 +283,7 @@ tsh_status_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
 	return GTK_WIDGET(dialog);
 }
 
-void       
+void
 tsh_status_dialog_add (TshStatusDialog *dialog, const char *file, const char *text, const char *prop, const char *repo_text, const char *repo_prop)
 {
 	GtkTreeModel *model;
@@ -385,7 +385,7 @@ cancel_clicked (GtkButton *button, gpointer user_data)
 
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->refresh);
-	
+
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
 
@@ -428,4 +428,3 @@ move_info (GtkTreeStore *store, GtkTreeIter *dest, GtkTreeIter *src)
   g_free (repo_text);
   g_free (repo_prop);
 }
-

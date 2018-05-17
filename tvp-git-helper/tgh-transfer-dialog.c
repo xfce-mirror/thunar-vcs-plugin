@@ -74,12 +74,11 @@ tgh_transfer_dialog_init (TghTransferDialog *dialog)
     dialog->repository = gtk_entry_new();
     dialog->filechooser = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
             GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
-            GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-            GTK_STOCK_OK, GTK_RESPONSE_OK,
+            _("_Cancel"), GTK_RESPONSE_CANCEL,
+            _("OK"), GTK_RESPONSE_OK,
             NULL);
 
-    image = gtk_image_new_from_stock (GTK_STOCK_OPEN,
-            GTK_ICON_SIZE_MENU);
+    image = gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
     button = gtk_button_new();
     gtk_button_set_image(GTK_BUTTON(button), image);
     g_signal_connect(button, "clicked", G_CALLBACK(browse_callback), dialog);
@@ -122,8 +121,8 @@ tgh_transfer_dialog_init (TghTransferDialog *dialog)
     gtk_window_set_title (GTK_WINDOW (dialog), _("Transfer"));
 
     gtk_dialog_add_buttons (GTK_DIALOG (dialog),
-            GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
-            GTK_STOCK_OK, GTK_RESPONSE_OK,
+            _("_Cancel"), GTK_RESPONSE_CANCEL,
+            _("OK"), GTK_RESPONSE_OK,
             NULL);
     gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1);
     gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
@@ -221,4 +220,3 @@ browse_callback(GtkButton *button, TghTransferDialog *dialog)
     }
     gtk_widget_hide(dialog->filechooser);
 }
-

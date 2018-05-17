@@ -179,7 +179,7 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
 
   g_object_unref (model);
 
-  g_signal_connect (G_OBJECT (tree_view), "cursor-changed", G_CALLBACK (selection_changed), dialog); 
+  g_signal_connect (G_OBJECT (tree_view), "cursor-changed", G_CALLBACK (selection_changed), dialog);
 
   gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
   gtk_paned_pack1 (GTK_PANED(vpane), scroll_window, TRUE, FALSE);
@@ -218,37 +218,37 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), vpane, TRUE, TRUE, 0);
   gtk_widget_show (vpane);
 
-  dialog->save = button = gtk_button_new_from_stock(GTK_STOCK_SAVE);
+  dialog->save = button = gtk_button_new_with_mnemonic (_("_Save"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (save_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->apply = button = gtk_button_new_from_stock(GTK_STOCK_APPLY);
+  dialog->apply = button = gtk_button_new_with_mnemonic (_("_Apply"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (apply_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->pop = button = gtk_button_new_from_stock(GTK_STOCK_OK);
+  dialog->pop = button = gtk_button_new_with_mnemonic (_("_OK"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (pop_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->drop = button = gtk_button_new_from_stock(GTK_STOCK_DELETE);
+  dialog->drop = button = gtk_button_new_with_mnemonic (_("_Delete"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (drop_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->clear = button = gtk_button_new_from_stock(GTK_STOCK_CLEAR);
+  dialog->clear = button = gtk_button_new_with_mnemonic (_("Clear"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (clear_clicked), dialog);
   gtk_widget_show (button);
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Stash"));
 
-  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
   gtk_widget_hide (button);
 
-  dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
   gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
@@ -278,7 +278,7 @@ tgh_stash_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flag
   return GTK_WIDGET(dialog);
 }
 
-void       
+void
 tgh_stash_dialog_add (TghStashDialog *dialog, const gchar *name, const gchar *branch, const gchar *description)
 {
   GtkTreeModel *model;
@@ -296,7 +296,7 @@ tgh_stash_dialog_add (TghStashDialog *dialog, const gchar *name, const gchar *br
       -1);
 }
 
-void       
+void
 tgh_stash_dialog_add_file (TghStashDialog *dialog, guint insertions, guint deletions, const gchar *file)
 {
   GtkTreeModel *model;
@@ -377,19 +377,19 @@ save_clicked (GtkButton *button, gpointer user_data)
   gchar *name;
   gint result;
 
-  name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, GTK_STOCK_SAVE, GTK_RESPONSE_ACCEPT, NULL);
+  name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, _("_Cancel"), GTK_RESPONSE_CANCEL, _("_Save"), GTK_RESPONSE_ACCEPT, NULL);
   gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT, GTK_RESPONSE_CANCEL, -1);
   gtk_window_set_resizable (GTK_WINDOW (name_dialog), FALSE);
   gtk_window_set_skip_taskbar_hint (GTK_WINDOW (name_dialog), TRUE);
 
   label = gtk_label_new (_("Stash description:"));
-  image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_QUESTION, GTK_ICON_SIZE_DIALOG);
+  image = gtk_image_new_from_icon_name ("dialog-question", GTK_ICON_SIZE_DIALOG);
   gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-  
+
   gtk_misc_set_alignment   (GTK_MISC  (label), 0.0, 0.0);
 
   desc_entry = gtk_entry_new ();
-  
+
   hbox = gtk_hbox_new (FALSE, 12);
   vbox = gtk_vbox_new (FALSE, 12);
 
@@ -562,4 +562,3 @@ clear_clicked (GtkButton *button, gpointer user_data)
 
   g_signal_emit (dialog, signals[SIGNAL_CLEAR], 0);
 }
-

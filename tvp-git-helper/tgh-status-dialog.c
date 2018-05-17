@@ -91,7 +91,7 @@ tgh_status_dialog_init (TghStatusDialog *dialog)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
   dialog->tree_view = tree_view = gtk_tree_view_new ();
-  
+
   renderer = gtk_cell_renderer_toggle_new ();
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
                                                -1, _("Commit"),
@@ -103,7 +103,7 @@ tgh_status_dialog_init (TghStatusDialog *dialog)
                                                -1, _("Path"),
                                                renderer, "text",
                                                COLUMN_PATH, NULL);
-  
+
   renderer = gtk_cell_renderer_text_new ();
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
                                                -1, _("State"),
@@ -125,17 +125,17 @@ tgh_status_dialog_init (TghStatusDialog *dialog)
 
   gtk_button_box_set_layout(GTK_BUTTON_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
 
-  dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
+  dialog->refresh = button = gtk_button_new_with_mnemonic (_("_Refresh"));
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
 
-  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
   gtk_widget_show (button);
 
   gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
@@ -161,7 +161,7 @@ tgh_status_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
   return GTK_WIDGET(dialog);
 }
 
-void       
+void
 tgh_status_dialog_add (TghStatusDialog *dialog, const gchar *file, const gchar *state, gboolean commit)
 {
   GtkTreeModel *model;
@@ -195,7 +195,7 @@ cancel_clicked (GtkButton *button, gpointer user_data)
 
   gtk_widget_hide (dialog->cancel);
   gtk_widget_show (dialog->refresh);
-  
+
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
 
@@ -213,4 +213,3 @@ refresh_clicked (GtkButton *button, gpointer user_data)
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
 }
-

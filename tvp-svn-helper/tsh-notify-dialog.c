@@ -81,13 +81,13 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
 	dialog->tree_view = tree_view = gtk_tree_view_new ();
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Action"),
 	                                             renderer, "text",
 	                                             COLUMN_ACTION, NULL);
-	
+
 	renderer = gtk_cell_renderer_text_new ();
 	gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
 	                                             -1, _("Path"),
@@ -113,10 +113,10 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Notification"));
 
-	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+	dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
 	gtk_widget_hide (button);
 
-	dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+	dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
 	gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
@@ -144,7 +144,7 @@ tsh_notify_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
 	return GTK_WIDGET(dialog);
 }
 
-void       
+void
 tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *file, const char *mime_type)
 {
 	GtkTreeModel *model;
@@ -159,7 +159,7 @@ tsh_notify_dialog_add (TshNotifyDialog *dialog, const char *action, const char *
 	gtk_list_store_set (GTK_LIST_STORE (model), &iter,
 	                    COLUMN_ACTION, action,
 	                    COLUMN_PATH, file,
-	                    COLUMN_MIME, mime_type, 
+	                    COLUMN_MIME, mime_type,
 	                    -1);
 
 	path = gtk_tree_model_get_path (model, &iter);
@@ -181,10 +181,9 @@ static void
 cancel_clicked (GtkButton *button, gpointer user_data)
 {
 	TshNotifyDialog *dialog = TSH_NOTIFY_DIALOG (user_data);
-	
+
 	gtk_widget_hide (dialog->cancel);
 	gtk_widget_show (dialog->close);
-	
+
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
-

@@ -128,10 +128,10 @@ tgh_blame_dialog_init (TghBlameDialog *dialog)
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Blame"));
 
-  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
   gtk_widget_hide (button);
 
-  dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  dialog->cancel = button = gtk_button_new_with_mnemonic(_("_Cancel"));
   gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
@@ -159,7 +159,7 @@ tgh_blame_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flag
   return GTK_WIDGET(dialog);
 }
 
-void       
+void
 tgh_blame_dialog_add (TghBlameDialog *dialog, gint64 line_no, const gchar *revision, const gchar *author, const gchar *date, const gchar *line)
 {
   GtkTreeModel *model;
@@ -198,4 +198,3 @@ cancel_clicked (GtkButton *button, gpointer user_data)
 
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
-

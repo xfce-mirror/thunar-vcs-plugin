@@ -136,15 +136,15 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Diff"));
 
-  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
   gtk_widget_hide (button);
 
-  dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
   gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
+  dialog->refresh = button = gtk_button_new_with_mnemonic (_("_Refresh"));
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
@@ -240,7 +240,7 @@ tsh_diff_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags flags
   return GTK_WIDGET(dialog);
 }
 
-void       
+void
 tsh_diff_dialog_add (TshDiffDialog *dialog, const char *line, gint len)
 {
   GtkTextBuffer *text_buffer;
@@ -282,11 +282,11 @@ static void
 cancel_clicked (GtkButton *button, gpointer user_data)
 {
   TshDiffDialog *dialog = TSH_DIFF_DIALOG (user_data);
-  
+
   gtk_widget_hide (dialog->cancel);
   gtk_widget_show (dialog->close);
   gtk_widget_show (dialog->refresh);
-  
+
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
 

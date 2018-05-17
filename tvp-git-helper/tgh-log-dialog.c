@@ -173,7 +173,7 @@ tgh_log_dialog_init (TghLogDialog *dialog)
 
   g_object_unref (model);
 
-  g_signal_connect (G_OBJECT (tree_view), "cursor-changed", G_CALLBACK (selection_changed), dialog); 
+  g_signal_connect (G_OBJECT (tree_view), "cursor-changed", G_CALLBACK (selection_changed), dialog);
 
   gtk_container_add (GTK_CONTAINER (scroll_window), tree_view);
   gtk_paned_pack1 (GTK_PANED(pane), scroll_window, TRUE, FALSE);
@@ -244,17 +244,17 @@ tgh_log_dialog_init (TghLogDialog *dialog)
 
   gtk_button_box_set_layout(GTK_BUTTON_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
 
-  dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->refresh = button = gtk_button_new_from_stock(GTK_STOCK_REFRESH);
+  dialog->refresh = button = gtk_button_new_with_mnemonic (_("_Refresh"));
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
 
-  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
   gtk_widget_show (button);
 
   gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
@@ -333,7 +333,7 @@ add_n_check_node (TghGraphNode *node_iter, TghGraphNode **node_list, const gchar
   return node_iter;
 }
 
-void     
+void
 tgh_log_dialog_add (TghLogDialog *dialog, GSList *files, const gchar *revision, gchar **parents, const gchar *author, const gchar *author_date, const gchar *commit, const gchar *commit_date, const gchar *message)
 {
   GtkTreeModel *model;
@@ -512,4 +512,3 @@ refresh_clicked (GtkButton *button, gpointer user_data)
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->file_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
 }
-

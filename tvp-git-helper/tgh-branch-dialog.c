@@ -102,7 +102,7 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
   dialog->tree_view = tree_view = gtk_tree_view_new ();
-  
+
   renderer = gtk_cell_renderer_toggle_new ();
   gtk_cell_renderer_toggle_set_radio (GTK_CELL_RENDERER_TOGGLE(renderer), TRUE);
   gtk_tree_view_insert_column_with_attributes (GTK_TREE_VIEW (tree_view),
@@ -127,22 +127,22 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
-  dialog->checkout = button = gtk_button_new_from_stock(GTK_STOCK_JUMP_TO);
+  dialog->checkout = button = gtk_button_new_with_mnemonic (_("Jump to"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (checkout_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->create = button = gtk_button_new_from_stock(GTK_STOCK_NEW);
+  dialog->create = button = gtk_button_new_with_mnemonic (_("_New"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (create_clicked), dialog);
   gtk_widget_show (button);
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Branch"));
 
-  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE);
+  dialog->close = button = gtk_dialog_add_button (GTK_DIALOG (dialog), _("_Close"), GTK_RESPONSE_CLOSE);
   gtk_widget_hide (button);
 
-  dialog->cancel = button = gtk_button_new_from_stock(GTK_STOCK_CANCEL);
+  dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
@@ -172,7 +172,7 @@ tgh_branch_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags fla
   return GTK_WIDGET(dialog);
 }
 
-void       
+void
 tgh_branch_dialog_add (TghBranchDialog *dialog, const gchar *branch, gboolean active)
 {
   GtkTreeModel *model;
@@ -205,7 +205,7 @@ cancel_clicked (GtkButton *button, gpointer user_data)
 
   gtk_widget_hide (dialog->cancel);
   gtk_widget_show (dialog->close);
-  
+
   g_signal_emit (dialog, signals[SIGNAL_CANCEL], 0);
 }
 
@@ -248,19 +248,19 @@ create_clicked (GtkButton *button, gpointer user_data)
 
   TghBranchDialog *dialog = TGH_BRANCH_DIALOG (user_data);
 
-  name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL, GTK_STOCK_NEW, GTK_RESPONSE_ACCEPT, NULL);
+  name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, _("_Cancel"), GTK_RESPONSE_CANCEL, _("_New"), GTK_RESPONSE_ACCEPT, NULL);
   gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT, GTK_RESPONSE_CANCEL, -1);
   gtk_window_set_resizable (GTK_WINDOW (name_dialog), FALSE);
   gtk_window_set_skip_taskbar_hint (GTK_WINDOW (name_dialog), TRUE);
 
   label = gtk_label_new (_("Branch name:"));
-  image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_QUESTION, GTK_ICON_SIZE_DIALOG);
+  image = gtk_image_new_from_icon_name ("dialog-question", GTK_ICON_SIZE_DIALOG);
   gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
-  
+
   gtk_misc_set_alignment   (GTK_MISC  (label), 0.0, 0.0);
 
   name_entry = gtk_entry_new ();
-  
+
   hbox = gtk_hbox_new (FALSE, 12);
   vbox = gtk_vbox_new (FALSE, 12);
 
@@ -309,4 +309,3 @@ create_clicked (GtkButton *button, gpointer user_data)
 
   g_free (name);
 }
-
