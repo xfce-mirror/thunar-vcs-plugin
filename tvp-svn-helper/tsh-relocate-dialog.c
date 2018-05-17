@@ -92,7 +92,7 @@ tsh_relocate_dialog_init (TshRelocateDialog *dialog)
 	                  0, 0);
 
 #ifdef USE_FILE_ENTRY_REPLACEMENT
-  box = gtk_hbox_new(FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	dialog->from = gtk_entry_new();
   dialog->filechooser_from = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
                                                     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
@@ -146,7 +146,7 @@ tsh_relocate_dialog_init (TshRelocateDialog *dialog)
 	                  0, 0);
 
 #ifdef USE_FILE_ENTRY_REPLACEMENT
-  box = gtk_hbox_new(FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	dialog->to = gtk_entry_new();
   dialog->filechooser_to = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
                                                     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,

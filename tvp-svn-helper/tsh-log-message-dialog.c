@@ -66,7 +66,7 @@ tsh_log_message_dialog_init (TshLogMessageDialog *dialog)
 	GtkTreeModel *model;
   gint n_columns;
 
-  dialog->vpane = vpane = gtk_vpaned_new ();
+  dialog->vpane = vpane = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
 
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);

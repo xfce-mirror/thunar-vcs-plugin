@@ -113,7 +113,7 @@ tgh_log_dialog_init (TghLogDialog *dialog)
   GtkCellRenderer *renderer;
   GtkTreeModel *model;
 
-  pane = gtk_vpaned_new ();
+  pane = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
 
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -180,9 +180,9 @@ tgh_log_dialog_init (TghLogDialog *dialog)
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
-  vpane = gtk_vpaned_new ();
+  vpane = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
 
-  box = gtk_vbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
   dialog->revision_label = label = gtk_label_new (_("Revision"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);

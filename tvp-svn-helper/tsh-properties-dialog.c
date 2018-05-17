@@ -113,7 +113,7 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
     GtkTreeIter iter;
   GtkEntryCompletion *completion;
 
-  vpane = gtk_vpaned_new ();
+  vpane = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
 
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -148,7 +148,7 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
 
-  box = gtk_vbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
   dialog->combo_box = combo_box = gtk_combo_box_text_new ();
   gtk_combo_box_text_append (GTK_COMBO_BOX_TEXT (combo_box), NULL, SVN_PROP_EOL_STYLE);

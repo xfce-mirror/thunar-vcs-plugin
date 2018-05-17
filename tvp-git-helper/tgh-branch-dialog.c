@@ -261,8 +261,8 @@ create_clicked (GtkButton *button, gpointer user_data)
 
   name_entry = gtk_entry_new ();
 
-  hbox = gtk_hbox_new (FALSE, 12);
-  vbox = gtk_vbox_new (FALSE, 12);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
 
   gtk_box_pack_start (GTK_BOX (vbox), label,
                       FALSE, FALSE, 0);

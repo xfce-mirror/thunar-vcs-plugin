@@ -148,7 +148,7 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   GtkCellRenderer *renderer;
   GtkTreeModel *model;
 
-  vpane = gtk_vpaned_new ();
+  vpane = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
 
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -390,8 +390,8 @@ save_clicked (GtkButton *button, gpointer user_data)
 
   desc_entry = gtk_entry_new ();
 
-  hbox = gtk_hbox_new (FALSE, 12);
-  vbox = gtk_vbox_new (FALSE, 12);
+  hbox = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 12);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 12);
 
   gtk_box_pack_start (GTK_BOX (vbox), label,
                       FALSE, FALSE, 0);

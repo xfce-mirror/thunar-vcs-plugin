@@ -86,7 +86,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	                  0, 0);
 
 #ifdef USE_FILE_ENTRY_REPLACEMENT
-  box = gtk_hbox_new(FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
 	dialog->repository = gtk_entry_new();
   dialog->filechooser = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
                                                     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,

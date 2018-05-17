@@ -116,7 +116,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	GtkTreeModel *model;
   gint n_columns;
 
-  pane = gtk_vpaned_new ();
+  pane = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
 
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -163,7 +163,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
   scroll_window = gtk_scrolled_window_new (NULL, NULL);
   gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
 
-  vpane = gtk_vpaned_new ();
+  vpane = gtk_paned_new (GTK_ORIENTATION_VERTICAL);
 
   dialog->text_view = text_view = gtk_text_view_new ();
   gtk_text_view_set_wrap_mode (GTK_TEXT_VIEW (text_view), GTK_WRAP_WORD_CHAR);
