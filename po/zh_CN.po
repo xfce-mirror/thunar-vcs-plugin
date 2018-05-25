@@ -5,15 +5,15 @@
 # Translators:
 # Chipong Luo <chipong.luo@yahoo.com>, 2011-2012
 # Hunt Xu <huntxu@live.cn>, 2009
-# Xiaobo Zhou <zhouxiaobo.500@gmail.com>, 2013
+# xiaobo zhou <zhouxiaobo.500@gmail.com>, 2013
 # 玉堂白鹤 <yjwork@qq.com>, 2018
 # Mingcong Bai <jeffbai@aosc.xyz>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-05 00:30+0100\n"
-"PO-Revision-Date: 2018-03-13 01:28+0000\n"
+"POT-Creation-Date: 2018-05-24 06:30+0200\n"
+"PO-Revision-Date: 2018-05-25 00:22+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/thunar-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -22,225 +22,222 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
+#: ../thunar-vcs-plugin/tvp-svn-action.c:280
 msgid "Menu|Add"
 msgstr "添加"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
+#: ../thunar-vcs-plugin/tvp-svn-action.c:280 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
 #: ../tvp-svn-helper/tsh-add.c:132
 msgid "Add"
 msgstr "添加"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
 msgid "Menu|Bisect"
 msgstr "分叉"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
 msgid "Bisect"
 msgstr "分叉"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
+#: ../thunar-vcs-plugin/tvp-svn-action.c:285
 msgid "Menu|Blame"
 msgstr "归咎"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
+#: ../thunar-vcs-plugin/tvp-svn-action.c:285 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
 #: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "归咎"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:268
+#: ../thunar-vcs-plugin/tvp-git-action.c:247
 msgid "Menu|Branch"
 msgstr "分支"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
-#: ../tvp-git-helper/tgh-branch-dialog.c:144
-#: ../tvp-git-helper/tgh-stash-dialog.c:167
+#: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:140
+#: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "分支"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Menu|Checkout"
 msgstr "检验"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:271
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:271
 #: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
 msgid "Checkout"
 msgstr "检验"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Menu|Clean"
 msgstr "清除"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
 msgid "Clean"
 msgstr "清除"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:272
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 msgid "Menu|Clone"
 msgstr "克隆"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:251 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "克隆"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:273
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:252
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Menu|Commit"
 msgstr "提交"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:273
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:252
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
 #: ../tvp-git-helper/tgh-log-dialog.c:153
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "提交"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:274
-#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Diff"
 msgstr "比对"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:274
-#: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:291
 #: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
 msgid "Diff"
 msgstr "比对"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:275
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Menu|Fetch"
 msgstr "取来"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:275
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Fetch"
 msgstr "取来"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:276
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
 msgid "Menu|Grep"
 msgstr "查找"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:276
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
 msgid "Grep"
 msgstr "查找"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:277
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
 msgid "Menu|Init"
 msgstr "开始"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:277
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
 msgid "Init"
 msgstr "开始"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:278
-#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Log"
 msgstr "日志"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:278
-#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-log-dialog.c:225
 msgid "Log"
 msgstr "日志"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:279
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
 msgid "Menu|Merge"
 msgstr "合并"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:279
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
 msgid "Merge"
 msgstr "合并"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:281
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Move"
 msgstr "移动"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:281
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
 msgid "Move"
 msgstr "移动"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:282
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Menu|Pull"
 msgstr "拉来"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:282
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Pull"
 msgstr "拉来"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:283
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
 msgid "Menu|Push"
 msgstr "推走"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:283
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
 msgid "Push"
 msgstr "推走"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:284
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
 msgid "Menu|Rebase"
 msgstr "重组"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:284
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
 msgid "Rebase"
 msgstr "重组"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:285
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Reset"
 msgstr "重置"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
+#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "重置"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:286
+#: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Menu|Remove"
 msgstr "移除"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:286
+#: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Remove"
 msgstr "移除"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:287
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
 msgid "Menu|Show"
 msgstr "显示"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:287
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
 msgid "Show"
 msgstr "显示"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:289
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Stash"
 msgstr "隐藏"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
-#. gtk_widget_show (box);
-#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
-#: ../tvp-git-helper/tgh-stash-dialog.c:256
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "隐藏"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:291
-#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../thunar-vcs-plugin/tvp-svn-action.c:409
 msgid "Menu|Status"
 msgstr "状态"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:291
-#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:121
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
@@ -248,170 +245,170 @@ msgstr "状态"
 msgid "Status"
 msgstr "状态"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:292
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Menu|Tag"
 msgstr "标签"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:292
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Tag"
 msgstr "标签"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:301
-#: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#: ../thunar-vcs-plugin/tvp-git-action.c:280
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "未实现动作 %s"
 
-#. append the svn submenu action
+#. append the svn submenu item
 #. Lets see if we are dealing with a working copy
-#: ../thunar-vcs-plugin/tvp-provider.c:464
-#: ../thunar-vcs-plugin/tvp-provider.c:530
+#: ../thunar-vcs-plugin/tvp-provider.c:421
+#: ../thunar-vcs-plugin/tvp-provider.c:487
 msgid "SVN"
 msgstr "SVN"
 
-#. append the git submenu action
-#: ../thunar-vcs-plugin/tvp-provider.c:495
-#: ../thunar-vcs-plugin/tvp-provider.c:537
+#. append the git submenu item
+#: ../thunar-vcs-plugin/tvp-provider.c:452
+#: ../thunar-vcs-plugin/tvp-provider.c:494
 msgid "GIT"
 msgstr "GIT"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Menu|Changelist"
 msgstr "更改列表"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Changelist"
 msgstr "更改列表"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Menu|Cleanup"
 msgstr "清理"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:275
 msgid "Cleanup"
 msgstr "清理"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Menu|Copy"
 msgstr "复制"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:283
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:283
 #: ../tvp-svn-helper/tsh-copy.c:177
 msgid "Copy"
 msgstr "复制"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
 msgid "Menu|Delete"
 msgstr "删除"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
 msgid "Delete"
 msgstr "删除"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Export"
 msgstr "导出"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
 msgid "Export"
 msgstr "导出"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Import"
 msgstr "导入"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:299
 #: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
 msgid "Import"
 msgstr "导入"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Info"
 msgstr "信息"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Info"
 msgstr "信息"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Lock"
 msgstr "锁定"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:303
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:303
 #: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
 msgid "Lock"
 msgstr "锁定"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+#: ../thunar-vcs-plugin/tvp-svn-action.c:383
 msgid "Menu|Edit Properties"
 msgstr "编辑属性"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+#: ../thunar-vcs-plugin/tvp-svn-action.c:383
 msgid "Edit Properties"
 msgstr "编辑属性"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+#: ../thunar-vcs-plugin/tvp-svn-action.c:388
 msgid "Menu|Relocate"
 msgstr "重定位"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
+#: ../thunar-vcs-plugin/tvp-svn-action.c:388 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:125
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:214
 msgid "Relocate"
 msgstr "重定位"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Menu|Resolved"
 msgstr "已解决"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:319
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:319
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
 #: ../tvp-svn-helper/tsh-resolved.c:128
 msgid "Resolved"
 msgstr "已解决"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Menu|Resolve"
 msgstr "解决"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Resolve"
 msgstr "解决"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Menu|Revert"
 msgstr "恢复"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
 msgid "Revert"
 msgstr "恢复"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Switch"
 msgstr "切换"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:335
 #: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
 msgid "Switch"
 msgstr "切换"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Unlock"
 msgstr "解锁"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:339
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419 ../tvp-svn-helper/main.c:339
 #: ../tvp-svn-helper/tsh-unlock.c:113
 msgid "Unlock"
 msgstr "解锁"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Update"
 msgstr "更新"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:343
 #: ../tvp-svn-helper/tsh-update.c:120
 msgid "Update"
 msgstr "更新"
@@ -495,7 +492,7 @@ msgstr "文件"
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-diff-dialog.c:179
-#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-properties-dialog.c:212
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
 msgstr "立即"
@@ -613,17 +610,74 @@ msgstr "作者"
 msgid "Date"
 msgstr "日期"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:110
+#: ../tvp-git-helper/tgh-blame-dialog.c:131
+#: ../tvp-git-helper/tgh-branch-dialog.c:142
+#: ../tvp-git-helper/tgh-log-dialog.c:257
+#: ../tvp-git-helper/tgh-notify-dialog.c:109
+#: ../tvp-git-helper/tgh-stash-dialog.c:248
+#: ../tvp-git-helper/tgh-status-dialog.c:138
+#: ../tvp-svn-helper/tsh-blame-dialog.c:134
+#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-log-dialog.c:239
+#: ../tvp-svn-helper/tsh-notify-dialog.c:116
+#: ../tvp-svn-helper/tsh-properties-dialog.c:252
+#: ../tvp-svn-helper/tsh-status-dialog.c:260
+msgid "_Close"
+msgstr "关闭(_C)"
+
+#. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
+#: ../tvp-git-helper/tgh-blame-dialog.c:134
+#: ../tvp-git-helper/tgh-branch-dialog.c:145
+#: ../tvp-git-helper/tgh-branch-dialog.c:251
+#: ../tvp-git-helper/tgh-clean-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
+#: ../tvp-git-helper/tgh-log-dialog.c:247 ../tvp-git-helper/tgh-move.c:148
+#: ../tvp-git-helper/tgh-notify-dialog.c:112
+#: ../tvp-git-helper/tgh-stash-dialog.c:251
+#: ../tvp-git-helper/tgh-stash-dialog.c:380
+#: ../tvp-git-helper/tgh-status-dialog.c:128
+#: ../tvp-git-helper/tgh-transfer-dialog.c:77
+#: ../tvp-git-helper/tgh-transfer-dialog.c:124
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:161
+#: ../tvp-svn-helper/tsh-diff-dialog.c:142
+#: ../tvp-svn-helper/tsh-file-dialog.c:88
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
+#: ../tvp-svn-helper/tsh-lock-dialog.c:74
+#: ../tvp-svn-helper/tsh-log-dialog.c:229
+#: ../tvp-svn-helper/tsh-login-dialog.c:108
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
+#: ../tvp-svn-helper/tsh-move.c:152 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-properties-dialog.c:255
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:99
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:153
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:250
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:93
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:157
+#: ../tvp-svn-helper/tsh-trust-dialog.c:82
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
 msgstr "活跃"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:116
-#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:115
+#: ../tvp-git-helper/tgh-stash-dialog.c:160
 #: ../tvp-svn-helper/tsh-properties-dialog.c:125
 msgid "Name"
 msgstr "名称"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:263
+#: ../tvp-git-helper/tgh-branch-dialog.c:130
+msgid "Jump to"
+msgstr "跳转到"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:135
+#: ../tvp-git-helper/tgh-branch-dialog.c:251
+msgid "_New"
+msgstr "新建(_N)"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:256
 msgid "Branch name:"
 msgstr "分支名称："
 
@@ -647,6 +701,25 @@ msgstr "仅已忽略的文件"
 msgid "Force clean."
 msgstr "强制清除。"
 
+#: ../tvp-git-helper/tgh-clean-dialog.c:100
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:125
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
+#: ../tvp-git-helper/tgh-transfer-dialog.c:125
+#: ../tvp-svn-helper/tsh-copy.c:162 ../tvp-svn-helper/tsh-file-dialog.c:89
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:155
+#: ../tvp-svn-helper/tsh-lock-dialog.c:75
+#: ../tvp-svn-helper/tsh-login-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:121
+#: ../tvp-svn-helper/tsh-move.c:153
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:154
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:158
+#: ../tvp-svn-helper/tsh-trust-dialog.c:83
+msgid "OK"
+msgstr "确定"
+
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
 msgstr "克隆动作已完成"
@@ -669,7 +742,7 @@ msgid "Failed"
 msgstr "已失败的"
 
 #: ../tvp-git-helper/tgh-common.c:293
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:247
 msgid "untracked"
 msgstr "未追踪的"
 
@@ -710,14 +783,22 @@ msgid "Message"
 msgstr "信息"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:215
-#: ../tvp-git-helper/tgh-stash-dialog.c:197
+#: ../tvp-git-helper/tgh-stash-dialog.c:196
 msgid "Changes"
 msgstr "更改"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:222
-#: ../tvp-git-helper/tgh-stash-dialog.c:204
+#: ../tvp-git-helper/tgh-stash-dialog.c:203
 msgid "File"
 msgstr "文件"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:252
+#: ../tvp-git-helper/tgh-status-dialog.c:133
+#: ../tvp-svn-helper/tsh-diff-dialog.c:147
+#: ../tvp-svn-helper/tsh-log-dialog.c:234
+#: ../tvp-svn-helper/tsh-status-dialog.c:255
+msgid "_Refresh"
+msgstr "刷新(_R)"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
@@ -749,20 +830,41 @@ msgstr "重置动作已完成"
 msgid "Reset..."
 msgstr "重置..."
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:173
+#: ../tvp-git-helper/tgh-stash-dialog.c:172
 msgid "Description"
 msgstr "描述"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:398
+#: ../tvp-git-helper/tgh-stash-dialog.c:221
+#: ../tvp-git-helper/tgh-stash-dialog.c:380
+msgid "_Save"
+msgstr "保存(_S)"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:226
+msgid "_Apply"
+msgstr "接受(_A)"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:231
+msgid "_OK"
+msgstr "确定(_O)"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:236
+msgid "_Delete"
+msgstr "删除(_D)"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:241
+msgid "Clear"
+msgstr ""
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:385
 msgid "Stash description:"
 msgstr "隐藏动作描述："
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:534
+#: ../tvp-git-helper/tgh-stash-dialog.c:521
 #, c-format
 msgid "Are you sure you want to drop %s?"
 msgstr "您确定要放弃 %s 吗？"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:562
+#: ../tvp-git-helper/tgh-stash-dialog.c:549
 msgid "Are you sure you want to clear all stash?"
 msgstr "您确定要清除所有隐藏吗？"
 
@@ -772,26 +874,26 @@ msgid "_Repository:"
 msgstr "仓库(_R)："
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:75
-#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-git-helper/tgh-transfer-dialog.c:109
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:97
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:103
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:151
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:157
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:202
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:91
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:97
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:142
 msgid "Select a folder"
 msgstr "选择文件夹"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:103
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
+#: ../tvp-git-helper/tgh-transfer-dialog.c:102
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:195
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:135
 msgid "_Directory:"
 msgstr "目录(_D)："
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:122
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
+#: ../tvp-git-helper/tgh-transfer-dialog.c:121
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:154
 msgid "Transfer"
 msgstr "传输"
 
@@ -907,10 +1009,7 @@ msgstr "锁定动作相关选项："
 msgid "Properties Related Options:"
 msgstr "属性动作相关选项："
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
-#. gtk_widget_show (box);
-#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:280
+#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:250
 msgid "Properties"
 msgstr "属性"
 
@@ -1299,7 +1398,7 @@ msgstr "差分失败"
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
 #: ../tvp-svn-helper/tsh-diff-dialog.c:161
-#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-properties-dialog.c:192
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "自身"
@@ -1314,7 +1413,7 @@ msgstr "自身"
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
 #: ../tvp-svn-helper/tsh-diff-dialog.c:170
-#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-properties-dialog.c:203
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
 msgstr "即时文件"
@@ -1326,7 +1425,7 @@ msgstr "即时文件"
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
 #: ../tvp-svn-helper/tsh-diff-dialog.c:188
-#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-properties-dialog.c:221
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "递归"
@@ -1343,7 +1442,7 @@ msgstr "不要显示已删除文件的差异信息"
 msgid "Show copies as additions"
 msgstr "将副本显示为附加项"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:369
+#: ../tvp-svn-helper/tsh-diff-dialog.c:366
 msgid "Loading..."
 msgstr "载入中……"
 
@@ -1357,7 +1456,7 @@ msgstr "选择文件"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:77
 #: ../tvp-svn-helper/tsh-login-dialog.c:97
-#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+#: ../tvp-svn-helper/tsh-trust-dialog.c:75
 msgid "Remember"
 msgstr "记住"
 
@@ -1422,6 +1521,14 @@ msgstr "属性动作已失败"
 msgid "Value"
 msgstr "值"
 
+#: ../tvp-svn-helper/tsh-properties-dialog.c:240
+msgid "_Add"
+msgstr "添加(_A)"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:245
+msgid "_Remove"
+msgstr "移除(_R)"
+
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
 msgstr "重定位动作已失败"
@@ -1438,7 +1545,7 @@ msgstr "正在重定位..."
 msgid "_From:"
 msgstr "从(_F)："
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
 msgid "_To:"
 msgstr "至(_T)："
 
@@ -1478,26 +1585,26 @@ msgstr "隐藏外部内容"
 msgid "Check Repository"
 msgstr "检查仓库"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:57
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
 msgid "Certificate is not yet valid."
 msgstr "证书还未有效。"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
 msgid "Certificate has expired."
 msgstr "证书已过期。"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
 msgid "Certificate does not match the remote hostname."
 msgstr "证书与远程主机名不匹配。"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
 msgid "Certificate authority is unknown."
 msgstr "证书颁发者未知。"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
 msgid "Other failure."
 msgstr "其它失败。"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:76
+#: ../tvp-svn-helper/tsh-trust-dialog.c:79
 msgid "Trust"
 msgstr "信任"
