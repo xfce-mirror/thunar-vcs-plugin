@@ -8,16 +8,17 @@
 # Aşır <asirkaraman@yahoo.de>, 2014
 # atekinalp <alper.tekinalp@gmail.com>, 2011
 # aybuke <aybuke.147@gmail.com>, 2013
+# Demiray “tulliana” Muhterem <mdemiray@msn.com>, 2018
 # Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2014-2015
-# Necdet Yücel <necdetyucel@gmail.com>, 2013-2014
+# Necdet Yücel <necdetyucel@gmail.com>, 2013-2014,2018
 # Nevzat Kılıçarslan <nevzat-tazven@hotmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 00:30+0100\n"
-"PO-Revision-Date: 2018-02-26 19:55+0000\n"
-"Last-Translator: Nevzat Kılıçarslan <nevzat-tazven@hotmail.com>\n"
+"POT-Creation-Date: 2018-05-24 06:30+0200\n"
+"PO-Revision-Date: 2018-05-25 22:59+0000\n"
+"Last-Translator: Demiray “tulliana” Muhterem <mdemiray@msn.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/xfce/thunar-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,225 +26,222 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
+#: ../thunar-vcs-plugin/tvp-svn-action.c:280
 msgid "Menu|Add"
 msgstr "Ekle"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-git-helper/main.c:153
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
+#: ../thunar-vcs-plugin/tvp-svn-action.c:280 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
 #: ../tvp-svn-helper/tsh-add.c:132
 msgid "Add"
 msgstr "Ekle"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
 msgid "Menu|Bisect"
 msgstr "Menu|Bisect"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
+#: ../thunar-vcs-plugin/tvp-git-action.c:243
 msgid "Bisect"
 msgstr "Bisect"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
+#: ../thunar-vcs-plugin/tvp-svn-action.c:285
 msgid "Menu|Blame"
 msgstr "Menu|Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305 ../tvp-git-helper/main.c:157
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
+#: ../thunar-vcs-plugin/tvp-svn-action.c:285 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
 #: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:268
+#: ../thunar-vcs-plugin/tvp-git-action.c:247
 msgid "Menu|Branch"
 msgstr "Menu|Branch"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:161
-#: ../tvp-git-helper/tgh-branch-dialog.c:144
-#: ../tvp-git-helper/tgh-stash-dialog.c:167
+#: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:140
+#: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Branch"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Menu|Checkout"
 msgstr "Menu|Checkout"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:269
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:271
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:271
 #: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
 msgid "Checkout"
 msgstr "Checkout"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Menu|Clean"
 msgstr "Menu|Clean"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270 ../tvp-git-helper/main.c:165
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
 msgid "Clean"
 msgstr "Temizle"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:272
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 msgid "Menu|Clone"
 msgstr "Menu|Clone"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:272 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:251 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Clone"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:273
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:252
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Menu|Commit"
 msgstr "Menu|Commit"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:273
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+#: ../thunar-vcs-plugin/tvp-git-action.c:252
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
 #: ../tvp-git-helper/tgh-log-dialog.c:153
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
 #: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
 msgid "Commit"
 msgstr "Commit"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:274
-#: ../thunar-vcs-plugin/tvp-svn-action.c:347
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Diff"
 msgstr "Menu|Diff"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:274
-#: ../thunar-vcs-plugin/tvp-svn-action.c:347 ../tvp-svn-helper/main.c:291
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:291
 #: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
 msgid "Diff"
 msgstr "Diff"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:275
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Menu|Fetch"
 msgstr "Menu|Fetch"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:275
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Fetch"
 msgstr "Fetch"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:276
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
 msgid "Menu|Grep"
 msgstr "Menu|Grep"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:276
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
 msgid "Grep"
 msgstr "Grep"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:277
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
 msgid "Menu|Init"
 msgstr "Menu|Init"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:277
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
 msgid "Init"
 msgstr "Init"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:278
-#: ../thunar-vcs-plugin/tvp-svn-action.c:377
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Log"
 msgstr "Menu|Log"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:278
-#: ../thunar-vcs-plugin/tvp-svn-action.c:377 ../tvp-git-helper/main.c:173
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
 #: ../tvp-svn-helper/tsh-log-dialog.c:225
 msgid "Log"
 msgstr "Kayıt"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:279
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
 msgid "Menu|Merge"
 msgstr "Menu|Birleştir"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:279
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
 msgid "Merge"
 msgstr "Birleştir"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:281
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Move"
 msgstr "Menu|Taşı"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:281
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392 ../tvp-git-helper/main.c:177
+#: ../thunar-vcs-plugin/tvp-git-action.c:260
+#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
 msgid "Move"
 msgstr "Taşı"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:282
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Menu|Pull"
 msgstr "Menu|Pull"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:282
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Pull"
 msgstr "Pull"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:283
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
 msgid "Menu|Push"
 msgstr "Menu|Push"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:283
+#: ../thunar-vcs-plugin/tvp-git-action.c:262
 msgid "Push"
 msgstr "Push"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:284
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
 msgid "Menu|Rebase"
 msgstr "Menu|Rebase"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:284
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
 msgid "Rebase"
 msgstr "Rebase"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:285
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Reset"
 msgstr "Menu|Sıfırla"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:285 ../tvp-git-helper/main.c:181
+#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Sıfırla"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:286
+#: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Menu|Remove"
 msgstr "Menü|Kaldır"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:286
+#: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Remove"
 msgstr "Kaldır"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:287
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
 msgid "Menu|Show"
 msgstr "Menü|Göster"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:287
+#: ../thunar-vcs-plugin/tvp-git-action.c:266
 msgid "Show"
 msgstr "Göster"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:289
+#: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Stash"
 msgstr "Menu|Stash"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
-#. gtk_widget_show (box);
-#: ../thunar-vcs-plugin/tvp-git-action.c:289 ../tvp-git-helper/main.c:185
-#: ../tvp-git-helper/tgh-stash-dialog.c:256
+#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Stash"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:291
-#: ../thunar-vcs-plugin/tvp-svn-action.c:429
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../thunar-vcs-plugin/tvp-svn-action.c:409
 msgid "Menu|Status"
 msgstr "Menu|Durum"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:291
-#: ../thunar-vcs-plugin/tvp-svn-action.c:429 ../tvp-git-helper/main.c:189
+#: ../thunar-vcs-plugin/tvp-git-action.c:270
+#: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:121
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
@@ -251,170 +249,170 @@ msgstr "Menu|Durum"
 msgid "Status"
 msgstr "Durum"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:292
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Menu|Tag"
 msgstr "Menu|Tag"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:292
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Tag"
 msgstr "Etiket"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:301
-#: ../thunar-vcs-plugin/tvp-svn-action.c:454
+#: ../thunar-vcs-plugin/tvp-git-action.c:280
+#: ../thunar-vcs-plugin/tvp-svn-action.c:434
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "%s eylemi gerçeklenmedi"
 
-#. append the svn submenu action
+#. append the svn submenu item
 #. Lets see if we are dealing with a working copy
-#: ../thunar-vcs-plugin/tvp-provider.c:464
-#: ../thunar-vcs-plugin/tvp-provider.c:530
+#: ../thunar-vcs-plugin/tvp-provider.c:421
+#: ../thunar-vcs-plugin/tvp-provider.c:487
 msgid "SVN"
 msgstr "SVN"
 
-#. append the git submenu action
-#: ../thunar-vcs-plugin/tvp-provider.c:495
-#: ../thunar-vcs-plugin/tvp-provider.c:537
+#. append the git submenu item
+#: ../thunar-vcs-plugin/tvp-provider.c:452
+#: ../thunar-vcs-plugin/tvp-provider.c:494
 msgid "GIT"
 msgstr "GIT"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Menu|Changelist"
 msgstr "Menu|Değişiklik listesi"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Changelist"
 msgstr "Değişiklik listesi"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Menu|Cleanup"
 msgstr "Menu|Cleanup"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:275
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:275
 msgid "Cleanup"
 msgstr "Cleanup"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Menu|Copy"
 msgstr "Menu|Kopyala"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:283
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:283
 #: ../tvp-svn-helper/tsh-copy.c:177
 msgid "Copy"
 msgstr "Kopyala"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322
 msgid "Menu|Delete"
 msgstr "Menu|Sil"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342 ../tvp-svn-helper/main.c:287
+#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
 msgid "Delete"
 msgstr "Sil"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Export"
 msgstr "Menu|Dışa Aktar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:295
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
 msgid "Export"
 msgstr "Dışa Aktar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Import"
 msgstr "Menu|İçe Aktar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-svn-helper/main.c:299
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:299
 #: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
 msgid "Import"
 msgstr "İçe Aktar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Info"
 msgstr "Menu|Bilgi"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:362
+#: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Info"
 msgstr "Bilgi"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Lock"
 msgstr "Menü|Kilitle"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-svn-helper/main.c:303
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:303
 #: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
 msgid "Lock"
 msgstr "Kilitle"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+#: ../thunar-vcs-plugin/tvp-svn-action.c:383
 msgid "Menu|Edit Properties"
 msgstr "Menu|Özellikleri Düzenle"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:403
+#: ../thunar-vcs-plugin/tvp-svn-action.c:383
 msgid "Edit Properties"
 msgstr "Özellikleri Düzenle"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:408
+#: ../thunar-vcs-plugin/tvp-svn-action.c:388
 msgid "Menu|Relocate"
 msgstr "Menu|Relocate"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:408 ../tvp-svn-helper/main.c:323
+#: ../thunar-vcs-plugin/tvp-svn-action.c:388 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:125
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:216
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:214
 msgid "Relocate"
 msgstr "Relocate"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Menu|Resolved"
 msgstr "Menu|Resolved"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:319
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:319
 #: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
 #: ../tvp-svn-helper/tsh-resolved.c:128
 msgid "Resolved"
 msgstr "Resolved"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Menu|Resolve"
 msgstr "Menu|Resolve"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Resolve"
 msgstr "Resolve"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Menu|Revert"
 msgstr "Menu|Revert"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:327
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
 msgid "Revert"
 msgstr "Revert"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Switch"
 msgstr "Menu|Switch"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:434 ../tvp-svn-helper/main.c:335
+#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:335
 #: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
 msgid "Switch"
 msgstr "Switch"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:439
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Unlock"
 msgstr "Menu|Unlock"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:439 ../tvp-svn-helper/main.c:339
+#: ../thunar-vcs-plugin/tvp-svn-action.c:419 ../tvp-svn-helper/main.c:339
 #: ../tvp-svn-helper/tsh-unlock.c:113
 msgid "Unlock"
 msgstr "Unlock"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:444
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Update"
 msgstr "Menü|Güncelle"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:444 ../tvp-svn-helper/main.c:343
+#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:343
 #: ../tvp-svn-helper/tsh-update.c:120
 msgid "Update"
 msgstr "Güncelle"
@@ -498,7 +496,7 @@ msgstr "Dosyalar"
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
 #: ../tvp-svn-helper/tsh-diff-dialog.c:179
-#: ../tvp-svn-helper/tsh-properties-dialog.c:226
+#: ../tvp-svn-helper/tsh-properties-dialog.c:212
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
 msgstr "Anlık değerler"
@@ -616,17 +614,74 @@ msgstr "Yazar"
 msgid "Date"
 msgstr "Tarih"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:110
+#: ../tvp-git-helper/tgh-blame-dialog.c:131
+#: ../tvp-git-helper/tgh-branch-dialog.c:142
+#: ../tvp-git-helper/tgh-log-dialog.c:257
+#: ../tvp-git-helper/tgh-notify-dialog.c:109
+#: ../tvp-git-helper/tgh-stash-dialog.c:248
+#: ../tvp-git-helper/tgh-status-dialog.c:138
+#: ../tvp-svn-helper/tsh-blame-dialog.c:134
+#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-log-dialog.c:239
+#: ../tvp-svn-helper/tsh-notify-dialog.c:116
+#: ../tvp-svn-helper/tsh-properties-dialog.c:252
+#: ../tvp-svn-helper/tsh-status-dialog.c:260
+msgid "_Close"
+msgstr "_Kapat"
+
+#. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
+#: ../tvp-git-helper/tgh-blame-dialog.c:134
+#: ../tvp-git-helper/tgh-branch-dialog.c:145
+#: ../tvp-git-helper/tgh-branch-dialog.c:251
+#: ../tvp-git-helper/tgh-clean-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
+#: ../tvp-git-helper/tgh-log-dialog.c:247 ../tvp-git-helper/tgh-move.c:148
+#: ../tvp-git-helper/tgh-notify-dialog.c:112
+#: ../tvp-git-helper/tgh-stash-dialog.c:251
+#: ../tvp-git-helper/tgh-stash-dialog.c:380
+#: ../tvp-git-helper/tgh-status-dialog.c:128
+#: ../tvp-git-helper/tgh-transfer-dialog.c:77
+#: ../tvp-git-helper/tgh-transfer-dialog.c:124
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:161
+#: ../tvp-svn-helper/tsh-diff-dialog.c:142
+#: ../tvp-svn-helper/tsh-file-dialog.c:88
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
+#: ../tvp-svn-helper/tsh-lock-dialog.c:74
+#: ../tvp-svn-helper/tsh-log-dialog.c:229
+#: ../tvp-svn-helper/tsh-login-dialog.c:108
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
+#: ../tvp-svn-helper/tsh-move.c:152 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-properties-dialog.c:255
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:99
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:153
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:217
+#: ../tvp-svn-helper/tsh-status-dialog.c:250
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:93
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:157
+#: ../tvp-svn-helper/tsh-trust-dialog.c:82
+msgid "_Cancel"
+msgstr "_Vazgeç"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
 msgstr "aktif"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:116
-#: ../tvp-git-helper/tgh-stash-dialog.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:115
+#: ../tvp-git-helper/tgh-stash-dialog.c:160
 #: ../tvp-svn-helper/tsh-properties-dialog.c:125
 msgid "Name"
 msgstr "İsim"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:263
+#: ../tvp-git-helper/tgh-branch-dialog.c:130
+msgid "Jump to"
+msgstr "Sıçra"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:135
+#: ../tvp-git-helper/tgh-branch-dialog.c:251
+msgid "_New"
+msgstr "_Yeni"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:256
 msgid "Branch name:"
 msgstr "Branş adı:"
 
@@ -650,12 +705,31 @@ msgstr "Sadece gözardı edilen dosyalar"
 msgid "Force clean."
 msgstr "Temizlemeye zorla."
 
+#: ../tvp-git-helper/tgh-clean-dialog.c:100
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:125
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
+#: ../tvp-git-helper/tgh-transfer-dialog.c:125
+#: ../tvp-svn-helper/tsh-copy.c:162 ../tvp-svn-helper/tsh-file-dialog.c:89
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:155
+#: ../tvp-svn-helper/tsh-lock-dialog.c:75
+#: ../tvp-svn-helper/tsh-login-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:121
+#: ../tvp-svn-helper/tsh-move.c:153
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:154
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:158
+#: ../tvp-svn-helper/tsh-trust-dialog.c:83
+msgid "OK"
+msgstr "TAMAM"
+
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
 msgstr "Klonlama tamamlandı"
 
 #: ../tvp-git-helper/tgh-clone.c:126
-msgid "Cloning ..."
+msgid "Cloning..."
 msgstr "Klonlanıyor..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
@@ -672,7 +746,7 @@ msgid "Failed"
 msgstr "Başarısız oldu"
 
 #: ../tvp-git-helper/tgh-common.c:293
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:250
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:247
 msgid "untracked"
 msgstr "izlenmeyen"
 
@@ -713,14 +787,22 @@ msgid "Message"
 msgstr "Mesaj"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:215
-#: ../tvp-git-helper/tgh-stash-dialog.c:197
+#: ../tvp-git-helper/tgh-stash-dialog.c:196
 msgid "Changes"
 msgstr "Değişiklikler"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:222
-#: ../tvp-git-helper/tgh-stash-dialog.c:204
+#: ../tvp-git-helper/tgh-stash-dialog.c:203
 msgid "File"
 msgstr "Dosya"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:252
+#: ../tvp-git-helper/tgh-status-dialog.c:133
+#: ../tvp-svn-helper/tsh-diff-dialog.c:147
+#: ../tvp-svn-helper/tsh-log-dialog.c:234
+#: ../tvp-svn-helper/tsh-status-dialog.c:255
+msgid "_Refresh"
+msgstr "_Yenile"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
@@ -731,8 +813,8 @@ msgid "Move To"
 msgstr "Taşı"
 
 #: ../tvp-git-helper/tgh-move.c:162
-msgid "Move ..."
-msgstr "Taşı ..."
+msgid "Move..."
+msgstr "Taşı..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -749,23 +831,44 @@ msgid "Reset finished"
 msgstr "Sıfırlama tamamlandı"
 
 #: ../tvp-git-helper/tgh-reset.c:154
-msgid "Reset ..."
-msgstr "Sıfırla ..."
+msgid "Reset..."
+msgstr "Sıfırla..."
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:173
+#: ../tvp-git-helper/tgh-stash-dialog.c:172
 msgid "Description"
 msgstr "Tanımlama"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:398
+#: ../tvp-git-helper/tgh-stash-dialog.c:221
+#: ../tvp-git-helper/tgh-stash-dialog.c:380
+msgid "_Save"
+msgstr "_Kaydet"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:226
+msgid "_Apply"
+msgstr "_Uygula"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:231
+msgid "_OK"
+msgstr "_TAMAM"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:236
+msgid "_Delete"
+msgstr "_Sil"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:241
+msgid "Clear"
+msgstr "Temizle"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:385
 msgid "Stash description:"
 msgstr "Tanım saklamak:"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:534
+#: ../tvp-git-helper/tgh-stash-dialog.c:521
 #, c-format
 msgid "Are you sure you want to drop %s?"
 msgstr "%s silme isteginizden eminmisiniz?"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:562
+#: ../tvp-git-helper/tgh-stash-dialog.c:549
 msgid "Are you sure you want to clear all stash?"
 msgstr "Tüm belleği silmek istediğinizden emin misiniz?"
 
@@ -775,26 +878,26 @@ msgid "_Repository:"
 msgstr "De_po:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:75
-#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-git-helper/tgh-transfer-dialog.c:109
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:97
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:103
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:152
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:158
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:204
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:151
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:157
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:202
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:91
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:97
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:143
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:142
 msgid "Select a folder"
 msgstr "Bir dizin seçin"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:103
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:197
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:136
+#: ../tvp-git-helper/tgh-transfer-dialog.c:102
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:195
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:135
 msgid "_Directory:"
 msgstr "_Dizin:"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:122
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:155
+#: ../tvp-git-helper/tgh-transfer-dialog.c:121
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:154
 msgid "Transfer"
 msgstr "Transfer"
 
@@ -910,10 +1013,7 @@ msgstr "Kilitleme Seçenekleri:"
 msgid "Properties Related Options:"
 msgstr "Özellikler Seçenekleri:"
 
-#. gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->action_area), box, FALSE,
-#. TRUE, 0);
-#. gtk_widget_show (box);
-#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:280
+#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:250
 msgid "Properties"
 msgstr "Özellikler"
 
@@ -958,8 +1058,8 @@ msgid "Cleanup finished"
 msgstr "Temizleme işlemi tamamlanmıştır"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:97
-msgid "Cleaning up ..."
-msgstr "Temizleme işlemi gerçekleştiriliyor ..."
+msgid "Cleaning up..."
+msgstr "Temizleme işlemi gerçekleştiriliyor..."
 
 #: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
 #: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
@@ -1302,7 +1402,7 @@ msgstr "Diff başarısız oldu"
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
 #: ../tvp-svn-helper/tsh-diff-dialog.c:161
-#: ../tvp-svn-helper/tsh-properties-dialog.c:206
+#: ../tvp-svn-helper/tsh-properties-dialog.c:192
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "Öz"
@@ -1317,7 +1417,7 @@ msgstr "Öz"
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
 #: ../tvp-svn-helper/tsh-diff-dialog.c:170
-#: ../tvp-svn-helper/tsh-properties-dialog.c:217
+#: ../tvp-svn-helper/tsh-properties-dialog.c:203
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
 msgstr "Acil dosyalar"
@@ -1329,7 +1429,7 @@ msgstr "Acil dosyalar"
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
 #: ../tvp-svn-helper/tsh-diff-dialog.c:188
-#: ../tvp-svn-helper/tsh-properties-dialog.c:235
+#: ../tvp-svn-helper/tsh-properties-dialog.c:221
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "Özyinelemeli"
@@ -1346,7 +1446,7 @@ msgstr "Silinen dosyalar arasındaki farkları gösterme"
 msgid "Show copies as additions"
 msgstr "Kopyaları ekleme olarak göster"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:369
+#: ../tvp-svn-helper/tsh-diff-dialog.c:366
 msgid "Loading..."
 msgstr "Yükleniyor..."
 
@@ -1360,7 +1460,7 @@ msgstr "Bir dosya seç"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:77
 #: ../tvp-svn-helper/tsh-login-dialog.c:97
-#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+#: ../tvp-svn-helper/tsh-trust-dialog.c:75
 msgid "Remember"
 msgstr "Hatırla"
 
@@ -1425,6 +1525,14 @@ msgstr "Özellikler başarısızdır"
 msgid "Value"
 msgstr "Değer"
 
+#: ../tvp-svn-helper/tsh-properties-dialog.c:240
+msgid "_Add"
+msgstr "_Ekle"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:245
+msgid "_Remove"
+msgstr "_Kaldır"
+
 #: ../tvp-svn-helper/tsh-relocate.c:78
 msgid "Relocate failed"
 msgstr "Taşıma başarısızdır"
@@ -1434,14 +1542,14 @@ msgid "Relocate finished"
 msgstr "Taşıma sonlanmıştır"
 
 #: ../tvp-svn-helper/tsh-relocate.c:139
-msgid "Relocating ..."
-msgstr "Taşınıyor ..."
+msgid "Relocating..."
+msgstr "Taşınıyor..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:87
 msgid "_From:"
 msgstr "_Kimden:"
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:142
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
 msgid "_To:"
 msgstr "Ki_me:"
 
@@ -1481,26 +1589,26 @@ msgstr "Haricileri Gizle"
 msgid "Check Repository"
 msgstr "Depoyu Kontrol et"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:57
+#: ../tvp-svn-helper/tsh-trust-dialog.c:60
 msgid "Certificate is not yet valid."
 msgstr "Sertifika hala geçerli değil."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+#: ../tvp-svn-helper/tsh-trust-dialog.c:63
 msgid "Certificate has expired."
 msgstr "Sertifikanın günü geçmiş."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+#: ../tvp-svn-helper/tsh-trust-dialog.c:66
 msgid "Certificate does not match the remote hostname."
 msgstr "Sertifika karşı alan adıyla uyuşmuyor."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+#: ../tvp-svn-helper/tsh-trust-dialog.c:69
 msgid "Certificate authority is unknown."
 msgstr "Sertifika otoritesi bilinmiyor."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+#: ../tvp-svn-helper/tsh-trust-dialog.c:72
 msgid "Other failure."
 msgstr "Diğer hata."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:76
+#: ../tvp-svn-helper/tsh-trust-dialog.c:79
 msgid "Trust"
 msgstr "Güven."
