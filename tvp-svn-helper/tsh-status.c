@@ -29,7 +29,6 @@
 
 #include <libxfce4util/libxfce4util.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -74,12 +73,26 @@ static gpointer status_thread (gpointer user_data)
   subpool = svn_pool_create (pool);
 
   revision.kind = svn_opt_revision_head;
-#if CHECK_SVN_VERSION(1,5)
-  if ((err = svn_client_status3(NULL, files?files[0]:"", &revision, tsh_status_func2, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
-#elif CHECK_SVN_VERSION(1,6)
-  if ((err = svn_client_status4(NULL, files?files[0]:"", &revision, tsh_status_func3, dialog, depth, get_all, update, no_ignore, ignore_externals, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
-  if ((err = svn_client_status5(NULL, ctx, files?files[0]:"", &revision, depth, get_all, update, no_ignore, ignore_externals, TRUE, NULL, tsh_status_func, dialog, subpool)))
+
+#if CHECK_SVN_VERSION_G(1,9)
+  if ((err = svn_client_status6(NULL, ctx, files?files[0]:"", &revision, depth,
+                                get_all, update, no_ignore, TRUE,
+                                ignore_externals, TRUE, NULL, tsh_status_func,
+                                dialog, subpool)))
+#elif CHECK_SVN_VERSION_G(1,7)
+  if ((err = svn_client_status5(NULL, ctx, files?files[0]:"", &revision, depth,
+                                get_all, update, no_ignore, ignore_externals,
+                                TRUE, NULL, tsh_status_func, dialog, subpool)))
+#elif CHECK_SVN_VERSION_G(1,6)
+  if ((err = svn_client_status4(NULL, files?files[0]:"", &revision,
+                                tsh_status_func3, dialog, depth, get_all,
+                                update, no_ignore, ignore_externals, NULL, ctx,
+                                subpool)))
+#else
+  if ((err = svn_client_status3(NULL, files?files[0]:"", &revision,
+                                tsh_status_func2, dialog, depth, get_all,
+                                update, no_ignore, ignore_externals, NULL, ctx,
+                                subpool)))
 #endif
   {
     svn_pool_destroy (subpool);

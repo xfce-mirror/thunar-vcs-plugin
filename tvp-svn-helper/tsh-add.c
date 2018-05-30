@@ -69,7 +69,17 @@ static gpointer add_thread (gpointer user_data)
       if (!(info->flags & TSH_FILE_INFO_INDIRECT))
       {
         svn_pool_clear(subpool);
-        if ((err = svn_client_add4(info->path, (info->flags&TSH_FILE_INFO_RECURSIVE)?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, FALSE, ctx, subpool)))
+#if CHECK_SVN_VERSION_G(1,8)
+        if ((err = svn_client_add5(info->path,
+                                   (info->flags & TSH_FILE_INFO_RECURSIVE) ?
+                                     svn_depth_infinity : svn_depth_empty,
+                                   FALSE, FALSE, FALSE, FALSE, ctx, subpool)))
+#else
+        if ((err = svn_client_add4(info->path,
+                                   (info->flags & TSH_FILE_INFO_RECURSIVE) ?
+                                     svn_depth_infinity : svn_depth_empty,
+                                   FALSE, FALSE, FALSE, ctx, subpool)))
+#endif
         {
           error_str = tsh_strerror(err);
           gdk_threads_enter();
@@ -87,7 +97,13 @@ static gpointer add_thread (gpointer user_data)
   }
   else
   {
-    if ((err = svn_client_add4("", svn_depth_infinity, FALSE, FALSE, FALSE, ctx, subpool)))
+#if CHECK_SVN_VERSION_G(1,8)
+    if ((err = svn_client_add5("", svn_depth_infinity, FALSE, FALSE, FALSE,
+                               FALSE, ctx, subpool)))
+#else
+    if ((err = svn_client_add4("", svn_depth_infinity, FALSE, FALSE, FALSE,
+                               ctx, subpool)))
+#endif
     {
       error_str = tsh_strerror(err);
       gdk_threads_enter();

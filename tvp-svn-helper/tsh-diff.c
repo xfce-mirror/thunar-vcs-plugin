@@ -32,7 +32,6 @@
 
 #include <apr.h>
 #include <apr_xlate.h>
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -118,16 +117,25 @@ static gpointer diff_thread (gpointer user_data)
     revision1.kind = svn_opt_revision_base;
     revision2.kind = svn_opt_revision_working;
 
-#if CHECK_SVN_VERSION_S(1,6)
-    if ((err = svn_client_diff4(NULL, path, &revision1, path, &revision2,
-                                NULL, depth, !notice_ancestry,
-                                no_diff_deleted, FALSE, APR_LOCALE_CHARSET,
-                                outfile, errfile, NULL, ctx, subpool))) 
-#else /* CHECK_SVN_VERSION(1,7) */
+#if CHECK_SVN_VERSION_G(1,9)
+    svn_stream_t *outstream = svn_stream_from_aprfile2(outfile, TRUE, pool);
+    svn_stream_t *errstream = svn_stream_from_aprfile2(errfile, TRUE, pool);
+
+    if ((err = svn_client_diff6(NULL, path, &revision1, path, &revision2,
+                                NULL, depth, !notice_ancestry, FALSE,
+                                no_diff_deleted, show_copies_as_adds,
+                                FALSE, FALSE, FALSE, FALSE, APR_LOCALE_CHARSET,
+                                outstream, errstream, NULL, ctx, subpool)))
+#elif CHECK_SVN_VERSION_G(1,7)
     if ((err = svn_client_diff5(NULL, path, &revision1, path, &revision2,
                                 NULL, depth, !notice_ancestry, no_diff_deleted,
                                 show_copies_as_adds, FALSE, FALSE, APR_LOCALE_CHARSET,
-                                outfile, errfile, NULL, ctx, subpool))) 
+                                outfile, errfile, NULL, ctx, subpool)))
+#else
+    if ((err = svn_client_diff4(NULL, path, &revision1, path, &revision2,
+                                NULL, depth, !notice_ancestry,
+                                no_diff_deleted, FALSE, APR_LOCALE_CHARSET,
+                                outfile, errfile, NULL, ctx, subpool)))
 #endif
     {
       goto on_error;

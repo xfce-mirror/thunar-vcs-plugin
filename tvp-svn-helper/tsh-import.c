@@ -29,7 +29,6 @@
 
 #include <libxfce4util/libxfce4util.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -68,10 +67,16 @@ static gpointer import_thread (gpointer user_data)
 
   subpool = svn_pool_create (pool);
 
-#if CHECK_SVN_VERSION_S(1,6)
-  if ((err = svn_client_import3(&commit_info, path, url, svn_depth_infinity, FALSE, FALSE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
-  if ((err = svn_client_import4(path, url, svn_depth_infinity, FALSE, FALSE, NULL, tsh_commit_func2, dialog, ctx, subpool)))
+#if CHECK_SVN_VERSION_G(1,8)
+  if ((err = svn_client_import5(path, url, svn_depth_infinity, FALSE, FALSE,
+                                FALSE, NULL, NULL, NULL, tsh_commit_func2,
+                                dialog, ctx, subpool)))
+#elif CHECK_SVN_VERSION_G(1,6)
+  if ((err = svn_client_import4(path, url, svn_depth_infinity, FALSE, FALSE,
+                                NULL, tsh_commit_func2, dialog, ctx, subpool)))
+#else
+  if ((err = svn_client_import3(&commit_info, path, url, svn_depth_infinity,
+                                FALSE, FALSE, NULL, ctx, subpool)))
 #endif
   {
     svn_pool_destroy (subpool);

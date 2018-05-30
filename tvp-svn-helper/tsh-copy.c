@@ -30,7 +30,6 @@
 
 #include <libxfce4util/libxfce4util.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -79,12 +78,19 @@ static gpointer copy_thread (gpointer user_data)
   copy_source.peg_revision = &revision;
   APR_ARRAY_PUSH (paths, svn_client_copy_source_t *) = &copy_source;
 
-#if CHECK_SVN_VERSION(1,5)
-  if ((err = svn_client_copy4(&commit_info, paths, to, FALSE, FALSE, NULL, ctx, subpool)))
-#elif CHECK_SVN_VERSION(1,6)
-  if ((err = svn_client_copy5(&commit_info, paths, to, FALSE, FALSE, FALSE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
-  if ((err = svn_client_copy6(paths, to, FALSE, FALSE, FALSE, NULL, tsh_commit_func2, dialog, ctx, subpool)))
+#if CHECK_SVN_VERSION_G(1,9)
+  if ((err = svn_client_copy7(paths, to, FALSE, FALSE, FALSE, FALSE, FALSE,
+                              NULL, NULL, tsh_commit_func2, dialog, ctx,
+                              subpool)))
+#elif CHECK_SVN_VERSION_G(1,7)
+  if ((err = svn_client_copy6(paths, to, FALSE, FALSE, FALSE, NULL,
+                              tsh_commit_func2, dialog, ctx, subpool)))
+#elif CHECK_SVN_VERSION_G(1,6)
+  if ((err = svn_client_copy5(&commit_info, paths, to, FALSE, FALSE, FALSE,
+                              NULL, ctx, subpool)))
+#else
+  if ((err = svn_client_copy4(&commit_info, paths, to, FALSE, FALSE, NULL,
+                              ctx, subpool)))
 #endif
   {
     svn_pool_destroy (subpool);

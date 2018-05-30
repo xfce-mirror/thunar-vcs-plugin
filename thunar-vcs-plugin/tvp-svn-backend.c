@@ -22,7 +22,6 @@
 
 #include <glib.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
@@ -93,7 +92,11 @@ tvp_svn_backend_init (void)
 	}
 #endif
 
+#if CHECK_SVN_VERSION_G(1,8)
+	err = svn_client_create_context2 (&ctx, NULL, pool);
+#else
 	err = svn_client_create_context (&ctx, pool);
+#endif
   if(err)
   {
     svn_error_clear (err);
@@ -249,12 +252,22 @@ tvp_svn_backend_get_status (const gchar *uri)
   subpool = svn_pool_create (pool);
 
   /* get the status of all files in the directory */
-#if CHECK_SVN_VERSION(1,5)
-  err = svn_client_status3 (NULL, path, &revision, status_callback2, &list, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL, ctx, subpool);
-#elif CHECK_SVN_VERSION(1,6)
-  err = svn_client_status4 (NULL, path, &revision, status_callback3, &list, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL, ctx, subpool);
-#else /* CHECK_SVN_VERSION(1,7) */
-  err = svn_client_status5 (NULL, ctx, path, &revision, svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, TRUE, NULL, status_callback, &list, subpool);
+#if CHECK_SVN_VERSION_G(1,9)
+  err = svn_client_status6 (NULL, ctx, path, &revision, svn_depth_immediates,
+                            TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, NULL,
+                            status_callback, &list, subpool);
+#elif CHECK_SVN_VERSION_G(1,7)
+  err = svn_client_status5 (NULL, ctx, path, &revision, svn_depth_immediates,
+                            TRUE, FALSE, TRUE, TRUE, TRUE, NULL,
+                            status_callback, &list, subpool);
+#elif CHECK_SVN_VERSION_G(1,6)
+  err = svn_client_status4 (NULL, path, &revision, status_callback3, &list,
+                            svn_depth_immediates, TRUE, FALSE, TRUE, TRUE, NULL,
+                            ctx, subpool);
+#else
+  err = svn_client_status3 (NULL, path, &revision, status_callback2
+                            &list, svn_depth_immediates, TRUE, FALSE, TRUE,
+                            TRUE, NULL, ctx, subpool);
 #endif
 
   svn_pool_destroy (subpool);
@@ -346,12 +359,16 @@ tvp_svn_backend_get_info (const gchar *uri)
 
   subpool = svn_pool_create (pool);
 
-#if CHECK_SVN_VERSION(1,5) || CHECK_SVN_VERSION(1,6)
   /* get svn info for this file or directory */
-  err = svn_client_info2 (path, &revision, &revision, info_callback, &info, svn_depth_empty, NULL, ctx, subpool);
-#else /* CHECK_SVN_VERSION(1,7) */
-  /* get svn info for this file or directory */
-  err = svn_client_info3 (path, &revision, &revision, svn_depth_empty, FALSE, TRUE, NULL, info_callback, &info, ctx, subpool);
+#if CHECK_SVN_VERSION_G(1,9)
+  err = svn_client_info4 (path, &revision, &revision, svn_depth_empty, FALSE,
+                          TRUE, FALSE, NULL, info_callback, &info, ctx, subpool);
+#elif CHECK_SVN_VERSION_G(1,7)
+  err = svn_client_info3 (path, &revision, &revision, svn_depth_empty, FALSE,
+                          TRUE, NULL, info_callback, &info, ctx, subpool);
+#else
+  err = svn_client_info2 (path, &revision, &revision, info_callback, &info,
+                          svn_depth_empty, NULL, ctx, subpool);
 #endif
 
   svn_pool_destroy (subpool);

@@ -30,6 +30,7 @@
 #include <libxfce4util/libxfce4util.h>
 
 #include <subversion-1/svn_client.h>
+#include <subversion-1/svn_path.h>
 #include <subversion-1/svn_pools.h>
 
 #include "tsh-common.h"
@@ -43,6 +44,26 @@ struct thread_args {
   GtkWidget *dialog;
 	gchar *path;
 };
+
+static svn_error_t * tsh_client_cleanup(const char *path,
+                                        svn_client_ctx_t *ctx,
+                                        apr_pool_t *scratch_pool)
+{
+#if CHECK_SVN_VERSION_G(1,9)
+  const char *local_abspath;
+
+  if (svn_path_is_url(path))
+    return svn_error_createf(SVN_ERR_ILLEGAL_TARGET, NULL,
+                             _("'%s' is not a local path"), path);
+
+  svn_dirent_get_absolute(&local_abspath, path, scratch_pool);
+
+  return svn_client_cleanup2(local_abspath, TRUE, TRUE, TRUE, TRUE, FALSE, ctx,
+                             scratch_pool);
+#else
+  return svn_client_cleanup(path, ctx, scratch_pool);
+#endif
+}
 
 static gpointer cleanup_thread (gpointer user_data)
 {
@@ -58,7 +79,7 @@ static gpointer cleanup_thread (gpointer user_data)
 
   subpool = svn_pool_create (pool);
 
-	if ((err = svn_client_cleanup(path, ctx, subpool)))
+	if ((err = tsh_client_cleanup(path, ctx, subpool)))
 	{
     svn_pool_destroy (subpool);
 

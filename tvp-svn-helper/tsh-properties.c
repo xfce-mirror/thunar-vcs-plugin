@@ -29,7 +29,6 @@
 
 #include <libxfce4util/libxfce4util.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -48,6 +47,52 @@ struct thread_args {
   gchar *set_value;
   gboolean depth;
 };
+
+#if CHECK_SVN_VERSION_G(1,8)
+struct proplist_receiver_wrapper_baton {
+  void *baton;
+  svn_proplist_receiver_t receiver;
+};
+
+
+
+static svn_error_t *
+proplist_wrapper_receiver(void *baton,
+                          const char *path,
+                          apr_hash_t *prop_hash,
+                          apr_array_header_t *inherited_props,
+                          apr_pool_t *pool)
+{
+  struct proplist_receiver_wrapper_baton *plrwb = baton;
+
+  if (plrwb->receiver)
+    return plrwb->receiver(plrwb->baton, path, prop_hash, pool);
+
+  return SVN_NO_ERROR;
+}
+
+
+
+static void
+wrap_proplist_receiver(svn_proplist_receiver2_t *receiver2,
+                       void **receiver2_baton,
+                       svn_proplist_receiver_t receiver,
+                       void *receiver_baton,
+                       apr_pool_t *pool)
+{
+  struct proplist_receiver_wrapper_baton *plrwb = apr_palloc(pool,
+                                                             sizeof(*plrwb));
+
+  /* Set the user provided old format callback in the baton. */
+  plrwb->baton = receiver_baton;
+  plrwb->receiver = receiver;
+
+  *receiver2_baton = plrwb;
+  *receiver2 = proplist_wrapper_receiver;
+}
+#endif
+
+
 
 static gpointer properties_thread (gpointer user_data)
 {
@@ -77,13 +122,16 @@ static gpointer properties_thread (gpointer user_data)
   {
     value = set_value?svn_string_create(set_value, subpool):NULL;
 
-#if CHECK_SVN_VERSION_S(1,6)
-    if ((err = svn_client_propset3(NULL, set_key, value, path, depth, FALSE, SVN_INVALID_REVNUM, NULL, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
+#if CHECK_SVN_VERSION_G(1,7)
     paths = apr_array_make (subpool, 1, sizeof (const char *));
     APR_ARRAY_PUSH (paths, const char *) = path;
 
-    if ((err = svn_client_propset_local(set_key, value, paths, depth, FALSE, NULL, ctx, subpool)))
+    if ((err = svn_client_propset_local(set_key, value, paths, depth, FALSE,
+                                        NULL, ctx, subpool)))
+#else
+    if ((err = svn_client_propset3(NULL, set_key, value, path, depth, FALSE,
+                                   SVN_INVALID_REVNUM, NULL, NULL, ctx,
+                                   subpool)))
 #endif
     {
       //svn_pool_destroy (subpool);
@@ -106,7 +154,23 @@ static gpointer properties_thread (gpointer user_data)
   g_free (set_value);
 
   revision.kind = svn_opt_revision_unspecified;
-  if ((err = svn_client_proplist3(path, &revision, &revision, svn_depth_empty, NULL, tsh_proplist_func, dialog, ctx, subpool)))
+
+
+#if CHECK_SVN_VERSION_G(1,8)
+  svn_proplist_receiver2_t receiver2;
+  void *receiver2_baton;
+
+  wrap_proplist_receiver(&receiver2, &receiver2_baton, tsh_proplist_func,
+                         dialog, pool);
+
+  if ((err = svn_client_proplist4(path, &revision, &revision, svn_depth_empty,
+                                  NULL, FALSE, receiver2, receiver2_baton, ctx,
+                                  subpool)))
+#else
+  if ((err = svn_client_proplist3(path, &revision, &revision, svn_depth_empty,
+                                  NULL, tsh_proplist_func, dialog, ctx,
+                                  subpool)))
+#endif
   {
     svn_pool_destroy (subpool);
 

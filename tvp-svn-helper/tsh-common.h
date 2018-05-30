@@ -19,6 +19,8 @@
 #ifndef __TSH_COMMON_H__
 #define __TSH_COMMON_H__
 
+#include <subversion-1/svn_version.h>
+
 G_BEGIN_DECLS
 
 gboolean tsh_init (apr_pool_t**, svn_error_t**);
@@ -46,9 +48,15 @@ const gchar *tsh_status_to_string(enum svn_wc_status_kind status);
 
 gchar *tsh_is_working_copy (const gchar *, apr_pool_t *);
 
-#define CHECK_SVN_VERSION(major, minor) ((major == SVN_VER_MAJOR) && (minor == SVN_VER_MINOR))
-#define CHECK_SVN_VERSION_G(major, minor) ((major < SVN_VER_MAJOR) || ((major == SVN_VER_MAJOR) && (minor <= SVN_VER_MINOR)))
-#define CHECK_SVN_VERSION_S(major, minor) ((major > SVN_VER_MAJOR) || ((major == SVN_VER_MAJOR) && (minor >= SVN_VER_MINOR)))
+#define CHECK_SVN_VERSION(major, minor) \
+    (SVN_VER_MAJOR == (major) && SVN_VER_MINOR == (minor))
+#define CHECK_SVN_VERSION_G(major, minor) \
+    (SVN_VER_MAJOR > (major) || \
+    (SVN_VER_MAJOR == (major) && SVN_VER_MINOR > (minor)) || \
+    (SVN_VER_MAJOR == (major) && SVN_VER_MINOR == (minor)))
+#define CHECK_SVN_VERSION_S(major, minor) \
+    ((major > SVN_VER_MAJOR) || \
+    ((major == SVN_VER_MAJOR) && (minor >= SVN_VER_MINOR)))
 
 G_END_DECLS
 

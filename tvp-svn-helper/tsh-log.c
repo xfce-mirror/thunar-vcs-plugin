@@ -29,7 +29,6 @@
 
 #include <libxfce4util/libxfce4util.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 #include <subversion-1/svn_props.h>

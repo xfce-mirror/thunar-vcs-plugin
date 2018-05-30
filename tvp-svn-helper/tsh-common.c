@@ -31,7 +31,6 @@
 
 #include <apr_lib.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
@@ -139,7 +138,11 @@ gboolean tsh_create_context (svn_client_ctx_t **pctx, apr_pool_t *pool, svn_erro
 		return FALSE;
 
 	/* Create the client context */
+#if CHECK_SVN_VERSION_G(1,8)
+	if ((err = svn_client_create_context2 (pctx, NULL, pool)))
+#else
 	if ((err = svn_client_create_context (pctx, pool)))
+#endif
 	{
 		if (perr)
 			*perr = err;

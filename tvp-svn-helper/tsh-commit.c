@@ -29,7 +29,6 @@
 
 #include <libxfce4util/libxfce4util.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -95,7 +94,17 @@ static gpointer commit_thread (gpointer user_data)
           delete = g_slist_prepend (delete, info);
           break;
         case TSH_FILE_STATUS_UNVERSIONED:
-          if ((err = svn_client_add4(info->path, (info->flags&TSH_FILE_INFO_RECURSIVE)?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, FALSE, ctx, subpool)))
+#if CHECK_SVN_VERSION_G(1,8)
+          if ((err = svn_client_add5(info->path,
+                                     (info->flags & TSH_FILE_INFO_RECURSIVE) ?
+                                       svn_depth_infinity : svn_depth_empty,
+                                     FALSE, FALSE, FALSE, FALSE, ctx, subpool)))
+#else
+          if ((err = svn_client_add4(info->path,
+                                     (info->flags & TSH_FILE_INFO_RECURSIVE) ?
+                                       svn_depth_infinity : svn_depth_empty,
+                                     FALSE, FALSE, FALSE, ctx, subpool)))
+#endif
           {
             error_str = tsh_strerror(err);
             gdk_threads_enter();
@@ -124,10 +133,10 @@ static gpointer commit_thread (gpointer user_data)
       APR_ARRAY_PUSH (paths, const char *) = info->path;
     }
 
-#if CHECK_SVN_VERSION_S(1,6)
-    if ((err = svn_client_delete3(NULL, paths, FALSE, FALSE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
+#if CHECK_SVN_VERSION_G(1,7)
     if ((err = svn_client_delete4(paths, FALSE, FALSE, NULL, NULL, NULL, ctx, subpool)))
+#else
+    if ((err = svn_client_delete3(NULL, paths, FALSE, FALSE, NULL, ctx, subpool)))
 #endif
     {
       svn_pool_destroy (subpool);
@@ -185,10 +194,20 @@ static gpointer commit_thread (gpointer user_data)
       APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
     }
 
-#if CHECK_SVN_VERSION_S(1,6)
-    if ((err = svn_client_commit4(&commit_info, paths, recursive?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, NULL, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
-    if ((err = svn_client_commit5(paths, recursive?svn_depth_infinity:svn_depth_empty, FALSE, FALSE, FALSE, NULL, NULL, tsh_commit_func2, dialog, ctx, subpool)))
+#if CHECK_SVN_VERSION_G(1,9)
+    if ((err = svn_client_commit6(paths,
+                                  recursive?svn_depth_infinity:svn_depth_empty,
+                                  FALSE, FALSE, FALSE, FALSE, FALSE, NULL, NULL,
+                                  tsh_commit_func2, dialog, ctx, subpool)))
+#elif CHECK_SVN_VERSION_G(1,7)
+    if ((err = svn_client_commit5(paths,
+                                  recursive?svn_depth_infinity:svn_depth_empty,
+                                  FALSE, FALSE, FALSE, NULL, NULL,
+                                  tsh_commit_func2, dialog, ctx, subpool)))
+#else
+    if ((err = svn_client_commit4(&commit_info, paths,
+                                  recursive?svn_depth_infinity:svn_depth_empty,
+                                  FALSE, FALSE, NULL, NULL, ctx, subpool)))
 #endif
     {
       svn_pool_destroy (subpool);

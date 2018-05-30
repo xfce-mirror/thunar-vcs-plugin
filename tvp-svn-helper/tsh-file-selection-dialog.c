@@ -23,7 +23,6 @@
 #include <libxfce4util/libxfce4util.h>
 #include <gtk/gtk.h>
 
-#include <subversion-1/svn_version.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
 
@@ -191,12 +190,40 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
     while (*files)
     {
       svn_pool_clear(subpool);
-#if CHECK_SVN_VERSION(1,5)
-      if((err = svn_client_status3(NULL, *files, &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
-#elif CHECK_SVN_VERSION(1,6)
-      if((err = svn_client_status4(NULL, *files, &revision, tsh_file_selection_status_func3, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
-      if((err = svn_client_status5(NULL, ctx, *files, &revision, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, TRUE, NULL, tsh_file_selection_status_func, dialog, subpool)))
+
+#if CHECK_SVN_VERSION_G(1,9)
+      if((err = svn_client_status6(NULL, ctx, *files, &revision,
+                                   (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                     svn_depth_infinity : svn_depth_immediates,
+                                   selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                                   FALSE, TRUE,
+                                   selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                                   TRUE, TRUE, NULL,
+                                   tsh_file_selection_status_func, dialog, subpool)))
+#elif CHECK_SVN_VERSION_G(1,7)
+      if((err = svn_client_status5(NULL, ctx, *files, &revision,
+                                   (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                     svn_depth_infinity : svn_depth_immediates,
+                                   selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                                   FALSE, selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                                   TRUE, TRUE, NULL,
+                                   tsh_file_selection_status_func, dialog, subpool)))
+#elif CHECK_SVN_VERSION_G(1,6)
+      if((err = svn_client_status4(NULL, *files, &revision,
+                                   tsh_file_selection_status_func3, dialog,
+                                   (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                     svn_depth_infinity : svn_depth_immediates,
+                                   selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                                   FALSE, selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                                   TRUE, NULL, ctx, subpool)))
+#else
+      if((err = svn_client_status3(NULL, *files, &revision,
+                                   tsh_file_selection_status_func2, dialog,
+                                   (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                     svn_depth_infinity : svn_depth_immediates,
+                                   selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                                   FALSE, selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                                   TRUE, NULL, ctx, subpool)))
 #endif
       {
 	svn_pool_destroy (subpool);
@@ -211,12 +238,39 @@ tsh_file_selection_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogF
   }
   else
   {
-#if CHECK_SVN_VERSION(1,5)
-    if((err = svn_client_status3(NULL, "", &revision, tsh_file_selection_status_func2, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
+
+#if CHECK_SVN_VERSION_G(1,9)
+  if((err = svn_client_status6(NULL, ctx, "", &revision,
+                               (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                 svn_depth_infinity : svn_depth_immediates,
+                               selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                               FALSE, TRUE, selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                               TRUE, TRUE, NULL, tsh_file_selection_status_func,
+                               dialog, subpool)))
+#elif CHECK_SVN_VERSION_G(1,7)
+  if((err = svn_client_status5(NULL, ctx, "", &revision,
+                               (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                 svn_depth_infinity : svn_depth_immediates,
+                               selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                               FALSE, selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                               TRUE, TRUE, NULL, tsh_file_selection_status_func,
+                               dialog, subpool)))
 #elif CHECK_SVN_VERSION(1,6)
-    if((err = svn_client_status4(NULL, "", &revision, tsh_file_selection_status_func3, dialog, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, NULL, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
-    if((err = svn_client_status5(NULL, ctx, "", &revision, (selection_flags&TSH_FILE_SELECTION_FLAG_RECURSIVE)?svn_depth_infinity:svn_depth_immediates, selection_flags&TSH_FILE_SELECTION_FLAG_UNCHANGED, FALSE, selection_flags&TSH_FILE_SELECTION_FLAG_IGNORED, TRUE, TRUE, NULL, tsh_file_selection_status_func, dialog, subpool)))
+    if((err = svn_client_status4(NULL, "", &revision,
+                                 tsh_file_selection_status_func3, dialog,
+                                 (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                   svn_depth_infinity : svn_depth_immediates,
+                                 selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                                 FALSE, selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                                 TRUE, NULL, ctx, subpool)))
+#else
+    if((err = svn_client_status3(NULL, "", &revision, 
+                                 tsh_file_selection_status_func2, dialog,
+                                 (selection_flags & TSH_FILE_SELECTION_FLAG_RECURSIVE) ?
+                                   svn_depth_infinity : svn_depth_immediates,
+                                 selection_flags & TSH_FILE_SELECTION_FLAG_UNCHANGED,
+                                 FALSE, selection_flags & TSH_FILE_SELECTION_FLAG_IGNORED,
+                                 TRUE, NULL, ctx, subpool)))
 #endif
     {
       svn_pool_destroy (subpool);

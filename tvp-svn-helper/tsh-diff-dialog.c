@@ -26,7 +26,6 @@
 
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
-#include <subversion-1/svn_version.h>
 
 #include "tsh-common.h"
 #include "tsh-diff-dialog.h"

@@ -21,6 +21,8 @@
 
 #include <glib.h>
 
+#include <subversion-1/svn_version.h>
+
 G_BEGIN_DECLS;
 
 typedef struct
@@ -60,8 +62,12 @@ TvpSvnInfo *tvp_svn_backend_get_info (const gchar *uri);
 
 void     tvp_svn_info_free (TvpSvnInfo *info);
 
-#define CHECK_SVN_VERSION(major, minor) ((major == SVN_VER_MAJOR) && (minor == SVN_VER_MINOR))
-#define CHECK_SVN_VERSION_G(major, minor) ((major < SVN_VER_MAJOR) || ((major == SVN_VER_MAJOR) && (minor <= SVN_VER_MINOR)))
+#define CHECK_SVN_VERSION(major, minor) \
+    (SVN_VER_MAJOR == (major) && SVN_VER_MINOR == (minor))
+#define CHECK_SVN_VERSION_G(major, minor) \
+    (SVN_VER_MAJOR > (major) || \
+    (SVN_VER_MAJOR == (major) && SVN_VER_MINOR > (minor)) || \
+    (SVN_VER_MAJOR == (major) && SVN_VER_MINOR == (minor)))
 
 G_END_DECLS;
 
