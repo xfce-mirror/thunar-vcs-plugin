@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 06:30+0200\n"
-"PO-Revision-Date: 2018-05-30 12:33+0000\n"
+"POT-Creation-Date: 2018-05-31 06:30+0200\n"
+"PO-Revision-Date: 2018-05-31 12:22+0000\n"
 "Last-Translator: Igor <f2404@yandex.ru>\n"
 "Language-Team: Russian (http://www.transifex.com/xfce/thunar-plugins/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -669,8 +669,8 @@ msgid "Name"
 msgstr "Имя"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
-msgid "Jump to"
-msgstr "Перейти к"
+msgid "_Jump to"
+msgstr "_Перейти к"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:251
@@ -703,7 +703,8 @@ msgstr "Принудительно очистить."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:100
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:125
-#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:78
 #: ../tvp-git-helper/tgh-transfer-dialog.c:125
 #: ../tvp-svn-helper/tsh-copy.c:168 ../tvp-svn-helper/tsh-file-dialog.c:89
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
@@ -713,12 +714,11 @@ msgstr "Принудительно очистить."
 #: ../tvp-svn-helper/tsh-move.c:157
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:100
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:154
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:158
 #: ../tvp-svn-helper/tsh-trust-dialog.c:83
-msgid "OK"
-msgstr "Ок"
+msgid "_OK"
+msgstr "О_к"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -843,17 +843,13 @@ msgstr "_Сохранить"
 msgid "_Apply"
 msgstr "_Применить"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:231
-msgid "_OK"
-msgstr "О_к"
-
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
 msgstr "_Удалить"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
-msgid "Clear"
-msgstr "Очистить"
+msgid "C_lear"
+msgstr "О_чистить"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:385
 msgid "Stash description:"
@@ -1167,7 +1163,7 @@ msgstr "Существует"
 
 #: ../tvp-svn-helper/tsh-common.c:559
 msgid "Changelist set"
-msgstr "Установлено истории изменений"
+msgstr "История изменений установлена"
 
 #: ../tvp-svn-helper/tsh-common.c:560
 msgid "Changelist cleared"
@@ -1553,6 +1549,10 @@ msgstr "_От:"
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:141
 msgid "_To:"
 msgstr "_Кому:"
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
+msgid "OK"
+msgstr "Ок"
 
 #: ../tvp-svn-helper/tsh-status.c:104
 msgid "Status failed"
