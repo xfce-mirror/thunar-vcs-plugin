@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 06:30+0200\n"
-"PO-Revision-Date: 2018-05-30 14:31+0000\n"
+"POT-Creation-Date: 2018-05-31 06:30+0200\n"
+"PO-Revision-Date: 2018-05-31 15:51+0000\n"
 "Last-Translator: No Ne\n"
 "Language-Team: Polish (http://www.transifex.com/xfce/thunar-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
@@ -674,8 +674,8 @@ msgid "Name"
 msgstr "Nazwa"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
-msgid "Jump to"
-msgstr "Skocz do"
+msgid "_Jump to"
+msgstr "_Skocz do"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:251
@@ -708,7 +708,8 @@ msgstr "Wymusza czyszczenie"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:100
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:125
-#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:78
 #: ../tvp-git-helper/tgh-transfer-dialog.c:125
 #: ../tvp-svn-helper/tsh-copy.c:168 ../tvp-svn-helper/tsh-file-dialog.c:89
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
@@ -718,12 +719,11 @@ msgstr "Wymusza czyszczenie"
 #: ../tvp-svn-helper/tsh-move.c:157
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:100
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:154
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:158
 #: ../tvp-svn-helper/tsh-trust-dialog.c:83
-msgid "OK"
-msgstr "OK"
+msgid "_OK"
+msgstr "_OK"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -848,17 +848,13 @@ msgstr "_Zapisz"
 msgid "_Apply"
 msgstr "_Zastosuj"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:231
-msgid "_OK"
-msgstr "_OK"
-
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
 msgstr "_Skasuj"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
-msgid "Clear"
-msgstr "Wyczyść"
+msgid "C_lear"
+msgstr "_Wyczyść"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:385
 msgid "Stash description:"
@@ -1558,6 +1554,10 @@ msgstr "_Z"
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:141
 msgid "_To:"
 msgstr "_Do"
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
+msgid "OK"
+msgstr "OK"
 
 #: ../tvp-svn-helper/tsh-status.c:104
 msgid "Status failed"
