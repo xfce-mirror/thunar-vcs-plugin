@@ -91,7 +91,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
   dialog->filechooser = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
                                                     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
                                                     _("_Cancel"), GTK_RESPONSE_CANCEL,
-                                                    _("OK"), GTK_RESPONSE_OK,
+                                                    _("_OK"), GTK_RESPONSE_OK,
                                                     NULL);
 #else
 	dialog->repository = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
@@ -155,7 +155,7 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 
 	gtk_dialog_add_buttons (GTK_DIALOG (dialog),
 	                        _("_Cancel"), GTK_RESPONSE_CANCEL,
-	                        _("OK"), GTK_RESPONSE_OK,
+	                        _("_OK"), GTK_RESPONSE_OK,
 	                        NULL);
 	gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);

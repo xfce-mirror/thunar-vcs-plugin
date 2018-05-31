@@ -97,7 +97,7 @@ tsh_relocate_dialog_init (TshRelocateDialog *dialog)
   dialog->filechooser_from = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
                                                     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
                                                     _("_Cancel"), GTK_RESPONSE_CANCEL,
-                                                    _("OK"), GTK_RESPONSE_OK,
+                                                    _("_OK"), GTK_RESPONSE_OK,
                                                     NULL);
 #else
 	dialog->from = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
@@ -151,7 +151,7 @@ tsh_relocate_dialog_init (TshRelocateDialog *dialog)
   dialog->filechooser_to = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
                                                     GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
                                                     _("_Cancel"), GTK_RESPONSE_CANCEL,
-                                                    _("OK"), GTK_RESPONSE_OK,
+                                                    _("_OK"), GTK_RESPONSE_OK,
                                                     NULL);
 #else
 	dialog->to = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();

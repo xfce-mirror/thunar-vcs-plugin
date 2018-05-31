@@ -165,7 +165,7 @@ GThread *tsh_copy (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   dialog = gtk_file_chooser_dialog_new (_("Copy To"), NULL,
                                /*isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:*/GTK_FILE_CHOOSER_ACTION_SAVE,
                                _("_Cancel"), GTK_RESPONSE_CANCEL,
-                               _("OK"), GTK_RESPONSE_OK,
+                               _("_OK"), GTK_RESPONSE_OK,
                                NULL);
 
   gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), isdir?(absolute?absolute:from):g_path_get_dirname(absolute?absolute:from));

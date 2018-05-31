@@ -146,7 +146,7 @@ gboolean tgh_move (gchar **files, GPid *pid)
   dialog = gtk_file_chooser_dialog_new (_("Move To"), NULL,
       multiple?GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER:GTK_FILE_CHOOSER_ACTION_SAVE,
       _("_Cancel"), GTK_RESPONSE_CANCEL,
-      _("OK"), GTK_RESPONSE_OK,
+      _("_OK"), GTK_RESPONSE_OK,
       NULL);
 
   if (gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)

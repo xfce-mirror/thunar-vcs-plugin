@@ -238,7 +238,7 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (drop_clicked), dialog);
   gtk_widget_show (button);
 
-  dialog->clear = button = gtk_button_new_with_mnemonic (_("Clear"));
+  dialog->clear = button = gtk_button_new_with_mnemonic (_("C_lear"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (clear_clicked), dialog);
   gtk_widget_show (button);

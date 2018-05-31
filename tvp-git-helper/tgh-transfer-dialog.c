@@ -75,7 +75,7 @@ tgh_transfer_dialog_init (TghTransferDialog *dialog)
     dialog->filechooser = gtk_file_chooser_dialog_new(_("Select a folder"), GTK_WINDOW(dialog),
             GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER,
             _("_Cancel"), GTK_RESPONSE_CANCEL,
-            _("OK"), GTK_RESPONSE_OK,
+            _("_OK"), GTK_RESPONSE_OK,
             NULL);
 
     image = gtk_image_new_from_icon_name ("document-open", GTK_ICON_SIZE_MENU);
@@ -122,7 +122,7 @@ tgh_transfer_dialog_init (TghTransferDialog *dialog)
 
     gtk_dialog_add_buttons (GTK_DIALOG (dialog),
             _("_Cancel"), GTK_RESPONSE_CANCEL,
-            _("OK"), GTK_RESPONSE_OK,
+            _("_OK"), GTK_RESPONSE_OK,
             NULL);
     gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1);
     gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);

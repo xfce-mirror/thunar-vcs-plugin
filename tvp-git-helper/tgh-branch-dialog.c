@@ -127,7 +127,7 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   gtk_widget_show (tree_view);
   gtk_widget_show (scroll_window);
 
-  dialog->checkout = button = gtk_button_new_with_mnemonic (_("Jump to"));
+  dialog->checkout = button = gtk_button_new_with_mnemonic (_("_Jump to"));
   gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (checkout_clicked), dialog);
   gtk_widget_show (button);
