@@ -128,12 +128,12 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   gtk_widget_show (scroll_window);
 
   dialog->checkout = button = gtk_button_new_with_mnemonic (_("_Jump to"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (checkout_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->create = button = gtk_button_new_with_mnemonic (_("_New"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (create_clicked), dialog);
   gtk_widget_show (button);
 
@@ -143,7 +143,7 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   gtk_widget_hide (button);
 
   dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 

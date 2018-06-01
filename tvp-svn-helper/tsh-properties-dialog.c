@@ -238,12 +238,12 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
   gtk_widget_show (vpane);
 
 	dialog->set = button = gtk_button_new_with_mnemonic (_("_Add"));
-	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (set_clicked), dialog);
 	gtk_widget_show (button);
 
 	dialog->delete = button = gtk_button_new_with_mnemonic (_("_Remove"));
-	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+	gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (delete_clicked), dialog);
 	gtk_widget_show (button);
 

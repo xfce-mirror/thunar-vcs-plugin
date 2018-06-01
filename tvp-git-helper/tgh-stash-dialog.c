@@ -219,27 +219,27 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   gtk_widget_show (vpane);
 
   dialog->save = button = gtk_button_new_with_mnemonic (_("_Save"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (save_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->apply = button = gtk_button_new_with_mnemonic (_("_Apply"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (apply_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->pop = button = gtk_button_new_with_mnemonic (_("_OK"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (pop_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->drop = button = gtk_button_new_with_mnemonic (_("_Delete"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (drop_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->clear = button = gtk_button_new_with_mnemonic (_("C_lear"));
-  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, "");
+  gtk_dialog_add_action_widget (GTK_DIALOG (dialog), button, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (clear_clicked), dialog);
   gtk_widget_show (button);
 
