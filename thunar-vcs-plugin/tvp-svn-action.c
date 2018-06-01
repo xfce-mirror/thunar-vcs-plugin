@@ -452,8 +452,9 @@ static void tvp_action_exec (ThunarxMenuItem *item, TvpSvnAction *tvp_action)
   gchar *watch_path = NULL;
   gint pid;
   GError *error = NULL;
-  char *display = NULL;
+  char *display_name = NULL;
   GdkScreen *screen = gtk_window_get_screen (GTK_WINDOW (tvp_action->window));
+  GdkDisplay *display = gdk_screen_get_display (screen);
 
   iter = tvp_action->files;
 
@@ -521,9 +522,9 @@ static void tvp_action_exec (ThunarxMenuItem *item, TvpSvnAction *tvp_action)
 
   pid = 0;
   if (screen != NULL)
-    display = gdk_screen_make_display_name (screen);
+    display_name = g_strdup (gdk_display_get_name (display));
 
-  if (!g_spawn_async (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, tvp_setup_display_cb, display, &pid, &error))
+  if (!g_spawn_async (NULL, argv, NULL, G_SPAWN_DO_NOT_REAP_CHILD, tvp_setup_display_cb, display_name, &pid, &error))
   {
     GtkWidget *dialog = gtk_message_dialog_new (GTK_WINDOW (tvp_action->window), GTK_DIALOG_DESTROY_WITH_PARENT|GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, "Could not spawn \'" TVP_SVN_HELPER "\'");
     gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (dialog), "%s.", error->message);
@@ -536,7 +537,7 @@ static void tvp_action_exec (ThunarxMenuItem *item, TvpSvnAction *tvp_action)
     g_signal_emit(tvp_action, action_signal[SIGNAL_NEW_PROCESS], 0, &pid, watch_path);
   }
 
-  g_free (display);
+  g_free (display_name);
   g_free (watch_path);
   g_strfreev (argv);
 }
