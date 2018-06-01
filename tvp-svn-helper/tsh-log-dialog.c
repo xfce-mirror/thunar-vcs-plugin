@@ -111,7 +111,7 @@ tsh_log_dialog_init (TshLogDialog *dialog)
   GtkWidget *vpane;
   GtkWidget *strict_history;
   GtkWidget *merged_revisions;
-  GtkWidget *table;
+  GtkWidget *grid;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
   gint n_columns;
@@ -209,18 +209,20 @@ tsh_log_dialog_init (TshLogDialog *dialog)
 	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), pane, TRUE, TRUE, 0);
   gtk_widget_show (pane);
 
-  table = gtk_table_new (3, 2, FALSE);
+  grid = gtk_grid_new ();
 
   dialog->strict_history = strict_history = gtk_check_button_new_with_label (_("Stop On Copy"));
-  gtk_table_attach (GTK_TABLE (table), strict_history, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (strict_history, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), strict_history, 0, 0, 1, 1);
   gtk_widget_show (strict_history);
 
   dialog->merged_revisions = merged_revisions = gtk_check_button_new_with_label (_("Show Merged Revisions"));
-  gtk_table_attach (GTK_TABLE (table), merged_revisions, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (merged_revisions, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), merged_revisions, 1, 0, 1, 1);
   gtk_widget_show (merged_revisions);
 
-  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, FALSE, 0);
-  gtk_widget_show (table);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), grid, FALSE, FALSE, 0);
+  gtk_widget_show (grid);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Log"));
 

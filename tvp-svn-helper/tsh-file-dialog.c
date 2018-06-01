@@ -48,38 +48,28 @@ tsh_file_dialog_class_init (TshFileDialogClass *klass)
 static void
 tsh_file_dialog_init (TshFileDialog *dialog)
 {
-	GtkWidget *table;
+	GtkWidget *grid;
 	GtkWidget *label;
 
-	table = gtk_table_new (2, 2, FALSE);
+	grid = gtk_grid_new ();
 
-	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, TRUE, 0);
-	gtk_widget_show (table);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), grid, FALSE, TRUE, 0);
+	gtk_widget_show (grid);
 
 	label = gtk_label_new_with_mnemonic (_("_Certificate:"));
-	gtk_table_attach (GTK_TABLE (table), label,
-	                  0, 1, 0, 1,
-	                  GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
 
 	dialog->filename = gtk_file_chooser_button_new (_("Select a file"), GTK_FILE_CHOOSER_ACTION_OPEN);
-	gtk_table_attach (GTK_TABLE (table), dialog->filename,
-	                  1, 2, 0, 1,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (dialog->filename, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), dialog->filename, 1, 0, 1, 1);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->filename);
 	gtk_widget_show(label);
 	gtk_widget_show(dialog->filename);
 
 	dialog->may_save = gtk_check_button_new_with_label(_("Remember"));
-	gtk_table_attach (GTK_TABLE (table), dialog->may_save,
-	                  0, 2, 1, 2,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (dialog->may_save, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), dialog->may_save, 0, 1, 2, 1);
 	gtk_widget_show(dialog->may_save);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Certificate"));

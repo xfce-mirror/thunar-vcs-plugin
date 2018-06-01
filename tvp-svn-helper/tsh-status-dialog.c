@@ -102,10 +102,10 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	GtkWidget *update;
 	GtkWidget *no_ignore;
 	GtkWidget *ignore_externals;
-  GtkWidget *table;
+	GtkWidget *grid;
 	GtkCellRenderer *renderer;
 	GtkTreeModel *model;
-    GtkTreeIter iter;
+	GtkTreeIter iter;
 
 	scroll_window = gtk_scrolled_window_new (NULL, NULL);
 	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
@@ -153,7 +153,7 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
 	gtk_widget_show (tree_view);
 	gtk_widget_show (scroll_window);
 
-  table = gtk_table_new (3, 2, FALSE);
+  grid = gtk_grid_new ();
 
 	model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
 
@@ -217,35 +217,41 @@ tsh_status_dialog_init (TshStatusDialog *dialog)
     gtk_cell_layout_pack_start(GTK_CELL_LAYOUT (depth), renderer, TRUE);
     gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (depth), renderer, "text", 0);
 
-  gtk_table_attach (GTK_TABLE (table), depth, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_set_hexpand (depth, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), depth, 0, 0, 1, 1);
 	gtk_widget_show (depth);
 
 	dialog->get_all = get_all = gtk_check_button_new_with_label (_("Show Unmodified Files"));
-  gtk_table_attach (GTK_TABLE (table), get_all, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_set_hexpand (get_all, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), get_all, 0, 1, 1, 1);
 	gtk_widget_show (get_all);
 
 	dialog->unversioned = unversioned = gtk_check_button_new_with_label (_("Show Unversioned Files"));
-  gtk_table_attach (GTK_TABLE (table), unversioned, 0, 1, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_set_hexpand (unversioned, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), unversioned, 0, 2, 1, 1);
 	gtk_widget_show (unversioned);
 
 	dialog->no_ignore = no_ignore = gtk_check_button_new_with_label (_("Show Ignored Files"));
-  gtk_table_attach (GTK_TABLE (table), no_ignore, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_set_hexpand (no_ignore, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), no_ignore, 1, 0, 1, 1);
 	gtk_widget_show (no_ignore);
 
 	dialog->ignore_externals = ignore_externals = gtk_check_button_new_with_label (_("Hide Externals"));
-  gtk_table_attach (GTK_TABLE (table), ignore_externals, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_set_hexpand (ignore_externals, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), ignore_externals, 1, 1, 1, 1);
 	gtk_widget_show (ignore_externals);
 
 	dialog->update = update = gtk_check_button_new_with_label (_("Check Repository"));
-  gtk_table_attach (GTK_TABLE (table), update, 1, 2, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+	gtk_widget_set_hexpand (update, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), update, 1, 2, 1, 1);
 	gtk_widget_show (update);
 
-	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, FALSE, 0);
-  gtk_widget_show (table);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), grid, FALSE, FALSE, 0);
+	gtk_widget_show (grid);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Status"));
 
-  gtk_button_box_set_layout(GTK_BUTTON_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
+	gtk_button_box_set_layout(GTK_BUTTON_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
 
 	dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
 	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);

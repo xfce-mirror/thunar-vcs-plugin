@@ -93,7 +93,7 @@ tvp_svn_property_page_class_init (TvpSvnPropertyPageClass *klass)
 static void
 tvp_svn_property_page_init (TvpSvnPropertyPage *self)
 {
-  GtkWidget *table;
+  GtkWidget *grid;
   GtkWidget *label;
   GtkWidget *spacer;
   PangoAttrList *attr_list;
@@ -110,125 +110,133 @@ tvp_svn_property_page_init (TvpSvnPropertyPage *self)
 
   gtk_container_set_border_width (GTK_CONTAINER (self), 12);
 
-  table = gtk_table_new (9, 2, FALSE);
-  gtk_table_set_col_spacings (GTK_TABLE (table), 12);
-  gtk_table_set_row_spacings (GTK_TABLE (table), 6);
+  grid = gtk_grid_new ();
+  gtk_grid_set_column_spacing (GTK_GRID (grid), 12);
+  gtk_grid_set_row_spacing (GTK_GRID (grid), 6);
 
   label = gtk_label_new (_("URL:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 0, 1, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
   gtk_widget_show (label);
 
   self->url = label = gtk_label_new(_("Unknown"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
   gtk_label_set_ellipsize (GTK_LABEL (label), PANGO_ELLIPSIZE_START);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 0, 1, 1);
   gtk_widget_show (label);
 
   label = gtk_label_new (_("Revision:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 1, 2, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 1, 1, 1);
   gtk_widget_show (label);
 
   self->revision = label = gtk_label_new(_("Unknown"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 1, 1, 1);
   gtk_widget_show (label);
 
   label = gtk_label_new (_("Repository:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 2, 3, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 2, 1, 1);
   gtk_widget_show (label);
 
   self->repository = label = gtk_label_new(_("Unknown"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
   gtk_label_set_ellipsize (GTK_LABEL (label), PANGO_ELLIPSIZE_MIDDLE);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 2, 3, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 2, 1, 1);
   gtk_widget_show (label);
 
   /* Alignment in the most simple widget to find, for just doing a size request */
   spacer = g_object_new (GTK_TYPE_ALIGNMENT, "height-request", 12, NULL);
-  gtk_table_attach (GTK_TABLE (table), spacer, 0, 2, 3, 4, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), spacer, 0, 3, 2, 1);
   gtk_widget_show (spacer);
 
   label = gtk_label_new (_("Modified revision:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 4, 5, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 4, 1, 1);
   gtk_widget_show (label);
 
   self->modrev = label = gtk_label_new(_("Unknown"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 4, 5, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 4, 1, 1);
   gtk_widget_show (label);
 
   label = gtk_label_new (_("Modified date:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 5, 6, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 5, 1, 1);
   gtk_widget_show (label);
 
   self->moddate = label = gtk_label_new(_("Unknown"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
   gtk_label_set_ellipsize (GTK_LABEL (label), PANGO_ELLIPSIZE_END);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 5, 6, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 5, 1, 1);
   gtk_widget_show (label);
 
   label = gtk_label_new (_("Author:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 6, 7, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 6, 1, 1);
   gtk_widget_show (label);
 
   self->modauthor = label = gtk_label_new(_("Unknown"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 6, 7, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 6, 1, 1);
   gtk_widget_show (label);
 
   /* Alignment in the most simple widget to find, for just doing a size request */
   spacer = g_object_new (GTK_TYPE_ALIGNMENT, "height-request", 12, NULL);
-  gtk_table_attach (GTK_TABLE (table), spacer, 0, 2, 7, 8, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), spacer, 0, 7, 2, 1);
   gtk_widget_show (spacer);
 
   label = gtk_label_new (_("Changelist:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 8, 9, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 8, 1, 1);
   gtk_widget_show (label);
 
   self->changelist = label = gtk_label_new("");
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 8, 9, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 8, 1, 1);
   gtk_widget_show (label);
 
   /* Translators: Depth as in depth of recursion */
   label = gtk_label_new (_("Depth:"));
   gtk_misc_set_alignment (GTK_MISC (label), 1.0f, 0.5f);
   gtk_label_set_attributes (GTK_LABEL (label), attr_list);
-  gtk_table_attach (GTK_TABLE (table), label, 0, 1, 9, 10, GTK_FILL, GTK_FILL, 0, 0);
+  gtk_grid_attach (GTK_GRID (grid), label, 0, 9, 1, 1);
   gtk_widget_show (label);
 
   self->depth = label = gtk_label_new(_("Unknown"));
   gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
-  gtk_table_attach (GTK_TABLE (table), label, 1, 2, 9, 10, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (label, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), label, 1, 9, 1, 1);
   gtk_widget_show (label);
 
   /*TODO: kind, repos UUID, lock
    * wc info: size, schedule, copy from, text time, prop time, checksum, confilct, prejfile, working size */
 
-  gtk_container_add (GTK_CONTAINER (self), table);
-  gtk_widget_show (GTK_WIDGET (table));
+  gtk_container_add (GTK_CONTAINER (self), grid);
+  gtk_widget_show (GTK_WIDGET (grid));
 }
 
 

@@ -93,7 +93,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   GtkWidget *scroll_window;
   GtkWidget *button;
   PangoFontDescription *font_desc;
-  GtkWidget *table;
+  GtkWidget *grid;
   GtkTreeModel *model;
   GtkWidget *depth;
   GtkWidget *notice_ancestry;
@@ -148,7 +148,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
 
-  table = gtk_table_new (2, 2, FALSE);
+  grid = gtk_grid_new ();
   model = GTK_TREE_MODEL (gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_INT));
   dialog->depth = depth = gtk_combo_box_new_with_model (model);
 
@@ -196,25 +196,29 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   gtk_cell_layout_pack_start(GTK_CELL_LAYOUT (depth), renderer, TRUE);
   gtk_cell_layout_add_attribute (GTK_CELL_LAYOUT (depth), renderer, "text", 0);
 
-  gtk_table_attach (GTK_TABLE (table), depth, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (depth, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), depth, 0, 0, 1, 1);
   gtk_widget_show (depth);
 
   dialog->notice_ancestry = notice_ancestry = gtk_check_button_new_with_label (_("Notice ancestry"));
-  gtk_table_attach (GTK_TABLE (table), notice_ancestry, 1, 2, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (notice_ancestry, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), notice_ancestry, 1, 1, 1, 1);
   gtk_widget_show (notice_ancestry);
 
   dialog->no_diff_deleted = no_diff_deleted = gtk_check_button_new_with_label (_("Do not show differences for deleted files"));
-  gtk_table_attach (GTK_TABLE (table), no_diff_deleted, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (no_diff_deleted, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), no_diff_deleted, 0, 1, 1, 1);
   gtk_widget_show (no_diff_deleted);
 
 #if CHECK_SVN_VERSION_S(1,7)
   dialog->show_copies_as_adds = show_copies_as_adds = gtk_check_button_new_with_label (_("Show copies as additions"));
-  gtk_table_attach (GTK_TABLE (table), show_copies_as_adds, 1, 2, 0, 1, GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_hexpand (show_copies_as_adds, TRUE);
+  gtk_grid_attach (GTK_GRID (grid), show_copies_as_adds, 1, 0, 1, 1);
   gtk_widget_show (show_copies_as_adds);
 #endif
 
-  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, FALSE, 0);
-  gtk_widget_show (table);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), grid, FALSE, FALSE, 0);
+  gtk_widget_show (grid);
 
   gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
 }

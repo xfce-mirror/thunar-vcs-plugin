@@ -54,52 +54,35 @@ tsh_login_dialog_class_init (TshLoginDialogClass *klass)
 static void
 tsh_login_dialog_init (TshLoginDialog *dialog)
 {
-	GtkWidget *table;
+	GtkWidget *grid;
 
-	table = gtk_table_new (2, 3, FALSE);
+	grid = gtk_grid_new ();
 
-	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, TRUE, 0);
-	gtk_widget_show (table);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), grid, FALSE, TRUE, 0);
+	gtk_widget_show (grid);
 
 	dialog->user_lbl = gtk_label_new_with_mnemonic (_("_Username:"));
-	gtk_table_attach (GTK_TABLE (table), dialog->user_lbl,
-	                  0, 1, 0, 1,
-	                  GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_grid_attach (GTK_GRID (grid), dialog->user_lbl, 0, 0, 1, 1);
 
 	dialog->username = gtk_entry_new();
-	gtk_table_attach (GTK_TABLE (table), dialog->username,
-	                  1, 2, 0, 1,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (dialog->username, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), dialog->username, 1, 0, 1, 1);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (dialog->user_lbl), dialog->username);
 
 	dialog->pass_lbl = gtk_label_new_with_mnemonic (_("_Password:"));
-	gtk_table_attach (GTK_TABLE (table), dialog->pass_lbl,
-	                  0, 1, 1, 2,
-	                  GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_grid_attach (GTK_GRID (grid), dialog->pass_lbl, 0, 1, 1, 1);
 
 	dialog->password = gtk_entry_new();
-	gtk_table_attach (GTK_TABLE (table), dialog->password,
-	                  1, 2, 1, 2,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (dialog->password, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), dialog->password, 1, 1, 1, 1);
 
 	gtk_entry_set_visibility(GTK_ENTRY(dialog->password), FALSE);
 	gtk_label_set_mnemonic_widget (GTK_LABEL (dialog->pass_lbl), dialog->password);
 
 	dialog->may_save = gtk_check_button_new_with_label(_("Remember"));
-	gtk_table_attach (GTK_TABLE (table), dialog->may_save,
-	                  0, 2, 2, 3,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (dialog->may_save, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), dialog->may_save, 0, 2, 2, 1);
 	gtk_widget_show(dialog->may_save);
 
 	gtk_window_set_title (GTK_WINDOW (dialog), _("Login"));

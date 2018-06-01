@@ -65,7 +65,7 @@ tsh_transfer_dialog_class_init (TshTransferDialogClass *klass)
 static void
 tsh_transfer_dialog_init (TshTransferDialog *dialog)
 {
-	GtkWidget *table;
+	GtkWidget *grid;
 	GtkWidget *label;
 #ifdef USE_FILE_ENTRY_REPLACEMENT
   GtkWidget *box;
@@ -73,17 +73,13 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
   GtkWidget *image;
 #endif
 
-	table = gtk_table_new (2, 2, FALSE);
+	grid = gtk_grid_new ();
 
-	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), table, FALSE, TRUE, 0);
-	gtk_widget_show (table);
+	gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), grid, FALSE, TRUE, 0);
+	gtk_widget_show (grid);
 
 	label = gtk_label_new_with_mnemonic (_("_Repository:"));
-	gtk_table_attach (GTK_TABLE (table), label,
-	                  0, 1, 0, 1,
-	                  GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_grid_attach (GTK_GRID (grid), label, 0, 0, 1, 1);
 
 #ifdef USE_FILE_ENTRY_REPLACEMENT
   box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
@@ -110,17 +106,11 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 	gtk_widget_show(dialog->repository);
 	gtk_widget_show(button);
 
-  gtk_table_attach (GTK_TABLE (table), box,
-	                  1, 2, 0, 1,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (box, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), box, 1, 0, 1, 1);
 #else
-  gtk_table_attach (GTK_TABLE (table), dialog->repository,
-	                  1, 2, 0, 1,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (dialog->repository, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), dialog->repository, 1, 0, 1, 1);
 #endif
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->repository);
@@ -133,19 +123,11 @@ tsh_transfer_dialog_init (TshTransferDialog *dialog)
 #endif
 
 	label = gtk_label_new_with_mnemonic (_("_Directory:"));
-	gtk_table_attach (GTK_TABLE (table), label,
-	                  0, 1, 1, 2,
-	                  GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_grid_attach (GTK_GRID (grid), label, 0, 1, 1, 1);
 
 	dialog->path = gtk_file_chooser_button_new (_("Select a folder"), GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);
-	//dialog->path = gtk_file_chooser_entry_new(_("Select a folder"), GTK_FILE_CHOOSER_ACTION_OPEN);//GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER);//tsh_file_chooser_entry_new ();
-	gtk_table_attach (GTK_TABLE (table), dialog->path,
-	                  1, 2, 1, 2,
-	                  GTK_EXPAND | GTK_FILL,
-	                  GTK_FILL,
-	                  0, 0);
+	gtk_widget_set_hexpand (dialog->path, TRUE);
+	gtk_grid_attach (GTK_GRID (grid), dialog->path, 1, 1, 1, 1);
 
 	gtk_label_set_mnemonic_widget (GTK_LABEL (label), dialog->path);
 	gtk_widget_show(label);
