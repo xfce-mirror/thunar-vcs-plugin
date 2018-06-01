@@ -383,10 +383,12 @@ save_clicked (GtkButton *button, gpointer user_data)
   gtk_window_set_skip_taskbar_hint (GTK_WINDOW (name_dialog), TRUE);
 
   label = gtk_label_new (_("Stash description:"));
-  image = gtk_image_new_from_icon_name ("dialog-question", GTK_ICON_SIZE_DIALOG);
-  gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
+  gtk_label_set_yalign (GTK_LABEL (label), 0.0f);
 
-  gtk_misc_set_alignment   (GTK_MISC  (label), 0.0, 0.0);
+  image = gtk_image_new_from_icon_name ("dialog-question", GTK_ICON_SIZE_DIALOG);
+  gtk_widget_set_halign (image, GTK_ALIGN_CENTER);
+  gtk_widget_set_valign (image, GTK_ALIGN_START);
 
   desc_entry = gtk_entry_new ();
 

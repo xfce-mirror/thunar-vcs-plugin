@@ -185,7 +185,8 @@ tgh_log_dialog_init (TghLogDialog *dialog)
   box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
 
   dialog->revision_label = label = gtk_label_new (_("Revision"));
-  gtk_misc_set_alignment (GTK_MISC (label), 0.0f, 0.5f);
+  gtk_label_set_xalign (GTK_LABEL (label), 0.0f);
+  gtk_label_set_yalign (GTK_LABEL (label), 0.5f);
   gtk_label_set_selectable (GTK_LABEL (label), TRUE);
   gtk_box_pack_start (GTK_BOX (box), label, FALSE, TRUE, 0);
   gtk_widget_show (label);
