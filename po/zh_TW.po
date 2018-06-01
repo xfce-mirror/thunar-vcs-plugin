@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-30 06:30+0200\n"
-"PO-Revision-Date: 2018-05-31 03:10+0000\n"
+"POT-Creation-Date: 2018-05-31 06:30+0200\n"
+"PO-Revision-Date: 2018-06-01 02:47+0000\n"
 "Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/thunar-plugins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
@@ -667,8 +667,8 @@ msgid "Name"
 msgstr "名稱"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
-msgid "Jump to"
-msgstr "跳到"
+msgid "_Jump to"
+msgstr "跳到(_J)"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:251
@@ -701,7 +701,8 @@ msgstr "強迫清理。"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:100
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:125
-#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:78
 #: ../tvp-git-helper/tgh-transfer-dialog.c:125
 #: ../tvp-svn-helper/tsh-copy.c:168 ../tvp-svn-helper/tsh-file-dialog.c:89
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
@@ -711,12 +712,11 @@ msgstr "強迫清理。"
 #: ../tvp-svn-helper/tsh-move.c:157
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:100
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:154
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:158
 #: ../tvp-svn-helper/tsh-trust-dialog.c:83
-msgid "OK"
-msgstr "是"
+msgid "_OK"
+msgstr "是(_O)"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -841,17 +841,13 @@ msgstr "儲存(_S)"
 msgid "_Apply"
 msgstr "套用(_A)"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:231
-msgid "_OK"
-msgstr "是(_O)"
-
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
 msgstr "刪除(_D)"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
-msgid "Clear"
-msgstr "清除"
+msgid "C_lear"
+msgstr "清除(_L)"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:385
 msgid "Stash description:"
@@ -1551,6 +1547,10 @@ msgstr "從(_F)："
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:141
 msgid "_To:"
 msgstr "至(_T)："
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
+msgid "OK"
+msgstr "是"
 
 #: ../tvp-svn-helper/tsh-status.c:104
 msgid "Status failed"
