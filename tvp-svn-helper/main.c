@@ -246,10 +246,7 @@ int main (int argc, char *argv[])
   /* setup translation domain */
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
-  if (!g_thread_supported ())
-    g_thread_init (NULL);
 	gdk_threads_init ();
-  gdk_threads_enter ();
 
 	option_context = g_option_context_new("<action> [options] [args]");
 
@@ -507,8 +504,6 @@ int main (int argc, char *argv[])
 	}
 
 	svn_pool_destroy(pool);
-
-  gdk_threads_leave ();
 
 	return EXIT_SUCCESS;
 }
