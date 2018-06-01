@@ -253,8 +253,6 @@ tgh_stash_dialog_init (TghStashDialog *dialog)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
-  tgh_make_homogeneous (dialog->save, dialog->apply, dialog->pop, dialog->drop, dialog->close, dialog->cancel, NULL);
-
   gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
 }
 

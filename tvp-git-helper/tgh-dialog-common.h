@@ -23,8 +23,6 @@ G_BEGIN_DECLS
 
 void tgh_dialog_start (GtkDialog*, gboolean);
 
-void tgh_make_homogeneous (GtkWidget *, ...) G_GNUC_NULL_TERMINATED;
-
 G_END_DECLS
 
 #endif /*__TGH_DIALOG_COMMON_H__*/

@@ -33,7 +33,6 @@ static void selection_changed (GtkTreeView*, gpointer);
 static void cancel_clicked (GtkButton*, gpointer);
 static void set_clicked (GtkButton*, gpointer);
 static void delete_clicked (GtkButton*, gpointer);
-static void tsh_make_homogeneous (GtkWidget *, ...) G_GNUC_NULL_TERMINATED;
 
 struct _TshPropertiesDialog
 {
@@ -257,8 +256,6 @@ tsh_properties_dialog_init (TshPropertiesDialog *dialog)
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
 
-  tsh_make_homogeneous (dialog->set, dialog->delete, dialog->close, dialog->cancel, NULL);
-
 	gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
 }
 
@@ -280,38 +277,6 @@ tsh_properties_dialog_new (const gchar *title, GtkWindow *parent, GtkDialogFlags
 		gtk_window_set_destroy_with_parent (GTK_WINDOW(dialog), TRUE);
 
 	return GTK_WIDGET(dialog);
-}
-
-static void
-tsh_make_homogeneous (GtkWidget *first, ...)
-{
-  GtkWidget *iter;
-  GtkRequisition request;
-  gint max_width = 0;
-  gint max_height = 0;
-  va_list ap;
-
-  va_start (ap, first);
-  iter = first;
-  while (iter)
-  {
-    gtk_widget_size_request(iter, &request);
-    if (request.width > max_width)
-      max_width = request.width;
-    if (request.height > max_height)
-      max_height = request.height;
-    iter = va_arg (ap, GtkWidget *);
-  }
-  va_end (ap);
-
-  va_start (ap, first);
-  iter = first;
-  while (iter)
-  {
-    gtk_widget_set_size_request (iter, max_width, max_height);
-    iter = va_arg (ap, GtkWidget *);
-  }
-  va_end (ap);
 }
 
 void

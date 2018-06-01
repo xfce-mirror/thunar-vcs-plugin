@@ -48,36 +48,3 @@ close_response (GtkDialog *dialog, gint response, gpointer user_data)
 {
   gtk_widget_destroy (GTK_WIDGET (dialog));
 }
-
-void
-tgh_make_homogeneous (GtkWidget *first, ...)
-{
-  GtkWidget *iter;
-  GtkRequisition request;
-  gint max_width = 0;
-  gint max_height = 0;
-  va_list ap;
-
-  va_start (ap, first);
-  iter = first;
-  while (iter)
-  {
-    gtk_widget_size_request(iter, &request);
-    if (request.width > max_width)
-      max_width = request.width;
-    if (request.height > max_height)
-      max_height = request.height;
-    iter = va_arg (ap, GtkWidget *);
-  }
-  va_end (ap);
-
-  va_start (ap, first);
-  iter = first;
-  while (iter)
-  {
-    gtk_widget_set_size_request (iter, max_width, max_height);
-    iter = va_arg (ap, GtkWidget *);
-  }
-  va_end (ap);
-}
-

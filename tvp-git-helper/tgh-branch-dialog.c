@@ -147,8 +147,6 @@ tgh_branch_dialog_init (TghBranchDialog *dialog)
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
-  tgh_make_homogeneous (dialog->checkout, dialog->create, dialog->close, dialog->cancel, NULL);
-
   gtk_window_set_default_size (GTK_WINDOW (dialog), 500, 400);
 }
 
