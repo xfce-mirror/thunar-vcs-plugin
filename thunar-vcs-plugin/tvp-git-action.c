@@ -83,9 +83,7 @@ static guint action_signal[SIGNAL_COUNT];
 
 
 
-static GtkWidget *tvp_git_action_create_menu_item (ThunarxMenuItem *item);
-
-
+static void tvp_git_action_create_menu_item (ThunarxMenuItem *item);
 
 static void tvp_git_action_finalize (GObject*);
 
@@ -230,7 +228,7 @@ add_subaction_u (ThunarxMenu *menu, const gchar *name, const gchar *text, const 
 }
 
 
-static GtkWidget *
+static void
 tvp_git_action_create_menu_item (ThunarxMenuItem *item)
 {
     ThunarxMenu *menu;
@@ -269,8 +267,6 @@ tvp_git_action_create_menu_item (ThunarxMenuItem *item)
     if (tvp_action->property.is_parent)
         add_subaction (item, menu, "tvp::git::status", Q_("Menu|Status"), _("Status"), "dialog-information", "--status");
     add_subaction_u(menu, "tvp::git::tag", Q_("Menu|Tag"), _("Tag"), NULL, _("Tag"));
-
-    return item;
 }
 
 

@@ -89,9 +89,7 @@ static guint action_signal[SIGNAL_COUNT];
 
 
 
-static GtkWidget *tvp_svn_action_create_menu_item (ThunarxMenuItem *action);
-
-
+static void tvp_svn_action_create_menu_item (ThunarxMenuItem *action);
 
 static void tvp_svn_action_finalize (GObject*);
 
@@ -265,7 +263,7 @@ add_subaction_u (ThunarxMenu *menu, const gchar *name, const gchar *text, const 
 }
 
 
-static GtkWidget *
+static void
 tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
 {
   ThunarxMenu *menu;
@@ -423,8 +421,6 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
   {
     add_subaction (item, menu, "tvp::update", Q_("Menu|Update"), _("Update"), "view-refresh", "--update");
   }
-
-  return item;
 }
 
 
