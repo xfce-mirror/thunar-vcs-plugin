@@ -150,6 +150,6 @@ GThread *tsh_lock (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   args->message = message;
   args->steal = steal;
 
-	return g_thread_create (lock_thread, args, TRUE, NULL);
+	return g_thread_new (NULL, lock_thread, args);
 }
 

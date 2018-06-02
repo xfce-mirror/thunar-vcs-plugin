@@ -158,6 +158,6 @@ GThread *tsh_import (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->path = path;
 	args->url =	repository;
 
-	return g_thread_create (import_thread, args, TRUE, NULL);
+	return g_thread_new (NULL, import_thread, args);
 }
 

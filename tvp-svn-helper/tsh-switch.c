@@ -149,6 +149,6 @@ GThread *tsh_switch (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   args->path = path;
   args->url =	repository;
 
-  return g_thread_create (switch_thread, args, TRUE, NULL);
+  return g_thread_new (NULL, switch_thread, args);
 }
 

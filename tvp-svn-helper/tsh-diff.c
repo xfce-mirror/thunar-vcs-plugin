@@ -223,7 +223,7 @@ G_GNUC_END_IGNORE_DEPRECATIONS
 
 static void create_diff_thread(TshDiffDialog *dialog, struct thread_args *args)
 {
-	GThread *thread = g_thread_create(diff_thread, args, TRUE, NULL);
+	GThread *thread = g_thread_new (NULL, diff_thread, args);
   if (thread)
     tsh_replace_thread(thread);
   else
@@ -248,6 +248,6 @@ GThread *tsh_diff (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 
   g_signal_connect(dialog, "refresh-clicked", G_CALLBACK(create_diff_thread), args);
 
-  return g_thread_create (diff_thread, args, TRUE, NULL);
+  return g_thread_new (NULL, diff_thread, args);
 }
 

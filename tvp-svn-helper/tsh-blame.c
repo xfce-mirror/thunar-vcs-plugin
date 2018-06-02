@@ -127,6 +127,6 @@ GThread *tsh_blame (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->dialog = TSH_BLAME_DIALOG (dialog);
 	args->file = files?files[0]:"";
 
-	return g_thread_create (blame_thread, args, TRUE, NULL);
+	return g_thread_new (NULL, blame_thread, args);
 }
 

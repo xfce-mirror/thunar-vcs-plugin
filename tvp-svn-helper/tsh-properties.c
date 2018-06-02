@@ -215,7 +215,7 @@ G_GNUC_END_IGNORE_DEPRECATIONS
 
 static void create_properties_thread (TshPropertiesDialog *dialog, struct thread_args *args)
 {
-	GThread *thread = g_thread_create (properties_thread, args, TRUE, NULL);
+	GThread *thread = g_thread_new (NULL, properties_thread, args);
   if (thread)
     tsh_replace_thread (thread);
   else
@@ -266,6 +266,6 @@ GThread *tsh_properties (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   g_signal_connect(dialog, "set-clicked", G_CALLBACK(set_property), args);
   g_signal_connect(dialog, "delete-clicked", G_CALLBACK(delete_property), args);
 
-	return g_thread_create (properties_thread, args, TRUE, NULL);
+	return g_thread_new (NULL, properties_thread, args);
 }
 

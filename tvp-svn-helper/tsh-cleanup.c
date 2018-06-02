@@ -141,6 +141,6 @@ GThread *tsh_cleanup (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
   args->dialog = dialog;
 	args->path = path;
 
-	return g_thread_create (cleanup_thread, args, TRUE, NULL);
+	return g_thread_new (NULL, cleanup_thread, args);
 }
 

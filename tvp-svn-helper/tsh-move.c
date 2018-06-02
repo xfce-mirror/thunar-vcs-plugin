@@ -191,6 +191,6 @@ GThread *tsh_move (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->from = from;
 	args->to = to;
 
-	return g_thread_create (move_thread, args, TRUE, NULL);
+	return g_thread_new (NULL, move_thread, args);
 }
 

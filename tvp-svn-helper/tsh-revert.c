@@ -148,6 +148,6 @@ GThread *tsh_revert (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
 	args->dialog = TSH_NOTIFY_DIALOG (dialog);
 	args->files = files;
 
-	return g_thread_create (revert_thread, args, TRUE, NULL);
+	return g_thread_new (NULL, revert_thread, args);
 }
 
