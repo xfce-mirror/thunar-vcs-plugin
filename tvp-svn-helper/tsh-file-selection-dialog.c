@@ -152,7 +152,6 @@ tsh_file_selection_dialog_init (TshFileSelectionDialog *dialog)
 	                        _("_Cancel"), GTK_RESPONSE_CANCEL,
 	                        _("_OK"), GTK_RESPONSE_OK,
 	                        NULL);
-	gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_OK, GTK_RESPONSE_CANCEL, -1);
 	gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
 	gtk_window_set_default_size (GTK_WINDOW (dialog), 300, 200);

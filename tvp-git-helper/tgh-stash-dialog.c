@@ -376,7 +376,6 @@ save_clicked (GtkButton *button, gpointer user_data)
   gint result;
 
   name_dialog = gtk_dialog_new_with_buttons (NULL, GTK_WINDOW (dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, _("_Cancel"), GTK_RESPONSE_CANCEL, _("_Save"), GTK_RESPONSE_ACCEPT, NULL);
-  gtk_dialog_set_alternative_button_order (GTK_DIALOG (dialog), GTK_RESPONSE_ACCEPT, GTK_RESPONSE_CANCEL, -1);
   gtk_window_set_resizable (GTK_WINDOW (name_dialog), FALSE);
   gtk_window_set_skip_taskbar_hint (GTK_WINDOW (name_dialog), TRUE);
 
