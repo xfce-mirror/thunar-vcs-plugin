@@ -1,3 +1,16 @@
+0.1.90
+=====
+- GTK3 Port.
+- Thunarx-3 Port (Thunar >=1.7.0 required).
+- Remove spaces before ellipsis (Bug #14264).
+- Translation updates.
+
+0.1.5
+=====
+- Tons of svn improvements/fixes, courtesy of Stefan Sperling.
+- Fixed MACRO naming in makefiles (Bug #7850).
+- Fixed invalid usage of g_quark_from_static_string (Bug #6322).
+
 0.1.4
 =====
 - Make it possible to disable subversion.
