@@ -92,7 +92,6 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   GtkTextBuffer *text_buffer;
   GtkWidget *scroll_window;
   GtkWidget *button;
-  PangoFontDescription *font_desc;
   GtkWidget *grid;
   GtkTreeModel *model;
   GtkWidget *depth;
@@ -110,6 +109,7 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   dialog->text_view = text_view = gtk_text_view_new ();
   gtk_text_view_set_editable(GTK_TEXT_VIEW(text_view), FALSE);
   gtk_text_view_set_cursor_visible(GTK_TEXT_VIEW(text_view), FALSE);
+  gtk_text_view_set_monospace (GTK_TEXT_VIEW (text_view), TRUE);
   text_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(dialog->text_view));
   dialog->tag_red = gtk_text_buffer_create_tag(text_buffer, NULL,
                                                "foreground", "red", NULL);
@@ -120,13 +120,6 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
                                                 "weight",
                                                 PANGO_WEIGHT_BOLD, NULL);
   dialog->current_line = 0;
-
-  font_desc = pango_font_description_from_string("Monospace");
-  if (font_desc)
-  {
-    gtk_widget_modify_font(text_view, font_desc);
-    pango_font_description_free(font_desc);
-  }
 
   gtk_container_add (GTK_CONTAINER (scroll_window), text_view);
   gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (dialog))), scroll_window, TRUE, TRUE, 0);
