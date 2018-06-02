@@ -111,22 +111,24 @@ tvp_svn_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tvp-svn-helper\"				\
 	$(AM_CPPFLAGS)
 
-tvp_svn_helper_CFLAGS =							\
+tvp_svn_helper_CFLAGS =						\
 	$(PLATFORM_CFLAGS)						\
-	$(LIBXFCE4UTIL_CFLAGS)						\
+	$(LIBXFCE4UTIL_CFLAGS)					\
 	$(GTK_CFLAGS)							\
 	$(GLIB_CFLAGS)							\
 	$(GTHREAD_CFLAGS)						\
 	$(GOBJECT_CFLAGS)						\
-	$(APR_CFLAGS)
+	$(APR_CFLAGS)							\
+	$(EXO_CFLAGS)
 
-tvp_svn_helper_LDFLAGS =						\
+tvp_svn_helper_LDFLAGS =					\
 	$(PLATFORM_LDFLAGS)						\
-	$(LIBXFCE4UTIL_LIBS)						\
-	$(GTK_LIBS)							\
+	$(LIBXFCE4UTIL_LIBS)					\
+	$(GTK_LIBS)								\
 	$(GLIB_LIBS)							\
 	$(GTHREAD_LIBS)							\
 	$(GOBJECT_LIBS)							\
-	$(APR_LIBS)
+	$(APR_LIBS)								\
+	$(EXO_LIBS)
 
 # vi:set ts=8 sw=8 noet ai nocindent:

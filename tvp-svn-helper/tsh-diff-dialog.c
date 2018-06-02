@@ -21,11 +21,13 @@
 #include <config.h>
 #endif
 
-#include <libxfce4util/libxfce4util.h>
 #include <gtk/gtk.h>
 
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
+
+#include <exo/exo.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include "tsh-common.h"
 #include "tsh-diff-dialog.h"
@@ -139,12 +141,12 @@ tsh_diff_dialog_init (TshDiffDialog *dialog)
   gtk_widget_hide (button);
 
   dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
-  gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
+  gtk_box_pack_end (GTK_BOX (exo_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->refresh = button = gtk_button_new_with_mnemonic (_("_Refresh"));
-  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (exo_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
 

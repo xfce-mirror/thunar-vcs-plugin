@@ -20,8 +20,10 @@
 #include <config.h>
 #endif
 
-#include <libxfce4util/libxfce4util.h>
 #include <gtk/gtk.h>
+
+#include <exo/exo.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include "tgh-common.h"
 #include "tgh-blame-dialog.h"
@@ -132,7 +134,7 @@ tgh_blame_dialog_init (TghBlameDialog *dialog)
   gtk_widget_hide (button);
 
   dialog->cancel = button = gtk_button_new_with_mnemonic(_("_Cancel"));
-  gtk_box_pack_end (GTK_BOX (gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
+  gtk_box_pack_end (GTK_BOX (exo_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 

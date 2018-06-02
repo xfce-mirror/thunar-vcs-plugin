@@ -79,18 +79,20 @@ tvp_git_helper_CPPFLAGS =						\
 	-DG_LOG_DOMAIN=\"tvp-git-helper\"				\
 	$(AM_CPPFLAGS)
 
-tvp_git_helper_CFLAGS =							\
-	$(PLATFORM_CFLAGS)						\
-	$(LIBXFCE4UTIL_CFLAGS)						\
-	$(GTK_CFLAGS)							\
-	$(GLIB_CFLAGS)							\
-	$(GOBJECT_CFLAGS)
+tvp_git_helper_CFLAGS =					\
+	$(PLATFORM_CFLAGS)					\
+	$(LIBXFCE4UTIL_CFLAGS)				\
+	$(GTK_CFLAGS)						\
+	$(GLIB_CFLAGS)						\
+	$(GOBJECT_CFLAGS)					\
+	$(EXO_CFLAGS)
 
-tvp_git_helper_LDFLAGS =						\
-	$(PLATFORM_LDFLAGS)						\
-	$(LIBXFCE4UTIL_LIBS)						\
+tvp_git_helper_LDFLAGS =				\
+	$(PLATFORM_LDFLAGS)					\
+	$(LIBXFCE4UTIL_LIBS)				\
 	$(GTK_LIBS)							\
-	$(GLIB_LIBS)							\
-	$(GOBJECT_LIBS)
+	$(GLIB_LIBS)						\
+	$(GOBJECT_LIBS)						\
+	$(EXO_LIBS)
 
 # vi:set ts=8 sw=8 noet ai nocindent:
