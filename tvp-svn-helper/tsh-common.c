@@ -289,19 +289,23 @@ tsh_auth_simple_plaintext_prompt(svn_boolean_t *may_save_plaintext,
     GtkWidget *dialog;
     gint result;
 
-	gdk_threads_enter();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
-	dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO, _("Store password a plaintext?"));
+  dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_QUESTION, GTK_BUTTONS_YES_NO, _("Store password a plaintext?"));
 
-	result = gtk_dialog_run(GTK_DIALOG(dialog));
+  result = gtk_dialog_run(GTK_DIALOG(dialog));
 
-    gtk_widget_destroy(dialog);
+  gtk_widget_destroy(dialog);
 
-    gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
-    *may_save_plaintext = (result == GTK_RESPONSE_YES);
+ *may_save_plaintext = (result == GTK_RESPONSE_YES);
 
-	return SVN_NO_ERROR;
+  return SVN_NO_ERROR;
 }
 
 static svn_error_t*
@@ -319,7 +323,9 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 	if(!username)
 		username = "";
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   dialog = tsh_login_dialog_new(NULL, NULL, 0, username, TRUE, may_save);
 
@@ -331,7 +337,10 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 
 		tsh_cancel();
 
-		gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+    gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -344,7 +353,10 @@ tsh_auth_simple_prompt(svn_auth_cred_simple_t **cred,
 
 	gtk_widget_destroy(dialog);
 
-	gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 	return SVN_NO_ERROR;
 }
 
@@ -359,7 +371,9 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
   svn_auth_cred_username_t *ret;
   TshLoginDialog *login_dialog;
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   dialog = tsh_login_dialog_new(NULL, NULL, 0, "", FALSE, may_save);
 
@@ -371,7 +385,10 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
 
 		tsh_cancel();
 
-		gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -383,7 +400,10 @@ tsh_auth_username_prompt(svn_auth_cred_username_t **cred,
 
 	gtk_widget_destroy(dialog);
 
-	gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 	return SVN_NO_ERROR;
 }
 
@@ -400,7 +420,9 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
   svn_auth_cred_ssl_server_trust_t *ret;
   TshTrustDialog *trust_dialog;
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   dialog = tsh_trust_dialog_new(NULL, NULL, 0, failures, may_save);
 
@@ -412,7 +434,10 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
 
 		tsh_cancel();
 
-		gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -424,7 +449,10 @@ tsh_auth_ssl_server_trust_prompt(svn_auth_cred_ssl_server_trust_t **cred,
 
 	gtk_widget_destroy(dialog);
 
-	gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 	return SVN_NO_ERROR;
 }
 
@@ -439,7 +467,9 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
   svn_auth_cred_ssl_client_cert_t *ret;
   TshFileDialog *file_dialog;
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   dialog = tsh_file_dialog_new(NULL, NULL, 0, may_save);
 
@@ -451,7 +481,9 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
 
 		tsh_cancel();
 
-		gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+    gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -463,7 +495,10 @@ tsh_auth_ssl_client_cert_prompt(svn_auth_cred_ssl_client_cert_t **cred,
 
 	gtk_widget_destroy(dialog);
 
-	gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 	return SVN_NO_ERROR;
 }
 
@@ -478,7 +513,9 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
   svn_auth_cred_ssl_client_cert_pw_t *ret;
   TshLoginDialog *login_dialog;
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   dialog = tsh_login_dialog_new(NULL, NULL, 0, NULL, TRUE, may_save);
 
@@ -490,7 +527,10 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 
 		tsh_cancel();
 
-		gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+    gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 		return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
 	}
 
@@ -502,7 +542,10 @@ tsh_auth_ssl_client_cert_pw_prompt(svn_auth_cred_ssl_client_cert_pw_t **cred,
 
 	gtk_widget_destroy(dialog);
 
-	gdk_threads_leave();
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
+  gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
 	return SVN_NO_ERROR;
 }
 
@@ -829,9 +872,12 @@ tsh_notify_func2(void *baton, const svn_wc_notify_t *notify, apr_pool_t *pool)
     default:
       break;
 	}
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   tsh_notify_dialog_add(dialog, action, path, mime);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 }
 
 void
@@ -839,10 +885,12 @@ tsh_status_func2(void *baton, const char *path, svn_wc_status2_t *status)
 {
 	TshStatusDialog *dialog = TSH_STATUS_DIALOG (baton);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   if (tsh_status_dialog_get_show_unversioned (dialog) || status->entry)
     tsh_status_dialog_add(dialog, path, tsh_status_to_string(status->text_status), tsh_status_to_string(status->prop_status), tsh_status_to_string(status->repos_text_status), tsh_status_to_string(status->repos_prop_status));
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 }
 
 svn_error_t *
@@ -857,10 +905,12 @@ tsh_status_func(void *baton, const char *path, const svn_client_status_t *status
 {
   TshStatusDialog *dialog = TSH_STATUS_DIALOG (baton);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   if (tsh_status_dialog_get_show_unversioned (dialog) || status->versioned)
     tsh_status_dialog_add(dialog, path, tsh_status_to_string(status->text_status), tsh_status_to_string(status->prop_status), tsh_status_to_string(status->repos_text_status), tsh_status_to_string(status->repos_prop_status));
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   return SVN_NO_ERROR;
 }
@@ -871,9 +921,11 @@ tsh_log_msg_func2(const char **log_msg, const char **tmp_file, const apr_array_h
   int i;
   GtkWidget *dialog = baton;
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
-	gtk_widget_show (dialog);
+  gtk_widget_show (dialog);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   if(commit_items)
   {
@@ -897,30 +949,45 @@ tsh_log_msg_func2(const char **log_msg, const char **tmp_file, const apr_array_h
         state = _("Copied");
       else if(item->state_flags & SVN_CLIENT_COMMIT_ITEM_LOCK_TOKEN)
         state = _("Unlocked");
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
       gdk_threads_enter();
       tsh_log_message_dialog_add(TSH_LOG_MESSAGE_DIALOG(dialog), state, item->path);
       gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
     }
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
+
     if(gtk_dialog_run(GTK_DIALOG(dialog)) != GTK_RESPONSE_OK)
     {
       gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
       tsh_cancel();
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
       gdk_threads_enter();
       gtk_widget_hide (dialog);
       gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
       return svn_error_create(SVN_ERR_CANCELLED, NULL, NULL);
     }
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_leave();
+
     gdk_threads_enter();
     *log_msg = tsh_log_message_dialog_get_message(TSH_LOG_MESSAGE_DIALOG(dialog));
     *tmp_file = NULL;
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
   }
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
-	gtk_widget_hide (dialog);
+  gtk_widget_hide (dialog);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
 	return SVN_NO_ERROR;
 }
@@ -981,9 +1048,11 @@ tsh_log_func (void *baton, svn_log_entry_t *log_entry, apr_pool_t *pool)
 
   parent = tsh_log_dialog_top (dialog);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   path = tsh_log_dialog_add(dialog, parent, files, log_entry->revision, author, date, message);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   if (log_entry->has_children)
     tsh_log_dialog_push (dialog, path);
@@ -1010,9 +1079,11 @@ tsh_blame_func2 (void *baton, apr_int64_t line_no, svn_revnum_t revision, const 
     apr_ctime((date_str = g_new0(gchar, APR_CTIME_LEN)), date_val);
   }
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   tsh_blame_dialog_add(dialog, line_no, revision, author, date_str, line);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   g_free(date_str);
 
@@ -1041,9 +1112,11 @@ tsh_blame_func3 (void *baton, svn_revnum_t start_revision, svn_revnum_t end_revi
     apr_ctime((date = g_new0(gchar, APR_CTIME_LEN)), date_val);
   }
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   tsh_blame_dialog_add(dialog, line_no, revision, author, date, line);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   g_free(author);
   g_free(date);
@@ -1063,9 +1136,13 @@ tsh_proplist_func (void *baton, const char *path, apr_hash_t *prop_hash, apr_poo
     gchar *str_value;
     apr_hash_this(hi, (const void**)&name, NULL, (void**)&value);
     str_value = g_strndup (value->data, value->len);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
     tsh_properties_dialog_add (dialog, name, str_value);
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     g_free (str_value);
   }
 
@@ -1081,9 +1158,11 @@ tsh_commit_func2  (const svn_commit_info_t *commit_info, void *baton, apr_pool_t
 
   if(commit_info->post_commit_err)
   {
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Error"), commit_info->post_commit_err, NULL);
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
   }
   else
   {
@@ -1097,9 +1176,11 @@ tsh_commit_func2  (const svn_commit_info_t *commit_info, void *baton, apr_pool_t
       message = _("Local action");
     }
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
   }
 
   return SVN_NO_ERROR;

@@ -168,9 +168,12 @@ static gpointer diff_thread (gpointer user_data)
         break;
 
       svn_stringbuf_appendcstr(buf, APR_EOL_STR);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
       gdk_threads_enter();
       tsh_diff_dialog_add(dialog, buf->data, buf->len);
       gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
     }
     svn_pool_destroy(iterpool);
     err = svn_stream_close(stream);
@@ -179,9 +182,11 @@ static gpointer diff_thread (gpointer user_data)
   }
   svn_pool_destroy (subpool);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   tsh_diff_dialog_done (dialog);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   tsh_reset_cancel();
   return GINT_TO_POINTER (TRUE);
@@ -194,12 +199,20 @@ on_error:
     gchar *error_str;
 
     error_str = tsh_strerror(err);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Diff failed"));
     gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(error), FALSE);
     tsh_diff_dialog_done (dialog);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     g_free(error_str);
   }
   

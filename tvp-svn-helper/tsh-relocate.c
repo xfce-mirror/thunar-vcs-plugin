@@ -72,12 +72,20 @@ static gpointer relocate_thread (gpointer user_data)
       svn_pool_destroy (subpool);
 
       error_str = tsh_strerror(err);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
       gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
       gtk_widget_destroy(dialog);
       dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_ERROR, GTK_BUTTONS_CLOSE, _("Relocate failed"));
       gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(dialog), "%s", error_str);
       tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
       gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
       g_free(error_str);
 
       svn_error_clear(err);
@@ -87,11 +95,17 @@ static gpointer relocate_thread (gpointer user_data)
 
   svn_pool_destroy (subpool);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
   gtk_widget_destroy(dialog);
   dialog = gtk_message_dialog_new(NULL, 0, GTK_MESSAGE_OTHER, GTK_BUTTONS_CLOSE, _("Relocate finished"));
   tsh_dialog_start(GTK_DIALOG(dialog), TRUE);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   tsh_reset_cancel();
   return GINT_TO_POINTER (TRUE);

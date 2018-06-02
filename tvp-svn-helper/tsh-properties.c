@@ -134,19 +134,23 @@ static gpointer properties_thread (gpointer user_data)
                                    subpool)))
 #endif
     {
-      //svn_pool_destroy (subpool);
       error_str = tsh_strerror(err);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
       gdk_threads_enter();
-      //tsh_properties_dialog_done (dialog);
+G_GNUC_END_IGNORE_DEPRECATIONS
 
       error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Set property failed"));
       gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
       tsh_dialog_start(GTK_DIALOG(error), FALSE);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
       gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
       g_free(error_str);
 
       svn_error_clear(err);
-      //return GINT_TO_POINTER (FALSE);
     }
   }
 
@@ -175,13 +179,21 @@ static gpointer properties_thread (gpointer user_data)
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     tsh_properties_dialog_done (dialog);
 
     error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Properties failed"));
     gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(error), FALSE);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     g_free(error_str);
 
     svn_error_clear(err);
@@ -191,9 +203,11 @@ static gpointer properties_thread (gpointer user_data)
 
   svn_pool_destroy (subpool);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   tsh_properties_dialog_done (dialog);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   tsh_reset_cancel();
   return GINT_TO_POINTER (TRUE);

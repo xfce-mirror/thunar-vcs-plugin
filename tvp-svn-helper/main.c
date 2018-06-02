@@ -245,7 +245,9 @@ int main (int argc, char *argv[])
   /* setup translation domain */
   xfce_textdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR, "UTF-8");
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
 	gdk_threads_init ();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
 	option_context = g_option_context_new("<action> [options] [args]");
 

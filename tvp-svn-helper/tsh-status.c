@@ -62,6 +62,7 @@ static gpointer status_thread (gpointer user_data)
   GtkWidget *error;
   gchar *error_str;
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   depth = tsh_status_dialog_get_depth(dialog);
   get_all = tsh_status_dialog_get_show_unmodified(dialog);
@@ -69,6 +70,7 @@ static gpointer status_thread (gpointer user_data)
   no_ignore = tsh_status_dialog_get_show_ignore(dialog);
   ignore_externals = tsh_status_dialog_get_hide_externals(dialog);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   subpool = svn_pool_create (pool);
 
@@ -98,13 +100,21 @@ static gpointer status_thread (gpointer user_data)
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     tsh_status_dialog_done (dialog);
 
     error = gtk_message_dialog_new(GTK_WINDOW(dialog), GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR, GTK_BUTTONS_OK, _("Status failed"));
     gtk_message_dialog_format_secondary_text(GTK_MESSAGE_DIALOG(error), "%s", error_str);
     tsh_dialog_start(GTK_DIALOG(error), FALSE);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     g_free(error_str);
 
     svn_error_clear(err);
@@ -114,9 +124,11 @@ static gpointer status_thread (gpointer user_data)
 
   svn_pool_destroy (subpool);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
   tsh_status_dialog_done (dialog);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   tsh_reset_cancel();
   return GINT_TO_POINTER (TRUE);

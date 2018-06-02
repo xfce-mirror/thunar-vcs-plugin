@@ -96,10 +96,14 @@ static gpointer copy_thread (gpointer user_data)
     svn_pool_destroy (subpool);
 
     error_str = tsh_strerror(err);
+
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
     gdk_threads_enter();
     tsh_notify_dialog_add(dialog, _("Failed"), error_str, NULL);
     tsh_notify_dialog_done (dialog);
     gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
+
     g_free(error_str);
 
     svn_error_clear(err);
@@ -121,12 +125,14 @@ static gpointer copy_thread (gpointer user_data)
 
   svn_pool_destroy (subpool);
 
+G_GNUC_BEGIN_IGNORE_DEPRECATIONS
   gdk_threads_enter();
 #if CHECK_SVN_VERSION_S(1,6)
   tsh_notify_dialog_add(dialog, _("Completed"), message, NULL);
 #endif
   tsh_notify_dialog_done (dialog);
   gdk_threads_leave();
+G_GNUC_END_IGNORE_DEPRECATIONS
 
   tsh_reset_cancel();
   return GINT_TO_POINTER (TRUE);
