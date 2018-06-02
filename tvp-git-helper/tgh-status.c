@@ -30,7 +30,9 @@
 
 #include <glib.h>
 #include <gtk/gtk.h>
+
 #include <libxfce4util/libxfce4util.h>
+
 #include "tgh-common.h"
 #include "tgh-dialog-common.h"
 #include "tgh-status-dialog.h"

@@ -20,15 +20,10 @@
 #include <config.h>
 #endif
 
-#include <thunarx/thunarx.h>
-
-#include <libxfce4util/libxfce4util.h>
-
-#include <thunar-vcs-plugin/tvp-svn-action.h>
-
 #include <string.h>
-
 #include <sys/wait.h>
+#include <libxfce4util/libxfce4util.h>
+#include <thunar-vcs-plugin/tvp-svn-action.h>
 
 
 

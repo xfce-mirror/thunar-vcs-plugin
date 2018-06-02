@@ -22,9 +22,9 @@
 
 #include <thunarx/thunarx.h>
 
-#include <libxfce4util/libxfce4util.h>
-
 #include <subversion-1/svn_types.h>
+
+#include <libxfce4util/libxfce4util.h>
 
 #include <thunar-vcs-plugin/tvp-svn-backend.h>
 #include <thunar-vcs-plugin/tvp-svn-property-page.h>

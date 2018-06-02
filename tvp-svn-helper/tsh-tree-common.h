@@ -19,6 +19,8 @@
 #ifndef __TSH_TREE_COMMON_H__
 #define __TSH_TREE_COMMON_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 typedef void (*TshTreeMoveInfoFunc) (GtkTreeStore*, GtkTreeIter*, GtkTreeIter*);

@@ -36,7 +36,6 @@
 #include "tsh-common.h"
 #include "tsh-add.h"
 #include "tsh-blame.h"
-//#include "tsh-changelist.h"
 #include "tsh-checkout.h"
 #include "tsh-cleanup.h"
 #include "tsh-commit.h"

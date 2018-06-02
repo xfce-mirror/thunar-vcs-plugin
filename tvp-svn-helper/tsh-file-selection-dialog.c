@@ -21,7 +21,6 @@
 #endif
 
 #include <libxfce4util/libxfce4util.h>
-#include <gtk/gtk.h>
 
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>

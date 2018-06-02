@@ -21,7 +21,6 @@
 #endif
 
 #include <libxfce4util/libxfce4util.h>
-#include <gtk/gtk.h>
 
 #include "tsh-tree-common.h"
 #include "tsh-log-message-dialog.h"

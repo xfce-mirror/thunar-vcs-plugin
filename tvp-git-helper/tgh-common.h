@@ -19,6 +19,8 @@
 #ifndef __TGH_COMMON_H__
 #define __TGH_COMMON_H__
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 void tgh_replace_child  (gboolean, GPid);

@@ -21,13 +21,11 @@
 #include <config.h>
 #endif
 
-#include <gtk/gtk.h>
+#include <exo/exo.h>
+#include <libxfce4util/libxfce4util.h>
 
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>
-
-#include <exo/exo.h>
-#include <libxfce4util/libxfce4util.h>
 
 #include "tsh-common.h"
 #include "tsh-diff-dialog.h"

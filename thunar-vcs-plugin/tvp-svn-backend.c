@@ -20,8 +20,6 @@
 #include <config.h>
 #endif
 
-#include <glib.h>
-
 #include <subversion-1/svn_cmdline.h>
 #include <subversion-1/svn_client.h>
 #include <subversion-1/svn_pools.h>

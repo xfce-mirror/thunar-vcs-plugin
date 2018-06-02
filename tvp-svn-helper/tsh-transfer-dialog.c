@@ -20,9 +20,10 @@
 #include <config.h>
 #endif
 
-#include <libxfce4util/libxfce4util.h>
-#include <gtk/gtk.h>
 #include <dirent.h>
+
+#include <libxfce4util/libxfce4util.h>
+
 #include <subversion-1/svn_path.h>
 
 #define USE_FILE_ENTRY_REPLACEMENT 1
