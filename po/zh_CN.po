@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-24 06:30+0200\n"
-"PO-Revision-Date: 2018-05-25 00:22+0000\n"
+"POT-Creation-Date: 2018-06-01 06:30+0200\n"
+"PO-Revision-Date: 2018-06-07 03:01+0000\n"
 "Last-Translator: 玉堂白鹤 <yjwork@qq.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/thunar-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -30,8 +30,8 @@ msgstr "添加"
 #: ../thunar-vcs-plugin/tvp-git-action.c:242
 #: ../thunar-vcs-plugin/tvp-svn-action.c:280 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
-#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
-#: ../tvp-svn-helper/tsh-add.c:132
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:135
+#: ../tvp-svn-helper/tsh-add.c:148
 msgid "Add"
 msgstr "添加"
 
@@ -103,7 +103,7 @@ msgstr "提交"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 #: ../tvp-git-helper/tgh-log-dialog.c:153
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
-#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
+#: ../tvp-svn-helper/tsh-commit.c:260 ../tvp-svn-helper/tsh-commit.c:273
 msgid "Commit"
 msgstr "提交"
 
@@ -114,7 +114,7 @@ msgstr "比对"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:253
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:291
-#: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
+#: ../tvp-svn-helper/tsh-diff.c:226 ../tvp-svn-helper/tsh-diff-dialog.c:136
 msgid "Diff"
 msgstr "比对"
 
@@ -169,7 +169,7 @@ msgstr "移动"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:260
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-git-helper/main.c:177
-#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
+#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:174
 msgid "Move"
 msgstr "移动"
 
@@ -240,7 +240,7 @@ msgstr "状态"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:121
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:150
 #: ../tvp-svn-helper/tsh-status-dialog.c:246
 msgid "Status"
 msgstr "状态"
@@ -293,7 +293,7 @@ msgid "Menu|Copy"
 msgstr "复制"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:283
-#: ../tvp-svn-helper/tsh-copy.c:177
+#: ../tvp-svn-helper/tsh-copy.c:183
 msgid "Copy"
 msgstr "复制"
 
@@ -302,7 +302,7 @@ msgid "Menu|Delete"
 msgstr "删除"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:287
-#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
+#: ../tvp-svn-helper/tsh-delete.c:139 ../tvp-svn-helper/tsh-delete.c:152
 msgid "Delete"
 msgstr "删除"
 
@@ -311,7 +311,7 @@ msgid "Menu|Export"
 msgstr "导出"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:295
-#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
+#: ../tvp-svn-helper/tsh-export.c:113 ../tvp-svn-helper/tsh-export.c:131
 msgid "Export"
 msgstr "导出"
 
@@ -320,7 +320,7 @@ msgid "Menu|Import"
 msgstr "导入"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:299
-#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
+#: ../tvp-svn-helper/tsh-import.c:120 ../tvp-svn-helper/tsh-import.c:138
 msgid "Import"
 msgstr "导入"
 
@@ -354,7 +354,7 @@ msgid "Menu|Relocate"
 msgstr "重定位"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:388 ../tvp-svn-helper/main.c:323
-#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate.c:124
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:214
 msgid "Relocate"
 msgstr "重定位"
@@ -364,7 +364,7 @@ msgid "Menu|Resolved"
 msgstr "已解决"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:319
-#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-common.c:539 ../tvp-svn-helper/tsh-resolved.c:115
 #: ../tvp-svn-helper/tsh-resolved.c:128
 msgid "Resolved"
 msgstr "已解决"
@@ -382,7 +382,7 @@ msgid "Menu|Revert"
 msgstr "恢复"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:327
-#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
+#: ../tvp-svn-helper/tsh-revert.c:119 ../tvp-svn-helper/tsh-revert.c:132
 msgid "Revert"
 msgstr "恢复"
 
@@ -391,7 +391,7 @@ msgid "Menu|Switch"
 msgstr "切换"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:335
-#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
+#: ../tvp-svn-helper/tsh-switch.c:119 ../tvp-svn-helper/tsh-switch.c:132
 msgid "Switch"
 msgstr "切换"
 
@@ -409,7 +409,7 @@ msgid "Menu|Update"
 msgstr "更新"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:343
-#: ../tvp-svn-helper/tsh-update.c:120
+#: ../tvp-svn-helper/tsh-update.c:119
 msgid "Update"
 msgstr "更新"
 
@@ -425,10 +425,10 @@ msgstr "URL："
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
-#: ../tvp-svn-helper/tsh-common.c:605 ../tvp-svn-helper/tsh-common.c:693
-#: ../tvp-svn-helper/tsh-common.c:705 ../tvp-svn-helper/tsh-common.c:730
-#: ../tvp-svn-helper/tsh-common.c:747 ../tvp-svn-helper/tsh-common.c:776
-#: ../tvp-svn-helper/tsh-common.c:879
+#: ../tvp-svn-helper/tsh-common.c:608 ../tvp-svn-helper/tsh-common.c:696
+#: ../tvp-svn-helper/tsh-common.c:708 ../tvp-svn-helper/tsh-common.c:733
+#: ../tvp-svn-helper/tsh-common.c:750 ../tvp-svn-helper/tsh-common.c:779
+#: ../tvp-svn-helper/tsh-common.c:882
 msgid "Unknown"
 msgstr "未知"
 
@@ -464,7 +464,7 @@ msgstr "深度："
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
-#: ../tvp-svn-helper/tsh-common.c:594
+#: ../tvp-svn-helper/tsh-common.c:597
 msgid "Exclude"
 msgstr "排除"
 
@@ -491,7 +491,7 @@ msgstr "文件"
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
-#: ../tvp-svn-helper/tsh-diff-dialog.c:179
+#: ../tvp-svn-helper/tsh-diff-dialog.c:178
 #: ../tvp-svn-helper/tsh-properties-dialog.c:212
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
@@ -617,7 +617,7 @@ msgstr "日期"
 #: ../tvp-git-helper/tgh-stash-dialog.c:248
 #: ../tvp-git-helper/tgh-status-dialog.c:138
 #: ../tvp-svn-helper/tsh-blame-dialog.c:134
-#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-diff-dialog.c:138
 #: ../tvp-svn-helper/tsh-log-dialog.c:239
 #: ../tvp-svn-helper/tsh-notify-dialog.c:116
 #: ../tvp-svn-helper/tsh-properties-dialog.c:252
@@ -638,15 +638,15 @@ msgstr "关闭(_C)"
 #: ../tvp-git-helper/tgh-status-dialog.c:128
 #: ../tvp-git-helper/tgh-transfer-dialog.c:77
 #: ../tvp-git-helper/tgh-transfer-dialog.c:124
-#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:161
-#: ../tvp-svn-helper/tsh-diff-dialog.c:142
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:167
+#: ../tvp-svn-helper/tsh-diff-dialog.c:141
 #: ../tvp-svn-helper/tsh-file-dialog.c:88
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:153
 #: ../tvp-svn-helper/tsh-lock-dialog.c:74
 #: ../tvp-svn-helper/tsh-log-dialog.c:229
 #: ../tvp-svn-helper/tsh-login-dialog.c:108
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:120
-#: ../tvp-svn-helper/tsh-move.c:152 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-move.c:156 ../tvp-svn-helper/tsh-notify-dialog.c:119
 #: ../tvp-svn-helper/tsh-properties-dialog.c:255
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:99
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:153
@@ -669,8 +669,8 @@ msgid "Name"
 msgstr "名称"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
-msgid "Jump to"
-msgstr "跳转到"
+msgid "_Jump to"
+msgstr "跳至(_J)"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:251
@@ -703,22 +703,23 @@ msgstr "强制清除。"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:100
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:125
-#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:78
 #: ../tvp-git-helper/tgh-transfer-dialog.c:125
-#: ../tvp-svn-helper/tsh-copy.c:162 ../tvp-svn-helper/tsh-file-dialog.c:89
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:155
+#: ../tvp-svn-helper/tsh-copy.c:168 ../tvp-svn-helper/tsh-file-dialog.c:89
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
 #: ../tvp-svn-helper/tsh-lock-dialog.c:75
 #: ../tvp-svn-helper/tsh-login-dialog.c:109
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:121
-#: ../tvp-svn-helper/tsh-move.c:153
+#: ../tvp-svn-helper/tsh-move.c:157
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:100
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:154
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:218
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:158
 #: ../tvp-svn-helper/tsh-trust-dialog.c:83
-msgid "OK"
-msgstr "确定"
+msgid "_OK"
+msgstr "确定(_O)"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -728,16 +729,16 @@ msgstr "克隆动作已完成"
 msgid "Cloning..."
 msgstr "正在克隆..."
 
-#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
-#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
-#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
-#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
-#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
-#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
-#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
-#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
-#: ../tvp-svn-helper/tsh-update.c:95
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:86
+#: ../tvp-svn-helper/tsh-add.c:110 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:111 ../tvp-svn-helper/tsh-commit.c:146
+#: ../tvp-svn-helper/tsh-commit.c:217 ../tvp-svn-helper/tsh-copy.c:100
+#: ../tvp-svn-helper/tsh-delete.c:99 ../tvp-svn-helper/tsh-export.c:78
+#: ../tvp-svn-helper/tsh-import.c:86 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:90 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:94
+#: ../tvp-svn-helper/tsh-switch.c:77 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:94
 msgid "Failed"
 msgstr "已失败的"
 
@@ -749,7 +750,7 @@ msgstr "未追踪的"
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:93
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
 #: ../tvp-git-helper/tgh-status-dialog.c:103
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:115
 #: ../tvp-svn-helper/tsh-log-dialog.c:190
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:98
 #: ../tvp-svn-helper/tsh-notify-dialog.c:93
@@ -765,7 +766,7 @@ msgid "State"
 msgstr "状态"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:114
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:143
 msgid "Select/Unselect all"
 msgstr "全选/全不选"
 
@@ -794,7 +795,7 @@ msgstr "文件"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:252
 #: ../tvp-git-helper/tgh-status-dialog.c:133
-#: ../tvp-svn-helper/tsh-diff-dialog.c:147
+#: ../tvp-svn-helper/tsh-diff-dialog.c:146
 #: ../tvp-svn-helper/tsh-log-dialog.c:234
 #: ../tvp-svn-helper/tsh-status-dialog.c:255
 msgid "_Refresh"
@@ -804,7 +805,7 @@ msgstr "刷新(_R)"
 msgid "Move finished"
 msgstr "移除动作已完成"
 
-#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:154
 msgid "Move To"
 msgstr "移至"
 
@@ -843,17 +844,13 @@ msgstr "保存(_S)"
 msgid "_Apply"
 msgstr "接受(_A)"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:231
-msgid "_OK"
-msgstr "确定(_O)"
-
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
 msgstr "删除(_D)"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
-msgid "Clear"
-msgstr ""
+msgid "C_lear"
+msgstr "清除(_L)"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:385
 msgid "Stash description:"
@@ -1041,353 +1038,358 @@ msgstr "更新动作相关选项："
 msgid "Not enough arguments provided"
 msgstr "没有提供足够的参数"
 
-#: ../tvp-svn-helper/tsh-blame.c:82
+#: ../tvp-svn-helper/tsh-blame.c:81
 msgid "Blame failed"
 msgstr "归咎动作已失败"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:68
+#: ../tvp-svn-helper/tsh-cleanup.c:57
+#, c-format
+msgid "'%s' is not a local path"
+msgstr "'%s' 不是本地路径"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:89
 msgid "Cleanup failed"
 msgstr "清理动作已失败"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:83
+#: ../tvp-svn-helper/tsh-cleanup.c:104
 msgid "Cleanup finished"
 msgstr "清理动作已完成"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:97
+#: ../tvp-svn-helper/tsh-cleanup.c:118
 msgid "Cleaning up..."
 msgstr "正在清理..."
 
-#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
-#: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
-#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
-#: ../tvp-svn-helper/tsh-move.c:99
+#: ../tvp-svn-helper/tsh-commit.c:230 ../tvp-svn-helper/tsh-common.c:826
+#: ../tvp-svn-helper/tsh-common.c:1092 ../tvp-svn-helper/tsh-copy.c:113
+#: ../tvp-svn-helper/tsh-delete.c:112 ../tvp-svn-helper/tsh-import.c:97
+#: ../tvp-svn-helper/tsh-move.c:103
 #, c-format
 msgid "At revision: %ld"
 msgstr "在修订版本：%ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:216
+#: ../tvp-svn-helper/tsh-commit.c:235
 msgid "Nothing to do"
 msgstr "无事可做"
 
-#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
-#: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
-#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
-#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
+#: ../tvp-svn-helper/tsh-commit.c:245 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:1101
+#: ../tvp-svn-helper/tsh-copy.c:126 ../tvp-svn-helper/tsh-delete.c:125
+#: ../tvp-svn-helper/tsh-import.c:104 ../tvp-svn-helper/tsh-move.c:116
 msgid "Completed"
 msgstr "已完成的"
 
-#: ../tvp-svn-helper/tsh-commit.c:259
+#: ../tvp-svn-helper/tsh-commit.c:278
 msgid "Commit Message"
 msgstr "提交消息"
 
-#: ../tvp-svn-helper/tsh-common.c:291
+#: ../tvp-svn-helper/tsh-common.c:294
 msgid "Store password a plaintext?"
 msgstr "明文存储密码？"
 
-#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
-#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
-#: ../tvp-svn-helper/tsh-common.c:781 ../tvp-svn-helper/tsh-common.c:885
+#: ../tvp-svn-helper/tsh-common.c:533 ../tvp-svn-helper/tsh-common.c:542
+#: ../tvp-svn-helper/tsh-common.c:549 ../tvp-svn-helper/tsh-common.c:737
+#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:888
 msgid "Added"
 msgstr "已添加的"
 
-#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:590
-#: ../tvp-svn-helper/tsh-common.c:894
+#: ../tvp-svn-helper/tsh-common.c:534 ../tvp-svn-helper/tsh-common.c:593
+#: ../tvp-svn-helper/tsh-common.c:897
 msgid "Copied"
 msgstr "已复制的"
 
-#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:538
-#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:736
-#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:887
+#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
 msgid "Deleted"
 msgstr "已删除的"
 
-#: ../tvp-svn-helper/tsh-common.c:533
+#: ../tvp-svn-helper/tsh-common.c:536
 msgid "Restored"
 msgstr "已恢复的"
 
-#: ../tvp-svn-helper/tsh-common.c:534
+#: ../tvp-svn-helper/tsh-common.c:537
 msgid "Reverted"
 msgstr "已恢复的"
 
-#: ../tvp-svn-helper/tsh-common.c:535
+#: ../tvp-svn-helper/tsh-common.c:538
 msgid "Revert failed"
 msgstr "恢复动作已失败"
 
-#: ../tvp-svn-helper/tsh-common.c:537
+#: ../tvp-svn-helper/tsh-common.c:540
 msgid "Skipped"
 msgstr "已跳过的"
 
-#: ../tvp-svn-helper/tsh-common.c:540
+#: ../tvp-svn-helper/tsh-common.c:543
 msgid "Updated"
 msgstr "已更新的"
 
-#: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
-#: ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:547
+#: ../tvp-svn-helper/tsh-common.c:746
 msgid "External"
 msgstr "外部"
 
-#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
-#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:893
 msgid "Modified"
 msgstr "已修改的"
 
-#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:737
-#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:883
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:740
+#: ../tvp-svn-helper/tsh-common.c:793 ../tvp-svn-helper/tsh-common.c:886
 msgid "Replaced"
 msgstr "已替换的"
 
-#: ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:552
 msgid "Transmitting"
 msgstr "正在提交"
 
-#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
+#: ../tvp-svn-helper/tsh-common.c:554 ../tvp-svn-helper/tsh-common.c:602
 msgid "Locked"
 msgstr "已锁定的"
 
-#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
+#: ../tvp-svn-helper/tsh-common.c:555 ../tvp-svn-helper/tsh-common.c:899
 msgid "Unlocked"
 msgstr "已解锁的"
 
-#: ../tvp-svn-helper/tsh-common.c:553
+#: ../tvp-svn-helper/tsh-common.c:556
 msgid "Lock failed"
 msgstr "锁定动作已失败"
 
-#: ../tvp-svn-helper/tsh-common.c:554
+#: ../tvp-svn-helper/tsh-common.c:557
 msgid "Unlock failed"
 msgstr "解锁动作已失败"
 
-#: ../tvp-svn-helper/tsh-common.c:555
+#: ../tvp-svn-helper/tsh-common.c:558
 msgid "Exists"
 msgstr "存在"
 
-#: ../tvp-svn-helper/tsh-common.c:556
+#: ../tvp-svn-helper/tsh-common.c:559
 msgid "Changelist set"
 msgstr "更新列表设置"
 
-#: ../tvp-svn-helper/tsh-common.c:557
+#: ../tvp-svn-helper/tsh-common.c:560
 msgid "Changelist cleared"
 msgstr "更新列表已清除"
 
-#: ../tvp-svn-helper/tsh-common.c:558
+#: ../tvp-svn-helper/tsh-common.c:561
 msgid "Changelist moved"
 msgstr "更新列表已移动"
 
-#: ../tvp-svn-helper/tsh-common.c:559
+#: ../tvp-svn-helper/tsh-common.c:562
 msgid "Merge begin"
 msgstr "合并开始"
 
-#: ../tvp-svn-helper/tsh-common.c:560
+#: ../tvp-svn-helper/tsh-common.c:563
 msgid "Foreign merge begin"
 msgstr "外部合并开始"
 
-#: ../tvp-svn-helper/tsh-common.c:561
+#: ../tvp-svn-helper/tsh-common.c:564
 msgid "Replace"
 msgstr "替换"
 
-#: ../tvp-svn-helper/tsh-common.c:563
+#: ../tvp-svn-helper/tsh-common.c:566
 msgid "Property added"
 msgstr "属性已添加"
 
-#: ../tvp-svn-helper/tsh-common.c:564
+#: ../tvp-svn-helper/tsh-common.c:567
 msgid "Property modified"
 msgstr "属性已修改"
 
-#: ../tvp-svn-helper/tsh-common.c:565
+#: ../tvp-svn-helper/tsh-common.c:568
 msgid "Property deleted"
 msgstr "属性已删除"
 
-#: ../tvp-svn-helper/tsh-common.c:566
+#: ../tvp-svn-helper/tsh-common.c:569
 msgid "Property nonexisting"
 msgstr "属性不存在"
 
-#: ../tvp-svn-helper/tsh-common.c:567
+#: ../tvp-svn-helper/tsh-common.c:570
 msgid "Revision property set"
 msgstr "校订属性设置"
 
-#: ../tvp-svn-helper/tsh-common.c:568
+#: ../tvp-svn-helper/tsh-common.c:571
 msgid "Revision property deleted"
 msgstr "校订属性已删除"
 
-#: ../tvp-svn-helper/tsh-common.c:569
+#: ../tvp-svn-helper/tsh-common.c:572
 msgid "Merge completed"
 msgstr "合并已完成"
 
-#: ../tvp-svn-helper/tsh-common.c:570
+#: ../tvp-svn-helper/tsh-common.c:573
 msgid "Tree conflict"
 msgstr "树冲突"
 
-#: ../tvp-svn-helper/tsh-common.c:571
+#: ../tvp-svn-helper/tsh-common.c:574
 msgid "External failed"
 msgstr "外部失败"
 
-#: ../tvp-svn-helper/tsh-common.c:574
+#: ../tvp-svn-helper/tsh-common.c:577
 msgid "Started"
 msgstr "已开始的"
 
-#: ../tvp-svn-helper/tsh-common.c:575
+#: ../tvp-svn-helper/tsh-common.c:578
 msgid "Skipped obstruction"
 msgstr "已跳过的障碍"
 
-#: ../tvp-svn-helper/tsh-common.c:576
+#: ../tvp-svn-helper/tsh-common.c:579
 msgid "Skipped working only"
 msgstr "仅已跳过的正在工作中的"
 
-#: ../tvp-svn-helper/tsh-common.c:577
+#: ../tvp-svn-helper/tsh-common.c:580
 msgid "Skipped access denied"
 msgstr "已跳过的访问拒绝"
 
-#: ../tvp-svn-helper/tsh-common.c:578
+#: ../tvp-svn-helper/tsh-common.c:581
 msgid "External removed"
 msgstr "外部移除"
 
-#: ../tvp-svn-helper/tsh-common.c:579
+#: ../tvp-svn-helper/tsh-common.c:582
 msgid "Shadowed add"
 msgstr "已隐藏的添加"
 
-#: ../tvp-svn-helper/tsh-common.c:580
+#: ../tvp-svn-helper/tsh-common.c:583
 msgid "Shadowed update"
 msgstr "已隐藏的更新"
 
-#: ../tvp-svn-helper/tsh-common.c:581
+#: ../tvp-svn-helper/tsh-common.c:584
 msgid "Shadowed delete"
 msgstr "已隐藏的删除"
 
-#: ../tvp-svn-helper/tsh-common.c:582
+#: ../tvp-svn-helper/tsh-common.c:585
 msgid "Merge record info"
 msgstr "合并记录信息"
 
-#: ../tvp-svn-helper/tsh-common.c:583
+#: ../tvp-svn-helper/tsh-common.c:586
 msgid "Upgraded path"
 msgstr "已升级的路径"
 
-#: ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:587
 msgid "Merge record info begin"
 msgstr "合并记录信息开始"
 
-#: ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:588
 msgid "Merge elide info"
 msgstr "合并省略信息"
 
-#: ../tvp-svn-helper/tsh-common.c:586
+#: ../tvp-svn-helper/tsh-common.c:589
 msgid "Patch"
 msgstr "补丁"
 
-#: ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:590
 msgid "Applied hunk"
 msgstr "已应用的大块"
 
-#: ../tvp-svn-helper/tsh-common.c:588
+#: ../tvp-svn-helper/tsh-common.c:591
 msgid "Rejected hunk"
 msgstr "已拒绝的大块"
 
-#: ../tvp-svn-helper/tsh-common.c:589
+#: ../tvp-svn-helper/tsh-common.c:592
 msgid "Hunk already applied"
 msgstr "大块已经应用"
 
-#: ../tvp-svn-helper/tsh-common.c:591
+#: ../tvp-svn-helper/tsh-common.c:594
 msgid "Copied replaced"
 msgstr "已复制的替换"
 
-#: ../tvp-svn-helper/tsh-common.c:592
+#: ../tvp-svn-helper/tsh-common.c:595
 msgid "URL redirect"
 msgstr "URL 重定向"
 
-#: ../tvp-svn-helper/tsh-common.c:593
+#: ../tvp-svn-helper/tsh-common.c:596
 msgid "Path nonexistent"
 msgstr "路径不存在"
 
-#: ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:598
 msgid "Conflict"
 msgstr "冲突"
 
-#: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
-#: ../tvp-svn-helper/tsh-common.c:735
+#: ../tvp-svn-helper/tsh-common.c:599 ../tvp-svn-helper/tsh-common.c:698
+#: ../tvp-svn-helper/tsh-common.c:738
 msgid "Missing"
 msgstr "缺失"
 
-#: ../tvp-svn-helper/tsh-common.c:597
+#: ../tvp-svn-helper/tsh-common.c:600
 msgid "Out of date"
 msgstr "过期"
 
-#: ../tvp-svn-helper/tsh-common.c:598
+#: ../tvp-svn-helper/tsh-common.c:601
 msgid "No parent"
 msgstr "无父"
 
-#: ../tvp-svn-helper/tsh-common.c:600
+#: ../tvp-svn-helper/tsh-common.c:603
 msgid "Forbidden by server"
 msgstr "服务器禁止"
 
-#: ../tvp-svn-helper/tsh-common.c:601
+#: ../tvp-svn-helper/tsh-common.c:604
 msgid "Skipped conflicted"
 msgstr "已跳过的冲突"
 
-#: ../tvp-svn-helper/tsh-common.c:692
+#: ../tvp-svn-helper/tsh-common.c:695
 msgid "Inapplicable"
 msgstr "不适用的"
 
-#: ../tvp-svn-helper/tsh-common.c:694
+#: ../tvp-svn-helper/tsh-common.c:697
 msgid "Unchanged"
 msgstr "未更改的"
 
-#: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:745
 msgid "Obstructed"
 msgstr "已受阻的"
 
-#: ../tvp-svn-helper/tsh-common.c:697
+#: ../tvp-svn-helper/tsh-common.c:700
 msgid "Changed"
 msgstr "已更改的"
 
-#: ../tvp-svn-helper/tsh-common.c:698 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:742
 msgid "Merged"
 msgstr "已合并的"
 
-#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
+#: ../tvp-svn-helper/tsh-common.c:702 ../tvp-svn-helper/tsh-common.c:743
 msgid "Conflicted"
 msgstr "已冲突的"
 
-#: ../tvp-svn-helper/tsh-common.c:701
+#: ../tvp-svn-helper/tsh-common.c:704
 msgid "Source missing"
 msgstr "源码丢失"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: ../tvp-svn-helper/tsh-common.c:733
+#: ../tvp-svn-helper/tsh-common.c:736
 msgid "Normal"
 msgstr "一般"
 
-#: ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:744
 msgid "Ignored"
 msgstr "已忽略的"
 
-#: ../tvp-svn-helper/tsh-common.c:744
+#: ../tvp-svn-helper/tsh-common.c:747
 msgid "Incomplete"
 msgstr "未完成的"
 
-#: ../tvp-svn-helper/tsh-common.c:1082
+#: ../tvp-svn-helper/tsh-common.c:1085
 msgid "Error"
 msgstr "错误"
 
-#: ../tvp-svn-helper/tsh-common.c:1094
+#: ../tvp-svn-helper/tsh-common.c:1097
 msgid "Local action"
 msgstr "本地动作"
 
-#: ../tvp-svn-helper/tsh-copy.c:112
+#: ../tvp-svn-helper/tsh-copy.c:118
 msgid "Local copy"
 msgstr "本地复制"
 
-#: ../tvp-svn-helper/tsh-copy.c:159
+#: ../tvp-svn-helper/tsh-copy.c:165
 msgid "Copy To"
 msgstr "复制到"
 
-#: ../tvp-svn-helper/tsh-delete.c:118
+#: ../tvp-svn-helper/tsh-delete.c:117
 msgid "Local delete"
 msgstr "本地删除"
 
-#: ../tvp-svn-helper/tsh-delete.c:158
+#: ../tvp-svn-helper/tsh-delete.c:157
 msgid "Delete Message"
 msgstr "删除信息"
 
-#: ../tvp-svn-helper/tsh-diff.c:190
+#: ../tvp-svn-helper/tsh-diff.c:198
 msgid "Diff failed"
 msgstr "差分失败"
 
@@ -1397,7 +1399,7 @@ msgstr "差分失败"
 #. * Self means only this file/direcotry is updated
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:161
+#: ../tvp-svn-helper/tsh-diff-dialog.c:160
 #: ../tvp-svn-helper/tsh-properties-dialog.c:192
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
@@ -1412,7 +1414,7 @@ msgstr "自身"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:170
+#: ../tvp-svn-helper/tsh-diff-dialog.c:169
 #: ../tvp-svn-helper/tsh-properties-dialog.c:203
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1424,25 +1426,25 @@ msgstr "即时文件"
 #. * Recursive means the update is full recursive
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#: ../tvp-svn-helper/tsh-diff-dialog.c:188
+#: ../tvp-svn-helper/tsh-diff-dialog.c:187
 #: ../tvp-svn-helper/tsh-properties-dialog.c:221
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "递归"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:203
+#: ../tvp-svn-helper/tsh-diff-dialog.c:202
 msgid "Notice ancestry"
 msgstr "通知父级"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+#: ../tvp-svn-helper/tsh-diff-dialog.c:206
 msgid "Do not show differences for deleted files"
 msgstr "不要显示已删除文件的差异信息"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:212
+#: ../tvp-svn-helper/tsh-diff-dialog.c:211
 msgid "Show copies as additions"
 msgstr "将副本显示为附加项"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:366
+#: ../tvp-svn-helper/tsh-diff-dialog.c:365
 msgid "Loading..."
 msgstr "载入中……"
 
@@ -1464,11 +1466,11 @@ msgstr "记住"
 msgid "Certificate"
 msgstr "证书"
 
-#: ../tvp-svn-helper/tsh-import.c:138
+#: ../tvp-svn-helper/tsh-import.c:143
 msgid "Import Message"
 msgstr "导入信息"
 
-#: ../tvp-svn-helper/tsh-log.c:123
+#: ../tvp-svn-helper/tsh-log.c:122
 msgid "Log failed"
 msgstr "日志动作已失败"
 
@@ -1496,7 +1498,7 @@ msgstr "登录"
 msgid "Log Message"
 msgstr "日志信息"
 
-#: ../tvp-svn-helper/tsh-move.c:104
+#: ../tvp-svn-helper/tsh-move.c:108
 msgid "Local move"
 msgstr "本地移动"
 
@@ -1509,11 +1511,11 @@ msgid "Notification"
 msgstr "通知"
 
 #. tsh_properties_dialog_done (dialog);
-#: ../tvp-svn-helper/tsh-properties.c:94
+#: ../tvp-svn-helper/tsh-properties.c:142
 msgid "Set property failed"
 msgstr "设置属性已失败"
 
-#: ../tvp-svn-helper/tsh-properties.c:117
+#: ../tvp-svn-helper/tsh-properties.c:181
 msgid "Properties failed"
 msgstr "属性动作已失败"
 
@@ -1529,15 +1531,15 @@ msgstr "添加(_A)"
 msgid "_Remove"
 msgstr "移除(_R)"
 
-#: ../tvp-svn-helper/tsh-relocate.c:78
+#: ../tvp-svn-helper/tsh-relocate.c:77
 msgid "Relocate failed"
 msgstr "重定位动作已失败"
 
-#: ../tvp-svn-helper/tsh-relocate.c:93
+#: ../tvp-svn-helper/tsh-relocate.c:92
 msgid "Relocate finished"
 msgstr "重定位动作已完成"
 
-#: ../tvp-svn-helper/tsh-relocate.c:139
+#: ../tvp-svn-helper/tsh-relocate.c:138
 msgid "Relocating..."
 msgstr "正在重定位..."
 
@@ -1549,7 +1551,7 @@ msgstr "从(_F)："
 msgid "_To:"
 msgstr "至(_T)："
 
-#: ../tvp-svn-helper/tsh-status.c:91
+#: ../tvp-svn-helper/tsh-status.c:104
 msgid "Status failed"
 msgstr "状态动作已失败"
 
