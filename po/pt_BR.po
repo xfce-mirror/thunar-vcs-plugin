@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 06:30+0200\n"
-"PO-Revision-Date: 2018-06-01 02:12+0000\n"
-"Last-Translator: Andre Miranda <andre42m@gmail.com>\n"
+"POT-Creation-Date: 2018-06-01 06:30+0200\n"
+"PO-Revision-Date: 2018-06-09 01:29+0000\n"
+"Last-Translator: Michael Martins <michaelfm21@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/xfce/thunar-plugins/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -714,6 +714,7 @@ msgstr "Forçar limpeza."
 #: ../tvp-svn-helper/tsh-move.c:157
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:100
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:154
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:158
 #: ../tvp-svn-helper/tsh-trust-dialog.c:83
@@ -1549,10 +1550,6 @@ msgstr "_De:"
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:141
 msgid "_To:"
 msgstr "_Para:"
-
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
-msgid "OK"
-msgstr ""
 
 #: ../tvp-svn-helper/tsh-status.c:104
 msgid "Status failed"
