@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-24 06:30+0200\n"
-"PO-Revision-Date: 2018-05-25 22:59+0000\n"
+"POT-Creation-Date: 2018-06-01 06:30+0200\n"
+"PO-Revision-Date: 2018-06-14 08:20+0000\n"
 "Last-Translator: Demiray “tulliana” Muhterem <mdemiray@msn.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/xfce/thunar-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -34,8 +34,8 @@ msgstr "Ekle"
 #: ../thunar-vcs-plugin/tvp-git-action.c:242
 #: ../thunar-vcs-plugin/tvp-svn-action.c:280 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
-#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
-#: ../tvp-svn-helper/tsh-add.c:132
+#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:135
+#: ../tvp-svn-helper/tsh-add.c:148
 msgid "Add"
 msgstr "Ekle"
 
@@ -107,7 +107,7 @@ msgstr "Menu|Commit"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 #: ../tvp-git-helper/tgh-log-dialog.c:153
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
-#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
+#: ../tvp-svn-helper/tsh-commit.c:260 ../tvp-svn-helper/tsh-commit.c:273
 msgid "Commit"
 msgstr "Commit"
 
@@ -118,7 +118,7 @@ msgstr "Menu|Diff"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:253
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:291
-#: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
+#: ../tvp-svn-helper/tsh-diff.c:226 ../tvp-svn-helper/tsh-diff-dialog.c:136
 msgid "Diff"
 msgstr "Diff"
 
@@ -173,7 +173,7 @@ msgstr "Menu|Taşı"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:260
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-git-helper/main.c:177
-#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
+#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:174
 msgid "Move"
 msgstr "Taşı"
 
@@ -244,7 +244,7 @@ msgstr "Menu|Durum"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:121
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:150
 #: ../tvp-svn-helper/tsh-status-dialog.c:246
 msgid "Status"
 msgstr "Durum"
@@ -297,7 +297,7 @@ msgid "Menu|Copy"
 msgstr "Menu|Kopyala"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:283
-#: ../tvp-svn-helper/tsh-copy.c:177
+#: ../tvp-svn-helper/tsh-copy.c:183
 msgid "Copy"
 msgstr "Kopyala"
 
@@ -306,7 +306,7 @@ msgid "Menu|Delete"
 msgstr "Menu|Sil"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:287
-#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
+#: ../tvp-svn-helper/tsh-delete.c:139 ../tvp-svn-helper/tsh-delete.c:152
 msgid "Delete"
 msgstr "Sil"
 
@@ -315,7 +315,7 @@ msgid "Menu|Export"
 msgstr "Menu|Dışa Aktar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:295
-#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
+#: ../tvp-svn-helper/tsh-export.c:113 ../tvp-svn-helper/tsh-export.c:131
 msgid "Export"
 msgstr "Dışa Aktar"
 
@@ -324,7 +324,7 @@ msgid "Menu|Import"
 msgstr "Menu|İçe Aktar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:299
-#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
+#: ../tvp-svn-helper/tsh-import.c:120 ../tvp-svn-helper/tsh-import.c:138
 msgid "Import"
 msgstr "İçe Aktar"
 
@@ -358,7 +358,7 @@ msgid "Menu|Relocate"
 msgstr "Menu|Relocate"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:388 ../tvp-svn-helper/main.c:323
-#: ../tvp-svn-helper/tsh-relocate.c:125
+#: ../tvp-svn-helper/tsh-relocate.c:124
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:214
 msgid "Relocate"
 msgstr "Relocate"
@@ -368,7 +368,7 @@ msgid "Menu|Resolved"
 msgstr "Menu|Resolved"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:319
-#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
+#: ../tvp-svn-helper/tsh-common.c:539 ../tvp-svn-helper/tsh-resolved.c:115
 #: ../tvp-svn-helper/tsh-resolved.c:128
 msgid "Resolved"
 msgstr "Resolved"
@@ -386,7 +386,7 @@ msgid "Menu|Revert"
 msgstr "Menu|Revert"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:327
-#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
+#: ../tvp-svn-helper/tsh-revert.c:119 ../tvp-svn-helper/tsh-revert.c:132
 msgid "Revert"
 msgstr "Revert"
 
@@ -395,7 +395,7 @@ msgid "Menu|Switch"
 msgstr "Menu|Switch"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:335
-#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
+#: ../tvp-svn-helper/tsh-switch.c:119 ../tvp-svn-helper/tsh-switch.c:132
 msgid "Switch"
 msgstr "Switch"
 
@@ -413,7 +413,7 @@ msgid "Menu|Update"
 msgstr "Menü|Güncelle"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:343
-#: ../tvp-svn-helper/tsh-update.c:120
+#: ../tvp-svn-helper/tsh-update.c:119
 msgid "Update"
 msgstr "Güncelle"
 
@@ -429,10 +429,10 @@ msgstr "URL:"
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
-#: ../tvp-svn-helper/tsh-common.c:605 ../tvp-svn-helper/tsh-common.c:693
-#: ../tvp-svn-helper/tsh-common.c:705 ../tvp-svn-helper/tsh-common.c:730
-#: ../tvp-svn-helper/tsh-common.c:747 ../tvp-svn-helper/tsh-common.c:776
-#: ../tvp-svn-helper/tsh-common.c:879
+#: ../tvp-svn-helper/tsh-common.c:608 ../tvp-svn-helper/tsh-common.c:696
+#: ../tvp-svn-helper/tsh-common.c:708 ../tvp-svn-helper/tsh-common.c:733
+#: ../tvp-svn-helper/tsh-common.c:750 ../tvp-svn-helper/tsh-common.c:779
+#: ../tvp-svn-helper/tsh-common.c:882
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
@@ -468,7 +468,7 @@ msgstr "Derinlik:"
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
-#: ../tvp-svn-helper/tsh-common.c:594
+#: ../tvp-svn-helper/tsh-common.c:597
 msgid "Exclude"
 msgstr "Hariç tut"
 
@@ -495,7 +495,7 @@ msgstr "Dosyalar"
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
-#: ../tvp-svn-helper/tsh-diff-dialog.c:179
+#: ../tvp-svn-helper/tsh-diff-dialog.c:178
 #: ../tvp-svn-helper/tsh-properties-dialog.c:212
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
@@ -621,7 +621,7 @@ msgstr "Tarih"
 #: ../tvp-git-helper/tgh-stash-dialog.c:248
 #: ../tvp-git-helper/tgh-status-dialog.c:138
 #: ../tvp-svn-helper/tsh-blame-dialog.c:134
-#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-diff-dialog.c:138
 #: ../tvp-svn-helper/tsh-log-dialog.c:239
 #: ../tvp-svn-helper/tsh-notify-dialog.c:116
 #: ../tvp-svn-helper/tsh-properties-dialog.c:252
@@ -642,15 +642,15 @@ msgstr "_Kapat"
 #: ../tvp-git-helper/tgh-status-dialog.c:128
 #: ../tvp-git-helper/tgh-transfer-dialog.c:77
 #: ../tvp-git-helper/tgh-transfer-dialog.c:124
-#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:161
-#: ../tvp-svn-helper/tsh-diff-dialog.c:142
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:167
+#: ../tvp-svn-helper/tsh-diff-dialog.c:141
 #: ../tvp-svn-helper/tsh-file-dialog.c:88
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:153
 #: ../tvp-svn-helper/tsh-lock-dialog.c:74
 #: ../tvp-svn-helper/tsh-log-dialog.c:229
 #: ../tvp-svn-helper/tsh-login-dialog.c:108
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:120
-#: ../tvp-svn-helper/tsh-move.c:152 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-move.c:156 ../tvp-svn-helper/tsh-notify-dialog.c:119
 #: ../tvp-svn-helper/tsh-properties-dialog.c:255
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:99
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:153
@@ -673,8 +673,8 @@ msgid "Name"
 msgstr "İsim"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
-msgid "Jump to"
-msgstr "Sıçra"
+msgid "_Jump to"
+msgstr "_Geçiş yap"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:251
@@ -707,22 +707,23 @@ msgstr "Temizlemeye zorla."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:100
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:125
-#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:78
 #: ../tvp-git-helper/tgh-transfer-dialog.c:125
-#: ../tvp-svn-helper/tsh-copy.c:162 ../tvp-svn-helper/tsh-file-dialog.c:89
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:155
+#: ../tvp-svn-helper/tsh-copy.c:168 ../tvp-svn-helper/tsh-file-dialog.c:89
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
 #: ../tvp-svn-helper/tsh-lock-dialog.c:75
 #: ../tvp-svn-helper/tsh-login-dialog.c:109
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:121
-#: ../tvp-svn-helper/tsh-move.c:153
+#: ../tvp-svn-helper/tsh-move.c:157
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:100
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:154
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:218
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:158
 #: ../tvp-svn-helper/tsh-trust-dialog.c:83
-msgid "OK"
-msgstr "TAMAM"
+msgid "_OK"
+msgstr "_TAMAM"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -732,16 +733,16 @@ msgstr "Klonlama tamamlandı"
 msgid "Cloning..."
 msgstr "Klonlanıyor..."
 
-#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
-#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
-#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
-#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
-#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
-#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
-#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
-#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
-#: ../tvp-svn-helper/tsh-update.c:95
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:86
+#: ../tvp-svn-helper/tsh-add.c:110 ../tvp-svn-helper/tsh-checkout.c:73
+#: ../tvp-svn-helper/tsh-commit.c:111 ../tvp-svn-helper/tsh-commit.c:146
+#: ../tvp-svn-helper/tsh-commit.c:217 ../tvp-svn-helper/tsh-copy.c:100
+#: ../tvp-svn-helper/tsh-delete.c:99 ../tvp-svn-helper/tsh-export.c:78
+#: ../tvp-svn-helper/tsh-import.c:86 ../tvp-svn-helper/tsh-lock.c:93
+#: ../tvp-svn-helper/tsh-move.c:90 ../tvp-svn-helper/tsh-resolved.c:75
+#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:94
+#: ../tvp-svn-helper/tsh-switch.c:77 ../tvp-svn-helper/tsh-unlock.c:88
+#: ../tvp-svn-helper/tsh-update.c:94
 msgid "Failed"
 msgstr "Başarısız oldu"
 
@@ -753,7 +754,7 @@ msgstr "izlenmeyen"
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:93
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
 #: ../tvp-git-helper/tgh-status-dialog.c:103
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:115
 #: ../tvp-svn-helper/tsh-log-dialog.c:190
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:98
 #: ../tvp-svn-helper/tsh-notify-dialog.c:93
@@ -769,7 +770,7 @@ msgid "State"
 msgstr "Durum"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:114
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:143
 msgid "Select/Unselect all"
 msgstr "Tümünü seç/bırak"
 
@@ -798,7 +799,7 @@ msgstr "Dosya"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:252
 #: ../tvp-git-helper/tgh-status-dialog.c:133
-#: ../tvp-svn-helper/tsh-diff-dialog.c:147
+#: ../tvp-svn-helper/tsh-diff-dialog.c:146
 #: ../tvp-svn-helper/tsh-log-dialog.c:234
 #: ../tvp-svn-helper/tsh-status-dialog.c:255
 msgid "_Refresh"
@@ -808,7 +809,7 @@ msgstr "_Yenile"
 msgid "Move finished"
 msgstr "Bitenleri taşı"
 
-#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:154
 msgid "Move To"
 msgstr "Taşı"
 
@@ -847,17 +848,13 @@ msgstr "_Kaydet"
 msgid "_Apply"
 msgstr "_Uygula"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:231
-msgid "_OK"
-msgstr "_TAMAM"
-
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
 msgstr "_Sil"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
-msgid "Clear"
-msgstr "Temizle"
+msgid "C_lear"
+msgstr "T_emizle"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:385
 msgid "Stash description:"
@@ -1045,353 +1042,358 @@ msgstr "Güncelleme Seçenekleri:"
 msgid "Not enough arguments provided"
 msgstr "Yeterli parametre girilmedi"
 
-#: ../tvp-svn-helper/tsh-blame.c:82
+#: ../tvp-svn-helper/tsh-blame.c:81
 msgid "Blame failed"
 msgstr "Suçlama başarısızdır"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:68
+#: ../tvp-svn-helper/tsh-cleanup.c:57
+#, c-format
+msgid "'%s' is not a local path"
+msgstr "'%s' yerel bir yol değil"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:89
 msgid "Cleanup failed"
 msgstr "Temizleme işlemi başarısızdır"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:83
+#: ../tvp-svn-helper/tsh-cleanup.c:104
 msgid "Cleanup finished"
 msgstr "Temizleme işlemi tamamlanmıştır"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:97
+#: ../tvp-svn-helper/tsh-cleanup.c:118
 msgid "Cleaning up..."
 msgstr "Temizleme işlemi gerçekleştiriliyor..."
 
-#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
-#: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
-#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
-#: ../tvp-svn-helper/tsh-move.c:99
+#: ../tvp-svn-helper/tsh-commit.c:230 ../tvp-svn-helper/tsh-common.c:826
+#: ../tvp-svn-helper/tsh-common.c:1092 ../tvp-svn-helper/tsh-copy.c:113
+#: ../tvp-svn-helper/tsh-delete.c:112 ../tvp-svn-helper/tsh-import.c:97
+#: ../tvp-svn-helper/tsh-move.c:103
 #, c-format
 msgid "At revision: %ld"
 msgstr "Sürüm: %ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:216
+#: ../tvp-svn-helper/tsh-commit.c:235
 msgid "Nothing to do"
 msgstr "Yapılacak bir şey yok"
 
-#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
-#: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
-#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
-#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
+#: ../tvp-svn-helper/tsh-commit.c:245 ../tvp-svn-helper/tsh-common.c:544
+#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:1101
+#: ../tvp-svn-helper/tsh-copy.c:126 ../tvp-svn-helper/tsh-delete.c:125
+#: ../tvp-svn-helper/tsh-import.c:104 ../tvp-svn-helper/tsh-move.c:116
 msgid "Completed"
 msgstr "Tamamlandı"
 
-#: ../tvp-svn-helper/tsh-commit.c:259
+#: ../tvp-svn-helper/tsh-commit.c:278
 msgid "Commit Message"
 msgstr "Gönderim Mesajı"
 
-#: ../tvp-svn-helper/tsh-common.c:291
+#: ../tvp-svn-helper/tsh-common.c:294
 msgid "Store password a plaintext?"
 msgstr "Parola düz metin olarak saklansın mı?"
 
-#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
-#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
-#: ../tvp-svn-helper/tsh-common.c:781 ../tvp-svn-helper/tsh-common.c:885
+#: ../tvp-svn-helper/tsh-common.c:533 ../tvp-svn-helper/tsh-common.c:542
+#: ../tvp-svn-helper/tsh-common.c:549 ../tvp-svn-helper/tsh-common.c:737
+#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:888
 msgid "Added"
 msgstr "Eklendi"
 
-#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:590
-#: ../tvp-svn-helper/tsh-common.c:894
+#: ../tvp-svn-helper/tsh-common.c:534 ../tvp-svn-helper/tsh-common.c:593
+#: ../tvp-svn-helper/tsh-common.c:897
 msgid "Copied"
 msgstr "Kopyalandı"
 
-#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:538
-#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:736
-#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:887
+#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:541
+#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
 msgid "Deleted"
 msgstr "Silindi"
 
-#: ../tvp-svn-helper/tsh-common.c:533
+#: ../tvp-svn-helper/tsh-common.c:536
 msgid "Restored"
 msgstr "Geri yüklendi"
 
-#: ../tvp-svn-helper/tsh-common.c:534
+#: ../tvp-svn-helper/tsh-common.c:537
 msgid "Reverted"
 msgstr "Geri döndürüldü"
 
-#: ../tvp-svn-helper/tsh-common.c:535
+#: ../tvp-svn-helper/tsh-common.c:538
 msgid "Revert failed"
 msgstr "Geri döndürülemedi"
 
-#: ../tvp-svn-helper/tsh-common.c:537
+#: ../tvp-svn-helper/tsh-common.c:540
 msgid "Skipped"
 msgstr "Atlandı"
 
-#: ../tvp-svn-helper/tsh-common.c:540
+#: ../tvp-svn-helper/tsh-common.c:543
 msgid "Updated"
 msgstr "Güncellendi"
 
-#: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
-#: ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:547
+#: ../tvp-svn-helper/tsh-common.c:746
 msgid "External"
 msgstr "Harici"
 
-#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
-#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
+#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:893
 msgid "Modified"
 msgstr "Düzenlenmiş"
 
-#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:737
-#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:883
+#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:740
+#: ../tvp-svn-helper/tsh-common.c:793 ../tvp-svn-helper/tsh-common.c:886
 msgid "Replaced"
 msgstr "Yenilenmiş"
 
-#: ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:552
 msgid "Transmitting"
 msgstr "Verici"
 
-#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
+#: ../tvp-svn-helper/tsh-common.c:554 ../tvp-svn-helper/tsh-common.c:602
 msgid "Locked"
 msgstr "Kilitli"
 
-#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
+#: ../tvp-svn-helper/tsh-common.c:555 ../tvp-svn-helper/tsh-common.c:899
 msgid "Unlocked"
 msgstr "Kilidi çözülmüş"
 
-#: ../tvp-svn-helper/tsh-common.c:553
+#: ../tvp-svn-helper/tsh-common.c:556
 msgid "Lock failed"
 msgstr "Kilitleme başarısız"
 
-#: ../tvp-svn-helper/tsh-common.c:554
+#: ../tvp-svn-helper/tsh-common.c:557
 msgid "Unlock failed"
 msgstr "Kilit açılamadı"
 
-#: ../tvp-svn-helper/tsh-common.c:555
+#: ../tvp-svn-helper/tsh-common.c:558
 msgid "Exists"
 msgstr "Mevcut"
 
-#: ../tvp-svn-helper/tsh-common.c:556
+#: ../tvp-svn-helper/tsh-common.c:559
 msgid "Changelist set"
 msgstr "Değişiklik listesi dizisi"
 
-#: ../tvp-svn-helper/tsh-common.c:557
+#: ../tvp-svn-helper/tsh-common.c:560
 msgid "Changelist cleared"
 msgstr "Değişiklik listesi temizlendi"
 
-#: ../tvp-svn-helper/tsh-common.c:558
+#: ../tvp-svn-helper/tsh-common.c:561
 msgid "Changelist moved"
 msgstr "Değişiklik listesi taşındı"
 
-#: ../tvp-svn-helper/tsh-common.c:559
+#: ../tvp-svn-helper/tsh-common.c:562
 msgid "Merge begin"
 msgstr "Birleştirme başladı"
 
-#: ../tvp-svn-helper/tsh-common.c:560
+#: ../tvp-svn-helper/tsh-common.c:563
 msgid "Foreign merge begin"
 msgstr "Yabancı birleştirme başladı"
 
-#: ../tvp-svn-helper/tsh-common.c:561
+#: ../tvp-svn-helper/tsh-common.c:564
 msgid "Replace"
 msgstr "Yenile"
 
-#: ../tvp-svn-helper/tsh-common.c:563
+#: ../tvp-svn-helper/tsh-common.c:566
 msgid "Property added"
 msgstr "Sahiplik eklendi"
 
-#: ../tvp-svn-helper/tsh-common.c:564
+#: ../tvp-svn-helper/tsh-common.c:567
 msgid "Property modified"
 msgstr "Sahiplik düzenlendi"
 
-#: ../tvp-svn-helper/tsh-common.c:565
+#: ../tvp-svn-helper/tsh-common.c:568
 msgid "Property deleted"
 msgstr "Sahiplik silindi"
 
-#: ../tvp-svn-helper/tsh-common.c:566
+#: ../tvp-svn-helper/tsh-common.c:569
 msgid "Property nonexisting"
 msgstr "Varolmayan özellik"
 
-#: ../tvp-svn-helper/tsh-common.c:567
+#: ../tvp-svn-helper/tsh-common.c:570
 msgid "Revision property set"
 msgstr "Sürüm sahipliği atandı"
 
-#: ../tvp-svn-helper/tsh-common.c:568
+#: ../tvp-svn-helper/tsh-common.c:571
 msgid "Revision property deleted"
 msgstr "Sürüm sahipliği silindi"
 
-#: ../tvp-svn-helper/tsh-common.c:569
+#: ../tvp-svn-helper/tsh-common.c:572
 msgid "Merge completed"
 msgstr "Birleştirme tamamlandı"
 
-#: ../tvp-svn-helper/tsh-common.c:570
+#: ../tvp-svn-helper/tsh-common.c:573
 msgid "Tree conflict"
 msgstr "Ağaç çakışması"
 
-#: ../tvp-svn-helper/tsh-common.c:571
+#: ../tvp-svn-helper/tsh-common.c:574
 msgid "External failed"
 msgstr "Harici hata"
 
-#: ../tvp-svn-helper/tsh-common.c:574
+#: ../tvp-svn-helper/tsh-common.c:577
 msgid "Started"
 msgstr "Başlatıldı"
 
-#: ../tvp-svn-helper/tsh-common.c:575
+#: ../tvp-svn-helper/tsh-common.c:578
 msgid "Skipped obstruction"
 msgstr "Atlanan tıkanıklık"
 
-#: ../tvp-svn-helper/tsh-common.c:576
+#: ../tvp-svn-helper/tsh-common.c:579
 msgid "Skipped working only"
 msgstr "Sadece çalışanlar atlandı"
 
-#: ../tvp-svn-helper/tsh-common.c:577
+#: ../tvp-svn-helper/tsh-common.c:580
 msgid "Skipped access denied"
 msgstr "Erişime izin verilmeyenler atlandı"
 
-#: ../tvp-svn-helper/tsh-common.c:578
+#: ../tvp-svn-helper/tsh-common.c:581
 msgid "External removed"
 msgstr "Harici çıkartıldı"
 
-#: ../tvp-svn-helper/tsh-common.c:579
+#: ../tvp-svn-helper/tsh-common.c:582
 msgid "Shadowed add"
 msgstr "Gölgeli eklenti"
 
-#: ../tvp-svn-helper/tsh-common.c:580
+#: ../tvp-svn-helper/tsh-common.c:583
 msgid "Shadowed update"
 msgstr "Gölgelenmiş güncelleme"
 
-#: ../tvp-svn-helper/tsh-common.c:581
+#: ../tvp-svn-helper/tsh-common.c:584
 msgid "Shadowed delete"
 msgstr "Gölgelenmiş silme"
 
-#: ../tvp-svn-helper/tsh-common.c:582
+#: ../tvp-svn-helper/tsh-common.c:585
 msgid "Merge record info"
 msgstr "Birleştirme kayıt bilgisi"
 
-#: ../tvp-svn-helper/tsh-common.c:583
+#: ../tvp-svn-helper/tsh-common.c:586
 msgid "Upgraded path"
 msgstr "Güncellenmiş yol"
 
-#: ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:587
 msgid "Merge record info begin"
 msgstr "Birleştirme kayıt bilgisi başladı"
 
-#: ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:588
 msgid "Merge elide info"
 msgstr "Çıkarma bilgisi birleştirme"
 
-#: ../tvp-svn-helper/tsh-common.c:586
+#: ../tvp-svn-helper/tsh-common.c:589
 msgid "Patch"
 msgstr "Yama"
 
-#: ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:590
 msgid "Applied hunk"
 msgstr "Uygulamalı iri parça"
 
-#: ../tvp-svn-helper/tsh-common.c:588
+#: ../tvp-svn-helper/tsh-common.c:591
 msgid "Rejected hunk"
 msgstr "Reddedilen iri parça"
 
-#: ../tvp-svn-helper/tsh-common.c:589
+#: ../tvp-svn-helper/tsh-common.c:592
 msgid "Hunk already applied"
 msgstr "İri parça önceden uygulamalı "
 
-#: ../tvp-svn-helper/tsh-common.c:591
+#: ../tvp-svn-helper/tsh-common.c:594
 msgid "Copied replaced"
 msgstr "Kopyalanan yenilendi"
 
-#: ../tvp-svn-helper/tsh-common.c:592
+#: ../tvp-svn-helper/tsh-common.c:595
 msgid "URL redirect"
 msgstr "URL yönlendirme"
 
-#: ../tvp-svn-helper/tsh-common.c:593
+#: ../tvp-svn-helper/tsh-common.c:596
 msgid "Path nonexistent"
 msgstr "Yol mevcut değil"
 
-#: ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:598
 msgid "Conflict"
 msgstr "Çakışma"
 
-#: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
-#: ../tvp-svn-helper/tsh-common.c:735
+#: ../tvp-svn-helper/tsh-common.c:599 ../tvp-svn-helper/tsh-common.c:698
+#: ../tvp-svn-helper/tsh-common.c:738
 msgid "Missing"
 msgstr "Eksik"
 
-#: ../tvp-svn-helper/tsh-common.c:597
+#: ../tvp-svn-helper/tsh-common.c:600
 msgid "Out of date"
 msgstr "Günü geçmiş"
 
-#: ../tvp-svn-helper/tsh-common.c:598
+#: ../tvp-svn-helper/tsh-common.c:601
 msgid "No parent"
 msgstr "Kaynak yoktur"
 
-#: ../tvp-svn-helper/tsh-common.c:600
+#: ../tvp-svn-helper/tsh-common.c:603
 msgid "Forbidden by server"
 msgstr "Sunucu tarafından yasaklanmış"
 
-#: ../tvp-svn-helper/tsh-common.c:601
+#: ../tvp-svn-helper/tsh-common.c:604
 msgid "Skipped conflicted"
 msgstr "Çakışma atlanan"
 
-#: ../tvp-svn-helper/tsh-common.c:692
+#: ../tvp-svn-helper/tsh-common.c:695
 msgid "Inapplicable"
 msgstr "Uygulanamaz"
 
-#: ../tvp-svn-helper/tsh-common.c:694
+#: ../tvp-svn-helper/tsh-common.c:697
 msgid "Unchanged"
 msgstr "Değiştirilmemiş"
 
-#: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:745
 msgid "Obstructed"
 msgstr "Engellenmiş"
 
-#: ../tvp-svn-helper/tsh-common.c:697
+#: ../tvp-svn-helper/tsh-common.c:700
 msgid "Changed"
 msgstr "Değiştirilmiş"
 
-#: ../tvp-svn-helper/tsh-common.c:698 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:742
 msgid "Merged"
 msgstr "Birleştirildi"
 
-#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
+#: ../tvp-svn-helper/tsh-common.c:702 ../tvp-svn-helper/tsh-common.c:743
 msgid "Conflicted"
 msgstr "Çakıştı"
 
-#: ../tvp-svn-helper/tsh-common.c:701
+#: ../tvp-svn-helper/tsh-common.c:704
 msgid "Source missing"
 msgstr "Kaynak eksik"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: ../tvp-svn-helper/tsh-common.c:733
+#: ../tvp-svn-helper/tsh-common.c:736
 msgid "Normal"
 msgstr "Normal"
 
-#: ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:744
 msgid "Ignored"
 msgstr "Göz ardı edildi"
 
-#: ../tvp-svn-helper/tsh-common.c:744
+#: ../tvp-svn-helper/tsh-common.c:747
 msgid "Incomplete"
 msgstr "Tamamlanmamış"
 
-#: ../tvp-svn-helper/tsh-common.c:1082
+#: ../tvp-svn-helper/tsh-common.c:1085
 msgid "Error"
 msgstr "Hata"
 
-#: ../tvp-svn-helper/tsh-common.c:1094
+#: ../tvp-svn-helper/tsh-common.c:1097
 msgid "Local action"
 msgstr "Yerel eylem"
 
-#: ../tvp-svn-helper/tsh-copy.c:112
+#: ../tvp-svn-helper/tsh-copy.c:118
 msgid "Local copy"
 msgstr "Yerel kopya"
 
-#: ../tvp-svn-helper/tsh-copy.c:159
+#: ../tvp-svn-helper/tsh-copy.c:165
 msgid "Copy To"
 msgstr "Kopyala"
 
-#: ../tvp-svn-helper/tsh-delete.c:118
+#: ../tvp-svn-helper/tsh-delete.c:117
 msgid "Local delete"
 msgstr "Yerel sil"
 
-#: ../tvp-svn-helper/tsh-delete.c:158
+#: ../tvp-svn-helper/tsh-delete.c:157
 msgid "Delete Message"
 msgstr "Mesajı Sil"
 
-#: ../tvp-svn-helper/tsh-diff.c:190
+#: ../tvp-svn-helper/tsh-diff.c:198
 msgid "Diff failed"
 msgstr "Diff başarısız oldu"
 
@@ -1401,7 +1403,7 @@ msgstr "Diff başarısız oldu"
 #. * Self means only this file/direcotry is updated
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:161
+#: ../tvp-svn-helper/tsh-diff-dialog.c:160
 #: ../tvp-svn-helper/tsh-properties-dialog.c:192
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
@@ -1416,7 +1418,7 @@ msgstr "Öz"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:170
+#: ../tvp-svn-helper/tsh-diff-dialog.c:169
 #: ../tvp-svn-helper/tsh-properties-dialog.c:203
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
@@ -1428,25 +1430,25 @@ msgstr "Acil dosyalar"
 #. * Recursive means the update is full recursive
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#: ../tvp-svn-helper/tsh-diff-dialog.c:188
+#: ../tvp-svn-helper/tsh-diff-dialog.c:187
 #: ../tvp-svn-helper/tsh-properties-dialog.c:221
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "Özyinelemeli"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:203
+#: ../tvp-svn-helper/tsh-diff-dialog.c:202
 msgid "Notice ancestry"
 msgstr "Geçmişi uyar"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+#: ../tvp-svn-helper/tsh-diff-dialog.c:206
 msgid "Do not show differences for deleted files"
 msgstr "Silinen dosyalar arasındaki farkları gösterme"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:212
+#: ../tvp-svn-helper/tsh-diff-dialog.c:211
 msgid "Show copies as additions"
 msgstr "Kopyaları ekleme olarak göster"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:366
+#: ../tvp-svn-helper/tsh-diff-dialog.c:365
 msgid "Loading..."
 msgstr "Yükleniyor..."
 
@@ -1468,11 +1470,11 @@ msgstr "Hatırla"
 msgid "Certificate"
 msgstr "Sertifika"
 
-#: ../tvp-svn-helper/tsh-import.c:138
+#: ../tvp-svn-helper/tsh-import.c:143
 msgid "Import Message"
 msgstr "Mesajı içe aktar"
 
-#: ../tvp-svn-helper/tsh-log.c:123
+#: ../tvp-svn-helper/tsh-log.c:122
 msgid "Log failed"
 msgstr "Kaydetme başarısızdır"
 
@@ -1500,7 +1502,7 @@ msgstr "Oturum Aç"
 msgid "Log Message"
 msgstr "Log mesajı"
 
-#: ../tvp-svn-helper/tsh-move.c:104
+#: ../tvp-svn-helper/tsh-move.c:108
 msgid "Local move"
 msgstr "Yerel taşı"
 
@@ -1513,11 +1515,11 @@ msgid "Notification"
 msgstr "Uyarı"
 
 #. tsh_properties_dialog_done (dialog);
-#: ../tvp-svn-helper/tsh-properties.c:94
+#: ../tvp-svn-helper/tsh-properties.c:142
 msgid "Set property failed"
 msgstr "Özellik atama başarısız oldu"
 
-#: ../tvp-svn-helper/tsh-properties.c:117
+#: ../tvp-svn-helper/tsh-properties.c:181
 msgid "Properties failed"
 msgstr "Özellikler başarısızdır"
 
@@ -1533,15 +1535,15 @@ msgstr "_Ekle"
 msgid "_Remove"
 msgstr "_Kaldır"
 
-#: ../tvp-svn-helper/tsh-relocate.c:78
+#: ../tvp-svn-helper/tsh-relocate.c:77
 msgid "Relocate failed"
 msgstr "Taşıma başarısızdır"
 
-#: ../tvp-svn-helper/tsh-relocate.c:93
+#: ../tvp-svn-helper/tsh-relocate.c:92
 msgid "Relocate finished"
 msgstr "Taşıma sonlanmıştır"
 
-#: ../tvp-svn-helper/tsh-relocate.c:139
+#: ../tvp-svn-helper/tsh-relocate.c:138
 msgid "Relocating..."
 msgstr "Taşınıyor..."
 
@@ -1553,7 +1555,7 @@ msgstr "_Kimden:"
 msgid "_To:"
 msgstr "Ki_me:"
 
-#: ../tvp-svn-helper/tsh-status.c:91
+#: ../tvp-svn-helper/tsh-status.c:104
 msgid "Status failed"
 msgstr "Durum başarısız"
 
