@@ -4,15 +4,15 @@
 # 
 # Translators:
 # Jeff Huang <s8321414@gmail.com>, 2015,2018
-# Walter Cheuk <wwycheuk@gmail.com>, 2013
+# Walter Cheuk <wwycheuk@gmail.com>, 2013,2018
 # Jeff Huang <s8321414@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-31 06:30+0200\n"
-"PO-Revision-Date: 2018-06-01 02:47+0000\n"
-"Last-Translator: Jeff Huang <s8321414@gmail.com>\n"
+"POT-Creation-Date: 2018-06-01 06:30+0200\n"
+"PO-Revision-Date: 2018-06-23 08:39+0000\n"
+"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
 "Language-Team: Chinese (Taiwan) (http://www.transifex.com/xfce/thunar-plugins/language/zh_TW/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:242
 #: ../thunar-vcs-plugin/tvp-svn-action.c:280
 msgid "Menu|Add"
-msgstr "選單|增加"
+msgstr "Menu|增加"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:242
 #: ../thunar-vcs-plugin/tvp-svn-action.c:280 ../tvp-git-helper/main.c:153
@@ -35,7 +35,7 @@ msgstr "增加"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:243
 msgid "Menu|Bisect"
-msgstr "選單|分為二"
+msgstr "Menu|分為二"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:243
 msgid "Bisect"
@@ -44,7 +44,7 @@ msgstr "分為二"
 #: ../thunar-vcs-plugin/tvp-git-action.c:245
 #: ../thunar-vcs-plugin/tvp-svn-action.c:285
 msgid "Menu|Blame"
-msgstr "選單|歸咎"
+msgstr "Menu|歸咎"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:245
 #: ../thunar-vcs-plugin/tvp-svn-action.c:285 ../tvp-git-helper/main.c:157
@@ -55,7 +55,7 @@ msgstr "歸咎"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:247
 msgid "Menu|Branch"
-msgstr "選單|分支"
+msgstr "Menu|分支"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
@@ -66,7 +66,7 @@ msgstr "分支"
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Menu|Checkout"
-msgstr "選單|取出"
+msgstr "Menu|取出"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:271
@@ -76,7 +76,7 @@ msgstr "取出"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Menu|Clean"
-msgstr "選單|清除"
+msgstr "Menu|清除"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
@@ -85,7 +85,7 @@ msgstr "清除"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:251
 msgid "Menu|Clone"
-msgstr "選單|克隆"
+msgstr "Menu|克隆"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:251 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -95,7 +95,7 @@ msgstr "克隆"
 #: ../thunar-vcs-plugin/tvp-git-action.c:252
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Menu|Commit"
-msgstr "選單|提交"
+msgstr "Menu|提交"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:252
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
@@ -108,7 +108,7 @@ msgstr "提交"
 #: ../thunar-vcs-plugin/tvp-git-action.c:253
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327
 msgid "Menu|Diff"
-msgstr "選單|比對"
+msgstr "Menu|比對"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:253
 #: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:291
@@ -118,7 +118,7 @@ msgstr "比對"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Menu|Fetch"
-msgstr "選單|取回"
+msgstr "Menu|取回"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Fetch"
@@ -126,7 +126,7 @@ msgstr "取回"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:255
 msgid "Menu|Grep"
-msgstr "選單|尋找"
+msgstr "Menu|尋找"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:255
 msgid "Grep"
@@ -134,7 +134,7 @@ msgstr "尋找"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:256
 msgid "Menu|Init"
-msgstr "選單|初始化"
+msgstr "Menu|初始化"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:256
 msgid "Init"
@@ -143,7 +143,7 @@ msgstr "初始化"
 #: ../thunar-vcs-plugin/tvp-git-action.c:257
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357
 msgid "Menu|Log"
-msgstr "選單|紀錄檔"
+msgstr "Menu|紀錄檔"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:257
 #: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-git-helper/main.c:173
@@ -154,7 +154,7 @@ msgstr "紀錄檔"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 msgid "Menu|Merge"
-msgstr "選單|合併"
+msgstr "Menu|合併"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 msgid "Merge"
@@ -163,7 +163,7 @@ msgstr "合併"
 #: ../thunar-vcs-plugin/tvp-git-action.c:260
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372
 msgid "Menu|Move"
-msgstr "選單|移動"
+msgstr "Menu|移動"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:260
 #: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-git-helper/main.c:177
@@ -173,7 +173,7 @@ msgstr "移動"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Menu|Pull"
-msgstr "選單|拉"
+msgstr "Menu|拉"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgid "Pull"
@@ -181,7 +181,7 @@ msgstr "拉"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:262
 msgid "Menu|Push"
-msgstr "選單|推"
+msgstr "Menu|推"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:262
 msgid "Push"
@@ -189,7 +189,7 @@ msgstr "推"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 msgid "Menu|Rebase"
-msgstr "選單|重定基準"
+msgstr "Menu|重定基準"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:263
 msgid "Rebase"
@@ -197,7 +197,7 @@ msgstr "重定基準"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Menu|Reset"
-msgstr "選單|重設"
+msgstr "Menu|重設"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
@@ -206,7 +206,7 @@ msgstr "重設"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Menu|Remove"
-msgstr "選單|移除"
+msgstr "Menu|移除"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:265
 msgid "Remove"
@@ -214,7 +214,7 @@ msgstr "移除"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 msgid "Menu|Show"
-msgstr "選單|顯示"
+msgstr "Menu|顯示"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:266
 msgid "Show"
@@ -222,7 +222,7 @@ msgstr "顯示"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268
 msgid "Menu|Stash"
-msgstr "選單|暫存"
+msgstr "Menu|暫存"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
@@ -232,7 +232,7 @@ msgstr "暫存"
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409
 msgid "Menu|Status"
-msgstr "選單|狀態"
+msgstr "Menu|狀態"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:270
 #: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-git-helper/main.c:189
@@ -245,7 +245,7 @@ msgstr "狀態"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Menu|Tag"
-msgstr "選單|標籤"
+msgstr "Menu|標籤"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:271
 msgid "Tag"
@@ -272,7 +272,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Menu|Changelist"
-msgstr "選單|更改列表"
+msgstr "Menu|更改列表"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Changelist"
@@ -280,7 +280,7 @@ msgstr "更改列表"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Menu|Cleanup"
-msgstr "選單|清理"
+msgstr "Menu|清理"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:275
 msgid "Cleanup"
@@ -288,7 +288,7 @@ msgstr "清理"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Menu|Copy"
-msgstr "選單|複製"
+msgstr "Menu|複製"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:283
 #: ../tvp-svn-helper/tsh-copy.c:183
@@ -297,7 +297,7 @@ msgstr "複製"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322
 msgid "Menu|Delete"
-msgstr "選單|刪除"
+msgstr "Menu|刪除"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:287
 #: ../tvp-svn-helper/tsh-delete.c:139 ../tvp-svn-helper/tsh-delete.c:152
@@ -306,7 +306,7 @@ msgstr "刪除"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332
 msgid "Menu|Export"
-msgstr "選單|匯出"
+msgstr "Menu|匯出"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:295
 #: ../tvp-svn-helper/tsh-export.c:113 ../tvp-svn-helper/tsh-export.c:131
@@ -315,7 +315,7 @@ msgstr "匯出"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Menu|Import"
-msgstr "選單|匯入"
+msgstr "Menu|匯入"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:299
 #: ../tvp-svn-helper/tsh-import.c:120 ../tvp-svn-helper/tsh-import.c:138
@@ -324,7 +324,7 @@ msgstr "匯入"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Menu|Info"
-msgstr "選單|資訊"
+msgstr "Menu|資訊"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:342
 msgid "Info"
@@ -332,7 +332,7 @@ msgstr "資訊"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Menu|Lock"
-msgstr "選單|鎖定"
+msgstr "Menu|鎖定"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:303
 #: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
@@ -341,7 +341,7 @@ msgstr "鎖定"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:383
 msgid "Menu|Edit Properties"
-msgstr "選單|編輯屬性"
+msgstr "Menu|編輯屬性"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:383
 msgid "Edit Properties"
@@ -349,7 +349,7 @@ msgstr "編輯屬性"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:388
 msgid "Menu|Relocate"
-msgstr "選單|重新定位"
+msgstr "Menu|重新定位"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:388 ../tvp-svn-helper/main.c:323
 #: ../tvp-svn-helper/tsh-relocate.c:124
@@ -359,7 +359,7 @@ msgstr "重新定位"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Menu|Resolved"
-msgstr "選單|已解決"
+msgstr "Menu|已解決"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:319
 #: ../tvp-svn-helper/tsh-common.c:539 ../tvp-svn-helper/tsh-resolved.c:115
@@ -369,7 +369,7 @@ msgstr "已解決"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Menu|Resolve"
-msgstr "選單|解決"
+msgstr "Menu|解決"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Resolve"
@@ -377,7 +377,7 @@ msgstr "解決"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Menu|Revert"
-msgstr "選單|回復"
+msgstr "Menu|回復"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:327
 #: ../tvp-svn-helper/tsh-revert.c:119 ../tvp-svn-helper/tsh-revert.c:132
@@ -386,7 +386,7 @@ msgstr "回復"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414
 msgid "Menu|Switch"
-msgstr "選單|切換"
+msgstr "Menu|切換"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:335
 #: ../tvp-svn-helper/tsh-switch.c:119 ../tvp-svn-helper/tsh-switch.c:132
@@ -395,7 +395,7 @@ msgstr "切換"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419
 msgid "Menu|Unlock"
-msgstr "選單|解鎖"
+msgstr "Menu|解鎖"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:419 ../tvp-svn-helper/main.c:339
 #: ../tvp-svn-helper/tsh-unlock.c:113
@@ -404,7 +404,7 @@ msgstr "解鎖"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424
 msgid "Menu|Update"
-msgstr "選單|更新"
+msgstr "Menu|更新"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:343
 #: ../tvp-svn-helper/tsh-update.c:119
@@ -712,6 +712,7 @@ msgstr "強迫清理。"
 #: ../tvp-svn-helper/tsh-move.c:157
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:100
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:154
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:158
 #: ../tvp-svn-helper/tsh-trust-dialog.c:83
@@ -1547,10 +1548,6 @@ msgstr "從(_F)："
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:141
 msgid "_To:"
 msgstr "至(_T)："
-
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
-msgid "OK"
-msgstr "是"
 
 #: ../tvp-svn-helper/tsh-status.c:104
 msgid "Status failed"
