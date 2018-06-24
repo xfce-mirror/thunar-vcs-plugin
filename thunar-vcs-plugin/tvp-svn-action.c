@@ -270,12 +270,12 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
   /* No version control or version control (parent) */
   if (tvp_action->property.parent_version_control && (tvp_action->property.is_parent || tvp_action->property.directory_no_version_control || tvp_action->property.file_no_version_control)) 
   {
-    add_subaction (item, menu, "tvp::add", Q_("Menu|Add"), _("Add"), "list-add", "--add");
+    add_subaction (item, menu, "tvp::add", C_("Menu", "Add"), _("Add"), "list-add", "--add");
   }
   /* Version control (file) */
   if (tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::blame", Q_("Menu|Blame"), _("Blame"), "gtk-index", "--blame");
+    add_subaction (item, menu, "tvp::blame", C_("Menu", "Blame"), _("Blame"), "gtk-index", "--blame");
   }
 /* No need
   subitem = gtk_menu_item_new_with_label (_("Cat"));
@@ -287,52 +287,52 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
 *//* Version control (file) */
   if (tvp_action->property.file_version_control)
   {
-    add_subaction_u (menu, "tvp::changelist", Q_("Menu|Changelist"), _("Changelist"), "gtk-index", _("Changelist"));
+    add_subaction_u (menu, "tvp::changelist", C_("Menu", "Changelist"), _("Changelist"), "gtk-index", _("Changelist"));
   }
   /* No version control (parent) */
   if (tvp_action->property.is_parent && !tvp_action->property.parent_version_control)
   {
-    add_subaction (item, menu, "tvp::checkout", Q_("Menu|Checkout"), _("Checkout"), "gtk-connect", "--checkout");
+    add_subaction (item, menu, "tvp::checkout", C_("Menu", "Checkout"), _("Checkout"), "gtk-connect", "--checkout");
   }
   /* Version control (parent) */
   if (tvp_action->property.is_parent && tvp_action->property.parent_version_control)
   {
-    add_subaction (item, menu, "tvp::cleanup", Q_("Menu|Cleanup"), _("Cleanup"), "edit-clear", "--cleanup");
+    add_subaction (item, menu, "tvp::cleanup", C_("Menu", "Cleanup"), _("Cleanup"), "edit-clear", "--cleanup");
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::commit", Q_("Menu|Commit"), _("Commit"), "gtk-apply", "--commit");
+    add_subaction (item, menu, "tvp::commit", C_("Menu", "Commit"), _("Commit"), "gtk-apply", "--commit");
   }
   /* Version control (no parent) */
   if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_version_control || tvp_action->property.file_version_control))
   {
-    add_subaction (item, menu, "tvp::copy", Q_("Menu|Copy"), _("Copy"), "edit-copy", "--copy");
+    add_subaction (item, menu, "tvp::copy", C_("Menu", "Copy"), _("Copy"), "edit-copy", "--copy");
   }
   /* Version control (no parent) */
   if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_version_control || tvp_action->property.file_version_control))
   {
-    add_subaction (item, menu, "tvp::delete", Q_("Menu|Delete"), _("Delete"), "edit-delete", "--delete");
+    add_subaction (item, menu, "tvp::delete", C_("Menu", "Delete"), _("Delete"), "edit-delete", "--delete");
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::diff", Q_("Menu|Diff"), _("Diff"), "gtk-convert", "--diff");
+    add_subaction (item, menu, "tvp::diff", C_("Menu", "Diff"), _("Diff"), "gtk-convert", "--diff");
   }
   /* Version control and No version control (parent) */
   if (tvp_action->property.is_parent || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::export", Q_("Menu|Export"), _("Export"), "document-save", "--export");
+    add_subaction (item, menu, "tvp::export", C_("Menu", "Export"), _("Export"), "document-save", "--export");
   }
   /* No version control (all) */
   if (!tvp_action->property.parent_version_control && (tvp_action->property.is_parent || tvp_action->property.directory_no_version_control || tvp_action->property.file_no_version_control))
   {
-    add_subaction (item, menu, "tvp::import", Q_("Menu|Import"), _("Import"), "network-workgroup", "--import");
+    add_subaction (item, menu, "tvp::import", C_("Menu", "Import"), _("Import"), "network-workgroup", "--import");
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction_u (menu, "tvp::info", Q_("Menu|Info"), _("Info"), "dialog-information", _("Info"));
+    add_subaction_u (menu, "tvp::info", C_("Menu", "Info"), _("Info"), "dialog-information", _("Info"));
   }
 /* Ehmm...
   subitem = gtk_menu_item_new_with_label (_("List"));
@@ -342,12 +342,12 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
 *//* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::lock", Q_("Menu|Lock"), _("Lock"), "dialog-password", "--lock");
+    add_subaction (item, menu, "tvp::lock", C_("Menu", "Lock"), _("Lock"), "dialog-password", "--lock");
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::log", Q_("Menu|Log"), _("Log"), "gtk-index", "--log");
+    add_subaction (item, menu, "tvp::log", C_("Menu", "Log"), _("Log"), "gtk-index", "--log");
   }
 /* Ehmm ...
   subitem = gtk_menu_item_new_with_label (_("Merge"));
@@ -362,7 +362,7 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
 *//* Version control (no parent) */
   if (!tvp_action->property.is_parent && tvp_action->property.parent_version_control && (tvp_action->property.directory_version_control || tvp_action->property.file_version_control))
   {
-    add_subaction (item, menu, "tvp::move", Q_("Menu|Move"), _("Move"), "gtk-dnd-multiple", "--move");
+    add_subaction (item, menu, "tvp::move", C_("Menu", "Move"), _("Move"), "gtk-dnd-multiple", "--move");
   }
 /* Merged
   subitem = gtk_menu_item_new_with_label (_("Delete Properties"));
@@ -373,48 +373,48 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
 *//* Version control */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::properties", Q_("Menu|Edit Properties"), _("Edit Properties"), "gtk-edit", "--properties");
+    add_subaction (item, menu, "tvp::properties", C_("Menu", "Edit Properties"), _("Edit Properties"), "gtk-edit", "--properties");
   }
   /* Version control (parent) */
   if (tvp_action->property.is_parent && tvp_action->property.parent_version_control)
   {
-    add_subaction (item, menu, "tvp::relocate", Q_("Menu|Relocate"), _("Relocate"), "edit-find-replace", "--relocate");
+    add_subaction (item, menu, "tvp::relocate", C_("Menu", "Relocate"), _("Relocate"), "edit-find-replace", "--relocate");
   }
 /* Changed
   subitem = gtk_menu_item_new_with_label (_("Mark Resolved"));
 */if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::resolved", Q_("Menu|Resolved"), _("Resolved"), "gtk-yes", "--resolved");
+    add_subaction (item, menu, "tvp::resolved", C_("Menu", "Resolved"), _("Resolved"), "gtk-yes", "--resolved");
   }/*
 *//* Version control (file) */
   if (tvp_action->property.file_version_control)
   {
-    add_subaction_u (menu, "tvp::resolve", Q_("Menu|Resolve"), _("Resolve"), "gtk-yes", _("Resolve"));
+    add_subaction_u (menu, "tvp::resolve", C_("Menu", "Resolve"), _("Resolve"), "gtk-yes", _("Resolve"));
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::revert", Q_("Menu|Revert"), _("Revert"), "edit-undo", "--revert");
+    add_subaction (item, menu, "tvp::revert", C_("Menu", "Revert"), _("Revert"), "edit-undo", "--revert");
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::status", Q_("Menu|Status"), _("Status"), "dialog-information", "--status");
+    add_subaction (item, menu, "tvp::status", C_("Menu", "Status"), _("Status"), "dialog-information", "--status");
   }
   /* Version control (parent) */
   if (tvp_action->property.is_parent && tvp_action->property.parent_version_control)
   {
-    add_subaction (item, menu, "tvp::switch", Q_("Menu|Switch"), _("Switch"), "go-jump", "--switch");
+    add_subaction (item, menu, "tvp::switch", C_("Menu", "Switch"), _("Switch"), "go-jump", "--switch");
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::unlock", Q_("Menu|Unlock"), _("Unlock"), NULL, "--unlock");
+    add_subaction (item, menu, "tvp::unlock", C_("Menu", "Unlock"), _("Unlock"), NULL, "--unlock");
   }
   /* Version control (all) */
   if ((tvp_action->property.is_parent && tvp_action->property.parent_version_control) || tvp_action->property.directory_version_control || tvp_action->property.file_version_control)
   {
-    add_subaction (item, menu, "tvp::update", Q_("Menu|Update"), _("Update"), "view-refresh", "--update");
+    add_subaction (item, menu, "tvp::update", C_("Menu", "Update"), _("Update"), "view-refresh", "--update");
   }
 }
 
