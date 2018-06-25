@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-25 00:30+0200\n"
-"PO-Revision-Date: 2018-06-25 09:53+0000\n"
+"PO-Revision-Date: 2018-06-25 21:35+0000\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/xfce/thunar-plugins/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "In tweeën hakken"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:278
 msgctxt "Menu"
 msgid "Blame"
-msgstr ""
+msgstr "Blame"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:278 ../tvp-git-helper/main.c:157
@@ -70,7 +70,7 @@ msgstr "Tak"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:295
 msgctxt "Menu"
 msgid "Checkout"
-msgstr ""
+msgstr "Checkout"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:241
 #: ../thunar-vcs-plugin/tvp-svn-action.c:295 ../tvp-svn-helper/main.c:269
@@ -116,7 +116,7 @@ msgstr "Aanbrengen"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:320
 msgctxt "Menu"
 msgid "Diff"
-msgstr ""
+msgstr "Diff"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:246
 #: ../thunar-vcs-plugin/tvp-svn-action.c:320 ../tvp-svn-helper/main.c:289
@@ -136,7 +136,7 @@ msgstr "Ophalen"
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgctxt "Menu"
 msgid "Grep"
-msgstr ""
+msgstr "Grep"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Grep"
@@ -145,7 +145,7 @@ msgstr "Pakken"
 #: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgctxt "Menu"
 msgid "Init"
-msgstr ""
+msgstr "Init"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Init"
@@ -243,7 +243,7 @@ msgstr "Tonen"
 #: ../thunar-vcs-plugin/tvp-git-action.c:261
 msgctxt "Menu"
 msgid "Stash"
-msgstr ""
+msgstr "Stash"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:261 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
