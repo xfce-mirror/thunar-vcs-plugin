@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-24 06:30+0200\n"
-"PO-Revision-Date: 2018-05-24 16:30+0000\n"
+"POT-Creation-Date: 2018-06-25 00:30+0200\n"
+"PO-Revision-Date: 2018-06-25 17:09+0000\n"
 "Last-Translator: Kiril Kirilov <cybercop_montana@abv.bg>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/xfce/thunar-plugins/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -21,239 +21,263 @@ msgstr ""
 "Language: bg\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:242
-#: ../thunar-vcs-plugin/tvp-svn-action.c:280
-msgid "Menu|Add"
-msgstr "Меню|Добави"
+#: ../thunar-vcs-plugin/tvp-git-action.c:235
+#: ../thunar-vcs-plugin/tvp-svn-action.c:273
+msgctxt "Menu"
+msgid "Add"
+msgstr "Добавяне"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:242
-#: ../thunar-vcs-plugin/tvp-svn-action.c:280 ../tvp-git-helper/main.c:153
+#: ../thunar-vcs-plugin/tvp-git-action.c:235
+#: ../thunar-vcs-plugin/tvp-svn-action.c:273 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
-#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:119
-#: ../tvp-svn-helper/tsh-add.c:132
+#: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
+#: ../tvp-svn-helper/tsh-add.c:154
 msgid "Add"
 msgstr "Добави"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:243
-msgid "Menu|Bisect"
-msgstr "Меню|Раздели"
+#: ../thunar-vcs-plugin/tvp-git-action.c:236
+msgctxt "Menu"
+msgid "Bisect"
+msgstr "Разделяне"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:243
+#: ../thunar-vcs-plugin/tvp-git-action.c:236
 msgid "Bisect"
 msgstr "Раздели"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:285
-msgid "Menu|Blame"
-msgstr "Меню|Обвини"
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
+#: ../thunar-vcs-plugin/tvp-svn-action.c:278
+msgctxt "Menu"
+msgid "Blame"
+msgstr "Бламиране"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:285 ../tvp-git-helper/main.c:157
-#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
-#: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
+#: ../thunar-vcs-plugin/tvp-svn-action.c:278 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
+#: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Обвини"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
-msgid "Menu|Branch"
-msgstr "Меню|Разклони"
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+msgctxt "Menu"
+msgid "Branch"
+msgstr "Разклонение"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:240 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Разклони"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-#: ../thunar-vcs-plugin/tvp-svn-action.c:302
-msgid "Menu|Checkout"
-msgstr "Меню|Освободи"
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
+#: ../thunar-vcs-plugin/tvp-svn-action.c:295
+msgctxt "Menu"
+msgid "Checkout"
+msgstr "Проверка"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:271
-#: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
+#: ../thunar-vcs-plugin/tvp-svn-action.c:295 ../tvp-svn-helper/main.c:269
+#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
 msgid "Checkout"
 msgstr "Освободи"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:249
-msgid "Menu|Clean"
-msgstr "Меню|Изчисти"
+#: ../thunar-vcs-plugin/tvp-git-action.c:242
+msgctxt "Menu"
+msgid "Clean"
+msgstr "Изчистване"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:165
-#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
+#: ../thunar-vcs-plugin/tvp-git-action.c:242 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "Изчисти"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251
-msgid "Menu|Clone"
-msgstr "Меню|Клонирай"
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+msgctxt "Menu"
+msgid "Clone"
+msgstr "Клониране"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Клонирай"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:252
-#: ../thunar-vcs-plugin/tvp-svn-action.c:312
-msgid "Menu|Commit"
-msgstr "Меню|Повери"
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
+msgctxt "Menu"
+msgid "Commit"
+msgstr "Проверяване"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:252
-#: ../thunar-vcs-plugin/tvp-svn-action.c:312
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
+#: ../thunar-vcs-plugin/tvp-svn-action.c:305
 #: ../tvp-git-helper/tgh-log-dialog.c:153
-#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
-#: ../tvp-svn-helper/tsh-commit.c:241 ../tvp-svn-helper/tsh-commit.c:254
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
+#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
 msgid "Commit"
 msgstr "Повери"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327
-msgid "Menu|Diff"
-msgstr "Меню|Разграничения"
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+#: ../thunar-vcs-plugin/tvp-svn-action.c:320
+msgctxt "Menu"
+msgid "Diff"
+msgstr "Разлики"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:291
-#: ../tvp-svn-helper/tsh-diff.c:218 ../tvp-svn-helper/tsh-diff-dialog.c:137
+#: ../thunar-vcs-plugin/tvp-git-action.c:246
+#: ../thunar-vcs-plugin/tvp-svn-action.c:320 ../tvp-svn-helper/main.c:289
+#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
 msgid "Diff"
 msgstr "Разграничения"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
-msgid "Menu|Fetch"
-msgstr "Меню|Вземи"
+#: ../thunar-vcs-plugin/tvp-git-action.c:247
+msgctxt "Menu"
+msgid "Fetch"
+msgstr "Изкарване"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
+#: ../thunar-vcs-plugin/tvp-git-action.c:247
 msgid "Fetch"
 msgstr "Вземи"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
-msgid "Menu|Grep"
-msgstr "Меню|Хвани"
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+msgctxt "Menu"
+msgid "Grep"
+msgstr "Хващане"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Grep"
 msgstr "Хвани"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
-msgid "Menu|Init"
-msgstr "Меню|Инициализирай"
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+msgctxt "Menu"
+msgid "Init"
+msgstr "Инициализиране"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Init"
 msgstr "Инициализирай"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357
-msgid "Menu|Log"
-msgstr "Меню|Лог"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-git-helper/main.c:173
-#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
-#: ../tvp-svn-helper/tsh-log-dialog.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:350
+msgctxt "Menu"
 msgid "Log"
 msgstr "Лог"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
-msgid "Menu|Merge"
-msgstr "Меню|Слей"
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:350 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
+#: ../tvp-svn-helper/tsh-log-dialog.c:227
+msgid "Log"
+msgstr "Лог"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+msgctxt "Menu"
+msgid "Merge"
+msgstr "Сливане"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 msgid "Merge"
 msgstr "Слей"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:260
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372
-msgid "Menu|Move"
-msgstr "Меню|Премести"
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#: ../thunar-vcs-plugin/tvp-svn-action.c:365
+msgctxt "Menu"
+msgid "Move"
+msgstr "Преместване"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:260
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-git-helper/main.c:177
-#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:170
+#: ../thunar-vcs-plugin/tvp-git-action.c:253
+#: ../thunar-vcs-plugin/tvp-svn-action.c:365 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "Премести"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
-msgid "Menu|Pull"
-msgstr "Меню|Дръпни"
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
+msgctxt "Menu"
+msgid "Pull"
+msgstr "Дърпане"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
+#: ../thunar-vcs-plugin/tvp-git-action.c:254
 msgid "Pull"
 msgstr "Дръпни"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:262
-msgid "Menu|Push"
-msgstr "Меню|Натисни"
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
+msgctxt "Menu"
+msgid "Push"
+msgstr "Бутане"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:262
+#: ../thunar-vcs-plugin/tvp-git-action.c:255
 msgid "Push"
 msgstr "Натисни"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-msgid "Menu|Rebase"
-msgstr "Меню|Преалокирай"
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
+msgctxt "Menu"
+msgid "Rebase"
+msgstr "Пребазиране"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-git-action.c:256
 msgid "Rebase"
 msgstr "Преалокирай"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-msgid "Menu|Reset"
-msgstr "Меню|Нулирай"
+#: ../thunar-vcs-plugin/tvp-git-action.c:257
+msgctxt "Menu"
+msgid "Reset"
+msgstr "Нулиране"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:181
+#: ../thunar-vcs-plugin/tvp-git-action.c:257 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Нулирай"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
-msgid "Menu|Remove"
-msgstr "Меню|Премахни"
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+msgctxt "Menu"
+msgid "Remove"
+msgstr "Премахване"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
 msgid "Remove"
 msgstr "Премахни"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
-msgid "Menu|Show"
-msgstr "Меню|Покажи"
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+msgctxt "Menu"
+msgid "Show"
+msgstr "Показване"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
 msgid "Show"
 msgstr "Покажи"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:268
-msgid "Menu|Stash"
-msgstr "Меню|Скрий"
+#: ../thunar-vcs-plugin/tvp-git-action.c:261
+msgctxt "Menu"
+msgid "Stash"
+msgstr "Скриване"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:261 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Скрий"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
-#: ../thunar-vcs-plugin/tvp-svn-action.c:409
-msgid "Menu|Status"
-msgstr "Меню|Статус"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
-#: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-git-helper/main.c:189
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
-#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:151
-#: ../tvp-svn-helper/tsh-status-dialog.c:246
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:402
+msgctxt "Menu"
 msgid "Status"
 msgstr "Статус"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
-msgid "Menu|Tag"
-msgstr "Меню|Етикет"
+#: ../thunar-vcs-plugin/tvp-git-action.c:263
+#: ../thunar-vcs-plugin/tvp-svn-action.c:402 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:120
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:149
+#: ../tvp-svn-helper/tsh-status-dialog.c:252
+msgid "Status"
+msgstr "Статус"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
+msgctxt "Menu"
+msgid "Tag"
+msgstr "Таг"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:264
 msgid "Tag"
 msgstr "Етикет"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:280
-#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+#: ../thunar-vcs-plugin/tvp-git-action.c:271
+#: ../thunar-vcs-plugin/tvp-svn-action.c:425
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "Действието %s е неизпълнено"
@@ -271,144 +295,160 @@ msgstr "SVN"
 msgid "GIT"
 msgstr "GIT"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:297
-msgid "Menu|Changelist"
-msgstr "Меню|Промени"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:290
+msgctxt "Menu"
+msgid "Changelist"
+msgstr "Списък с промени"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:297
+#: ../thunar-vcs-plugin/tvp-svn-action.c:290
 msgid "Changelist"
 msgstr "Промени"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:307
-msgid "Menu|Cleanup"
-msgstr "Меню|Изчисти"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300
+msgctxt "Menu"
+msgid "Cleanup"
+msgstr "Почистване"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:275
+#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
 msgstr "Изчисти"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317
-msgid "Menu|Copy"
-msgstr "Меню|Копирай"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:310
+msgctxt "Menu"
+msgid "Copy"
+msgstr "Копиране"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:283
-#: ../tvp-svn-helper/tsh-copy.c:177
+#: ../thunar-vcs-plugin/tvp-svn-action.c:310 ../tvp-svn-helper/main.c:281
+#: ../tvp-svn-helper/tsh-copy.c:189
 msgid "Copy"
 msgstr "Копирай"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322
-msgid "Menu|Delete"
-msgstr "Меню|Изтрий"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:315
+msgctxt "Menu"
+msgid "Delete"
+msgstr "Изтриване"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:287
-#: ../tvp-svn-helper/tsh-delete.c:140 ../tvp-svn-helper/tsh-delete.c:153
+#: ../thunar-vcs-plugin/tvp-svn-action.c:315 ../tvp-svn-helper/main.c:285
+#: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete"
 msgstr "Изтрий"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332
-msgid "Menu|Export"
-msgstr "Меню|Изнеси"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:325
+msgctxt "Menu"
+msgid "Export"
+msgstr "Изнасяне"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:295
-#: ../tvp-svn-helper/tsh-export.c:114 ../tvp-svn-helper/tsh-export.c:132
+#: ../thunar-vcs-plugin/tvp-svn-action.c:325 ../tvp-svn-helper/main.c:293
+#: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
 msgid "Export"
 msgstr "Изнеси"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337
-msgid "Menu|Import"
-msgstr "Меню|Внеси"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:330
+msgctxt "Menu"
+msgid "Import"
+msgstr "Внасяне"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:299
-#: ../tvp-svn-helper/tsh-import.c:115 ../tvp-svn-helper/tsh-import.c:133
+#: ../thunar-vcs-plugin/tvp-svn-action.c:330 ../tvp-svn-helper/main.c:297
+#: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
 msgid "Import"
 msgstr "Внеси"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342
-msgid "Menu|Info"
-msgstr "Меню|Информация"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342
+#: ../thunar-vcs-plugin/tvp-svn-action.c:335
+msgctxt "Menu"
 msgid "Info"
 msgstr "Информация"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352
-msgid "Menu|Lock"
-msgstr "Меню|Заключи"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:335
+msgid "Info"
+msgstr "Информация"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:303
-#: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
+#: ../thunar-vcs-plugin/tvp-svn-action.c:345
+msgctxt "Menu"
+msgid "Lock"
+msgstr "Заключване"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:345 ../tvp-svn-helper/main.c:301
+#: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
 msgid "Lock"
 msgstr "Заключи"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:383
-msgid "Menu|Edit Properties"
-msgstr "Меню|Редактиране на Свойствата"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:376
+msgctxt "Menu"
+msgid "Edit Properties"
+msgstr "Редактиране на свойствата"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:383
+#: ../thunar-vcs-plugin/tvp-svn-action.c:376
 msgid "Edit Properties"
 msgstr "Редактиране на Свойствата"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:388
-msgid "Menu|Relocate"
-msgstr "Меню|Преместване"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:381
+msgctxt "Menu"
+msgid "Relocate"
+msgstr "Смяна на местоположение"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:388 ../tvp-svn-helper/main.c:323
-#: ../tvp-svn-helper/tsh-relocate.c:125
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:214
+#: ../thunar-vcs-plugin/tvp-svn-action.c:381 ../tvp-svn-helper/main.c:321
+#: ../tvp-svn-helper/tsh-relocate.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:187
 msgid "Relocate"
 msgstr "Преместване"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:394
-msgid "Menu|Resolved"
-msgstr "Меню|Разрешено"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:319
-#: ../tvp-svn-helper/tsh-common.c:536 ../tvp-svn-helper/tsh-resolved.c:115
-#: ../tvp-svn-helper/tsh-resolved.c:128
+#: ../thunar-vcs-plugin/tvp-svn-action.c:387
+msgctxt "Menu"
 msgid "Resolved"
 msgstr "Разрешено"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:399
-msgid "Menu|Resolve"
-msgstr "Меню|Разреши"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:387 ../tvp-svn-helper/main.c:317
+#: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
+#: ../tvp-svn-helper/tsh-resolved.c:138
+msgid "Resolved"
+msgstr "Разрешено"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:399
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
+msgctxt "Menu"
+msgid "Resolve"
+msgstr "Разрешаване"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:392
 msgid "Resolve"
 msgstr "Разреши"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:404
-msgid "Menu|Revert"
-msgstr "Меню|Върни"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:397
+msgctxt "Menu"
+msgid "Revert"
+msgstr "Обръщане"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:327
-#: ../tvp-svn-helper/tsh-revert.c:114 ../tvp-svn-helper/tsh-revert.c:127
+#: ../thunar-vcs-plugin/tvp-svn-action.c:397 ../tvp-svn-helper/main.c:325
+#: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
 msgid "Revert"
 msgstr "Върни"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414
-msgid "Menu|Switch"
-msgstr "Меню|Превключи"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:407
+msgctxt "Menu"
+msgid "Switch"
+msgstr "Смяна"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:335
-#: ../tvp-svn-helper/tsh-switch.c:120 ../tvp-svn-helper/tsh-switch.c:133
+#: ../thunar-vcs-plugin/tvp-svn-action.c:407 ../tvp-svn-helper/main.c:333
+#: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
 msgid "Switch"
 msgstr "Превключи"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419
-msgid "Menu|Unlock"
-msgstr "Меню|Отключи"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:412
+msgctxt "Menu"
+msgid "Unlock"
+msgstr "Отключване"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419 ../tvp-svn-helper/main.c:339
-#: ../tvp-svn-helper/tsh-unlock.c:113
+#: ../thunar-vcs-plugin/tvp-svn-action.c:412 ../tvp-svn-helper/main.c:337
+#: ../tvp-svn-helper/tsh-unlock.c:119
 msgid "Unlock"
 msgstr "Отключи"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424
-msgid "Menu|Update"
-msgstr "Меню|Ъпдейт"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:417
+msgctxt "Menu"
+msgid "Update"
+msgstr "Обновяване"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:343
-#: ../tvp-svn-helper/tsh-update.c:120
+#: ../thunar-vcs-plugin/tvp-svn-action.c:417 ../tvp-svn-helper/main.c:341
+#: ../tvp-svn-helper/tsh-update.c:125
 msgid "Update"
 msgstr "Ъпдейт"
 
@@ -416,67 +456,67 @@ msgstr "Ъпдейт"
 msgid "URL:"
 msgstr "URL:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
-#: ../tvp-svn-helper/tsh-common.c:605 ../tvp-svn-helper/tsh-common.c:693
-#: ../tvp-svn-helper/tsh-common.c:705 ../tvp-svn-helper/tsh-common.c:730
-#: ../tvp-svn-helper/tsh-common.c:747 ../tvp-svn-helper/tsh-common.c:776
-#: ../tvp-svn-helper/tsh-common.c:879
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:124
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:140
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:155
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:181
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:196
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:212
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:253
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:333
+#: ../tvp-svn-helper/tsh-common.c:651 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:751 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:793 ../tvp-svn-helper/tsh-common.c:822
+#: ../tvp-svn-helper/tsh-common.c:934
 msgid "Unknown"
 msgstr "Непознат"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:133
 msgid "Revision:"
 msgstr "Ревизия:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
 msgid "Repository:"
 msgstr "Хранилище:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:174
 msgid "Modified revision:"
 msgstr "Преработена версия:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:189
 msgid "Modified date:"
 msgstr "Променена дата:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:205
 msgid "Author:"
 msgstr "Автор:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:230
 msgid "Changelist:"
 msgstr "Изменения"
 
 #. Translators: Depth as in depth of recursion
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:246
 msgid "Depth:"
 msgstr "Дълбочина:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
-#: ../tvp-svn-helper/tsh-common.c:594
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:339
+#: ../tvp-svn-helper/tsh-common.c:640
 msgid "Exclude"
 msgstr "Изключи"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:345
 msgid "Empty"
 msgstr "Празно"
 
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:351
 msgid "Files"
 msgstr "Файлове"
 
@@ -489,9 +529,9 @@ msgstr "Файлове"
 #. * Immediates means this file/direcotry and the subdirectories are updated
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
-#: ../tvp-svn-helper/tsh-diff-dialog.c:179
-#: ../tvp-svn-helper/tsh-properties-dialog.c:212
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:357
+#: ../tvp-svn-helper/tsh-diff-dialog.c:171
+#: ../tvp-svn-helper/tsh-properties-dialog.c:211
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
 msgstr "Обновени"
@@ -499,19 +539,19 @@ msgstr "Обновени"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:363
 msgid "Infinity"
 msgstr "Безкрайност"
 
-#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:108
 msgid "Print version information"
 msgstr "Принтирай информацията за версията"
 
-#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
 msgid "Execute add action"
 msgstr "Изпълни добавянето"
 
-#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
 msgid "Execute blame action"
 msgstr "Изпълни обвиняването"
 
@@ -527,11 +567,11 @@ msgstr "Изпълни изчистването"
 msgid "Execute clone action"
 msgstr "Изпълни клонирането"
 
-#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
 msgid "Execute log action"
 msgstr "Изпълни логването"
 
-#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
 msgid "Execute move action"
 msgstr "Изпълни преместването"
 
@@ -543,15 +583,15 @@ msgstr "Изпълни нулирането"
 msgid "Execute stash action"
 msgstr "Изпълни скриването"
 
-#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
 msgstr "Изпълни статуса"
 
-#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
 msgid "Add Related Options:"
 msgstr "Настройки, свързани с добавяне:"
 
-#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
 msgstr "Настройки, свързани с обвиняване:"
 
@@ -563,11 +603,11 @@ msgstr "Настройки, свързани с разклоненията:"
 msgid "Clone Related Options:"
 msgstr "Настройки, свързани с клониране:"
 
-#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
 msgstr "Настройки, свързани с логване:"
 
-#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
 msgid "Move Related Options:"
 msgstr "Настройки, свързани с преместване:"
 
@@ -579,7 +619,7 @@ msgstr "Настройки, свързани с нулиране:"
 msgid "Stash Related Options:"
 msgstr "Настройки, свързани със скриване:"
 
-#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
 msgstr "Настройки, свързани със статуса:"
 
@@ -611,49 +651,49 @@ msgstr "Дата"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:131
 #: ../tvp-git-helper/tgh-branch-dialog.c:142
-#: ../tvp-git-helper/tgh-log-dialog.c:257
+#: ../tvp-git-helper/tgh-log-dialog.c:258
 #: ../tvp-git-helper/tgh-notify-dialog.c:109
 #: ../tvp-git-helper/tgh-stash-dialog.c:248
 #: ../tvp-git-helper/tgh-status-dialog.c:138
 #: ../tvp-svn-helper/tsh-blame-dialog.c:134
-#: ../tvp-svn-helper/tsh-diff-dialog.c:139
-#: ../tvp-svn-helper/tsh-log-dialog.c:239
+#: ../tvp-svn-helper/tsh-diff-dialog.c:131
+#: ../tvp-svn-helper/tsh-log-dialog.c:241
 #: ../tvp-svn-helper/tsh-notify-dialog.c:116
-#: ../tvp-svn-helper/tsh-properties-dialog.c:252
-#: ../tvp-svn-helper/tsh-status-dialog.c:260
+#: ../tvp-svn-helper/tsh-properties-dialog.c:251
+#: ../tvp-svn-helper/tsh-status-dialog.c:266
 msgid "_Close"
 msgstr "_Затваряне"
 
 #. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
 #: ../tvp-git-helper/tgh-blame-dialog.c:134
 #: ../tvp-git-helper/tgh-branch-dialog.c:145
-#: ../tvp-git-helper/tgh-branch-dialog.c:251
-#: ../tvp-git-helper/tgh-clean-dialog.c:99
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
-#: ../tvp-git-helper/tgh-log-dialog.c:247 ../tvp-git-helper/tgh-move.c:148
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
+#: ../tvp-git-helper/tgh-clean-dialog.c:98
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:123
+#: ../tvp-git-helper/tgh-log-dialog.c:248 ../tvp-git-helper/tgh-move.c:148
 #: ../tvp-git-helper/tgh-notify-dialog.c:112
 #: ../tvp-git-helper/tgh-stash-dialog.c:251
-#: ../tvp-git-helper/tgh-stash-dialog.c:380
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
 #: ../tvp-git-helper/tgh-status-dialog.c:128
-#: ../tvp-git-helper/tgh-transfer-dialog.c:77
-#: ../tvp-git-helper/tgh-transfer-dialog.c:124
-#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:161
-#: ../tvp-svn-helper/tsh-diff-dialog.c:142
-#: ../tvp-svn-helper/tsh-file-dialog.c:88
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
-#: ../tvp-svn-helper/tsh-lock-dialog.c:74
-#: ../tvp-svn-helper/tsh-log-dialog.c:229
-#: ../tvp-svn-helper/tsh-login-dialog.c:108
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
-#: ../tvp-svn-helper/tsh-move.c:152 ../tvp-svn-helper/tsh-notify-dialog.c:119
-#: ../tvp-svn-helper/tsh-properties-dialog.c:255
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:99
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:153
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:217
-#: ../tvp-svn-helper/tsh-status-dialog.c:250
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:93
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:157
-#: ../tvp-svn-helper/tsh-trust-dialog.c:82
+#: ../tvp-git-helper/tgh-transfer-dialog.c:73
+#: ../tvp-git-helper/tgh-transfer-dialog.c:109
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:173
+#: ../tvp-svn-helper/tsh-diff-dialog.c:134
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:152
+#: ../tvp-svn-helper/tsh-lock-dialog.c:73
+#: ../tvp-svn-helper/tsh-log-dialog.c:231
+#: ../tvp-svn-helper/tsh-login-dialog.c:90
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:119
+#: ../tvp-svn-helper/tsh-move.c:162 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-properties-dialog.c:254
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:96
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:140
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:190
+#: ../tvp-svn-helper/tsh-status-dialog.c:256
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:90
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:140
+#: ../tvp-svn-helper/tsh-trust-dialog.c:81
 msgid "_Cancel"
 msgstr "_Отказ"
 
@@ -663,61 +703,61 @@ msgstr "Активно"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:115
 #: ../tvp-git-helper/tgh-stash-dialog.c:160
-#: ../tvp-svn-helper/tsh-properties-dialog.c:125
+#: ../tvp-svn-helper/tsh-properties-dialog.c:124
 msgid "Name"
 msgstr "Име"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
-msgid "Jump to"
-msgstr "Прескачане до"
+msgid "_Jump to"
+msgstr "_Прескочи до"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
-#: ../tvp-git-helper/tgh-branch-dialog.c:251
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
 msgid "_New"
 msgstr "_Нов"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:256
+#: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
 msgstr "Име на разклонението:"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:56
+#: ../tvp-git-helper/tgh-clean-dialog.c:55
 msgid "Remove directories."
 msgstr "Премахни папките."
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:68
+#: ../tvp-git-helper/tgh-clean-dialog.c:67
 msgid "Exclude ignored files"
 msgstr "Не включвай игнорираните файлове"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:76
+#: ../tvp-git-helper/tgh-clean-dialog.c:75
 msgid "Include ignored files"
 msgstr "Включи игнорирани файлове"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:82
+#: ../tvp-git-helper/tgh-clean-dialog.c:81
 msgid "Only ignored files"
 msgstr "Само игнорирани файлове"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:92
+#: ../tvp-git-helper/tgh-clean-dialog.c:91
 msgid "Force clean."
 msgstr "Принудително изчистване."
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:100
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:125
-#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-transfer-dialog.c:78
-#: ../tvp-git-helper/tgh-transfer-dialog.c:125
-#: ../tvp-svn-helper/tsh-copy.c:162 ../tvp-svn-helper/tsh-file-dialog.c:89
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:155
-#: ../tvp-svn-helper/tsh-lock-dialog.c:75
-#: ../tvp-svn-helper/tsh-login-dialog.c:109
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:121
-#: ../tvp-svn-helper/tsh-move.c:153
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:154
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:158
-#: ../tvp-svn-helper/tsh-trust-dialog.c:83
-msgid "OK"
-msgstr "ОК"
+#: ../tvp-git-helper/tgh-clean-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:74
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-copy.c:174 ../tvp-svn-helper/tsh-file-dialog.c:78
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:153
+#: ../tvp-svn-helper/tsh-lock-dialog.c:74
+#: ../tvp-svn-helper/tsh-login-dialog.c:91
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
+#: ../tvp-svn-helper/tsh-move.c:163 ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:191
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:141
+#: ../tvp-svn-helper/tsh-trust-dialog.c:82
+msgid "_OK"
+msgstr "_ОК"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -727,44 +767,44 @@ msgstr "Клонирането е завършено"
 msgid "Cloning..."
 msgstr "Клониране..."
 
-#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:76
-#: ../tvp-svn-helper/tsh-add.c:94 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:102 ../tvp-svn-helper/tsh-commit.c:137
-#: ../tvp-svn-helper/tsh-commit.c:198 ../tvp-svn-helper/tsh-copy.c:94
-#: ../tvp-svn-helper/tsh-delete.c:100 ../tvp-svn-helper/tsh-export.c:79
-#: ../tvp-svn-helper/tsh-import.c:81 ../tvp-svn-helper/tsh-lock.c:93
-#: ../tvp-svn-helper/tsh-move.c:86 ../tvp-svn-helper/tsh-resolved.c:75
-#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:89
-#: ../tvp-svn-helper/tsh-switch.c:78 ../tvp-svn-helper/tsh-unlock.c:88
-#: ../tvp-svn-helper/tsh-update.c:95
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
+#: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
+#: ../tvp-svn-helper/tsh-commit.c:113 ../tvp-svn-helper/tsh-commit.c:152
+#: ../tvp-svn-helper/tsh-commit.c:227 ../tvp-svn-helper/tsh-copy.c:102
+#: ../tvp-svn-helper/tsh-delete.c:101 ../tvp-svn-helper/tsh-export.c:80
+#: ../tvp-svn-helper/tsh-import.c:88 ../tvp-svn-helper/tsh-lock.c:95
+#: ../tvp-svn-helper/tsh-move.c:92 ../tvp-svn-helper/tsh-resolved.c:77
+#: ../tvp-svn-helper/tsh-resolved.c:97 ../tvp-svn-helper/tsh-revert.c:96
+#: ../tvp-svn-helper/tsh-switch.c:79 ../tvp-svn-helper/tsh-unlock.c:90
+#: ../tvp-svn-helper/tsh-update.c:96
 msgid "Failed"
 msgstr "Пропадна"
 
 #: ../tvp-git-helper/tgh-common.c:293
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:247
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:245
 msgid "untracked"
 msgstr "непроследен"
 
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:92
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
 #: ../tvp-git-helper/tgh-status-dialog.c:103
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:116
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:114
 #: ../tvp-svn-helper/tsh-log-dialog.c:190
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:97
 #: ../tvp-svn-helper/tsh-notify-dialog.c:93
 #: ../tvp-svn-helper/tsh-status-dialog.c:117
 msgid "Path"
 msgstr "Път"
 
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:98
 #: ../tvp-git-helper/tgh-status-dialog.c:109
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:91
 #: ../tvp-svn-helper/tsh-status-dialog.c:123
 msgid "State"
 msgstr "Състояние"
 
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:144
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:113
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:142
 msgid "Select/Unselect all"
 msgstr "Избери/Деизбери всички"
 
@@ -781,21 +821,21 @@ msgstr "Дата на изменение"
 msgid "Message"
 msgstr "Съобщение"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-log-dialog.c:216
 #: ../tvp-git-helper/tgh-stash-dialog.c:196
 msgid "Changes"
 msgstr "Промени"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-log-dialog.c:223
 #: ../tvp-git-helper/tgh-stash-dialog.c:203
 msgid "File"
 msgstr "Файл"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:252
+#: ../tvp-git-helper/tgh-log-dialog.c:253
 #: ../tvp-git-helper/tgh-status-dialog.c:133
-#: ../tvp-svn-helper/tsh-diff-dialog.c:147
-#: ../tvp-svn-helper/tsh-log-dialog.c:234
-#: ../tvp-svn-helper/tsh-status-dialog.c:255
+#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-log-dialog.c:236
+#: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
 msgstr "_Опресняване"
 
@@ -803,7 +843,7 @@ msgstr "_Опресняване"
 msgid "Move finished"
 msgstr "Преместването завърши"
 
-#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:150
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:160
 msgid "Move To"
 msgstr "Премести в"
 
@@ -834,7 +874,7 @@ msgid "Description"
 msgstr "Описание"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:221
-#: ../tvp-git-helper/tgh-stash-dialog.c:380
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
 msgid "_Save"
 msgstr "_Запазване"
 
@@ -842,551 +882,552 @@ msgstr "_Запазване"
 msgid "_Apply"
 msgstr "_Прилагане"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:231
-msgid "_OK"
-msgstr "_ОК"
-
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
 msgstr "_Изтриване"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
-msgid "Clear"
+msgid "C_lear"
 msgstr "Изчистване"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:385
+#: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
 msgstr "Описание на скриването:"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:521
+#: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
 msgid "Are you sure you want to drop %s?"
 msgstr "Искате ли да пропуснете %s?"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:549
+#: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
 msgstr "Искате ли да изчистите всички скривания?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:82
 msgid "_Repository:"
 msgstr "_Хранилище:"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:75
-#: ../tvp-git-helper/tgh-transfer-dialog.c:109
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:151
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:157
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:202
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:142
+#: ../tvp-git-helper/tgh-transfer-dialog.c:71
+#: ../tvp-git-helper/tgh-transfer-dialog.c:98
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:94
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:144
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:179
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:88
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:129
 msgid "Select a folder"
 msgstr "Избери папка"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:102
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:195
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:135
+#: ../tvp-git-helper/tgh-transfer-dialog.c:95
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:176
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:126
 msgid "_Directory:"
 msgstr "_Папка:"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:121
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:154
+#: ../tvp-git-helper/tgh-transfer-dialog.c:106
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:137
 msgid "Transfer"
 msgstr "Прехвърляне"
 
-#: ../tvp-svn-helper/main.c:128
+#: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
 msgstr "Изпълни действие Смяна на списъка"
 
-#: ../tvp-svn-helper/main.c:134
+#: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
 msgstr "Изпълни действие Отмятане"
 
-#: ../tvp-svn-helper/main.c:140
+#: ../tvp-svn-helper/main.c:139
 msgid "Execute cleanup action"
 msgstr "Изпълни действие Изчистване"
 
-#: ../tvp-svn-helper/main.c:146
+#: ../tvp-svn-helper/main.c:145
 msgid "Execute commit action"
 msgstr "Изпълни действие Проверка"
 
-#: ../tvp-svn-helper/main.c:152
+#: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
 msgstr "Изпълни действие Копиране"
 
-#: ../tvp-svn-helper/main.c:158
+#: ../tvp-svn-helper/main.c:157
 msgid "Execute delete action"
 msgstr "Изпълни действие Изтриване"
 
-#: ../tvp-svn-helper/main.c:164
+#: ../tvp-svn-helper/main.c:163
 msgid "Execute diff action"
 msgstr "Изпълни действие по разграничаване"
 
-#: ../tvp-svn-helper/main.c:170
+#: ../tvp-svn-helper/main.c:169
 msgid "Execute export action"
 msgstr "Изпълни действие Изнасяне"
 
-#: ../tvp-svn-helper/main.c:176
+#: ../tvp-svn-helper/main.c:175
 msgid "Execute import action"
 msgstr "Изпълни Действие Внасяне"
 
-#: ../tvp-svn-helper/main.c:182
+#: ../tvp-svn-helper/main.c:181
 msgid "Execute lock action"
 msgstr "Изпълни действие заключване"
 
-#: ../tvp-svn-helper/main.c:200
+#: ../tvp-svn-helper/main.c:199
 msgid "Execute properties action"
 msgstr "Изпълни действие Настройки"
 
-#: ../tvp-svn-helper/main.c:206
+#: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
 msgstr "Изпълни действие Избрано"
 
-#: ../tvp-svn-helper/main.c:212
+#: ../tvp-svn-helper/main.c:211
 msgid "Execute relocate action"
 msgstr "Изпълни действие Преместване"
 
-#: ../tvp-svn-helper/main.c:218
+#: ../tvp-svn-helper/main.c:217
 msgid "Execute revert action"
 msgstr "Изпълни действие Връщане"
 
-#: ../tvp-svn-helper/main.c:230
+#: ../tvp-svn-helper/main.c:229
 msgid "Execute switch action"
 msgstr "Изпълни действие Смяна"
 
-#: ../tvp-svn-helper/main.c:236
+#: ../tvp-svn-helper/main.c:235
 msgid "Execute unlock action"
 msgstr "Изпълни действие Отключване"
 
-#: ../tvp-svn-helper/main.c:242
+#: ../tvp-svn-helper/main.c:241
 msgid "Execute update action"
 msgstr "Изпълни действие Актуализиране"
 
-#: ../tvp-svn-helper/main.c:267
+#: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
 msgstr "Опции за смяна на списъка:"
 
-#: ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
 msgstr "Опции за отмятане:"
 
-#: ../tvp-svn-helper/main.c:275
+#: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
 msgstr "Опции за почистване:"
 
-#: ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
 msgstr "Опции за Проверка:"
 
-#: ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
 msgstr "Опции за Копиране:"
 
-#: ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
 msgstr "Опции за Изтриване:"
 
-#: ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
 msgstr "Опции, свързани с :"
 
-#: ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
 msgstr "Опции за изнасяне:"
 
-#: ../tvp-svn-helper/main.c:299
+#: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
 msgstr "Опции за внасяне:"
 
-#: ../tvp-svn-helper/main.c:303
+#: ../tvp-svn-helper/main.c:301
 msgid "Lock Related Options:"
 msgstr "Опции за заключване:"
 
-#: ../tvp-svn-helper/main.c:315
+#: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
 msgstr "Опции за Настройки:"
 
-#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:250
+#: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
 msgstr "Свойства"
 
-#: ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
 msgstr "Опции за Избрано:"
 
-#: ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
 msgstr "Настройки, свързани с промяна на местоположение:"
 
-#: ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
 msgstr "Настройки свързани с възстановяване:"
 
-#: ../tvp-svn-helper/main.c:335
+#: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
 msgstr "Настройки, свързани със смяна:"
 
-#: ../tvp-svn-helper/main.c:339
+#: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
 msgstr "Настройки, свързани с отключване:"
 
-#: ../tvp-svn-helper/main.c:343
+#: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
 msgstr "Настройки, свързани с актуализиране:"
 
-#: ../tvp-svn-helper/main.c:386
+#: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
 msgstr "Не са представени достатъчно аргументи"
 
-#: ../tvp-svn-helper/tsh-blame.c:82
+#: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
 msgstr "Обвиняването се провали"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:68
+#: ../tvp-svn-helper/tsh-cleanup.c:57
+#, c-format
+msgid "'%s' is not a local path"
+msgstr "\"%s\" не е път до местоположение"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
 msgstr "Изчистването е неуспешно"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:83
+#: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
 msgstr "Изчистването приключи"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:97
+#: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
 msgstr "Почистване..."
 
-#: ../tvp-svn-helper/tsh-commit.c:211 ../tvp-svn-helper/tsh-common.c:823
-#: ../tvp-svn-helper/tsh-common.c:1089 ../tvp-svn-helper/tsh-copy.c:107
-#: ../tvp-svn-helper/tsh-delete.c:113 ../tvp-svn-helper/tsh-import.c:92
-#: ../tvp-svn-helper/tsh-move.c:99
+#: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
+#: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
+#: ../tvp-svn-helper/tsh-delete.c:116 ../tvp-svn-helper/tsh-import.c:101
+#: ../tvp-svn-helper/tsh-move.c:107
 #, c-format
 msgid "At revision: %ld"
 msgstr "Ревизия: %ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:216
+#: ../tvp-svn-helper/tsh-commit.c:247
 msgid "Nothing to do"
 msgstr "Нищо за правене"
 
-#: ../tvp-svn-helper/tsh-commit.c:226 ../tvp-svn-helper/tsh-common.c:541
-#: ../tvp-svn-helper/tsh-common.c:543 ../tvp-svn-helper/tsh-common.c:1098
-#: ../tvp-svn-helper/tsh-copy.c:120 ../tvp-svn-helper/tsh-delete.c:126
-#: ../tvp-svn-helper/tsh-import.c:99 ../tvp-svn-helper/tsh-move.c:112
+#: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
+#: ../tvp-svn-helper/tsh-copy.c:131 ../tvp-svn-helper/tsh-delete.c:130
+#: ../tvp-svn-helper/tsh-import.c:109 ../tvp-svn-helper/tsh-move.c:121
 msgid "Completed"
 msgstr "Завърши"
 
-#: ../tvp-svn-helper/tsh-commit.c:259
+#: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
 msgstr "Съобщение за изменения"
 
-#: ../tvp-svn-helper/tsh-common.c:291
+#: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
 msgstr "Запази паролата в обикновен текст?"
 
-#: ../tvp-svn-helper/tsh-common.c:530 ../tvp-svn-helper/tsh-common.c:539
-#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:734
-#: ../tvp-svn-helper/tsh-common.c:781 ../tvp-svn-helper/tsh-common.c:885
+#: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
+#: ../tvp-svn-helper/tsh-common.c:827 ../tvp-svn-helper/tsh-common.c:940
 msgid "Added"
 msgstr "Добавено"
 
-#: ../tvp-svn-helper/tsh-common.c:531 ../tvp-svn-helper/tsh-common.c:590
-#: ../tvp-svn-helper/tsh-common.c:894
+#: ../tvp-svn-helper/tsh-common.c:577 ../tvp-svn-helper/tsh-common.c:636
+#: ../tvp-svn-helper/tsh-common.c:949
 msgid "Copied"
 msgstr "Копирано"
 
-#: ../tvp-svn-helper/tsh-common.c:532 ../tvp-svn-helper/tsh-common.c:538
-#: ../tvp-svn-helper/tsh-common.c:547 ../tvp-svn-helper/tsh-common.c:736
-#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:887
+#: ../tvp-svn-helper/tsh-common.c:578 ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:593 ../tvp-svn-helper/tsh-common.c:782
+#: ../tvp-svn-helper/tsh-common.c:830 ../tvp-svn-helper/tsh-common.c:942
 msgid "Deleted"
 msgstr "Изтрито"
 
-#: ../tvp-svn-helper/tsh-common.c:533
+#: ../tvp-svn-helper/tsh-common.c:579
 msgid "Restored"
 msgstr "Възстановено"
 
-#: ../tvp-svn-helper/tsh-common.c:534
+#: ../tvp-svn-helper/tsh-common.c:580
 msgid "Reverted"
 msgstr "Върнати"
 
-#: ../tvp-svn-helper/tsh-common.c:535
+#: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
 msgstr "Връщането провалено"
 
-#: ../tvp-svn-helper/tsh-common.c:537
+#: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
 msgstr "Пропуснато"
 
-#: ../tvp-svn-helper/tsh-common.c:540
+#: ../tvp-svn-helper/tsh-common.c:586
 msgid "Updated"
 msgstr "Ъпдейтнато"
 
-#: ../tvp-svn-helper/tsh-common.c:542 ../tvp-svn-helper/tsh-common.c:544
-#: ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:588 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:789
 msgid "External"
 msgstr "Външен"
 
-#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:738
-#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
+#: ../tvp-svn-helper/tsh-common.c:591 ../tvp-svn-helper/tsh-common.c:784
+#: ../tvp-svn-helper/tsh-common.c:833 ../tvp-svn-helper/tsh-common.c:945
 msgid "Modified"
 msgstr "Променен"
 
-#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:737
-#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:883
+#: ../tvp-svn-helper/tsh-common.c:594 ../tvp-svn-helper/tsh-common.c:783
+#: ../tvp-svn-helper/tsh-common.c:836 ../tvp-svn-helper/tsh-common.c:938
 msgid "Replaced"
 msgstr "Заместен"
 
-#: ../tvp-svn-helper/tsh-common.c:549
+#: ../tvp-svn-helper/tsh-common.c:595
 msgid "Transmitting"
 msgstr "Предаване"
 
-#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:599
+#: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
 msgid "Locked"
 msgstr "Заключен"
 
-#: ../tvp-svn-helper/tsh-common.c:552 ../tvp-svn-helper/tsh-common.c:896
+#: ../tvp-svn-helper/tsh-common.c:598 ../tvp-svn-helper/tsh-common.c:951
 msgid "Unlocked"
 msgstr "Отключен"
 
-#: ../tvp-svn-helper/tsh-common.c:553
+#: ../tvp-svn-helper/tsh-common.c:599
 msgid "Lock failed"
 msgstr "Заключването се провали"
 
-#: ../tvp-svn-helper/tsh-common.c:554
+#: ../tvp-svn-helper/tsh-common.c:600
 msgid "Unlock failed"
 msgstr "Отключването се провали"
 
-#: ../tvp-svn-helper/tsh-common.c:555
+#: ../tvp-svn-helper/tsh-common.c:601
 msgid "Exists"
 msgstr "Съществува"
 
-#: ../tvp-svn-helper/tsh-common.c:556
+#: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
 msgstr "Измененията са установени"
 
-#: ../tvp-svn-helper/tsh-common.c:557
+#: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
 msgstr "Измененията са изчистени"
 
-#: ../tvp-svn-helper/tsh-common.c:558
+#: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
 msgstr "Измененията са преместени"
 
-#: ../tvp-svn-helper/tsh-common.c:559
+#: ../tvp-svn-helper/tsh-common.c:605
 msgid "Merge begin"
 msgstr "Сливането започва"
 
-#: ../tvp-svn-helper/tsh-common.c:560
+#: ../tvp-svn-helper/tsh-common.c:606
 msgid "Foreign merge begin"
 msgstr "Външно сливане започва"
 
-#: ../tvp-svn-helper/tsh-common.c:561
+#: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
 msgstr "Замени"
 
-#: ../tvp-svn-helper/tsh-common.c:563
+#: ../tvp-svn-helper/tsh-common.c:609
 msgid "Property added"
 msgstr "Свойството е добавено"
 
-#: ../tvp-svn-helper/tsh-common.c:564
+#: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
 msgstr "Свойството е променено"
 
-#: ../tvp-svn-helper/tsh-common.c:565
+#: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
 msgstr "Свойството е изтрито"
 
-#: ../tvp-svn-helper/tsh-common.c:566
+#: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
 msgstr "Свойството не съществува"
 
-#: ../tvp-svn-helper/tsh-common.c:567
+#: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
 msgstr "Ревизия на задаване на свойство"
 
-#: ../tvp-svn-helper/tsh-common.c:568
+#: ../tvp-svn-helper/tsh-common.c:614
 msgid "Revision property deleted"
 msgstr "Ревизията на свойството е изтрита"
 
-#: ../tvp-svn-helper/tsh-common.c:569
+#: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
 msgstr "Сливането завърши"
 
-#: ../tvp-svn-helper/tsh-common.c:570
+#: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
 msgstr "Конфликт в йерархията"
 
-#: ../tvp-svn-helper/tsh-common.c:571
+#: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
 msgstr "Външен неуспех"
 
-#: ../tvp-svn-helper/tsh-common.c:574
+#: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
 msgstr "Започна"
 
-#: ../tvp-svn-helper/tsh-common.c:575
+#: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
 msgstr "Пропускане на пречки"
 
-#: ../tvp-svn-helper/tsh-common.c:576
+#: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
 msgstr "Пропускане на заети"
 
-#: ../tvp-svn-helper/tsh-common.c:577
+#: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
 msgstr "Пропускане на недостъпни"
 
-#: ../tvp-svn-helper/tsh-common.c:578
+#: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
 msgstr "Външен премахнат"
 
-#: ../tvp-svn-helper/tsh-common.c:579
+#: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
 msgstr "Засенчено добавяне"
 
-#: ../tvp-svn-helper/tsh-common.c:580
+#: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
 msgstr "Засенчено обновяване"
 
-#: ../tvp-svn-helper/tsh-common.c:581
+#: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
 msgstr "Засенчено изтриване"
 
-#: ../tvp-svn-helper/tsh-common.c:582
+#: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
 msgstr "Сливане на записана информация"
 
-#: ../tvp-svn-helper/tsh-common.c:583
+#: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
 msgstr "Подобрен път"
 
-#: ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
 msgstr "Сливането на записана информация започва"
 
-#: ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
 msgstr "Сливане на съкратена информация"
 
-#: ../tvp-svn-helper/tsh-common.c:586
+#: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
 msgstr "Пач"
 
-#: ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
 msgstr "Промяната е приложена"
 
-#: ../tvp-svn-helper/tsh-common.c:588
+#: ../tvp-svn-helper/tsh-common.c:634
 msgid "Rejected hunk"
 msgstr "Промяната е отхвърлена"
 
-#: ../tvp-svn-helper/tsh-common.c:589
+#: ../tvp-svn-helper/tsh-common.c:635
 msgid "Hunk already applied"
 msgstr "Промяната вече е приложена"
 
-#: ../tvp-svn-helper/tsh-common.c:591
+#: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
 msgstr "Копирането е заместено"
 
-#: ../tvp-svn-helper/tsh-common.c:592
+#: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
 msgstr "Пренасочване на URL"
 
-#: ../tvp-svn-helper/tsh-common.c:593
+#: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
 msgstr "Пътят не съществува"
 
-#: ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
 msgstr "Конфликт"
 
-#: ../tvp-svn-helper/tsh-common.c:596 ../tvp-svn-helper/tsh-common.c:695
-#: ../tvp-svn-helper/tsh-common.c:735
+#: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:781
 msgid "Missing"
 msgstr "Липсва"
 
-#: ../tvp-svn-helper/tsh-common.c:597
+#: ../tvp-svn-helper/tsh-common.c:643
 msgid "Out of date"
 msgstr "Изтекъл срок"
 
-#: ../tvp-svn-helper/tsh-common.c:598
+#: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
 msgstr "Няма основен файл"
 
-#: ../tvp-svn-helper/tsh-common.c:600
+#: ../tvp-svn-helper/tsh-common.c:646
 msgid "Forbidden by server"
 msgstr "Забранено от сървъра"
 
-#: ../tvp-svn-helper/tsh-common.c:601
+#: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
 msgstr "Пропускане на конфликта"
 
-#: ../tvp-svn-helper/tsh-common.c:692
+#: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
 msgstr "Неприложимо"
 
-#: ../tvp-svn-helper/tsh-common.c:694
+#: ../tvp-svn-helper/tsh-common.c:740
 msgid "Unchanged"
 msgstr "Непроменено"
 
-#: ../tvp-svn-helper/tsh-common.c:696 ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
 msgstr "Възпрепятствано"
 
-#: ../tvp-svn-helper/tsh-common.c:697
+#: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
 msgstr "Променено"
 
-#: ../tvp-svn-helper/tsh-common.c:698 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
 msgid "Merged"
 msgstr "Слято"
 
-#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:740
+#: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
 msgstr "Конфликт"
 
-#: ../tvp-svn-helper/tsh-common.c:701
+#: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
 msgstr "Липсващ източник"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: ../tvp-svn-helper/tsh-common.c:733
+#: ../tvp-svn-helper/tsh-common.c:779
 msgid "Normal"
 msgstr "Нормално"
 
-#: ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:787
 msgid "Ignored"
 msgstr "Игнорирани"
 
-#: ../tvp-svn-helper/tsh-common.c:744
+#: ../tvp-svn-helper/tsh-common.c:790
 msgid "Incomplete"
 msgstr "Непълно"
 
-#: ../tvp-svn-helper/tsh-common.c:1082
+#: ../tvp-svn-helper/tsh-common.c:1163
 msgid "Error"
 msgstr "Грешка"
 
-#: ../tvp-svn-helper/tsh-common.c:1094
+#: ../tvp-svn-helper/tsh-common.c:1176
 msgid "Local action"
 msgstr "Локално действие"
 
-#: ../tvp-svn-helper/tsh-copy.c:112
+#: ../tvp-svn-helper/tsh-copy.c:122
 msgid "Local copy"
 msgstr "Локално копиране"
 
-#: ../tvp-svn-helper/tsh-copy.c:159
+#: ../tvp-svn-helper/tsh-copy.c:171
 msgid "Copy To"
 msgstr "Копиране в"
 
-#: ../tvp-svn-helper/tsh-delete.c:118
+#: ../tvp-svn-helper/tsh-delete.c:121
 msgid "Local delete"
 msgstr "Локално изтриване"
 
-#: ../tvp-svn-helper/tsh-delete.c:158
+#: ../tvp-svn-helper/tsh-delete.c:163
 msgid "Delete Message"
 msgstr "Изтриване на Съобщение"
 
-#: ../tvp-svn-helper/tsh-diff.c:190
+#: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
 msgstr "Разграничаването е неуспешно"
 
@@ -1396,8 +1437,8 @@ msgstr "Разграничаването е неуспешно"
 #. * Self means only this file/direcotry is updated
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:161
-#: ../tvp-svn-helper/tsh-properties-dialog.c:192
+#: ../tvp-svn-helper/tsh-diff-dialog.c:153
+#: ../tvp-svn-helper/tsh-properties-dialog.c:191
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "Собствено"
@@ -1411,8 +1452,8 @@ msgstr "Собствено"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:170
-#: ../tvp-svn-helper/tsh-properties-dialog.c:203
+#: ../tvp-svn-helper/tsh-diff-dialog.c:162
+#: ../tvp-svn-helper/tsh-properties-dialog.c:202
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
 msgstr "Обновени файлове"
@@ -1423,51 +1464,51 @@ msgstr "Обновени файлове"
 #. * Recursive means the update is full recursive
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#: ../tvp-svn-helper/tsh-diff-dialog.c:188
-#: ../tvp-svn-helper/tsh-properties-dialog.c:221
+#: ../tvp-svn-helper/tsh-diff-dialog.c:180
+#: ../tvp-svn-helper/tsh-properties-dialog.c:220
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "Рекурсивно"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:203
+#: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
 msgstr "Произход на известието"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+#: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
 msgstr "Да не се показват различията при изтритите файлове"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:212
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
 msgstr "Покажи копията като допълнения"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:366
+#: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
 msgstr "Зареждане..."
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:59
+#: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
 msgstr "Сертификат:"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:66
+#: ../tvp-svn-helper/tsh-file-dialog.c:61
 msgid "Select a file"
 msgstr "Избор на файл"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:77
-#: ../tvp-svn-helper/tsh-login-dialog.c:97
-#: ../tvp-svn-helper/tsh-trust-dialog.c:75
+#: ../tvp-svn-helper/tsh-file-dialog.c:69
+#: ../tvp-svn-helper/tsh-login-dialog.c:82
+#: ../tvp-svn-helper/tsh-trust-dialog.c:74
 msgid "Remember"
 msgstr "Запомняне"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:85
+#: ../tvp-svn-helper/tsh-file-dialog.c:74
 msgid "Certificate"
 msgstr "Сертификат"
 
-#: ../tvp-svn-helper/tsh-import.c:138
+#: ../tvp-svn-helper/tsh-import.c:149
 msgid "Import Message"
 msgstr "Внасяне на съобщение"
 
-#: ../tvp-svn-helper/tsh-log.c:123
+#: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
 msgstr "Неуспешно вписване"
 
@@ -1475,80 +1516,79 @@ msgstr "Неуспешно вписване"
 msgid "Stop On Copy"
 msgstr "Спиране на копирането"
 
-#: ../tvp-svn-helper/tsh-log-dialog.c:218
+#: ../tvp-svn-helper/tsh-log-dialog.c:219
 msgid "Show Merged Revisions"
 msgstr "Покажи обединените ревизии"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:64
+#: ../tvp-svn-helper/tsh-login-dialog.c:63
 msgid "_Username:"
 msgstr "Потребителско име:"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:80
+#: ../tvp-svn-helper/tsh-login-dialog.c:72
 msgid "_Password:"
 msgstr "Парола:"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:105
+#: ../tvp-svn-helper/tsh-login-dialog.c:87
 msgid "Login"
 msgstr "Влизане"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
 msgstr "Съобщение при влизане"
 
-#: ../tvp-svn-helper/tsh-move.c:104
+#: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
 msgstr "Смяна на местоположение"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
-msgid "Mime type"
-msgstr "Асоцииране с програма"
+msgid "MIME type"
+msgstr "MIME тип"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
 msgstr "Уведомления"
 
-#. tsh_properties_dialog_done (dialog);
-#: ../tvp-svn-helper/tsh-properties.c:94
+#: ../tvp-svn-helper/tsh-properties.c:143
 msgid "Set property failed"
 msgstr "Неуспешно задаване на свойство"
 
-#: ../tvp-svn-helper/tsh-properties.c:117
+#: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
 msgstr "Свойствата са отхвърлени"
 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:131
+#: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
 msgstr "Стойност"
 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:240
+#: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
 msgstr "_Добавяне"
 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:245
+#: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
 msgstr "_Премахване"
 
-#: ../tvp-svn-helper/tsh-relocate.c:78
+#: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
 msgstr "Смяната на местоположението е неуспешно"
 
-#: ../tvp-svn-helper/tsh-relocate.c:93
+#: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
 msgstr "Смяната на местоположението завърши"
 
-#: ../tvp-svn-helper/tsh-relocate.c:139
+#: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
 msgstr "Прелокализиране..."
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
 msgstr "От:"
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:132
 msgid "_To:"
 msgstr "До:"
 
-#: ../tvp-svn-helper/tsh-status.c:91
+#: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
 msgstr "Състоянието е отхвърлено"
 
@@ -1564,46 +1604,46 @@ msgstr "Състояние на хранилище"
 msgid "Repo prop state"
 msgstr "Свойства на състоянието на хранилище"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:223
+#: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
 msgstr "Показване на файловете без промени"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:227
+#: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
 msgstr "Показване на файловете без ревизия"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:231
+#: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
 msgstr "Показване на игнорираните файлове"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
 msgstr "Скрий външните"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:239
+#: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
 msgstr "Провери хранилище"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+#: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
 msgstr "Сертификата е все още невалиден."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+#: ../tvp-svn-helper/tsh-trust-dialog.c:62
 msgid "Certificate has expired."
 msgstr "Сертификата е с изтекъл срок."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+#: ../tvp-svn-helper/tsh-trust-dialog.c:65
 msgid "Certificate does not match the remote hostname."
 msgstr "Сертификата не съвпада с името на сървъра."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+#: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
 msgstr "Сертификата е от неизвестен източник."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+#: ../tvp-svn-helper/tsh-trust-dialog.c:71
 msgid "Other failure."
 msgstr "Друга грешка."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:79
+#: ../tvp-svn-helper/tsh-trust-dialog.c:78
 msgid "Trust"
 msgstr "Удостоверяване"
