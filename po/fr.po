@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-25 00:30+0200\n"
-"PO-Revision-Date: 2018-06-25 09:58+0000\n"
+"PO-Revision-Date: 2018-06-26 14:49+0000\n"
 "Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
 "Language-Team: French (http://www.transifex.com/xfce/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr "Nettoyer"
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgctxt "Menu"
 msgid "Clone"
-msgstr ""
+msgstr "Cloner"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -183,7 +183,7 @@ msgstr "Merge"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:365
 msgctxt "Menu"
 msgid "Move"
-msgstr ""
+msgstr "Déplacer"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:253
 #: ../thunar-vcs-plugin/tvp-svn-action.c:365 ../tvp-git-helper/main.c:177
@@ -369,7 +369,7 @@ msgstr "Information"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:345
 msgctxt "Menu"
 msgid "Lock"
-msgstr ""
+msgstr "Verrouiller"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:345 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -388,7 +388,7 @@ msgstr "Éditer les propriétés"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:381
 msgctxt "Menu"
 msgid "Relocate"
-msgstr ""
+msgstr "Transférer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:381 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -399,7 +399,7 @@ msgstr "Transférer"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:387
 msgctxt "Menu"
 msgid "Resolved"
-msgstr ""
+msgstr "Résolu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:387 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -449,7 +449,7 @@ msgstr "Débloquer"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:417
 msgctxt "Menu"
 msgid "Update"
-msgstr ""
+msgstr "Mettre à jour"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:417 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -761,7 +761,7 @@ msgstr "Forcer un nettoyage."
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:141
 #: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
-msgstr "_OK"
+msgstr "_Valider"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -810,7 +810,7 @@ msgstr "État"
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:113
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:142
 msgid "Select/Unselect all"
-msgstr "Sélectionner / Désélectionner tout"
+msgstr "Tout sélectionner / désélectionner"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:146
 msgid "AuthorDate"
@@ -929,7 +929,7 @@ msgstr "Sélectionnez un dossier"
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:176
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:126
 msgid "_Directory:"
-msgstr "_Annuaire : "
+msgstr "_Répertoire : "
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:106
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:137
