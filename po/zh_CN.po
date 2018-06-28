@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-06-27 18:02+0000\n"
+"PO-Revision-Date: 2018-06-27 23:29+0000\n"
 "Last-Translator: No Body <nemolus@gmail.com>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/xfce/thunar-plugins/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr "清除"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:229
 msgid "Remove untracked files from the working tree"
-msgstr "从工作树中删除未经跟踪的文件"
+msgstr "从工作目录树中删除未经跟踪的文件"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -75,7 +75,7 @@ msgstr "克隆"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231
 msgid "Clone a repository into a new directory"
-msgstr ""
+msgstr "将仓库复制到新目录"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
 #. _("Commit"), "gtk-apply", _("Commit"));
@@ -122,7 +122,7 @@ msgstr "重置"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "将当前的 HEAD 重置为指定的状态"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
@@ -145,7 +145,7 @@ msgstr "状态"
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr "Show the working tree status"
+msgstr "显示工作目录树的状态"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
@@ -177,7 +177,7 @@ msgstr "检验"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr ""
+msgstr "从仓库中检出工作副本"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -196,7 +196,7 @@ msgstr "提交"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr ""
+msgstr "将更改从工作副本发送到仓库"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
@@ -205,7 +205,7 @@ msgstr "复制"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr ""
+msgstr "复制工作副本或仓库中的文件或目录"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -214,7 +214,7 @@ msgstr "删除"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr ""
+msgstr "从工作副本或仓库中删除项目"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
@@ -223,7 +223,7 @@ msgstr "比对"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr ""
+msgstr "显示两个修订或路径之间的差异"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
@@ -232,7 +232,7 @@ msgstr "导出"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr ""
+msgstr "导出整洁的目录树"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -241,7 +241,7 @@ msgstr "导入"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Commit an unversioned file or tree into the repository"
-msgstr ""
+msgstr "将未版本控制的文件或目录树提交到仓库中"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -252,11 +252,11 @@ msgstr "锁定"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr ""
+msgstr "锁定仓库中的工作副本路径，以便其他用户无法对其进行更改"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr ""
+msgstr "移动文件或目录"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -264,7 +264,7 @@ msgstr "编辑属性"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit the property of one or more items"
-msgstr ""
+msgstr "编辑一个或多个项目的属性"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -274,7 +274,7 @@ msgstr "重定位"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr ""
+msgstr "重定位工作副本至另一仓库的根 URL 地址"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -284,7 +284,7 @@ msgstr "已解决"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr ""
+msgstr "删除工作副本文件或目录中的“冲突”状态"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -293,7 +293,7 @@ msgstr "恢复"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
-msgstr ""
+msgstr "撤消所有本地编辑"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
@@ -302,7 +302,7 @@ msgstr "切换"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr ""
+msgstr "将工作副本更新到不同的 URL"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -311,7 +311,7 @@ msgstr "解锁"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "解锁工作副本的路径"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -320,7 +320,7 @@ msgstr "更新"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr ""
+msgstr "更新您的工作副本"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
