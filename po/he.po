@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-01 06:30+0200\n"
-"PO-Revision-Date: 2018-06-09 14:04+0000\n"
+"POT-Creation-Date: 2018-06-27 06:30+0200\n"
+"PO-Revision-Date: 2018-06-29 06:30+0000\n"
 "Last-Translator: Elishai Eliyahu <e1907@mm.st>\n"
 "Language-Team: Hebrew (http://www.transifex.com/xfce/thunar-plugins/language/he/)\n"
 "MIME-Version: 1.0\n"
@@ -18,239 +18,132 @@ msgstr ""
 "Language: he\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % 1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:242
-#: ../thunar-vcs-plugin/tvp-svn-action.c:280
-msgid "Menu|Add"
-msgstr "תפריט|הוסף"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:242
-#: ../thunar-vcs-plugin/tvp-svn-action.c:280 ../tvp-git-helper/main.c:153
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
-#: ../tvp-svn-helper/main.c:259 ../tvp-svn-helper/tsh-add.c:135
-#: ../tvp-svn-helper/tsh-add.c:148
+#: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
+#: ../tvp-svn-helper/tsh-add.c:154
 msgid "Add"
 msgstr "הוסף"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:243
-msgid "Menu|Bisect"
-msgstr "תפריט|חצה"
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+msgid "Add file contents to the index"
+msgstr "הוסף תכולת קובץ לאינדקס"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:243
-msgid "Bisect"
-msgstr "חצה"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:285
-msgid "Menu|Blame"
-msgstr "תפריט|האשם"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:285 ../tvp-git-helper/main.c:157
-#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:263
-#: ../tvp-svn-helper/main.c:267 ../tvp-svn-helper/tsh-blame-dialog.c:132
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
+#: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "האשם"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
-msgid "Menu|Branch"
-msgstr "תפריט|הסתעף"
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265
+msgid "Show what revision and author last modified each line of a file"
+msgstr "הצג איזו גרסה ומי שינה לאחרונה כל שורה של קובץ"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:247 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "הסתעף"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-#: ../thunar-vcs-plugin/tvp-svn-action.c:302
-msgid "Menu|Checkout"
-msgstr "תפריט|בדוק"
+#: ../thunar-vcs-plugin/tvp-git-action.c:227
+msgid "List, create or switch branches"
+msgstr "רשום, צור או החלף ענפים"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:271
-#: ../tvp-svn-helper/tsh-checkout.c:100 ../tvp-svn-helper/tsh-checkout.c:112
-msgid "Checkout"
-msgstr "בדוק"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:249
-msgid "Menu|Clean"
-msgstr "תפריט|נקה"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:165
-#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:96
+#. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
+#. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "נקה"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251
-msgid "Menu|Clone"
-msgstr "תפריט|שכפל"
+#: ../thunar-vcs-plugin/tvp-git-action.c:229
+msgid "Remove untracked files from the working tree"
+msgstr "הסר קבצים לא עקיבים מהעץ עבודה"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "שכפל"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:252
-#: ../thunar-vcs-plugin/tvp-svn-action.c:312
-msgid "Menu|Commit"
-msgstr "תפריט|בצע"
+#: ../thunar-vcs-plugin/tvp-git-action.c:231
+msgid "Clone a repository into a new directory"
+msgstr "צור שיבוט של מאגר לתוך ספריה חדשה"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:252
-#: ../thunar-vcs-plugin/tvp-svn-action.c:312
-#: ../tvp-git-helper/tgh-log-dialog.c:153
-#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:279
-#: ../tvp-svn-helper/tsh-commit.c:260 ../tvp-svn-helper/tsh-commit.c:273
-msgid "Commit"
-msgstr "בצע"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327
-msgid "Menu|Diff"
-msgstr "תפריט|Diff"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:327 ../tvp-svn-helper/main.c:291
-#: ../tvp-svn-helper/tsh-diff.c:226 ../tvp-svn-helper/tsh-diff-dialog.c:136
-msgid "Diff"
-msgstr "Diff"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
-msgid "Menu|Fetch"
-msgstr "תפריט|הבא"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
-msgid "Fetch"
-msgstr "הבא"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
-msgid "Menu|Grep"
-msgstr "תפריט|Grep"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
-msgid "Grep"
-msgstr "Grep"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
-msgid "Menu|Init"
-msgstr "תפריט|Init"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
-msgid "Init"
-msgstr "Init"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357
-msgid "Menu|Log"
-msgstr "תפריט|רשום"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
-#: ../thunar-vcs-plugin/tvp-svn-action.c:357 ../tvp-git-helper/main.c:173
-#: ../tvp-git-helper/tgh-log-dialog.c:243 ../tvp-svn-helper/main.c:307
-#: ../tvp-svn-helper/tsh-log-dialog.c:225
+#. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
+#. _("Commit"), "gtk-apply", _("Commit"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::diff", _("Diff"),
+#. _("Diff"), "edit-find-replace", _("Diff"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::fetch", _("Fetch"),
+#. _("Fetch"), NULL, _("Fetch"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::grep", _("Grep"),
+#. _("Grep"), NULL, _("Grep"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
+#. _("Init"), NULL, _("Init"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
+#: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
 msgstr "רשום"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
-msgid "Menu|Merge"
-msgstr "תפריט|מזג"
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Show commit logs"
+msgstr "הצג יומני מסירה"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
-msgid "Merge"
-msgstr "מזג"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:260
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372
-msgid "Menu|Move"
-msgstr "תפריט|העבר"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:260
-#: ../thunar-vcs-plugin/tvp-svn-action.c:372 ../tvp-git-helper/main.c:177
-#: ../tvp-svn-helper/main.c:311 ../tvp-svn-helper/tsh-move.c:174
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "העבר"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
-msgid "Menu|Pull"
-msgstr "תפריט|משוך"
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+msgid "Move or rename a file, a directory, or a symlink"
+msgstr "העבר או שנה שם של קובץ, ספריה, או קישור סימבולי"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
-msgid "Pull"
-msgstr "משוך"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:262
-msgid "Menu|Push"
-msgstr "תפריט|דחוף"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:262
-msgid "Push"
-msgstr "דחוף"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-msgid "Menu|Rebase"
-msgstr "תפריט|Rebase"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-msgid "Rebase"
-msgstr "Rebase"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-msgid "Menu|Reset"
-msgstr "תפריט|אתחל"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:264 ../tvp-git-helper/main.c:181
+#. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
+#. _("Pull"), NULL, _("Pull"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::push", _("Push"),
+#. _("Push"), NULL, _("Push"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
+#. _("Rebase"), NULL, _("Rebase"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "אתחל"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
-msgid "Menu|Remove"
-msgstr "תפריט|הסר"
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+msgid "Reset current HEAD to the specified state"
+msgstr "אתחל HEAD נוכחי למצב המפורט"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:265
-msgid "Remove"
-msgstr "הסר"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
-msgid "Menu|Show"
-msgstr "תפריט|הצג"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:266
-msgid "Show"
-msgstr "הצג"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:268
-msgid "Menu|Stash"
-msgstr "תפריט|אגור"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:268 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "אגור"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
-#: ../thunar-vcs-plugin/tvp-svn-action.c:409
-msgid "Menu|Status"
-msgstr "תפריט|סטטוס"
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+msgid "Stash the changes in a dirty working directory away"
+msgstr "צבור את השינויים בספרית עבודה מלוכלכת רחוקה"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:270
-#: ../thunar-vcs-plugin/tvp-svn-action.c:409 ../tvp-git-helper/main.c:189
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:121
-#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:331
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:150
-#: ../tvp-svn-helper/tsh-status-dialog.c:246
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:120
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:149
+#: ../tvp-svn-helper/tsh-status-dialog.c:252
 msgid "Status"
 msgstr "סטטוס"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
-msgid "Menu|Tag"
-msgstr "תפריט|תווית"
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389
+msgid "Show the working tree status"
+msgstr "הצג את הסטטוס של עץ העבודה"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
-msgid "Tag"
-msgstr "תווית"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:280
-#: ../thunar-vcs-plugin/tvp-svn-action.c:434
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "פעולה %s לא מיושמת"
@@ -268,212 +161,227 @@ msgstr "SVN"
 msgid "GIT"
 msgstr "GIT"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:297
-msgid "Menu|Changelist"
-msgstr "תפריט|רשימת שינוי"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260
+msgid "Add files, directories, or symbolic links"
+msgstr "הוסף קבצים, ספריות, או קישורים סימבוליים"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:297
-msgid "Changelist"
-msgstr "רשימת שינוי"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
+#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
+msgid "Checkout"
+msgstr "בדוק"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:307
-msgid "Menu|Cleanup"
-msgstr "תפריט|נקה"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282
+msgid "Check out a working copy from a repository"
+msgstr "בדוק עותק עבודה ממאגר"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:275
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
 msgstr "נקה"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317
-msgid "Menu|Copy"
-msgstr "תפריט|העתק"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287
+msgid "Recursively clean up the working copy"
+msgstr "נקה את עותק העבודה בצורה רקורסיבית"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:283
-#: ../tvp-svn-helper/tsh-copy.c:183
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
+#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
+msgid "Commit"
+msgstr "בצע"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+msgid "Send changes from your working copy to the repository"
+msgstr "שלח שינויים מעותק העבודה שלך אל המאגר"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
+#: ../tvp-svn-helper/tsh-copy.c:189
 msgid "Copy"
 msgstr "העתק"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322
-msgid "Menu|Delete"
-msgstr "תפריט|מחק"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
+msgid "Copy a file or directory in a working copy or in the repository"
+msgstr "העתק קובץ או ספריה בעותק עבודה או במאגר"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:322 ../tvp-svn-helper/main.c:287
-#: ../tvp-svn-helper/tsh-delete.c:139 ../tvp-svn-helper/tsh-delete.c:152
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
+#: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete"
 msgstr "מחק"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332
-msgid "Menu|Export"
-msgstr "תפריט|ייצא"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302
+msgid "Delete an item from a working copy or the repository"
+msgstr "מחק פריט מעותק עבודה או מהמאגר"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:295
-#: ../tvp-svn-helper/tsh-export.c:113 ../tvp-svn-helper/tsh-export.c:131
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
+#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
+msgid "Diff"
+msgstr "Diff"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307
+msgid "Display the differences between two revisions or paths"
+msgstr "הצג את ההבדלים בין שתי גרסאות או נתיבים"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
+#: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
 msgid "Export"
 msgstr "ייצא"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337
-msgid "Menu|Import"
-msgstr "תפריט|ייבא"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
+msgid "Export a clean directory tree"
+msgstr "ייצא עץ ספריות נקי"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-svn-helper/main.c:299
-#: ../tvp-svn-helper/tsh-import.c:120 ../tvp-svn-helper/tsh-import.c:138
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
+#: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
 msgid "Import"
 msgstr "ייבא"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342
-msgid "Menu|Info"
-msgstr "תפריט|מידע"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Commit an unversioned file or tree into the repository"
+msgstr "שלח קובץ או עץ ללא גרסה לתוך המאגר"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:342
-msgid "Info"
-msgstr "מידע"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352
-msgid "Menu|Lock"
-msgstr "תפריט|נעל"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-svn-helper/main.c:303
-#: ../tvp-svn-helper/tsh-lock.c:132 ../tvp-svn-helper/tsh-lock-dialog.c:71
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
+#: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
 msgid "Lock"
 msgstr "נעל"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:383
-msgid "Menu|Edit Properties"
-msgstr "תפריט|ערוך מאפיינים"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid ""
+"Lock working copy paths in the repository so that no other user can commit "
+"changes to them"
+msgstr "נעל נתיבי עותק עבודה במאגר כך שאף משתמש אחר לא יוכל לשנות אותם"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:383
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Move a file or directory"
+msgstr "העבר קובץ או ספריה"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
 msgstr "ערוך מאפיינים"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:388
-msgid "Menu|Relocate"
-msgstr "תפריט|העבר"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+msgid "Edit the property of one or more items"
+msgstr "ערוך את המאפיין של פריט אחד או יותר"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:388 ../tvp-svn-helper/main.c:323
-#: ../tvp-svn-helper/tsh-relocate.c:124
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:214
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
+#: ../tvp-svn-helper/tsh-relocate.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:187
 msgid "Relocate"
 msgstr "העבר"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:394
-msgid "Menu|Resolved"
-msgstr "תפריט|פתור"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368
+msgid "Relocate the working copy to point to a different repository root URL"
+msgstr "שנה מיקום של עותק העבודה להצביע לכתובת שורש מאגר אחרת"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:319
-#: ../tvp-svn-helper/tsh-common.c:539 ../tvp-svn-helper/tsh-resolved.c:115
-#: ../tvp-svn-helper/tsh-resolved.c:128
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
+#: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
+#: ../tvp-svn-helper/tsh-resolved.c:138
 msgid "Resolved"
 msgstr "פתור"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:399
-msgid "Menu|Resolve"
-msgstr "תפריט|פתור"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374
+msgid "Remove \"conflicted\" state on working copy files or directories"
+msgstr "הסר מצבים \"מנוגדים\" בקבצים או ספריות של עותק עבודה"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:399
-msgid "Resolve"
-msgstr "פתור"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:404
-msgid "Menu|Revert"
-msgstr "תפריט|חזור"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:327
-#: ../tvp-svn-helper/tsh-revert.c:119 ../tvp-svn-helper/tsh-revert.c:132
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
+#: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
 msgid "Revert"
 msgstr "חזור"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414
-msgid "Menu|Switch"
-msgstr "תפריט|עבור"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384
+msgid "Undo all local edits"
+msgstr "בטל את כל העריכות המקומיות"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:414 ../tvp-svn-helper/main.c:335
-#: ../tvp-svn-helper/tsh-switch.c:119 ../tvp-svn-helper/tsh-switch.c:132
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
+#: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
 msgid "Switch"
 msgstr "עבור"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419
-msgid "Menu|Unlock"
-msgstr "תפריט|פתח"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394
+msgid "Update working copy to a different URL"
+msgstr "עדכן עותק עבודה לכתובת אחרת"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:419 ../tvp-svn-helper/main.c:339
-#: ../tvp-svn-helper/tsh-unlock.c:113
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
+#: ../tvp-svn-helper/tsh-unlock.c:119
 msgid "Unlock"
 msgstr "פתח"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424
-msgid "Menu|Update"
-msgstr "תפריט|עדכן"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
+msgid "Unlock working copy paths"
+msgstr "פתח נתיבי עותק עבודה"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:424 ../tvp-svn-helper/main.c:343
-#: ../tvp-svn-helper/tsh-update.c:119
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
+#: ../tvp-svn-helper/tsh-update.c:125
 msgid "Update"
 msgstr "עדכן"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404
+msgid "Update your working copy"
+msgstr "עדכן את עותק העבודה שלך"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
 msgstr "URL:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:123
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:136
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:166
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:178
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:191
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:221
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:299
-#: ../tvp-svn-helper/tsh-common.c:608 ../tvp-svn-helper/tsh-common.c:696
-#: ../tvp-svn-helper/tsh-common.c:708 ../tvp-svn-helper/tsh-common.c:733
-#: ../tvp-svn-helper/tsh-common.c:750 ../tvp-svn-helper/tsh-common.c:779
-#: ../tvp-svn-helper/tsh-common.c:882
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:124
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:140
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:155
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:181
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:196
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:212
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:253
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:333
+#: ../tvp-svn-helper/tsh-common.c:651 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:751 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:793 ../tvp-svn-helper/tsh-common.c:822
+#: ../tvp-svn-helper/tsh-common.c:934
 msgid "Unknown"
 msgstr "לא ידוע"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:130
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:133
 msgid "Revision:"
 msgstr "גרסה:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:142
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
 msgid "Repository:"
 msgstr "מאגר:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:160
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:174
 msgid "Modified revision:"
 msgstr "גרסה מעודכנת:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:172
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:189
 msgid "Modified date:"
 msgstr "תאריך עדכון:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:185
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:205
 msgid "Author:"
 msgstr "יוצר:"
 
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:202
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:230
 msgid "Changelist:"
 msgstr "רשימת שינוי:"
 
 #. Translators: Depth as in depth of recursion
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:215
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:246
 msgid "Depth:"
 msgstr "עומק:"
 
 #. Translators: svn recursion depth infotmation
 #. * Exclude should not apear client side
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:305
-#: ../tvp-svn-helper/tsh-common.c:597
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:339
+#: ../tvp-svn-helper/tsh-common.c:640
 msgid "Exclude"
 msgstr "אל תכלול"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:311
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:345
 msgid "Empty"
 msgstr "רוקן"
 
 #. Translators: svn recursion depth infotmation
 #. * Files depth means this file/direcotry and all of it's files are checked
 #. out
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:317
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:351
 msgid "Files"
 msgstr "קבצים"
 
@@ -486,9 +394,9 @@ msgstr "קבצים"
 #. * Immediates means this file/direcotry and the subdirectories are updated
 #. Translators: svn recursion selection
 #. * Immediates means this file/direcotry and the subdirectories are shown
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:323
-#: ../tvp-svn-helper/tsh-diff-dialog.c:178
-#: ../tvp-svn-helper/tsh-properties-dialog.c:212
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:357
+#: ../tvp-svn-helper/tsh-diff-dialog.c:171
+#: ../tvp-svn-helper/tsh-properties-dialog.c:211
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
 msgstr "הופך למיידי"
@@ -496,19 +404,19 @@ msgstr "הופך למיידי"
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
 #. recursion
-#: ../thunar-vcs-plugin/tvp-svn-property-page.c:329
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:363
 msgid "Infinity"
 msgstr "אינסוף"
 
-#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:109
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:108
 msgid "Print version information"
 msgstr "הדפס מידע גרסה"
 
-#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:116
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
 msgid "Execute add action"
 msgstr "בצע פעולת חיבור"
 
-#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:122
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
 msgid "Execute blame action"
 msgstr "בצע פעולת האשמה"
 
@@ -524,11 +432,11 @@ msgstr "בצע פעולת ניקוי"
 msgid "Execute clone action"
 msgstr "בצע פעולת שכפול"
 
-#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:188
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
 msgid "Execute log action"
 msgstr "בצע פעולת רישום"
 
-#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:194
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
 msgid "Execute move action"
 msgstr "בצע פעולת העברה"
 
@@ -540,15 +448,15 @@ msgstr "בצע פעולת אתחול"
 msgid "Execute stash action"
 msgstr "בצע פעולת צבירה"
 
-#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:224
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
 msgstr "בצע פעולת סטטוס"
 
-#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:259
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
 msgid "Add Related Options:"
 msgstr "הוסף אפשרויות קשורות:"
 
-#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:263
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
 msgstr "האשם אפשרויות קשורות:"
 
@@ -560,11 +468,11 @@ msgstr "הסתעף אפשרויות קשורות:"
 msgid "Clone Related Options:"
 msgstr "שכפל אפשרויות קשורות:"
 
-#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:307
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
 msgstr "רשום אפשרויות קשורות:"
 
-#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:311
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
 msgid "Move Related Options:"
 msgstr "העבר אפשרויות קשורות:"
 
@@ -576,7 +484,7 @@ msgstr "אתחל אפשרויות קשורות:"
 msgid "Stash Related Options:"
 msgstr "צבור אפשרויות קשורות:"
 
-#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:331
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
 msgstr "סטטוס אפשרויות קשורות:"
 
@@ -608,49 +516,49 @@ msgstr "תאריך"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:131
 #: ../tvp-git-helper/tgh-branch-dialog.c:142
-#: ../tvp-git-helper/tgh-log-dialog.c:257
+#: ../tvp-git-helper/tgh-log-dialog.c:258
 #: ../tvp-git-helper/tgh-notify-dialog.c:109
 #: ../tvp-git-helper/tgh-stash-dialog.c:248
 #: ../tvp-git-helper/tgh-status-dialog.c:138
 #: ../tvp-svn-helper/tsh-blame-dialog.c:134
-#: ../tvp-svn-helper/tsh-diff-dialog.c:138
-#: ../tvp-svn-helper/tsh-log-dialog.c:239
+#: ../tvp-svn-helper/tsh-diff-dialog.c:131
+#: ../tvp-svn-helper/tsh-log-dialog.c:241
 #: ../tvp-svn-helper/tsh-notify-dialog.c:116
-#: ../tvp-svn-helper/tsh-properties-dialog.c:252
-#: ../tvp-svn-helper/tsh-status-dialog.c:260
+#: ../tvp-svn-helper/tsh-properties-dialog.c:251
+#: ../tvp-svn-helper/tsh-status-dialog.c:266
 msgid "_Close"
 msgstr "_סגירה"
 
 #. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
 #: ../tvp-git-helper/tgh-blame-dialog.c:134
 #: ../tvp-git-helper/tgh-branch-dialog.c:145
-#: ../tvp-git-helper/tgh-branch-dialog.c:251
-#: ../tvp-git-helper/tgh-clean-dialog.c:99
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
-#: ../tvp-git-helper/tgh-log-dialog.c:247 ../tvp-git-helper/tgh-move.c:148
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
+#: ../tvp-git-helper/tgh-clean-dialog.c:98
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:123
+#: ../tvp-git-helper/tgh-log-dialog.c:248 ../tvp-git-helper/tgh-move.c:148
 #: ../tvp-git-helper/tgh-notify-dialog.c:112
 #: ../tvp-git-helper/tgh-stash-dialog.c:251
-#: ../tvp-git-helper/tgh-stash-dialog.c:380
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
 #: ../tvp-git-helper/tgh-status-dialog.c:128
-#: ../tvp-git-helper/tgh-transfer-dialog.c:77
-#: ../tvp-git-helper/tgh-transfer-dialog.c:124
-#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:167
-#: ../tvp-svn-helper/tsh-diff-dialog.c:141
-#: ../tvp-svn-helper/tsh-file-dialog.c:88
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:153
-#: ../tvp-svn-helper/tsh-lock-dialog.c:74
-#: ../tvp-svn-helper/tsh-log-dialog.c:229
-#: ../tvp-svn-helper/tsh-login-dialog.c:108
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
-#: ../tvp-svn-helper/tsh-move.c:156 ../tvp-svn-helper/tsh-notify-dialog.c:119
-#: ../tvp-svn-helper/tsh-properties-dialog.c:255
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:99
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:153
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:217
-#: ../tvp-svn-helper/tsh-status-dialog.c:250
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:93
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:157
-#: ../tvp-svn-helper/tsh-trust-dialog.c:82
+#: ../tvp-git-helper/tgh-transfer-dialog.c:73
+#: ../tvp-git-helper/tgh-transfer-dialog.c:109
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:173
+#: ../tvp-svn-helper/tsh-diff-dialog.c:134
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:152
+#: ../tvp-svn-helper/tsh-lock-dialog.c:73
+#: ../tvp-svn-helper/tsh-log-dialog.c:231
+#: ../tvp-svn-helper/tsh-login-dialog.c:90
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:119
+#: ../tvp-svn-helper/tsh-move.c:162 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-properties-dialog.c:254
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:96
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:140
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:190
+#: ../tvp-svn-helper/tsh-status-dialog.c:256
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:90
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:140
+#: ../tvp-svn-helper/tsh-trust-dialog.c:81
 msgid "_Cancel"
 msgstr "_ביטול"
 
@@ -660,7 +568,7 @@ msgstr "פעיל"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:115
 #: ../tvp-git-helper/tgh-stash-dialog.c:160
-#: ../tvp-svn-helper/tsh-properties-dialog.c:125
+#: ../tvp-svn-helper/tsh-properties-dialog.c:124
 msgid "Name"
 msgstr "שם"
 
@@ -669,51 +577,50 @@ msgid "_Jump to"
 msgstr "_קפיצה אל"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
-#: ../tvp-git-helper/tgh-branch-dialog.c:251
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
 msgid "_New"
 msgstr "_חדש"
 
-#: ../tvp-git-helper/tgh-branch-dialog.c:256
+#: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
 msgstr "שם ענף:"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:56
+#: ../tvp-git-helper/tgh-clean-dialog.c:55
 msgid "Remove directories."
 msgstr "הסר תיקיות."
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:68
+#: ../tvp-git-helper/tgh-clean-dialog.c:67
 msgid "Exclude ignored files"
 msgstr "אל תכלול קבצים שהתעלמתי מהם"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:76
+#: ../tvp-git-helper/tgh-clean-dialog.c:75
 msgid "Include ignored files"
 msgstr "כלול קבצים שהתעלמתי מהם"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:82
+#: ../tvp-git-helper/tgh-clean-dialog.c:81
 msgid "Only ignored files"
 msgstr "רק קבצים שהתעלמתי מהם"
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:92
+#: ../tvp-git-helper/tgh-clean-dialog.c:91
 msgid "Force clean."
 msgstr "אלץ ניקוי."
 
-#: ../tvp-git-helper/tgh-clean-dialog.c:100
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:125
+#: ../tvp-git-helper/tgh-clean-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
 #: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
-#: ../tvp-git-helper/tgh-transfer-dialog.c:78
-#: ../tvp-git-helper/tgh-transfer-dialog.c:125
-#: ../tvp-svn-helper/tsh-copy.c:168 ../tvp-svn-helper/tsh-file-dialog.c:89
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:154
-#: ../tvp-svn-helper/tsh-lock-dialog.c:75
-#: ../tvp-svn-helper/tsh-login-dialog.c:109
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:121
-#: ../tvp-svn-helper/tsh-move.c:157
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:154
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:218
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:158
-#: ../tvp-svn-helper/tsh-trust-dialog.c:83
+#: ../tvp-git-helper/tgh-transfer-dialog.c:74
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-copy.c:174 ../tvp-svn-helper/tsh-file-dialog.c:78
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:153
+#: ../tvp-svn-helper/tsh-lock-dialog.c:74
+#: ../tvp-svn-helper/tsh-login-dialog.c:91
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
+#: ../tvp-svn-helper/tsh-move.c:163 ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:191
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:141
+#: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
 msgstr "_אישור"
 
@@ -725,44 +632,44 @@ msgstr "שכפול הסתיים"
 msgid "Cloning..."
 msgstr "שיבוט..."
 
-#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:86
-#: ../tvp-svn-helper/tsh-add.c:110 ../tvp-svn-helper/tsh-checkout.c:73
-#: ../tvp-svn-helper/tsh-commit.c:111 ../tvp-svn-helper/tsh-commit.c:146
-#: ../tvp-svn-helper/tsh-commit.c:217 ../tvp-svn-helper/tsh-copy.c:100
-#: ../tvp-svn-helper/tsh-delete.c:99 ../tvp-svn-helper/tsh-export.c:78
-#: ../tvp-svn-helper/tsh-import.c:86 ../tvp-svn-helper/tsh-lock.c:93
-#: ../tvp-svn-helper/tsh-move.c:90 ../tvp-svn-helper/tsh-resolved.c:75
-#: ../tvp-svn-helper/tsh-resolved.c:91 ../tvp-svn-helper/tsh-revert.c:94
-#: ../tvp-svn-helper/tsh-switch.c:77 ../tvp-svn-helper/tsh-unlock.c:88
-#: ../tvp-svn-helper/tsh-update.c:94
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
+#: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
+#: ../tvp-svn-helper/tsh-commit.c:113 ../tvp-svn-helper/tsh-commit.c:152
+#: ../tvp-svn-helper/tsh-commit.c:227 ../tvp-svn-helper/tsh-copy.c:102
+#: ../tvp-svn-helper/tsh-delete.c:101 ../tvp-svn-helper/tsh-export.c:80
+#: ../tvp-svn-helper/tsh-import.c:88 ../tvp-svn-helper/tsh-lock.c:95
+#: ../tvp-svn-helper/tsh-move.c:92 ../tvp-svn-helper/tsh-resolved.c:77
+#: ../tvp-svn-helper/tsh-resolved.c:97 ../tvp-svn-helper/tsh-revert.c:96
+#: ../tvp-svn-helper/tsh-switch.c:79 ../tvp-svn-helper/tsh-unlock.c:90
+#: ../tvp-svn-helper/tsh-update.c:96
 msgid "Failed"
 msgstr "נכשל"
 
 #: ../tvp-git-helper/tgh-common.c:293
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:247
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:245
 msgid "untracked"
 msgstr "לא במעקב"
 
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:93
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:92
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
 #: ../tvp-git-helper/tgh-status-dialog.c:103
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:115
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:114
 #: ../tvp-svn-helper/tsh-log-dialog.c:190
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:98
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:97
 #: ../tvp-svn-helper/tsh-notify-dialog.c:93
 #: ../tvp-svn-helper/tsh-status-dialog.c:117
 msgid "Path"
 msgstr "נתיב"
 
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:98
 #: ../tvp-git-helper/tgh-status-dialog.c:109
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:92
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:91
 #: ../tvp-svn-helper/tsh-status-dialog.c:123
 msgid "State"
 msgstr "מצב"
 
-#: ../tvp-git-helper/tgh-file-selection-dialog.c:114
-#: ../tvp-svn-helper/tsh-file-selection-dialog.c:143
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:113
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:142
 msgid "Select/Unselect all"
 msgstr "בחר/בטל בחירה בהכל"
 
@@ -779,21 +686,21 @@ msgstr "תאריך ביצוע"
 msgid "Message"
 msgstr "מסר"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:215
+#: ../tvp-git-helper/tgh-log-dialog.c:216
 #: ../tvp-git-helper/tgh-stash-dialog.c:196
 msgid "Changes"
 msgstr "שינויים"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:222
+#: ../tvp-git-helper/tgh-log-dialog.c:223
 #: ../tvp-git-helper/tgh-stash-dialog.c:203
 msgid "File"
 msgstr "קובץ"
 
-#: ../tvp-git-helper/tgh-log-dialog.c:252
+#: ../tvp-git-helper/tgh-log-dialog.c:253
 #: ../tvp-git-helper/tgh-status-dialog.c:133
-#: ../tvp-svn-helper/tsh-diff-dialog.c:146
-#: ../tvp-svn-helper/tsh-log-dialog.c:234
-#: ../tvp-svn-helper/tsh-status-dialog.c:255
+#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-log-dialog.c:236
+#: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
 msgstr "_רענון"
 
@@ -801,7 +708,7 @@ msgstr "_רענון"
 msgid "Move finished"
 msgstr "העברה הסתיימה"
 
-#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:154
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:160
 msgid "Move To"
 msgstr "העבר אל"
 
@@ -832,7 +739,7 @@ msgid "Description"
 msgstr "תיאור"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:221
-#: ../tvp-git-helper/tgh-stash-dialog.c:380
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
 msgid "_Save"
 msgstr "_שמירה"
 
@@ -848,193 +755,193 @@ msgstr "_מחיקה"
 msgid "C_lear"
 msgstr "_ניקוי"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:385
+#: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
 msgstr "צבור תיאור:"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:521
+#: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
 msgid "Are you sure you want to drop %s?"
 msgstr "האם אתה בטוח שאתה רוצה לעזוב את %s?"
 
-#: ../tvp-git-helper/tgh-stash-dialog.c:549
+#: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
 msgstr "האם אתה בטוח שאתה רוצה לפנות את המצבור?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:81
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:82
 msgid "_Repository:"
 msgstr "מאגר:"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:75
-#: ../tvp-git-helper/tgh-transfer-dialog.c:109
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:97
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:103
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:151
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:157
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:202
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:97
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:142
+#: ../tvp-git-helper/tgh-transfer-dialog.c:71
+#: ../tvp-git-helper/tgh-transfer-dialog.c:98
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:94
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:144
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:179
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:88
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:129
 msgid "Select a folder"
 msgstr "בחר תיקייה"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:102
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:195
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:135
+#: ../tvp-git-helper/tgh-transfer-dialog.c:95
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:176
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:126
 msgid "_Directory:"
 msgstr "תיקייה:"
 
-#: ../tvp-git-helper/tgh-transfer-dialog.c:121
-#: ../tvp-svn-helper/tsh-transfer-dialog.c:154
+#: ../tvp-git-helper/tgh-transfer-dialog.c:106
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:137
 msgid "Transfer"
 msgstr "העבר"
 
-#: ../tvp-svn-helper/main.c:128
+#: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
 msgstr "בצע פעולת רשימת שינוי"
 
-#: ../tvp-svn-helper/main.c:134
+#: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
 msgstr "בצע פעולת בדיקה"
 
-#: ../tvp-svn-helper/main.c:140
+#: ../tvp-svn-helper/main.c:139
 msgid "Execute cleanup action"
 msgstr "בצע פעולת ניקוי"
 
-#: ../tvp-svn-helper/main.c:146
+#: ../tvp-svn-helper/main.c:145
 msgid "Execute commit action"
 msgstr "בצע פעולת ביצוע"
 
-#: ../tvp-svn-helper/main.c:152
+#: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
 msgstr "בצע פעולת העתקה"
 
-#: ../tvp-svn-helper/main.c:158
+#: ../tvp-svn-helper/main.c:157
 msgid "Execute delete action"
 msgstr "בצע פעולת מחיקה"
 
-#: ../tvp-svn-helper/main.c:164
+#: ../tvp-svn-helper/main.c:163
 msgid "Execute diff action"
 msgstr "בצע פעולת diff "
 
-#: ../tvp-svn-helper/main.c:170
+#: ../tvp-svn-helper/main.c:169
 msgid "Execute export action"
 msgstr "בצע פעולת יצוא"
 
-#: ../tvp-svn-helper/main.c:176
+#: ../tvp-svn-helper/main.c:175
 msgid "Execute import action"
 msgstr "בצע פעולת יבוא"
 
-#: ../tvp-svn-helper/main.c:182
+#: ../tvp-svn-helper/main.c:181
 msgid "Execute lock action"
 msgstr "בצע פעולת נעילה"
 
-#: ../tvp-svn-helper/main.c:200
+#: ../tvp-svn-helper/main.c:199
 msgid "Execute properties action"
 msgstr "בצע פעולת מאפיינים"
 
-#: ../tvp-svn-helper/main.c:206
+#: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
 msgstr "בצע פעולת פתירה"
 
-#: ../tvp-svn-helper/main.c:212
+#: ../tvp-svn-helper/main.c:211
 msgid "Execute relocate action"
 msgstr "בצע פעולת מעבר"
 
-#: ../tvp-svn-helper/main.c:218
+#: ../tvp-svn-helper/main.c:217
 msgid "Execute revert action"
 msgstr "בצע פעולת חזרה"
 
-#: ../tvp-svn-helper/main.c:230
+#: ../tvp-svn-helper/main.c:229
 msgid "Execute switch action"
 msgstr "בצע פעולת מעבר"
 
-#: ../tvp-svn-helper/main.c:236
+#: ../tvp-svn-helper/main.c:235
 msgid "Execute unlock action"
 msgstr "בצע פעולת שחרור"
 
-#: ../tvp-svn-helper/main.c:242
+#: ../tvp-svn-helper/main.c:241
 msgid "Execute update action"
 msgstr "בצע פעולת עדכון"
 
-#: ../tvp-svn-helper/main.c:267
+#: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
 msgstr "אפשרויות קשורות לרשימת שינויים:"
 
-#: ../tvp-svn-helper/main.c:271
+#: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
 msgstr "אפשרויות קשורות לבדוק:"
 
-#: ../tvp-svn-helper/main.c:275
+#: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
 msgstr "אפשרויות קשורות לנקה:"
 
-#: ../tvp-svn-helper/main.c:279
+#: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
 msgstr "אפשרויות קשורות לבצע:"
 
-#: ../tvp-svn-helper/main.c:283
+#: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
 msgstr "אפשרויות קשורות להעתק:"
 
-#: ../tvp-svn-helper/main.c:287
+#: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
 msgstr "אפשרויות קשורות למחק:"
 
-#: ../tvp-svn-helper/main.c:291
+#: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
 msgstr "אפשרויות קשורות ל-Diff:"
 
-#: ../tvp-svn-helper/main.c:295
+#: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
 msgstr "אפשרויות קשורות לייצא:"
 
-#: ../tvp-svn-helper/main.c:299
+#: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
 msgstr "אפשרויות קשורות לייבא:"
 
-#: ../tvp-svn-helper/main.c:303
+#: ../tvp-svn-helper/main.c:301
 msgid "Lock Related Options:"
 msgstr "אפשרויות קשורות לנעל:"
 
-#: ../tvp-svn-helper/main.c:315
+#: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
 msgstr "אפשרויות קשורות למאפיינים:"
 
-#: ../tvp-svn-helper/main.c:315 ../tvp-svn-helper/tsh-properties-dialog.c:250
+#: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
 msgstr "מאפיינים"
 
-#: ../tvp-svn-helper/main.c:319
+#: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
 msgstr "אפשרויות קשורות לפתור:"
 
-#: ../tvp-svn-helper/main.c:323
+#: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
 msgstr "אפשרויות קשורות להעבר:"
 
-#: ../tvp-svn-helper/main.c:327
+#: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
 msgstr "אפשרויות קשורות לחזור:"
 
-#: ../tvp-svn-helper/main.c:335
+#: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
 msgstr "אפשרויות קשורות להעבר:"
 
-#: ../tvp-svn-helper/main.c:339
+#: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
 msgstr "אפשרויות קשורות לשחרר:"
 
-#: ../tvp-svn-helper/main.c:343
+#: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
 msgstr "עדכן אפשרויות קשורות:"
 
-#: ../tvp-svn-helper/main.c:386
+#: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
 msgstr "לא סופקו מספיק ארגומנטים"
 
-#: ../tvp-svn-helper/tsh-blame.c:81
+#: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
 msgstr "האשם נכשל"
 
@@ -1043,349 +950,349 @@ msgstr "האשם נכשל"
 msgid "'%s' is not a local path"
 msgstr "'%s' אינו נתיב מקומי"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:89
+#: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
 msgstr "ניקוי נכשל"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:104
+#: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
 msgstr "ניקוי הסתיים"
 
-#: ../tvp-svn-helper/tsh-cleanup.c:118
+#: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
 msgstr "ניקוי..."
 
-#: ../tvp-svn-helper/tsh-commit.c:230 ../tvp-svn-helper/tsh-common.c:826
-#: ../tvp-svn-helper/tsh-common.c:1092 ../tvp-svn-helper/tsh-copy.c:113
-#: ../tvp-svn-helper/tsh-delete.c:112 ../tvp-svn-helper/tsh-import.c:97
-#: ../tvp-svn-helper/tsh-move.c:103
+#: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
+#: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
+#: ../tvp-svn-helper/tsh-delete.c:116 ../tvp-svn-helper/tsh-import.c:101
+#: ../tvp-svn-helper/tsh-move.c:107
 #, c-format
 msgid "At revision: %ld"
 msgstr "בגרסה: %ld"
 
-#: ../tvp-svn-helper/tsh-commit.c:235
+#: ../tvp-svn-helper/tsh-commit.c:247
 msgid "Nothing to do"
 msgstr "שום דבר לעשות"
 
-#: ../tvp-svn-helper/tsh-commit.c:245 ../tvp-svn-helper/tsh-common.c:544
-#: ../tvp-svn-helper/tsh-common.c:546 ../tvp-svn-helper/tsh-common.c:1101
-#: ../tvp-svn-helper/tsh-copy.c:126 ../tvp-svn-helper/tsh-delete.c:125
-#: ../tvp-svn-helper/tsh-import.c:104 ../tvp-svn-helper/tsh-move.c:116
+#: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
+#: ../tvp-svn-helper/tsh-copy.c:131 ../tvp-svn-helper/tsh-delete.c:130
+#: ../tvp-svn-helper/tsh-import.c:109 ../tvp-svn-helper/tsh-move.c:121
 msgid "Completed"
 msgstr "הושלם"
 
-#: ../tvp-svn-helper/tsh-commit.c:278
+#: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
 msgstr "בצע מסר"
 
-#: ../tvp-svn-helper/tsh-common.c:294
+#: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
 msgstr "אחסן סיסמה כטקסט פשוט?"
 
-#: ../tvp-svn-helper/tsh-common.c:533 ../tvp-svn-helper/tsh-common.c:542
-#: ../tvp-svn-helper/tsh-common.c:549 ../tvp-svn-helper/tsh-common.c:737
-#: ../tvp-svn-helper/tsh-common.c:784 ../tvp-svn-helper/tsh-common.c:888
+#: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
+#: ../tvp-svn-helper/tsh-common.c:827 ../tvp-svn-helper/tsh-common.c:940
 msgid "Added"
 msgstr "נוסף"
 
-#: ../tvp-svn-helper/tsh-common.c:534 ../tvp-svn-helper/tsh-common.c:593
-#: ../tvp-svn-helper/tsh-common.c:897
+#: ../tvp-svn-helper/tsh-common.c:577 ../tvp-svn-helper/tsh-common.c:636
+#: ../tvp-svn-helper/tsh-common.c:949
 msgid "Copied"
 msgstr "הועתק"
 
-#: ../tvp-svn-helper/tsh-common.c:535 ../tvp-svn-helper/tsh-common.c:541
-#: ../tvp-svn-helper/tsh-common.c:550 ../tvp-svn-helper/tsh-common.c:739
-#: ../tvp-svn-helper/tsh-common.c:787 ../tvp-svn-helper/tsh-common.c:890
+#: ../tvp-svn-helper/tsh-common.c:578 ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:593 ../tvp-svn-helper/tsh-common.c:782
+#: ../tvp-svn-helper/tsh-common.c:830 ../tvp-svn-helper/tsh-common.c:942
 msgid "Deleted"
 msgstr "נמחק"
 
-#: ../tvp-svn-helper/tsh-common.c:536
+#: ../tvp-svn-helper/tsh-common.c:579
 msgid "Restored"
 msgstr "שוחזר"
 
-#: ../tvp-svn-helper/tsh-common.c:537
+#: ../tvp-svn-helper/tsh-common.c:580
 msgid "Reverted"
 msgstr "הוחזר"
 
-#: ../tvp-svn-helper/tsh-common.c:538
+#: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
 msgstr "חזור נכשל"
 
-#: ../tvp-svn-helper/tsh-common.c:540
+#: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
 msgstr "דולג"
 
-#: ../tvp-svn-helper/tsh-common.c:543
+#: ../tvp-svn-helper/tsh-common.c:586
 msgid "Updated"
 msgstr "עודכן"
 
-#: ../tvp-svn-helper/tsh-common.c:545 ../tvp-svn-helper/tsh-common.c:547
-#: ../tvp-svn-helper/tsh-common.c:746
+#: ../tvp-svn-helper/tsh-common.c:588 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:789
 msgid "External"
 msgstr "חיצוני"
 
-#: ../tvp-svn-helper/tsh-common.c:548 ../tvp-svn-helper/tsh-common.c:741
-#: ../tvp-svn-helper/tsh-common.c:790 ../tvp-svn-helper/tsh-common.c:893
+#: ../tvp-svn-helper/tsh-common.c:591 ../tvp-svn-helper/tsh-common.c:784
+#: ../tvp-svn-helper/tsh-common.c:833 ../tvp-svn-helper/tsh-common.c:945
 msgid "Modified"
 msgstr "שונה"
 
-#: ../tvp-svn-helper/tsh-common.c:551 ../tvp-svn-helper/tsh-common.c:740
-#: ../tvp-svn-helper/tsh-common.c:793 ../tvp-svn-helper/tsh-common.c:886
+#: ../tvp-svn-helper/tsh-common.c:594 ../tvp-svn-helper/tsh-common.c:783
+#: ../tvp-svn-helper/tsh-common.c:836 ../tvp-svn-helper/tsh-common.c:938
 msgid "Replaced"
 msgstr "הוחלף"
 
-#: ../tvp-svn-helper/tsh-common.c:552
+#: ../tvp-svn-helper/tsh-common.c:595
 msgid "Transmitting"
 msgstr "משדר"
 
-#: ../tvp-svn-helper/tsh-common.c:554 ../tvp-svn-helper/tsh-common.c:602
+#: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
 msgid "Locked"
 msgstr "נעול"
 
-#: ../tvp-svn-helper/tsh-common.c:555 ../tvp-svn-helper/tsh-common.c:899
+#: ../tvp-svn-helper/tsh-common.c:598 ../tvp-svn-helper/tsh-common.c:951
 msgid "Unlocked"
 msgstr "משוחרר"
 
-#: ../tvp-svn-helper/tsh-common.c:556
+#: ../tvp-svn-helper/tsh-common.c:599
 msgid "Lock failed"
 msgstr "נעל נכשל"
 
-#: ../tvp-svn-helper/tsh-common.c:557
+#: ../tvp-svn-helper/tsh-common.c:600
 msgid "Unlock failed"
 msgstr "שחרר נכשל"
 
-#: ../tvp-svn-helper/tsh-common.c:558
+#: ../tvp-svn-helper/tsh-common.c:601
 msgid "Exists"
 msgstr "קיים"
 
-#: ../tvp-svn-helper/tsh-common.c:559
+#: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
 msgstr "נקבעה רשימת שינויים"
 
-#: ../tvp-svn-helper/tsh-common.c:560
+#: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
 msgstr "רשימת שינויים נמחקה"
 
-#: ../tvp-svn-helper/tsh-common.c:561
+#: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
 msgstr "רשימת שינויים הועברה"
 
-#: ../tvp-svn-helper/tsh-common.c:562
+#: ../tvp-svn-helper/tsh-common.c:605
 msgid "Merge begin"
 msgstr "התחלת מיזוג "
 
-#: ../tvp-svn-helper/tsh-common.c:563
+#: ../tvp-svn-helper/tsh-common.c:606
 msgid "Foreign merge begin"
 msgstr "התחלת מיזוג זר"
 
-#: ../tvp-svn-helper/tsh-common.c:564
+#: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
 msgstr "החלף"
 
-#: ../tvp-svn-helper/tsh-common.c:566
+#: ../tvp-svn-helper/tsh-common.c:609
 msgid "Property added"
 msgstr "נוסף מאפיין"
 
-#: ../tvp-svn-helper/tsh-common.c:567
+#: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
 msgstr "שונה מאפיין"
 
-#: ../tvp-svn-helper/tsh-common.c:568
+#: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
 msgstr "נמחק מאפיין"
 
-#: ../tvp-svn-helper/tsh-common.c:569
+#: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
 msgstr "לא קיים מאפיין"
 
-#: ../tvp-svn-helper/tsh-common.c:570
+#: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
 msgstr "קביעת מאפיין גרסה"
 
-#: ../tvp-svn-helper/tsh-common.c:571
+#: ../tvp-svn-helper/tsh-common.c:614
 msgid "Revision property deleted"
 msgstr "נמחק מאפיין גרסה"
 
-#: ../tvp-svn-helper/tsh-common.c:572
+#: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
 msgstr "הושלם מיזוג"
 
-#: ../tvp-svn-helper/tsh-common.c:573
+#: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
 msgstr "ניגוד עץ"
 
-#: ../tvp-svn-helper/tsh-common.c:574
+#: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
 msgstr "נכשל חיצוני"
 
-#: ../tvp-svn-helper/tsh-common.c:577
+#: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
 msgstr "התחיל"
 
-#: ../tvp-svn-helper/tsh-common.c:578
+#: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
 msgstr "הפרעה דולגה"
 
-#: ../tvp-svn-helper/tsh-common.c:579
+#: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
 msgstr "עובד בלבד דולג"
 
-#: ../tvp-svn-helper/tsh-common.c:580
+#: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
 msgstr "גישה נדחתה דולג"
 
-#: ../tvp-svn-helper/tsh-common.c:581
+#: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
 msgstr "הוסר חיצוני"
 
-#: ../tvp-svn-helper/tsh-common.c:582
+#: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
 msgstr "הוספת מוצל"
 
-#: ../tvp-svn-helper/tsh-common.c:583
+#: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
 msgstr "עדכון מוצל"
 
-#: ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
 msgstr "מחיקת מוצל"
 
-#: ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
 msgstr "מזג מידע רשומה"
 
-#: ../tvp-svn-helper/tsh-common.c:586
+#: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
 msgstr "נתיב שודרג"
 
-#: ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
 msgstr "החל מיזוג מידע רשומה"
 
-#: ../tvp-svn-helper/tsh-common.c:588
+#: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
 msgstr "מזג מידע elide "
 
-#: ../tvp-svn-helper/tsh-common.c:589
+#: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
 msgstr "Patch"
 
-#: ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
 msgstr "מיושם hunk"
 
-#: ../tvp-svn-helper/tsh-common.c:591
+#: ../tvp-svn-helper/tsh-common.c:634
 msgid "Rejected hunk"
 msgstr "דחוי hunk"
 
-#: ../tvp-svn-helper/tsh-common.c:592
+#: ../tvp-svn-helper/tsh-common.c:635
 msgid "Hunk already applied"
 msgstr "Hunk כבר מיושם"
 
-#: ../tvp-svn-helper/tsh-common.c:594
+#: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
 msgstr "הוחלף העתק"
 
-#: ../tvp-svn-helper/tsh-common.c:595
+#: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
 msgstr "URL redirect"
 
-#: ../tvp-svn-helper/tsh-common.c:596
+#: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
 msgstr "נתיב לא קיים"
 
-#: ../tvp-svn-helper/tsh-common.c:598
+#: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
 msgstr "ניגוד"
 
-#: ../tvp-svn-helper/tsh-common.c:599 ../tvp-svn-helper/tsh-common.c:698
-#: ../tvp-svn-helper/tsh-common.c:738
+#: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:781
 msgid "Missing"
 msgstr "חסר"
 
-#: ../tvp-svn-helper/tsh-common.c:600
+#: ../tvp-svn-helper/tsh-common.c:643
 msgid "Out of date"
 msgstr "לא בתוקף"
 
-#: ../tvp-svn-helper/tsh-common.c:601
+#: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
 msgstr "אין הורה"
 
-#: ../tvp-svn-helper/tsh-common.c:603
+#: ../tvp-svn-helper/tsh-common.c:646
 msgid "Forbidden by server"
 msgstr "אסור על פי שרת"
 
-#: ../tvp-svn-helper/tsh-common.c:604
+#: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
 msgstr "התנגד המדולג"
 
-#: ../tvp-svn-helper/tsh-common.c:695
+#: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
 msgstr "לא בר יישום"
 
-#: ../tvp-svn-helper/tsh-common.c:697
+#: ../tvp-svn-helper/tsh-common.c:740
 msgid "Unchanged"
 msgstr "לא שונה"
 
-#: ../tvp-svn-helper/tsh-common.c:699 ../tvp-svn-helper/tsh-common.c:745
+#: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
 msgstr "מופרע"
 
-#: ../tvp-svn-helper/tsh-common.c:700
+#: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
 msgstr "שונה"
 
-#: ../tvp-svn-helper/tsh-common.c:701 ../tvp-svn-helper/tsh-common.c:742
+#: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
 msgid "Merged"
 msgstr "מוזג"
 
-#: ../tvp-svn-helper/tsh-common.c:702 ../tvp-svn-helper/tsh-common.c:743
+#: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
 msgstr "התנגד"
 
-#: ../tvp-svn-helper/tsh-common.c:704
+#: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
 msgstr "חסר מקור"
 
 #. N_("None"),
 #. N_("Unversioned"),
-#: ../tvp-svn-helper/tsh-common.c:736
+#: ../tvp-svn-helper/tsh-common.c:779
 msgid "Normal"
 msgstr "רגיל"
 
-#: ../tvp-svn-helper/tsh-common.c:744
+#: ../tvp-svn-helper/tsh-common.c:787
 msgid "Ignored"
 msgstr "בהתעלמות"
 
-#: ../tvp-svn-helper/tsh-common.c:747
+#: ../tvp-svn-helper/tsh-common.c:790
 msgid "Incomplete"
 msgstr "לא שלם"
 
-#: ../tvp-svn-helper/tsh-common.c:1085
+#: ../tvp-svn-helper/tsh-common.c:1163
 msgid "Error"
 msgstr "שגיאה"
 
-#: ../tvp-svn-helper/tsh-common.c:1097
+#: ../tvp-svn-helper/tsh-common.c:1176
 msgid "Local action"
 msgstr "פעולה מקומית"
 
-#: ../tvp-svn-helper/tsh-copy.c:118
+#: ../tvp-svn-helper/tsh-copy.c:122
 msgid "Local copy"
 msgstr "עותק מקומי"
 
-#: ../tvp-svn-helper/tsh-copy.c:165
+#: ../tvp-svn-helper/tsh-copy.c:171
 msgid "Copy To"
 msgstr "העתק ל"
 
-#: ../tvp-svn-helper/tsh-delete.c:117
+#: ../tvp-svn-helper/tsh-delete.c:121
 msgid "Local delete"
 msgstr "מחיקה מקומית"
 
-#: ../tvp-svn-helper/tsh-delete.c:157
+#: ../tvp-svn-helper/tsh-delete.c:163
 msgid "Delete Message"
 msgstr "מחק מסר"
 
-#: ../tvp-svn-helper/tsh-diff.c:198
+#: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
 msgstr "נכשל Diff "
 
@@ -1395,8 +1302,8 @@ msgstr "נכשל Diff "
 #. * Self means only this file/direcotry is updated
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:160
-#: ../tvp-svn-helper/tsh-properties-dialog.c:192
+#: ../tvp-svn-helper/tsh-diff-dialog.c:153
+#: ../tvp-svn-helper/tsh-properties-dialog.c:191
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
 msgstr "עצמי"
@@ -1410,8 +1317,8 @@ msgstr "עצמי"
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
 #. shown
-#: ../tvp-svn-helper/tsh-diff-dialog.c:169
-#: ../tvp-svn-helper/tsh-properties-dialog.c:203
+#: ../tvp-svn-helper/tsh-diff-dialog.c:162
+#: ../tvp-svn-helper/tsh-properties-dialog.c:202
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
 msgstr "קבצים במיידי"
@@ -1422,51 +1329,51 @@ msgstr "קבצים במיידי"
 #. * Recursive means the update is full recursive
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
-#: ../tvp-svn-helper/tsh-diff-dialog.c:187
-#: ../tvp-svn-helper/tsh-properties-dialog.c:221
+#: ../tvp-svn-helper/tsh-diff-dialog.c:180
+#: ../tvp-svn-helper/tsh-properties-dialog.c:220
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
 msgstr "רקורסיבי"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:202
+#: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
 msgstr "שים לב לייחוס"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:206
+#: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
 msgstr "אל תציג הבדלים עבור קבצים מחוקים"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:211
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
 msgstr "הצג העתקים כתוספות"
 
-#: ../tvp-svn-helper/tsh-diff-dialog.c:365
+#: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
 msgstr "מעלה..."
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:59
+#: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
 msgstr "תעודה:"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:66
+#: ../tvp-svn-helper/tsh-file-dialog.c:61
 msgid "Select a file"
 msgstr "בחר קובץ"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:77
-#: ../tvp-svn-helper/tsh-login-dialog.c:97
-#: ../tvp-svn-helper/tsh-trust-dialog.c:75
+#: ../tvp-svn-helper/tsh-file-dialog.c:69
+#: ../tvp-svn-helper/tsh-login-dialog.c:82
+#: ../tvp-svn-helper/tsh-trust-dialog.c:74
 msgid "Remember"
 msgstr "זכור"
 
-#: ../tvp-svn-helper/tsh-file-dialog.c:85
+#: ../tvp-svn-helper/tsh-file-dialog.c:74
 msgid "Certificate"
 msgstr "תעודה"
 
-#: ../tvp-svn-helper/tsh-import.c:143
+#: ../tvp-svn-helper/tsh-import.c:149
 msgid "Import Message"
 msgstr "ייבא מסר"
 
-#: ../tvp-svn-helper/tsh-log.c:122
+#: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
 msgstr "נכשל רישום"
 
@@ -1474,80 +1381,79 @@ msgstr "נכשל רישום"
 msgid "Stop On Copy"
 msgstr "עצור בהעתק"
 
-#: ../tvp-svn-helper/tsh-log-dialog.c:218
+#: ../tvp-svn-helper/tsh-log-dialog.c:219
 msgid "Show Merged Revisions"
 msgstr "הצג גרסאות מיזוג"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:64
+#: ../tvp-svn-helper/tsh-login-dialog.c:63
 msgid "_Username:"
 msgstr "שם משתמש:"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:80
+#: ../tvp-svn-helper/tsh-login-dialog.c:72
 msgid "_Password:"
 msgstr "סיסמה:"
 
-#: ../tvp-svn-helper/tsh-login-dialog.c:105
+#: ../tvp-svn-helper/tsh-login-dialog.c:87
 msgid "Login"
 msgstr "התחבר"
 
-#: ../tvp-svn-helper/tsh-log-message-dialog.c:117
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
 msgstr "מסר יומן"
 
-#: ../tvp-svn-helper/tsh-move.c:108
+#: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
 msgstr "העברה מקומית"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
-msgid "Mime type"
-msgstr "Mime סוג"
+msgid "MIME type"
+msgstr "סוג MIME"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
 msgstr "הודעה"
 
-#. tsh_properties_dialog_done (dialog);
-#: ../tvp-svn-helper/tsh-properties.c:142
+#: ../tvp-svn-helper/tsh-properties.c:143
 msgid "Set property failed"
 msgstr "נכשל מאפיין קביעה"
 
-#: ../tvp-svn-helper/tsh-properties.c:181
+#: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
 msgstr "נכשלו מאפיינים"
 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:131
+#: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
 msgstr "ערך"
 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:240
+#: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
 msgstr "_הוספה"
 
-#: ../tvp-svn-helper/tsh-properties-dialog.c:245
+#: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
 msgstr "_הסרה"
 
-#: ../tvp-svn-helper/tsh-relocate.c:77
+#: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
 msgstr "נכשל מעבר"
 
-#: ../tvp-svn-helper/tsh-relocate.c:92
+#: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
 msgstr "הסתיים מעבר"
 
-#: ../tvp-svn-helper/tsh-relocate.c:138
+#: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
 msgstr "שינוי מקום..."
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:87
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
 msgstr "מ:"
 
-#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:132
 msgid "_To:"
 msgstr "ל:"
 
-#: ../tvp-svn-helper/tsh-status.c:104
+#: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
 msgstr "נכשל סטטוס"
 
@@ -1563,46 +1469,46 @@ msgstr "מצב Repo "
 msgid "Repo prop state"
 msgstr "מצב Repo prop "
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:223
+#: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
 msgstr "הצג קבצים שלא שונו"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:227
+#: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
 msgstr "הצג קבצים ללא גרסה"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:231
+#: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
 msgstr "הצג קבצים שהתעלמתי מהם"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:235
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
 msgstr "הסתר חיצוניים"
 
-#: ../tvp-svn-helper/tsh-status-dialog.c:239
+#: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
 msgstr "בדוק מאגר"
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:60
+#: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
 msgstr "תעודה עדיין לא חוקית."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:63
+#: ../tvp-svn-helper/tsh-trust-dialog.c:62
 msgid "Certificate has expired."
 msgstr "תעודה פגת תוקף."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:66
+#: ../tvp-svn-helper/tsh-trust-dialog.c:65
 msgid "Certificate does not match the remote hostname."
 msgstr "תעודה לא תואמת את שם המארח המרוחק."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:69
+#: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
 msgstr "סמכות התעודה לא ידועה."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:72
+#: ../tvp-svn-helper/tsh-trust-dialog.c:71
 msgid "Other failure."
 msgstr "כשל אחר."
 
-#: ../tvp-svn-helper/tsh-trust-dialog.c:79
+#: ../tvp-svn-helper/tsh-trust-dialog.c:78
 msgid "Trust"
 msgstr "אמון"
