@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-07-03 00:35+0000\n"
+"PO-Revision-Date: 2018-07-03 17:06+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -122,7 +122,7 @@ msgstr "Nulstil"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "Nulstil nuværende HEAD til den angivne tilstand"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
@@ -131,7 +131,7 @@ msgstr "Stash"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "Stash ændringerne i en beskidt arbejdsmappe væk"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
@@ -185,7 +185,7 @@ msgstr "Opryd"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr ""
+msgstr "Opryd arbejdskopien rekursivt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
@@ -252,7 +252,7 @@ msgstr "Lås"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr ""
+msgstr "Lås arbejdskopiens stier i arkivet, så andre brugere ikke kan integrere ændringer til dem"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
@@ -274,7 +274,7 @@ msgstr "Skift adresse"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr ""
+msgstr "Skift adresse for arbejdskopi, så den peger på en anden arkivrod-URL"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -284,7 +284,7 @@ msgstr "Løst"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr ""
+msgstr "Fjern \"i konflikt\"-tilstand på arbejdskopiens filer eller mapper"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -311,7 +311,7 @@ msgstr "Lås op"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "Lås op for arbejdskopiens stier"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
