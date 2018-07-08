@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-06-28 08:15+0000\n"
+"PO-Revision-Date: 2018-07-08 10:17+0000\n"
 "Last-Translator: wakutiteo <wakutiteo@protonmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -704,7 +704,7 @@ msgstr "Archivo"
 #: ../tvp-svn-helper/tsh-log-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
-msgstr ""
+msgstr "_Actualizar"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
@@ -950,7 +950,7 @@ msgstr "No se pudo hacer la revisión detallada"
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "'%s' no es una ruta local"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
