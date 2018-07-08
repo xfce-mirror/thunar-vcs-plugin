@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-07-08 10:17+0000\n"
+"PO-Revision-Date: 2018-07-08 10:46+0000\n"
 "Last-Translator: wakutiteo <wakutiteo@protonmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -624,7 +624,7 @@ msgstr "Forzar eliminación de bloqueos."
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:141
 #: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
-msgstr ""
+msgstr "_Aceptar"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
