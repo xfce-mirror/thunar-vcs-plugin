@@ -5,14 +5,14 @@
 # Translators:
 # Daniel Muñiz Fontoira <dani@damufo.com>, 2018
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008-2010
-# Xosé, 2015,2017
+# Xosé, 2015,2017-2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 00:30+0200\n"
-"PO-Revision-Date: 2018-06-25 06:10+0000\n"
-"Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
+"POT-Creation-Date: 2018-06-27 06:30+0200\n"
+"PO-Revision-Date: 2018-07-12 21:30+0000\n"
+"Last-Translator: Xosé\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/thunar-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,245 +20,118 @@ msgstr ""
 "Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:235
-#: ../thunar-vcs-plugin/tvp-svn-action.c:273
-msgctxt "Menu"
-msgid "Add"
-msgstr "Engadir"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:235
-#: ../thunar-vcs-plugin/tvp-svn-action.c:273 ../tvp-git-helper/main.c:153
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
 #: ../tvp-svn-helper/tsh-add.c:154
 msgid "Add"
 msgstr "Engadir"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:236
-msgctxt "Menu"
-msgid "Bisect"
-msgstr "Bifurcar"
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+msgid "Add file contents to the index"
+msgstr "Engadir o contido do ficheiro ao índice"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:236
-msgid "Bisect"
-msgstr "Bifurcar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:238
-#: ../thunar-vcs-plugin/tvp-svn-action.c:278
-msgctxt "Menu"
-msgid "Blame"
-msgstr "Revisión detallada"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:238
-#: ../thunar-vcs-plugin/tvp-svn-action.c:278 ../tvp-git-helper/main.c:157
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Revisión detallada"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
-msgctxt "Menu"
-msgid "Branch"
-msgstr "Ramificación"
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265
+msgid "Show what revision and author last modified each line of a file"
+msgstr "Mostrar que revisión e autor modificaron por última vez cada liña dun ficheiro"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Ramificación"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:241
-#: ../thunar-vcs-plugin/tvp-svn-action.c:295
-msgctxt "Menu"
-msgid "Checkout"
-msgstr "Obter"
+#: ../thunar-vcs-plugin/tvp-git-action.c:227
+msgid "List, create or switch branches"
+msgstr "Listar, crear ou conmutar polas"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:241
-#: ../thunar-vcs-plugin/tvp-svn-action.c:295 ../tvp-svn-helper/main.c:269
-#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
-msgid "Checkout"
-msgstr "Obter"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:242
-msgctxt "Menu"
-msgid "Clean"
-msgstr "Limpar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:242 ../tvp-git-helper/main.c:165
+#. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
+#. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "Limpar"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244
-msgctxt "Menu"
-msgid "Clone"
-msgstr "Clonar"
+#: ../thunar-vcs-plugin/tvp-git-action.c:229
+msgid "Remove untracked files from the working tree"
+msgstr "Retirar da árbore de traballo os ficheiros non vixiados"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Clonar"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305
-msgctxt "Menu"
-msgid "Commit"
-msgstr "Remitir"
+#: ../thunar-vcs-plugin/tvp-git-action.c:231
+msgid "Clone a repository into a new directory"
+msgstr "Clonar un repositorio nun directorio novo"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305
-#: ../tvp-git-helper/tgh-log-dialog.c:153
-#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
-#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
-msgid "Commit"
-msgstr "Remitir"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:246
-#: ../thunar-vcs-plugin/tvp-svn-action.c:320
-msgctxt "Menu"
-msgid "Diff"
-msgstr "Diferenzas"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:246
-#: ../thunar-vcs-plugin/tvp-svn-action.c:320 ../tvp-svn-helper/main.c:289
-#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
-msgid "Diff"
-msgstr "Diferenzas"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
-msgctxt "Menu"
-msgid "Fetch"
-msgstr "Obter"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
-msgid "Fetch"
-msgstr "Obter"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-msgctxt "Menu"
-msgid "Grep"
-msgstr "Filtrar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-msgid "Grep"
-msgstr "Filtrar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:249
-msgctxt "Menu"
-msgid "Init"
-msgstr "Inicializar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:249
-msgid "Init"
-msgstr "Inicializar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
-#: ../thunar-vcs-plugin/tvp-svn-action.c:350
-msgctxt "Menu"
-msgid "Log"
-msgstr "Rexistro"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
-#: ../thunar-vcs-plugin/tvp-svn-action.c:350 ../tvp-git-helper/main.c:173
+#. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
+#. _("Commit"), "gtk-apply", _("Commit"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::diff", _("Diff"),
+#. _("Diff"), "edit-find-replace", _("Diff"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::fetch", _("Fetch"),
+#. _("Fetch"), NULL, _("Fetch"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::grep", _("Grep"),
+#. _("Grep"), NULL, _("Grep"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
+#. _("Init"), NULL, _("Init"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
 msgstr "Rexistro"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251
-msgctxt "Menu"
-msgid "Merge"
-msgstr "Combinar"
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Show commit logs"
+msgstr "Mostrar o rexistro de remisións"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251
-msgid "Merge"
-msgstr "Combinar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:365
-msgctxt "Menu"
-msgid "Move"
-msgstr "Mover"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:365 ../tvp-git-helper/main.c:177
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "Mover"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
-msgctxt "Menu"
-msgid "Pull"
-msgstr "Recibir"
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+msgid "Move or rename a file, a directory, or a symlink"
+msgstr "Mover ou renomear un ficheiro, un directorio ou unha ligazón simbólica"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
-msgid "Pull"
-msgstr "Recibir"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
-msgctxt "Menu"
-msgid "Push"
-msgstr "Enviar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
-msgid "Push"
-msgstr "Enviar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
-msgctxt "Menu"
-msgid "Rebase"
-msgstr "Refacer base"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
-msgid "Rebase"
-msgstr "Refacer base"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
-msgctxt "Menu"
-msgid "Reset"
-msgstr "Restabelecer"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:257 ../tvp-git-helper/main.c:181
+#. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
+#. _("Pull"), NULL, _("Pull"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::push", _("Push"),
+#. _("Push"), NULL, _("Push"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
+#. _("Rebase"), NULL, _("Rebase"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Restabelecer"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
-msgctxt "Menu"
-msgid "Remove"
-msgstr "Retirar"
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+msgid "Reset current HEAD to the specified state"
+msgstr "Restaurar a HEAD actual ao estado indicado"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
-msgid "Remove"
-msgstr "Retirar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:259
-msgctxt "Menu"
-msgid "Show"
-msgstr "Amosar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:259
-msgid "Show"
-msgstr "Mostrar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
-msgctxt "Menu"
-msgid "Stash"
-msgstr "Agochar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:261 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Agochar"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:402
-msgctxt "Menu"
-msgid "Status"
-msgstr "Estado"
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+msgid "Stash the changes in a dirty working directory away"
+msgstr "Apartar os cambios a un directorio de traballo suxo"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:402 ../tvp-git-helper/main.c:189
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:149
@@ -266,17 +139,13 @@ msgstr "Estado"
 msgid "Status"
 msgstr "Estado"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-msgctxt "Menu"
-msgid "Tag"
-msgstr "Etiquetar"
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389
+msgid "Show the working tree status"
+msgstr "Mostrar o estado da árbore de traball"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-msgid "Tag"
-msgstr "Etiquetar"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
-#: ../thunar-vcs-plugin/tvp-svn-action.c:425
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "A acción %s non está implantada"
@@ -294,162 +163,161 @@ msgstr "SVN"
 msgid "GIT"
 msgstr "GIT"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:290
-msgctxt "Menu"
-msgid "Changelist"
-msgstr "Listaxe de cambios"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260
+msgid "Add files, directories, or symbolic links"
+msgstr "Engadir ficheiros, directorios ou ligazóns simbólicas"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:290
-msgid "Changelist"
-msgstr "Lista de cambios"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
+#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
+msgid "Checkout"
+msgstr "Obter"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300
-msgctxt "Menu"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282
+msgid "Check out a working copy from a repository"
+msgstr "Sacar unha copia de traballo dun repositorio"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
 msgstr "Arrombar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-svn-helper/main.c:273
-msgid "Cleanup"
-msgstr "Arrombar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287
+msgid "Recursively clean up the working copy"
+msgstr "Limpar a copia de traballo recursivamente"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:310
-msgctxt "Menu"
-msgid "Copy"
-msgstr "Copiar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
+#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
+msgid "Commit"
+msgstr "Remitir"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:310 ../tvp-svn-helper/main.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+msgid "Send changes from your working copy to the repository"
+msgstr "Enviar cambios da súa copia de traballo ao repositorio"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
 msgid "Copy"
 msgstr "Copiar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:315
-msgctxt "Menu"
-msgid "Delete"
-msgstr "Eliminar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
+msgid "Copy a file or directory in a working copy or in the repository"
+msgstr "Copiar un ficheiro ou directorio nunha copia de traballo ou no repositorio"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:315 ../tvp-svn-helper/main.c:285
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete"
 msgstr "Eliminar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:325
-msgctxt "Menu"
-msgid "Export"
-msgstr "Exportar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302
+msgid "Delete an item from a working copy or the repository"
+msgstr "Eliminar un elemento dunha copia de traballo ou do repositori"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:325 ../tvp-svn-helper/main.c:293
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
+#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
+msgid "Diff"
+msgstr "Diferenzas"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307
+msgid "Display the differences between two revisions or paths"
+msgstr "Mostrar as diferenzas entre dúas revisións ou rutas"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
 msgid "Export"
 msgstr "Exportar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:330
-msgctxt "Menu"
-msgid "Import"
-msgstr "Importar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
+msgid "Export a clean directory tree"
+msgstr "Exportar unha árbore de directorios limpa"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:330 ../tvp-svn-helper/main.c:297
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
 msgid "Import"
 msgstr "Importar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:335
-msgctxt "Menu"
-msgid "Info"
-msgstr "Información"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Commit an unversioned file or tree into the repository"
+msgstr "Remitir un ficheiro ou árbore sen versións ao repositorio"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:335
-msgid "Info"
-msgstr "Información"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:345
-msgctxt "Menu"
-msgid "Lock"
-msgstr "Bloquear"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:345 ../tvp-svn-helper/main.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
 msgid "Lock"
 msgstr "Bloquear"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:376
-msgctxt "Menu"
-msgid "Edit Properties"
-msgstr "Modificar as propiedades"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid ""
+"Lock working copy paths in the repository so that no other user can commit "
+"changes to them"
+msgstr "Bloquear as rutas da copia de traballo no repositorio para que ningún outro usuario poida remitir cambios"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:376
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Move a file or directory"
+msgstr "Mover un ficheiro ou diretorio"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
 msgstr "Editar as propiedades"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:381
-msgctxt "Menu"
-msgid "Relocate"
-msgstr "Recolocar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+msgid "Edit the property of one or more items"
+msgstr "Editar a propiedade de un ou máis elementos"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:381 ../tvp-svn-helper/main.c:321
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:187
 msgid "Relocate"
 msgstr "Recolocar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:387
-msgctxt "Menu"
-msgid "Resolved"
-msgstr "Resolto"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368
+msgid "Relocate the working copy to point to a different repository root URL"
+msgstr "Recolocar a copia de traballo para que apunte a un URL raíz de repositorio diferente"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:387 ../tvp-svn-helper/main.c:317
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
 #: ../tvp-svn-helper/tsh-resolved.c:138
 msgid "Resolved"
 msgstr "Resolto"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392
-msgctxt "Menu"
-msgid "Resolve"
-msgstr "Resolver"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374
+msgid "Remove \"conflicted\" state on working copy files or directories"
+msgstr "Retirar o estado «conflitivo» de ficheiros ou directorios da copia de traballo"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392
-msgid "Resolve"
-msgstr "Resolver"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:397
-msgctxt "Menu"
-msgid "Revert"
-msgstr "Reverter"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:397 ../tvp-svn-helper/main.c:325
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
 msgid "Revert"
 msgstr "Reverter"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:407
-msgctxt "Menu"
-msgid "Switch"
-msgstr "Trocar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384
+msgid "Undo all local edits"
+msgstr "Desfacer todas as edicións locais"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:407 ../tvp-svn-helper/main.c:333
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
 msgid "Switch"
 msgstr "Trocar"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:412
-msgctxt "Menu"
-msgid "Unlock"
-msgstr "Desbloquear"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394
+msgid "Update working copy to a different URL"
+msgstr "Actualizar a copia de traballo a un URL diferente"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:412 ../tvp-svn-helper/main.c:337
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:417
-msgctxt "Menu"
-msgid "Update"
-msgstr "Actualizar"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
+msgid "Unlock working copy paths"
+msgstr "Desbloquear as rutas de copias de traballo"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:417 ../tvp-svn-helper/main.c:341
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
 msgid "Update"
 msgstr "Actualizar"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404
+msgid "Update your working copy"
+msgstr "Actualizar a súa copia de traball"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
