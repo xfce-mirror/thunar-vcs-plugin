@@ -1,3 +1,9 @@
+0.2.0
+=====
+- Fix context menu strings.
+- Add description to commands, shown on Thunar's status bar.
+- Translation updates.
+
 0.1.90
 =====
 - GTK3 Port.
