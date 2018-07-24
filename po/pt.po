@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-07-24 16:25+0000\n"
+"PO-Revision-Date: 2018-07-24 17:40+0000\n"
 "Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/thunar-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgstr "Limpar"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:229
 msgid "Remove untracked files from the working tree"
-msgstr ""
+msgstr "Remover da árvore de trabalho os ficheiros não seguidos"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -72,7 +72,7 @@ msgstr "Clonar"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231
 msgid "Clone a repository into a new directory"
-msgstr ""
+msgstr "Clonar um repositório num novo directório"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
 #. _("Commit"), "gtk-apply", _("Commit"));
@@ -94,7 +94,7 @@ msgstr "Registo"
 #: ../thunar-vcs-plugin/tvp-git-action.c:237
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr ""
+msgstr "Mostrar registos de cometimento"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
@@ -104,7 +104,7 @@ msgstr "Mover"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr ""
+msgstr "Mover ou renomear um ficheiro, um directório ou um atalho (symlink)"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -142,7 +142,7 @@ msgstr "Estado"
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr ""
+msgstr "Mostrar o estado da árvore de trabalho"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
@@ -165,7 +165,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr ""
+msgstr "Adicionar  ficheiros directórios ou ligações simbólicas (atalhos)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -174,7 +174,7 @@ msgstr "Obter"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr ""
+msgstr "Obter uma cópia de trabalho a partir dum repositório"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -182,18 +182,18 @@ msgstr "Limpar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr ""
+msgstr "Limpar recursivamente a cópia de trabalho "
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
 msgid "Commit"
-msgstr "Enviar"
+msgstr "Cometer"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr ""
+msgstr "Enviar para o repositório as alterações à cópia de trabalho"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
@@ -202,7 +202,7 @@ msgstr "Copiar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr ""
+msgstr "Copiar um ficheiro ou um directório existente numa cópia de trabalho ou num repositório"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -211,7 +211,7 @@ msgstr "Apagar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr ""
+msgstr "Apagar um item duma cópia de trabalho ou dum repositório"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
@@ -220,7 +220,7 @@ msgstr "Diferença"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr ""
+msgstr "Mostrar as diferenças entre duas versões ou dois caminhos"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
@@ -229,7 +229,7 @@ msgstr "Exportar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr ""
+msgstr "Exportar uma árvore de directórios completa"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -253,7 +253,7 @@ msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr ""
+msgstr "Mover um ficheiro ou um directório"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -529,7 +529,7 @@ msgstr "Data"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:251
 #: ../tvp-svn-helper/tsh-status-dialog.c:266
 msgid "_Close"
-msgstr ""
+msgstr "_Fechar"
 
 #. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
 #: ../tvp-git-helper/tgh-blame-dialog.c:134
@@ -562,7 +562,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:140
 #: ../tvp-svn-helper/tsh-trust-dialog.c:81
 msgid "_Cancel"
-msgstr ""
+msgstr "_Cancelar"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
@@ -576,12 +576,12 @@ msgstr "Nome"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
-msgstr ""
+msgstr "_Ir para"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:249
 msgid "_New"
-msgstr ""
+msgstr "_Novo"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
@@ -743,19 +743,19 @@ msgstr "Descrição"
 #: ../tvp-git-helper/tgh-stash-dialog.c:221
 #: ../tvp-git-helper/tgh-stash-dialog.c:378
 msgid "_Save"
-msgstr ""
+msgstr "_Guardar"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:226
 msgid "_Apply"
-msgstr ""
+msgstr "_Aplicar"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
-msgstr ""
+msgstr "A_pagar"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
 msgid "C_lear"
-msgstr ""
+msgstr "_Limpar"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
@@ -813,7 +813,7 @@ msgstr "Limpar"
 
 #: ../tvp-svn-helper/main.c:145
 msgid "Execute commit action"
-msgstr "Enviar"
+msgstr "Cometer"
 
 #: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
@@ -881,7 +881,7 @@ msgstr "Opções Relacionadas com Limpeza:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr "Opões Relacionadas com Enviar:"
+msgstr "Opões Relacionadas com Cometer:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
@@ -945,12 +945,12 @@ msgstr "Sem os argumentos necessários"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr "Reprovação falhou"
+msgstr "Atribuição falhou"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "'%s' não é um caminho local"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -985,7 +985,7 @@ msgstr "Terminado"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr "Enviar Mensagem"
+msgstr "Cometer Mensagem"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
@@ -1133,7 +1133,7 @@ msgstr "Iniciado"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr "Ignorar obstrução"
+msgstr "Ignorada obstrução"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
@@ -1359,7 +1359,7 @@ msgstr "_Certificado:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:61
 msgid "Select a file"
-msgstr "Seleccione um ficheiro"
+msgstr "Seleccionar um ficheiro"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:69
 #: ../tvp-svn-helper/tsh-login-dialog.c:82
@@ -1409,7 +1409,7 @@ msgstr "Mover localmente"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr ""
+msgstr "Tipo de MIME"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
@@ -1429,11 +1429,11 @@ msgstr "Valor"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "_Adicionar"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "_Remover"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
@@ -1501,7 +1501,7 @@ msgstr "Certificado expirou."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:65
 msgid "Certificate does not match the remote hostname."
-msgstr "O certificado não corresponde ao nome do anfitrião remoto."
+msgstr "O certificado não corresponde ao nome do hospedeiro remoto."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
