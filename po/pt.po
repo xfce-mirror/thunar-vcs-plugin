@@ -5,14 +5,14 @@
 # Translators:
 # José Vieira <jvieira33@sapo.pt>, 2018
 # Nuno Miguel <nunis@netcabo.pt>, 2008
-# Nuno Miguel <nunomgue@gmail.com>, 2013,2015
+# Nuno Miguel <nunomgue@gmail.com>, 2013,2015,2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-07-30 21:08+0000\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
+"PO-Revision-Date: 2018-09-09 11:33+0000\n"
+"Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/thunar-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgstr "Adicionar à lista o conteúdo do ficheiro"
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
-msgstr "Mostrar"
+msgstr "Culpar"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
@@ -104,7 +104,7 @@ msgstr "Mover"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr "Mover ou renomear um ficheiro, um directório ou um atalho (symlink)"
+msgstr "Mover ou renomear um ficheiro, um directório ou um atalho"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -119,7 +119,7 @@ msgstr "Repor"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "Restaurar HEAD atual para o estado especificado"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
@@ -128,7 +128,7 @@ msgstr "Stash"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "Esconder as mudanças num diretório de trabalho sujo"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
@@ -165,7 +165,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr "Adicionar  ficheiros directórios ou ligações simbólicas (atalhos)"
+msgstr "Adicionar  ficheiros directórios ou ligações simbólicas"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -238,7 +238,7 @@ msgstr "Importar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Commit an unversioned file or tree into the repository"
-msgstr ""
+msgstr "Colocar um ficheiro não revisto ou árvore no repositório"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -271,7 +271,7 @@ msgstr "Relocalizar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr "Atribuir um URL (endereço web) diferente à cópia de trabalho"
+msgstr "Realojar a cópia de trabalho para apontar para um URL diferente"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -585,7 +585,7 @@ msgstr "_Novo"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
-msgstr "Nome:"
+msgstr "Nome do ramo:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:55
 msgid "Remove directories."
@@ -624,7 +624,7 @@ msgstr "Forçar limpeza."
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:141
 #: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -704,7 +704,7 @@ msgstr "Ficheiro"
 #: ../tvp-svn-helper/tsh-log-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
-msgstr ""
+msgstr "_Atualizar"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
