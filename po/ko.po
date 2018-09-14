@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-25 00:30+0200\n"
-"PO-Revision-Date: 2018-06-26 01:40+0000\n"
+"POT-Creation-Date: 2018-06-27 06:30+0200\n"
+"PO-Revision-Date: 2018-09-14 00:15+0000\n"
 "Last-Translator: Cybertramp <paran_son@outlook.com>\n"
 "Language-Team: Korean (http://www.transifex.com/xfce/thunar-plugins/language/ko/)\n"
 "MIME-Version: 1.0\n"
@@ -20,245 +20,118 @@ msgstr ""
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:235
-#: ../thunar-vcs-plugin/tvp-svn-action.c:273
-msgctxt "Menu"
-msgid "Add"
-msgstr "추가"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:235
-#: ../thunar-vcs-plugin/tvp-svn-action.c:273 ../tvp-git-helper/main.c:153
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
 #: ../tvp-svn-helper/tsh-add.c:154
 msgid "Add"
 msgstr "Add"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:236
-msgctxt "Menu"
-msgid "Bisect"
-msgstr "분할"
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+msgid "Add file contents to the index"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:236
-msgid "Bisect"
-msgstr "Bisect"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:238
-#: ../thunar-vcs-plugin/tvp-svn-action.c:278
-msgctxt "Menu"
-msgid "Blame"
-msgstr "Blame"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:238
-#: ../thunar-vcs-plugin/tvp-svn-action.c:278 ../tvp-git-helper/main.c:157
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Blame"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
-msgctxt "Menu"
-msgid "Branch"
-msgstr "브런치"
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265
+msgid "Show what revision and author last modified each line of a file"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Branch"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:241
-#: ../thunar-vcs-plugin/tvp-svn-action.c:295
-msgctxt "Menu"
-msgid "Checkout"
-msgstr "전환"
+#: ../thunar-vcs-plugin/tvp-git-action.c:227
+msgid "List, create or switch branches"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:241
-#: ../thunar-vcs-plugin/tvp-svn-action.c:295 ../tvp-svn-helper/main.c:269
-#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
-msgid "Checkout"
-msgstr "Checkout"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:242
-msgctxt "Menu"
-msgid "Clean"
-msgstr "청소"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:242 ../tvp-git-helper/main.c:165
+#. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
+#. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "Clean"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244
-msgctxt "Menu"
-msgid "Clone"
-msgstr "복제"
+#: ../thunar-vcs-plugin/tvp-git-action.c:229
+msgid "Remove untracked files from the working tree"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Clone"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305
-msgctxt "Menu"
-msgid "Commit"
-msgstr "커밋"
+#: ../thunar-vcs-plugin/tvp-git-action.c:231
+msgid "Clone a repository into a new directory"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:245
-#: ../thunar-vcs-plugin/tvp-svn-action.c:305
-#: ../tvp-git-helper/tgh-log-dialog.c:153
-#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
-#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
-msgid "Commit"
-msgstr "Commit"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:246
-#: ../thunar-vcs-plugin/tvp-svn-action.c:320
-msgctxt "Menu"
-msgid "Diff"
-msgstr "비교"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:246
-#: ../thunar-vcs-plugin/tvp-svn-action.c:320 ../tvp-svn-helper/main.c:289
-#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
-msgid "Diff"
-msgstr "Diff"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
-msgctxt "Menu"
-msgid "Fetch"
-msgstr "가져오기"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:247
-msgid "Fetch"
-msgstr "Fetch"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-msgctxt "Menu"
-msgid "Grep"
-msgstr "Grep"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
-msgid "Grep"
-msgstr "Grep"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:249
-msgctxt "Menu"
-msgid "Init"
-msgstr "Init"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:249
-msgid "Init"
-msgstr "Init"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
-#: ../thunar-vcs-plugin/tvp-svn-action.c:350
-msgctxt "Menu"
-msgid "Log"
-msgstr "기록"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
-#: ../thunar-vcs-plugin/tvp-svn-action.c:350 ../tvp-git-helper/main.c:173
+#. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
+#. _("Commit"), "gtk-apply", _("Commit"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::diff", _("Diff"),
+#. _("Diff"), "edit-find-replace", _("Diff"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::fetch", _("Fetch"),
+#. _("Fetch"), NULL, _("Fetch"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::grep", _("Grep"),
+#. _("Grep"), NULL, _("Grep"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
+#. _("Init"), NULL, _("Init"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
 msgstr "Log"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251
-msgctxt "Menu"
-msgid "Merge"
-msgstr "합치기"
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Show commit logs"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:251
-msgid "Merge"
-msgstr "Merge"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:365
-msgctxt "Menu"
-msgid "Move"
-msgstr "이동"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:253
-#: ../thunar-vcs-plugin/tvp-svn-action.c:365 ../tvp-git-helper/main.c:177
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "Move"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
-msgctxt "Menu"
-msgid "Pull"
-msgstr "풀"
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+msgid "Move or rename a file, a directory, or a symlink"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:254
-msgid "Pull"
-msgstr "Pull"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
-msgctxt "Menu"
-msgid "Push"
-msgstr "푸시"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:255
-msgid "Push"
-msgstr "Push"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
-msgctxt "Menu"
-msgid "Rebase"
-msgstr "되돌리기"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:256
-msgid "Rebase"
-msgstr "Rebase"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:257
-msgctxt "Menu"
-msgid "Reset"
-msgstr "초기화"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:257 ../tvp-git-helper/main.c:181
+#. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
+#. _("Pull"), NULL, _("Pull"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::push", _("Push"),
+#. _("Push"), NULL, _("Push"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
+#. _("Rebase"), NULL, _("Rebase"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Reset"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
-msgctxt "Menu"
-msgid "Remove"
-msgstr "제거"
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+msgid "Reset current HEAD to the specified state"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
-msgid "Remove"
-msgstr "Remove"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:259
-msgctxt "Menu"
-msgid "Show"
-msgstr "보여주기"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:259
-msgid "Show"
-msgstr "Show"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:261
-msgctxt "Menu"
-msgid "Stash"
-msgstr "숨기기"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:261 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Stash"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:402
-msgctxt "Menu"
-msgid "Status"
-msgstr "상태"
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+msgid "Stash the changes in a dirty working directory away"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:263
-#: ../thunar-vcs-plugin/tvp-svn-action.c:402 ../tvp-git-helper/main.c:189
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:149
@@ -266,17 +139,13 @@ msgstr "상태"
 msgid "Status"
 msgstr "Status"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-msgctxt "Menu"
-msgid "Tag"
-msgstr "태그"
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389
+msgid "Show the working tree status"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:264
-msgid "Tag"
-msgstr "Tag"
-
-#: ../thunar-vcs-plugin/tvp-git-action.c:271
-#: ../thunar-vcs-plugin/tvp-svn-action.c:425
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
 msgstr "동작 %s은(는) 지원하지 않습니다"
@@ -294,162 +163,161 @@ msgstr "SVN"
 msgid "GIT"
 msgstr "GIT"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:290
-msgctxt "Menu"
-msgid "Changelist"
-msgstr "목록변경"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260
+msgid "Add files, directories, or symbolic links"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:290
-msgid "Changelist"
-msgstr "Changelist"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
+#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
+msgid "Checkout"
+msgstr "Checkout"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300
-msgctxt "Menu"
-msgid "Cleanup"
-msgstr "정리"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282
+msgid "Check out a working copy from a repository"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:300 ../tvp-svn-helper/main.c:273
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
 msgstr "Cleanup"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:310
-msgctxt "Menu"
-msgid "Copy"
-msgstr "복사"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287
+msgid "Recursively clean up the working copy"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:310 ../tvp-svn-helper/main.c:281
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
+#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
+msgid "Commit"
+msgstr "Commit"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+msgid "Send changes from your working copy to the repository"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
 msgid "Copy"
 msgstr "Copy"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:315
-msgctxt "Menu"
-msgid "Delete"
-msgstr "지우기"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
+msgid "Copy a file or directory in a working copy or in the repository"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:315 ../tvp-svn-helper/main.c:285
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete"
 msgstr "Delete"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:325
-msgctxt "Menu"
-msgid "Export"
-msgstr "외부로"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302
+msgid "Delete an item from a working copy or the repository"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:325 ../tvp-svn-helper/main.c:293
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
+#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
+msgid "Diff"
+msgstr "Diff"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307
+msgid "Display the differences between two revisions or paths"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
 msgid "Export"
 msgstr "Export"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:330
-msgctxt "Menu"
-msgid "Import"
-msgstr "임포트"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
+msgid "Export a clean directory tree"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:330 ../tvp-svn-helper/main.c:297
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
 msgid "Import"
 msgstr "Import"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:335
-msgctxt "Menu"
-msgid "Info"
-msgstr "정보"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Commit an unversioned file or tree into the repository"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:335
-msgid "Info"
-msgstr "Info"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:345
-msgctxt "Menu"
-msgid "Lock"
-msgstr "잠금"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:345 ../tvp-svn-helper/main.c:301
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
 msgid "Lock"
 msgstr "Lock"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:376
-msgctxt "Menu"
-msgid "Edit Properties"
-msgstr "속성 수정"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid ""
+"Lock working copy paths in the repository so that no other user can commit "
+"changes to them"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:376
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Move a file or directory"
+msgstr ""
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
 msgstr "속성 편집"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:381
-msgctxt "Menu"
-msgid "Relocate"
-msgstr "대체"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+msgid "Edit the property of one or more items"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:381 ../tvp-svn-helper/main.c:321
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:187
 msgid "Relocate"
 msgstr "Relocate"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:387
-msgctxt "Menu"
-msgid "Resolved"
-msgstr "해결됨"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368
+msgid "Relocate the working copy to point to a different repository root URL"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:387 ../tvp-svn-helper/main.c:317
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
 #: ../tvp-svn-helper/tsh-resolved.c:138
 msgid "Resolved"
 msgstr "Resolved"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392
-msgctxt "Menu"
-msgid "Resolve"
-msgstr "해결"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374
+msgid "Remove \"conflicted\" state on working copy files or directories"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:392
-msgid "Resolve"
-msgstr "Resolve"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:397
-msgctxt "Menu"
-msgid "Revert"
-msgstr "되돌리기"
-
-#: ../thunar-vcs-plugin/tvp-svn-action.c:397 ../tvp-svn-helper/main.c:325
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
 msgid "Revert"
 msgstr "Revert"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:407
-msgctxt "Menu"
-msgid "Switch"
-msgstr "전환"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384
+msgid "Undo all local edits"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:407 ../tvp-svn-helper/main.c:333
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
 msgid "Switch"
 msgstr "Switch"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:412
-msgctxt "Menu"
-msgid "Unlock"
-msgstr "잠금해제"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394
+msgid "Update working copy to a different URL"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:412 ../tvp-svn-helper/main.c:337
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
 msgid "Unlock"
 msgstr "Unlock"
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:417
-msgctxt "Menu"
-msgid "Update"
-msgstr "업데이트"
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
+msgid "Unlock working copy paths"
+msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-svn-action.c:417 ../tvp-svn-helper/main.c:341
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
 msgid "Update"
 msgstr "Update"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404
+msgid "Update your working copy"
+msgstr ""
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
