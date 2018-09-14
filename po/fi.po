@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-07-16 15:37+0000\n"
+"PO-Revision-Date: 2018-09-14 00:15+0000\n"
 "Last-Translator: Ammuu5\n"
 "Language-Team: Finnish (http://www.transifex.com/xfce/thunar-plugins/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -529,7 +529,7 @@ msgstr "Päiväys"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:251
 #: ../tvp-svn-helper/tsh-status-dialog.c:266
 msgid "_Close"
-msgstr ""
+msgstr "_Sulje"
 
 #. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
 #: ../tvp-git-helper/tgh-blame-dialog.c:134
@@ -562,7 +562,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:140
 #: ../tvp-svn-helper/tsh-trust-dialog.c:81
 msgid "_Cancel"
-msgstr ""
+msgstr "_Peru"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
@@ -624,7 +624,7 @@ msgstr "Pakota siistiminen."
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:141
 #: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -743,11 +743,11 @@ msgstr "Kuvaus:"
 #: ../tvp-git-helper/tgh-stash-dialog.c:221
 #: ../tvp-git-helper/tgh-stash-dialog.c:378
 msgid "_Save"
-msgstr ""
+msgstr "_Tallenna"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:226
 msgid "_Apply"
-msgstr ""
+msgstr "_Käytä"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
