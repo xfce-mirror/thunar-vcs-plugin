@@ -5,6 +5,7 @@
 # Translators:
 # Ben <benlarcher@gmail.com>, 2018
 # Charles Monzat <c.monzat@laposte.net>, 2018
+# Charles Monzat <c.monzat@laposte.net>, 2018
 # jc1 <jc1>, 2012
 # jc1 <jc1.quebecos@gmail.com>, 2013
 # jc1 <jc1.quebecos@gmail.com>, 2013
@@ -17,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-10-06 15:03+0000\n"
+"PO-Revision-Date: 2018-10-07 17:07+0000\n"
 "Last-Translator: Charles Monzat <c.monzat@laposte.net>\n"
 "Language-Team: French (http://www.transifex.com/xfce/thunar-plugins/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -176,11 +177,11 @@ msgstr "Ajouter des fichiers, des répertoires ou des liens symboliques"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
 msgid "Checkout"
-msgstr "Checkout"
+msgstr "Vérifier"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr "Vérifier une copie de travail à partir d'un dépôt"
+msgstr "Vérifier une copie de travail à partir d’un dépôt"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -418,7 +419,7 @@ msgstr "Infini"
 
 #: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:108
 msgid "Print version information"
-msgstr "Afficher l’information sur la version"
+msgstr "Afficher les informations de version"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
 msgid "Execute add action"
