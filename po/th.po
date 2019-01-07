@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2014
+# Theppitak Karoonboonyanan <theppitak@gmail.com>, 2014,2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
+"PO-Revision-Date: 2019-01-07 15:39+0000\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
 "Language-Team: Thai (http://www.transifex.com/xfce/thunar-plugins/language/th/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "เพิ่ม (Add)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:222
 msgid "Add file contents to the index"
-msgstr ""
+msgstr "เพิ่มเนื้อหาแฟ้มลงในดัชนี"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
@@ -40,7 +40,7 @@ msgstr "ดูผู้รับผิดชอบ (Blame)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
-msgstr ""
+msgstr "แสดงว่าแต่ละบรรทัดของแฟ้มถูกเปลี่ยนแปลงในรายการแก้ไขใดและโดยผู้เขียนใด"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
@@ -50,7 +50,7 @@ msgstr "แขนง (Branch)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227
 msgid "List, create or switch branches"
-msgstr ""
+msgstr "แสดงรายชื่อ, สร้าง หรือเปลี่ยนแขนง"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
@@ -61,7 +61,7 @@ msgstr "ทำความสะอาด (Clean)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:229
 msgid "Remove untracked files from the working tree"
-msgstr ""
+msgstr "ลบแฟ้มที่ไม่ถูกติดตามออกจากไดเรกทอรีทำงาน"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -70,7 +70,7 @@ msgstr "สำเนาคลัง (Clone)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231
 msgid "Clone a repository into a new directory"
-msgstr ""
+msgstr "สำเนาคลังลงในไดเรกทอรีใหม่"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
 #. _("Commit"), "gtk-apply", _("Commit"));
@@ -92,7 +92,7 @@ msgstr "ปูม (Log)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:237
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr ""
+msgstr "แสดงปูมการบันทึกเข้าคลัง"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
@@ -102,7 +102,7 @@ msgstr "ย้ายหรือเปลี่ยนชื่อ (Move)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr ""
+msgstr "ย้ายหรือเปลี่ยนชื่อแฟ้ม ไดเรกทอรี หรือลิงก์สัญลักษณ์"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -117,7 +117,7 @@ msgstr "คืนกลับ (Reset)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "ล้าง HEAD ปัจจุบันกลับคืนสู่สถานะที่กำหนด"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
@@ -126,7 +126,7 @@ msgstr "ซุก (Stash)"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "ซุกความเปลี่ยนแปลงต่างๆ ที่เกิดขึ้นในไดเรกทอรีทำงานเก็บไว้"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
@@ -140,7 +140,7 @@ msgstr "สถานะ (Status)"
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr ""
+msgstr "แสดงสถานะของไดเรกทอรีทำงาน"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
@@ -163,7 +163,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr ""
+msgstr "เพิ่มแฟ้ม ไดเรกทอรี หรือลิงก์สัญลักษณ์"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -172,7 +172,7 @@ msgstr "เบิก (Checkout)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr ""
+msgstr "เบิกสำเนาทำงานจากคลัง"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -180,7 +180,7 @@ msgstr "ทำความสะอาด (Cleanup)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr ""
+msgstr "ทำความสะอาดสำเนาทำงานแบบลงลึก"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
@@ -191,7 +191,7 @@ msgstr "บันทึกเข้าคลัง (Commit)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr ""
+msgstr "ส่งรายการเปลี่ยนแปลงต่างๆ จากสำเนาทำงานของคุณเข้าสู่คลัง"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
@@ -200,7 +200,7 @@ msgstr "คัดลอก (Copy)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr ""
+msgstr "คัดลอกแฟ้มหรือไดเรกทอรีในสำเนาทำงานหรือในคลัง"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -209,7 +209,7 @@ msgstr "ลบ (Delete)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr ""
+msgstr "ลบรายการออกจากสำเนาทำงานหรือคลัง"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
@@ -218,7 +218,7 @@ msgstr "เทียบเนื้อหา (Diff)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr ""
+msgstr "แสดงข้อแตกต่างระหว่างรายการแก้ไขสองรายการหรือพาธสองพาธ"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
@@ -227,7 +227,7 @@ msgstr "ส่งออก (Export)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr ""
+msgstr "ส่งออกไดเรกทอรีสะอาด"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -236,7 +236,7 @@ msgstr "นำเข้า (Import)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Commit an unversioned file or tree into the repository"
-msgstr ""
+msgstr "บันทึกแฟ้มหรือไดเรกทอรีที่ยังไม่มีการควบคุมรุ่นเข้าสู่คลัง"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -247,11 +247,11 @@ msgstr "ล็อค (Lock)"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr ""
+msgstr "ล็อคพาธในคลังเพื่อไม่ให้ผู้ใช้อื่นสามารถบันทึกความเปลี่ยนแปลงได้"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr ""
+msgstr "ย้ายแฟ้มหรือไดเรกทอรี"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -259,7 +259,7 @@ msgstr "แก้ไขคุณสมบัติ"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit the property of one or more items"
-msgstr ""
+msgstr "แก้ไขคุณสมบัติของรายการตั้งแต่หนึ่งรายการขึ้นไป"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -269,7 +269,7 @@ msgstr "ย้ายแหล่ง (Relocate)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr ""
+msgstr "ย้ายตำแหน่งสำเนาทำงานให้ชี้ไปยัง URL รากของคลังอื่น"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -279,7 +279,7 @@ msgstr "แก้ข้อขัดแย้งแล้ว (Resolved)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr ""
+msgstr "ลบสถานะ \"ขัดแย้ง\" ของแฟ้มหรือไดเรกทอรีต่างๆ ในสำเนาทำงาน"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -288,7 +288,7 @@ msgstr "คืนกลับ (Revert)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
-msgstr ""
+msgstr "เรียกคืนการแก้ไขทั้งหมดในสำเนาทำงาน"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
@@ -297,7 +297,7 @@ msgstr "สลับ (Switch)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr ""
+msgstr "ปรับสำเนาทำงานไปสู่ URL อื่น"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -306,7 +306,7 @@ msgstr "ปลดล็อค (Unlock)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "ปลดล็อคพาธในสำเนาทำงาน"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -315,7 +315,7 @@ msgstr "ปรับข้อมูล (Update)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr ""
+msgstr "ปรับข้อมูลสำเนาทำงานของคุณ"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -527,7 +527,7 @@ msgstr "วันที่"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:251
 #: ../tvp-svn-helper/tsh-status-dialog.c:266
 msgid "_Close"
-msgstr ""
+msgstr "ปิ_ด"
 
 #. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
 #: ../tvp-git-helper/tgh-blame-dialog.c:134
@@ -560,11 +560,11 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:140
 #: ../tvp-svn-helper/tsh-trust-dialog.c:81
 msgid "_Cancel"
-msgstr ""
+msgstr "_ยกเลิก"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
-msgstr ""
+msgstr "แอคทีฟ"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:115
 #: ../tvp-git-helper/tgh-stash-dialog.c:160
@@ -574,12 +574,12 @@ msgstr "ชื่อ"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
-msgstr ""
+msgstr "กระโดดไ_ป"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:249
 msgid "_New"
-msgstr ""
+msgstr "สร้างให_ม่"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
@@ -622,7 +622,7 @@ msgstr "บังคับทำความสะอาด"
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:141
 #: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
-msgstr ""
+msgstr "_ตกลง"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -630,7 +630,7 @@ msgstr "สำเนาคลังเสร็จแล้ว"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning..."
-msgstr ""
+msgstr "กำลังสำเนาคลัง..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
 #: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
@@ -702,7 +702,7 @@ msgstr "แฟ้ม"
 #: ../tvp-svn-helper/tsh-log-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
-msgstr ""
+msgstr "_ปรับแสดง"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
@@ -714,7 +714,7 @@ msgstr "ย้ายไปยัง"
 
 #: ../tvp-git-helper/tgh-move.c:162
 msgid "Move..."
-msgstr ""
+msgstr "ย้าย..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -732,7 +732,7 @@ msgstr "คืนกลับเสร็จแล้ว"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset..."
-msgstr ""
+msgstr "คืนกลับ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:172
 msgid "Description"
@@ -745,15 +745,15 @@ msgstr "_บันทึก"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:226
 msgid "_Apply"
-msgstr ""
+msgstr "เริ่มใ_ช้"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
-msgstr ""
+msgstr "_ลบ"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
 msgid "C_lear"
-msgstr ""
+msgstr "ล้า_ง"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
@@ -948,7 +948,7 @@ msgstr "ดูผู้รับผิดชอบ (Blame) ไม่สำเร
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "'%s' ไม่ใช่พาธในเครื่อง"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -960,7 +960,7 @@ msgstr "ทำความสะอาด (Cleanup) เสร็จแล้ว"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr ""
+msgstr "กำลังทำความสะอาด..."
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -1115,7 +1115,7 @@ msgstr "ลบคุณสมบัติของฉบับแก้ไข"
 
 #: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
-msgstr "ผสานเสร็จแล้ว"
+msgstr "ผสานเสร็จสิ้น"
 
 #: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
@@ -1131,15 +1131,15 @@ msgstr "เริ่ม"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "ข้ามรายการที่ขวางทาง"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr ""
+msgstr "ข้ามรายการที่เปลี่ยนเฉพาะฉบับทำงานเท่านั้น"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
-msgstr ""
+msgstr "ข้ามรายการที่ไม่มีสิทธิ์เข้าถึง"
 
 #: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
@@ -1163,7 +1163,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
-msgstr ""
+msgstr "ปรับพาธเป็นแบบรุ่นใหม่"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
@@ -1191,7 +1191,7 @@ msgstr "ชิ้นส่วนถูกปะไปก่อนแล้ว"
 
 #: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
-msgstr ""
+msgstr "คัดลอกโดยเขียนทับ"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
@@ -1216,7 +1216,7 @@ msgstr "ล้าสมัย"
 
 #: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
-msgstr ""
+msgstr "ไม่มีโหนดแม่"
 
 #: ../tvp-svn-helper/tsh-common.c:646
 msgid "Forbidden by server"
@@ -1224,11 +1224,11 @@ msgstr "ถูกแม่ข่ายห้ามไว้"
 
 #: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "ข้ามรายการที่ขัดแย้ง"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
-msgstr ""
+msgstr "ไม่สามารถกระทำได้"
 
 #: ../tvp-svn-helper/tsh-common.c:740
 msgid "Unchanged"
@@ -1236,7 +1236,7 @@ msgstr "ไม่เปลี่ยนแปลง"
 
 #: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
-msgstr ""
+msgstr "ถูกขวางทาง"
 
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
@@ -1252,7 +1252,7 @@ msgstr "ขัดแย้ง"
 
 #: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
-msgstr ""
+msgstr "ไม่มีแหล่งต้นทาง"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1294,7 +1294,7 @@ msgstr "ข้อความกำกับการลบ"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
-msgstr ""
+msgstr "เทียบเนื้อหาไม่สำเร็จ"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1333,7 +1333,7 @@ msgstr "แฟ้มต่างๆ ชั้นเดียว"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:220
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
-msgstr "ทั้งยวง"
+msgstr "ลงลึก"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
@@ -1341,7 +1341,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "ไม่ต้องแสดงข้อแตกต่างของแฟ้มที่ถูกลบ"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
@@ -1349,7 +1349,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
-msgstr ""
+msgstr "กำลังโหลด..."
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
@@ -1407,7 +1407,7 @@ msgstr "ย้ายภายในเครื่อง"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr ""
+msgstr "ชนิด MIME"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
@@ -1427,11 +1427,11 @@ msgstr "ค่า"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "เ_พิ่ม"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "_ลบออก"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
@@ -1443,7 +1443,7 @@ msgstr "ย้ายแหล่งเสร็จแล้ว"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr ""
+msgstr "กำลังย้ายแหล่ง..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
@@ -1463,7 +1463,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "สถานะคลัง"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
