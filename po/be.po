@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Zmicer Turok <zmicerturok@gmail.com>, 2018
+# Zmicer Turok <zmicerturok@gmail.com>, 2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-07-07 19:46+0000\n"
+"PO-Revision-Date: 2019-01-16 20:41+0000\n"
 "Last-Translator: Zmicer Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian (http://www.transifex.com/xfce/thunar-plugins/language/be/)\n"
 "MIME-Version: 1.0\n"
@@ -196,11 +196,11 @@ msgstr "Адправіць змены з працоўнай копіі ў рэп
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
 msgid "Copy"
-msgstr "Капіраваць"
+msgstr "Капіяваць"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr "Скапіраваць файл альбо каталог у працоўнай копіі альбо рэпазіторыі"
+msgstr "Скапіяваць файл альбо каталог у працуючай копіі альбо рэпазіторыі"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -815,7 +815,7 @@ msgstr "Запусціць дзеянне \"Фіксаваць\""
 
 #: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
-msgstr "Запусціць дзеянне \"Капіраваць\""
+msgstr "Запусціць дзеянне \"Капіяваць\""
 
 #: ../tvp-svn-helper/main.c:157
 msgid "Execute delete action"
@@ -883,7 +883,7 @@ msgstr "Параметры, звязаныя з \"Фіксаваць\":"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
-msgstr "Параметры, звязаныя з \"Капіраваць\":"
+msgstr "Параметры, звязаныя з \"Капіяваць\":"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
@@ -998,7 +998,7 @@ msgstr "Дададзена"
 #: ../tvp-svn-helper/tsh-common.c:577 ../tvp-svn-helper/tsh-common.c:636
 #: ../tvp-svn-helper/tsh-common.c:949
 msgid "Copied"
-msgstr "Скапіравана"
+msgstr "Скапіявана"
 
 #: ../tvp-svn-helper/tsh-common.c:578 ../tvp-svn-helper/tsh-common.c:584
 #: ../tvp-svn-helper/tsh-common.c:593 ../tvp-svn-helper/tsh-common.c:782
@@ -1095,11 +1095,11 @@ msgstr "Уласцівасць дададзена"
 
 #: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
-msgstr "Уласцівасць мадыфікавана"
+msgstr "Уласцівасць мадыфікаваная"
 
 #: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
-msgstr "Уласцівасць выдалена"
+msgstr "Уласцівасць выдаленая"
 
 #: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
@@ -1111,7 +1111,7 @@ msgstr "Зададзена ўласцівасць рэвізіі"
 
 #: ../tvp-svn-helper/tsh-common.c:614
 msgid "Revision property deleted"
-msgstr "Уласцівасць рэвізіі выдалена"
+msgstr "Уласцівасць рэвізіі выдаленая"
 
 #: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
@@ -1131,7 +1131,7 @@ msgstr "Запушчана"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr "Перашкода прамінута"
+msgstr "Перашкода прамінутая"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
@@ -1147,7 +1147,7 @@ msgstr "Вонкавае выдалена"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
-msgstr "Таемнае дадаванне"
+msgstr "Таемнае даданне"
 
 #: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
@@ -1191,7 +1191,7 @@ msgstr "Змены ўжо ўжыліся"
 
 #: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
-msgstr "Скапіраванае заменена"
+msgstr "Скапіяванае заменена"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
@@ -1224,7 +1224,7 @@ msgstr "Забаронена серверам"
 
 #: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
-msgstr "Супярэчнасці прамінуты"
+msgstr "Супярэчнасці прамінутыя"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
@@ -1278,11 +1278,11 @@ msgstr "Лакальнае дзеянне"
 
 #: ../tvp-svn-helper/tsh-copy.c:122
 msgid "Local copy"
-msgstr "Лакальнае капіраванне"
+msgstr "Лакальнае капіяванне"
 
 #: ../tvp-svn-helper/tsh-copy.c:171
 msgid "Copy To"
-msgstr "Капіраваць у"
+msgstr "Капіяваць у"
 
 #: ../tvp-svn-helper/tsh-delete.c:121
 msgid "Local delete"
@@ -1379,7 +1379,7 @@ msgstr "Памылка лагавання"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr "Спыніць пры капіраванні"
+msgstr "Спыніць пры капіяванні"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:219
 msgid "Show Merged Revisions"
