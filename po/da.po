@@ -8,13 +8,13 @@
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
 # scootergrisen, 2017
-# scootergrisen, 2017-2018
+# scootergrisen, 2017-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-07-03 17:06+0000\n"
+"PO-Revision-Date: 2019-03-07 13:46+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -689,7 +689,7 @@ msgstr "IntegrationsDato"
 #: ../tvp-git-helper/tgh-log-dialog.c:166
 #: ../tvp-svn-helper/tsh-log-dialog.c:146
 msgid "Message"
-msgstr "Besked"
+msgstr "Meddelelse"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:216
 #: ../tvp-git-helper/tgh-stash-dialog.c:196
@@ -988,7 +988,7 @@ msgstr "Fuldført"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr "Integrérbesked"
+msgstr "Integrérmeddelelse"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
@@ -1295,7 +1295,7 @@ msgstr "Lokal sletning"
 
 #: ../tvp-svn-helper/tsh-delete.c:163
 msgid "Delete Message"
-msgstr "Slettebesked"
+msgstr "Slettemeddelelse"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
@@ -1376,7 +1376,7 @@ msgstr "Certifikat"
 
 #: ../tvp-svn-helper/tsh-import.c:149
 msgid "Import Message"
-msgstr "Importbesked"
+msgstr "Importmeddelelse"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
@@ -1404,7 +1404,7 @@ msgstr "Log ind"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
-msgstr "Logbesked"
+msgstr "Logmeddelelse"
 
 #: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
