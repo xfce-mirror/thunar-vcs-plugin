@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-03-12 11:02+0000\n"
+"PO-Revision-Date: 2019-03-12 13:40+0000\n"
 "Last-Translator: Balázs Meskó <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/xfce/thunar-plugins/language/hu/)\n"
 "MIME-Version: 1.0\n"
@@ -39,12 +39,12 @@ msgstr "Fájl tartalmának hozzáadása az indexhez"
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
-msgstr ""
+msgstr "Hibáztatás"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
-msgstr ""
+msgstr "A legutóbbi revízió, és a legutóbb módosító szerző megjelenítése a fájl minden egyes sorához"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
@@ -273,7 +273,7 @@ msgstr "Áthelyezés"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr ""
+msgstr "A munkapéldány áthelyezése, hogy egy másik tárológyökér URL-re mutasson"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -283,25 +283,25 @@ msgstr "Megoldva"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr ""
+msgstr "Az „ütköző” állapot eltávolítása a munkapéldány fájljairól és könyvtárairól"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
 msgid "Revert"
-msgstr "Visszaállítás"
+msgstr "Visszavonás"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
-msgstr ""
+msgstr "Az összes helyi szerkesztés visszavonása"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
 msgid "Switch"
-msgstr "Váltás"
+msgstr "Átváltás"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr ""
+msgstr "A jelenlegi munkapéldány átváltása egy másik URL-re"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -310,7 +310,7 @@ msgstr "Feloldás"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "A munkapéldány útvonalainak feloldása"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -319,7 +319,7 @@ msgstr "Frissítés"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr ""
+msgstr "A munkapéldány frissítése"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -422,7 +422,7 @@ msgstr "Hozzáadási művelet végrehajtása"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
 msgid "Execute blame action"
-msgstr ""
+msgstr "Hibáztatás művelet végrehajtása"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
@@ -458,39 +458,39 @@ msgstr "Állapot művelet végrehajtása"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
 msgid "Add Related Options:"
-msgstr ""
+msgstr "Hozzáadással kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
-msgstr ""
+msgstr "Hibáztatással kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr ""
+msgstr "Ággal  kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr ""
+msgstr "Klónozással kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
-msgstr ""
+msgstr "Naplóval kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Áthelyezéssel kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr ""
+msgstr "Visszaállítással kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr ""
+msgstr "Félrerakással kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
-msgstr ""
+msgstr "Állapottal kapcsolatos beállítások:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -595,19 +595,19 @@ msgstr "Könyvtárak eltávolítása."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:67
 msgid "Exclude ignored files"
-msgstr ""
+msgstr "Mellőzött fájlok kihagyása"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:75
 msgid "Include ignored files"
-msgstr ""
+msgstr "Mellőzet fájlok bevétele"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:81
 msgid "Only ignored files"
-msgstr ""
+msgstr "Csak mellőzött fájlok"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:91
 msgid "Force clean."
-msgstr ""
+msgstr "Tisztítás kényszerítése."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:99
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:124
@@ -652,7 +652,7 @@ msgstr "Sikertelen"
 #: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:245
 msgid "untracked"
-msgstr ""
+msgstr "nem követett"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:92
 #: ../tvp-git-helper/tgh-notify-dialog.c:92
@@ -675,15 +675,15 @@ msgstr "Állapot"
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:113
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:142
 msgid "Select/Unselect all"
-msgstr ""
+msgstr "Összes kiválasztása be/ki"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:146
 msgid "AuthorDate"
-msgstr ""
+msgstr "Szerzői dátum"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
-msgstr ""
+msgstr "Véglegesítés dátuma"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:166
 #: ../tvp-svn-helper/tsh-log-dialog.c:146
@@ -761,16 +761,16 @@ msgstr "T_isztítás"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
-msgstr ""
+msgstr "Félrerakás leírása:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr ""
+msgstr "Biztos, hogy eldobja ezt: %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "Biztos, hogy törli az összes félrerakást?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
@@ -803,67 +803,67 @@ msgstr "Átvitel"
 
 #: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
-msgstr ""
+msgstr "Változáslista művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
-msgstr ""
+msgstr "Ágváltás művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:139
 msgid "Execute cleanup action"
-msgstr ""
+msgstr "Tisztítás művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:145
 msgid "Execute commit action"
-msgstr ""
+msgstr "Véglegesítés művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
-msgstr ""
+msgstr "Másolás művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:157
 msgid "Execute delete action"
-msgstr ""
+msgstr "Törlés művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:163
 msgid "Execute diff action"
-msgstr ""
+msgstr "Különbség művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:169
 msgid "Execute export action"
-msgstr ""
+msgstr "Exportálás művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:175
 msgid "Execute import action"
-msgstr ""
+msgstr "Importálás művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:181
 msgid "Execute lock action"
-msgstr ""
+msgstr "Zárolás művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:199
 msgid "Execute properties action"
-msgstr ""
+msgstr "Tulajdonságok művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
-msgstr ""
+msgstr "Megoldva művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:211
 msgid "Execute relocate action"
-msgstr ""
+msgstr "Áthelyezés művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:217
 msgid "Execute revert action"
-msgstr ""
+msgstr "Visszavonás művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:229
 msgid "Execute switch action"
-msgstr ""
+msgstr "Átváltási művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:235
 msgid "Execute unlock action"
-msgstr ""
+msgstr "Feloldási művelet végrehajtása"
 
 #: ../tvp-svn-helper/main.c:241
 msgid "Execute update action"
@@ -871,47 +871,47 @@ msgstr "Frissítési művelet futtatása"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Változáslistával kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
-msgstr ""
+msgstr "Ágváltással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Tisztítással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr ""
+msgstr "Véglegesítéssel kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Másolással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Törléssel kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
-msgstr ""
+msgstr "Különbséggel kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Exportálással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Importálással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Zárolással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
-msgstr ""
+msgstr "Tulajdonságokkal kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
@@ -919,52 +919,52 @@ msgstr "Tulajdonságok"
 
 #: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
-msgstr ""
+msgstr "Megoldva művelettel kapcsolation beállítások:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "Áthelyezéssel kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Visszavonással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Átváltással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Feloldással kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Frissítéssel kapcsolatos beállítások:"
 
 #: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Nincs elég argumentum megadva"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr ""
+msgstr "Hibáztatás sikertelen"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "A(z) „%s” nem egy helyi útvonal"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
-msgstr ""
+msgstr "Tisztítás sikertelen"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
-msgstr ""
+msgstr "Tisztítás befejezve"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr ""
+msgstr "Tisztítás…"
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -972,11 +972,11 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-move.c:107
 #, c-format
 msgid "At revision: %ld"
-msgstr ""
+msgstr "Ennél a revíziónál: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:247
 msgid "Nothing to do"
-msgstr ""
+msgstr "Nincs teendő"
 
 #: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
 #: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
@@ -987,11 +987,11 @@ msgstr "Kész"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr ""
+msgstr "Véglegesítési üzenet"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Egyszerű szövegként tárolja a jelszót?"
 
 #: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
 #: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
@@ -1020,11 +1020,11 @@ msgstr "Visszavonva"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
-msgstr "A visszavonás nem sikerült"
+msgstr "Visszavonás sikertelen"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
-msgstr ""
+msgstr "Kihagyva"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Updated"
@@ -1047,7 +1047,7 @@ msgstr "Lecserélve"
 
 #: ../tvp-svn-helper/tsh-common.c:595
 msgid "Transmitting"
-msgstr ""
+msgstr "Átküldés"
 
 #: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
 msgid "Locked"
@@ -1071,23 +1071,23 @@ msgstr "Létezik"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
-msgstr ""
+msgstr "Változáslista megadva"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
-msgstr ""
+msgstr "Változáslista törölve"
 
 #: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
-msgstr ""
+msgstr "Változáslista áthelyezve"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Merge begin"
-msgstr ""
+msgstr "Beolvasztás indítása"
 
 #: ../tvp-svn-helper/tsh-common.c:606
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Idegen beolvasztás indítása"
 
 #: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
@@ -1095,87 +1095,87 @@ msgstr "Csere"
 
 #: ../tvp-svn-helper/tsh-common.c:609
 msgid "Property added"
-msgstr ""
+msgstr "Tulajdonság hozzáadva"
 
 #: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
-msgstr ""
+msgstr "Tulajdonság módosítva"
 
 #: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
-msgstr ""
+msgstr "Tulajdonság törölve"
 
 #: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
-msgstr ""
+msgstr "A tulajdonság nem létezik"
 
 #: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
-msgstr ""
+msgstr "Revízió tulajdonság megadása"
 
 #: ../tvp-svn-helper/tsh-common.c:614
 msgid "Revision property deleted"
-msgstr ""
+msgstr "Revízió tulajdonság törölve"
 
 #: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
-msgstr ""
+msgstr "Beolvasztás befejezve"
 
 #: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
-msgstr ""
+msgstr "Faütközés"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
-msgstr ""
+msgstr "Külső lekérdezése sikertelen"
 
 #: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
-msgstr "Indítás"
+msgstr "Elindítva"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Kihagyva: akadály"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr ""
+msgstr "Kihagyva: csak helyi példány"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Kihagyva: hozzáférés megtagadva"
 
 #: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
-msgstr ""
+msgstr "Külső eltávolítva"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
-msgstr ""
+msgstr "Árnyékolt hozzáadása"
 
 #: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
-msgstr ""
+msgstr "Árnyékolt frissítése"
 
 #: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Árnyékolt törlése"
 
 #: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
-msgstr ""
+msgstr "Rögzítési információ beolvasztása"
 
 #: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
-msgstr ""
+msgstr "Frissített útvonal"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Rögzítésiinformáció-beolvasztás indítása"
 
 #: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
-msgstr ""
+msgstr "Kihagyási információ beolvasztása"
 
 #: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
@@ -1183,19 +1183,19 @@ msgstr "Folt"
 
 #: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
-msgstr ""
+msgstr "Töredék alkalmazva"
 
 #: ../tvp-svn-helper/tsh-common.c:634
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Töredék elutasítva"
 
 #: ../tvp-svn-helper/tsh-common.c:635
 msgid "Hunk already applied"
-msgstr ""
+msgstr "A töredék már alkalmazva van"
 
 #: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
-msgstr ""
+msgstr "Másolt lecserélve"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
@@ -1203,7 +1203,7 @@ msgstr "URL átirányítás"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
-msgstr ""
+msgstr "Az útvonal nem létezik"
 
 #: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
@@ -1216,7 +1216,7 @@ msgstr "Hiányzik"
 
 #: ../tvp-svn-helper/tsh-common.c:643
 msgid "Out of date"
-msgstr ""
+msgstr "Elavult"
 
 #: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
@@ -1228,7 +1228,7 @@ msgstr "A kiszolgáló által tiltva"
 
 #: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "Kihagyva: ütközés"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
@@ -1240,7 +1240,7 @@ msgstr "Változatlan"
 
 #: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
-msgstr ""
+msgstr "Akadályozott"
 
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
@@ -1248,11 +1248,11 @@ msgstr "Megváltozott"
 
 #: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
 msgid "Merged"
-msgstr "Egyesítve"
+msgstr "Beolvasztott"
 
 #: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
-msgstr ""
+msgstr "Ütköző"
 
 #: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
@@ -1262,11 +1262,11 @@ msgstr "Hiányzó forrás"
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:779
 msgid "Normal"
-msgstr ""
+msgstr "Normál"
 
 #: ../tvp-svn-helper/tsh-common.c:787
 msgid "Ignored"
-msgstr ""
+msgstr "Mellőzött"
 
 #: ../tvp-svn-helper/tsh-common.c:790
 msgid "Incomplete"
@@ -1298,7 +1298,7 @@ msgstr "Üzenet törlése"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
-msgstr ""
+msgstr "Különbség sikertelen"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1310,7 +1310,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:191
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
-msgstr ""
+msgstr "Saját"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
@@ -1325,7 +1325,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:202
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
-msgstr ""
+msgstr "Közvetlen fájlok"
 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
@@ -1341,11 +1341,11 @@ msgstr "Rekurzív"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Hierarchia figyelembe vétele"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
-msgstr "Törölt fájlok különbségei ne jelenjenek meg"
+msgstr "Ne jelenjenek meg a törölt fájlok különbségei"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
@@ -1353,7 +1353,7 @@ msgstr "Másolások és hozzáadások megjelenítése"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
-msgstr ""
+msgstr "Betöltés…"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
@@ -1367,7 +1367,7 @@ msgstr "Fájl kiválasztása"
 #: ../tvp-svn-helper/tsh-login-dialog.c:82
 #: ../tvp-svn-helper/tsh-trust-dialog.c:74
 msgid "Remember"
-msgstr "Emlékezz"
+msgstr "Emlékezzen rá"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:74
 msgid "Certificate"
@@ -1375,19 +1375,19 @@ msgstr "Tanúsítvány"
 
 #: ../tvp-svn-helper/tsh-import.c:149
 msgid "Import Message"
-msgstr ""
+msgstr "Importálási üzenet"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
-msgstr ""
+msgstr "Naplózás sikertelen"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "Megállás másolás esetén"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:219
 msgid "Show Merged Revisions"
-msgstr "Egyesített revíziók megjelenítése"
+msgstr "Beolvasztott revíziók megjelenítése"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:63
 msgid "_Username:"
@@ -1411,7 +1411,7 @@ msgstr "Helyi áthelyezés"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr "MIME típus"
+msgstr "MIME-típus"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
@@ -1419,11 +1419,11 @@ msgstr "Értesítés"
 
 #: ../tvp-svn-helper/tsh-properties.c:143
 msgid "Set property failed"
-msgstr ""
+msgstr "Tulajdonság beállítása sikertelen"
 
 #: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
-msgstr ""
+msgstr "Tulajdonságok lekérdezése sikertelen"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
@@ -1431,83 +1431,83 @@ msgstr "Érték"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "Hozzá_adás"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "El_távolítás"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
-msgstr ""
+msgstr "Áthelyezés sikertelen"
 
 #: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
-msgstr ""
+msgstr "Áthelyezés befejezve"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr ""
+msgstr "Áthelyezés…"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr "Innen:"
+msgstr "_Innen:"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:132
 msgid "_To:"
-msgstr "Ide:"
+msgstr "Id_e:"
 
 #: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
-msgstr ""
+msgstr "Állapot lekérdezése sikertelen"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Tulajdonságok állapota"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Tároló állapota"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Tároló tulajdonságainak állapok"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr ""
+msgstr "Nem módosított fájlok megjelenítése"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
-msgstr ""
+msgstr "Nem verziózott fájlok megjelenítése"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
-msgstr ""
+msgstr "Mellőzött fájlok megjelenítése"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
-msgstr ""
+msgstr "Külsők elrejtése"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
-msgstr ""
+msgstr "Tároló ellenőrzése"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
-msgstr ""
+msgstr "A tanúsítvány még nem érvényes."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:62
 msgid "Certificate has expired."
-msgstr ""
+msgstr "A tanúsítvány lejárt."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:65
 msgid "Certificate does not match the remote hostname."
-msgstr ""
+msgstr "A tanúsítvány nem felel meg a távoli gépnévnek."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
-msgstr ""
+msgstr "A tanúsítványkibocsátó ismeretlen."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:71
 msgid "Other failure."
@@ -1515,4 +1515,4 @@ msgstr "Egyéb hiba."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:78
 msgid "Trust"
-msgstr ""
+msgstr "Megbízás"
