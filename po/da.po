@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-05-15 17:49+0000\n"
+"PO-Revision-Date: 2019-05-16 19:01+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -600,7 +600,7 @@ msgstr "Udelad ignorerede filer"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:75
 msgid "Include ignored files"
-msgstr "Inkludér ignorerede filer"
+msgstr "Inkluder ignorerede filer"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:81
 msgid "Only ignored files"
