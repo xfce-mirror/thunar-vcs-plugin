@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-05-16 19:01+0000\n"
+"PO-Revision-Date: 2019-05-17 11:49+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -635,7 +635,7 @@ msgstr "Kloning afsluttet"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning..."
-msgstr "Kloning..."
+msgstr "Kloning ..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
 #: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
@@ -719,7 +719,7 @@ msgstr "Flyt til"
 
 #: ../tvp-git-helper/tgh-move.c:162
 msgid "Move..."
-msgstr "Flyt..."
+msgstr "Flyt ..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -737,7 +737,7 @@ msgstr "Nulstil afsluttet"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset..."
-msgstr "Nulstil..."
+msgstr "Nulstil ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:172
 msgid "Description"
@@ -965,7 +965,7 @@ msgstr "Oprydning afsluttet"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr "Rydder op..."
+msgstr "Rydder op ..."
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -1354,7 +1354,7 @@ msgstr "Vis kopier som tilføjelser"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
-msgstr "Indlæser..."
+msgstr "Indlæser ..."
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
@@ -1448,7 +1448,7 @@ msgstr "Adresseskift afsluttet"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr "Skifter adresse..."
+msgstr "Skifter adresse ..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
