@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-05-17 11:49+0000\n"
+"PO-Revision-Date: 2019-05-27 11:09+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -471,7 +471,7 @@ msgstr "Gren-relaterede tilvalg:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr "Klone relaterede tilvalg:"
+msgstr "Klon-relaterede tilvalg:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
@@ -848,7 +848,7 @@ msgstr "Kør egenskabshandling"
 
 #: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
-msgstr "Kør løsehandling"
+msgstr "Kør løsthandling"
 
 #: ../tvp-svn-helper/main.c:211
 msgid "Execute relocate action"
@@ -920,7 +920,7 @@ msgstr "Egenskaber"
 
 #: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
-msgstr "Løs-relaterede tilvalg:"
+msgstr "Løst-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
