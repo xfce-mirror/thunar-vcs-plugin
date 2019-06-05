@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-05-27 11:09+0000\n"
+"PO-Revision-Date: 2019-06-05 13:59+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -1112,11 +1112,11 @@ msgstr "Egenskab findes ikke"
 
 #: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
-msgstr "Indstillet egenskabversion"
+msgstr "Revisionegenskab indstillet"
 
 #: ../tvp-svn-helper/tsh-common.c:614
 msgid "Revision property deleted"
-msgstr "Egenskabversion slettet"
+msgstr "Revisionegenskab slettet"
 
 #: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
@@ -1172,7 +1172,7 @@ msgstr "Opdateret sti"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
-msgstr "Begynd at flette optagelsesnformation"
+msgstr "Begynd at flette optagelsesinformation"
 
 #: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
