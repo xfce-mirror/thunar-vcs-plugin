@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-06-05 13:59+0000\n"
+"PO-Revision-Date: 2019-06-05 23:24+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -181,7 +181,7 @@ msgstr "Tjekud en arbejdskopi fra et arkiv"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
-msgstr "Opryd"
+msgstr "Oprydning"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
@@ -419,43 +419,43 @@ msgstr "Udskriv versionsinformation"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
 msgid "Execute add action"
-msgstr "Kør handlingen tilføj"
+msgstr "Kør tilføj-handling"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
 msgid "Execute blame action"
-msgstr "Kør anklagehandling"
+msgstr "Kør anklage-handling"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
-msgstr "Kør grenhandling"
+msgstr "Kør gren-handling"
 
 #: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
-msgstr "Kør handlingen ryd"
+msgstr "Kør ryd-handling"
 
 #: ../tvp-git-helper/main.c:111
 msgid "Execute clone action"
-msgstr "Kør handlingen klone"
+msgstr "Kør klon-handling"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
 msgid "Execute log action"
-msgstr "Kør loghandling"
+msgstr "Kør log-handling"
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
 msgid "Execute move action"
-msgstr "Kør flyttehandling"
+msgstr "Kør flyt-handling"
 
 #: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
-msgstr "Kør nulstilhandling"
+msgstr "Kør nulstil-handling"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr "Kør handlingen stash"
+msgstr "Kør stash-handling"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
-msgstr "Kør statushandling"
+msgstr "Kør status-handling"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
 msgid "Add Related Options:"
@@ -804,71 +804,71 @@ msgstr "Overførsel"
 
 #: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
-msgstr "Udfør ændringshandling"
+msgstr "Udfør ændring-handling"
 
 #: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
-msgstr "Udfør tjekudhandling"
+msgstr "Udfør tjekud-handling"
 
 #: ../tvp-svn-helper/main.c:139
 msgid "Execute cleanup action"
-msgstr "Kør rydophandling"
+msgstr "Kør oprydning-handling"
 
 #: ../tvp-svn-helper/main.c:145
 msgid "Execute commit action"
-msgstr "Kør integrérhandling"
+msgstr "Kør integrér-handling"
 
 #: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
-msgstr "Kør kopiérhandling"
+msgstr "Kør kopiér-handling"
 
 #: ../tvp-svn-helper/main.c:157
 msgid "Execute delete action"
-msgstr "Kør slettehandling"
+msgstr "Kør slet-handling"
 
 #: ../tvp-svn-helper/main.c:163
 msgid "Execute diff action"
-msgstr "Kør forskelshandling"
+msgstr "Kør forskel-handling"
 
 #: ../tvp-svn-helper/main.c:169
 msgid "Execute export action"
-msgstr "Kør eksportérhandling"
+msgstr "Kør eksportér-handling"
 
 #: ../tvp-svn-helper/main.c:175
 msgid "Execute import action"
-msgstr "Kør importérhandling"
+msgstr "Kør importér-handling"
 
 #: ../tvp-svn-helper/main.c:181
 msgid "Execute lock action"
-msgstr "Kør låsehandling"
+msgstr "Kør lås-handling"
 
 #: ../tvp-svn-helper/main.c:199
 msgid "Execute properties action"
-msgstr "Kør egenskabshandling"
+msgstr "Kør egenskaber-handling"
 
 #: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
-msgstr "Kør løsthandling"
+msgstr "Kør løst-handling"
 
 #: ../tvp-svn-helper/main.c:211
 msgid "Execute relocate action"
-msgstr "Kør adresseskifthandling"
+msgstr "Kør adresseskift-handling"
 
 #: ../tvp-svn-helper/main.c:217
 msgid "Execute revert action"
-msgstr "Kør tilbageførhandling"
+msgstr "Kør tilbagefør-handling"
 
 #: ../tvp-svn-helper/main.c:229
 msgid "Execute switch action"
-msgstr "Kør skiftehandling"
+msgstr "Kør skift-handling"
 
 #: ../tvp-svn-helper/main.c:235
 msgid "Execute unlock action"
-msgstr "Kør låsophandling"
+msgstr "Kør låsop-handling"
 
 #: ../tvp-svn-helper/main.c:241
 msgid "Execute update action"
-msgstr "Udfør opdaterhandling"
+msgstr "Kør opdater-handling"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
@@ -880,7 +880,7 @@ msgstr "Tjekud-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
-msgstr "Rydop-relaterede tilvalg:"
+msgstr "Oprydning-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
