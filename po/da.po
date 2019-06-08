@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-06-08 02:11+0000\n"
+"PO-Revision-Date: 2019-06-08 15:37+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -707,7 +707,7 @@ msgstr "Fil"
 #: ../tvp-svn-helper/tsh-log-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
-msgstr "_Genopfrisk"
+msgstr "_Opdater"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
