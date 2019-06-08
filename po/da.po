@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-06-05 23:24+0000\n"
+"PO-Revision-Date: 2019-06-08 02:11+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -375,7 +375,7 @@ msgstr "Dybde:"
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:339
 #: ../tvp-svn-helper/tsh-common.c:640
 msgid "Exclude"
-msgstr "Udeluk"
+msgstr "Udelad"
 
 #. Translators: svn recursion depth infotmation
 #. * Empty depth means only this file/direcotry is checked out
