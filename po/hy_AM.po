@@ -1,0 +1,1514 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Hayk Andreasyan <hayk.andreasyan@realschool.am>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-27 06:30+0200\n"
+"PO-Revision-Date: 2019-06-12 12:12+0000\n"
+"Last-Translator: Hayk Andreasyan <hayk.andreasyan@realschool.am>\n"
+"Language-Team: Armenian (Armenia) (http://www.transifex.com/xfce/thunar-plugins/language/hy_AM/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hy_AM\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
+#: ../tvp-svn-helper/tsh-add.c:154
+msgid "Add"
+msgstr "Յաւելում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:222
+msgid "Add file contents to the index"
+msgstr "Յաւելել բովանդակութիւն դասիչում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
+#: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
+msgid "Blame"
+msgstr "Պատասխանատուութիւն"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265
+msgid "Show what revision and author last modified each line of a file"
+msgstr "Ցուցադրել, որ հեղինակը նիշի, որ տողն է խմբագրել"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:140
+#: ../tvp-git-helper/tgh-stash-dialog.c:166
+msgid "Branch"
+msgstr "Անցում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:227
+msgid "List, create or switch branches"
+msgstr "Ցուցակաւորել, ստեղծել կամ փոխարինել անցումները"
+
+#. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
+#. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
+msgid "Clean"
+msgstr "Մաքրում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:229
+msgid "Remove untracked files from the working tree"
+msgstr "Հեռացնել չնշուած նիշերը "
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
+msgid "Clone"
+msgstr "Կրկնաւրինակում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:231
+msgid "Clone a repository into a new directory"
+msgstr "Կրկնաւրինակել շտեմարանը նոր նշարանում"
+
+#. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
+#. _("Commit"), "gtk-apply", _("Commit"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::diff", _("Diff"),
+#. _("Diff"), "edit-find-replace", _("Diff"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::fetch", _("Fetch"),
+#. _("Fetch"), NULL, _("Fetch"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::grep", _("Grep"),
+#. _("Grep"), NULL, _("Grep"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
+#. _("Init"), NULL, _("Init"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
+#: ../tvp-svn-helper/tsh-log-dialog.c:227
+msgid "Log"
+msgstr "Մատեան"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Show commit logs"
+msgstr "Ցուցադրել մատեանները"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
+msgid "Move"
+msgstr "Տեղափոխում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:240
+msgid "Move or rename a file, a directory, or a symlink"
+msgstr "Տեղափոխել կամ վերանուանել նիշերը, նշարանները, յղումները"
+
+#. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
+#. _("Pull"), NULL, _("Pull"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::push", _("Push"),
+#. _("Push"), NULL, _("Push"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
+#. _("Rebase"), NULL, _("Rebase"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
+msgid "Reset"
+msgstr "Վերատեղադրում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:244
+msgid "Reset current HEAD to the specified state"
+msgstr "Վերատեղադրել ներկայիս HEAD֊ը սահմանուած վիճակին"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:246
+msgid "Stash"
+msgstr "Պահում"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:248
+msgid "Stash the changes in a dirty working directory away"
+msgstr "Պահել աշխատող նշարանի փոփոխութիւնները"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:120
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:149
+#: ../tvp-svn-helper/tsh-status-dialog.c:252
+msgid "Status"
+msgstr "Կարգավիճակ"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389
+msgid "Show the working tree status"
+msgstr "Ցուցադրել աշխատող ծառի կարգավիճակը"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-svn-action.c:412
+#, c-format
+msgid "Action %s is unimplemented"
+msgstr "%sգործողութիւնն անթոյլատրելի է"
+
+#. append the svn submenu item
+#. Lets see if we are dealing with a working copy
+#: ../thunar-vcs-plugin/tvp-provider.c:421
+#: ../thunar-vcs-plugin/tvp-provider.c:487
+msgid "SVN"
+msgstr "SVN"
+
+#. append the git submenu item
+#: ../thunar-vcs-plugin/tvp-provider.c:452
+#: ../thunar-vcs-plugin/tvp-provider.c:494
+msgid "GIT"
+msgstr "GIT"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260
+msgid "Add files, directories, or symbolic links"
+msgstr "Յաւելել նիշեր, նշարաններ կամ նշանային յղումներ"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
+#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
+msgid "Checkout"
+msgstr "Ստուգում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282
+msgid "Check out a working copy from a repository"
+msgstr "Ստուգել եւ վերցնել շտեմարանից աշխատող պատճէնը"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
+msgid "Cleanup"
+msgstr "Մաքրում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287
+msgid "Recursively clean up the working copy"
+msgstr "Մաքրել աշխատող պատճէնը"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
+#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
+msgid "Commit"
+msgstr "Հաստատում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+msgid "Send changes from your working copy to the repository"
+msgstr "Ուղարկել կատարուած փոփոխութիւնները շտեմարան"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
+#: ../tvp-svn-helper/tsh-copy.c:189
+msgid "Copy"
+msgstr "Պատճէնում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
+msgid "Copy a file or directory in a working copy or in the repository"
+msgstr "Պատճէնել նիշ կամ նշարան գործուն պատճէնում կամ շտեմարանում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
+#: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
+msgid "Delete"
+msgstr "Ջնջում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302
+msgid "Delete an item from a working copy or the repository"
+msgstr "Ջնջել տարր գործուն պատճէնից կամ շտեմարանից"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
+#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
+msgid "Diff"
+msgstr "Տարբերակում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307
+msgid "Display the differences between two revisions or paths"
+msgstr "Ցուցադրել երկու տարբերակների միջեւ տարբերութիւնները"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
+#: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
+msgid "Export"
+msgstr "Արտածում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
+msgid "Export a clean directory tree"
+msgstr "Արտածել մաքուր նշարանային ծառը"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
+#: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
+msgid "Import"
+msgstr "Ներածում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Commit an unversioned file or tree into the repository"
+msgstr "Շտեմարան ներածել անտարբերակ նիշ կամ ծառը "
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
+#: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
+msgid "Lock"
+msgstr "Արգեալափակում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid ""
+"Lock working copy paths in the repository so that no other user can commit "
+"changes to them"
+msgstr "Փակել գործուն պատճէնի ուղիները, արդիւնքում ոչ ոք չի կարողանայ փոփոխութիւններ կատարել"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Move a file or directory"
+msgstr "Տեղափոխել նիշ կամ նշարան"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+msgid "Edit Properties"
+msgstr "Յատկութիւնների խմբագրում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+msgid "Edit the property of one or more items"
+msgstr "Խմբագրել մեկ կամ աւելի տարրեի յատկութիւնները"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
+#: ../tvp-svn-helper/tsh-relocate.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:187
+msgid "Relocate"
+msgstr "Վերատեղակայում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368
+msgid "Relocate the working copy to point to a different repository root URL"
+msgstr "Վերատեղակայել գործուն պատճէնը այլ տեղում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
+#: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
+#: ../tvp-svn-helper/tsh-resolved.c:138
+msgid "Resolved"
+msgstr "Վերլուծում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374
+msgid "Remove \"conflicted\" state on working copy files or directories"
+msgstr "Հեռացնել գործուն նշարանի նիշերի կամ նշարանների «բախումնային» վիճակը"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
+#: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
+msgid "Revert"
+msgstr "Յետարկում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384
+msgid "Undo all local edits"
+msgstr "Յետարկել բոլոր տեղային փոփոխութիւնները"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
+#: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
+msgid "Switch"
+msgstr "Փոխարինել"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394
+msgid "Update working copy to a different URL"
+msgstr "Տեղադրել գործուն պատճէնը այլ URL֊ում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
+#: ../tvp-svn-helper/tsh-unlock.c:119
+msgid "Unlock"
+msgstr "Արգելաբացում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
+msgid "Unlock working copy paths"
+msgstr "Բացել գործուն պատճէնի ուղիները"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
+#: ../tvp-svn-helper/tsh-update.c:125
+msgid "Update"
+msgstr "Թարմացում"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404
+msgid "Update your working copy"
+msgstr "Թարմացնել գործուն պատճէնը"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
+msgid "URL:"
+msgstr "Գերյղում․"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:124
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:140
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:155
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:181
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:196
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:212
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:253
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:333
+#: ../tvp-svn-helper/tsh-common.c:651 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:751 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:793 ../tvp-svn-helper/tsh-common.c:822
+#: ../tvp-svn-helper/tsh-common.c:934
+msgid "Unknown"
+msgstr "Անյայտ"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:133
+msgid "Revision:"
+msgstr "Վերանայում․"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+msgid "Repository:"
+msgstr "Շտեմարան․"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:174
+msgid "Modified revision:"
+msgstr "Վերանայում․"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:189
+msgid "Modified date:"
+msgstr "Փոփոխման ամսաթիւ․"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:205
+msgid "Author:"
+msgstr "Հեղինակ․"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:230
+msgid "Changelist:"
+msgstr "Փոխարինացուցակ․"
+
+#. Translators: Depth as in depth of recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:246
+msgid "Depth:"
+msgstr "Խորութիւն․"
+
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:339
+#: ../tvp-svn-helper/tsh-common.c:640
+msgid "Exclude"
+msgstr "Բացառում"
+
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:345
+msgid "Empty"
+msgstr "Դատարկ"
+
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:351
+msgid "Files"
+msgstr "Նիշք"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:357
+#: ../tvp-svn-helper/tsh-diff-dialog.c:171
+#: ../tvp-svn-helper/tsh-properties-dialog.c:211
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
+msgid "Immediates"
+msgstr "Ամբողջական"
+
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:363
+msgid "Infinity"
+msgstr "Ստուգուած"
+
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:108
+msgid "Print version information"
+msgstr "Ցուցադրել տարբերակի վերաբերեալ տեղեկոյթը"
+
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
+msgid "Execute add action"
+msgstr "Գործարկել յաւելումը"
+
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
+msgid "Execute blame action"
+msgstr "Գործարկել պատասխանատուութիւնը"
+
+#: ../tvp-git-helper/main.c:99
+msgid "Execute branch action"
+msgstr "Գործարկել անցումը"
+
+#: ../tvp-git-helper/main.c:105
+msgid "Execute clean action"
+msgstr "Գործարկել մաքրումը"
+
+#: ../tvp-git-helper/main.c:111
+msgid "Execute clone action"
+msgstr "Գործարկել կրկնաւրինակումը"
+
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
+msgid "Execute log action"
+msgstr "Գործարկել մատեանների ցուցադրման գործողութիւնը"
+
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
+msgid "Execute move action"
+msgstr "Գործարկել տեղափոխումը"
+
+#: ../tvp-git-helper/main.c:129
+msgid "Execute reset action"
+msgstr "Գործարկել վերատեղադրումը"
+
+#: ../tvp-git-helper/main.c:135
+msgid "Execute stash action"
+msgstr "Գործարկել պահումը"
+
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
+msgid "Execute status action"
+msgstr "Գործարկել կարգավիճակի ցուցադրման գործողութիւնը"
+
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
+msgid "Add Related Options:"
+msgstr "Յաւելել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
+msgid "Blame Related Options:"
+msgstr "Պատասխանատուութեան ենթարկել կապ ունեցող ընտրանքը"
+
+#: ../tvp-git-helper/main.c:161
+msgid "Branch Related Options:"
+msgstr "Անցկացնել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
+msgid "Clone Related Options:"
+msgstr "Կրկնաւրինակել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
+msgid "Log Related Options:"
+msgstr "Մատենագրել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
+msgid "Move Related Options:"
+msgstr "Տեղափոխել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-git-helper/main.c:181
+msgid "Reset Related Options:"
+msgstr "Վերատեղադրել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-git-helper/main.c:185
+msgid "Stash Related Options:"
+msgstr "Պահել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
+msgid "Status Related Options:"
+msgstr "Ստուգել կապ ունեցող ընտրանքի կարգավիճակը․"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
+msgid "Line"
+msgstr "Տող"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
+msgid "Revision"
+msgstr "Վերանայում"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
+msgid "Author"
+msgstr "Հեղինակ"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
+msgid "Date"
+msgstr "Ամսաթիւ"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:131
+#: ../tvp-git-helper/tgh-branch-dialog.c:142
+#: ../tvp-git-helper/tgh-log-dialog.c:258
+#: ../tvp-git-helper/tgh-notify-dialog.c:109
+#: ../tvp-git-helper/tgh-stash-dialog.c:248
+#: ../tvp-git-helper/tgh-status-dialog.c:138
+#: ../tvp-svn-helper/tsh-blame-dialog.c:134
+#: ../tvp-svn-helper/tsh-diff-dialog.c:131
+#: ../tvp-svn-helper/tsh-log-dialog.c:241
+#: ../tvp-svn-helper/tsh-notify-dialog.c:116
+#: ../tvp-svn-helper/tsh-properties-dialog.c:251
+#: ../tvp-svn-helper/tsh-status-dialog.c:266
+msgid "_Close"
+msgstr "_Փակել"
+
+#. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
+#: ../tvp-git-helper/tgh-blame-dialog.c:134
+#: ../tvp-git-helper/tgh-branch-dialog.c:145
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
+#: ../tvp-git-helper/tgh-clean-dialog.c:98
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:123
+#: ../tvp-git-helper/tgh-log-dialog.c:248 ../tvp-git-helper/tgh-move.c:148
+#: ../tvp-git-helper/tgh-notify-dialog.c:112
+#: ../tvp-git-helper/tgh-stash-dialog.c:251
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
+#: ../tvp-git-helper/tgh-status-dialog.c:128
+#: ../tvp-git-helper/tgh-transfer-dialog.c:73
+#: ../tvp-git-helper/tgh-transfer-dialog.c:109
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:173
+#: ../tvp-svn-helper/tsh-diff-dialog.c:134
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:152
+#: ../tvp-svn-helper/tsh-lock-dialog.c:73
+#: ../tvp-svn-helper/tsh-log-dialog.c:231
+#: ../tvp-svn-helper/tsh-login-dialog.c:90
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:119
+#: ../tvp-svn-helper/tsh-move.c:162 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-properties-dialog.c:254
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:96
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:140
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:190
+#: ../tvp-svn-helper/tsh-status-dialog.c:256
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:90
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:140
+#: ../tvp-svn-helper/tsh-trust-dialog.c:81
+msgid "_Cancel"
+msgstr "_Չեղարկել"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:109
+msgid "Active"
+msgstr "Գործուն"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:115
+#: ../tvp-git-helper/tgh-stash-dialog.c:160
+#: ../tvp-svn-helper/tsh-properties-dialog.c:124
+msgid "Name"
+msgstr "Անուն"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:130
+msgid "_Jump to"
+msgstr "_Անցնել"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:135
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
+msgid "_New"
+msgstr "_Նոր"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:253
+msgid "Branch name:"
+msgstr "Անցման անուն․"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:55
+msgid "Remove directories."
+msgstr "Հեռացնել նշարանները․"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:67
+msgid "Exclude ignored files"
+msgstr "Արտածել անտեսուած նիշերը"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:75
+msgid "Include ignored files"
+msgstr "Ներառել անտեսուած նիշերը"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:81
+msgid "Only ignored files"
+msgstr "Միայն անտեսուած նիշերը"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:91
+msgid "Force clean."
+msgstr "Ստիպողական մաքրում․"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:74
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-copy.c:174 ../tvp-svn-helper/tsh-file-dialog.c:78
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:153
+#: ../tvp-svn-helper/tsh-lock-dialog.c:74
+#: ../tvp-svn-helper/tsh-login-dialog.c:91
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
+#: ../tvp-svn-helper/tsh-move.c:163 ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:191
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:141
+#: ../tvp-svn-helper/tsh-trust-dialog.c:82
+msgid "_OK"
+msgstr "_Բարի"
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr "Կրկնաւրինակման աւարտ"
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning..."
+msgstr "Կրկնաւրինակում"
+
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
+#: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
+#: ../tvp-svn-helper/tsh-commit.c:113 ../tvp-svn-helper/tsh-commit.c:152
+#: ../tvp-svn-helper/tsh-commit.c:227 ../tvp-svn-helper/tsh-copy.c:102
+#: ../tvp-svn-helper/tsh-delete.c:101 ../tvp-svn-helper/tsh-export.c:80
+#: ../tvp-svn-helper/tsh-import.c:88 ../tvp-svn-helper/tsh-lock.c:95
+#: ../tvp-svn-helper/tsh-move.c:92 ../tvp-svn-helper/tsh-resolved.c:77
+#: ../tvp-svn-helper/tsh-resolved.c:97 ../tvp-svn-helper/tsh-revert.c:96
+#: ../tvp-svn-helper/tsh-switch.c:79 ../tvp-svn-helper/tsh-unlock.c:90
+#: ../tvp-svn-helper/tsh-update.c:96
+msgid "Failed"
+msgstr "Ձախողում"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:245
+msgid "untracked"
+msgstr "չնշուած"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:92
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:97
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "Ուղի"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:98
+#: ../tvp-git-helper/tgh-status-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:91
+#: ../tvp-svn-helper/tsh-status-dialog.c:123
+msgid "State"
+msgstr "Կարգավիճակ"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:113
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:142
+msgid "Select/Unselect all"
+msgstr "Նշել/Ապանշել ամբողջը"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr "ԹողարկմանԱմսաթիւ"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr "ՀաստատմանԱմսաթիւ"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "Հաղորդագրութիւն"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:216
+#: ../tvp-git-helper/tgh-stash-dialog.c:196
+msgid "Changes"
+msgstr "Փոփոխութիւններ"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:223
+#: ../tvp-git-helper/tgh-stash-dialog.c:203
+msgid "File"
+msgstr "Նիշ"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:253
+#: ../tvp-git-helper/tgh-status-dialog.c:133
+#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-log-dialog.c:236
+#: ../tvp-svn-helper/tsh-status-dialog.c:261
+msgid "_Refresh"
+msgstr "_Թարմացնել"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "Տեղափոխման աւարտ"
+
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:160
+msgid "Move To"
+msgstr "Տեղափոխել"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move..."
+msgstr "Տեղափոխել․․․"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "Գործողութիւն"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr "Ծանուցել"
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "Վերատեղադրման աւարտ"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset..."
+msgstr "Վերատեղադրում․․․"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:172
+msgid "Description"
+msgstr "Նկարագրութիւն"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:221
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
+msgid "_Save"
+msgstr "_Պահել"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:226
+msgid "_Apply"
+msgstr "_Հաստատել"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:236
+msgid "_Delete"
+msgstr "_Ջնջել"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:241
+msgid "C_lear"
+msgstr "Մա_քրել"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:382
+msgid "Stash description:"
+msgstr "Պահման նկարագրութիւն․"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:520
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr "Քցե՞լ %s֊ը"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:548
+msgid "Are you sure you want to clear all stash?"
+msgstr "Մաքրե՞լ ամբողջ պահոցը։"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:82
+msgid "_Repository:"
+msgstr "_Շտեմարան․"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:71
+#: ../tvp-git-helper/tgh-transfer-dialog.c:98
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:94
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:144
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:179
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:88
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:129
+msgid "Select a folder"
+msgstr "Ընտրել պանակ"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:95
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:176
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:126
+msgid "_Directory:"
+msgstr "_Նշարան․"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:106
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:137
+msgid "Transfer"
+msgstr "Տեղափոխում"
+
+#: ../tvp-svn-helper/main.c:127
+msgid "Execute changelist action"
+msgstr "Գործարկել փոփոխութիւնների ցուցակի գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:133
+msgid "Execute checkout action"
+msgstr "Գործարկել ստուգման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:139
+msgid "Execute cleanup action"
+msgstr "Գործարկել մաքրման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:145
+msgid "Execute commit action"
+msgstr "Գործարկել հաստատման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:151
+msgid "Execute copy action"
+msgstr "Գործարկել պատճէնման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:157
+msgid "Execute delete action"
+msgstr "Գործարկել ջնջման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:163
+msgid "Execute diff action"
+msgstr "Գործարկել տարբերութիւնների ցուցադրման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:169
+msgid "Execute export action"
+msgstr "Գործարկել արտածման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:175
+msgid "Execute import action"
+msgstr "Գործարկել ներածման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:181
+msgid "Execute lock action"
+msgstr "Գործարկել արգելափակման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:199
+msgid "Execute properties action"
+msgstr "Գործարկել յատկութիւնների ցուցադրման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:205
+msgid "Execute resolved action"
+msgstr "Գործարկել վերլուծման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:211
+msgid "Execute relocate action"
+msgstr "Գործարկել վերատեղակայման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:217
+msgid "Execute revert action"
+msgstr "Գործարկել յետարկման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:229
+msgid "Execute switch action"
+msgstr "Գործարկել փոխարինման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:235
+msgid "Execute unlock action"
+msgstr "Գործարկել արգելաբացման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:241
+msgid "Execute update action"
+msgstr "Գործարկել թարմացման գործողութիւնը"
+
+#: ../tvp-svn-helper/main.c:265
+msgid "Changelist Related Options:"
+msgstr "Փոփոխացուցակաւորել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:269
+msgid "Checkout Related Options:"
+msgstr "Ստուգել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:273
+msgid "Cleanup Related Options:"
+msgstr "Մաքրել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:277
+msgid "Commit Related Options:"
+msgstr "Հաստատել կապուած ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:281
+msgid "Copy Related Options:"
+msgstr "Պատճէնել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:285
+msgid "Delete Related Options:"
+msgstr "Ջնջել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:289
+msgid "Diff Related Options:"
+msgstr "Տարբերակել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:293
+msgid "Export Related Options:"
+msgstr "Արտածել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:297
+msgid "Import Related Options:"
+msgstr "Ներածել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:301
+msgid "Lock Related Options:"
+msgstr "Արգելափակել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:313
+msgid "Properties Related Options:"
+msgstr "Ցուցադրել կապ ունեցող յատկութիւնների ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
+msgid "Properties"
+msgstr "Յատկութիւններ"
+
+#: ../tvp-svn-helper/main.c:317
+msgid "Resolved Related Options:"
+msgstr "Վերլուծել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:321
+msgid "Relocate Related Options:"
+msgstr "Վերատեղակայել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:325
+msgid "Revert Related Options:"
+msgstr "Յետարկել կապ ունեցող ընտրանքը․"
+
+#: ../tvp-svn-helper/main.c:333
+msgid "Switch Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:337
+msgid "Unlock Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:341
+msgid "Update Related Options:"
+msgstr ""
+
+#: ../tvp-svn-helper/main.c:384
+msgid "Not enough arguments provided"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-blame.c:85
+msgid "Blame failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-cleanup.c:57
+#, c-format
+msgid "'%s' is not a local path"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-cleanup.c:93
+msgid "Cleanup failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-cleanup.c:115
+msgid "Cleanup finished"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-cleanup.c:132
+msgid "Cleaning up..."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
+#: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
+#: ../tvp-svn-helper/tsh-delete.c:116 ../tvp-svn-helper/tsh-import.c:101
+#: ../tvp-svn-helper/tsh-move.c:107
+#, c-format
+msgid "At revision: %ld"
+msgstr "%ld. վերանայում"
+
+#: ../tvp-svn-helper/tsh-commit.c:247
+msgid "Nothing to do"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
+#: ../tvp-svn-helper/tsh-copy.c:131 ../tvp-svn-helper/tsh-delete.c:130
+#: ../tvp-svn-helper/tsh-import.c:109 ../tvp-svn-helper/tsh-move.c:121
+msgid "Completed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-commit.c:292
+msgid "Commit Message"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:296
+msgid "Store password a plaintext?"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
+#: ../tvp-svn-helper/tsh-common.c:827 ../tvp-svn-helper/tsh-common.c:940
+msgid "Added"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:577 ../tvp-svn-helper/tsh-common.c:636
+#: ../tvp-svn-helper/tsh-common.c:949
+msgid "Copied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:578 ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:593 ../tvp-svn-helper/tsh-common.c:782
+#: ../tvp-svn-helper/tsh-common.c:830 ../tvp-svn-helper/tsh-common.c:942
+msgid "Deleted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Restored"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Reverted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Revert failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "Skipped"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Updated"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:588 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:789
+msgid "External"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:591 ../tvp-svn-helper/tsh-common.c:784
+#: ../tvp-svn-helper/tsh-common.c:833 ../tvp-svn-helper/tsh-common.c:945
+msgid "Modified"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:594 ../tvp-svn-helper/tsh-common.c:783
+#: ../tvp-svn-helper/tsh-common.c:836 ../tvp-svn-helper/tsh-common.c:938
+msgid "Replaced"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:595
+msgid "Transmitting"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
+msgid "Locked"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:598 ../tvp-svn-helper/tsh-common.c:951
+msgid "Unlocked"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:599
+msgid "Lock failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Unlock failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:601
+msgid "Exists"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:602
+msgid "Changelist set"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:603
+msgid "Changelist cleared"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:604
+msgid "Changelist moved"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:605
+msgid "Merge begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:606
+msgid "Foreign merge begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:607
+msgid "Replace"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:609
+msgid "Property added"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:610
+msgid "Property modified"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:611
+msgid "Property deleted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:612
+msgid "Property nonexisting"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:613
+msgid "Revision property set"
+msgstr "Վերանայման յատկութիւնը սահմանուած է"
+
+#: ../tvp-svn-helper/tsh-common.c:614
+msgid "Revision property deleted"
+msgstr "Վերանայման յատկութիւնը ջնջուած է"
+
+#: ../tvp-svn-helper/tsh-common.c:615
+msgid "Merge completed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:616
+msgid "Tree conflict"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:617
+msgid "External failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:620
+msgid "Started"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:621
+msgid "Skipped obstruction"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:622
+msgid "Skipped working only"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:623
+msgid "Skipped access denied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:624
+msgid "External removed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:625
+msgid "Shadowed add"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:626
+msgid "Shadowed update"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:627
+msgid "Shadowed delete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:628
+msgid "Merge record info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:629
+msgid "Upgraded path"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:630
+msgid "Merge record info begin"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:631
+msgid "Merge elide info"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:632
+msgid "Patch"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:633
+msgid "Applied hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:634
+msgid "Rejected hunk"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:635
+msgid "Hunk already applied"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:637
+msgid "Copied replaced"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:638
+msgid "URL redirect"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:639
+msgid "Path nonexistent"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:641
+msgid "Conflict"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:781
+msgid "Missing"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:643
+msgid "Out of date"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:644
+msgid "No parent"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:646
+msgid "Forbidden by server"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:647
+msgid "Skipped conflicted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:738
+msgid "Inapplicable"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:740
+msgid "Unchanged"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
+msgid "Obstructed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:743
+msgid "Changed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
+msgid "Merged"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
+msgid "Conflicted"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:747
+msgid "Source missing"
+msgstr ""
+
+#. N_("None"),
+#. N_("Unversioned"),
+#: ../tvp-svn-helper/tsh-common.c:779
+msgid "Normal"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:787
+msgid "Ignored"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:790
+msgid "Incomplete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:1163
+msgid "Error"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-common.c:1176
+msgid "Local action"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-copy.c:122
+msgid "Local copy"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-copy.c:171
+msgid "Copy To"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-delete.c:121
+msgid "Local delete"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-delete.c:163
+msgid "Delete Message"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff.c:207
+msgid "Diff failed"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:153
+#: ../tvp-svn-helper/tsh-properties-dialog.c:191
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:162
+#: ../tvp-svn-helper/tsh-properties-dialog.c:202
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr ""
+
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-diff-dialog.c:180
+#: ../tvp-svn-helper/tsh-properties-dialog.c:220
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:196
+msgid "Notice ancestry"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:201
+msgid "Do not show differences for deleted files"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+msgid "Show copies as additions"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:362
+msgid "Loading..."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:58
+msgid "_Certificate:"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:61
+msgid "Select a file"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:69
+#: ../tvp-svn-helper/tsh-login-dialog.c:82
+#: ../tvp-svn-helper/tsh-trust-dialog.c:74
+msgid "Remember"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:74
+msgid "Certificate"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-import.c:149
+msgid "Import Message"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log.c:128
+msgid "Log failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:219
+msgid "Show Merged Revisions"
+msgstr "Ցուցադրել ձուլուած վերանայումները"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:63
+msgid "_Username:"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:72
+msgid "_Password:"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:87
+msgid "Login"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:116
+msgid "Log Message"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-move.c:112
+msgid "Local move"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
+msgid "MIME type"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
+msgid "Notification"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-properties.c:143
+msgid "Set property failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-properties.c:189
+msgid "Properties failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:130
+msgid "Value"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:239
+msgid "_Add"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:244
+msgid "_Remove"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate.c:81
+msgid "Relocate failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate.c:103
+msgid "Relocate finished"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate.c:152
+msgid "Relocating..."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:88
+msgid "_From:"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:132
+msgid "_To:"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status.c:110
+msgid "Status failed"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:129
+msgid "Prop state"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:135
+msgid "Repo state"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:141
+msgid "Repo prop state"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:224
+msgid "Show Unmodified Files"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:229
+msgid "Show Unversioned Files"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:234
+msgid "Show Ignored Files"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
+msgid "Hide Externals"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:244
+msgid "Check Repository"
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:59
+msgid "Certificate is not yet valid."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:62
+msgid "Certificate has expired."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:65
+msgid "Certificate does not match the remote hostname."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:68
+msgid "Certificate authority is unknown."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:71
+msgid "Other failure."
+msgstr ""
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:78
+msgid "Trust"
+msgstr ""
