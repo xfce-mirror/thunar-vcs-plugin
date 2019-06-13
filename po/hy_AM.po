@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Hayk Andreasyan <hayk.andreasyan@realschool.am>, 2019
+# Real School <translator_students@realschool.am>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-06-12 12:12+0000\n"
-"Last-Translator: Hayk Andreasyan <hayk.andreasyan@realschool.am>\n"
+"PO-Revision-Date: 2019-06-13 08:17+0000\n"
+"Last-Translator: Real School <translator_students@realschool.am>\n"
 "Language-Team: Armenian (Armenia) (http://www.transifex.com/xfce/thunar-plugins/language/hy_AM/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -927,40 +928,40 @@ msgstr "Յետարկել կապ ունեցող ընտրանքը․"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Փոխարինել կապ ունեցող ընտրանքը․"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Բացել կապ ունեցող ընտրանքը․"
 
 #: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Թարմացնել կապ ունեցող ընտրանքը․"
 
 #: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Բաւարար յենարկներ չկան"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr ""
+msgstr "Ստուգման ձախողում"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "'%s' ֊ը տեղային ուղի չէ"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
-msgstr ""
+msgstr "Մաքրման ձախողում"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
-msgstr ""
+msgstr "Մաքրման աւարտ"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr ""
+msgstr "Մաքրում․․․"
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -972,138 +973,138 @@ msgstr "%ld. վերանայում"
 
 #: ../tvp-svn-helper/tsh-commit.c:247
 msgid "Nothing to do"
-msgstr ""
+msgstr "Անելու ոչինչ չկայ"
 
 #: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
 #: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
 #: ../tvp-svn-helper/tsh-copy.c:131 ../tvp-svn-helper/tsh-delete.c:130
 #: ../tvp-svn-helper/tsh-import.c:109 ../tvp-svn-helper/tsh-move.c:121
 msgid "Completed"
-msgstr ""
+msgstr "Կատարուած է"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr ""
+msgstr "Հաստատման հաղորդագրութիւն"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Պահե՞լ գաղտնաբառը չգաղտնագրուած։"
 
 #: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
 #: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
 #: ../tvp-svn-helper/tsh-common.c:827 ../tvp-svn-helper/tsh-common.c:940
 msgid "Added"
-msgstr ""
+msgstr "Յաւելուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:577 ../tvp-svn-helper/tsh-common.c:636
 #: ../tvp-svn-helper/tsh-common.c:949
 msgid "Copied"
-msgstr ""
+msgstr "Պատճէնուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:578 ../tvp-svn-helper/tsh-common.c:584
 #: ../tvp-svn-helper/tsh-common.c:593 ../tvp-svn-helper/tsh-common.c:782
 #: ../tvp-svn-helper/tsh-common.c:830 ../tvp-svn-helper/tsh-common.c:942
 msgid "Deleted"
-msgstr ""
+msgstr "Ջնջուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Restored"
-msgstr ""
+msgstr "Վերականգուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Reverted"
-msgstr ""
+msgstr "Յետարկուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
-msgstr ""
+msgstr "Յետարկման ձախողում"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
-msgstr ""
+msgstr "Բաց է թողնուած "
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Updated"
-msgstr ""
+msgstr "Թարմացուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:588 ../tvp-svn-helper/tsh-common.c:590
 #: ../tvp-svn-helper/tsh-common.c:789
 msgid "External"
-msgstr ""
+msgstr "Արտաքին"
 
 #: ../tvp-svn-helper/tsh-common.c:591 ../tvp-svn-helper/tsh-common.c:784
 #: ../tvp-svn-helper/tsh-common.c:833 ../tvp-svn-helper/tsh-common.c:945
 msgid "Modified"
-msgstr ""
+msgstr "Ձեւափոխուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:594 ../tvp-svn-helper/tsh-common.c:783
 #: ../tvp-svn-helper/tsh-common.c:836 ../tvp-svn-helper/tsh-common.c:938
 msgid "Replaced"
-msgstr ""
+msgstr "Փոխարինուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:595
 msgid "Transmitting"
-msgstr ""
+msgstr "Տեղափոխուում է"
 
 #: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
 msgid "Locked"
-msgstr ""
+msgstr "Արգելափակուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:598 ../tvp-svn-helper/tsh-common.c:951
 msgid "Unlocked"
-msgstr ""
+msgstr "Արգելաբացուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:599
 msgid "Lock failed"
-msgstr ""
+msgstr "Արգելափակման ձախողում"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Unlock failed"
-msgstr ""
+msgstr "Արգելաբացման ձախողում"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Exists"
-msgstr ""
+msgstr "Առկայ է"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
-msgstr ""
+msgstr "Փոփոխութիւնների ցուցակը սահմանուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
-msgstr ""
+msgstr "Փոփոխութիւնների ցուցակը մաքրուել է"
 
 #: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
-msgstr ""
+msgstr "Փոփոխութիւնների ցուցակը տեղափոխուել է"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Merge begin"
-msgstr ""
+msgstr "Ձուլման մեկնարկ"
 
 #: ../tvp-svn-helper/tsh-common.c:606
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Անծանաւթ ձուլման մեկնարկ"
 
 #: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
-msgstr ""
+msgstr "Փոխարինել"
 
 #: ../tvp-svn-helper/tsh-common.c:609
 msgid "Property added"
-msgstr ""
+msgstr "Յատկութիւնն յաւելուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
-msgstr ""
+msgstr "Յատկութիւնը փոփոխուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
-msgstr ""
+msgstr "Յատկութիւնը ջնջուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
-msgstr ""
+msgstr "Յատկութիւնը գոյութիւն չունի"
 
 #: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
@@ -1115,59 +1116,59 @@ msgstr "Վերանայման յատկութիւնը ջնջուած է"
 
 #: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
-msgstr ""
+msgstr "Ձուլման աւարտ"
 
 #: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
-msgstr ""
+msgstr "Բախում"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
-msgstr ""
+msgstr "Արտաքին սխալ"
 
 #: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
-msgstr ""
+msgstr "Մեկնարկ"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Անցում"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr ""
+msgstr "Աշխատում է միայն զանցուած"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Զանցումը հասանելի չէ"
 
 #: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
-msgstr ""
+msgstr "Արտաքին հեռացում"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
-msgstr ""
+msgstr "Ստուերած յաւելուած"
 
 #: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
-msgstr ""
+msgstr "Ստուերուած թարմեցում"
 
 #: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Ստուերուած ջնջում"
 
 #: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
-msgstr ""
+msgstr "Ձուլել գրառման տեղեկութիւն"
 
 #: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
-msgstr ""
+msgstr "Թարմեցուած ուղի"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Ձուլել գրառման տեղեկութիւնը սկզբում"
 
 #: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
@@ -1175,7 +1176,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
-msgstr ""
+msgstr "Կարկատել"
 
 #: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
@@ -1415,7 +1416,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-properties.c:143
 msgid "Set property failed"
-msgstr ""
+msgstr "Չյաջողուեց սահմանել հատկութիւնը"
 
 #: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
@@ -1423,15 +1424,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
-msgstr ""
+msgstr "Արժեք"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr " _Աւելացնել"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "_Հեռացնել"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
@@ -1447,11 +1448,11 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr ""
+msgstr "_Որտեղից․"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:132
 msgid "_To:"
-msgstr ""
+msgstr "_Դեպի․"
 
 #: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
@@ -1503,12 +1504,12 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
-msgstr ""
+msgstr "Վկայագրի հեղինակը  անյայտ է։"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:71
 msgid "Other failure."
-msgstr ""
+msgstr "Այլ վնասուածք։"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:78
 msgid "Trust"
-msgstr ""
+msgstr "Վստահուած"
