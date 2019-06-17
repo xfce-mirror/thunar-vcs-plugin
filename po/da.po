@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-06-08 15:37+0000\n"
+"PO-Revision-Date: 2019-06-17 18:52+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -804,11 +804,11 @@ msgstr "Overførsel"
 
 #: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
-msgstr "Udfør ændring-handling"
+msgstr "Kør ændring-handling"
 
 #: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
-msgstr "Udfør tjekud-handling"
+msgstr "Kør tjekud-handling"
 
 #: ../tvp-svn-helper/main.c:139
 msgid "Execute cleanup action"
