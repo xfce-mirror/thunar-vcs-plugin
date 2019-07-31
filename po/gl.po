@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Daniel Muñiz Fontoira <dani@damufo.com>, 2018
+# Daniel Muñiz Fontoira <dani@damufo.com>, 2018-2019
 # Leandro Regueiro <leandro DOT regueiro AT gmail DOT com>, 2008-2010
 # Xosé, 2015,2017-2018
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
+"PO-Revision-Date: 2019-07-31 08:52+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/thunar-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -605,7 +605,7 @@ msgstr "Só os ficheiros ignorados"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:91
 msgid "Force clean."
-msgstr "Forzar eliminación de bloqueos."
+msgstr "Forzar limpeza."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:99
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:124
@@ -677,7 +677,7 @@ msgstr "Seleccionar/Deseleccionar todo"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:146
 msgid "AuthorDate"
-msgstr "Data de autor"
+msgstr "Data de autoría"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
@@ -941,7 +941,7 @@ msgstr "Opcións relacionadas con actualizar:"
 
 #: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
-msgstr "Non se proporcionaron argumentos suficientes"
+msgstr "Non se forneceron argumentos suficientes"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
