@@ -5,13 +5,13 @@
 # Translators:
 # José Vieira <jvieira33@sapo.pt>, 2018
 # Nuno Miguel <nunis@netcabo.pt>, 2008
-# Nuno Miguel <nunomgue@gmail.com>, 2013,2015,2018
+# Nuno Miguel <nunomgue@gmail.com>, 2013,2015,2018-2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-09-09 11:33+0000\n"
+"PO-Revision-Date: 2019-08-08 15:59+0000\n"
 "Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/thunar-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -124,7 +124,7 @@ msgstr "Restaurar HEAD atual para o estado especificado"
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
-msgstr "Stash"
+msgstr "Ocultar"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Stash the changes in a dirty working directory away"
@@ -165,7 +165,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr "Adicionar  ficheiros directórios ou ligações simbólicas"
+msgstr "Adicionar ficheiros, directórios ou ligações simbólicas"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -189,7 +189,7 @@ msgstr "Limpar recursivamente a cópia de trabalho "
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
 msgid "Commit"
-msgstr "Cometer"
+msgstr "Submeter"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
@@ -299,7 +299,7 @@ msgstr "Alternar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr "Actualizar cópia de trabalho com um URL (endereço web) diferente"
+msgstr "Actualizar cópia de trabalho com um URL diferente"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -416,79 +416,79 @@ msgstr "Imprimir informação da versão"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
 msgid "Execute add action"
-msgstr "Adicionar"
+msgstr "Executar ação adicionar"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
 msgid "Execute blame action"
-msgstr "Reprovar"
+msgstr "Executar ação culpar"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
-msgstr "Ramificar"
+msgstr "Executar ação ramificar"
 
 #: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
-msgstr "Limpar"
+msgstr "Executar ação limpar"
 
 #: ../tvp-git-helper/main.c:111
 msgid "Execute clone action"
-msgstr "Clonar"
+msgstr "Executar ação clonar"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
 msgid "Execute log action"
-msgstr "Registar"
+msgstr "Executar ação registar"
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
 msgid "Execute move action"
-msgstr "Mover"
+msgstr "Executar ação mover"
 
 #: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
-msgstr "Repor"
+msgstr "Executar ação repor"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr "Stash"
+msgstr "Executar ação ocultar"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
-msgstr "Estado"
+msgstr "Executar ação de estado"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
 msgid "Add Related Options:"
-msgstr "Opções Relacionadas com Adicionar:"
+msgstr "Opções relacionadas com adicionar:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
-msgstr "Opções Relacionadas com Reprovação:"
+msgstr "Opções relacionadas com reprovação:"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr "Opções Relacionadas com Ramificação:"
+msgstr "Opções relacionadas com ramificação:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr "Opções Relacionadas com Clonagem:"
+msgstr "Opções relacionadas com clonagem:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
-msgstr "Opções Relacionadas com Registo:"
+msgstr "Opções relacionadas com registo:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
 msgid "Move Related Options:"
-msgstr "Opções Relacionadas com Mover:"
+msgstr "Opções relacionadas com mover:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr "Opções Relacionadas com Reposição:"
+msgstr "Opções relacionadas com reposição:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "Opções Relacionadas com Stash:"
+msgstr "Opções relacionadas com ocultar:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
-msgstr "Opções Relacionadas com Estado:"
+msgstr "Opções relacionadas com estado:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -712,7 +712,7 @@ msgstr "Movimentação terminada"
 
 #: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:160
 msgid "Move To"
-msgstr "Mover Para"
+msgstr "Mover para"
 
 #: ../tvp-git-helper/tgh-move.c:162
 msgid "Move..."
@@ -722,7 +722,7 @@ msgstr "A mover..."
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
 #: ../tvp-svn-helper/tsh-notify-dialog.c:87
 msgid "Action"
-msgstr "Acção"
+msgstr "Ação"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:107
 msgid "Notify"
@@ -786,7 +786,7 @@ msgstr "_Repositório:"
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:129
 msgid "Select a folder"
-msgstr "Seleccione uma pasta"
+msgstr "Selecione uma pasta"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:95
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:176
@@ -917,27 +917,27 @@ msgstr "Propriedades"
 
 #: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
-msgstr "Opções Relacionadas com Resolvido:"
+msgstr "Opções relacionadas com resolvido:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
-msgstr "Opções Relacionadas com Realocar:"
+msgstr "Opções relacionadas com realocar:"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr "Opções Relacionadas com Reverter:"
+msgstr "Opções relacionadas com reverter:"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
-msgstr "Opções Relacionadas com Mudar:"
+msgstr "Opções relacionadas com mudar:"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
-msgstr "Opções Relacionadas com Desbloquear:"
+msgstr "Opções relacionadas com desbloquear:"
 
 #: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
-msgstr "Opções Relacionadas com Actualizar:"
+msgstr "Opções relacionadas com atualizar:"
 
 #: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
@@ -962,7 +962,7 @@ msgstr "Limpeza terminada"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr "A limpar"
+msgstr "A limpar..."
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -985,7 +985,7 @@ msgstr "Terminado"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr "Cometer Mensagem"
+msgstr "Submeter mensagem"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
@@ -1389,7 +1389,7 @@ msgstr "Mostrar revisões unidas"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:63
 msgid "_Username:"
-msgstr "Nome do _Utilizador:"
+msgstr "Nome do _utilizador:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:72
 msgid "_Password:"
@@ -1401,7 +1401,7 @@ msgstr "Iniciar sessão"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
-msgstr "Mensagem de Registo"
+msgstr "Mensagem de registo"
 
 #: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
@@ -1473,23 +1473,23 @@ msgstr "Estado repo prop"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr "Mostrar Ficheiros Inalterados"
+msgstr "Mostrar ficheiros inalterados"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
-msgstr "Mostrar Ficheiros sem Versão"
+msgstr "Mostrar ficheiros sem versão"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
-msgstr "Mostrar Ficheiros Ignorados"
+msgstr "Mostrar ficheiros ignorados"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
-msgstr "Ocultar Externos"
+msgstr "Ocultar externos"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
-msgstr "Verificar Repositório"
+msgstr "Verificar repositório"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
