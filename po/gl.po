@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-07-31 08:52+0000\n"
+"PO-Revision-Date: 2019-08-16 14:07+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/thunar-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -764,11 +764,11 @@ msgstr "Descrición de agochar:"
 #: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr "Está seguro que desexa soltar %s?"
+msgstr "Desexa realmente soltar %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
-msgstr "Está seguro de que desexa limpar todos o agochado?"
+msgstr "Desexa realmente limpar todo o agochado?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
@@ -1254,7 +1254,7 @@ msgstr "Con conflitos"
 
 #: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
-msgstr "Falta ficheiro fonte"
+msgstr "Falta o ficheiro fonte"
 
 #. N_("None"),
 #. N_("Unversioned"),
