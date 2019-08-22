@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-08-16 14:07+0000\n"
+"PO-Revision-Date: 2019-08-22 13:55+0000\n"
 "Last-Translator: Daniel Muñiz Fontoira <dani@damufo.com>\n"
 "Language-Team: Galician (http://www.transifex.com/xfce/thunar-plugins/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgstr "Revisión detallada"
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
-msgstr "Mostrar que revisión e autor modificaron por última vez cada liña dun ficheiro"
+msgstr "Amosar que revisión e autor modificaron por última vez cada liña dun ficheiro"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
@@ -94,7 +94,7 @@ msgstr "Rexistro"
 #: ../thunar-vcs-plugin/tvp-git-action.c:237
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr "Mostrar o rexistro de remisións"
+msgstr "Amosar o rexistro de remisións"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
@@ -142,7 +142,7 @@ msgstr "Estado"
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr "Mostrar o estado da árbore de traball"
+msgstr "Amosar o estado da árbore de traballo"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
@@ -220,7 +220,7 @@ msgstr "Diferenzas"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr "Mostrar as diferenzas entre dúas revisións ou rutas"
+msgstr "Amosar as diferenzas entre dúas revisións ou rutas"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
@@ -412,7 +412,7 @@ msgstr "Infinito"
 
 #: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:108
 msgid "Print version information"
-msgstr "Mostrar a información da versión"
+msgstr "Amosar a información da versión"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
 msgid "Execute add action"
@@ -1230,7 +1230,7 @@ msgstr "Conflito omitidos"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
-msgstr "Non aplicable"
+msgstr "Non aplicábel"
 
 #: ../tvp-svn-helper/tsh-common.c:740
 msgid "Unchanged"
@@ -1343,7 +1343,7 @@ msgstr "Aviso de ascendencia"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
-msgstr "Non mostrar as diferenzas dos ficheiros eliminados"
+msgstr "Non amosar as diferenzas dos ficheiros eliminados"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
@@ -1473,15 +1473,15 @@ msgstr "Estado repo prop"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr "Mostrar os ficheiros non modificados"
+msgstr "Amosar os ficheiros non modificados"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
-msgstr "Mostrar os ficheiros sen versión"
+msgstr "Amosar os ficheiros sen versión"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
-msgstr "Mostrar os ficheiros ignorados"
+msgstr "Amosar os ficheiros ignorados"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
@@ -1493,7 +1493,7 @@ msgstr "Comprobar o repositorio"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
-msgstr "O certificado aínda non é válido."
+msgstr "O certificado aínda non é correcto."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:62
 msgid "Certificate has expired."
