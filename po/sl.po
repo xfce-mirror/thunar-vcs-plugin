@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-10-18 17:57+0000\n"
+"PO-Revision-Date: 2019-11-19 11:19+0000\n"
 "Last-Translator: Arnold Marko <arnold.marko@gmail.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/xfce/thunar-plugins/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -47,11 +47,11 @@ msgstr "Prikaži katera revizija in avtor sta nazadnje spreminjala vsako od vrst
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
-msgstr "Razvejitev"
+msgstr "Veja"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227
 msgid "List, create or switch branches"
-msgstr ""
+msgstr "Prikaži, ustvari ali zamenjaj vejo"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
@@ -62,7 +62,7 @@ msgstr "Počisti"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:229
 msgid "Remove untracked files from the working tree"
-msgstr ""
+msgstr "Odstrani nezasledovane datoteke iz delovnega drevesa"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -93,7 +93,7 @@ msgstr "Dnevnik"
 #: ../thunar-vcs-plugin/tvp-git-action.c:237
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr ""
+msgstr "Prikaži dnevnike posredovanj"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
@@ -103,7 +103,7 @@ msgstr "Premakni"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr ""
+msgstr "Premakni ali preimenuj datoteko, mapo ali simbolno povezavo"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -118,7 +118,7 @@ msgstr "Ponastavi"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "Ponastavi trenutni HEAD v specifično stanje"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
@@ -127,7 +127,7 @@ msgstr "Zaloge"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "Stlači spremembe v umazano delovno mapo"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
@@ -141,7 +141,7 @@ msgstr "Stanje"
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr ""
+msgstr "Prikaži delovni status dreves"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
@@ -164,7 +164,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr ""
+msgstr "Dodaj datoteke, mape ali simbolične povezave"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -173,7 +173,7 @@ msgstr "Prevzemi"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr ""
+msgstr "Preveri delovno kopijo repozitorija"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -181,7 +181,7 @@ msgstr "Počisti"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr ""
+msgstr "Rekurzivno počisti delovno kopijo"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
@@ -192,7 +192,7 @@ msgstr "Uveljavi"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr ""
+msgstr "Pošlji spremembe delovne kopije repozitoriju"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
@@ -201,7 +201,7 @@ msgstr "Kopiraj"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr ""
+msgstr "Kopiraj daoteko ali mapo delovne kopije ali repozitorija"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -210,7 +210,7 @@ msgstr "Izbriši"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr ""
+msgstr "Izbriši predmet iz delovne kopije ali repozitorija"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
@@ -219,7 +219,7 @@ msgstr "Spremembe"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr ""
+msgstr "Prikaži razlike med dvema revizijama ali potema"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
@@ -228,7 +228,7 @@ msgstr "Izvoz"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr ""
+msgstr "Izvozi čisto drevo map"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -237,7 +237,7 @@ msgstr "Uvoz"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Commit an unversioned file or tree into the repository"
-msgstr ""
+msgstr "V repozitorij posreduj datoteko ali drevo brez različice"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -248,11 +248,11 @@ msgstr "Zakleni"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr ""
+msgstr "Zakleni delujoče poti kopije v repozitoriju, tako da jih nihče drug ne bo mogel spreminjati"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr ""
+msgstr "Premakni datoteko ali mapo"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -260,7 +260,7 @@ msgstr "Lastnosti"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit the property of one or more items"
-msgstr ""
+msgstr "Uredi lastnosti za enega ali več predmetov"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -270,7 +270,7 @@ msgstr "Preseli"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr ""
+msgstr "Premesti delovno kopijo, da kaže na drugi korenski url repozitorija"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -280,7 +280,7 @@ msgstr "Razrešeno"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr ""
+msgstr "Odstrani \"konfliktna\" stanja datotek ali map delovne kopije"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -289,7 +289,7 @@ msgstr "Povrni"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
-msgstr ""
+msgstr "Razveljavi vso lokalno urejanje"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
@@ -298,7 +298,7 @@ msgstr "Spremeni vejo"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr ""
+msgstr "Posodobi delovno kopijo na drug URL"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -307,7 +307,7 @@ msgstr "Odkleni"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "Odkleni poti delovne kopije"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -316,7 +316,7 @@ msgstr "Posodobi skladišče"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr ""
+msgstr "Posodobi delovno kopijo"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -423,7 +423,7 @@ msgstr "Prikaži podrobnosti o spremembah med različicami"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
-msgstr "Razveji skladišče"
+msgstr "Izvedi dejanje za vejo"
 
 #: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
@@ -565,7 +565,7 @@ msgstr "_Prekini"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
-msgstr ""
+msgstr "Aktivno"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:115
 #: ../tvp-git-helper/tgh-stash-dialog.c:160
@@ -575,12 +575,12 @@ msgstr "Ime"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
-msgstr ""
+msgstr "Sko_či na"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:249
 msgid "_New"
-msgstr ""
+msgstr "_Nov"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
@@ -631,7 +631,7 @@ msgstr "Kloniranje skladišča je končano"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning..."
-msgstr ""
+msgstr "Podvajanje..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
 #: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
@@ -703,7 +703,7 @@ msgstr "Datoteka"
 #: ../tvp-svn-helper/tsh-log-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
-msgstr ""
+msgstr "_Osveži"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
@@ -715,7 +715,7 @@ msgstr "Premakni v"
 
 #: ../tvp-git-helper/tgh-move.c:162
 msgid "Move..."
-msgstr ""
+msgstr "Pre_makni"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -733,7 +733,7 @@ msgstr "Ponastavitev je končana"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset..."
-msgstr ""
+msgstr "Ponastavi..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:172
 msgid "Description"
@@ -750,11 +750,11 @@ msgstr "_Uporabi"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
-msgstr ""
+msgstr "Iz_briši"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
 msgid "C_lear"
-msgstr ""
+msgstr "Počis_ti"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
@@ -949,7 +949,7 @@ msgstr "Podrobnosti sprememb ni mogoče odpreti"
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "'%s' ni lokalna pot"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -961,7 +961,7 @@ msgstr "Čiščenje je končano"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr ""
+msgstr "Čiščenje..."
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -1295,7 +1295,7 @@ msgstr "Izbriši sporočilo"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
-msgstr ""
+msgstr "Diff ni uspel"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1338,19 +1338,19 @@ msgstr "Rekurzivno"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Obvesti prednika"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Ne prikaži razlik za izbrisane datoteke"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
-msgstr ""
+msgstr "Prikaži kopije kot dodatke"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
-msgstr ""
+msgstr "Nalaganje..."
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
@@ -1408,7 +1408,7 @@ msgstr "Krajevni premik"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr ""
+msgstr "MIME vrsta"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
@@ -1428,11 +1428,11 @@ msgstr "Vrednost"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "Dod_aj"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "Odst_rani"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
@@ -1444,7 +1444,7 @@ msgstr "Skladišče je bilo uspešno prestavljeno"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr ""
+msgstr "Premeščanje..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
@@ -1460,15 +1460,15 @@ msgstr "Stanja ni mogoče prikazati"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Prop stanje"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Repo stanje"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Repo prop stanje"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
