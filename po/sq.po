@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2020-01-08 20:37+0000\n"
+"PO-Revision-Date: 2020-01-28 16:39+0000\n"
 "Last-Translator: Besnik <besnik@programeshqip.org>\n"
 "Language-Team: Albanian (http://www.transifex.com/xfce/thunar-plugins/language/sq/)\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "Shfaqni, krijoni ose këmbeni degë"
 #: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
-msgstr "Pastroje"
+msgstr "Spastro"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:229
 msgid "Remove untracked files from the working tree"
@@ -65,7 +65,7 @@ msgstr "Hiqni nga struktura pemë ku punohet kartela të pandjekura"
 #: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
-msgstr "Klonojeni"
+msgstr "Klono"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231
 msgid "Clone a repository into a new directory"
@@ -97,7 +97,7 @@ msgstr "Shfaq regjistra depozitimesh"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
-msgstr "Lëvize"
+msgstr "Lëvizni"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 msgid "Move or rename a file, a directory, or a symlink"
@@ -112,7 +112,7 @@ msgstr "Lëvizni ose riemërtoni një kartelë, drejtori, apo lidhje simbolike"
 #: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
-msgstr "Rikthe"
+msgstr "Rikthe vlerat parazgjedhje"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgid "Reset current HEAD to the specified state"
@@ -121,11 +121,11 @@ msgstr "Riktheje degën e tanishme KRYE në një gjendje të caktuar"
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
-msgstr ""
+msgstr "Fshihi"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "Fshihi ndryshimet diku në një drejtori pune të papastër"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
@@ -145,7 +145,7 @@ msgstr "Shfaq gjendjen e strukturës pemë ku punohet"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr "Veprimi %s është i pasendërtuar"
+msgstr "Veprimi %sështë i pasendërtuar"
 
 #. append the svn submenu item
 #. Lets see if we are dealing with a working copy
@@ -167,7 +167,7 @@ msgstr "Shtoni kartela, drejtori ose lidhje simbolike"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
 msgid "Checkout"
-msgstr "Merrni kopje"
+msgstr "Marrje"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
@@ -179,36 +179,36 @@ msgstr "Pastrim"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr "Pastroni në mënyrë rekursive kopjen e punës"
+msgstr "Pastroni në mënyrë rekursive kopjen aktive"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
 msgid "Commit"
-msgstr "Depozitoje"
+msgstr "Parashtroje"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr "Dërgoni ndryshimet nga kopja juaj e punës te depoja"
+msgstr "Dërgoni ndryshimet nga kopja juaj aktive te depoja"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
 msgid "Copy"
-msgstr "Kopjoje"
+msgstr "Kopjo"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr "Kopjoni një kartelë ose drejtori te një kopje pune ose te depoja"
+msgstr "Kopjoni një kartelë ose drejtori te një kopje aktive ose te depoja"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
 msgid "Delete"
-msgstr "Fshije"
+msgstr "Fshi"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr "Fshini një objekt nga një kopje pune ose nga depoja"
+msgstr "Fshini një objekt nga një kopje aktive ose nga depoja"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
@@ -222,7 +222,7 @@ msgstr "Shfaqni dallimet mes dy rishikimesh ose shtigjesh"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
 msgid "Export"
-msgstr "Eksportoje"
+msgstr "Eksporto"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
@@ -231,11 +231,11 @@ msgstr "Eksportoni një strukturë pemë drejtorie të pastër"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
 msgid "Import"
-msgstr "Importoje"
+msgstr "Importo"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Commit an unversioned file or tree into the repository"
-msgstr "Depozitoni te depoja një kartelë ose pemë pa version"
+msgstr "Parashtroni te depoja një kartelë ose pemë pa version"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -246,7 +246,7 @@ msgstr "Kyçe"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr "Kyçni te depoja shtigjet e kopjes së punës, që kështu asnjë përdorues tjetër të mos mundet të depozitojë atje ndryshime"
+msgstr "Kyçni te depoja shtigjet e kopjes aktive, që kështu asnjë përdorues tjetër të mos mundet të depozitojë atje ndryshime"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
@@ -278,12 +278,12 @@ msgstr "E zgjidhur"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr "Hiq gjendjen \"me përplasje\" mbi kartela ose drejtori kopjeje pune"
+msgstr "Hiqni gjendjen \"me përplasje\" për kartela ose drejtori kopje pune"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
 msgid "Revert"
-msgstr "Riktheje"
+msgstr "Rikthe"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
@@ -296,25 +296,25 @@ msgstr "Ndërroje"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr "Përditësoni kopjen e punës me një URL tjetër"
+msgstr "Përditësoni kopjen e punës sipas një URL-je tjetër"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
 msgid "Unlock"
-msgstr "Shkyçe"
+msgstr "Shkyç"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr "Shkyçni shtigje kopjesh pune"
+msgstr "Shkyçni shtigje kopjesh aktive"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
 msgid "Update"
-msgstr "Përditësoje"
+msgstr "Përditëso"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr "Përditësoni kopjen tuaj të punës"
+msgstr "Përditësoni kopjen tuaj aktive"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -445,7 +445,7 @@ msgstr "Kryej veprim rikthimi te parazgjedhjet"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr ""
+msgstr "Kryej veprim fshehjeje"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
@@ -453,7 +453,7 @@ msgstr "Kryej veprim gjendjeje"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
 msgid "Add Related Options:"
-msgstr "Shtoni Mundësi të Lidhura:"
+msgstr "Mundësi të Lidhura Me Shtime:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
@@ -481,7 +481,7 @@ msgstr "Mundësi të Lidhura Me Rikthim te Parazgjedhjet:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr ""
+msgstr "Mundësi të Lidhura me Fshehje:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
@@ -563,7 +563,7 @@ msgstr "_Anuloje"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
-msgstr "Aktive"
+msgstr "Aktiv"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:115
 #: ../tvp-git-helper/tgh-stash-dialog.c:160
@@ -642,7 +642,7 @@ msgstr "Po klonohet…"
 #: ../tvp-svn-helper/tsh-switch.c:79 ../tvp-svn-helper/tsh-unlock.c:90
 #: ../tvp-svn-helper/tsh-update.c:96
 msgid "Failed"
-msgstr "Dështoi"
+msgstr "U dështua"
 
 #: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:245
@@ -752,20 +752,20 @@ msgstr "_Fshije"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
 msgid "C_lear"
-msgstr "_Spastroje"
+msgstr "_Pastroje"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
-msgstr ""
+msgstr "Përshkrim fshehjeje:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr "Jeni të sigurt se doni të lihet %s?"
+msgstr "Jeni i sigurt se doni të lihet %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
-msgstr ""
+msgstr "Jeni i sigurt se doni të spastrohen krejt fshehjet?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
@@ -842,7 +842,7 @@ msgstr "Kryej veprim vetish"
 
 #: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
-msgstr "Kryej veprim zgjidhjeje"
+msgstr "Kryej veprim e zgjidhur"
 
 #: ../tvp-svn-helper/main.c:211
 msgid "Execute relocate action"
@@ -894,7 +894,7 @@ msgstr "Mundësi të Lidhura Me Diff-in:"
 
 #: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
-msgstr "Mundësi të Lidhura Me Eksportimin:"
+msgstr "Mundësi të Lidhura Me Eksportin:"
 
 #: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
@@ -914,7 +914,7 @@ msgstr "Veti"
 
 #: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
-msgstr "Mundësi të Lidhura Me Zgjidhjen"
+msgstr "Mundësi të Lidhura me E zgjidhur:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
@@ -922,11 +922,11 @@ msgstr "Mundësi të Lidhura Me Rivendosjen"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr "Mundësi të Lidhura Me Rikthimin:"
+msgstr "Mundësi të Lidhura me Prapakthim:"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
-msgstr "Mundësi të Lidhura Me Ndërrimin e Degës:"
+msgstr "Mundësi të Lidhura Me Ndërrim Dege:"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
@@ -1015,7 +1015,7 @@ msgstr "U rikthye"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
-msgstr "Rikthimi dështoi"
+msgstr "Prapakthimi dështoi"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
@@ -1042,7 +1042,7 @@ msgstr "U zëvendësua"
 
 #: ../tvp-svn-helper/tsh-common.c:595
 msgid "Transmitting"
-msgstr ""
+msgstr "Transmetim"
 
 #: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
 msgid "Locked"
@@ -1070,7 +1070,7 @@ msgstr "Lista e ndryshimeve u caktua"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
-msgstr "Lista e ndryshimeve u pastrua"
+msgstr "Lista e ndryshimeve u spastrua"
 
 #: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
@@ -1086,7 +1086,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
-msgstr "Zëvendëso"
+msgstr "Zëvendësoje"
 
 #: ../tvp-svn-helper/tsh-common.c:609
 msgid "Property added"
@@ -1174,7 +1174,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
-msgstr ""
+msgstr "Arnim"
 
 #: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
@@ -1211,7 +1211,7 @@ msgstr "Mungon"
 
 #: ../tvp-svn-helper/tsh-common.c:643
 msgid "Out of date"
-msgstr "E vjetruar"
+msgstr "I vjetruar"
 
 #: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
@@ -1227,7 +1227,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
-msgstr ""
+msgstr "E pazbatueshme"
 
 #: ../tvp-svn-helper/tsh-common.c:740
 msgid "Unchanged"
@@ -1239,15 +1239,15 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
-msgstr ""
+msgstr "E ndryshuar"
 
 #: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
 msgid "Merged"
-msgstr ""
+msgstr "E përzierë"
 
 #: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
-msgstr ""
+msgstr "Me përplasje"
 
 #: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
@@ -1261,7 +1261,7 @@ msgstr "Normale"
 
 #: ../tvp-svn-helper/tsh-common.c:787
 msgid "Ignored"
-msgstr ""
+msgstr "E shpërfillur"
 
 #: ../tvp-svn-helper/tsh-common.c:790
 msgid "Incomplete"
@@ -1332,7 +1332,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:220
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
-msgstr "Rekursiv"
+msgstr "Rekursive"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
@@ -1462,7 +1462,7 @@ msgstr ""
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Gjendje depoje"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
