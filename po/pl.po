@@ -3,12 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Adam Stachowicz <saibamenppl@gmail.com>, 2015
+# Saibamen <saibamenppl@gmail.com>, 2015
 # elzear <babciaroziazpogwizdowa@wp.pl>, 2014
 # Dawid Job <hoek@tuta.io>, 2014
 # Kamil "elder" P. <elderlinx@riseup.net>, 2016
-# Marcin Mikołajczak <me@m4sk.in>, 2017
-# Marcin Mikołajczak <me@m4sk.in>, 2016
+# Marcin Mikołajczak <me@mkljczk.pl>, 2017
+# Marcin Mikołajczak <me@mkljczk.pl>, 2016
 # No Ne, 2017-2018
 # Paweł Klimek <pawelklimek102@gmail.com>, 2014
 #  <piotr.sokol@10g.pl>, 2009
