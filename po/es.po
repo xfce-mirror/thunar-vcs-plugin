@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2020-04-21 01:27+0000\n"
+"PO-Revision-Date: 2020-04-30 15:45+0000\n"
 "Last-Translator: Ignacio Poggi <ignaciop.3@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/xfce/thunar-plugins/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -800,7 +800,7 @@ msgstr "_Directorio:"
 #: ../tvp-git-helper/tgh-transfer-dialog.c:106
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:137
 msgid "Transfer"
-msgstr "Trasferencia"
+msgstr "Transferencia"
 
 #: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
@@ -1424,7 +1424,7 @@ msgstr "No se pudo establecer la propiedad"
 
 #: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
-msgstr "No se pudieron las propiedades"
+msgstr "No se pudo obtener las propiedades"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
@@ -1460,7 +1460,7 @@ msgstr "_A:"
 
 #: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
-msgstr "No se pudieron obtener el estado"
+msgstr "No se pudo obtener el estado"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
