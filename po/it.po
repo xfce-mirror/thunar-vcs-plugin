@@ -14,14 +14,15 @@
 # Massimiliano Vessi <angerangel@gmail.com>, 2014
 # Mauro Giubileo <debianmaverick@gmail.com>, 2014
 # Saverio <saverio.brancaccio@gmail.com>, 2018
+# Vincenzo Reale <vinx.reale@gmail.com>, 2020
 # Vincenzo Salmena <vs.winebar@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-06-27 11:09+0000\n"
-"Last-Translator: Emanuele Petriglia <transifex@emanuelepetriglia.com>\n"
+"PO-Revision-Date: 2020-05-21 19:12+0000\n"
+"Last-Translator: Vincenzo Reale <vinx.reale@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/xfce/thunar-plugins/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,7 +184,7 @@ msgstr "Checkout"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr "Controlla un copia di lavoro da un'archivio"
+msgstr "Controlla un copia di lavoro da un archivio"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -238,7 +239,7 @@ msgstr "Export"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr "Esporta un'albero di cartelle pulito"
+msgstr "Esporta un albero di cartelle pulito"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -1023,7 +1024,7 @@ msgstr "Ripristinato"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Reverted"
-msgstr "Repristinato"
+msgstr "Ripristinato"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
