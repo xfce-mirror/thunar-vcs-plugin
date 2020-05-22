@@ -5,13 +5,13 @@
 # Translators:
 # José Vieira <jvieira33@sapo.pt>, 2018
 # Nuno Miguel <nunis@netcabo.pt>, 2008
-# Nuno Miguel <nunomgue@gmail.com>, 2013,2015,2018-2019
+# Nuno Miguel <nunomgue@gmail.com>, 2013,2015,2018-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-08-08 15:59+0000\n"
+"PO-Revision-Date: 2020-05-22 10:33+0000\n"
 "Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/thunar-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -72,7 +72,7 @@ msgstr "Clonar"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231
 msgid "Clone a repository into a new directory"
-msgstr "Clonar um repositório num novo directório"
+msgstr "Clonar um repositório num novo diretório"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
 #. _("Commit"), "gtk-apply", _("Commit"));
@@ -94,7 +94,7 @@ msgstr "Registo"
 #: ../thunar-vcs-plugin/tvp-git-action.c:237
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr "Mostrar registos de cometimento"
+msgstr "Mostrar registos de submissão"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
@@ -104,7 +104,7 @@ msgstr "Mover"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr "Mover ou renomear um ficheiro, um directório ou um atalho"
+msgstr "Mover ou renomear um ficheiro, um diretório ou um atalho"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -148,7 +148,7 @@ msgstr "Mostrar o estado da árvore de trabalho"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr "Acção %s não implementada"
+msgstr "Ação %s não implementada"
 
 #. append the svn submenu item
 #. Lets see if we are dealing with a working copy
@@ -165,7 +165,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr "Adicionar ficheiros, directórios ou ligações simbólicas"
+msgstr "Adicionar ficheiros, diretórios ou ligações simbólicas"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -202,7 +202,7 @@ msgstr "Copiar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr "Copiar um ficheiro ou um directório existente numa cópia de trabalho ou num repositório"
+msgstr "Copiar um ficheiro ou um diretório existente numa cópia de trabalho ou num repositório"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -229,7 +229,7 @@ msgstr "Exportar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr "Exportar uma árvore de directórios completa"
+msgstr "Exportar uma árvore de diretórios completa"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -249,11 +249,11 @@ msgstr "Bloquear"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr "Bloquear caminhos de cópias de trabalho para que nenhum outro utilizador possa cometer alterações aos mesmos"
+msgstr "Bloquear caminhos de cópias de trabalho para que nenhum outro utilizador possa submeter alterações aos mesmos"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr "Mover um ficheiro ou um directório"
+msgstr "Mover um ficheiro ou um diretório"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -267,11 +267,11 @@ msgstr "Editar a propriedade de um ou mais itens"
 #: ../tvp-svn-helper/tsh-relocate.c:138
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:187
 msgid "Relocate"
-msgstr "Relocalizar"
+msgstr "Recolação "
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr "Realojar a cópia de trabalho para apontar para um URL diferente"
+msgstr "Recolocar a cópia de trabalho para apontar para um URL diferente"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -281,7 +281,7 @@ msgstr "Resolvido"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr "Remover o estado \"conflicted\" / \"em conflito\" de ficheiros ou directórios da cópia de trabalho"
+msgstr "Remover o estado \"em conflito\" de ficheiros ou diretórios da cópia de trabalho"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -444,7 +444,7 @@ msgstr "Executar ação mover"
 
 #: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
-msgstr "Executar ação repor"
+msgstr "Executar ação de reposição"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
@@ -589,7 +589,7 @@ msgstr "Nome do ramo:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:55
 msgid "Remove directories."
-msgstr "Remover directórios."
+msgstr "Remover diretórios."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:67
 msgid "Exclude ignored files"
@@ -792,7 +792,7 @@ msgstr "Selecione uma pasta"
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:176
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:126
 msgid "_Directory:"
-msgstr "_Directório:"
+msgstr "_Diretório:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:106
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:137
@@ -801,7 +801,7 @@ msgstr "Transferir"
 
 #: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
-msgstr "Executar acção Lista de alterações"
+msgstr "Executar ação lista de alterações"
 
 #: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
@@ -813,15 +813,15 @@ msgstr "Limpar"
 
 #: ../tvp-svn-helper/main.c:145
 msgid "Execute commit action"
-msgstr "Cometer"
+msgstr "Executar ação de submissão"
 
 #: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
-msgstr "Copiar"
+msgstr "Executar ação de copiar"
 
 #: ../tvp-svn-helper/main.c:157
 msgid "Execute delete action"
-msgstr "Apagar"
+msgstr "Executar ação de apagar"
 
 #: ../tvp-svn-helper/main.c:163
 msgid "Execute diff action"
@@ -829,11 +829,11 @@ msgstr "Executar ação diff"
 
 #: ../tvp-svn-helper/main.c:169
 msgid "Execute export action"
-msgstr "Exportar"
+msgstr "Executar ação de exportar"
 
 #: ../tvp-svn-helper/main.c:175
 msgid "Execute import action"
-msgstr "Importar"
+msgstr "Executar ação de importar"
 
 #: ../tvp-svn-helper/main.c:181
 msgid "Execute lock action"
@@ -845,71 +845,71 @@ msgstr "Propriedades"
 
 #: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
-msgstr "Resolvido"
+msgstr "Executar ação de resolvido"
 
 #: ../tvp-svn-helper/main.c:211
 msgid "Execute relocate action"
-msgstr "Realocar"
+msgstr "Executar ação de recolocar"
 
 #: ../tvp-svn-helper/main.c:217
 msgid "Execute revert action"
-msgstr "Reverter"
+msgstr "Executar ação de reverter"
 
 #: ../tvp-svn-helper/main.c:229
 msgid "Execute switch action"
-msgstr "Mudar"
+msgstr "Executar ação de mudar"
 
 #: ../tvp-svn-helper/main.c:235
 msgid "Execute unlock action"
-msgstr "Desbloquear"
+msgstr "Executar ação de desbloquear"
 
 #: ../tvp-svn-helper/main.c:241
 msgid "Execute update action"
-msgstr "Actualizar"
+msgstr "Executar ação de atualização"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
-msgstr "Opções Relacionadas com Lista de Alterações:"
+msgstr "Opções relacionadas com lista de alterações:"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
-msgstr "Opções Relacionadas com Obter:"
+msgstr "Opções relacionadas com obtenção:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
-msgstr "Opções Relacionadas com Limpeza:"
+msgstr "Opções relacionadas com limpeza:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr "Opões Relacionadas com Cometer:"
+msgstr "Opões relacionadas com submissão:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
-msgstr "Opções Relacionadas com Copiar:"
+msgstr "Opções relacionadas com copiar:"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
-msgstr "Opções Relacionadas com Apagar:"
+msgstr "Opções relacionadas com apagar:"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
-msgstr "Opções relacionadas com diff:"
+msgstr "Opções relacionadas com diferenças:"
 
 #: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
-msgstr "Opções Relacionadas com Exportação:"
+msgstr "Opções relacionadas com exportação:"
 
 #: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
-msgstr "Opções Relacionadas com Importação:"
+msgstr "Opções relacionadas com importação:"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Lock Related Options:"
-msgstr "Opções Relacionadas com Bloquear:"
+msgstr "Opções relacionadas com bloquear:"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
-msgstr "Opções Relacionadas com Propriedades:"
+msgstr "Opções relacionadas com propriedades:"
 
 #: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
@@ -921,7 +921,7 @@ msgstr "Opções relacionadas com resolvido:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
-msgstr "Opções relacionadas com realocar:"
+msgstr "Opções relacionadas com recolocar:"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
@@ -1197,7 +1197,7 @@ msgstr "Cópia substituída"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
-msgstr "Redireccionamento de URL"
+msgstr "Redirecionamento de URL"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
@@ -1276,7 +1276,7 @@ msgstr "Erro"
 
 #: ../tvp-svn-helper/tsh-common.c:1176
 msgid "Local action"
-msgstr "Acção local"
+msgstr "Ação local"
 
 #: ../tvp-svn-helper/tsh-copy.c:122
 msgid "Local copy"
@@ -1437,15 +1437,15 @@ msgstr "_Remover"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
-msgstr "Realocação falhou"
+msgstr "Recolocação falhou"
 
 #: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
-msgstr "Realocação terminada"
+msgstr "Recolocação terminada"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr "A relocalizar..."
+msgstr "A recolocar..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
