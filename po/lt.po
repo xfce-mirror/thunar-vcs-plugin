@@ -4,13 +4,13 @@
 # 
 # Translators:
 # Algimantas Margevičius <margevicius.algimantas@gmail.com>, 2012
-# Moo, 2015,2017-2018
+# Moo, 2015,2017-2018,2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-06-28 09:04+0000\n"
+"PO-Revision-Date: 2020-08-20 09:49+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian (http://www.transifex.com/xfce/thunar-plugins/language/lt/)\n"
 "MIME-Version: 1.0\n"
@@ -280,7 +280,7 @@ msgstr "Išspręsta"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr "Šalinti darbinės kopijos failų ar katalogų \"konfliktuojančią\" būseną"
+msgstr "Šalinti darbinės kopijos failų ar katalogų „konfliktuojančią“ būseną"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
