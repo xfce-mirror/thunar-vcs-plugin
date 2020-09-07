@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"PO-Revision-Date: 2020-09-07 03:31+0000\n"
+"Last-Translator: Triyan W. Nugroho <triyan.wn@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/xfce/thunar-plugins/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +28,7 @@ msgstr "Tambah"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:222
 msgid "Add file contents to the index"
-msgstr ""
+msgstr "Tambah isi berkas ke indeks"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
@@ -40,7 +40,7 @@ msgstr "Salahkan"
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
-msgstr ""
+msgstr "Tampilkan revisi dan penulis yang terakhir mengubah setiap baris pada berkas"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
@@ -50,18 +50,18 @@ msgstr "Cabang"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227
 msgid "List, create or switch branches"
-msgstr ""
+msgstr "Tampilkan daftar, buat atau pindah cabang"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
 #: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
-msgstr "Hapus"
+msgstr "Bersihkan"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:229
 msgid "Remove untracked files from the working tree"
-msgstr ""
+msgstr "Buang berkas yang tak dilacak dari pohon kerja"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -70,7 +70,7 @@ msgstr "Klon"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231
 msgid "Clone a repository into a new directory"
-msgstr ""
+msgstr "Klon sebuah repositori ke dalam direktori baru"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
 #. _("Commit"), "gtk-apply", _("Commit"));
@@ -87,12 +87,12 @@ msgstr ""
 #: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
-msgstr "Catatan"
+msgstr "Log"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:237
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr ""
+msgstr "Tampilkan log komit"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
@@ -102,7 +102,7 @@ msgstr "Pindah"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr ""
+msgstr "Pindah atau namai ulang sebuah berkas, direktori, atau taut simbolis"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -113,20 +113,20 @@ msgstr ""
 #: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
-msgstr "Atur Ulang"
+msgstr "Setel Ulang"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:244
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "Setel ulang HEAD saat ini ke keadaan yang ditentukan"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
-msgstr "Simpan"
+msgstr "Simpan tersembunyi"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:248
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "Simpan secara tersembunyi perubahan pada direktori kerja kotor"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
@@ -140,7 +140,7 @@ msgstr "Status"
 #: ../thunar-vcs-plugin/tvp-git-action.c:250
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr ""
+msgstr "Tampilkan status pohon kerja"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:258
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
@@ -163,7 +163,7 @@ msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr ""
+msgstr "Tambah berkas, direktori, atau taut simbolis"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -172,7 +172,7 @@ msgstr "Cek keluar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr ""
+msgstr "Cek keluar sebuah salinan kerja dari repositori"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -180,18 +180,18 @@ msgstr "Bersihkan"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr ""
+msgstr "Bersihkan salinan kerja secara rekursif"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
 msgid "Commit"
-msgstr "Terapkan"
+msgstr "Komit"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr ""
+msgstr "Kirim perubahan dari salinan kerja Anda ke repositori"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
@@ -200,7 +200,7 @@ msgstr "Salin"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr ""
+msgstr "Salin sebuah berkas atau direktori di salinan kerja atau di repositori"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -209,16 +209,16 @@ msgstr "Hapus"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr ""
+msgstr "Hapus sebuah item dari salinan kerja atau repositori"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
 msgid "Diff"
-msgstr "Beda"
+msgstr "Diff"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr ""
+msgstr "Tampilkan perbedaan antara dua revisi atau path"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
@@ -227,7 +227,7 @@ msgstr "Ekspor"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr ""
+msgstr "Ekspor sebuah pohon direktori yang bersih"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -236,7 +236,7 @@ msgstr "Impor"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Commit an unversioned file or tree into the repository"
-msgstr ""
+msgstr "Terapkan berkas atau pohon yang belum memiliki versi ke repositori"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -247,11 +247,11 @@ msgstr "Kunci"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr ""
+msgstr "Kunci path salinan kerja pada repositori sehingga tidak ada pengguna lain yang bisa melakukan komit perubahan ke dalamnya"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr ""
+msgstr "Pindah sebuah berkas atau direktori"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -259,7 +259,7 @@ msgstr "Sunting Properti"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit the property of one or more items"
-msgstr ""
+msgstr "Sunting properti satu atau lebih item"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -269,7 +269,7 @@ msgstr "Relokasi"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr ""
+msgstr "Pindahkan salinan kerja agar menunjuk ke URL akar repositori yang berbeda"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -279,7 +279,7 @@ msgstr "Benahi"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr ""
+msgstr "Buang status \"konflik\" pada berkas atau direktori salinan kerja"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -288,7 +288,7 @@ msgstr "Kembalikan"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
-msgstr ""
+msgstr "Batalkan semua suntingan lokal"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
@@ -297,7 +297,7 @@ msgstr "Ganti"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr ""
+msgstr "Perbarui salinan kerja ke URL yang berbeda"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -306,7 +306,7 @@ msgstr "Buka Kunci"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "Buka kunci path salinan kerja"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -315,7 +315,7 @@ msgstr "Mutakhirkan"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr ""
+msgstr "Mutakhirkan salinan kerja Anda"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -342,7 +342,7 @@ msgstr "Revisi:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
 msgid "Repository:"
-msgstr "Gudang:"
+msgstr "Repositori:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:174
 msgid "Modified revision:"
@@ -426,15 +426,15 @@ msgstr "Eksekusi aksi cabang"
 
 #: ../tvp-git-helper/main.c:105
 msgid "Execute clean action"
-msgstr "Eksekusi aksi hapus"
+msgstr "Eksekusi aksi bersihkan"
 
 #: ../tvp-git-helper/main.c:111
 msgid "Execute clone action"
-msgstr "Eksekusi aksi klona"
+msgstr "Eksekusi aksi klon"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
 msgid "Execute log action"
-msgstr "Eksekusi aksi catatan"
+msgstr "Eksekusi aksi log"
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
 msgid "Execute move action"
@@ -442,11 +442,11 @@ msgstr "Eksekusi aksi pindah"
 
 #: ../tvp-git-helper/main.c:129
 msgid "Execute reset action"
-msgstr "Eksekusi aksi atur ulang"
+msgstr "Eksekusi aksi setel ulang"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr "Eksekusi aksi simpan"
+msgstr "Eksekusi aksi simpan tersembunyi"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
@@ -454,7 +454,7 @@ msgstr "Eksekusi aksi status"
 
 #: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
 msgid "Add Related Options:"
-msgstr "Opsi Tambah Terkait:"
+msgstr "Opsi Terkait Tambah:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
@@ -470,7 +470,7 @@ msgstr "Opsi Terkait Klon:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
-msgstr "Opsi Catatan Terkait:"
+msgstr "Opsi Terkait Log:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
 msgid "Move Related Options:"
@@ -478,20 +478,20 @@ msgstr "Opsi Terkait Pindah:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr "Opsi Terkait Atur Ulang:"
+msgstr "Opsi Terkait Setel Ulang:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "Opsi Terkait Simpan:"
+msgstr "Opsi Terkait Simpan Tersembunyi:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
-msgstr "Opsi Status Terkait:"
+msgstr "Opsi Terkait Status:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
 msgid "Line"
-msgstr "Jalur"
+msgstr "Baris"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:96
 #: ../tvp-git-helper/tgh-log-dialog.c:134
@@ -527,7 +527,7 @@ msgstr "Tanggal"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:251
 #: ../tvp-svn-helper/tsh-status-dialog.c:266
 msgid "_Close"
-msgstr ""
+msgstr "_Tutup"
 
 #. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
 #: ../tvp-git-helper/tgh-blame-dialog.c:134
@@ -560,7 +560,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:140
 #: ../tvp-svn-helper/tsh-trust-dialog.c:81
 msgid "_Cancel"
-msgstr ""
+msgstr "_Batal"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:109
 msgid "Active"
@@ -574,12 +574,12 @@ msgstr "Nama"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
-msgstr ""
+msgstr "_Lompat ke"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:249
 msgid "_New"
-msgstr ""
+msgstr "_Baru"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
@@ -622,7 +622,7 @@ msgstr "Bersihkan paksa."
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:141
 #: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -630,7 +630,7 @@ msgstr "Klon selesai"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning..."
-msgstr ""
+msgstr "Buat Klon..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
 #: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
@@ -659,14 +659,14 @@ msgstr "tak dilacak"
 #: ../tvp-svn-helper/tsh-notify-dialog.c:93
 #: ../tvp-svn-helper/tsh-status-dialog.c:117
 msgid "Path"
-msgstr "Alamat"
+msgstr "Path"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:98
 #: ../tvp-git-helper/tgh-status-dialog.c:109
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:91
 #: ../tvp-svn-helper/tsh-status-dialog.c:123
 msgid "State"
-msgstr "Tingkat"
+msgstr "Kondisi"
 
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:113
 #: ../tvp-svn-helper/tsh-file-selection-dialog.c:142
@@ -702,7 +702,7 @@ msgstr "Berkas"
 #: ../tvp-svn-helper/tsh-log-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
-msgstr ""
+msgstr "Sega_rkan"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
@@ -714,7 +714,7 @@ msgstr "Pindah Ke"
 
 #: ../tvp-git-helper/tgh-move.c:162
 msgid "Move..."
-msgstr ""
+msgstr "Pindah..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -728,11 +728,11 @@ msgstr "Beritahukan"
 
 #: ../tvp-git-helper/tgh-reset.c:60
 msgid "Reset finished"
-msgstr "Atur ulang selesai"
+msgstr "Setel ulang selesai"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset..."
-msgstr ""
+msgstr "Setel Ulang..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:172
 msgid "Description"
@@ -745,19 +745,19 @@ msgstr "_Simpan"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:226
 msgid "_Apply"
-msgstr ""
+msgstr "Ter_apkan"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
-msgstr ""
+msgstr "_Hapus"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
 msgid "C_lear"
-msgstr ""
+msgstr "Ber_sihkan"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
-msgstr "Deskripsi simpan:"
+msgstr "Deskripsi simpan tersembunyi:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
@@ -766,12 +766,12 @@ msgstr "Anda yakin ingin menghapus %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
-msgstr "Anda yakin ingin menghapus semua simpanan?"
+msgstr "Anda yakin ingin menghapus semua simpanan tersembunyi?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
 msgid "_Repository:"
-msgstr "_Gudang:"
+msgstr "_Repositori:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:71
 #: ../tvp-git-helper/tgh-transfer-dialog.c:98
@@ -811,7 +811,7 @@ msgstr "Eksekusi aksi bersihkan"
 
 #: ../tvp-svn-helper/main.c:145
 msgid "Execute commit action"
-msgstr "Eksekusi aksi terapkan"
+msgstr "Eksekusi aksi komit"
 
 #: ../tvp-svn-helper/main.c:151
 msgid "Execute copy action"
@@ -875,19 +875,19 @@ msgstr "Opsi Terkait Cek Keluar:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
-msgstr "Opsi Bersihkan Terkait:"
+msgstr "Opsi Terkait Bersihkan:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr "Opsi Terapkan Terkait:"
+msgstr "Opsi Terkait Komit:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
-msgstr "Opsi Salin Terkait:"
+msgstr "Opsi Terkait Salin:"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
-msgstr "Opsi Hapus Terkait:"
+msgstr "Opsi Terkait Hapus:"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
@@ -895,19 +895,19 @@ msgstr "Opsi Terkait Diff:"
 
 #: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
-msgstr "Opsi Ekspor Terkait:"
+msgstr "Opsi Terkait Ekspor:"
 
 #: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
-msgstr "Opsi Impor Terkait:"
+msgstr "Opsi Terkait Impor:"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Lock Related Options:"
-msgstr "Opsi Kunci Terkait:"
+msgstr "Opsi Terkait Kunci:"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
-msgstr "Opsi Properti Terkait:"
+msgstr "Opsi Terkait Properti:"
 
 #: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
@@ -915,7 +915,7 @@ msgstr "Properti"
 
 #: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
-msgstr "Opsi Benahi Terkait:"
+msgstr "Opsi Terkait Benahi:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
@@ -923,19 +923,19 @@ msgstr "Opsi Terkait Relokasi:"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr "Opsi Kembalikan Terkait:"
+msgstr "Opsi Terkait Kembalikan:"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
-msgstr "Opsi Ganti Terkait:"
+msgstr "Opsi Terkait Ganti:"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
-msgstr "Opsi Buka Kunci Terkait:"
+msgstr "Opsi Terkait Buka Kunci:"
 
 #: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
-msgstr "Opsi Mutakhirkan Terkait:"
+msgstr "Opsi Terkait Mutakhirkan:"
 
 #: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
@@ -948,7 +948,7 @@ msgstr "Salahkan gagal"
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "'%s' bukan path lokal"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -960,7 +960,7 @@ msgstr "Bersihkan selesai"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr ""
+msgstr "Membersihkan..."
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -983,7 +983,7 @@ msgstr "Selesai"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr "Pesan Terapkan"
+msgstr "Pesan Komit"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
@@ -1008,7 +1008,7 @@ msgstr "Dihapus"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Restored"
-msgstr "Disimpan ulang"
+msgstr "Dipulihkan"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Reverted"
@@ -1067,7 +1067,7 @@ msgstr "Ada"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
-msgstr "Atur senarai ubah"
+msgstr "Senarai ubah disetel"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
@@ -1147,15 +1147,15 @@ msgstr "Eksternal dilepas"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
-msgstr "Bayangan ditambah"
+msgstr "Tambah berbayang"
 
 #: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
-msgstr "Bayangan dimutakhirkan"
+msgstr "Mutakhirkan berbayang"
 
 #: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
-msgstr "Bayangan dihapus"
+msgstr "Hapus berbayang"
 
 #: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
@@ -1163,7 +1163,7 @@ msgstr "Gabung info perekaman"
 
 #: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
-msgstr "Alamat dimutakhirkan"
+msgstr "Path ditingkatkan"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
@@ -1199,7 +1199,7 @@ msgstr "Pengalihan URL"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
-msgstr "Alamat tidak ada"
+msgstr "Path tidak ada"
 
 #: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
@@ -1236,7 +1236,7 @@ msgstr "Tak diubah"
 
 #: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
-msgstr "Rintangan"
+msgstr "Dihalangi"
 
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
@@ -1248,7 +1248,7 @@ msgstr "Dimerger"
 
 #: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
-msgstr "Konflik"
+msgstr "Berkonflik"
 
 #: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
@@ -1353,7 +1353,7 @@ msgstr "Memuat..."
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
-msgstr "_Sertifikat"
+msgstr "_Sertifikat:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:61
 msgid "Select a file"
@@ -1391,7 +1391,7 @@ msgstr "_Nama pengguna:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:72
 msgid "_Password:"
-msgstr "_Sandi lewat:"
+msgstr "_Kata Sandi:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:87
 msgid "Login"
@@ -1407,7 +1407,7 @@ msgstr "Pindah lokal"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr ""
+msgstr "Tipe MIME"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
@@ -1415,7 +1415,7 @@ msgstr "Pemberitahuan"
 
 #: ../tvp-svn-helper/tsh-properties.c:143
 msgid "Set property failed"
-msgstr "Atur properti gagal"
+msgstr "Setel properti gagal"
 
 #: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
@@ -1427,11 +1427,11 @@ msgstr "Nilai"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "T_ambah"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "_Buang"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
@@ -1443,7 +1443,7 @@ msgstr "Relokasi selesai"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr ""
+msgstr "Relokasi..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
