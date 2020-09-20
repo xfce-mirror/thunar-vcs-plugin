@@ -17,7 +17,7 @@ The current features are:
 
 ### Homepage
 
-[Thunar-vcs-plugin documentation](https://docs.xfce.org/thunar-plugins/thunar-vcs-plugin/start)
+[Thunar-vcs-plugin documentation](https://docs.xfce.org/xfce/thunar/thunar-vcs-plugin)
 
 ### Changelog
 
@@ -29,7 +29,7 @@ See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-vcs-plugin/-/blob/maste
 
 ### Download a Release Tarball
 
-[Thunar-vcs-plugin vcs](https://vcs.xfce.org/src/thunar-plugins/thunar-vcs-plugin)
+[Thunar-vcs-plugin vcs](https://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin)
     or
 [Thunar-vcs-plugin tags](https://gitlab.xfce.org/thunar-plugins/thunar-vcs-plugin/-/tags)
 
