@@ -4,14 +4,14 @@
 # 
 # Translators:
 # Slavko <linux@slavino.sk>, 2014-2015
-# Tomáš Vadina <inactive+kyberdev@transifex.com>, 2011
+# 7dcd6f74323fe8d9c477949ff8fcbb1c_c427b63 <3fcd202e3dfab15fda15b8e88e54d449_7173>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-09-14 00:15+0000\n"
-"Last-Translator: Nick Schermer <nick@xfce.org>\n"
+"PO-Revision-Date: 2020-10-02 08:25+0000\n"
+"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak (http://www.transifex.com/xfce/thunar-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -528,7 +528,7 @@ msgstr "Dátum"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:251
 #: ../tvp-svn-helper/tsh-status-dialog.c:266
 msgid "_Close"
-msgstr ""
+msgstr "_Zavrieť"
 
 #. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
 #: ../tvp-git-helper/tgh-blame-dialog.c:134
@@ -746,7 +746,7 @@ msgstr "_Uložiť"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:226
 msgid "_Apply"
-msgstr ""
+msgstr "_Použiť"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
