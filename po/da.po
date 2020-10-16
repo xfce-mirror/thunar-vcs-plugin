@@ -8,13 +8,13 @@
 # Chris Darnell <chris@cedeel.com>, 2013
 # Jens Hyllegaard <jens.hyllegaard@gmail.com>, 2007
 # scootergrisen, 2017
-# scootergrisen, 2017-2019
+# scootergrisen, 2017-2020
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-06-17 18:52+0000\n"
+"PO-Revision-Date: 2020-08-03 16:52+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -592,7 +592,7 @@ msgstr "Grennavn:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:55
 msgid "Remove directories."
-msgstr "Fjern kataloger."
+msgstr "Fjern mapper."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:67
 msgid "Exclude ignored files"
@@ -795,7 +795,7 @@ msgstr "Vælg mappe"
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:176
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:126
 msgid "_Directory:"
-msgstr "_Katalog:"
+msgstr "_Mappe:"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:106
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:137
