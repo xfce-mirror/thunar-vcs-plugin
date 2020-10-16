@@ -3,10 +3,10 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# atekinalp <alper.tekinalp@gmail.com>, 2011
+# Alper Tekinalp <alper.tekinalp@gmail.com>, 2011
 # Aşır <asirkaraman@yahoo.de>, 2014
 # Aşır <asirkaraman@yahoo.de>, 2014
-# atekinalp <alper.tekinalp@gmail.com>, 2011
+# Alper Tekinalp <alper.tekinalp@gmail.com>, 2011
 # aybuke <aybuke.147@gmail.com>, 2013
 # Demiray Muhterem <mdemiray@msn.com>, 2018
 # Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2014-2015
