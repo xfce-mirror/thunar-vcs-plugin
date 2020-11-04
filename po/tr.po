@@ -9,6 +9,7 @@
 # Alper Tekinalp <alper.tekinalp@gmail.com>, 2011
 # aybuke <aybuke.147@gmail.com>, 2013
 # Demiray Muhterem <mdemiray@msn.com>, 2018
+# Emin Tufan <etcetin@gmail.com>, 2020
 # Natavan Mirzayeva <mirzayevanatavan@gmail.com>, 2014-2015
 # Necdet Yücel <necdetyucel@gmail.com>, 2013-2014,2018
 # Nevzat Kılıçarslan <nevzat-tazven@hotmail.com>, 2018
@@ -18,8 +19,8 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-05-23 05:57+0000\n"
-"Last-Translator: Serdar Sağlam <teknomobil@msn.com>\n"
+"PO-Revision-Date: 2020-11-04 22:30+0000\n"
+"Last-Translator: Emin Tufan <etcetin@gmail.com>\n"
 "Language-Team: Turkish (http://www.transifex.com/xfce/thunar-plugins/language/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -177,7 +178,7 @@ msgstr "Dosya, dizin veya sembolik bağlantı ekle"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
 msgid "Checkout"
-msgstr "Gözden geçir"
+msgstr "Gözden Geçir"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
@@ -196,7 +197,7 @@ msgstr "Çalışma kopyasını art arda temizleyin"
 #: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
 #: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
 msgid "Commit"
-msgstr "Öneri"
+msgstr "İşle"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
@@ -274,7 +275,7 @@ msgstr "Bir veya daha fazla öğenin özelliğini düzenleyin"
 #: ../tvp-svn-helper/tsh-relocate.c:138
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:187
 msgid "Relocate"
-msgstr "Yeniden konumlandır"
+msgstr "Yeniden Konumlandır"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
@@ -579,7 +580,7 @@ msgstr "aktif"
 #: ../tvp-git-helper/tgh-stash-dialog.c:160
 #: ../tvp-svn-helper/tsh-properties-dialog.c:124
 msgid "Name"
-msgstr "İsim"
+msgstr "Ad"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
@@ -631,7 +632,7 @@ msgstr "Temizlemeye zorla."
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:141
 #: ../tvp-svn-helper/tsh-trust-dialog.c:82
 msgid "_OK"
-msgstr "_TAMAM"
+msgstr "_Tamam"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
@@ -688,7 +689,7 @@ msgstr "YazarTarihi"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
-msgstr "Tarihİşlemek"
+msgstr "İşlemeTarihi"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:166
 #: ../tvp-svn-helper/tsh-log-dialog.c:146
@@ -793,7 +794,7 @@ msgstr "De_po:"
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:94
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:129
 msgid "Select a folder"
-msgstr "Bir dizin seçin"
+msgstr "Klasör seç"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:95
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:176
@@ -992,7 +993,7 @@ msgstr "Tamamlandı"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr "Gönderim Mesajı"
+msgstr "Gönderim İletisi"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
@@ -1144,7 +1145,7 @@ msgstr "Atlanan tıkanıklık"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr "Sadece çalışanlar atlandı"
+msgstr "Yalnızca çalışanlar atlandı"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
@@ -1208,7 +1209,7 @@ msgstr "URL yönlendirme"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
-msgstr "Yol mevcut değil"
+msgstr "Yol yok"
 
 #: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
@@ -1366,13 +1367,13 @@ msgstr "_Sertifika"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:61
 msgid "Select a file"
-msgstr "Bir dosya seç"
+msgstr "Dosya seç"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:69
 #: ../tvp-svn-helper/tsh-login-dialog.c:82
 #: ../tvp-svn-helper/tsh-trust-dialog.c:74
 msgid "Remember"
-msgstr "Hatırla"
+msgstr "Anımsa"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:74
 msgid "Certificate"
@@ -1380,11 +1381,11 @@ msgstr "Sertifika"
 
 #: ../tvp-svn-helper/tsh-import.c:149
 msgid "Import Message"
-msgstr "Mesajı içe aktar"
+msgstr "İleti İçeri Aktar"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
-msgstr "Kaydetme başarısızdır"
+msgstr "Kaydetme başarısız"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
@@ -1408,7 +1409,7 @@ msgstr "Oturum Aç"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
-msgstr "Log mesajı"
+msgstr "Günlük İletisi"
 
 #: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
@@ -1496,7 +1497,7 @@ msgstr "Haricileri Gizle"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
-msgstr "Depoyu Kontrol et"
+msgstr "Depoyu Denetle"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
