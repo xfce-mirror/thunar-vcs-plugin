@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2020-08-03 16:52+0000\n"
+"PO-Revision-Date: 2020-11-17 00:04+0000\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/xfce/thunar-plugins/language/da/)\n"
 "MIME-Version: 1.0\n"
@@ -177,7 +177,7 @@ msgstr "Tjek ud"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr "Tjekud en arbejdskopi fra et arkiv"
+msgstr "Tjek ud en arbejdskopi fra et arkiv"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -487,7 +487,7 @@ msgstr "Nulstil-relaterede tilvalg:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "Stash relaterede tilvalg:"
+msgstr "Stash-relaterede tilvalg:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
@@ -648,7 +648,7 @@ msgstr "Kloning ..."
 #: ../tvp-svn-helper/tsh-switch.c:79 ../tvp-svn-helper/tsh-unlock.c:90
 #: ../tvp-svn-helper/tsh-update.c:96
 msgid "Failed"
-msgstr "Fejlede"
+msgstr "Mislykkedes"
 
 #: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:245
@@ -762,7 +762,7 @@ msgstr "_Ryd"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
-msgstr "Stash beskrivelse:"
+msgstr "Stashbeskrivelse:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
@@ -808,7 +808,7 @@ msgstr "Kør ændring-handling"
 
 #: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
-msgstr "Kør tjekud-handling"
+msgstr "Kør tjek ud-handling"
 
 #: ../tvp-svn-helper/main.c:139
 msgid "Execute cleanup action"
@@ -876,7 +876,7 @@ msgstr "Tilvalg relateret til ændringsliste:"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
-msgstr "Tjekud-relaterede tilvalg:"
+msgstr "Tjek ud-relaterede tilvalg:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
@@ -948,7 +948,7 @@ msgstr "For få parametre angivet"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr "Anklag fejlede"
+msgstr "Anklag mislykkedes"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
@@ -957,7 +957,7 @@ msgstr "'%s' er ikke en lokal sti"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
-msgstr "Oprydning fejlede"
+msgstr "Oprydning mislykkedes"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
@@ -1021,7 +1021,7 @@ msgstr "Tilbageført"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
-msgstr "Tilbageføring fejlede"
+msgstr "Tilbageføring mislykkedes"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
@@ -1060,11 +1060,11 @@ msgstr "Ikke låst"
 
 #: ../tvp-svn-helper/tsh-common.c:599
 msgid "Lock failed"
-msgstr "Låsning fejlede"
+msgstr "Låsning mislykkedes"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Unlock failed"
-msgstr "Oplåsning fejlede"
+msgstr "Oplåsning mislykkedes"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Exists"
@@ -1128,7 +1128,7 @@ msgstr "Trækonflikt"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
-msgstr "Ekstern fejlede"
+msgstr "Ekstern mislykkedes"
 
 #: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
@@ -1299,7 +1299,7 @@ msgstr "Slettemeddelelse"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
-msgstr "Diff fejlede"
+msgstr "Diff mislykkedes"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1380,7 +1380,7 @@ msgstr "Importmeddelelse"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
-msgstr "Log fejlede"
+msgstr "Log mislykkedes"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
@@ -1420,11 +1420,11 @@ msgstr "Underretning"
 
 #: ../tvp-svn-helper/tsh-properties.c:143
 msgid "Set property failed"
-msgstr "Indstilling af egenskab fejlede"
+msgstr "Indstilling af egenskab mislykkedes"
 
 #: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
-msgstr "Egenskaber fejlede"
+msgstr "Egenskaber mislykkedes"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
@@ -1440,7 +1440,7 @@ msgstr "_Fjern"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
-msgstr "Skift adresse fejlede"
+msgstr "Skift adresse mislykkedes"
 
 #: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
@@ -1460,7 +1460,7 @@ msgstr "_Til:"
 
 #: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
-msgstr "Status fejlede"
+msgstr "Status mislykkedes"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
