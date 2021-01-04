@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2021-01-03 10:27+0000\n"
+"PO-Revision-Date: 2021-01-04 09:39+0000\n"
 "Last-Translator: Саша Петровић <salepetronije@gmail.com>\n"
 "Language-Team: Serbian (http://www.transifex.com/xfce/thunar-plugins/language/sr/)\n"
 "MIME-Version: 1.0\n"
@@ -446,7 +446,7 @@ msgstr "Изврши дејство повратка на подразумева
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr ""
+msgstr "Изврши дејство похране"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
@@ -458,35 +458,35 @@ msgstr "Додај односне могућности:"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
-msgstr ""
+msgstr "Могућности односне на кривицу:"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
-msgstr ""
+msgstr "Могућности односне на гранање:"
 
 #: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
 msgid "Clone Related Options:"
-msgstr ""
+msgstr "Могућности односне на клонирање:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
-msgstr ""
+msgstr "Могућности односне на дневник:"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
 msgid "Move Related Options:"
-msgstr ""
+msgstr "Могућности односне на премештање:"
 
 #: ../tvp-git-helper/main.c:181
 msgid "Reset Related Options:"
-msgstr ""
+msgstr "Могућности односне на враћање на подразумевано:"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr ""
+msgstr "Могућности односне на похрану:"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
-msgstr ""
+msgstr "Могућности односне на стање:"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
@@ -867,100 +867,100 @@ msgstr "Изврши дејство освежавања"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
-msgstr ""
+msgstr "Могућности односне на списак измена:"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
-msgstr ""
+msgstr "Могућности односне на проверу:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
-msgstr ""
+msgstr "Могућности односне на чишћење:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr ""
+msgstr "Могућности односне на отпрему:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
-msgstr ""
+msgstr "Могућности односне на умножавање:"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
-msgstr ""
+msgstr "Могућности односне на брисање:"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
-msgstr ""
+msgstr "Могућности односне на разлику:"
 
 #: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
-msgstr ""
+msgstr "Могућности односне на извоз:"
 
 #: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
-msgstr ""
+msgstr "Могућности односне на увоз:"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Lock Related Options:"
-msgstr ""
+msgstr "Могућности односне на закључавање:"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
-msgstr ""
+msgstr "Могућности односне на својства:"
 
 #: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
-msgstr ""
+msgstr "Својства"
 
 #: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
-msgstr ""
+msgstr "Могућности односне на разрешавање:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "Могућности односне на промену места:"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Могућности односне на повратак:"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Могућности односне на прелазак:"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
-msgstr ""
+msgstr "Могућности односне на откључавање:"
 
 #: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
-msgstr ""
+msgstr "Могућности односне на освежавање:"
 
 #: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
-msgstr ""
+msgstr "Нема довољно обезбеђених аргумената"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr ""
+msgstr "Кривљење није успело"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "„%s“ није местна путања"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
-msgstr ""
+msgstr "Чишћење није успело"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
-msgstr ""
+msgstr "Чишћење је завршено"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr ""
+msgstr "Чистим..."
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -968,333 +968,333 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-move.c:107
 #, c-format
 msgid "At revision: %ld"
-msgstr ""
+msgstr "На преради: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:247
 msgid "Nothing to do"
-msgstr ""
+msgstr "Нема ничег за чинити"
 
 #: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
 #: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
 #: ../tvp-svn-helper/tsh-copy.c:131 ../tvp-svn-helper/tsh-delete.c:130
 #: ../tvp-svn-helper/tsh-import.c:109 ../tvp-svn-helper/tsh-move.c:121
 msgid "Completed"
-msgstr ""
+msgstr "Завршено"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr ""
+msgstr "Порука отпреме"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
-msgstr ""
+msgstr "Да ли сачувати лозинку у обичном писму?"
 
 #: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
 #: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
 #: ../tvp-svn-helper/tsh-common.c:827 ../tvp-svn-helper/tsh-common.c:940
 msgid "Added"
-msgstr ""
+msgstr "Додато"
 
 #: ../tvp-svn-helper/tsh-common.c:577 ../tvp-svn-helper/tsh-common.c:636
 #: ../tvp-svn-helper/tsh-common.c:949
 msgid "Copied"
-msgstr ""
+msgstr "Умножено"
 
 #: ../tvp-svn-helper/tsh-common.c:578 ../tvp-svn-helper/tsh-common.c:584
 #: ../tvp-svn-helper/tsh-common.c:593 ../tvp-svn-helper/tsh-common.c:782
 #: ../tvp-svn-helper/tsh-common.c:830 ../tvp-svn-helper/tsh-common.c:942
 msgid "Deleted"
-msgstr ""
+msgstr "Избрисано"
 
 #: ../tvp-svn-helper/tsh-common.c:579
 msgid "Restored"
-msgstr ""
+msgstr "Повраћено"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Reverted"
-msgstr ""
+msgstr "Обрнуто"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
-msgstr ""
+msgstr "Обртање није успело"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
-msgstr ""
+msgstr "Прескочено"
 
 #: ../tvp-svn-helper/tsh-common.c:586
 msgid "Updated"
-msgstr ""
+msgstr "Освежено"
 
 #: ../tvp-svn-helper/tsh-common.c:588 ../tvp-svn-helper/tsh-common.c:590
 #: ../tvp-svn-helper/tsh-common.c:789
 msgid "External"
-msgstr ""
+msgstr "Спољње"
 
 #: ../tvp-svn-helper/tsh-common.c:591 ../tvp-svn-helper/tsh-common.c:784
 #: ../tvp-svn-helper/tsh-common.c:833 ../tvp-svn-helper/tsh-common.c:945
 msgid "Modified"
-msgstr ""
+msgstr "Измењено"
 
 #: ../tvp-svn-helper/tsh-common.c:594 ../tvp-svn-helper/tsh-common.c:783
 #: ../tvp-svn-helper/tsh-common.c:836 ../tvp-svn-helper/tsh-common.c:938
 msgid "Replaced"
-msgstr ""
+msgstr "Замењено"
 
 #: ../tvp-svn-helper/tsh-common.c:595
 msgid "Transmitting"
-msgstr ""
+msgstr "Пренос"
 
 #: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
 msgid "Locked"
-msgstr ""
+msgstr "Закључано"
 
 #: ../tvp-svn-helper/tsh-common.c:598 ../tvp-svn-helper/tsh-common.c:951
 msgid "Unlocked"
-msgstr ""
+msgstr "Откључано"
 
 #: ../tvp-svn-helper/tsh-common.c:599
 msgid "Lock failed"
-msgstr ""
+msgstr "Закључавање није успело"
 
 #: ../tvp-svn-helper/tsh-common.c:600
 msgid "Unlock failed"
-msgstr ""
+msgstr "Откључавање није успело"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Exists"
-msgstr ""
+msgstr "Постоји"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
-msgstr ""
+msgstr "Списак измена је постављен"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
-msgstr ""
+msgstr "Списак измена је очишћен"
 
 #: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
-msgstr ""
+msgstr "Списак измена је премештен"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Merge begin"
-msgstr ""
+msgstr "Стапање је почело"
 
 #: ../tvp-svn-helper/tsh-common.c:606
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Спољње стапање је почело"
 
 #: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
-msgstr ""
+msgstr "Замени"
 
 #: ../tvp-svn-helper/tsh-common.c:609
 msgid "Property added"
-msgstr ""
+msgstr "Својство је додато"
 
 #: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
-msgstr ""
+msgstr "Својство је измењено"
 
 #: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
-msgstr ""
+msgstr "Својство је избрисано"
 
 #: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
-msgstr ""
+msgstr "Својство не постоји"
 
 #: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
-msgstr ""
+msgstr "Својство прераде је постављено"
 
 #: ../tvp-svn-helper/tsh-common.c:614
 msgid "Revision property deleted"
-msgstr ""
+msgstr "Својство прераде је избрисано"
 
 #: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
-msgstr ""
+msgstr "Стапање је завршено"
 
 #: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
-msgstr ""
+msgstr "Сукоб гранања"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
-msgstr ""
+msgstr "Спољње није успело"
 
 #: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
-msgstr ""
+msgstr "Почело"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Прескочена је препрека"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr ""
+msgstr "Прескочен је рад само"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Прескочен је одбијени приступ"
 
 #: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
-msgstr ""
+msgstr "Спољње је уклоњено"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
-msgstr ""
+msgstr "Додано је сенчење"
 
 #: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
-msgstr ""
+msgstr "Освежено је сенчење"
 
 #: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Избрисано је сенчење"
 
 #: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
-msgstr ""
+msgstr "Подаци записа стапања"
 
 #: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
-msgstr ""
+msgstr "Обновљена путања"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Стапање података о запису је почело"
 
 #: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
-msgstr ""
+msgstr "Стопи издвојене податке"
 
 #: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
-msgstr ""
+msgstr "Закрпа"
 
 #: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
-msgstr ""
+msgstr "Примењена је комадина"
 
 #: ../tvp-svn-helper/tsh-common.c:634
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Одбијена је комадина"
 
 #: ../tvp-svn-helper/tsh-common.c:635
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Комадина је већ примењена"
 
 #: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
-msgstr ""
+msgstr "Умножење је замењено"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
-msgstr ""
+msgstr "Адресно преусмеравање"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
-msgstr ""
+msgstr "Непостојећа путања"
 
 #: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
-msgstr ""
+msgstr "Сукоб"
 
 #: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:741
 #: ../tvp-svn-helper/tsh-common.c:781
 msgid "Missing"
-msgstr ""
+msgstr "Недостајуће"
 
 #: ../tvp-svn-helper/tsh-common.c:643
 msgid "Out of date"
-msgstr ""
+msgstr "Застарело"
 
 #: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
-msgstr ""
+msgstr "Нема родитеља"
 
 #: ../tvp-svn-helper/tsh-common.c:646
 msgid "Forbidden by server"
-msgstr ""
+msgstr "Забрањено од стране служитеља"
 
 #: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "Прескочени су сукобљени"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
-msgstr ""
+msgstr "Неприменљиво"
 
 #: ../tvp-svn-helper/tsh-common.c:740
 msgid "Unchanged"
-msgstr ""
+msgstr "Неизмењено"
 
 #: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
-msgstr ""
+msgstr "Препречено"
 
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
-msgstr ""
+msgstr "Измењено"
 
 #: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
 msgid "Merged"
-msgstr ""
+msgstr "Стопљени"
 
 #: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
-msgstr ""
+msgstr "Сукобљено"
 
 #: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
-msgstr ""
+msgstr "Недостаје извор"
 
 #. N_("None"),
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:779
 msgid "Normal"
-msgstr ""
+msgstr "Обично"
 
 #: ../tvp-svn-helper/tsh-common.c:787
 msgid "Ignored"
-msgstr ""
+msgstr "Занемарено"
 
 #: ../tvp-svn-helper/tsh-common.c:790
 msgid "Incomplete"
-msgstr ""
+msgstr "Непотпуно"
 
 #: ../tvp-svn-helper/tsh-common.c:1163
 msgid "Error"
-msgstr ""
+msgstr "Грешка"
 
 #: ../tvp-svn-helper/tsh-common.c:1176
 msgid "Local action"
-msgstr ""
+msgstr "Местно дејство"
 
 #: ../tvp-svn-helper/tsh-copy.c:122
 msgid "Local copy"
-msgstr ""
+msgstr "Местни умножак"
 
 #: ../tvp-svn-helper/tsh-copy.c:171
 msgid "Copy To"
-msgstr ""
+msgstr "Умножи на"
 
 #: ../tvp-svn-helper/tsh-delete.c:121
 msgid "Local delete"
-msgstr ""
+msgstr "Местно брисање"
 
 #: ../tvp-svn-helper/tsh-delete.c:163
 msgid "Delete Message"
-msgstr ""
+msgstr "Избриши поруку"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
-msgstr ""
+msgstr "Различивање није успело"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1306,7 +1306,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:191
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
-msgstr ""
+msgstr "Себе"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
@@ -1321,7 +1321,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:202
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
-msgstr ""
+msgstr "Непосредни датотеке"
 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
@@ -1333,19 +1333,19 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:220
 #: ../tvp-svn-helper/tsh-status-dialog.c:208
 msgid "Recursive"
-msgstr ""
+msgstr "Дубински"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Напомена порекла"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Не приказуј разлике за избрисане датотеке"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
-msgstr ""
+msgstr "Приказуј умношке као додатке"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
@@ -1353,7 +1353,7 @@ msgstr "Учитавам..."
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:58
 msgid "_Certificate:"
-msgstr "_Сертификат:"
+msgstr "_Потврда:"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:61
 msgid "Select a file"
@@ -1367,7 +1367,7 @@ msgstr "Запамти"
 
 #: ../tvp-svn-helper/tsh-file-dialog.c:74
 msgid "Certificate"
-msgstr "Сертификат"
+msgstr "Потврда"
 
 #: ../tvp-svn-helper/tsh-import.c:149
 msgid "Import Message"
@@ -1375,51 +1375,51 @@ msgstr "Увези поруку"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
-msgstr ""
+msgstr "Запис дневника није успео"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr ""
+msgstr "Застој при умножавању"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:219
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "Прикажи стапана издања"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:63
 msgid "_Username:"
-msgstr ""
+msgstr "_Корисничко име:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:72
 msgid "_Password:"
-msgstr ""
+msgstr "_Лозинка:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:87
 msgid "Login"
-msgstr ""
+msgstr "Пријава"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
-msgstr ""
+msgstr "Порука дневника"
 
 #: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
-msgstr ""
+msgstr "Местно премештање"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr ""
+msgstr "Врста МИМЕ"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
-msgstr ""
+msgstr "Обавештење"
 
 #: ../tvp-svn-helper/tsh-properties.c:143
 msgid "Set property failed"
-msgstr ""
+msgstr "Постављање својства није успело"
 
 #: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
-msgstr ""
+msgstr "Својства нису успела"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
@@ -1427,23 +1427,23 @@ msgstr "Вредност"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "_Додај"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "_Уклони"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
-msgstr ""
+msgstr "Промена места није успела"
 
 #: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
-msgstr ""
+msgstr "Промена места је завршена"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr ""
+msgstr "Премештам..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
@@ -1451,63 +1451,63 @@ msgstr "_Од:"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:132
 msgid "_To:"
-msgstr "_За:"
+msgstr "_У:"
 
 #: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
-msgstr ""
+msgstr "Стање није успело"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Стање својства"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr ""
+msgstr "Стање складишта"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Стање својства складишта"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr ""
+msgstr "Приказуј неизмењене датотеке"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
-msgstr ""
+msgstr "Приказуј заједничке датотеке издања"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
-msgstr ""
+msgstr "Приказуј занемарене датотеке"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
-msgstr ""
+msgstr "Сакриј спољње"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
-msgstr ""
+msgstr "Провери складиште"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
-msgstr ""
+msgstr "Потврда још увек није ваљана."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:62
 msgid "Certificate has expired."
-msgstr ""
+msgstr "Потврда је истекла."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:65
 msgid "Certificate does not match the remote hostname."
-msgstr ""
+msgstr "Потврда се не поклапа са удаљеним именом домаћина."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
-msgstr ""
+msgstr "Овлашћење потврде је непознато."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:71
 msgid "Other failure."
-msgstr ""
+msgstr "Неуспех осталог."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:78
 msgid "Trust"
