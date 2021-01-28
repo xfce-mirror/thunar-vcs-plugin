@@ -270,19 +270,9 @@ tgh_cell_renderer_graph_render (GtkCellRenderer *cell, cairo_t *cr, GtkWidget *w
     gint x2_offset;
     gint x;
     gboolean rtl = (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL);
-    GtkStateType state;
     gint xpad;
     gfloat xalign;
     GdkRGBA fg;
-
-    if (flags & GTK_CELL_RENDERER_INSENSITIVE)
-      state = GTK_STATE_INSENSITIVE;
-    else if (flags & GTK_CELL_RENDERER_SELECTED)
-      state = GTK_STATE_SELECTED;
-    else if (flags & GTK_CELL_RENDERER_PRELIT)
-      state = GTK_STATE_PRELIGHT;
-    else
-      state = GTK_STATE_NORMAL;
 
     gtk_cell_renderer_get_padding (cell, &xpad, NULL);
     gtk_cell_renderer_get_alignment (cell, &xalign, NULL);

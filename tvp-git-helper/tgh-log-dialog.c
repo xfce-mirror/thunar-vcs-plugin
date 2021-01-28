@@ -491,6 +491,12 @@ cancel_clicked (GtkButton *button, gpointer user_data)
 }
 
 static void
+tvp_graph_node_free (gpointer data)
+{
+  tgh_graph_node_free ((TghGraphNode *) data);
+}
+
+static void
 refresh_clicked (GtkButton *button, gpointer user_data)
 {
   GtkTreeModel *model;
@@ -504,8 +510,7 @@ refresh_clicked (GtkButton *button, gpointer user_data)
   model = gtk_tree_view_get_model (GTK_TREE_VIEW (dialog->tree_view));
   gtk_list_store_clear (GTK_LIST_STORE (model));
 
-  g_list_foreach(dialog->graph, (GFunc)tgh_graph_node_free, NULL);
-  g_list_free (dialog->graph);
+  g_list_free_full (dialog->graph, tvp_graph_node_free);
   dialog->graph = NULL;
 
   gtk_text_buffer_set_text (gtk_text_view_get_buffer (GTK_TEXT_VIEW (dialog->text_view)), "", -1);
