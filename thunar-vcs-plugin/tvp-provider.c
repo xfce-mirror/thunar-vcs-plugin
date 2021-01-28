@@ -142,6 +142,16 @@ tvp_provider_init (TvpProvider *tvp_provider)
 
 
 
+static gboolean
+tvp_spawn_close_pid (gpointer data)
+{
+  g_spawn_close_pid (GPOINTER_TO_INT (data));
+
+  return FALSE;
+}
+
+
+
 static void
 tvp_provider_finalize (GObject *object)
 {
@@ -150,7 +160,7 @@ tvp_provider_finalize (GObject *object)
   if (tvp_provider->child_watch)
   {
     GSource *source = g_main_context_find_source_by_id (NULL, tvp_provider->child_watch->watch_id);
-    g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
+    g_source_set_callback (source, tvp_spawn_close_pid, NULL, NULL);
   }
 
 #ifdef HAVE_SUBVERSION
@@ -589,7 +599,7 @@ tvp_new_process (ThunarxMenuItem *item, const GPid *pid, const gchar *path, TvpP
   if (tvp_provider->child_watch)
   {
     GSource *source = g_main_context_find_source_by_id (NULL, tvp_provider->child_watch->watch_id);
-    g_source_set_callback (source, (GSourceFunc) g_spawn_close_pid, NULL, NULL);
+    g_source_set_callback (source, tvp_spawn_close_pid, NULL, NULL);
   }
   watch = g_new(TvpChildWatch, 1);
   watch->pid = *pid;

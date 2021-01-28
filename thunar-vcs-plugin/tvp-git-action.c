@@ -90,7 +90,8 @@ static GQuark tvp_action_arg_quark = 0;
 
 static void tvp_action_exec (ThunarxMenuItem *item, TvpGitAction *tvp_action);
 
-static void tvp_action_unimplemented (ThunarxMenuItem *, const gchar *);
+/* remove G_GNUC_UNUSED if this function is ever used, or the function itself if it is useless */
+static void tvp_action_unimplemented (ThunarxMenuItem *, const gchar *) G_GNUC_UNUSED;
 
 
 
