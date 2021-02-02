@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2021-01-21 18:25+0000\n"
+"PO-Revision-Date: 2021-02-02 15:47+0000\n"
 "Last-Translator: beriain\n"
 "Language-Team: Basque (http://www.transifex.com/xfce/thunar-plugins/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "Gehitu"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:222
 msgid "Add file contents to the index"
-msgstr ""
+msgstr "Gehitu fitxategi edukiak indizeari"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
@@ -42,7 +42,7 @@ msgstr "Egotzi errua"
 #: ../thunar-vcs-plugin/tvp-git-action.c:225
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
-msgstr ""
+msgstr "Erakutsi zein berrikuspen eta egilek aldatu duten azkenengoz fitxategi baten lerro bakoitza"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
@@ -52,7 +52,7 @@ msgstr "Adarra"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:227
 msgid "List, create or switch branches"
-msgstr ""
+msgstr "Zerrendatu, sortu edo txandakatu adarrak"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
@@ -63,7 +63,7 @@ msgstr "Garbitu"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:229
 msgid "Remove untracked files from the working tree"
-msgstr ""
+msgstr "Kendu jarraitu gabeko fitxategiak lan zuhaitzetik"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
@@ -72,7 +72,7 @@ msgstr "Klonatu"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:231
 msgid "Clone a repository into a new directory"
-msgstr ""
+msgstr "Klonatu gordailu bat direktorio berri batean"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
 #. _("Commit"), "gtk-apply", _("Commit"));
@@ -94,7 +94,7 @@ msgstr "Erregistroa"
 #: ../thunar-vcs-plugin/tvp-git-action.c:237
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr ""
+msgstr "Erakutsi commit erregistroak"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:240
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
@@ -193,7 +193,7 @@ msgstr "Bidali aldaketak"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr ""
+msgstr "Bidali aldaketak zure lan kopiatik gordailura"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
@@ -220,7 +220,7 @@ msgstr "Ezberdintasunak"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr ""
+msgstr "Bi berrikuspen edo bide arteko ezberdintasunak erakutsi"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
