@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Saibamen <saibamenppl@gmail.com>, 2015
+# Adam Stachowicz <saibamenppl@gmail.com>, 2015
 # elzear <babciaroziazpogwizdowa@wp.pl>, 2014
 # Dawid Job <hoek@tuta.io>, 2014
 # Kamil "elder" P. <elderlinx@riseup.net>, 2016
