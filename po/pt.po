@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2022
 # José Vieira <jvieira33@sapo.pt>, 2018
 # Nuno Miguel <nunis@netcabo.pt>, 2008
 # Nuno Miguel <nunomgue@gmail.com>, 2013,2015,2018-2020
@@ -11,14 +12,14 @@ msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2020-05-22 10:33+0000\n"
-"Last-Translator: Nuno Miguel <nunomgue@gmail.com>\n"
+"PO-Revision-Date: 2013-07-03 18:12+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>, 2022\n"
 "Language-Team: Portuguese (http://www.transifex.com/xfce/thunar-plugins/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:222
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
@@ -182,7 +183,7 @@ msgstr "Limpar"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr "Limpar recursivamente a cópia de trabalho "
+msgstr "Limpar recursivamente a cópia de trabalho"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
@@ -267,7 +268,7 @@ msgstr "Editar a propriedade de um ou mais itens"
 #: ../tvp-svn-helper/tsh-relocate.c:138
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:187
 msgid "Relocate"
-msgstr "Recolação "
+msgstr "Recolocação"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
@@ -1069,7 +1070,7 @@ msgstr "Existe"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
-msgstr "Definida a lista de alterações "
+msgstr "Definida a lista de alterações"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
@@ -1097,7 +1098,7 @@ msgstr "Propriedade adicionada"
 
 #: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
-msgstr "Propriedade modificada "
+msgstr "Propriedade modificada"
 
 #: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
