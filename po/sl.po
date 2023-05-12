@@ -41,7 +41,7 @@ msgstr "Spremembe"
 #: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
-msgstr "Prikaži katera revizija in avtor sta nazadnje spreminjala vsako od vrstic datoteke"
+msgstr "Prikaži katera revizija in avtor sta nazadnje spreminjala posamezno vrstico datoteke"
 
 #: ../thunar-vcs-plugin/tvp-git-action.c:228 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
