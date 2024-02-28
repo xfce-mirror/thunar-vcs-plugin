@@ -427,7 +427,7 @@ msgstr "Stampa le informazioni di versione"
 
 #: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
 msgid "Execute add action"
-msgstr "Esegue l'operazione blame"
+msgstr "Esegue l'azione add"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
 msgid "Execute blame action"
