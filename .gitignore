@@ -36,3 +36,16 @@ tvp-git-helper/tvp-git-helper
 tvp-git-helper/tvp_git_helper-*.o
 tvp-svn-helper/tvp-svn-helper
 tvp-svn-helper/tvp_svn_helper-*.o
+ABOUT-NLS
+config.rpath
+po/Makevars.template
+po/Rules-quot
+po/boldquot.sed
+po/en@boldquot.header
+po/en@quot.header
+po/insert-header.sin
+po/quot.sed
+po/remove-potcdate.sin
+po/remove-potcdate.sed
+po/stamp-po
+*.tar.bz2
