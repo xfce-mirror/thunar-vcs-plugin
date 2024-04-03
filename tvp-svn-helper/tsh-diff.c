@@ -117,7 +117,7 @@ static gpointer diff_thread (gpointer user_data)
     revision1.kind = svn_opt_revision_base;
     revision2.kind = svn_opt_revision_working;
 
-#if CHECK_SVN_VERSION_G(1,9)
+#if CHECK_SVN_VERSION_G(1,8)
     svn_stream_t *outstream = svn_stream_from_aprfile2(outfile, TRUE, pool);
     svn_stream_t *errstream = svn_stream_from_aprfile2(errfile, TRUE, pool);
 
