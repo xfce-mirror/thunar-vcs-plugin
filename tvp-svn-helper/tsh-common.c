@@ -1071,7 +1071,8 @@ tsh_blame_func2 (void *baton, apr_int64_t line_no, svn_revnum_t revision, const 
 {
   apr_time_t date_val;
   gchar *date_str = NULL;
-	TshBlameDialog *dialog = TSH_BLAME_DIALOG (baton);
+  struct tsh_blame_baton *blame_baton = baton;
+  TshBlameDialog *dialog = blame_baton->dialog;
 
   if(date)
   {
@@ -1097,7 +1098,8 @@ tsh_blame_func3 (void *baton, svn_revnum_t start_revision, svn_revnum_t end_revi
   svn_string_t *value;
   gchar *author = NULL;
   gchar *date = NULL;
-  TshBlameDialog *dialog = TSH_BLAME_DIALOG (baton);
+  struct tsh_blame_baton *blame_baton = baton;
+  TshBlameDialog *dialog = blame_baton->dialog;
 
   value = apr_hash_get(revprops, SVN_PROP_REVISION_AUTHOR, APR_HASH_KEY_STRING);
   if(value)

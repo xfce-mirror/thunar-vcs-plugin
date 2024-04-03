@@ -19,9 +19,20 @@
 #ifndef __TSH_COMMON_H__
 #define __TSH_COMMON_H__
 
+#include <subversion-1/svn_client.h>
+#include <subversion-1/svn_types.h>
 #include <subversion-1/svn_version.h>
 
 G_BEGIN_DECLS
+
+/* typdef from tsh-blame-dialog.h */
+typedef struct _TshBlameDialog      TshBlameDialog;
+struct tsh_blame_baton
+{
+  TshBlameDialog *dialog;
+  svn_revnum_t start_revnum;
+  svn_revnum_t end_revnum;
+};
 
 gboolean tsh_init (apr_pool_t**, svn_error_t**);
 
