@@ -90,7 +90,8 @@ dnl ***********************************
 dnl *** Check for optional packages ***
 dnl ***********************************
 XDT_CHECK_OPTIONAL_PACKAGE([APR], [apr-1], [0.9.7], [subversion], [libsvn])
-if test x"$APR_FOUND" = x"yes"; then
+XDT_CHECK_OPTIONAL_PACKAGE([APRUTIL], [apr-util-1], [0.9.1], [subversion], [libsvn])
+if test x"$APR_FOUND$APRUTIL_FOUND" = x"yesyes"; then
     found_subversion=yes
     AC_CHECK_LIB([svn_subr-1], [main], , [found_subversion=no])
     AC_CHECK_LIB([svn_fs-1], [main], , [found_subversion=no])
