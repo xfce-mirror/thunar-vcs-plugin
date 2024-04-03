@@ -70,8 +70,10 @@ static gpointer blame_thread (gpointer user_data)
   blame_baton.dialog = dialog;
 #if CHECK_SVN_VERSION_S(1,6)
   err = svn_client_blame4(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func2, &blame_baton, ctx, subpool);
-#else
+#elif CHECK_SVN_VERSION_S(1,12)
   err = svn_client_blame5(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func3, &blame_baton, ctx, subpool);
+#else
+  err = svn_client_blame6(&blame_baton.start_revnum, &blame_baton.end_revnum, file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func4, &blame_baton, ctx, subpool);
 #endif
   if (err)
   {

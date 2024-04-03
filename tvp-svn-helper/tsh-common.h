@@ -50,6 +50,7 @@ svn_error_t *tsh_log_msg_func2 (const char **, const char **, const apr_array_he
 svn_error_t *tsh_log_func      (void *, svn_log_entry_t *, apr_pool_t *);
 svn_error_t *tsh_blame_func2   (void *, apr_int64_t, svn_revnum_t, const char *, const char *, svn_revnum_t, const char *, const char *, const char *, const char *, apr_pool_t *);
 svn_error_t *tsh_blame_func3   (void *, svn_revnum_t, svn_revnum_t, apr_int64_t, svn_revnum_t, apr_hash_t *, svn_revnum_t, apr_hash_t *, const char *, const char *, svn_boolean_t, apr_pool_t *);
+svn_error_t *tsh_blame_func4   (void *, apr_int64_t, svn_revnum_t, apr_hash_t *, svn_revnum_t, apr_hash_t *, const char *, const svn_string_t *, svn_boolean_t, apr_pool_t *);
 svn_error_t *tsh_proplist_func (void *, const char *, apr_hash_t *, apr_pool_t *);
 svn_error_t *tsh_commit_func2  (const svn_commit_info_t *, void *, apr_pool_t *);
 
