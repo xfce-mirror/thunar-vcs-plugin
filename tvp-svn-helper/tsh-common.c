@@ -1092,6 +1092,17 @@ G_GNUC_END_IGNORE_DEPRECATIONS
 }
 
 svn_error_t *
+tsh_blame_func4   (void *baton, apr_int64_t line_no, svn_revnum_t revision, apr_hash_t *revprops, svn_revnum_t merged_revision, apr_hash_t *merged_rev_props, const char *merged_path, const svn_string_t *line, svn_boolean_t local_change, apr_pool_t *pool)
+{
+  struct tsh_blame_baton *blame_baton = baton;
+  /* svn_string_t guarantees NULL terminated string */
+  return tsh_blame_func3(baton,
+    blame_baton->start_revnum, blame_baton->end_revnum,
+    line_no, revision, revprops, merged_revision, merged_rev_props,
+    merged_path, line->data, local_change, pool);
+}
+
+svn_error_t *
 tsh_blame_func3 (void *baton, svn_revnum_t start_revision, svn_revnum_t end_revision, apr_int64_t line_no, svn_revnum_t revision, apr_hash_t *revprops, svn_revnum_t merged_revision, apr_hash_t *merged_rev_props, const char *merged_path, const char *line, svn_boolean_t local_change, apr_pool_t *pool)
 {
   apr_time_t date_val;
