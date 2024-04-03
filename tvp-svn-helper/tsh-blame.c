@@ -57,6 +57,7 @@ static gpointer blame_thread (gpointer user_data)
   gchar *file = args->file;
   GtkWidget *error;
   gchar *error_str;
+  struct tsh_blame_baton blame_baton = { 0 };
 
   subpool = svn_pool_create (pool);
 
@@ -66,11 +67,13 @@ static gpointer blame_thread (gpointer user_data)
   start.kind = svn_opt_revision_number;
   start.value.number = 0;
   end.kind = svn_opt_revision_head;
+  blame_baton.dialog = dialog;
 #if CHECK_SVN_VERSION_S(1,6)
-  if ((err = svn_client_blame4(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func2, dialog, ctx, subpool)))
-#else /* CHECK_SVN_VERSION(1,7) */
-  if ((err = svn_client_blame5(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func3, dialog, ctx, subpool)))
+  err = svn_client_blame4(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func2, &blame_baton, ctx, subpool);
+#else
+  err = svn_client_blame5(file, &revision, &start, &end, &diff_options, FALSE, FALSE, tsh_blame_func3, &blame_baton, ctx, subpool);
 #endif
+  if (err)
   {
     svn_pool_destroy (subpool);
 
