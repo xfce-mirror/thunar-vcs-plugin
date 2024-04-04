@@ -80,7 +80,10 @@ static gpointer revert_thread (gpointer user_data)
 		APR_ARRAY_PUSH (paths, const char *) = ""; // current directory
 	}
 
-#if CHECK_SVN_VERSION_G(1,9)
+#if CHECK_SVN_VERSION_G(1,11)
+	if ((err = svn_client_revert4(paths, svn_depth_empty, NULL, FALSE, FALSE,
+                                TRUE, ctx, subpool)))
+#elif CHECK_SVN_VERSION_G(1,9)
 	if ((err = svn_client_revert3(paths, svn_depth_empty, NULL, FALSE, FALSE,
                                 ctx, subpool)))
 #else
