@@ -117,15 +117,24 @@ static gpointer diff_thread (gpointer user_data)
     revision1.kind = svn_opt_revision_base;
     revision2.kind = svn_opt_revision_working;
 
-#if CHECK_SVN_VERSION_G(1,9)
+#if CHECK_SVN_VERSION_G(1,8)
     svn_stream_t *outstream = svn_stream_from_aprfile2(outfile, TRUE, pool);
     svn_stream_t *errstream = svn_stream_from_aprfile2(errfile, TRUE, pool);
 
+#if CHECK_SVN_VERSION_G(1,11)
+    if ((err = svn_client_diff7(NULL, path, &revision1, path, &revision2,
+                                NULL, depth, !notice_ancestry, FALSE,
+                                no_diff_deleted, show_copies_as_adds,
+                                FALSE, FALSE, FALSE, FALSE, TRUE,
+                                APR_LOCALE_CHARSET, outstream, errstream,
+                                NULL, ctx, subpool)))
+#else
     if ((err = svn_client_diff6(NULL, path, &revision1, path, &revision2,
                                 NULL, depth, !notice_ancestry, FALSE,
                                 no_diff_deleted, show_copies_as_adds,
                                 FALSE, FALSE, FALSE, FALSE, APR_LOCALE_CHARSET,
                                 outstream, errstream, NULL, ctx, subpool)))
+#endif
 #elif CHECK_SVN_VERSION_G(1,7)
     if ((err = svn_client_diff5(NULL, path, &revision1, path, &revision2,
                                 NULL, depth, !notice_ancestry, no_diff_deleted,
