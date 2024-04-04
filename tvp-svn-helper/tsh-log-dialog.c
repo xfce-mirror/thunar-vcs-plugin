@@ -345,8 +345,7 @@ tsh_log_dialog_done (TshLogDialog *dialog)
 
   if (dialog->message_stack)
   {
-    g_slist_foreach (dialog->message_stack, (GFunc)g_free, NULL);
-    g_slist_free (dialog->message_stack);
+    g_slist_free_full (dialog->message_stack, g_free);
     dialog->message_stack = NULL;
   }
 
