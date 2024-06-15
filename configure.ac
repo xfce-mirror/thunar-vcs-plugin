@@ -18,25 +18,16 @@
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([tvp_version_major], [0])
-m4_define([tvp_version_minor], [2])
-m4_define([tvp_version_micro], [0])
-m4_define([tvp_version_build], [@REVISION@])
-m4_define([tvp_version_tag], [git]) # Leave empty for releases
-m4_define([tvp_version], [tvp_version_major().tvp_version_minor().tvp_version_micro()ifelse(tvp_version_tag(), [], [], [tvp_version_tag()-tvp_version_build()])])
-
-dnl *******************************************
-dnl *** Debugging support for GIT snapshots ***
-dnl *******************************************
-m4_define([tvp_debug_default], [ifelse(tvp_version_tag(), [git], [yes], [])])
+XDT_VERSION_INIT([0.2.0], [git])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2006-2011 Peter de Ridder <peter@xfce.org>.])
-AC_INIT([thunar-vcs-plugin], [tvp_version], [thunar-dev@xfce.org])
+AC_INIT([thunar-vcs-plugin], [xdt_version], [https://gitlab.xfce.org/thunar-plugins/thunar-vcs-plugin])
+AC_REVISION([xdt_version_build])
 AC_PREFIX_DEFAULT([$(pkg-config --variable prefix thunarx-3 || echo /usr/local)])
-AC_PREREQ([2.50])
+AC_PREREQ([2.69])
 AC_CANONICAL_TARGET()
 
 dnl ***************************
@@ -126,7 +117,7 @@ AM_CONDITIONAL([HAVE_GIT], [test x"$found_git" = x"yes"])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG([tvp_debug_default])
+XDT_FEATURE_DEBUG([xdt_debug_default])
 
 dnl **************************************
 dnl *** Check for linker optimizations ***
