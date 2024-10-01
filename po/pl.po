@@ -5,11 +5,12 @@
 # Translators:
 # Adam Stachowicz <saibamenppl@gmail.com>, 2015
 # elzear <babciaroziazpogwizdowa@wp.pl>, 2014
-# Dawid Job <hoek@tuta.io>, 2014
+# d703b7c9f8279b67f8ff243fa8f12e4a_ead0287 <01cbd6dcada4ad6beac99d868e1751df_141855>, 2014
 # Kamil "elder" P. <elderlinx@riseup.net>, 2016
-# Marcin Mikołajczak <me@mkljczk.pl>, 2017
-# Marcin Mikołajczak <me@mkljczk.pl>, 2016
-# No Ne, 2017-2018
+# marcin mikołajczak <me@mkljczk.pl>, 2017
+# marcin mikołajczak <me@mkljczk.pl>, 2016
+# Marek Adamski, 2024
+# Marek Adamski, 2017-2018
 # Paweł Klimek <pawelklimek102@gmail.com>, 2014
 #  <piotr.sokol@10g.pl>, 2009
 # Piotr Strębski <strebski@gmail.com>, 2014-2015
@@ -17,17 +18,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2018-06-27 11:27+0000\n"
-"Last-Translator: No Ne\n"
-"Language-Team: Polish (http://www.transifex.com/xfce/thunar-plugins/language/pl/)\n"
+"POT-Creation-Date: 2023-05-30 00:47+0200\n"
+"PO-Revision-Date: 2013-07-03 18:12+0000\n"
+"Last-Translator: Marek Adamski, 2024\n"
+"Language-Team: Polish (http://app.transifex.com/xfce/thunar-plugins/language/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pl\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
@@ -35,49 +36,49 @@ msgstr ""
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 msgid "Add file contents to the index"
 msgstr "Dodaj zawartość pliku do indeksu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Wina"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
 msgstr "Pokaż rewizję i autora ostatnio modyfikowanego każdego wiersza pliku"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:228 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Odgałęzienie"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227
+#: ../thunar-vcs-plugin/tvp-git-action.c:228
 msgid "List, create or switch branches"
 msgstr "Wymień, utwórz lub zmień gałęzie"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
+#: ../thunar-vcs-plugin/tvp-git-action.c:230 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "Czyszczenie"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:229
+#: ../thunar-vcs-plugin/tvp-git-action.c:230
 msgid "Remove untracked files from the working tree"
 msgstr "Usuń nieśledzone pliki z drzewa roboczego"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:232 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Klonowanie"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231
+#: ../thunar-vcs-plugin/tvp-git-action.c:232
 msgid "Clone a repository into a new directory"
 msgstr "Sklonuj repozytorium do nowego katalogu"
 
@@ -91,25 +92,25 @@ msgstr "Sklonuj repozytorium do nowego katalogu"
 #. _("Grep"), NULL, _("Grep"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
 #. _("Init"), NULL, _("Init"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
 msgstr "Dziennik"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
 msgstr "Pokaż dzienniki zatwierdzeń"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "Przenoszenie"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 msgid "Move or rename a file, a directory, or a symlink"
 msgstr "Przenieś lub zmień nazwę pliku, katalogu lub dowiązania symbolicznego"
 
@@ -119,25 +120,25 @@ msgstr "Przenieś lub zmień nazwę pliku, katalogu lub dowiązania symboliczneg
 #. _("Push"), NULL, _("Push"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
 #. _("Rebase"), NULL, _("Rebase"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Przywracanie ustawień"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
 msgid "Reset current HEAD to the specified state"
 msgstr "Zresetuj bieżącą HEAD do określonego stanu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Odkładanie"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Stash the changes in a dirty working directory away"
 msgstr "Ukryj zmiany w brudnym katalogu roboczym"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
@@ -146,27 +147,27 @@ msgstr "Ukryj zmiany w brudnym katalogu roboczym"
 msgid "Status"
 msgstr "Stan"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
 msgstr "Pokaż status drzewa roboczego"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
-msgstr "Akcja „%s” nie została zaimplementowana"
+msgstr "Czynność „%s” nie została zaimplementowana"
 
 #. append the svn submenu item
 #. Lets see if we are dealing with a working copy
-#: ../thunar-vcs-plugin/tvp-provider.c:421
-#: ../thunar-vcs-plugin/tvp-provider.c:487
+#: ../thunar-vcs-plugin/tvp-provider.c:431
+#: ../thunar-vcs-plugin/tvp-provider.c:497
 msgid "SVN"
 msgstr "Kontrola wersji SVN"
 
 #. append the git submenu item
-#: ../thunar-vcs-plugin/tvp-provider.c:452
-#: ../thunar-vcs-plugin/tvp-provider.c:494
+#: ../thunar-vcs-plugin/tvp-provider.c:462
+#: ../thunar-vcs-plugin/tvp-provider.c:504
 msgid "GIT"
 msgstr "GIT"
 
@@ -288,7 +289,7 @@ msgstr "Rozwiązano"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr "Usuń stan \"konfliktu\" na plikach kopii roboczych lub katalogach"
+msgstr "Usuń stan „konfliktu” w plikach kopii roboczych lub katalogach"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -328,7 +329,7 @@ msgstr "Zaktualizuj swoją kopię roboczą"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
-msgstr "URL:"
+msgstr "Adres URL:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:124
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:140
@@ -775,7 +776,7 @@ msgstr "Czy na pewno chcesz porzucić %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
-msgstr "Jesteś pewny/pewna, że chcesz wyczyścić przechowalnię?"
+msgstr "Czy na pewno chcesz wyczyścić przechowalnię?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
@@ -952,12 +953,12 @@ msgstr "Nie wprowadzono wystarczającej liczby warunków"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr "Funkcja 'blame' nie powiodła się"
+msgstr "Funkcja „blame” nie powiodła się"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr "'%s' nie jest ścieżką lokalną"
+msgstr "„%s” nie jest ścieżką lokalną"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -1204,7 +1205,7 @@ msgstr "Zmieniono kopiowanie"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
-msgstr "Przekierowano URL"
+msgstr "Przekierowano adres URL"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
@@ -1233,7 +1234,7 @@ msgstr "Zabroniony przez serwer"
 
 #: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
-msgstr "Pminięto niezgodność"
+msgstr "Pominięto niezgodność"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
@@ -1456,7 +1457,7 @@ msgstr "Przenoszenie..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr "_Z"
+msgstr "_Od"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:132
 msgid "_To:"
@@ -1464,7 +1465,7 @@ msgstr "_Do"
 
 #: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
-msgstr "Status: niepowodzenie"
+msgstr "Stan: niepowodzenie"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
@@ -1492,7 +1493,7 @@ msgstr "Pliki ignorowane"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
-msgstr "Ukrywa Zewnętrzne"
+msgstr "Ukrywa zewnętrzne"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
