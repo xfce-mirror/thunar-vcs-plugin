@@ -1457,7 +1457,7 @@ msgstr "Przenoszenie..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
-msgstr "_Od"
+msgstr "_Z"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:132
 msgid "_To:"
