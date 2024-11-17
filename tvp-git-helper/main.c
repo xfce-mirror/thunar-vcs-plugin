@@ -201,6 +201,7 @@ int main (int argc, char *argv[])
   if(print_version)
   {
     g_print(PACKAGE_STRING "\n\tcompiled on " __DATE__ ", " __TIME__ "\n");
+    g_strfreev(files);
     return EXIT_SUCCESS;
   }
 
@@ -261,6 +262,7 @@ int main (int argc, char *argv[])
     tgh_replace_child(FALSE, 0);
   }
 
+  g_strfreev(files);
   return EXIT_SUCCESS;
 }
 
