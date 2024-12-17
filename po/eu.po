@@ -5,22 +5,23 @@
 # Translators:
 # Asier Iturralde Sarasola <asier.iturralde@gmail.com>, 2014-2015
 # beriain, 2021
+# Eder Etxebarria Rojo, 2024
 # Piarres Beobide <pi@beobide.net>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2021-02-02 15:47+0000\n"
-"Last-Translator: beriain\n"
-"Language-Team: Basque (http://www.transifex.com/xfce/thunar-plugins/language/eu/)\n"
+"POT-Creation-Date: 2023-05-30 00:47+0200\n"
+"PO-Revision-Date: 2013-07-03 18:12+0000\n"
+"Last-Translator: Eder Etxebarria Rojo, 2024\n"
+"Language-Team: Basque (http://app.transifex.com/xfce/thunar-plugins/language/eu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: eu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
@@ -28,49 +29,49 @@ msgstr ""
 msgid "Add"
 msgstr "Gehitu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 msgid "Add file contents to the index"
 msgstr "Gehitu fitxategi edukiak indizeari"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Egotzi errua"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
 msgstr "Erakutsi zein berrikuspen eta egilek aldatu duten azkenengoz fitxategi baten lerro bakoitza"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:228 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Adarra"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227
+#: ../thunar-vcs-plugin/tvp-git-action.c:228
 msgid "List, create or switch branches"
 msgstr "Zerrendatu, sortu edo txandakatu adarrak"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
+#: ../thunar-vcs-plugin/tvp-git-action.c:230 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "Garbitu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:229
+#: ../thunar-vcs-plugin/tvp-git-action.c:230
 msgid "Remove untracked files from the working tree"
 msgstr "Kendu jarraitu gabeko fitxategiak lan zuhaitzetik"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:232 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Klonatu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231
+#: ../thunar-vcs-plugin/tvp-git-action.c:232
 msgid "Clone a repository into a new directory"
 msgstr "Klonatu gordailu bat direktorio berri batean"
 
@@ -84,27 +85,27 @@ msgstr "Klonatu gordailu bat direktorio berri batean"
 #. _("Grep"), NULL, _("Grep"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
 #. _("Init"), NULL, _("Init"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
 msgstr "Erregistroa"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
 msgstr "Erakutsi commit erregistroak"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "Mugitu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr ""
+msgstr "Mugitu edo berrizendatu fitxategi bat, direktorio bat edo esteka sinboliko bat"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -112,25 +113,25 @@ msgstr ""
 #. _("Push"), NULL, _("Push"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
 #. _("Rebase"), NULL, _("Rebase"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Berrezarri"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "Berrezarri uneko HEAD zehaztutako egoerara"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Ezkutatu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "Ezkutatu aldaketak laneko direktorio zikin batean"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
@@ -139,12 +140,12 @@ msgstr ""
 msgid "Status"
 msgstr "Egoera"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr ""
+msgstr "Erakutsi laneko zuhaitzaren egoera"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
@@ -152,20 +153,20 @@ msgstr "%s ekintza ez dago inplementaturik"
 
 #. append the svn submenu item
 #. Lets see if we are dealing with a working copy
-#: ../thunar-vcs-plugin/tvp-provider.c:421
-#: ../thunar-vcs-plugin/tvp-provider.c:487
+#: ../thunar-vcs-plugin/tvp-provider.c:431
+#: ../thunar-vcs-plugin/tvp-provider.c:497
 msgid "SVN"
 msgstr "SVN"
 
 #. append the git submenu item
-#: ../thunar-vcs-plugin/tvp-provider.c:452
-#: ../thunar-vcs-plugin/tvp-provider.c:494
+#: ../thunar-vcs-plugin/tvp-provider.c:462
+#: ../thunar-vcs-plugin/tvp-provider.c:504
 msgid "GIT"
 msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr ""
+msgstr "Gehitu fitxategiak, direktorioak, edo lotura sinbolikoak"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -174,7 +175,7 @@ msgstr "Eskuratu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr ""
+msgstr "Begiratu funtzionatzen duen kopia bat biltegietan"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -182,7 +183,7 @@ msgstr "Garbitu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr ""
+msgstr "Garbitu errekurtsiboki funtzionatzen duen kopia"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
@@ -202,7 +203,7 @@ msgstr "Kopiatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr ""
+msgstr "Kopiatu fitxategi edo direktorio bat biltegiko funtzionatzen duen kopia batean"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -211,7 +212,7 @@ msgstr "Ezabatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr ""
+msgstr "Ezabatu elementu bat biltegiko funtzionatzen duen kopia batetik"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
@@ -229,7 +230,7 @@ msgstr "Esportatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr ""
+msgstr "Esportatu direktorio-zuhaitz garbi bat"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -238,7 +239,7 @@ msgstr "Inportatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317
 msgid "Commit an unversioned file or tree into the repository"
-msgstr ""
+msgstr "Bidali bertsiorik gabeko fitxategi edo zuhaitz bat biltegira"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
 #: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
@@ -249,11 +250,11 @@ msgstr "Blokeatu"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr ""
+msgstr "Blokeatu funtzionatzen duen kopiaren bideak biltegian, beste erabiltzailerik ezin dezan aldaketarik egin"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr ""
+msgstr "Mugitu fitxategia edo direktorioa"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -261,7 +262,7 @@ msgstr "Editatu propietateak"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit the property of one or more items"
-msgstr ""
+msgstr "Editatu elementu bat(zu)en jabetza"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -271,7 +272,7 @@ msgstr "Birkokatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr ""
+msgstr "Kokatu funtzionatzen duen kopia beste biltegiko erro URL batera seinala dezan"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -281,7 +282,7 @@ msgstr "Ebatzia"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr ""
+msgstr "Kendu egoera \"gatazkatsua\" fitxategien edo direktorioen funtzionatzen duten kopietan"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
@@ -290,7 +291,7 @@ msgstr "Leheneratu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
-msgstr ""
+msgstr "Desegin edizio lokal guztiak"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
@@ -299,7 +300,7 @@ msgstr "Aldatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr ""
+msgstr "Eguneratu funtzionatzen duen kopia URL ezberdin batera"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -308,7 +309,7 @@ msgstr "Desblokeatu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "Desblokeatu funztionatzen duten kopien bideak"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -317,7 +318,7 @@ msgstr "Eguneratu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr ""
+msgstr "Eguneratu funtzionatzen duen zure kopia"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
@@ -576,7 +577,7 @@ msgstr "Izena"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
-msgstr ""
+msgstr "_Hona salto egin"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:249
@@ -632,7 +633,7 @@ msgstr "Klonatzea amaiturik"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning..."
-msgstr ""
+msgstr "Klonatzen..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
 #: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
@@ -881,7 +882,7 @@ msgstr "Garbiketarekin erlazionaturiko aukerak:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr ""
+msgstr "Osatu erlazionatutako aukerak:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
@@ -893,7 +894,7 @@ msgstr "Ezabatze inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
-msgstr ""
+msgstr "Diferitu erlazionatutako aukerak:"
 
 #: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
@@ -921,15 +922,15 @@ msgstr "Ebazte inguruko aukerak:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
-msgstr ""
+msgstr "Berkokatu erlazionatutako aukerak:"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr ""
+msgstr "Lehengoratu erlazionatutako aukerak:"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
-msgstr ""
+msgstr "Aldatu erlazionatutako aukerak:"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
@@ -945,12 +946,12 @@ msgstr "Ez dira behar bezainbeste argumentu eman"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr ""
+msgstr "Blame-k huts egin du"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "'%s' ez da bide lokal bat"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -985,7 +986,7 @@ msgstr "Burutua"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr ""
+msgstr "Mezua idatzi"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
@@ -1065,7 +1066,7 @@ msgstr "Desblokeoak huts egin du"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Exists"
-msgstr ""
+msgstr "Existitzen da"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
@@ -1085,7 +1086,7 @@ msgstr "Batzea hasi da"
 
 #: ../tvp-svn-helper/tsh-common.c:606
 msgid "Foreign merge begin"
-msgstr ""
+msgstr "Kanpoko fusioa hasten da"
 
 #: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
@@ -1105,7 +1106,7 @@ msgstr "Propietatea ezabatua"
 
 #: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
-msgstr ""
+msgstr "Jabetza ez da existitzen"
 
 #: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
@@ -1121,11 +1122,11 @@ msgstr "Batzea osatua"
 
 #: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
-msgstr ""
+msgstr "Zuhaitzen gatazka"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
-msgstr ""
+msgstr "Kanpokoak huts egin du"
 
 #: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
@@ -1133,35 +1134,35 @@ msgstr "Abiarazia"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr ""
+msgstr "Eragoztea abandonatu da"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr ""
+msgstr "Funtzionatzen dutenak bakarrik modua abandonatu da"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
-msgstr ""
+msgstr "Debekatutako sarbidea abandonatu da"
 
 #: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
-msgstr ""
+msgstr "Kanpokoa kenduta"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
-msgstr ""
+msgstr "Gehitu iluntzea"
 
 #: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
-msgstr ""
+msgstr "Eguneratu iluntzea"
 
 #: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
-msgstr ""
+msgstr "Ezabatu iluntzea"
 
 #: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
-msgstr ""
+msgstr "Fusionatu grabazioaren informazioa"
 
 #: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
@@ -1169,11 +1170,11 @@ msgstr "Eguneraketa bidea"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
-msgstr ""
+msgstr "Hasi grabazioaren informazioaren fusioa"
 
 #: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
-msgstr ""
+msgstr "Bateratu elide informazioa"
 
 #: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
@@ -1181,19 +1182,19 @@ msgstr "Adabakia"
 
 #: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
-msgstr ""
+msgstr "Aplikatutako hunk-a"
 
 #: ../tvp-svn-helper/tsh-common.c:634
 msgid "Rejected hunk"
-msgstr ""
+msgstr "Baztertutako hunk-a"
 
 #: ../tvp-svn-helper/tsh-common.c:635
 msgid "Hunk already applied"
-msgstr ""
+msgstr "Hunk-a jadanik aplikatua"
 
 #: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
-msgstr ""
+msgstr "Kopiatuta ordezkatua"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
@@ -1218,7 +1219,7 @@ msgstr "Iraungita"
 
 #: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
-msgstr ""
+msgstr "Ahaiderik ez"
 
 #: ../tvp-svn-helper/tsh-common.c:646
 msgid "Forbidden by server"
@@ -1226,7 +1227,7 @@ msgstr "Zerbitzariak debekatua"
 
 #: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
-msgstr ""
+msgstr "Gatazkatsuak abandonatuta"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
@@ -1238,7 +1239,7 @@ msgstr "Aldatu gabe"
 
 #: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
-msgstr ""
+msgstr "Eragotzita"
 
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
@@ -1288,7 +1289,7 @@ msgstr "Kopiatu hona"
 
 #: ../tvp-svn-helper/tsh-delete.c:121
 msgid "Local delete"
-msgstr ""
+msgstr "Lokala ezabatu"
 
 #: ../tvp-svn-helper/tsh-delete.c:163
 msgid "Delete Message"
@@ -1296,7 +1297,7 @@ msgstr "Ezabatu mezua"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
-msgstr ""
+msgstr "Diferituak huts egin du"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1308,7 +1309,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:191
 #: ../tvp-svn-helper/tsh-status-dialog.c:181
 msgid "Self"
-msgstr ""
+msgstr "Norbere"
 
 #. Translators: svn recursion selection
 #. * Immediate files means this file/direcotry and the files it contains are
@@ -1323,7 +1324,7 @@ msgstr ""
 #: ../tvp-svn-helper/tsh-properties-dialog.c:202
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
-msgstr ""
+msgstr "Berehalako fitxategiak"
 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
@@ -1339,15 +1340,15 @@ msgstr "Errekurtsiboa"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
-msgstr ""
+msgstr "Erreparatu jatorriari"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
-msgstr ""
+msgstr "Ez erakutsi alderik ezabatutako fitxategietarako"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
-msgstr ""
+msgstr "Erakutsi kopiak gehigarri gisa"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
@@ -1377,7 +1378,7 @@ msgstr "Inportatu mezua"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
-msgstr ""
+msgstr "Erregistroak huts egin du"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
@@ -1385,7 +1386,7 @@ msgstr "Gelditu kopia"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:219
 msgid "Show Merged Revisions"
-msgstr ""
+msgstr "Erakutsi fusionatutako berrikusketak"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:63
 msgid "_Username:"
@@ -1405,11 +1406,11 @@ msgstr "Erregistro mezua"
 
 #: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
-msgstr ""
+msgstr "Lokala mugitu"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr ""
+msgstr "MIME mota"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
@@ -1429,23 +1430,23 @@ msgstr "Balioa"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "_Gehitu"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "_Kendu"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
-msgstr ""
+msgstr "Berkokapenak huts egin du"
 
 #: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
-msgstr ""
+msgstr "Berkokapena bukatu da"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr ""
+msgstr "Berkokatzen..."
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
@@ -1461,7 +1462,7 @@ msgstr "Egoerak huts egin du"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr ""
+msgstr "Prop egoera"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
@@ -1469,7 +1470,7 @@ msgstr "Biltegi egoera"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr ""
+msgstr "Repo prop egoera"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
@@ -1477,7 +1478,7 @@ msgstr "Ikusi aldatu gabeko fitxategiak"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
-msgstr ""
+msgstr "Erakutsi bertsionatu gabeko fitxategiak"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
@@ -1493,7 +1494,7 @@ msgstr "Egiaztatu biltegia"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
-msgstr ""
+msgstr "Ziurtagiria ez da baliozkoa."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:62
 msgid "Certificate has expired."
@@ -1501,7 +1502,7 @@ msgstr "Ziurtagiria iraungita dago"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:65
 msgid "Certificate does not match the remote hostname."
-msgstr ""
+msgstr "Ziurtagiria ez dator bat urruneko ostalari-izenarekin."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
@@ -1509,8 +1510,8 @@ msgstr "Ziurtagiri autoritatea ezezaguna da"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:71
 msgid "Other failure."
-msgstr ""
+msgstr "Beste huts egite bat."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:78
 msgid "Trust"
-msgstr ""
+msgstr "Fidatu"
