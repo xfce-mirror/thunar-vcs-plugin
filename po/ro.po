@@ -1,0 +1,1516 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Marius Ghita, 2023
+# Marius Ghita, 2023
+# Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024
+msgid ""
+msgstr ""
+"Project-Id-Version: Thunar Plugins\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-30 00:47+0200\n"
+"PO-Revision-Date: 2013-07-03 18:12+0000\n"
+"Last-Translator: Remus-Gabriel Chelu <remusgabriel.chelu@disroot.org>, 2024\n"
+"Language-Team: Romanian (http://app.transifex.com/xfce/thunar-plugins/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
+#: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
+#: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
+#: ../tvp-svn-helper/tsh-add.c:154
+msgid "Add"
+msgstr "Adaugă"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
+msgid "Add file contents to the index"
+msgstr "Adaugă conținutul fișierului la index"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
+#: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
+#: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
+msgid "Blame"
+msgstr "Vinovatul"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
+#: ../thunar-vcs-plugin/tvp-svn-action.c:265
+msgid "Show what revision and author last modified each line of a file"
+msgstr "Afișează ce revizuire și ce autor a modificat ultima dată fiecare linie dintr-un fișier"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:228 ../tvp-git-helper/main.c:161
+#: ../tvp-git-helper/tgh-branch-dialog.c:140
+#: ../tvp-git-helper/tgh-stash-dialog.c:166
+msgid "Branch"
+msgstr "Ramură"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:228
+msgid "List, create or switch branches"
+msgstr "Listează creează sau schimbă ramura"
+
+#. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
+#. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:230 ../tvp-git-helper/main.c:165
+#: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
+msgid "Clean"
+msgstr "Curăță"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:230
+msgid "Remove untracked files from the working tree"
+msgstr "Elimină fișierele neînregistrate din arborele de lucru"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:232 ../tvp-git-helper/main.c:169
+#: ../tvp-git-helper/tgh-clone.c:115
+msgid "Clone"
+msgstr "Clonează"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:232
+msgid "Clone a repository into a new directory"
+msgstr "Clonează un depozit într-un director nou"
+
+#. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
+#. _("Commit"), "gtk-apply", _("Commit"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::diff", _("Diff"),
+#. _("Diff"), "edit-find-replace", _("Diff"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::fetch", _("Fetch"),
+#. _("Fetch"), NULL, _("Fetch"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::grep", _("Grep"),
+#. _("Grep"), NULL, _("Grep"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
+#. _("Init"), NULL, _("Init"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
+#: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
+#: ../tvp-svn-helper/tsh-log-dialog.c:227
+msgid "Log"
+msgstr "Jurnal"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
+#: ../thunar-vcs-plugin/tvp-svn-action.c:337
+msgid "Show commit logs"
+msgstr "Afișează jurnalele de comitere a modificărilor"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
+#: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
+msgid "Move"
+msgstr "Mută"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
+msgid "Move or rename a file, a directory, or a symlink"
+msgstr "Mută sau redenumește un fișier, un director sau o legătură simbolică"
+
+#. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
+#. _("Pull"), NULL, _("Pull"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::push", _("Push"),
+#. _("Push"), NULL, _("Push"));
+#. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
+#. _("Rebase"), NULL, _("Rebase"));
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-git-helper/main.c:181
+#: ../tvp-git-helper/tgh-reset.c:141
+msgid "Reset"
+msgstr "Reinițializează"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
+msgid "Reset current HEAD to the specified state"
+msgstr "Reinițializează HEAD-ul curent la starea specificată"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:185
+#: ../tvp-git-helper/tgh-stash-dialog.c:246
+msgid "Stash"
+msgstr "Ascunde"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
+msgid "Stash the changes in a dirty working directory away"
+msgstr "Ascunde modificările într-un director de lucru murdar"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:120
+#: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:149
+#: ../tvp-svn-helper/tsh-status-dialog.c:252
+msgid "Status"
+msgstr "Stare"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
+#: ../thunar-vcs-plugin/tvp-svn-action.c:389
+msgid "Show the working tree status"
+msgstr "Afișează starea arborelui de lucru"
+
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
+#: ../thunar-vcs-plugin/tvp-svn-action.c:412
+#, c-format
+msgid "Action %s is unimplemented"
+msgstr "Acțiunea %s nu este implementată"
+
+#. append the svn submenu item
+#. Lets see if we are dealing with a working copy
+#: ../thunar-vcs-plugin/tvp-provider.c:431
+#: ../thunar-vcs-plugin/tvp-provider.c:497
+msgid "SVN"
+msgstr "SVN"
+
+#. append the git submenu item
+#: ../thunar-vcs-plugin/tvp-provider.c:462
+#: ../thunar-vcs-plugin/tvp-provider.c:504
+msgid "GIT"
+msgstr "GIT"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:260
+msgid "Add files, directories, or symbolic links"
+msgstr "Adaugă fișiere, directoare sau legături simbolice"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
+#: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
+msgid "Checkout"
+msgstr "Verificare"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:282
+msgid "Check out a working copy from a repository"
+msgstr "Verifică o copie de lucru dintr-un depozit"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
+msgid "Cleanup"
+msgstr "Curățare"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:287
+msgid "Recursively clean up the working copy"
+msgstr "Curăță recursiv copia de lucru"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+#: ../tvp-git-helper/tgh-log-dialog.c:153
+#: ../tvp-git-helper/tgh-status-dialog.c:97 ../tvp-svn-helper/main.c:277
+#: ../tvp-svn-helper/tsh-commit.c:274 ../tvp-svn-helper/tsh-commit.c:287
+msgid "Commit"
+msgstr "Comitere modificări"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:292
+msgid "Send changes from your working copy to the repository"
+msgstr "Trimite modificările din copia de lucru către depozit"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
+#: ../tvp-svn-helper/tsh-copy.c:189
+msgid "Copy"
+msgstr "Copiază"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:297
+msgid "Copy a file or directory in a working copy or in the repository"
+msgstr "Copiază un fișier sau un director într-o copie de lucru sau în depozit"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
+#: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
+msgid "Delete"
+msgstr "Șterge"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:302
+msgid "Delete an item from a working copy or the repository"
+msgstr "Șterge un element dintr-o copie de lucru sau din depozit"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
+#: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
+msgid "Diff"
+msgstr "Diferențe"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:307
+msgid "Display the differences between two revisions or paths"
+msgstr "Afișează diferențele dintre două revizuiri sau rute"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
+#: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
+msgid "Export"
+msgstr "Exportă"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:312
+msgid "Export a clean directory tree"
+msgstr "Exportă un arbore de directoare curat"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
+#: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
+msgid "Import"
+msgstr "Importă"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:317
+msgid "Commit an unversioned file or tree into the repository"
+msgstr "Introduce un fișier sau un arbore fără versiune în depozit"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332 ../tvp-svn-helper/main.c:301
+#: ../tvp-svn-helper/tsh-lock.c:138 ../tvp-svn-helper/tsh-lock-dialog.c:70
+msgid "Lock"
+msgstr "Blocare"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:332
+msgid ""
+"Lock working copy paths in the repository so that no other user can commit "
+"changes to them"
+msgstr "Blochează rutele copiei de lucru în depozit, astfel încât niciun alt utilizator să nu poată comite modificări la acestea"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:352
+msgid "Move a file or directory"
+msgstr "Mută un fișier sau un director"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+msgid "Edit Properties"
+msgstr "Editare proprietăți"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:363
+msgid "Edit the property of one or more items"
+msgstr "Editează proprietatea unuia sau mai multor elemente"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
+#: ../tvp-svn-helper/tsh-relocate.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:187
+msgid "Relocate"
+msgstr "Realocare"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:368
+msgid "Relocate the working copy to point to a different repository root URL"
+msgstr "Realocă copia de lucru pentru a indica o altă adresă URL a rădăcinii depozitului"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
+#: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
+#: ../tvp-svn-helper/tsh-resolved.c:138
+msgid "Resolved"
+msgstr "Rezolvare"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:374
+msgid "Remove \"conflicted\" state on working copy files or directories"
+msgstr "Elimină starea „conflictuală” a fișierelor sau directoarelor copiei de lucru"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
+#: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
+msgid "Revert"
+msgstr "Revenire (la valorile dinainte)"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:384
+msgid "Undo all local edits"
+msgstr "Anulează toate modificările locale"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
+#: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
+msgid "Switch"
+msgstr "Schimbă"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:394
+msgid "Update working copy to a different URL"
+msgstr "Actualizează copia de lucru la o adresă URL diferită"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
+#: ../tvp-svn-helper/tsh-unlock.c:119
+msgid "Unlock"
+msgstr "Deblocare"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:399
+msgid "Unlock working copy paths"
+msgstr "Deblochează rutele copiei de lucru"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
+#: ../tvp-svn-helper/tsh-update.c:125
+msgid "Update"
+msgstr "Actualizare"
+
+#: ../thunar-vcs-plugin/tvp-svn-action.c:404
+msgid "Update your working copy"
+msgstr "Actualizează copia dvs. de lucru"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
+msgid "URL:"
+msgstr "URL:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:124
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:140
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:155
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:181
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:196
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:212
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:253
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:333
+#: ../tvp-svn-helper/tsh-common.c:651 ../tvp-svn-helper/tsh-common.c:739
+#: ../tvp-svn-helper/tsh-common.c:751 ../tvp-svn-helper/tsh-common.c:776
+#: ../tvp-svn-helper/tsh-common.c:793 ../tvp-svn-helper/tsh-common.c:822
+#: ../tvp-svn-helper/tsh-common.c:934
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:133
+msgid "Revision:"
+msgstr "Revizuire:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:148
+msgid "Repository:"
+msgstr "Depozit:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:174
+msgid "Modified revision:"
+msgstr "Revizuire modificată:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:189
+msgid "Modified date:"
+msgstr "Data modificării:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:205
+msgid "Author:"
+msgstr "Autor:"
+
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:230
+msgid "Changelist:"
+msgstr "Lista modificărilor:"
+
+#. Translators: Depth as in depth of recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:246
+msgid "Depth:"
+msgstr "Adâncime:"
+
+#. Translators: svn recursion depth infotmation
+#. * Exclude should not apear client side
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:339
+#: ../tvp-svn-helper/tsh-common.c:640
+msgid "Exclude"
+msgstr "Exclude"
+
+#. Translators: svn recursion depth infotmation
+#. * Empty depth means only this file/direcotry is checked out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:345
+msgid "Empty"
+msgstr "Gol"
+
+#. Translators: svn recursion depth infotmation
+#. * Files depth means this file/direcotry and all of it's files are checked
+#. out
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:351
+msgid "Files"
+msgstr "Fișiere"
+
+#. Translators: svn recursion depth infotmation
+#. * Immediates depth means this file/direcotry and all of it's files and
+#. subdirectories are checked out
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are updated
+#. Translators: svn recursion selection
+#. * Immediates means this file/direcotry and the subdirectories are shown
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:357
+#: ../tvp-svn-helper/tsh-diff-dialog.c:171
+#: ../tvp-svn-helper/tsh-properties-dialog.c:211
+#: ../tvp-svn-helper/tsh-status-dialog.c:199
+msgid "Immediates"
+msgstr "Imediat"
+
+#. Translators: svn recursion depth infotmation
+#. * Infinity depth means this file/direcotry is checked out with full
+#. recursion
+#: ../thunar-vcs-plugin/tvp-svn-property-page.c:363
+msgid "Infinity"
+msgstr "Infinit"
+
+#: ../tvp-git-helper/main.c:80 ../tvp-svn-helper/main.c:108
+msgid "Print version information"
+msgstr "Afișează informațiile despre versiune"
+
+#: ../tvp-git-helper/main.c:87 ../tvp-svn-helper/main.c:115
+msgid "Execute add action"
+msgstr "Execută acțiunea de adăugare"
+
+#: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
+msgid "Execute blame action"
+msgstr "Execută acțiunea de învinuire"
+
+#: ../tvp-git-helper/main.c:99
+msgid "Execute branch action"
+msgstr "Execută acțiunea de ramificare"
+
+#: ../tvp-git-helper/main.c:105
+msgid "Execute clean action"
+msgstr "Execută acțiunea de curățare"
+
+#: ../tvp-git-helper/main.c:111
+msgid "Execute clone action"
+msgstr "Execută acțiunea de clonare"
+
+#: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
+msgid "Execute log action"
+msgstr "Execută acțiunea de înregistrare(jurnalizare)"
+
+#: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
+msgid "Execute move action"
+msgstr "Execută acțiunea de mutare"
+
+#: ../tvp-git-helper/main.c:129
+msgid "Execute reset action"
+msgstr "Execută acțiunea de reinițializare"
+
+#: ../tvp-git-helper/main.c:135
+msgid "Execute stash action"
+msgstr "Execută acțiunea de ascundere"
+
+#: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
+msgid "Execute status action"
+msgstr "Execută acțiunea de stare"
+
+#: ../tvp-git-helper/main.c:153 ../tvp-svn-helper/main.c:257
+msgid "Add Related Options:"
+msgstr "Opțiuni legate de adăugare:"
+
+#: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
+msgid "Blame Related Options:"
+msgstr "Opțiuni legate de învinuire:"
+
+#: ../tvp-git-helper/main.c:161
+msgid "Branch Related Options:"
+msgstr "Opțiuni legate de ramificare:"
+
+#: ../tvp-git-helper/main.c:165 ../tvp-git-helper/main.c:169
+msgid "Clone Related Options:"
+msgstr "Opțiuni legate de clonare:"
+
+#: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
+msgid "Log Related Options:"
+msgstr "Opțiuni legate de înregistrare:"
+
+#: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
+msgid "Move Related Options:"
+msgstr "Opțiuni legate de mutare:"
+
+#: ../tvp-git-helper/main.c:181
+msgid "Reset Related Options:"
+msgstr "Opțiuni legate de reinițializare:"
+
+#: ../tvp-git-helper/main.c:185
+msgid "Stash Related Options:"
+msgstr "Opțiuni legate de ascundere:"
+
+#: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
+msgid "Status Related Options:"
+msgstr "Opțiuni legate de stare:"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:90
+#: ../tvp-svn-helper/tsh-blame-dialog.c:93
+msgid "Line"
+msgstr "Linia"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:96
+#: ../tvp-git-helper/tgh-log-dialog.c:134
+#: ../tvp-git-helper/tgh-log-dialog.c:187
+#: ../tvp-svn-helper/tsh-blame-dialog.c:99
+#: ../tvp-svn-helper/tsh-log-dialog.c:128
+msgid "Revision"
+msgstr "Revizuirea"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:102
+#: ../tvp-git-helper/tgh-log-dialog.c:140
+#: ../tvp-svn-helper/tsh-blame-dialog.c:105
+#: ../tvp-svn-helper/tsh-log-dialog.c:134
+msgid "Author"
+msgstr "Autor"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:108
+#: ../tvp-svn-helper/tsh-blame-dialog.c:111
+#: ../tvp-svn-helper/tsh-log-dialog.c:140
+msgid "Date"
+msgstr "Data"
+
+#: ../tvp-git-helper/tgh-blame-dialog.c:131
+#: ../tvp-git-helper/tgh-branch-dialog.c:142
+#: ../tvp-git-helper/tgh-log-dialog.c:258
+#: ../tvp-git-helper/tgh-notify-dialog.c:109
+#: ../tvp-git-helper/tgh-stash-dialog.c:248
+#: ../tvp-git-helper/tgh-status-dialog.c:138
+#: ../tvp-svn-helper/tsh-blame-dialog.c:134
+#: ../tvp-svn-helper/tsh-diff-dialog.c:131
+#: ../tvp-svn-helper/tsh-log-dialog.c:241
+#: ../tvp-svn-helper/tsh-notify-dialog.c:116
+#: ../tvp-svn-helper/tsh-properties-dialog.c:251
+#: ../tvp-svn-helper/tsh-status-dialog.c:266
+msgid "_Close"
+msgstr "_Închide"
+
+#. isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:
+#: ../tvp-git-helper/tgh-blame-dialog.c:134
+#: ../tvp-git-helper/tgh-branch-dialog.c:145
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
+#: ../tvp-git-helper/tgh-clean-dialog.c:98
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:123
+#: ../tvp-git-helper/tgh-log-dialog.c:248 ../tvp-git-helper/tgh-move.c:148
+#: ../tvp-git-helper/tgh-notify-dialog.c:112
+#: ../tvp-git-helper/tgh-stash-dialog.c:251
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
+#: ../tvp-git-helper/tgh-status-dialog.c:128
+#: ../tvp-git-helper/tgh-transfer-dialog.c:73
+#: ../tvp-git-helper/tgh-transfer-dialog.c:109
+#: ../tvp-svn-helper/tsh-blame-dialog.c:137 ../tvp-svn-helper/tsh-copy.c:173
+#: ../tvp-svn-helper/tsh-diff-dialog.c:134
+#: ../tvp-svn-helper/tsh-file-dialog.c:77
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:152
+#: ../tvp-svn-helper/tsh-lock-dialog.c:73
+#: ../tvp-svn-helper/tsh-log-dialog.c:231
+#: ../tvp-svn-helper/tsh-login-dialog.c:90
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:119
+#: ../tvp-svn-helper/tsh-move.c:162 ../tvp-svn-helper/tsh-notify-dialog.c:119
+#: ../tvp-svn-helper/tsh-properties-dialog.c:254
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:96
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:140
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:190
+#: ../tvp-svn-helper/tsh-status-dialog.c:256
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:90
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:140
+#: ../tvp-svn-helper/tsh-trust-dialog.c:81
+msgid "_Cancel"
+msgstr "_Anulează"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:109
+msgid "Active"
+msgstr "Activă"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:115
+#: ../tvp-git-helper/tgh-stash-dialog.c:160
+#: ../tvp-svn-helper/tsh-properties-dialog.c:124
+msgid "Name"
+msgstr "Nume"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:130
+msgid "_Jump to"
+msgstr "_Salt la"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:135
+#: ../tvp-git-helper/tgh-branch-dialog.c:249
+msgid "_New"
+msgstr "_Nou"
+
+#: ../tvp-git-helper/tgh-branch-dialog.c:253
+msgid "Branch name:"
+msgstr "Numele ramurii:"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:55
+msgid "Remove directories."
+msgstr "Elimină directoarele."
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:67
+msgid "Exclude ignored files"
+msgstr "Exclude fișierele ignorate"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:75
+msgid "Include ignored files"
+msgstr "Include fișierele ignorate"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:81
+msgid "Only ignored files"
+msgstr "Doar fișierele ignorate"
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:91
+msgid "Force clean."
+msgstr "Forțează curățarea."
+
+#: ../tvp-git-helper/tgh-clean-dialog.c:99
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:124
+#: ../tvp-git-helper/tgh-move.c:149 ../tvp-git-helper/tgh-stash-dialog.c:231
+#: ../tvp-git-helper/tgh-transfer-dialog.c:74
+#: ../tvp-git-helper/tgh-transfer-dialog.c:110
+#: ../tvp-svn-helper/tsh-copy.c:174 ../tvp-svn-helper/tsh-file-dialog.c:78
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:153
+#: ../tvp-svn-helper/tsh-lock-dialog.c:74
+#: ../tvp-svn-helper/tsh-login-dialog.c:91
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:120
+#: ../tvp-svn-helper/tsh-move.c:163 ../tvp-svn-helper/tsh-relocate-dialog.c:97
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:141
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:191
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:91
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:141
+#: ../tvp-svn-helper/tsh-trust-dialog.c:82
+msgid "_OK"
+msgstr "_Ok"
+
+#: ../tvp-git-helper/tgh-clone.c:60
+msgid "Clone finished"
+msgstr "Clonare finalizată"
+
+#: ../tvp-git-helper/tgh-clone.c:126
+msgid "Cloning..."
+msgstr "Se clonează..."
+
+#: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
+#: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
+#: ../tvp-svn-helper/tsh-commit.c:113 ../tvp-svn-helper/tsh-commit.c:152
+#: ../tvp-svn-helper/tsh-commit.c:227 ../tvp-svn-helper/tsh-copy.c:102
+#: ../tvp-svn-helper/tsh-delete.c:101 ../tvp-svn-helper/tsh-export.c:80
+#: ../tvp-svn-helper/tsh-import.c:88 ../tvp-svn-helper/tsh-lock.c:95
+#: ../tvp-svn-helper/tsh-move.c:92 ../tvp-svn-helper/tsh-resolved.c:77
+#: ../tvp-svn-helper/tsh-resolved.c:97 ../tvp-svn-helper/tsh-revert.c:96
+#: ../tvp-svn-helper/tsh-switch.c:79 ../tvp-svn-helper/tsh-unlock.c:90
+#: ../tvp-svn-helper/tsh-update.c:96
+msgid "Failed"
+msgstr "A eșuat"
+
+#: ../tvp-git-helper/tgh-common.c:293
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:245
+msgid "untracked"
+msgstr "neînregistrate(neurmărite)"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:92
+#: ../tvp-git-helper/tgh-notify-dialog.c:92
+#: ../tvp-git-helper/tgh-status-dialog.c:103
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:114
+#: ../tvp-svn-helper/tsh-log-dialog.c:190
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:97
+#: ../tvp-svn-helper/tsh-notify-dialog.c:93
+#: ../tvp-svn-helper/tsh-status-dialog.c:117
+msgid "Path"
+msgstr "Ruta"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:98
+#: ../tvp-git-helper/tgh-status-dialog.c:109
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:91
+#: ../tvp-svn-helper/tsh-status-dialog.c:123
+msgid "State"
+msgstr "Stare"
+
+#: ../tvp-git-helper/tgh-file-selection-dialog.c:113
+#: ../tvp-svn-helper/tsh-file-selection-dialog.c:142
+msgid "Select/Unselect all"
+msgstr "Selectează/deselectează tot"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:146
+msgid "AuthorDate"
+msgstr "DatăAutor"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:159
+msgid "CommitDate"
+msgstr "DatăComitere"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:166
+#: ../tvp-svn-helper/tsh-log-dialog.c:146
+msgid "Message"
+msgstr "Mesaj"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:216
+#: ../tvp-git-helper/tgh-stash-dialog.c:196
+msgid "Changes"
+msgstr "Schimbări"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:223
+#: ../tvp-git-helper/tgh-stash-dialog.c:203
+msgid "File"
+msgstr "Fișier"
+
+#: ../tvp-git-helper/tgh-log-dialog.c:253
+#: ../tvp-git-helper/tgh-status-dialog.c:133
+#: ../tvp-svn-helper/tsh-diff-dialog.c:139
+#: ../tvp-svn-helper/tsh-log-dialog.c:236
+#: ../tvp-svn-helper/tsh-status-dialog.c:261
+msgid "_Refresh"
+msgstr "_Reîmprospătează"
+
+#: ../tvp-git-helper/tgh-move.c:60
+msgid "Move finished"
+msgstr "Mutare finalizată"
+
+#: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:160
+msgid "Move To"
+msgstr "Mutare la"
+
+#: ../tvp-git-helper/tgh-move.c:162
+msgid "Move..."
+msgstr "Mută..."
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:86
+#: ../tvp-svn-helper/tsh-log-dialog.c:184
+#: ../tvp-svn-helper/tsh-notify-dialog.c:87
+msgid "Action"
+msgstr "Acțiune"
+
+#: ../tvp-git-helper/tgh-notify-dialog.c:107
+msgid "Notify"
+msgstr "Notifică"
+
+#: ../tvp-git-helper/tgh-reset.c:60
+msgid "Reset finished"
+msgstr "Reinițializare finalizată"
+
+#: ../tvp-git-helper/tgh-reset.c:154
+msgid "Reset..."
+msgstr "Reinițializează..."
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:172
+msgid "Description"
+msgstr "Descriere"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:221
+#: ../tvp-git-helper/tgh-stash-dialog.c:378
+msgid "_Save"
+msgstr "_Salvează"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:226
+msgid "_Apply"
+msgstr "_Aplică"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:236
+msgid "_Delete"
+msgstr "Șt_erge"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:241
+msgid "C_lear"
+msgstr "C_urățare"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:382
+msgid "Stash description:"
+msgstr "Descrierea ascunzătorii:"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:520
+#, c-format
+msgid "Are you sure you want to drop %s?"
+msgstr "Sunteți sigur că doriți să renunțați la %s?"
+
+#: ../tvp-git-helper/tgh-stash-dialog.c:548
+msgid "Are you sure you want to clear all stash?"
+msgstr "Sunteți sigur că vreți să ștergeți toate ascunzătorile?"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:66
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:82
+msgid "_Repository:"
+msgstr "_Depozit:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:71
+#: ../tvp-git-helper/tgh-transfer-dialog.c:98
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:94
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:100
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:138
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:144
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:179
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:88
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:94
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:129
+msgid "Select a folder"
+msgstr "Alegeți un dosar"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:95
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:176
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:126
+msgid "_Directory:"
+msgstr "_Director:"
+
+#: ../tvp-git-helper/tgh-transfer-dialog.c:106
+#: ../tvp-svn-helper/tsh-transfer-dialog.c:137
+msgid "Transfer"
+msgstr "Transferă"
+
+#: ../tvp-svn-helper/main.c:127
+msgid "Execute changelist action"
+msgstr "Execută acțiunea listei de modificări"
+
+#: ../tvp-svn-helper/main.c:133
+msgid "Execute checkout action"
+msgstr "Execută acțiunea de verificare"
+
+#: ../tvp-svn-helper/main.c:139
+msgid "Execute cleanup action"
+msgstr "Execută acțiunea de curățare"
+
+#: ../tvp-svn-helper/main.c:145
+msgid "Execute commit action"
+msgstr "Execută acțiunea de comitere a modificărilor"
+
+#: ../tvp-svn-helper/main.c:151
+msgid "Execute copy action"
+msgstr "Execută acțiunea de copiere"
+
+#: ../tvp-svn-helper/main.c:157
+msgid "Execute delete action"
+msgstr "Execută acțiunea de ștergere"
+
+#: ../tvp-svn-helper/main.c:163
+msgid "Execute diff action"
+msgstr "Execută acțiunea de comparare a diferențelor"
+
+#: ../tvp-svn-helper/main.c:169
+msgid "Execute export action"
+msgstr "Execută acțiunea de export"
+
+#: ../tvp-svn-helper/main.c:175
+msgid "Execute import action"
+msgstr "Execută acțiunea de import"
+
+#: ../tvp-svn-helper/main.c:181
+msgid "Execute lock action"
+msgstr "Execută acțiunea de blocare"
+
+#: ../tvp-svn-helper/main.c:199
+msgid "Execute properties action"
+msgstr "Execută acțiunea proprietăților"
+
+#: ../tvp-svn-helper/main.c:205
+msgid "Execute resolved action"
+msgstr "Execută acțiunea de rezolvare"
+
+#: ../tvp-svn-helper/main.c:211
+msgid "Execute relocate action"
+msgstr "Execută acțiunea de realocare"
+
+#: ../tvp-svn-helper/main.c:217
+msgid "Execute revert action"
+msgstr "Execută acțiunea de revenire(la valorile anterioare)"
+
+#: ../tvp-svn-helper/main.c:229
+msgid "Execute switch action"
+msgstr "Execută acțiunea de schimbare"
+
+#: ../tvp-svn-helper/main.c:235
+msgid "Execute unlock action"
+msgstr "Execută acțiunea de deblocare"
+
+#: ../tvp-svn-helper/main.c:241
+msgid "Execute update action"
+msgstr "Execută acțiunea de actualizare"
+
+#: ../tvp-svn-helper/main.c:265
+msgid "Changelist Related Options:"
+msgstr "Opțiuni legate de lista de modificări:"
+
+#: ../tvp-svn-helper/main.c:269
+msgid "Checkout Related Options:"
+msgstr "Opțiuni legate de verificare:"
+
+#: ../tvp-svn-helper/main.c:273
+msgid "Cleanup Related Options:"
+msgstr "Opțiuni legate de curățare:"
+
+#: ../tvp-svn-helper/main.c:277
+msgid "Commit Related Options:"
+msgstr "Opțiuni legate de comiterea modificărilor:"
+
+#: ../tvp-svn-helper/main.c:281
+msgid "Copy Related Options:"
+msgstr "Opțiuni legate de copiere:"
+
+#: ../tvp-svn-helper/main.c:285
+msgid "Delete Related Options:"
+msgstr "Opțiuni legate de ștergere:"
+
+#: ../tvp-svn-helper/main.c:289
+msgid "Diff Related Options:"
+msgstr "Opțiuni legate de compararea diferențelor:"
+
+#: ../tvp-svn-helper/main.c:293
+msgid "Export Related Options:"
+msgstr "Opțiuni legate de export:"
+
+#: ../tvp-svn-helper/main.c:297
+msgid "Import Related Options:"
+msgstr "Opțiuni legate de import:"
+
+#: ../tvp-svn-helper/main.c:301
+msgid "Lock Related Options:"
+msgstr "Opțiuni legate de blocare:"
+
+#: ../tvp-svn-helper/main.c:313
+msgid "Properties Related Options:"
+msgstr "Opțiuni legate de proprietăți:"
+
+#: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
+msgid "Properties"
+msgstr "Proprietăți"
+
+#: ../tvp-svn-helper/main.c:317
+msgid "Resolved Related Options:"
+msgstr "Opțiuni legate de rezolvare:"
+
+#: ../tvp-svn-helper/main.c:321
+msgid "Relocate Related Options:"
+msgstr "Opțiuni legate de realocare:"
+
+#: ../tvp-svn-helper/main.c:325
+msgid "Revert Related Options:"
+msgstr "Opțiuni legate de revenire(la valorile anterioare):"
+
+#: ../tvp-svn-helper/main.c:333
+msgid "Switch Related Options:"
+msgstr "Opțiuni legate de schimbare:"
+
+#: ../tvp-svn-helper/main.c:337
+msgid "Unlock Related Options:"
+msgstr "Opțiuni legate de deblocare:"
+
+#: ../tvp-svn-helper/main.c:341
+msgid "Update Related Options:"
+msgstr "Opțiuni legate de actualizare:"
+
+#: ../tvp-svn-helper/main.c:384
+msgid "Not enough arguments provided"
+msgstr "Nu au fost furnizate suficiente argumente"
+
+#: ../tvp-svn-helper/tsh-blame.c:85
+msgid "Blame failed"
+msgstr "Acțiunea de învinuire a eșuat"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:57
+#, c-format
+msgid "'%s' is not a local path"
+msgstr "„%s” nu este o rută locală"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:93
+msgid "Cleanup failed"
+msgstr "Curățarea a eșuat"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:115
+msgid "Cleanup finished"
+msgstr "Curățarea a fost finalizată"
+
+#: ../tvp-svn-helper/tsh-cleanup.c:132
+msgid "Cleaning up..."
+msgstr "Se face curățenie..."
+
+#: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
+#: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
+#: ../tvp-svn-helper/tsh-delete.c:116 ../tvp-svn-helper/tsh-import.c:101
+#: ../tvp-svn-helper/tsh-move.c:107
+#, c-format
+msgid "At revision: %ld"
+msgstr "La revizuirea: %ld"
+
+#: ../tvp-svn-helper/tsh-commit.c:247
+msgid "Nothing to do"
+msgstr "Nimic de făcut."
+
+#: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
+#: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
+#: ../tvp-svn-helper/tsh-copy.c:131 ../tvp-svn-helper/tsh-delete.c:130
+#: ../tvp-svn-helper/tsh-import.c:109 ../tvp-svn-helper/tsh-move.c:121
+msgid "Completed"
+msgstr "Sarcină finalizată"
+
+#: ../tvp-svn-helper/tsh-commit.c:292
+msgid "Commit Message"
+msgstr "Mesajul de comitere a modificărilor"
+
+#: ../tvp-svn-helper/tsh-common.c:296
+msgid "Store password a plaintext?"
+msgstr "Stocați parola în text clar?"
+
+#: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
+#: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
+#: ../tvp-svn-helper/tsh-common.c:827 ../tvp-svn-helper/tsh-common.c:940
+msgid "Added"
+msgstr "Adăugat"
+
+#: ../tvp-svn-helper/tsh-common.c:577 ../tvp-svn-helper/tsh-common.c:636
+#: ../tvp-svn-helper/tsh-common.c:949
+msgid "Copied"
+msgstr "Copiat"
+
+#: ../tvp-svn-helper/tsh-common.c:578 ../tvp-svn-helper/tsh-common.c:584
+#: ../tvp-svn-helper/tsh-common.c:593 ../tvp-svn-helper/tsh-common.c:782
+#: ../tvp-svn-helper/tsh-common.c:830 ../tvp-svn-helper/tsh-common.c:942
+msgid "Deleted"
+msgstr "Șters"
+
+#: ../tvp-svn-helper/tsh-common.c:579
+msgid "Restored"
+msgstr "Restaurat"
+
+#: ../tvp-svn-helper/tsh-common.c:580
+msgid "Reverted"
+msgstr "Revenit(la valorile anterioare)"
+
+#: ../tvp-svn-helper/tsh-common.c:581
+msgid "Revert failed"
+msgstr "Revenirea(la valorile anterioare) a eșuat"
+
+#: ../tvp-svn-helper/tsh-common.c:583
+msgid "Skipped"
+msgstr "Omis"
+
+#: ../tvp-svn-helper/tsh-common.c:586
+msgid "Updated"
+msgstr "Actualizat"
+
+#: ../tvp-svn-helper/tsh-common.c:588 ../tvp-svn-helper/tsh-common.c:590
+#: ../tvp-svn-helper/tsh-common.c:789
+msgid "External"
+msgstr "Extern"
+
+#: ../tvp-svn-helper/tsh-common.c:591 ../tvp-svn-helper/tsh-common.c:784
+#: ../tvp-svn-helper/tsh-common.c:833 ../tvp-svn-helper/tsh-common.c:945
+msgid "Modified"
+msgstr "Modificat"
+
+#: ../tvp-svn-helper/tsh-common.c:594 ../tvp-svn-helper/tsh-common.c:783
+#: ../tvp-svn-helper/tsh-common.c:836 ../tvp-svn-helper/tsh-common.c:938
+msgid "Replaced"
+msgstr "Substituit"
+
+#: ../tvp-svn-helper/tsh-common.c:595
+msgid "Transmitting"
+msgstr "Transmitere"
+
+#: ../tvp-svn-helper/tsh-common.c:597 ../tvp-svn-helper/tsh-common.c:645
+msgid "Locked"
+msgstr "Blocat"
+
+#: ../tvp-svn-helper/tsh-common.c:598 ../tvp-svn-helper/tsh-common.c:951
+msgid "Unlocked"
+msgstr "Deblocat"
+
+#: ../tvp-svn-helper/tsh-common.c:599
+msgid "Lock failed"
+msgstr "Blocarea a eșuat"
+
+#: ../tvp-svn-helper/tsh-common.c:600
+msgid "Unlock failed"
+msgstr "Deblocarea a eșuat"
+
+#: ../tvp-svn-helper/tsh-common.c:601
+msgid "Exists"
+msgstr "Există"
+
+#: ../tvp-svn-helper/tsh-common.c:602
+msgid "Changelist set"
+msgstr "Listă de modificări definită"
+
+#: ../tvp-svn-helper/tsh-common.c:603
+msgid "Changelist cleared"
+msgstr "Listă de modificări curățată"
+
+#: ../tvp-svn-helper/tsh-common.c:604
+msgid "Changelist moved"
+msgstr "Listă de modificări mutată"
+
+#: ../tvp-svn-helper/tsh-common.c:605
+msgid "Merge begin"
+msgstr "Începe fuziunea"
+
+#: ../tvp-svn-helper/tsh-common.c:606
+msgid "Foreign merge begin"
+msgstr "Începe fuziunea (cu partea) externă"
+
+#: ../tvp-svn-helper/tsh-common.c:607
+msgid "Replace"
+msgstr "Înlocuiește"
+
+#: ../tvp-svn-helper/tsh-common.c:609
+msgid "Property added"
+msgstr "Proprietate adăugată"
+
+#: ../tvp-svn-helper/tsh-common.c:610
+msgid "Property modified"
+msgstr "Proprietate modificată"
+
+#: ../tvp-svn-helper/tsh-common.c:611
+msgid "Property deleted"
+msgstr "Proprietate ștearsă"
+
+#: ../tvp-svn-helper/tsh-common.c:612
+msgid "Property nonexisting"
+msgstr "Proprietate inexistentă"
+
+#: ../tvp-svn-helper/tsh-common.c:613
+msgid "Revision property set"
+msgstr "Proprietate de revizuire stabilită"
+
+#: ../tvp-svn-helper/tsh-common.c:614
+msgid "Revision property deleted"
+msgstr "Proprietate de revizuire ștearsă"
+
+#: ../tvp-svn-helper/tsh-common.c:615
+msgid "Merge completed"
+msgstr "Fuziune finalizată"
+
+#: ../tvp-svn-helper/tsh-common.c:616
+msgid "Tree conflict"
+msgstr "Conflict în arbore"
+
+#: ../tvp-svn-helper/tsh-common.c:617
+msgid "External failed"
+msgstr "Eșec extern"
+
+#: ../tvp-svn-helper/tsh-common.c:620
+msgid "Started"
+msgstr "Început"
+
+#: ../tvp-svn-helper/tsh-common.c:621
+msgid "Skipped obstruction"
+msgstr "Obstrucție omisă"
+
+#: ../tvp-svn-helper/tsh-common.c:622
+msgid "Skipped working only"
+msgstr "Doar lucrarea omisă"
+
+#: ../tvp-svn-helper/tsh-common.c:623
+msgid "Skipped access denied"
+msgstr "Acces refuzat omis"
+
+#: ../tvp-svn-helper/tsh-common.c:624
+msgid "External removed"
+msgstr "Extern eliminat"
+
+#: ../tvp-svn-helper/tsh-common.c:625
+msgid "Shadowed add"
+msgstr "Adăugare în umbră"
+
+#: ../tvp-svn-helper/tsh-common.c:626
+msgid "Shadowed update"
+msgstr "Actualizare în umbră"
+
+#: ../tvp-svn-helper/tsh-common.c:627
+msgid "Shadowed delete"
+msgstr "Ștergere în umbră"
+
+#: ../tvp-svn-helper/tsh-common.c:628
+msgid "Merge record info"
+msgstr "Fuzionează informațiile de înregistrare"
+
+#: ../tvp-svn-helper/tsh-common.c:629
+msgid "Upgraded path"
+msgstr "Rută actualizată"
+
+#: ../tvp-svn-helper/tsh-common.c:630
+msgid "Merge record info begin"
+msgstr "Începe fuzionarea informațiilor de înregistrare"
+
+#: ../tvp-svn-helper/tsh-common.c:631
+msgid "Merge elide info"
+msgstr "Fuzionează informațiile omise"
+
+#: ../tvp-svn-helper/tsh-common.c:632
+msgid "Patch"
+msgstr "Plasture(corecție)"
+
+#: ../tvp-svn-helper/tsh-common.c:633
+msgid "Applied hunk"
+msgstr "Bucată aplicată"
+
+#: ../tvp-svn-helper/tsh-common.c:634
+msgid "Rejected hunk"
+msgstr "Bucată respinsă"
+
+#: ../tvp-svn-helper/tsh-common.c:635
+msgid "Hunk already applied"
+msgstr "Bucată deja aplicată"
+
+#: ../tvp-svn-helper/tsh-common.c:637
+msgid "Copied replaced"
+msgstr "Copiere înlocuită"
+
+#: ../tvp-svn-helper/tsh-common.c:638
+msgid "URL redirect"
+msgstr "Redirecționare URL"
+
+#: ../tvp-svn-helper/tsh-common.c:639
+msgid "Path nonexistent"
+msgstr "Rută inexistentă"
+
+#: ../tvp-svn-helper/tsh-common.c:641
+msgid "Conflict"
+msgstr "Conflict"
+
+#: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:741
+#: ../tvp-svn-helper/tsh-common.c:781
+msgid "Missing"
+msgstr "Lipsește"
+
+#: ../tvp-svn-helper/tsh-common.c:643
+msgid "Out of date"
+msgstr "Neactualizat"
+
+#: ../tvp-svn-helper/tsh-common.c:644
+msgid "No parent"
+msgstr "Fără părinte"
+
+#: ../tvp-svn-helper/tsh-common.c:646
+msgid "Forbidden by server"
+msgstr "Interzis de către server"
+
+#: ../tvp-svn-helper/tsh-common.c:647
+msgid "Skipped conflicted"
+msgstr "Conflict omis"
+
+#: ../tvp-svn-helper/tsh-common.c:738
+msgid "Inapplicable"
+msgstr "Inaplicabil"
+
+#: ../tvp-svn-helper/tsh-common.c:740
+msgid "Unchanged"
+msgstr "Neschimbat"
+
+#: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
+msgid "Obstructed"
+msgstr "Obstrucționat"
+
+#: ../tvp-svn-helper/tsh-common.c:743
+msgid "Changed"
+msgstr "Modificat"
+
+#: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
+msgid "Merged"
+msgstr "Fuzionat"
+
+#: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
+msgid "Conflicted"
+msgstr "Conflictual"
+
+#: ../tvp-svn-helper/tsh-common.c:747
+msgid "Source missing"
+msgstr "Sursa lipsește"
+
+#. N_("None"),
+#. N_("Unversioned"),
+#: ../tvp-svn-helper/tsh-common.c:779
+msgid "Normal"
+msgstr "Normal"
+
+#: ../tvp-svn-helper/tsh-common.c:787
+msgid "Ignored"
+msgstr "Ignorat"
+
+#: ../tvp-svn-helper/tsh-common.c:790
+msgid "Incomplete"
+msgstr "Incomplet"
+
+#: ../tvp-svn-helper/tsh-common.c:1163
+msgid "Error"
+msgstr "Eroare"
+
+#: ../tvp-svn-helper/tsh-common.c:1176
+msgid "Local action"
+msgstr "Acțiune locală"
+
+#: ../tvp-svn-helper/tsh-copy.c:122
+msgid "Local copy"
+msgstr "Copie locală"
+
+#: ../tvp-svn-helper/tsh-copy.c:171
+msgid "Copy To"
+msgstr "Copiază la"
+
+#: ../tvp-svn-helper/tsh-delete.c:121
+msgid "Local delete"
+msgstr "Ștergere locală"
+
+#: ../tvp-svn-helper/tsh-delete.c:163
+msgid "Delete Message"
+msgstr "Mesaj de ștergere"
+
+#: ../tvp-svn-helper/tsh-diff.c:207
+msgid "Diff failed"
+msgstr "Operația de comparare a eșuat"
+
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is updated
+#. Translators: svn recursion selection
+#. * Self means only this file/direcotry is shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:153
+#: ../tvp-svn-helper/tsh-properties-dialog.c:191
+#: ../tvp-svn-helper/tsh-status-dialog.c:181
+msgid "Self"
+msgstr "Auto"
+
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. updated
+#. Translators: svn recursion selection
+#. * Immediate files means this file/direcotry and the files it contains are
+#. shown
+#: ../tvp-svn-helper/tsh-diff-dialog.c:162
+#: ../tvp-svn-helper/tsh-properties-dialog.c:202
+#: ../tvp-svn-helper/tsh-status-dialog.c:190
+msgid "Immediate files"
+msgstr "Fișiere imediate"
+
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the update is full recursive
+#. Translators: svn recursion selection
+#. * Recursive means the list is full recursive
+#: ../tvp-svn-helper/tsh-diff-dialog.c:180
+#: ../tvp-svn-helper/tsh-properties-dialog.c:220
+#: ../tvp-svn-helper/tsh-status-dialog.c:208
+msgid "Recursive"
+msgstr "Recursiv"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:196
+msgid "Notice ancestry"
+msgstr "Anunț ancestral"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:201
+msgid "Do not show differences for deleted files"
+msgstr "Nu afișa diferențele pentru fișierele șterse"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:207
+msgid "Show copies as additions"
+msgstr "Afișează copiile ca adăugiri"
+
+#: ../tvp-svn-helper/tsh-diff-dialog.c:362
+msgid "Loading..."
+msgstr "Se încarcă…"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:58
+msgid "_Certificate:"
+msgstr "_Certificat:"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:61
+msgid "Select a file"
+msgstr "Selectează un fişier"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:69
+#: ../tvp-svn-helper/tsh-login-dialog.c:82
+#: ../tvp-svn-helper/tsh-trust-dialog.c:74
+msgid "Remember"
+msgstr "Reține"
+
+#: ../tvp-svn-helper/tsh-file-dialog.c:74
+msgid "Certificate"
+msgstr "Certificat"
+
+#: ../tvp-svn-helper/tsh-import.c:149
+msgid "Import Message"
+msgstr "Mesaj de import"
+
+#: ../tvp-svn-helper/tsh-log.c:128
+msgid "Log failed"
+msgstr "Înregistrare eșuată"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:214
+msgid "Stop On Copy"
+msgstr "Oprire la copiere"
+
+#: ../tvp-svn-helper/tsh-log-dialog.c:219
+msgid "Show Merged Revisions"
+msgstr "Afișează revizuirile fuzionate"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:63
+msgid "_Username:"
+msgstr "N_umele utilizatorului:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:72
+msgid "_Password:"
+msgstr "_Parola:"
+
+#: ../tvp-svn-helper/tsh-login-dialog.c:87
+msgid "Login"
+msgstr "Autentificare"
+
+#: ../tvp-svn-helper/tsh-log-message-dialog.c:116
+msgid "Log Message"
+msgstr "Mesaj de jurnal(înregistrare)"
+
+#: ../tvp-svn-helper/tsh-move.c:112
+msgid "Local move"
+msgstr "Mutare locală"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:99
+msgid "MIME type"
+msgstr "Tip MIME"
+
+#: ../tvp-svn-helper/tsh-notify-dialog.c:114
+msgid "Notification"
+msgstr "Notificare"
+
+#: ../tvp-svn-helper/tsh-properties.c:143
+msgid "Set property failed"
+msgstr "Stabilirea proprietății a eșuat"
+
+#: ../tvp-svn-helper/tsh-properties.c:189
+msgid "Properties failed"
+msgstr "Proprietățile au eșuat"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:130
+msgid "Value"
+msgstr "Valoare"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:239
+msgid "_Add"
+msgstr "_Adaugă"
+
+#: ../tvp-svn-helper/tsh-properties-dialog.c:244
+msgid "_Remove"
+msgstr "_Elimină"
+
+#: ../tvp-svn-helper/tsh-relocate.c:81
+msgid "Relocate failed"
+msgstr "Realocarea a eșuat"
+
+#: ../tvp-svn-helper/tsh-relocate.c:103
+msgid "Relocate finished"
+msgstr "Realocare finalizată"
+
+#: ../tvp-svn-helper/tsh-relocate.c:152
+msgid "Relocating..."
+msgstr "Se realocă..."
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:88
+msgid "_From:"
+msgstr "_De la:"
+
+#: ../tvp-svn-helper/tsh-relocate-dialog.c:132
+msgid "_To:"
+msgstr "_La:"
+
+#: ../tvp-svn-helper/tsh-status.c:110
+msgid "Status failed"
+msgstr "Obținerea stării a eșuat"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:129
+msgid "Prop state"
+msgstr "Starea proprietăților"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:135
+msgid "Repo state"
+msgstr "Starea depozitului"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:141
+msgid "Repo prop state"
+msgstr "Starea proprietăților depozitului"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:224
+msgid "Show Unmodified Files"
+msgstr "Afișează fișierele nemodificate"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:229
+msgid "Show Unversioned Files"
+msgstr "Afișează fișierele fără versiune"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:234
+msgid "Show Ignored Files"
+msgstr "Afișează fișierele ignorate"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:239
+msgid "Hide Externals"
+msgstr "Ascunde datele externe"
+
+#: ../tvp-svn-helper/tsh-status-dialog.c:244
+msgid "Check Repository"
+msgstr "Verifică depozitul"
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:59
+msgid "Certificate is not yet valid."
+msgstr "Certificatul nu este încă valid."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:62
+msgid "Certificate has expired."
+msgstr "Certificatul a expirat."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:65
+msgid "Certificate does not match the remote hostname."
+msgstr "Certificatul nu coincide cu numele de gazdă de la distanță."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:68
+msgid "Certificate authority is unknown."
+msgstr "Autoritatea de certificare nu este cunoscută."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:71
+msgid "Other failure."
+msgstr "Alt eșec."
+
+#: ../tvp-svn-helper/tsh-trust-dialog.c:78
+msgid "Trust"
+msgstr "De încredere"
