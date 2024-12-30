@@ -1,3 +1,36 @@
+0.3.0 (2024-12-30)
+=====
+- I18n: Update po/LINGUAS list
+- Fix string array leak in tvp-git-helper main
+- Fix GOptionContext leak in tvp-git-helper main
+- build: Use XDT_VERSION_INIT and get rid of configure.ac.in
+- build: Add missing check for bind_textdomain_codeset
+- tsh-log-dialog: fix -Wcast-function-type
+- svn-revert: Avoid svn-1.11 deprecated function
+- svn-diff: Avoid svn 1.11 deprecated function
+- svn-diff: Avoid svn 1.8 deprecated function
+- svn-blame: Avoid svn 1.12 deprecated function
+- svn: Add a tsh_blame_baton wrapper
+- I18n: Update po/LINGUAS list
+- build: Require apr-util-1
+- Fix autotools warning, get rid of intltool
+- Update COPYING
+- Fix compilation warnings
+- autoconf: AM_CONFIG_HEADER -> AC_CONFIG_HEADERS
+- Create README.md. Update configure.ac.in
+- Add basic GitLab pipeline
+- Post release tag bump
+- Translation Updates:
+  Albanian, Arabic, Armenian (Armenia), Basque, Belarusian, Bulgarian,
+  Catalan, Chinese (China), Chinese (Taiwan), Croatian, Czech, Danish,
+  Dutch, Eastern Armenian, Eastern Armenian (Russia), English
+  (Australia), English (United Kingdom), Finnish, French, Galician,
+  German, Greek, Hebrew, Hungarian, Icelandic, Indonesian, Interlingue,
+  Italian, Korean, Latvian, Lithuanian, Malay, Norwegian Bokmål,
+  Occitan (post 1500), Polish, Portuguese, Romanian, Russian, Serbian,
+  Slovak, Slovenian, Spanish, Thai, Turkish, Urdu, Urdu (Pakistan),
+  Uyghur
+
 0.2.0
 =====
 - Fix context menu strings.

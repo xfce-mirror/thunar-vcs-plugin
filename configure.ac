@@ -18,7 +18,7 @@
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-XDT_VERSION_INIT([0.2.0], [git])
+XDT_VERSION_INIT([0.3.0])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
