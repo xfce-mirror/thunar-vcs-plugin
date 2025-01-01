@@ -3,23 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Slavko <linux@slavino.sk>, 2014-2015
+# Slavko <linux@slavino.sk>, 2014-2015,2025
 # 7dcd6f74323fe8d9c477949ff8fcbb1c_c427b63 <3fcd202e3dfab15fda15b8e88e54d449_7173>, 2011
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2020-10-02 08:25+0000\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
-"Language-Team: Slovak (http://www.transifex.com/xfce/thunar-plugins/language/sk/)\n"
+"POT-Creation-Date: 2023-05-30 00:47+0200\n"
+"PO-Revision-Date: 2013-07-03 18:12+0000\n"
+"Last-Translator: Slavko <linux@slavino.sk>, 2014-2015,2025\n"
+"Language-Team: Slovak (http://app.transifex.com/xfce/thunar-plugins/language/sk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
@@ -27,51 +27,51 @@ msgstr ""
 msgid "Add"
 msgstr "Pridať (add)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 msgid "Add file contents to the index"
-msgstr ""
+msgstr "Pridať obsah súboru do indexu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
 msgstr "Vypísať detaily (blame)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
 msgstr ""
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:228 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Vetva (branch)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227
+#: ../thunar-vcs-plugin/tvp-git-action.c:228
 msgid "List, create or switch branches"
-msgstr ""
+msgstr "Vypísať, vytvoriť alebo prepnúť vetvy"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
+#: ../thunar-vcs-plugin/tvp-git-action.c:230 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "Vyčistiť (clean)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:229
+#: ../thunar-vcs-plugin/tvp-git-action.c:230
 msgid "Remove untracked files from the working tree"
-msgstr ""
+msgstr "Odstrániť z pracovného stromu nesledované súbory"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:232 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Klonovať (clone)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231
+#: ../thunar-vcs-plugin/tvp-git-action.c:232
 msgid "Clone a repository into a new directory"
-msgstr ""
+msgstr "Klonovať úložisko do nového priečinka"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::commit", _("Commit"),
 #. _("Commit"), "gtk-apply", _("Commit"));
@@ -83,27 +83,27 @@ msgstr ""
 #. _("Grep"), NULL, _("Grep"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
 #. _("Init"), NULL, _("Init"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
 msgstr "Záznam (log)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr ""
+msgstr "Zobraziť históriu odoslaní"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "Presunúť (move)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 msgid "Move or rename a file, a directory, or a symlink"
-msgstr ""
+msgstr "Presunúť alebo premenovať súbor, priečinok alebo symbolický odkaz"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::pull", _("Pull"),
 #. _("Pull"), NULL, _("Pull"));
@@ -111,25 +111,25 @@ msgstr ""
 #. _("Push"), NULL, _("Push"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
 #. _("Rebase"), NULL, _("Rebase"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Obnoviť (reset)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
 msgid "Reset current HEAD to the specified state"
-msgstr ""
+msgstr "Resetovať aktuálny HEAD do zadaného stavu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Schovať (stash)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Stash the changes in a dirty working directory away"
-msgstr ""
+msgstr "Schovať zmeny v nečistého pracovného priečinka"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
@@ -138,12 +138,12 @@ msgstr ""
 msgid "Status"
 msgstr "Stav (status)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr ""
+msgstr "Zobraziť stav pracovného stromu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
@@ -151,20 +151,20 @@ msgstr "Akcia %s nie je implementovaná"
 
 #. append the svn submenu item
 #. Lets see if we are dealing with a working copy
-#: ../thunar-vcs-plugin/tvp-provider.c:421
-#: ../thunar-vcs-plugin/tvp-provider.c:487
+#: ../thunar-vcs-plugin/tvp-provider.c:431
+#: ../thunar-vcs-plugin/tvp-provider.c:497
 msgid "SVN"
 msgstr "SVN"
 
 #. append the git submenu item
-#: ../thunar-vcs-plugin/tvp-provider.c:452
-#: ../thunar-vcs-plugin/tvp-provider.c:494
+#: ../thunar-vcs-plugin/tvp-provider.c:462
+#: ../thunar-vcs-plugin/tvp-provider.c:504
 msgid "GIT"
 msgstr "GIT"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260
 msgid "Add files, directories, or symbolic links"
-msgstr ""
+msgstr "Pridať súbory, priečinky alebo symbolické odkazy"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
@@ -181,7 +181,7 @@ msgstr "Vyčistiť (cleanup)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287
 msgid "Recursively clean up the working copy"
-msgstr ""
+msgstr "Rekurzívne vyčistiť pracovnú kópiu"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 #: ../tvp-git-helper/tgh-log-dialog.c:153
@@ -192,7 +192,7 @@ msgstr "Odoslať (commit)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:292
 msgid "Send changes from your working copy to the repository"
-msgstr ""
+msgstr "Odoslať zmeny z pracovnej kópie do úložiska"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297 ../tvp-svn-helper/main.c:281
 #: ../tvp-svn-helper/tsh-copy.c:189
@@ -201,7 +201,7 @@ msgstr "Kopírovať (copy)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr ""
+msgstr "Kopírovať súbor alebo priečinok v pracovnej kópii alebo v úložisku"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -210,7 +210,7 @@ msgstr "Zmazať (delete)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302
 msgid "Delete an item from a working copy or the repository"
-msgstr ""
+msgstr "Odstrániť položku z pracovnej kópie alebo úložiska"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307 ../tvp-svn-helper/main.c:289
 #: ../tvp-svn-helper/tsh-diff.c:239 ../tvp-svn-helper/tsh-diff-dialog.c:129
@@ -219,7 +219,7 @@ msgstr "Rozdiel (diff)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:307
 msgid "Display the differences between two revisions or paths"
-msgstr ""
+msgstr "Zobraziť rozdiely medzi dvoma revíziami alebo cestami"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312 ../tvp-svn-helper/main.c:293
 #: ../tvp-svn-helper/tsh-export.c:119 ../tvp-svn-helper/tsh-export.c:137
@@ -228,7 +228,7 @@ msgstr "Exportovať (export)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:312
 msgid "Export a clean directory tree"
-msgstr ""
+msgstr "Exportovať čistý strom priečinkov"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:317 ../tvp-svn-helper/main.c:297
 #: ../tvp-svn-helper/tsh-import.c:126 ../tvp-svn-helper/tsh-import.c:144
@@ -248,11 +248,11 @@ msgstr "Zamknúť (lock)"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr ""
+msgstr "Zamknúť cesty pracovnej kópie v úložisku, takže nikto iný nemôže do nich odoslať zmeny"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
-msgstr ""
+msgstr "Presunúť súbor alebo priečinok"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
@@ -260,7 +260,7 @@ msgstr "Upraviť vlastnosti (propedit)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit the property of one or more items"
-msgstr ""
+msgstr "Upraviť vlastnosť jednej alebo viacerých položiek"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -289,7 +289,7 @@ msgstr "Obnoviť predchádzajúce (revert)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
-msgstr ""
+msgstr "Vrátiť lokálne úpravy"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394 ../tvp-svn-helper/main.c:333
 #: ../tvp-svn-helper/tsh-switch.c:125 ../tvp-svn-helper/tsh-switch.c:138
@@ -298,7 +298,7 @@ msgstr "Prepnúť (switch)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr ""
+msgstr "Aktualizovať pracovnú kópiu na inú URL"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -307,7 +307,7 @@ msgstr "Odomknúť (unlock)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399
 msgid "Unlock working copy paths"
-msgstr ""
+msgstr "Odomknúť cesty pracovnej kópie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404 ../tvp-svn-helper/main.c:341
 #: ../tvp-svn-helper/tsh-update.c:125
@@ -316,11 +316,11 @@ msgstr "Aktualizovať (update)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:404
 msgid "Update your working copy"
-msgstr ""
+msgstr "Aktualizovať svoju pracovnú kópiu"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:117
 msgid "URL:"
-msgstr "Adresa URL:"
+msgstr "URL:"
 
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:124
 #: ../thunar-vcs-plugin/tvp-svn-property-page.c:140
@@ -575,12 +575,12 @@ msgstr "Názov"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
-msgstr ""
+msgstr "_Skočiť do"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:249
 msgid "_New"
-msgstr ""
+msgstr "_Nový"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
@@ -631,7 +631,7 @@ msgstr "Klonovanie dokončené"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning..."
-msgstr ""
+msgstr "Klonovanie ..."
 
 #: ../tvp-git-helper/tgh-common.c:82 ../tvp-svn-helper/tsh-add.c:87
 #: ../tvp-svn-helper/tsh-add.c:113 ../tvp-svn-helper/tsh-checkout.c:75
@@ -703,7 +703,7 @@ msgstr "Súbor"
 #: ../tvp-svn-helper/tsh-log-dialog.c:236
 #: ../tvp-svn-helper/tsh-status-dialog.c:261
 msgid "_Refresh"
-msgstr ""
+msgstr "_Obnovenie"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
@@ -715,7 +715,7 @@ msgstr "Presunúť do"
 
 #: ../tvp-git-helper/tgh-move.c:162
 msgid "Move..."
-msgstr ""
+msgstr "Presunúť ..."
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:86
 #: ../tvp-svn-helper/tsh-log-dialog.c:184
@@ -733,7 +733,7 @@ msgstr "Obnovenie dokončené"
 
 #: ../tvp-git-helper/tgh-reset.c:154
 msgid "Reset..."
-msgstr ""
+msgstr "Resetovať ..."
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:172
 msgid "Description"
@@ -750,11 +750,11 @@ msgstr "_Použiť"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:236
 msgid "_Delete"
-msgstr ""
+msgstr "_Odstrániť"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:241
 msgid "C_lear"
-msgstr ""
+msgstr "_Vyčistiť"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
@@ -949,7 +949,7 @@ msgstr "Výpis detailov zlyhal"
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr ""
+msgstr "„%s” nie je lokálna cesta"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -961,7 +961,7 @@ msgstr "Čistenie dokončené"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
-msgstr ""
+msgstr "Čistenie…"
 
 #: ../tvp-svn-helper/tsh-commit.c:242 ../tvp-svn-helper/tsh-common.c:869
 #: ../tvp-svn-helper/tsh-common.c:1171 ../tvp-svn-helper/tsh-copy.c:117
@@ -1408,7 +1408,7 @@ msgstr "Miestny presun"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:99
 msgid "MIME type"
-msgstr ""
+msgstr "Typ MIME"
 
 #: ../tvp-svn-helper/tsh-notify-dialog.c:114
 msgid "Notification"
@@ -1428,11 +1428,11 @@ msgstr "Hodnota"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:239
 msgid "_Add"
-msgstr ""
+msgstr "_Pridať"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:244
 msgid "_Remove"
-msgstr ""
+msgstr "_Odobrať"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
@@ -1444,7 +1444,7 @@ msgstr "Premiestňovanie dokončené"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
-msgstr ""
+msgstr "Premiestňovanie…"
 
 #: ../tvp-svn-helper/tsh-relocate-dialog.c:88
 msgid "_From:"
