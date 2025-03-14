@@ -113,6 +113,7 @@ tvp_svn_helper_CPPFLAGS =						\
 
 tvp_svn_helper_CFLAGS =						\
 	$(PLATFORM_CFLAGS)						\
+	$(LIBXFCE4UI_CFLAGS)					\
 	$(LIBXFCE4UTIL_CFLAGS)					\
 	$(GTK_CFLAGS)							\
 	$(GLIB_CFLAGS)							\
@@ -123,6 +124,7 @@ tvp_svn_helper_CFLAGS =						\
 
 tvp_svn_helper_LDFLAGS =					\
 	$(PLATFORM_LDFLAGS)						\
+	$(LIBXFCE4UI_LIBS)					\
 	$(LIBXFCE4UTIL_LIBS)					\
 	$(GTK_LIBS)								\
 	$(GLIB_LIBS)							\

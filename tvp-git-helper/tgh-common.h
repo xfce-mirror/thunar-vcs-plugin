@@ -21,6 +21,14 @@
 
 #include <gtk/gtk.h>
 
+#include <libxfce4ui/libxfce4ui.h>
+#if LIBXFCE4UI_CHECK_VERSION(4, 21, 0)
+#define tvp_gtk_dialog_get_action_area(dialog) xfce_gtk_dialog_get_action_area (dialog)
+#else
+#include <exo/exo.h>
+#define tvp_gtk_dialog_get_action_area(dialog) exo_gtk_dialog_get_action_area (dialog)
+#endif
+
 G_BEGIN_DECLS
 
 void tgh_replace_child  (gboolean, GPid);
@@ -63,4 +71,3 @@ gboolean tgh_parse_output_func  (GIOChannel *, GIOCondition, gpointer);
 G_END_DECLS
 
 #endif /*__TGH_COMMON_H__*/
-

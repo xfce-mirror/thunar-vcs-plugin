@@ -20,7 +20,7 @@
 #include <config.h>
 #endif
 
-#include <exo/exo.h>
+#include <libxfce4ui/libxfce4ui.h>
 #include <libxfce4util/libxfce4util.h>
 
 #include "tgh-common.h"
@@ -123,15 +123,15 @@ tgh_status_dialog_init (TghStatusDialog *dialog)
 
   gtk_window_set_title (GTK_WINDOW (dialog), _("Status"));
 
-  gtk_button_box_set_layout(GTK_BUTTON_BOX (exo_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
+  gtk_button_box_set_layout(GTK_BUTTON_BOX (tvp_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), GTK_BUTTONBOX_EDGE);
 
   dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
-  gtk_box_pack_start (GTK_BOX (exo_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (tvp_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
   gtk_widget_show (button);
 
   dialog->refresh = button = gtk_button_new_with_mnemonic (_("_Refresh"));
-  gtk_box_pack_start (GTK_BOX (exo_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (tvp_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
   g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (refresh_clicked), dialog);
   gtk_widget_hide (button);
 

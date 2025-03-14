@@ -19,7 +19,6 @@ AM_CPPFLAGS =								\
 	-I$(top_builddir)						\
 	-I$(top_srcdir)							\
 	-DG_LOG_DOMAIN=\"thunar-vcs-plugin\"				\
-	-DEXO_API_SUBJECT_TO_CHANGE					\
 	-DLIBEXECDIR=\"$(libexecdir)\"					\
 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
 	$(PLATFORM_CPPFLAGS)
@@ -64,7 +63,6 @@ thunar_vcs_plugin_la_CFLAGS =						\
 	$(GLIB_CFLAGS)							\
 	$(GOBJECT_CFLAGS)						\
 	$(THUNARX_CFLAGS)						\
-	$(EXO_CFLAGS)							\
 	$(LIBXFCE4UTIL_CFLAGS)
 if HAVE_SUBVERSION
 thunar_vcs_plugin_la_CFLAGS +=						\
@@ -80,7 +78,6 @@ thunar_vcs_plugin_la_LDFLAGS =						\
 	$(GLIB_LIBS)							\
 	$(GOBJECT_LIBS)							\
 	$(THUNARX_LIBS)							\
-	$(EXO_LIBS)							\
 	$(LIBXFCE4UTIL_LIBS)
 if HAVE_SUBVERSION
 thunar_vcs_plugin_la_LDFLAGS +=						\

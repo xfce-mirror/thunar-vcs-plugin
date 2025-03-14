@@ -23,6 +23,14 @@
 #include <subversion-1/svn_types.h>
 #include <subversion-1/svn_version.h>
 
+#include <libxfce4ui/libxfce4ui.h>
+#if LIBXFCE4UI_CHECK_VERSION(4, 21, 0)
+#define tvp_gtk_dialog_get_action_area(dialog) xfce_gtk_dialog_get_action_area (dialog)
+#else
+#include <exo/exo.h>
+#define tvp_gtk_dialog_get_action_area(dialog) exo_gtk_dialog_get_action_area (dialog)
+#endif
+
 G_BEGIN_DECLS
 
 /* typdef from tsh-blame-dialog.h */
@@ -73,4 +81,3 @@ gchar *tsh_is_working_copy (const gchar *, apr_pool_t *);
 G_END_DECLS
 
 #endif /*__TSH_COMMON_H__*/
-
