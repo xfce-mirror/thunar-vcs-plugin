@@ -20,9 +20,10 @@
 #include <config.h>
 #endif
 
-#include <exo/exo.h>
+#include <libxfce4ui/libxfce4ui.h>
 #include <libxfce4util/libxfce4util.h>
 
+#include "tsh-common.h"
 #include "tsh-notify-dialog.h"
 
 static void cancel_clicked (GtkButton*, gpointer);
@@ -117,7 +118,7 @@ tsh_notify_dialog_init (TshNotifyDialog *dialog)
 	gtk_widget_hide (button);
 
 	dialog->cancel = button = gtk_button_new_with_mnemonic (_("_Cancel"));
-	gtk_box_pack_end (GTK_BOX (exo_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
+	gtk_box_pack_end (GTK_BOX (tvp_gtk_dialog_get_action_area (GTK_DIALOG (dialog))), button, FALSE, TRUE, 0);
 	g_signal_connect (G_OBJECT (button), "clicked", G_CALLBACK (cancel_clicked), dialog);
 	gtk_widget_show (button);
 
