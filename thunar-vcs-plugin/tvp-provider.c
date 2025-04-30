@@ -51,9 +51,6 @@
 #endif
 
 
-#define TVP_SVN_WORKING_COPY "tvp-svn-working-copy"
-
-
 
 static void   tvp_provider_menu_provider_init          (ThunarxMenuProviderIface *iface);
 static void   tvp_provider_property_page_provider_init (ThunarxPropertyPageProviderIface *iface);
