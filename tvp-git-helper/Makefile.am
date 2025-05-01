@@ -97,4 +97,7 @@ tvp_git_helper_LDFLAGS =				\
 	$(GOBJECT_LIBS)						\
 	$(EXO_LIBS)
 
+EXTRA_DIST =								\
+	meson.build
+
 # vi:set ts=8 sw=8 noet ai nocindent:
