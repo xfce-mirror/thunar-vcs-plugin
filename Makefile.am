@@ -37,4 +37,9 @@ rpm: dist
 	rpmbuild -ta $(PACKAGE)-$(VERSION).tar.gz
 	@rm -f $(PACKAGE)-$(VERSION).tar.gz
 
+EXTRA_DIST =							\
+	meson.build							\
+	meson_options.txt					\
+	xfce-revision.h.in
+
 # vi:set ts=8 sw=8 noet ai nocindent:
