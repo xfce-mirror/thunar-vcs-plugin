@@ -22,8 +22,8 @@ i18n = import('i18n')
 dependency_versions = {
   'apr': '>=0.9.7',
   'apr-util': '>=0.9.1',
-  'glib': '>= 2.32.0',
-  'gtk': '>= 3.20.0',
+  'glib': '>= 2.66.0',
+  'gtk': '>= 3.24.0',
   'xfce4': '>= 4.18.0',
 }
 

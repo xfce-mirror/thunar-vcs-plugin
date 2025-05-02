@@ -81,10 +81,10 @@ XDT_CHECK_PACKAGE([THUNARX], [thunarx-3], [4.18.0])
 XDT_CHECK_PACKAGE([EXO], [exo-2], [4.18.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.18.0])
 XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.18.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.20.0])
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.32.0])
-XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.32.0])
-XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.32.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.24.0])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.66.0])
 
 dnl ***********************************
 dnl *** Check for optional packages ***
