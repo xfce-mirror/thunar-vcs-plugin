@@ -518,17 +518,20 @@ stash_list_parser_func (TghStashListParser *parser, gchar *line)
     gchar *stash, *branch, *desc;
     stash = g_strstrip (line);
     branch = strchr (line, ':');
+
     if (branch != NULL)
     {
       *branch++ = '\0';
       branch = g_strstrip (branch);
+
+      desc = strchr (branch, ':');
+      if (desc != NULL)
+      {
+        *desc++ = '\0';
+        desc = g_strstrip (desc);
+      }
     }
-    desc = strchr (branch, ':');
-    if (desc != NULL)
-    {
-      *desc++ = '\0';
-      desc = g_strstrip (desc);
-    }
+
     tgh_stash_dialog_add (dialog, stash, branch, desc);
   }
   else

@@ -406,7 +406,9 @@ tgh_log_dialog_add (TghLogDialog *dialog, GSList *files, const gchar *revision, 
     }
     if (!line_iter || !*line_iter)
       line_iter = lines;
-    first_line = *line_iter;
+
+    if (line_iter && *line_iter)
+      first_line = *line_iter;
   }
 
   gtk_list_store_append (GTK_LIST_STORE (model), &iter);
