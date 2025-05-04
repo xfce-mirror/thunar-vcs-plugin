@@ -515,7 +515,7 @@ stash_list_parser_func (TghStashListParser *parser, gchar *line)
   TghStashDialog *dialog = TGH_STASH_DIALOG (parser->dialog);
   if (line)
   {
-    gchar *stash, *branch, *desc;
+    gchar *stash, *branch, *desc = NULL;
     stash = g_strstrip (line);
     branch = strchr (line, ':');
 
