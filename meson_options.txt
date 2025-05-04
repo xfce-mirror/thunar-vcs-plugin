@@ -1,0 +1,12 @@
+option(
+  'git',
+  type: 'feature',
+  value: 'auto',
+  description: 'Support for the git version control system',
+)
+option(
+  'svn',
+  type: 'feature',
+  value: 'auto',
+  description: 'Support for the subversion version control system',
+)

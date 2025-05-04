@@ -84,4 +84,7 @@ thunar_vcs_plugin_la_LDFLAGS +=						\
 	$(APR_LIBS)
 endif
 
+EXTRA_DIST =								\
+	meson.build
+
 # vi:set ts=8 sw=8 noet ai nocindent:

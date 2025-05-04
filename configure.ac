@@ -19,16 +19,21 @@ dnl ***************************
 dnl *** Version information ***
 dnl ***************************
 XDT_VERSION_INIT([0.3.0], [git])
+m4_define([copyright_year], [2025])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
-AC_COPYRIGHT([Copyright (c) 2006-2011 Peter de Ridder <peter@xfce.org>.])
+AC_COPYRIGHT([Copyright (c) 2006-copyright_year() The Xfce development team. All rights reserved.])
 AC_INIT([thunar-vcs-plugin], [xdt_version], [https://gitlab.xfce.org/thunar-plugins/thunar-vcs-plugin])
 AC_REVISION([xdt_version_build])
 AC_PREFIX_DEFAULT([$(pkg-config --variable prefix thunarx-3 || echo /usr/local)])
 AC_PREREQ([2.69])
 AC_CANONICAL_TARGET()
+AC_DEFINE([VERSION_FULL], [PACKAGE_VERSION], [Alias for VERSION and PACKAGE_VERSION for meson compatibility])
+COPYRIGHT_YEAR=copyright_year()
+AC_DEFINE_UNQUOTED([COPYRIGHT_YEAR], ["$COPYRIGHT_YEAR"], [Copyright year])
+AC_SUBST([COPYRIGHT_YEAR])
 
 dnl ***************************
 dnl *** Initialize automake ***
@@ -72,14 +77,14 @@ AC_SEARCH_LIBS([bind_textdomain_codeset], [intl],
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([THUNARX], [thunarx-3], [1.2.0])
-XDT_CHECK_PACKAGE([EXO], [exo-2], [0.11.4])
-XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.16.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.12.0])
-XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.20.0])
-XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.32.0])
-XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.18.0])
-XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.18.0])
+XDT_CHECK_PACKAGE([THUNARX], [thunarx-3], [4.18.0])
+XDT_CHECK_PACKAGE([EXO], [exo-2], [4.18.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-2], [4.18.0])
+XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.18.0])
+XDT_CHECK_PACKAGE([GTK], [gtk+-3.0], [3.24.0])
+XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GTHREAD], [gthread-2.0], [2.66.0])
+XDT_CHECK_PACKAGE([GOBJECT], [gobject-2.0], [2.66.0])
 
 dnl ***********************************
 dnl *** Check for optional packages ***

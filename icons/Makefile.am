@@ -33,4 +33,7 @@ install-data-hook:
 		echo "***";						\
         fi
 
+EXTRA_DIST =								\
+	meson.build
+
 # vi:set ts=8 sw=8 noet ai nocindent:
