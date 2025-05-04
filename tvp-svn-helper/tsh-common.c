@@ -727,6 +727,8 @@ tsh_action_to_string(svn_wc_notify_action_t action)
 #endif
       action_string = action_table[action];
       break;
+    default:
+      /* do nothing */
   }
   return _(action_string);
 }

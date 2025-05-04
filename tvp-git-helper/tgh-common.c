@@ -515,14 +515,23 @@ stash_list_parser_func (TghStashListParser *parser, gchar *line)
   TghStashDialog *dialog = TGH_STASH_DIALOG (parser->dialog);
   if (line)
   {
-    gchar *stash, *branch, *desc;
-    branch = strchr (line, ':');
-    *branch++ = '\0';
+    gchar *stash, *branch, *desc = NULL;
     stash = g_strstrip (line);
-    desc = strchr (branch, ':');
-    *desc++ = '\0';
-    branch = g_strstrip (branch);
-    desc = g_strstrip (desc);
+    branch = strchr (line, ':');
+
+    if (branch != NULL)
+    {
+      *branch++ = '\0';
+      branch = g_strstrip (branch);
+
+      desc = strchr (branch, ':');
+      if (desc != NULL)
+      {
+        *desc++ = '\0';
+        desc = g_strstrip (desc);
+      }
+    }
+
     tgh_stash_dialog_add (dialog, stash, branch, desc);
   }
   else
@@ -596,14 +605,19 @@ blame_parser_func (TghBlameParser *parser, gchar *line)
     guint64 line_no;
 
     name = strchr (line, '(');
+    if (name == NULL)
+      return;
     *name++ = '\0';
 
     revision = g_strstrip (line);
 
     text = strchr (name, ')');
-    *text = '\0';
-    text += 2;
-    text[strlen (text)-1] = '\0';
+    if (text != NULL)
+    {
+      *text = '\0';
+      text += 2;
+      text[strlen (text)-1] = '\0';
+    }
 
     ptr = strrchr (name, ' ');
     line_no = g_ascii_strtoull (ptr, NULL, 10);
@@ -664,8 +678,11 @@ clean_parser_func(TghNotifyParser *parser, gchar *line)
       file += 4;
 
     file = strchr (file, ' ');
-    *file++ = '\0';
-    file[strlen (file)-1] = '\0';
+    if(file != NULL)
+    {
+      *file++ = '\0';
+      file[strlen (file)-1] = '\0';
+    }
 
     tgh_notify_dialog_add(dialog, action, file);
   }

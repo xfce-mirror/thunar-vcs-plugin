@@ -77,6 +77,9 @@ static gboolean move_spawn (GtkWidget *dialog, gchar **files, gchar *dest, GPid 
   gchar **argv;
   struct exit_args *args;
 
+  if (files == NULL)
+    return FALSE;
+
   length = 5;
   length += g_strv_length (files);
 

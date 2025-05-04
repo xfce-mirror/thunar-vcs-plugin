@@ -96,8 +96,6 @@ static GQuark tvp_action_arg_quark = 0;
 
 static void tvp_action_exec (ThunarxMenuItem *item, TvpSvnAction *tvp_action);
 
-static void tvp_action_unimplemented (ThunarxMenuItem *, const gchar *);
-
 
 
 THUNARX_DEFINE_TYPE (TvpSvnAction, tvp_svn_action, THUNARX_TYPE_MENU_ITEM)
@@ -403,15 +401,6 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
   {
     add_subaction (item, menu, "tvp::update", _("Update"), _("Update your working copy"), "view-refresh", "--update");
   }
-}
-
-
-
-static void tvp_action_unimplemented (ThunarxMenuItem *item, const gchar *tvp_action)
-{
-  GtkWidget *dialog = gtk_message_dialog_new (NULL, 0, GTK_MESSAGE_INFO, GTK_BUTTONS_CLOSE, _("Action %s is unimplemented"), tvp_action);
-  gtk_dialog_run (GTK_DIALOG (dialog));
-  gtk_widget_destroy(dialog);
 }
 
 
