@@ -310,7 +310,7 @@ static void tvp_action_exec (ThunarxMenuItem *item, TvpGitAction *tvp_action)
         }
     }
 
-    for (i = 0; i < size; i++)
+    for (i = 0; i < size && iter != NULL; i++)
     {
         /* determine the URI for the file info */
         uri = thunarx_file_info_get_uri (iter->data);

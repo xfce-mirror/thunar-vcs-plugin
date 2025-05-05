@@ -398,15 +398,17 @@ tgh_log_dialog_add (TghLogDialog *dialog, GSList *files, const gchar *revision, 
   {
     lines = g_strsplit_set (message, "\r\n", -1);
     line_iter = lines;
-    while (*line_iter)
+    while (line_iter && *line_iter)
     {
       if (g_strstrip (*line_iter)[0])
         break;
       line_iter++;
     }
-    if (!line_iter)
+    if (!line_iter || !*line_iter)
       line_iter = lines;
-    first_line = *line_iter;
+
+    if (line_iter && *line_iter)
+      first_line = *line_iter;
   }
 
   gtk_list_store_append (GTK_LIST_STORE (model), &iter);
