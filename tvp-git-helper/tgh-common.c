@@ -363,6 +363,7 @@ log_parser_add_entry(TghLogParser *parser, TghLogDialog *dialog)
   parser->revision = NULL;
   g_strfreev(parser->parents);
   parser->parents = NULL;
+  g_free(parser->author);
   parser->author = NULL;
   g_free(parser->author_date);
   parser->author_date = NULL;
@@ -433,7 +434,11 @@ log_parser_func(TghLogParser *parser, gchar *line)
     else if(strncmp(line, "    ", 4) == 0)
     {
       if(parser->message)
-        parser->message = g_strconcat(parser->message, line+4, NULL);
+      {
+        gchar *prev_message = parser->message;
+        parser->message = g_strconcat(prev_message, line+4, NULL);
+        g_free(prev_message);
+      }
       else
         parser->message = g_strdup(line+4);
     }
