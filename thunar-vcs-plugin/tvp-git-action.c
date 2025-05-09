@@ -250,6 +250,8 @@ tvp_git_action_create_menu_item (ThunarxMenuItem *item)
     if (tvp_action->property.is_parent)
         add_subaction (item, menu, "tvp::git::status", _("Status"), _("Show the working tree status"), "dialog-information", "--status");
     /* unimplemented: add_subaction(item, menu, "tvp::git::tag", _("Tag"), _("Tag"), NULL, _("Tag"));*/
+
+    g_object_unref (menu);
 }
 
 
