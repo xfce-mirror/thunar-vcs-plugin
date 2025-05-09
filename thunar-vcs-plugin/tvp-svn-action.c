@@ -401,6 +401,8 @@ tvp_svn_action_create_menu_item (ThunarxMenuItem *item)
   {
     add_subaction (item, menu, "tvp::update", _("Update"), _("Update your working copy"), "view-refresh", "--update");
   }
+
+  g_object_unref (menu);
 }
 
 
