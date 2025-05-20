@@ -38,17 +38,17 @@ See [NEWS](https://gitlab.xfce.org/thunar-plugins/thunar-vcs-plugin/-/blob/maste
 From source code repository: 
 
     % cd thunar-vcs-plugin
-    % ./autogen.sh
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 From release tarball:
 
-    % tar xf thunar-vcs-plugin-<version>.tar.bz2
+    % tar xf thunar-vcs-plugin-<version>.tar.xz
     % cd thunar-vcs-plugin-<version>
-    % ./configure
-    % make
-    % make install
+    % meson setup build
+    % meson compile -C build
+    % meson install -C build
 
 ### Reporting Bugs
 
