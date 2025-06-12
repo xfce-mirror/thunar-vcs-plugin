@@ -100,8 +100,8 @@ G_GNUC_END_IGNORE_DEPRECATIONS
     g_free(error_str);
 
 		svn_error_clear(err);
+		tsh_reset_cancel();
 		return GINT_TO_POINTER (FALSE);
-    tsh_reset_cancel();
 	}
 
   svn_pool_destroy (subpool);
