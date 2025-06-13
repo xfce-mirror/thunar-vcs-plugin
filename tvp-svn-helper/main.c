@@ -348,6 +348,8 @@ G_GNUC_END_IGNORE_DEPRECATIONS
 		g_error_free(error);
 	}
 
+	g_option_context_free(option_context);
+
 	if(print_version)
 	{
 		g_print(PACKAGE_STRING "\n\tcompiled on " __DATE__ ", " __TIME__ "\n");
