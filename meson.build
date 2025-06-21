@@ -55,8 +55,8 @@ foreach dep : svn_deps
   enable_svn = enable_svn and dep.found()
 endforeach
 if enable_svn
-  foreach lib : ['svn_subr-1', 'svn_fs-1', 'svn_wc-1', 'svn_client-1']
-    dep = cc.find_library(lib, required: false)
+  foreach lib : ['libsvn_subr', 'libsvn_fs', 'libsvn_wc', 'libsvn_client']
+    dep = dependency(lib, required: false)
     svn_deps += dep
     enable_svn = enable_svn and dep.found()
   endforeach
