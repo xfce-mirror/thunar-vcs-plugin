@@ -873,47 +873,47 @@ msgstr "Executar ação de atualização"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
-msgstr "Opções relacionadas a Changelist:"
+msgstr "Opções relacionadas à lista de alterações:"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
-msgstr "Opções de obtenção:"
+msgstr "Opções relacionadas a checkout:"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
-msgstr "Opções de limpeza:"
+msgstr "Opções relacionadas à limpeza:"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr "Opções de envio:"
+msgstr "Opções relacionadas ao commit:"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
-msgstr "Opções de cópia:"
+msgstr "Opções relacionadas à cópia:"
 
 #: ../tvp-svn-helper/main.c:285
 msgid "Delete Related Options:"
-msgstr "Opções de exclusão:"
+msgstr "Opções relacionadas à exclusão:"
 
 #: ../tvp-svn-helper/main.c:289
 msgid "Diff Related Options:"
-msgstr "Opções do diff::"
+msgstr "Opções relacionadas ao diff::"
 
 #: ../tvp-svn-helper/main.c:293
 msgid "Export Related Options:"
-msgstr "Opções de exportação:"
+msgstr "Opções relacionadas à exportação:"
 
 #: ../tvp-svn-helper/main.c:297
 msgid "Import Related Options:"
-msgstr "Opções de importação:"
+msgstr "Opções relacionadas à importação:"
 
 #: ../tvp-svn-helper/main.c:301
 msgid "Lock Related Options:"
-msgstr "Opções de travamento:"
+msgstr "Opções relacionadas à travamento:"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
-msgstr "Opções de propriedades:"
+msgstr "Opções relacionadas à propriedades:"
 
 #: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
@@ -921,15 +921,15 @@ msgstr "Propriedades"
 
 #: ../tvp-svn-helper/main.c:317
 msgid "Resolved Related Options:"
-msgstr "Opções de resolução:"
+msgstr "Opções relacionadas à resolução:"
 
 #: ../tvp-svn-helper/main.c:321
 msgid "Relocate Related Options:"
-msgstr "Opções de realocação:"
+msgstr "Opções relacionadas à realocação:"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr "Opções de reversão:"
+msgstr "Opções relacionadas à reversão:"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
@@ -937,19 +937,19 @@ msgstr "Opções relacionadas à alternação:"
 
 #: ../tvp-svn-helper/main.c:337
 msgid "Unlock Related Options:"
-msgstr "Opções de destravamento:"
+msgstr "Opções relacionadas à destravamento:"
 
 #: ../tvp-svn-helper/main.c:341
 msgid "Update Related Options:"
-msgstr "Opções de atualização:"
+msgstr "Opções relacionadas à atualização:"
 
 #: ../tvp-svn-helper/main.c:384
 msgid "Not enough arguments provided"
-msgstr "Insuficiente argumentos providenciados"
+msgstr "Não há argumentos suficientes fornecidos"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr "Falha de culpa"
+msgstr "Falha no blame"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
@@ -958,7 +958,7 @@ msgstr "'%s' não é um caminho local"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
-msgstr "Falha de limpeza"
+msgstr "Falha na limpeza"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
@@ -978,7 +978,7 @@ msgstr "Na revisão: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:247
 msgid "Nothing to do"
-msgstr "Nada a fazer"
+msgstr "Nada para fazer"
 
 #: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
 #: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
@@ -989,11 +989,11 @@ msgstr "Concluído"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr "Mensagem de envio"
+msgstr "Mensagem de commit"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
-msgstr "Notificar"
+msgstr "Armazenar a senha como texto simples?"
 
 #: ../tvp-svn-helper/tsh-common.c:576 ../tvp-svn-helper/tsh-common.c:585
 #: ../tvp-svn-helper/tsh-common.c:592 ../tvp-svn-helper/tsh-common.c:780
@@ -1022,7 +1022,7 @@ msgstr "Revertido"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
-msgstr "Falha de reversão"
+msgstr "Falha na reversão"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
@@ -1069,19 +1069,19 @@ msgstr "Falha ao destravar"
 
 #: ../tvp-svn-helper/tsh-common.c:601
 msgid "Exists"
-msgstr "Descrição"
+msgstr "Existe"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
-msgstr "Conjunto de Changelist"
+msgstr "Conjunto de lista de alterações"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
-msgstr "Changelist limpa"
+msgstr "Lista de alterações limpa"
 
 #: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
-msgstr "Changelist movida"
+msgstr "Lista de alterações movida"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Merge begin"
@@ -1109,7 +1109,7 @@ msgstr "Propriedade excluída"
 
 #: ../tvp-svn-helper/tsh-common.c:612
 msgid "Property nonexisting"
-msgstr "Propriedade não-existente"
+msgstr "Propriedade inexistente"
 
 #: ../tvp-svn-helper/tsh-common.c:613
 msgid "Revision property set"
@@ -1121,15 +1121,15 @@ msgstr "Propriedade Revisão excluída"
 
 #: ../tvp-svn-helper/tsh-common.c:615
 msgid "Merge completed"
-msgstr "Mesclagem completa"
+msgstr "Mesclagem concluída"
 
 #: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
-msgstr "Em conflito"
+msgstr "Árvore em conflito"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
-msgstr "Externo"
+msgstr "Externo falhou"
 
 #: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
@@ -1141,15 +1141,15 @@ msgstr "Obstrução Skipped"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr "Funcionando somente Skipped"
+msgstr "Somente Skipped funcionando"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
-msgstr "Acesso Skipped negado"
+msgstr "Acesso ao Skipped negado"
 
 #: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
-msgstr "Externo"
+msgstr "Externo removido"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
@@ -1205,7 +1205,7 @@ msgstr "URL redirecionada"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
-msgstr "Caminho não existente"
+msgstr "Caminho inexistente"
 
 #: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
@@ -1214,7 +1214,7 @@ msgstr "Conflito"
 #: ../tvp-svn-helper/tsh-common.c:642 ../tvp-svn-helper/tsh-common.c:741
 #: ../tvp-svn-helper/tsh-common.c:781
 msgid "Missing"
-msgstr "Faltando"
+msgstr "Não encontrado"
 
 #: ../tvp-svn-helper/tsh-common.c:643
 msgid "Out of date"
@@ -1250,7 +1250,7 @@ msgstr "Modificado"
 
 #: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
 msgid "Merged"
-msgstr "Combinado"
+msgstr "Mesclado"
 
 #: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
@@ -1258,7 +1258,7 @@ msgstr "Em conflito"
 
 #: ../tvp-svn-helper/tsh-common.c:747
 msgid "Source missing"
-msgstr "Faltando fontes"
+msgstr "Fontes não encontradas"
 
 #. N_("None"),
 #. N_("Unversioned"),
@@ -1351,7 +1351,7 @@ msgstr "Não mostrar diferenças para arquivos excluídos"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
-msgstr "Mostrar cópias como adicões"
+msgstr "Mostrar cópias como adições"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
@@ -1381,7 +1381,7 @@ msgstr "Mensagem de importação"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
-msgstr "Falha de registro"
+msgstr "Falha de log"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
@@ -1405,7 +1405,7 @@ msgstr "Login"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
-msgstr "Mensagem de registro"
+msgstr "Mensagem de log"
 
 #: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
@@ -1465,7 +1465,7 @@ msgstr "Falha de status"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
-msgstr "Estato prop"
+msgstr "Estado prop"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
@@ -1481,7 +1481,7 @@ msgstr "Mostrar arquivos sem modificação"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
-msgstr "Mostrar arquivos sem controle"
+msgstr "Mostrar arquivos não versionados"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
@@ -1493,11 +1493,11 @@ msgstr "Ocultar externos"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
-msgstr "Checar repositório"
+msgstr "Verificar repositório"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
-msgstr "O certificado ainda não é válido."
+msgstr "O certificado ainda não está válido."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:62
 msgid "Certificate has expired."
@@ -1505,15 +1505,15 @@ msgstr "O certificado expirou."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:65
 msgid "Certificate does not match the remote hostname."
-msgstr "O certificado não confere com o nome do hóspede remoto."
+msgstr "O certificado não combina com o hostname remoto."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:68
 msgid "Certificate authority is unknown."
-msgstr "A autoridade do certificado é desconhecido."
+msgstr "A autoridade do certificado é desconhecida."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:71
 msgid "Other failure."
-msgstr "outra falha."
+msgstr "Outra falha."
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:78
 msgid "Trust"
