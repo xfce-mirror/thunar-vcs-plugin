@@ -1,5 +1,5 @@
 sizes = [16, 24, 48]
-icons = ['git', 'subversion']
+icons = ['org.xfce.thunar-vcs-plugin.git', 'org.xfce.thunar-vcs-plugin.subversion']
 
 foreach size : sizes
   foreach icon : icons

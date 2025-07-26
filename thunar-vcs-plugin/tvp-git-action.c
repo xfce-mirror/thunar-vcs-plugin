@@ -150,7 +150,7 @@ tvp_git_action_new (const gchar *name,
             "is-parent", is_parent,
             "is-directory", is_direcotry,
             "is-file", is_file,
-            "icon", "git",
+            "icon", "org.xfce.thunar-vcs-plugin.git",
             NULL);
     TVP_GIT_ACTION (item)->files = thunarx_file_info_list_copy (files);
     TVP_GIT_ACTION (item)->window = window;

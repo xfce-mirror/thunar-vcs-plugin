@@ -173,7 +173,7 @@ tvp_svn_action_new (const gchar *name,
             "directory-no-version-control", directory_no_version_control,
             "file-version-control", file_version_control,
             "file-no-version-control", file_no_version_control,
-            "icon", "subversion",
+            "icon", "org.xfce.thunar-vcs-plugin.subversion",
             NULL);
   TVP_SVN_ACTION (item)->files = thunarx_file_info_list_copy (files);
   TVP_SVN_ACTION (item)->window = window;
