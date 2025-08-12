@@ -50,6 +50,10 @@ From release tarball:
     % meson compile -C build
     % meson install -C build
 
+### Uninstallation
+
+    % ninja uninstall -C build
+
 ### Reporting Bugs
 
 Visit the [reporting bugs](https://docs.xfce.org/thunar-plugins/thunar-vcs-plugin/bugs) page to view currently open bug reports and instructions on reporting new bugs or submitting bugfixes.
