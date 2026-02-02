@@ -102,7 +102,7 @@ int main (int argc, char *argv[])
 	GOptionEntry general_options_table[] =
 	{
 		{ "version", 'v', 0, G_OPTION_ARG_NONE, &print_version, N_("Print version information"), NULL },
-		{ G_OPTION_REMAINING, '\0', G_OPTION_ARG_FILENAME, G_OPTION_ARG_FILENAME_ARRAY, &files, NULL, NULL },
+		{ G_OPTION_REMAINING, '\0', G_OPTION_FLAG_NONE, G_OPTION_ARG_FILENAME_ARRAY, &files, NULL, NULL },
 		{ NULL, '\0', 0, 0, NULL, NULL, NULL }
 	};
 
