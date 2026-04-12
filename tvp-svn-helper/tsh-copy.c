@@ -162,7 +162,6 @@ GThread *tsh_copy (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
     fclose(fp);
     isdir = FALSE;
   }
-  g_free (absolute);
 
   dialog = gtk_file_chooser_dialog_new (_("Copy To"), NULL,
                                /*isdir?GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER:*/GTK_FILE_CHOOSER_ACTION_SAVE,
@@ -170,7 +169,10 @@ GThread *tsh_copy (gchar **files, svn_client_ctx_t *ctx, apr_pool_t *pool)
                                _("_OK"), GTK_RESPONSE_OK,
                                NULL);
 
-  gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), isdir?(absolute?absolute:from):g_path_get_dirname(absolute?absolute:from));
+  gchar *dirname = g_path_get_dirname (absolute?absolute:from);
+  gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER (dialog), isdir?(absolute?absolute:from):dirname);
+  g_free (dirname);
+  g_free (absolute);
 
 	if(gtk_dialog_run (GTK_DIALOG (dialog)) != GTK_RESPONSE_OK)
   {
