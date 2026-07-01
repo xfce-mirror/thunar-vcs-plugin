@@ -84,13 +84,13 @@ int main (int argc, char *argv[])
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
-  GOptionEntry branch_options_table[] =
+  GOptionEntry blame_options_table[] =
   {
     { "blame", '\0', 0, G_OPTION_ARG_NONE, &blame, N_("Execute blame action"), NULL },
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
   };
 
-  GOptionEntry blame_options_table[] =
+  GOptionEntry branch_options_table[] =
   {
     { "branch", '\0', 0, G_OPTION_ARG_NONE, &branch, N_("Execute branch action"), NULL },
     { NULL, '\0', 0, 0, NULL, NULL, NULL }
