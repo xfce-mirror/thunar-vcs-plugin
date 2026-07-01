@@ -158,7 +158,7 @@ int main (int argc, char *argv[])
   g_option_group_add_entries(option_group, branch_options_table);
   g_option_context_add_group(option_context, option_group);
 
-  option_group = g_option_group_new("clean", N_("Clone Related Options:"), N_("Clean"), NULL, NULL);
+  option_group = g_option_group_new("clean", N_("Clean Related Options:"), N_("Clean"), NULL, NULL);
   g_option_group_add_entries(option_group, clean_options_table);
   g_option_context_add_group(option_context, option_group);
 
