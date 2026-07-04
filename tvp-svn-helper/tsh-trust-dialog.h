@@ -33,7 +33,7 @@ typedef struct _TshTrustDialog      TshTrustDialog;
 #define TSH_IS_TRUST_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_TRUST_DIALOG))
 #define TSH_TRUST_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_TRUST_DIALOG, TshTrustDialogClass))
 
-GType      tsh_trust_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsh_trust_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget* tsh_trust_dialog_new      (const gchar *title,
                                       GtkWindow *parent,

@@ -33,7 +33,7 @@ typedef struct _TshFileDialog      TshFileDialog;
 #define TSH_IS_FILE_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_FILE_DIALOG))
 #define TSH_FILE_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_FILE_DIALOG, TshFileDialogClass))
 
-GType      tsh_file_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsh_file_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget* tsh_file_dialog_new      (const gchar *title,
                                       GtkWindow *parent,

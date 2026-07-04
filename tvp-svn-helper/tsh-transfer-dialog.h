@@ -33,7 +33,7 @@ typedef struct _TshTransferDialog      TshTransferDialog;
 #define TSH_IS_TRANSFER_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_TRANSFER_DIALOG))
 #define TSH_TRANSFER_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_TRANSFER_DIALOG, TshTransferDialogClass))
 
-GType      tsh_transfer_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsh_transfer_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget* tsh_transfer_dialog_new      (const gchar *title,
                                          GtkWindow *parent,

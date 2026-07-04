@@ -34,7 +34,7 @@ typedef struct _TvpSvnAction      TvpSvnAction;
 #define TVP_IS_SVN_ACTION_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TVP_TYPE_SVN_ACTION))
 #define TVP_SVN_ACTION_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TVP_TYPE_SVN_ACTION, TvpSvnActionClass))
 
-GType      tvp_svn_action_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tvp_svn_action_get_type      (void) G_GNUC_INTERNAL;
 void       tvp_svn_action_register_type (ThunarxProviderPlugin *) G_GNUC_INTERNAL;
 
 ThunarxMenuItem *tvp_svn_action_new     (const gchar*,

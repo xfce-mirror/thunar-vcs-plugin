@@ -33,7 +33,7 @@ typedef struct _TshPropertiesDialog      TshPropertiesDialog;
 #define TSH_IS_PROPERTIES_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_PROPERTIES_DIALOG))
 #define TSH_PROPERTIES_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_PROPERTIES_DIALOG, TshPropertiesDialogClass))
 
-GType       tsh_properties_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType       tsh_properties_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget*  tsh_properties_dialog_new      (const gchar *title,
                                             GtkWindow *parent,

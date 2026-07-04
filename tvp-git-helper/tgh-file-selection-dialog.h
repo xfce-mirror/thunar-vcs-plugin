@@ -39,7 +39,7 @@ typedef struct _TghFileSelectionDialog      TghFileSelectionDialog;
 #define TGH_IS_FILE_SELECTION_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TGH_TYPE_FILE_SELECTION_DIALOG))
 #define TGH_FILE_SELECTION_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TGH_TYPE_FILE_SELECTION_DIALOG, TghFileSelectionDialogClass))
 
-GType      tgh_file_selection_dialog_get_type   (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tgh_file_selection_dialog_get_type   (void) G_GNUC_INTERNAL;
 
 GtkWidget* tgh_file_selection_dialog_new        (const gchar *title,
                                                  GtkWindow *parent,

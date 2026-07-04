@@ -34,7 +34,7 @@ typedef struct _TvpGitAction      TvpGitAction;
 #define TVP_IS_GIT_ACTION_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TVP_TYPE_GIT_ACTION))
 #define TVP_GIT_ACTION_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TVP_TYPE_GIT_ACTION, TvpGitActionClass))
 
-GType      tvp_git_action_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tvp_git_action_get_type      (void) G_GNUC_INTERNAL;
 void       tvp_git_action_register_type (ThunarxProviderPlugin *) G_GNUC_INTERNAL;
 
 ThunarxMenuItem *tvp_git_action_new     (const gchar*,

@@ -40,7 +40,7 @@ typedef struct _TghCleanDialog      TghCleanDialog;
 #define TGH_IS_CLEAN_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_TRUST_DIALOG))
 #define TGH_CLEAN_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_TRUST_DIALOG, TghCleanDialogClass))
 
-GType      tgh_clean_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tgh_clean_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget* tgh_clean_dialog_new      (const gchar *title,
                                       GtkWindow *parent,

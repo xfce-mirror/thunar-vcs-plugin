@@ -41,7 +41,7 @@ typedef struct
 
 #define TSH_LOG_FILE(p) ((TshLogFile*)p)
 
-GType        tsh_log_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType        tsh_log_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget*   tsh_log_dialog_new      (const gchar *title,
                                       GtkWindow *parent,

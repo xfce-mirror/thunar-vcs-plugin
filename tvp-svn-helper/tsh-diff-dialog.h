@@ -34,7 +34,7 @@ typedef struct _TshDiffDialog      TshDiffDialog;
 #define TSH_IS_DIFF_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_DIFF_DIALOG))
 #define TSH_DIFF_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_DIFF_DIALOG, TshDiffDialogClass))
 
-GType      tsh_diff_dialog_get_type  (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsh_diff_dialog_get_type  (void) G_GNUC_INTERNAL;
 
 GtkWidget* tsh_diff_dialog_new       (const gchar *title,
                                        GtkWindow *parent,

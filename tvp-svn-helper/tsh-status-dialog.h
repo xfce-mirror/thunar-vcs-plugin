@@ -33,7 +33,7 @@ typedef struct _TshStatusDialog      TshStatusDialog;
 #define TSH_IS_STATUS_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_STATUS_DIALOG))
 #define TSH_STATUS_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_STATUS_DIALOG, TshStatusDialogClass))
 
-GType      tsh_status_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsh_status_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget* tsh_status_dialog_new      (const gchar *title,
                                        GtkWindow *parent,

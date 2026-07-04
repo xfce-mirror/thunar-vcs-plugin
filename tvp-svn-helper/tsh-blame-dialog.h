@@ -33,7 +33,7 @@ typedef struct _TshBlameDialog      TshBlameDialog;
 #define TSH_IS_BLAME_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_BLAME_DIALOG))
 #define TSH_BLAME_DIALOG_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_BLAME_DIALOG, TshBlameDialogClass))
 
-GType      tsh_blame_dialog_get_type  (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsh_blame_dialog_get_type  (void) G_GNUC_INTERNAL;
 
 GtkWidget* tsh_blame_dialog_new       (const gchar *title,
                                        GtkWindow *parent,

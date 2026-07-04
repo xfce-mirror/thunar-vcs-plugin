@@ -33,7 +33,7 @@ typedef struct _TvpProvider      TvpProvider;
 #define TVP_IS_PROVIDER_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TVP_TYPE_PROVIDER))
 #define TVP_PROVIDER_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TVP_TYPE_PROVIDER, TvpProviderClass))
 
-GType tvp_provider_get_type      (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType tvp_provider_get_type      (void) G_GNUC_INTERNAL;
 void  tvp_provider_register_type (ThunarxProviderPlugin *plugin) G_GNUC_INTERNAL;
 
 G_END_DECLS;

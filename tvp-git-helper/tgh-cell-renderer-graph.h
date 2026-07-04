@@ -43,7 +43,7 @@ struct  _TghGraphNode
   gchar **junction;
 };
 
-GType               tgh_cell_renderer_graph_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType               tgh_cell_renderer_graph_get_type (void) G_GNUC_INTERNAL;
 
 GtkCellRenderer*    tgh_cell_renderer_graph_new      (void) G_GNUC_MALLOC G_GNUC_INTERNAL;
 

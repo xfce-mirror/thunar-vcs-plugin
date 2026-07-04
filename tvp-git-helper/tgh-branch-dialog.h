@@ -33,7 +33,7 @@ typedef struct _TghBranchDialog      TghBranchDialog;
 #define TGH_IS_BRANCH_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TGH_TYPE_BRANCH_DIALOG))
 #define TGH_BRANCH_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TGH_TYPE_BRANCH_DIALOG, TghBranchDialogClass))
 
-GType      tgh_branch_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tgh_branch_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget* tgh_branch_dialog_new      (const gchar *title,
                                        GtkWindow *parent,

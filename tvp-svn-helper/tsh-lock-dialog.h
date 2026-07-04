@@ -33,7 +33,7 @@ typedef struct _TshLockDialog      TshLockDialog;
 #define TSH_IS_LOCK_DIALOG_CLASS(klass)  (G_TYPE_CHECK_CLASS_TYPE ((klass), TSH_TYPE_LOCK_DIALOG))
 #define TSH_LOCK_DIALOG_GET_CLASS(obj)   (G_TYPE_INSTANCE_GET_CLASS ((obj), TSH_TYPE_LOCK_DIALOG, TshLockDialogClass))
 
-GType      tsh_lock_dialog_get_type    (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType      tsh_lock_dialog_get_type    (void) G_GNUC_INTERNAL;
 
 GtkWidget* tsh_lock_dialog_new         (const gchar *title,
                                         GtkWindow *parent,

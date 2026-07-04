@@ -42,7 +42,7 @@ typedef struct
 
 #define TGH_LOG_FILE(p) ((TghLogFile*)p)
 
-GType        tgh_log_dialog_get_type (void) G_GNUC_CONST G_GNUC_INTERNAL;
+GType        tgh_log_dialog_get_type (void) G_GNUC_INTERNAL;
 
 GtkWidget*   tgh_log_dialog_new      (const gchar *title,
                                       GtkWindow *parent,
