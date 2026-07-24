@@ -3,23 +3,23 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# Michal Várady <miko.vaji@gmail.com>, 2015,2018
+# Michal Várady <miko.vaji@gmail.com>, 2015,2018,2026
 # Pavel Borecki <pavel.borecki@gmail.com>, 2019
 msgid ""
 msgstr ""
 "Project-Id-Version: Thunar Plugins\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-27 06:30+0200\n"
-"PO-Revision-Date: 2019-01-11 09:37+0000\n"
-"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
-"Language-Team: Czech (http://www.transifex.com/xfce/thunar-plugins/language/cs/)\n"
+"POT-Creation-Date: 2023-05-30 00:47+0200\n"
+"PO-Revision-Date: 2013-07-03 18:12+0000\n"
+"Last-Translator: Michal Várady <miko.vaji@gmail.com>, 2015,2018,2026\n"
+"Language-Team: Czech (http://app.transifex.com/xfce/thunar-plugins/language/cs/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 #: ../thunar-vcs-plugin/tvp-svn-action.c:260 ../tvp-git-helper/main.c:153
 #: ../tvp-git-helper/tgh-add.c:108 ../tvp-git-helper/tgh-add.c:121
 #: ../tvp-svn-helper/main.c:257 ../tvp-svn-helper/tsh-add.c:141
@@ -27,49 +27,49 @@ msgstr ""
 msgid "Add"
 msgstr "Přidat (add)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:222
+#: ../thunar-vcs-plugin/tvp-git-action.c:223
 msgid "Add file contents to the index"
 msgstr "Přidá obsah souboru do indexu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265 ../tvp-git-helper/main.c:157
 #: ../tvp-git-helper/tgh-blame-dialog.c:129 ../tvp-svn-helper/main.c:261
 #: ../tvp-svn-helper/main.c:265 ../tvp-svn-helper/tsh-blame-dialog.c:132
 msgid "Blame"
-msgstr "Vypsat detaily (blame)"
+msgstr "Anotace (blame)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:225
+#: ../thunar-vcs-plugin/tvp-git-action.c:226
 #: ../thunar-vcs-plugin/tvp-svn-action.c:265
 msgid "Show what revision and author last modified each line of a file"
-msgstr "Zobrazí revizi a autora každého řádku v souboru"
+msgstr "Zobrazí revizi a autora poslední změny každého řádku souboru"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227 ../tvp-git-helper/main.c:161
+#: ../thunar-vcs-plugin/tvp-git-action.c:228 ../tvp-git-helper/main.c:161
 #: ../tvp-git-helper/tgh-branch-dialog.c:140
 #: ../tvp-git-helper/tgh-stash-dialog.c:166
 msgid "Branch"
 msgstr "Větev (branch)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:227
+#: ../thunar-vcs-plugin/tvp-git-action.c:228
 msgid "List, create or switch branches"
 msgstr "Vypíše, vytvoří nebo přepne větve"
 
 #. unimplemented: add_subaction(item, menu, "tvp::git::checkout",
 #. _("Checkout"), _("Checkout"), "gtk-connect", _("Checkout"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:229 ../tvp-git-helper/main.c:165
+#: ../thunar-vcs-plugin/tvp-git-action.c:230 ../tvp-git-helper/main.c:165
 #: ../tvp-git-helper/tgh-clean.c:152 ../tvp-git-helper/tgh-clean-dialog.c:95
 msgid "Clean"
 msgstr "Vyčistit (clean)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:229
+#: ../thunar-vcs-plugin/tvp-git-action.c:230
 msgid "Remove untracked files from the working tree"
 msgstr "Odstraní nesledované soubory z pracovního stromu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231 ../tvp-git-helper/main.c:169
+#: ../thunar-vcs-plugin/tvp-git-action.c:232 ../tvp-git-helper/main.c:169
 #: ../tvp-git-helper/tgh-clone.c:115
 msgid "Clone"
 msgstr "Klonovat (clone)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:231
+#: ../thunar-vcs-plugin/tvp-git-action.c:232
 msgid "Clone a repository into a new directory"
 msgstr "Naklonuje repozitář do nového adresáře"
 
@@ -83,25 +83,25 @@ msgstr "Naklonuje repozitář do nového adresáře"
 #. _("Grep"), NULL, _("Grep"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::init", _("Init"),
 #. _("Init"), NULL, _("Init"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337 ../tvp-git-helper/main.c:173
 #: ../tvp-git-helper/tgh-log-dialog.c:244 ../tvp-svn-helper/main.c:305
 #: ../tvp-svn-helper/tsh-log-dialog.c:227
 msgid "Log"
-msgstr "Protokol (log)"
+msgstr "Historie (log)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:237
+#: ../thunar-vcs-plugin/tvp-git-action.c:238
 #: ../thunar-vcs-plugin/tvp-svn-action.c:337
 msgid "Show commit logs"
-msgstr "Zobrazí protokol o zapsání"
+msgstr "Zobrazí historii commitů"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352 ../tvp-git-helper/main.c:177
 #: ../tvp-svn-helper/main.c:309 ../tvp-svn-helper/tsh-move.c:180
 msgid "Move"
 msgstr "Přesunout (move)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:240
+#: ../thunar-vcs-plugin/tvp-git-action.c:241
 msgid "Move or rename a file, a directory, or a symlink"
 msgstr "Přesune nebo přejmenuje soubor, adresář nebo symbolický odkaz"
 
@@ -111,25 +111,25 @@ msgstr "Přesune nebo přejmenuje soubor, adresář nebo symbolický odkaz"
 #. _("Push"), NULL, _("Push"));
 #. unimplemented: add_subaction(item, menu, "tvp::git::rebase", _("Rebase"),
 #. _("Rebase"), NULL, _("Rebase"));
-#: ../thunar-vcs-plugin/tvp-git-action.c:244 ../tvp-git-helper/main.c:181
+#: ../thunar-vcs-plugin/tvp-git-action.c:245 ../tvp-git-helper/main.c:181
 #: ../tvp-git-helper/tgh-reset.c:141
 msgid "Reset"
 msgstr "Resetovat (reset)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:244
+#: ../thunar-vcs-plugin/tvp-git-action.c:245
 msgid "Reset current HEAD to the specified state"
-msgstr "Resetuje aktuální HLAVIČKU do určeného stavu"
+msgstr "Resetuje aktuální HEAD do zadaného stavu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248 ../tvp-git-helper/main.c:185
+#: ../thunar-vcs-plugin/tvp-git-action.c:249 ../tvp-git-helper/main.c:185
 #: ../tvp-git-helper/tgh-stash-dialog.c:246
 msgid "Stash"
 msgstr "Úschovna (stash)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:248
+#: ../thunar-vcs-plugin/tvp-git-action.c:249
 msgid "Stash the changes in a dirty working directory away"
-msgstr "Uschová stranou změny z pracovního adresáře"
+msgstr "Uschová stranou změny ze změněného pracovního stromu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389 ../tvp-git-helper/main.c:189
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:120
 #: ../tvp-git-helper/tgh-status-dialog.c:124 ../tvp-svn-helper/main.c:329
@@ -138,12 +138,12 @@ msgstr "Uschová stranou změny z pracovního adresáře"
 msgid "Status"
 msgstr "Stav (status)"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:250
+#: ../thunar-vcs-plugin/tvp-git-action.c:251
 #: ../thunar-vcs-plugin/tvp-svn-action.c:389
 msgid "Show the working tree status"
-msgstr "Zobrazí stav pracovního adresáře"
+msgstr "Zobrazí stav pracovního stromu"
 
-#: ../thunar-vcs-plugin/tvp-git-action.c:258
+#: ../thunar-vcs-plugin/tvp-git-action.c:259
 #: ../thunar-vcs-plugin/tvp-svn-action.c:412
 #, c-format
 msgid "Action %s is unimplemented"
@@ -151,14 +151,14 @@ msgstr "Akce %s není implementovaná"
 
 #. append the svn submenu item
 #. Lets see if we are dealing with a working copy
-#: ../thunar-vcs-plugin/tvp-provider.c:421
-#: ../thunar-vcs-plugin/tvp-provider.c:487
+#: ../thunar-vcs-plugin/tvp-provider.c:431
+#: ../thunar-vcs-plugin/tvp-provider.c:497
 msgid "SVN"
 msgstr "SVN"
 
 #. append the git submenu item
-#: ../thunar-vcs-plugin/tvp-provider.c:452
-#: ../thunar-vcs-plugin/tvp-provider.c:494
+#: ../thunar-vcs-plugin/tvp-provider.c:462
+#: ../thunar-vcs-plugin/tvp-provider.c:504
 msgid "GIT"
 msgstr "GIT"
 
@@ -169,11 +169,11 @@ msgstr "Přidá soubory, adresáře nebo symbolické odkazy"
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282 ../tvp-svn-helper/main.c:269
 #: ../tvp-svn-helper/tsh-checkout.c:106 ../tvp-svn-helper/tsh-checkout.c:118
 msgid "Checkout"
-msgstr "Stáhnout (checkout)"
+msgstr "Získat pracovní kopii (checkout)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:282
 msgid "Check out a working copy from a repository"
-msgstr "Stáhne pracovní kopii z repozitáře"
+msgstr "Získá pracovní kopii z repozitáře"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:287 ../tvp-svn-helper/main.c:273
 msgid "Cleanup"
@@ -201,7 +201,7 @@ msgstr "Zkopírovat (copy)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:297
 msgid "Copy a file or directory in a working copy or in the repository"
-msgstr "Zkopíruje soubor nebo adresář do pracovní kopie nebo do repozitáře"
+msgstr "Zkopíruje soubor nebo adresář v pracovní kopii nebo v repozitáři"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:302 ../tvp-svn-helper/main.c:285
 #: ../tvp-svn-helper/tsh-delete.c:145 ../tvp-svn-helper/tsh-delete.c:158
@@ -248,7 +248,7 @@ msgstr "Uzamknout (lock)"
 msgid ""
 "Lock working copy paths in the repository so that no other user can commit "
 "changes to them"
-msgstr "Uzamkne cesty pracovní kopie v repozitáři, aby do nich nemohl uložit změny jiný uživatel"
+msgstr "Uzamkne cesty pracovní kopie v repozitáři, aby k nim žádný jiný uživatel nemohl zapsat změny"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:352
 msgid "Move a file or directory"
@@ -256,11 +256,11 @@ msgstr "Přesune soubor nebo adresář"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit Properties"
-msgstr "Upravit vlastnosti (propedit)"
+msgstr "Upravit vlastnosti (properties)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:363
 msgid "Edit the property of one or more items"
-msgstr "Upraví vlastnosti jedné nebo více položek"
+msgstr "Upraví vlastnost jedné nebo více položek"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368 ../tvp-svn-helper/main.c:321
 #: ../tvp-svn-helper/tsh-relocate.c:138
@@ -270,7 +270,7 @@ msgstr "Přemístit (relocate)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:368
 msgid "Relocate the working copy to point to a different repository root URL"
-msgstr "Přemístí pracovní kopii, aby ukazovala do kořenového umístění URL jiného repozitáře."
+msgstr "Přemístí pracovní kopii tak, aby ukazovala na jinou kořenovou URL repozitáře"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374 ../tvp-svn-helper/main.c:317
 #: ../tvp-svn-helper/tsh-common.c:582 ../tvp-svn-helper/tsh-resolved.c:125
@@ -280,12 +280,12 @@ msgstr "Vyřešeno (resolved)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:374
 msgid "Remove \"conflicted\" state on working copy files or directories"
-msgstr "Odstraní \"konfliktní\" stav pracovní kopie souborů nebo adresářů"
+msgstr "Odstraní stav „v konfliktu“ ze souborů nebo adresářů pracovní kopie"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384 ../tvp-svn-helper/main.c:325
 #: ../tvp-svn-helper/tsh-revert.c:125 ../tvp-svn-helper/tsh-revert.c:138
 msgid "Revert"
-msgstr "Obnovit předchozí (revert)"
+msgstr "Vrátit změny (revert)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:384
 msgid "Undo all local edits"
@@ -298,7 +298,7 @@ msgstr "Přepnout (switch)"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:394
 msgid "Update working copy to a different URL"
-msgstr "Aktualizuje pracovní kopii na jiné umístění URL"
+msgstr "Přepne pracovní kopii na jinou URL"
 
 #: ../thunar-vcs-plugin/tvp-svn-action.c:399 ../tvp-svn-helper/main.c:337
 #: ../tvp-svn-helper/tsh-unlock.c:119
@@ -400,7 +400,7 @@ msgstr "Soubory"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:211
 #: ../tvp-svn-helper/tsh-status-dialog.c:199
 msgid "Immediates"
-msgstr "Tento soubor nebo adresář a v něm obsažené soubury a adresáře"
+msgstr "Přímé položky"
 
 #. Translators: svn recursion depth infotmation
 #. * Infinity depth means this file/direcotry is checked out with full
@@ -419,7 +419,7 @@ msgstr "Spustit akci přidání (add)"
 
 #: ../tvp-git-helper/main.c:93 ../tvp-svn-helper/main.c:121
 msgid "Execute blame action"
-msgstr "Spustit akci vypsání detailů (blame)"
+msgstr "Spustit akci anotace (blame)"
 
 #: ../tvp-git-helper/main.c:99
 msgid "Execute branch action"
@@ -435,7 +435,7 @@ msgstr "Spustit akci klonování (clone)"
 
 #: ../tvp-git-helper/main.c:117 ../tvp-svn-helper/main.c:187
 msgid "Execute log action"
-msgstr "Spustit akci protokolování (log)"
+msgstr "Spustit akci zobrazení historie (log)"
 
 #: ../tvp-git-helper/main.c:123 ../tvp-svn-helper/main.c:193
 msgid "Execute move action"
@@ -447,7 +447,7 @@ msgstr "Spustit akci resetování (reset)"
 
 #: ../tvp-git-helper/main.c:135
 msgid "Execute stash action"
-msgstr "Spustit akci úschovny"
+msgstr "Spustit akci odložení změn (stash)"
 
 #: ../tvp-git-helper/main.c:141 ../tvp-svn-helper/main.c:223
 msgid "Execute status action"
@@ -459,7 +459,7 @@ msgstr "Volby týkající se přidávání (add):"
 
 #: ../tvp-git-helper/main.c:157 ../tvp-svn-helper/main.c:261
 msgid "Blame Related Options:"
-msgstr "Volby týkající se výpisu detailů (blame):"
+msgstr "Volby týkající se anotace (blame):"
 
 #: ../tvp-git-helper/main.c:161
 msgid "Branch Related Options:"
@@ -471,7 +471,7 @@ msgstr "Volby týkající se klonování:"
 
 #: ../tvp-git-helper/main.c:173 ../tvp-svn-helper/main.c:305
 msgid "Log Related Options:"
-msgstr "Volby týkající se protokolování (log):"
+msgstr "Volby týkající se historie (log):"
 
 #: ../tvp-git-helper/main.c:177 ../tvp-svn-helper/main.c:309
 msgid "Move Related Options:"
@@ -483,7 +483,7 @@ msgstr "Volby týkající se resetování (reset):"
 
 #: ../tvp-git-helper/main.c:185
 msgid "Stash Related Options:"
-msgstr "Volby týkající se úschovny:"
+msgstr "Volby týkající se odložení změn (stash):"
 
 #: ../tvp-git-helper/main.c:189 ../tvp-svn-helper/main.c:329
 msgid "Status Related Options:"
@@ -492,7 +492,7 @@ msgstr "Volby týkající se stavu (status):"
 #: ../tvp-git-helper/tgh-blame-dialog.c:90
 #: ../tvp-svn-helper/tsh-blame-dialog.c:93
 msgid "Line"
-msgstr "Čára"
+msgstr "Řádek"
 
 #: ../tvp-git-helper/tgh-blame-dialog.c:96
 #: ../tvp-git-helper/tgh-log-dialog.c:134
@@ -575,7 +575,7 @@ msgstr "Název"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:130
 msgid "_Jump to"
-msgstr "_Přeskočit na"
+msgstr "_Přejít na"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:135
 #: ../tvp-git-helper/tgh-branch-dialog.c:249
@@ -584,11 +584,11 @@ msgstr "_Nový"
 
 #: ../tvp-git-helper/tgh-branch-dialog.c:253
 msgid "Branch name:"
-msgstr "Název větve"
+msgstr "Název větve:"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:55
 msgid "Remove directories."
-msgstr "Odebrat adresáře."
+msgstr "Odstranit adresáře."
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:67
 msgid "Exclude ignored files"
@@ -604,7 +604,7 @@ msgstr "Pouze ignorované soubory"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:91
 msgid "Force clean."
-msgstr "Vynutit vyčištění."
+msgstr "Vynutit vyčištění"
 
 #: ../tvp-git-helper/tgh-clean-dialog.c:99
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:124
@@ -627,7 +627,7 @@ msgstr "_OK"
 
 #: ../tvp-git-helper/tgh-clone.c:60
 msgid "Clone finished"
-msgstr "Klonování ukončeno"
+msgstr "Klonování dokončeno"
 
 #: ../tvp-git-helper/tgh-clone.c:126
 msgid "Cloning..."
@@ -644,7 +644,7 @@ msgstr "Klonování..."
 #: ../tvp-svn-helper/tsh-switch.c:79 ../tvp-svn-helper/tsh-unlock.c:90
 #: ../tvp-svn-helper/tsh-update.c:96
 msgid "Failed"
-msgstr "Selhal"
+msgstr "Selhalo"
 
 #: ../tvp-git-helper/tgh-common.c:293
 #: ../tvp-git-helper/tgh-file-selection-dialog.c:245
@@ -676,11 +676,11 @@ msgstr "Vybrat vše nebo zrušit výběr"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:146
 msgid "AuthorDate"
-msgstr "Datum změn autora"
+msgstr "Datum autora"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:159
 msgid "CommitDate"
-msgstr "Datum provedení změn (CommitDate)"
+msgstr "Datum zápisu změn"
 
 #: ../tvp-git-helper/tgh-log-dialog.c:166
 #: ../tvp-svn-helper/tsh-log-dialog.c:146
@@ -707,7 +707,7 @@ msgstr "_Obnovit"
 
 #: ../tvp-git-helper/tgh-move.c:60
 msgid "Move finished"
-msgstr "Přesouvání dokončeni"
+msgstr "Přesun dokončen"
 
 #: ../tvp-git-helper/tgh-move.c:146 ../tvp-svn-helper/tsh-move.c:160
 msgid "Move To"
@@ -725,7 +725,7 @@ msgstr "Akce"
 
 #: ../tvp-git-helper/tgh-notify-dialog.c:107
 msgid "Notify"
-msgstr "Upozornit"
+msgstr "Oznámení"
 
 #: ../tvp-git-helper/tgh-reset.c:60
 msgid "Reset finished"
@@ -758,16 +758,16 @@ msgstr "_Vymazat"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:382
 msgid "Stash description:"
-msgstr "Popis úschovny"
+msgstr "Popis úschovny:"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:520
 #, c-format
 msgid "Are you sure you want to drop %s?"
-msgstr "Opravdu chcete nechat propadnout %s?"
+msgstr "Opravdu chcete zahodit %s?"
 
 #: ../tvp-git-helper/tgh-stash-dialog.c:548
 msgid "Are you sure you want to clear all stash?"
-msgstr "Opravdu chcete vyčistit celou úschovnu?"
+msgstr "Opravdu chcete vymazat celou úschovnu?"
 
 #: ../tvp-git-helper/tgh-transfer-dialog.c:66
 #: ../tvp-svn-helper/tsh-transfer-dialog.c:82
@@ -800,7 +800,7 @@ msgstr "Přenos"
 
 #: ../tvp-svn-helper/main.c:127
 msgid "Execute changelist action"
-msgstr "Spustí akci seznam změn (changelog)"
+msgstr "Spustí akci seznamu změn (changelist)"
 
 #: ../tvp-svn-helper/main.c:133
 msgid "Execute checkout action"
@@ -840,7 +840,7 @@ msgstr "Spustit akci uzamknutí (lock)"
 
 #: ../tvp-svn-helper/main.c:199
 msgid "Execute properties action"
-msgstr "Spustit akci vlastností (propedit)"
+msgstr "Spustit akci vlastností (properties)"
 
 #: ../tvp-svn-helper/main.c:205
 msgid "Execute resolved action"
@@ -868,11 +868,11 @@ msgstr "Spustit akci aktualizace (update)"
 
 #: ../tvp-svn-helper/main.c:265
 msgid "Changelist Related Options:"
-msgstr "Volby týkající se seznamu změn: (changelog)"
+msgstr "Volby týkající se seznamu změn (changelist):"
 
 #: ../tvp-svn-helper/main.c:269
 msgid "Checkout Related Options:"
-msgstr "Volby týkající se stahování (checkout):"
+msgstr "Volby týkající se získání pracovní kopie (checkout):"
 
 #: ../tvp-svn-helper/main.c:273
 msgid "Cleanup Related Options:"
@@ -880,7 +880,7 @@ msgstr "Volby týkající se čištění (cleanup):"
 
 #: ../tvp-svn-helper/main.c:277
 msgid "Commit Related Options:"
-msgstr "Volby týkající se zapisování (checkin):"
+msgstr "Volby týkající se zápisu změn (commit):"
 
 #: ../tvp-svn-helper/main.c:281
 msgid "Copy Related Options:"
@@ -908,7 +908,7 @@ msgstr "Volby týkající se uzamykání (lock):"
 
 #: ../tvp-svn-helper/main.c:313
 msgid "Properties Related Options:"
-msgstr "Volby týkající se vlastností (propedit:"
+msgstr "Volby týkající se vlastností (properties):"
 
 #: ../tvp-svn-helper/main.c:313 ../tvp-svn-helper/tsh-properties-dialog.c:249
 msgid "Properties"
@@ -924,7 +924,7 @@ msgstr "Volby týkající se přemístění (relocate):"
 
 #: ../tvp-svn-helper/main.c:325
 msgid "Revert Related Options:"
-msgstr "Volby týkající se obnovování (revert):"
+msgstr "Volby týkající se vracení změn (revert):"
 
 #: ../tvp-svn-helper/main.c:333
 msgid "Switch Related Options:"
@@ -944,12 +944,12 @@ msgstr "Nedostatek argumentů"
 
 #: ../tvp-svn-helper/tsh-blame.c:85
 msgid "Blame failed"
-msgstr "Výpis detailů se nezdařil"
+msgstr "Anotace se nezdařila"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:57
 #, c-format
 msgid "'%s' is not a local path"
-msgstr "%s není místní cesta"
+msgstr "„%s“ není místní cesta"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:93
 msgid "Cleanup failed"
@@ -957,7 +957,7 @@ msgstr "Čištění se nezdařilo"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:115
 msgid "Cleanup finished"
-msgstr "Čištění ukončeno"
+msgstr "Čištění dokončeno"
 
 #: ../tvp-svn-helper/tsh-cleanup.c:132
 msgid "Cleaning up..."
@@ -973,7 +973,7 @@ msgstr "Na revizi: %ld"
 
 #: ../tvp-svn-helper/tsh-commit.c:247
 msgid "Nothing to do"
-msgstr "Žádné úlohy"
+msgstr "Není co provést"
 
 #: ../tvp-svn-helper/tsh-commit.c:258 ../tvp-svn-helper/tsh-common.c:587
 #: ../tvp-svn-helper/tsh-common.c:589 ../tvp-svn-helper/tsh-common.c:1181
@@ -984,7 +984,7 @@ msgstr "Dokončeno"
 
 #: ../tvp-svn-helper/tsh-commit.c:292
 msgid "Commit Message"
-msgstr "Odeslat zprávu"
+msgstr "Zpráva k zápisu"
 
 #: ../tvp-svn-helper/tsh-common.c:296
 msgid "Store password a plaintext?"
@@ -1013,11 +1013,11 @@ msgstr "Obnoveno"
 
 #: ../tvp-svn-helper/tsh-common.c:580
 msgid "Reverted"
-msgstr "Předchozí obnoveno"
+msgstr "Změny vráceny"
 
 #: ../tvp-svn-helper/tsh-common.c:581
 msgid "Revert failed"
-msgstr "Obnovení předchozího se nezdařilo"
+msgstr "Vrácení změn se nezdařilo"
 
 #: ../tvp-svn-helper/tsh-common.c:583
 msgid "Skipped"
@@ -1068,11 +1068,11 @@ msgstr "Existuje"
 
 #: ../tvp-svn-helper/tsh-common.c:602
 msgid "Changelist set"
-msgstr "Sada seznamu změn"
+msgstr "Seznam změn nastaven"
 
 #: ../tvp-svn-helper/tsh-common.c:603
 msgid "Changelist cleared"
-msgstr "Seznam změn vyprázdněn"
+msgstr "Seznam změn vymazán"
 
 #: ../tvp-svn-helper/tsh-common.c:604
 msgid "Changelist moved"
@@ -1080,15 +1080,15 @@ msgstr "Seznam změn přesunut"
 
 #: ../tvp-svn-helper/tsh-common.c:605
 msgid "Merge begin"
-msgstr "Zahájení slučování"
+msgstr "Slučování zahájeno"
 
 #: ../tvp-svn-helper/tsh-common.c:606
 msgid "Foreign merge begin"
-msgstr "Zahájení vzdáleného slučování"
+msgstr "Zahájeno cizí sloučení"
 
 #: ../tvp-svn-helper/tsh-common.c:607
 msgid "Replace"
-msgstr "Nahradit"
+msgstr "Nahrazení"
 
 #: ../tvp-svn-helper/tsh-common.c:609
 msgid "Property added"
@@ -1096,7 +1096,7 @@ msgstr "Vlastnost přidána"
 
 #: ../tvp-svn-helper/tsh-common.c:610
 msgid "Property modified"
-msgstr "Vlastnosti změněny"
+msgstr "Vlastnost změněna"
 
 #: ../tvp-svn-helper/tsh-common.c:611
 msgid "Property deleted"
@@ -1120,11 +1120,11 @@ msgstr "Sloučení dokončeno"
 
 #: ../tvp-svn-helper/tsh-common.c:616
 msgid "Tree conflict"
-msgstr "Konfikt ve stromu"
+msgstr "Konflikt ve stromu"
 
 #: ../tvp-svn-helper/tsh-common.c:617
 msgid "External failed"
-msgstr "Externí selhal"
+msgstr "Zpracování externí položky selhalo"
 
 #: ../tvp-svn-helper/tsh-common.c:620
 msgid "Started"
@@ -1132,47 +1132,47 @@ msgstr "Spuštěno"
 
 #: ../tvp-svn-helper/tsh-common.c:621
 msgid "Skipped obstruction"
-msgstr "Vynechané zabránění"
+msgstr "Vynecháno kvůli překážce"
 
 #: ../tvp-svn-helper/tsh-common.c:622
 msgid "Skipped working only"
-msgstr "Vynechané pouze pracovní"
+msgstr "Vynecháno, existuje pouze v pracovní kopii"
 
 #: ../tvp-svn-helper/tsh-common.c:623
 msgid "Skipped access denied"
-msgstr "Vynechaný odepřený přístup"
+msgstr "Vynecháno, přístup odepřen"
 
 #: ../tvp-svn-helper/tsh-common.c:624
 msgid "External removed"
-msgstr "Externí odebrány"
+msgstr "Externí položka odebrána"
 
 #: ../tvp-svn-helper/tsh-common.c:625
 msgid "Shadowed add"
-msgstr "Stínové přidání (add)"
+msgstr "Přidání zastíněno"
 
 #: ../tvp-svn-helper/tsh-common.c:626
 msgid "Shadowed update"
-msgstr "Stínpvá aktualizace (update)"
+msgstr "Aktualizace zastíněna"
 
 #: ../tvp-svn-helper/tsh-common.c:627
 msgid "Shadowed delete"
-msgstr "Stínové smazání (delete)"
+msgstr "Smazání zastíněno"
 
 #: ../tvp-svn-helper/tsh-common.c:628
 msgid "Merge record info"
-msgstr "Slučování informací o záznamech"
+msgstr "Zaznamenány informace o sloučení"
 
 #: ../tvp-svn-helper/tsh-common.c:629
 msgid "Upgraded path"
-msgstr "Aktualizovaná cesta"
+msgstr "Cesta upgradována"
 
 #: ../tvp-svn-helper/tsh-common.c:630
 msgid "Merge record info begin"
-msgstr "Slučování informací o záznamech zahájeno"
+msgstr "Zahájeno zaznamenávání informací o sloučení"
 
 #: ../tvp-svn-helper/tsh-common.c:631
 msgid "Merge elide info"
-msgstr "Sloučit informace o škrtech"
+msgstr "Odstraněny nadbytečné informace o sloučení"
 
 #: ../tvp-svn-helper/tsh-common.c:632
 msgid "Patch"
@@ -1180,15 +1180,15 @@ msgstr "Záplata (patch)"
 
 #: ../tvp-svn-helper/tsh-common.c:633
 msgid "Applied hunk"
-msgstr "Použitá část"
+msgstr "Blok záplaty použit"
 
 #: ../tvp-svn-helper/tsh-common.c:634
 msgid "Rejected hunk"
-msgstr "Odmítnutá část"
+msgstr "Blok záplaty odmítnut"
 
 #: ../tvp-svn-helper/tsh-common.c:635
 msgid "Hunk already applied"
-msgstr "Část již byla použita"
+msgstr "Blok záplaty již byl použit"
 
 #: ../tvp-svn-helper/tsh-common.c:637
 msgid "Copied replaced"
@@ -1196,11 +1196,11 @@ msgstr "Kopie nahrazena"
 
 #: ../tvp-svn-helper/tsh-common.c:638
 msgid "URL redirect"
-msgstr "Přesměrování umístění URL"
+msgstr "Přesměrování URL"
 
 #: ../tvp-svn-helper/tsh-common.c:639
 msgid "Path nonexistent"
-msgstr "Neexistující cesta"
+msgstr "Cesta neexistuje"
 
 #: ../tvp-svn-helper/tsh-common.c:641
 msgid "Conflict"
@@ -1213,7 +1213,7 @@ msgstr "Chybí"
 
 #: ../tvp-svn-helper/tsh-common.c:643
 msgid "Out of date"
-msgstr "Zastaralý"
+msgstr "Neaktuální"
 
 #: ../tvp-svn-helper/tsh-common.c:644
 msgid "No parent"
@@ -1225,11 +1225,11 @@ msgstr "Zakázáno serverem"
 
 #: ../tvp-svn-helper/tsh-common.c:647
 msgid "Skipped conflicted"
-msgstr "Vynechané konflikty"
+msgstr "Vynecháno kvůli konfliktu"
 
 #: ../tvp-svn-helper/tsh-common.c:738
 msgid "Inapplicable"
-msgstr "Nepoužitelné"
+msgstr "Nelze použít"
 
 #: ../tvp-svn-helper/tsh-common.c:740
 msgid "Unchanged"
@@ -1237,7 +1237,7 @@ msgstr "Nezměněno"
 
 #: ../tvp-svn-helper/tsh-common.c:742 ../tvp-svn-helper/tsh-common.c:788
 msgid "Obstructed"
-msgstr "Zabráněno"
+msgstr "Blokováno"
 
 #: ../tvp-svn-helper/tsh-common.c:743
 msgid "Changed"
@@ -1245,7 +1245,7 @@ msgstr "Změněno"
 
 #: ../tvp-svn-helper/tsh-common.c:744 ../tvp-svn-helper/tsh-common.c:785
 msgid "Merged"
-msgstr "Spojeno"
+msgstr "Sloučeno"
 
 #: ../tvp-svn-helper/tsh-common.c:745 ../tvp-svn-helper/tsh-common.c:786
 msgid "Conflicted"
@@ -1259,7 +1259,7 @@ msgstr "Zdroj chybí"
 #. N_("Unversioned"),
 #: ../tvp-svn-helper/tsh-common.c:779
 msgid "Normal"
-msgstr "Běžný"
+msgstr "Normální"
 
 #: ../tvp-svn-helper/tsh-common.c:787
 msgid "Ignored"
@@ -1287,15 +1287,15 @@ msgstr "Kopírovat do umístění"
 
 #: ../tvp-svn-helper/tsh-delete.c:121
 msgid "Local delete"
-msgstr "Smazat místní kopii"
+msgstr "Místní smazání"
 
 #: ../tvp-svn-helper/tsh-delete.c:163
 msgid "Delete Message"
-msgstr "Smazat zprávu"
+msgstr "Zpráva ke smazání"
 
 #: ../tvp-svn-helper/tsh-diff.c:207
 msgid "Diff failed"
-msgstr "Operace porovnání rozdílů se nezdařila"
+msgstr "Porovnání rozdílů se nezdařilo"
 
 #. Translators: svn recursion selection
 #. * Self means only this file/direcotry is shown
@@ -1322,7 +1322,7 @@ msgstr "Pouze tato položka"
 #: ../tvp-svn-helper/tsh-properties-dialog.c:202
 #: ../tvp-svn-helper/tsh-status-dialog.c:190
 msgid "Immediate files"
-msgstr "Tento soubor nebo adresář a soubory v něm obsažené"
+msgstr "Přímé soubory"
 
 #. Translators: svn recursion selection
 #. * Recursive means the list is full recursive
@@ -1338,7 +1338,7 @@ msgstr "Rekurzivně"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:196
 msgid "Notice ancestry"
-msgstr "Všímat si rozdílů oproti předchozím verzím"
+msgstr "Zohlednit původ"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:201
 msgid "Do not show differences for deleted files"
@@ -1346,7 +1346,7 @@ msgstr "Nezobrazovat rozdíly u smazaných souborů"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:207
 msgid "Show copies as additions"
-msgstr "Zobrazit kopie jako přidání"
+msgstr "Zobrazit kopie jako přidané položky"
 
 #: ../tvp-svn-helper/tsh-diff-dialog.c:362
 msgid "Loading..."
@@ -1372,15 +1372,15 @@ msgstr "Certifikát"
 
 #: ../tvp-svn-helper/tsh-import.c:149
 msgid "Import Message"
-msgstr "Vložit zprávu"
+msgstr "Zpráva k importu"
 
 #: ../tvp-svn-helper/tsh-log.c:128
 msgid "Log failed"
-msgstr "Záznam se nezdařil"
+msgstr "Zobrazení historie se nezdařilo"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:214
 msgid "Stop On Copy"
-msgstr "Zastavení pri kopírování"
+msgstr "Zastavit při kopírování"
 
 #: ../tvp-svn-helper/tsh-log-dialog.c:219
 msgid "Show Merged Revisions"
@@ -1392,7 +1392,7 @@ msgstr "_Uživatelské jméno:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:72
 msgid "_Password:"
-msgstr "_Heslo"
+msgstr "_Heslo:"
 
 #: ../tvp-svn-helper/tsh-login-dialog.c:87
 msgid "Login"
@@ -1400,7 +1400,7 @@ msgstr "Přihlásit se"
 
 #: ../tvp-svn-helper/tsh-log-message-dialog.c:116
 msgid "Log Message"
-msgstr "Zpráva záznamu"
+msgstr "Zpráva k záznamu"
 
 #: ../tvp-svn-helper/tsh-move.c:112
 msgid "Local move"
@@ -1420,7 +1420,7 @@ msgstr "Nastavení vlastnosti se nezdařilo"
 
 #: ../tvp-svn-helper/tsh-properties.c:189
 msgid "Properties failed"
-msgstr "Vlastnosti selhaly"
+msgstr "Zpracování vlastností se nezdařilo"
 
 #: ../tvp-svn-helper/tsh-properties-dialog.c:130
 msgid "Value"
@@ -1436,11 +1436,11 @@ msgstr "_Odebrat"
 
 #: ../tvp-svn-helper/tsh-relocate.c:81
 msgid "Relocate failed"
-msgstr "Přemisťování se nezdařilo"
+msgstr "Přemístění se nezdařilo"
 
 #: ../tvp-svn-helper/tsh-relocate.c:103
 msgid "Relocate finished"
-msgstr "Přemisťování dokončeno"
+msgstr "Přemístění dokončeno"
 
 #: ../tvp-svn-helper/tsh-relocate.c:152
 msgid "Relocating..."
@@ -1456,7 +1456,7 @@ msgstr "_Do:"
 
 #: ../tvp-svn-helper/tsh-status.c:110
 msgid "Status failed"
-msgstr "Stav selhal"
+msgstr "Zjištění stavu se nezdařilo"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:129
 msgid "Prop state"
@@ -1464,19 +1464,19 @@ msgstr "Stav vlastností"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:135
 msgid "Repo state"
-msgstr "Stav repozitáře"
+msgstr "Stav v repozitáři"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:141
 msgid "Repo prop state"
-msgstr "Stav vlastností repozitáře"
+msgstr "Stav vlastností v repozitáři"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:224
 msgid "Show Unmodified Files"
-msgstr "Zobrazit nepozměněné soubory"
+msgstr "Zobrazit nezměněné soubory"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:229
 msgid "Show Unversioned Files"
-msgstr "Zobrazit soubory bez verze"
+msgstr "Zobrazit neverzované soubory"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:234
 msgid "Show Ignored Files"
@@ -1484,11 +1484,11 @@ msgstr "Zobrazit ignorované soubory"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:239
 msgid "Hide Externals"
-msgstr "Skrýt externí"
+msgstr "Skrýt externí položky"
 
 #: ../tvp-svn-helper/tsh-status-dialog.c:244
 msgid "Check Repository"
-msgstr "Ověřit repozitář"
+msgstr "Zkontrolovat repozitář"
 
 #: ../tvp-svn-helper/tsh-trust-dialog.c:59
 msgid "Certificate is not yet valid."
